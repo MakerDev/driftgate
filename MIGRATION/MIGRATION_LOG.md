@@ -52,3 +52,19 @@
 
 ### 6단계. 테스트 (CPU 부분)
 - `CUDA_VISIBLE_DEVICES="" python -m pytest tests/test_all.py journal_expansion/tests -q -p no:cacheprovider`: 75 passed (2.74 s).
+
+### 7단계. GPU와 워커 설정
+- 7.1 `supervisor.sh` 9–11줄 기본값: **바꾸지 않았다.** 허락된 GPU 번호를 아직 모르고, A안이라 이 서버에서는 R5 워커를 띄우지 않는다.
+- 7.2 cron: **넣지 않았다.** A안이라 이 서버에서 되살릴 워커가 없다.
+- 안전장치: `journal_expansion/runs/queue_r5/STOP`을 만들었다(`.gitignore` 대상이라 옛 서버로 전파되지 않음). 누가 `supervisor.sh`를 실행해도 워커가 뜨지 않는다.
+- 7.3 `r5_manifest.py` device 열: 고정 문자열 "cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)"을 `device()` 함수로 바꿨다. `provenance/<run_id>.json`의 `env.gpu`로 GPU 이름과 서버를 정하고(RTX 3090 Ti → ubuntu20, RTX 4090 → honeynaps, 표지 `[SERVER-GPU]`), 워커 로그 태그 `cuda:0/GPU<N>`에서 GPU 번호를 읽는다. 결과 예: `ubuntu20, RTX 3090 Ti, GPU 0`. 끝나지 않은 run 줄에는 워커 로그 태그만 적는다(시작 전이면 빈칸). provenance에는 hostname이 없어서 GPU 이름으로 서버를 가린다.
+- 시험(출력은 scratchpad로 돌려서 기존 `tables/run_manifest.csv`는 건드리지 않음): 64개 중 39개 complete, overlap_ok 39, 39개 모두 `ubuntu20, RTX 3090 Ti, GPU 0`.
+
+### 8단계. 남은 run (A안)
+- 8.1 `git fetch`: 옛 서버에서 새로 올라온 commit 없음. 확인 스크립트 결과 39 done, 25 missing으로 `ROUND5_STATUS.md` 2절 목록과 같다. 워커 로그에 exit≠0이나 Traceback 없음.
+- A안이라 run은 돌리지 않는다. 다만 **snapshot은 다시 만들었다.** 저장소의 `enqueued_{heavy,light}_snapshot.txt`에는 옛 절대 경로가 들어 있어서, 9단계의 `r5_manifest.py`가 `od.relative_to(JR)`에서 `ValueError`로 멈추기 때문이다(START_HERE는 B·C안에서만 snapshot을 다시 만들라고 적었지만 A안에도 필요하다).
+  - `git mv`로 `heavy.txt`, `light.txt`, `enqueued_{heavy,light}_snapshot.txt`를 `journal_expansion/runs/queue_r5/archive_ubuntu20/`로 옮겼다.
+  - `python journal_expansion/scripts/enqueue_r5.py --snapshot-only`로 snapshot 64줄(heavy 15, light 49)을 새 경로로 다시 썼다. 옛 snapshot의 경로만 바꾼 것과 `diff`가 없다.
+  - `enqueue_r5.py`(플래그 없이)는 실행하지 않았다. 이 서버에는 `heavy.txt`, `light.txt`가 없다.
+  - 옛 서버의 sync 스크립트는 큐 파일과 snapshot을 복사하지 않으므로(`--exclude`), 이 변경과 충돌하지 않는다.
+- `r5_monitor.py`는 이 서버에서 실행하지 않는다. 옛 서버에서 올라온 워커 로그에 실패 기록이 있으면 이 서버의 `heavy/light.txt`에 run을 다시 넣기 때문이다. A안에서는 8.1의 확인 스크립트로 진행 상황을 본다.

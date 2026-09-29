@@ -10,6 +10,13 @@ QD = JR / "runs/queue_r5"
 OUT = Path(__file__).resolve().parent.parent / "tables" / "run_manifest.csv"
 ENVN = {"A": "stepwise composition change", "mob": "client mobility", "svhn": "SVHN temporal",
         "c10gsig": "CIFAR-10 gradual", "c100gsig": "CIFAR-100 gradual", "tiny": "Tiny-ImageNet"}
+SERVER_BY_GPU = {"NVIDIA GeForce RTX 3090 Ti": "ubuntu20", "NVIDIA GeForce RTX 4090": "honeynaps"}  # [SERVER-GPU]
+def device(run_id, gpu_tag):
+    """'<server>, <GPU name>, GPU <N>': GPU name from provenance env.gpu, index from the worker log tag 'cuda:0/GPU<N>'."""
+    p = JR / "provenance" / f"{run_id}.json"
+    gpu = json.load(open(p)).get("env", {}).get("gpu", "") if run_id and p.exists() else ""
+    idx = gpu_tag.split("/GPU")[-1] if "/GPU" in gpu_tag else "?"
+    return f"{SERVER_BY_GPU.get(gpu, 'unknown server')}, {gpu.replace('NVIDIA GeForce ', '') or 'unknown GPU'}, GPU {idx}"
 starts, ends = {}, {}
 for wl in glob.glob(str(QD / "logs/worker*.log")):
     for line in open(wl):
@@ -38,11 +45,11 @@ for snap in ("heavy", "light"):
             complete = len(h["round"]) == want_rounds
             rows.append([h.get("config", {}).get("run_id", ""), rn, exp, arm, setting, seed, str(od.relative_to(JR)),
                          "yes" if complete else "no", len(h["round"]), len(h["eval"]), ov, "yes" if ov == 0 else "NO",
-                         "cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)", ends.get(rn, ("", ""))[1],  # [SERVER-GPU]
+                         device(h.get("config", {}).get("run_id", ""), starts.get(rn, ("", ""))[1]), ends.get(rn, ("", ""))[1],
                          starts.get(rn, ("", ""))[0], ends.get(rn, ("", ""))[0]])
         else:
             rows.append(["", rn, exp, arm, "" if not rn else setting, seed, str(od.relative_to(JR)), "no (running or queued)",
-                         "", "", "", "", "cuda:0 = physical GPU 0", ends.get(rn, ("", ""))[1], starts.get(rn, ("", ""))[0], ""])
+                         "", "", "", "", starts.get(rn, ("", ""))[1], ends.get(rn, ("", ""))[1], starts.get(rn, ("", ""))[0], ""])
 with open(OUT, "w", newline="") as fh:
     w = csv.writer(fh)
     w.writerow(["run_id", "run_name", "experiment", "arm", "setting", "seed", "output_dir", "complete", "rounds",

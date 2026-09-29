@@ -1,0 +1,4 @@
+[smoke_relonly] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=2 device=cuda:0
+  R  1 loss=0.884 acc=0.280 worst=0.184 elapsed=0.6m ETA=1m
+  R  2 loss=0.573 acc=0.300 worst=0.266 elapsed=1.4m ETA=0m
+  Saved: journal_expansion/runs/_migration_check/smoke_relonly.json

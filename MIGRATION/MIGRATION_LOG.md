@@ -26,7 +26,8 @@
 - 다른 프로젝트도 쓰는 공용 계정이다(홈 폴더에 다른 연구 데이터가 있음)
 
 ### 1단계. 사용자 답
-- GPU: 사용자가 붙여 준 답의 GPU 항목이 틀(`<번호들, 예: 0,1,2,3>`, `<예/아니오>`) 그대로여서 허락된 GPU 번호를 아직 모른다. 답을 받을 때까지 GPU를 쓰지 않는다.
+- GPU: 처음 받은 답의 GPU 항목이 틀(`<번호들, 예: 0,1,2,3>`, `<예/아니오>`) 그대로여서 다시 물었다. 답: **GPU 0, 1, 2, 3 모두 사용 가능.** 다른 사람과 나눠 쓰는지는 답이 없었다. 물었을 때 4장 모두 비어 있었다.
+- 6단계 선택 사항(옛 서버 run 하나를 새 GPU에서 다시 돌려 비교): 사용자 답 **하지 않음**.
 - 남은 R5 run: **8.2의 A안**. 옛 서버가 모두 마치고 결과를 GitHub로 보낸다. 새 서버에서는 R5 run을 돌리지 않는다. 결과가 올라오면 9단계부터 한다.
 - 데이터셋: 옛 서버에서 직접 복사할 수 없다. 공개 주소에서 다시 받는다.
 
@@ -39,10 +40,14 @@
 - 드라이버 580.178.04가 cu126 wheel을 지원하므로 다른 CUDA wheel로 바꾸지 않았다. `torch.cuda.is_available()=True`, device 4개, cuDNN 90501.
 - 가상 환경 안에 `python`과 `python3`가 모두 있다. 명령은 `source ~/venvs/driftgate/bin/activate` 뒤에 실행한다.
 
-### 4단계. 데이터셋 (진행 중, 아래에 결과 추가)
+### 4단계. 데이터셋
 - `DATA_ROOT=/home/honeynaps/data/driftgate_datasets`로 정했다. 사용자가 위치를 정해 주지 않아서, 저장소 옆(`/home/honeynaps/data`)에 다른 프로젝트 폴더와 겹치지 않는 이름으로 만들었다. 남은 공간 약 270 GB.
 - Tiny-ImageNet-200: cs231n 주소에서 받았다. zip md5 `90528d7ca1a48142e341f4ef8d21d0de`, 248,100,043 bytes로 기록과 같다. 서버에 `unzip`이 없어서 Python `zipfile`로 풀었다. train JPEG 100,000개, val 이미지 10,000개.
 - CIFAR-10/100과 SVHN은 torchvision으로 차례로 받으면 너무 느려서(toronto.edu에서 초당 약 90 KB), torchvision을 멈추고 wget으로 네 파일을 동시에 받았다. 받은 뒤 torchvision이 md5를 확인하고 압축을 푼다.
+- md5는 모두 `DATASETS.md`와 같다: `cifar-10-python.tar.gz` c58f3010…, `cifar-100-python.tar.gz` eb9058c3…, `train_32x32.mat` e26dedcc…, `test_32x32.mat` eb5a983b…. CIFAR는 toronto.edu가 `cave.cs.toronto.edu`로 넘겨 주는 같은 파일이다(170,498,071 / 169,001,437 bytes).
+- torchvision `download=True`를 다시 실행해서 md5를 확인하고 압축을 풀었다(다시 받지 않음).
+- `ln -sfn $DATA_ROOT/cifar10 data_cache` (`.gitignore` 대상).
+- `get_dataset()` 표본 수: cifar10 50,000/10,000, cifar100 50,000/10,000, svhn 73,257/26,032, tinyimagenet 100,000/10,000. 모두 기록과 같다.
 
 ### 5단계. 경로 치환과 코드 동일성
 - `rewrite_server_paths.py --repo-root /home/honeynaps/data/driftgate --data-root /home/honeynaps/data/driftgate_datasets`: dry run 71줄, `--apply` 71줄 치환. "Old paths left in executable code: 0". GIT_ROOT는 기본값(저장소 루트)을 썼다.
@@ -50,11 +55,23 @@
 - 옛 경로 grep: `MIGRATION/` 밖의 실행 파일에서 0줄. `MIGRATION/tools/`에 남은 옛 경로는 도구의 기본값과 옛 서버에서 돌릴 sync 스크립트이므로 그대로 둔다. (이 서버의 `grep -r`은 경로 앞에 `./`를 붙이지 않아서 START_HERE의 `grep -v "^./..."` 필터가 걸러 내지 못한다. `sed 's|^\./||'`로 맞춘 뒤 확인했다.)
 - 수동 결정 14줄은 7단계에서 다룬다.
 
-### 6단계. 테스트 (CPU 부분)
+### 6단계. 테스트와 짧은 실행 확인
 - `CUDA_VISIBLE_DEVICES="" python -m pytest tests/test_all.py journal_expansion/tests -q -p no:cacheprovider`: 75 passed (2.74 s).
+- GPU 확인 실행 3개. 모두 relonly 플래그, `--disjoint_pools --rounds 2 --probe_n 64 --seed 0 --model_seed 100`, `CUDA_DEVICE_ORDER=PCI_BUS_ID`로 실행했고 결과는 `journal_expansion/runs/_migration_check/`에 있다(표에 넣지 않음).
+
+  | run | GPU | 라운드 | overlap | acc_total (R1, R2) | 시간 | 같은 seed의 옛 서버 run (R1 acc / loss R1, R2) | 새 서버 loss R1, R2 |
+  |---|---|---|---|---|---|---|---|
+  | `smoke_relonly` (CIFAR-10 Schedule A) | 0 | 2 | 0 | 0.2798, 0.3002 | 84 s | `b1_relonly_A_s0`: 0.2795 / 0.8837, 0.5726 | 0.8838, 0.5726 |
+  | `smoke_tiny_relonly` (Tiny-ImageNet gradual) | 1 | 2 | 0 | 0.0079, 0.0201 | 274 s | `e1_relonly_tiny_s0`: 0.0081 / 4.4805, 4.0875 | 4.4806, 4.0865 |
+  | `smoke_resnet_relonly` (ResNet-18 middle, 16 clients, A) | 2 | 2 | 0 | 0.4739, 0.2680 | 101 s | `e2_res_relonly_A_s0`: 0.4730 / 0.4034, 0.2766 | 0.4029, 0.2772 |
+
+  - 옛 서버의 확인 실행(0.279 → 0.300)과도 맞는다. 차이는 R1 acc 0.001 이하, loss 0.1% 안팎이다. GPU(RTX 4090 대 3090 Ti)가 달라서 bit 단위로 같지는 않다.
+  - ResNet-18의 R2 acc 0.268은 R1(0.474)보다 낮다. 옛 run은 R2에서 평가하지 않아서(평가 라운드 1, 10, 20, …) 직접 비교할 수 없다. loss가 옛 run과 맞으므로 이전 문제로 보지 않는다. 옛 run은 R10에서 0.618이었다.
+  - provenance: 세 run 모두 `env.gpu = NVIDIA GeForce RTX 4090`, `git_commit = fcd4f14…`(새 저장소 HEAD. GIT_ROOT 치환이 동작함), `status = completed`, `global_overlap = 0`. `provenance/all_runs.jsonl`에 세 줄이 추가되었다.
+- GPU 공유: 확인 실행 중(21:44경)에 같은 계정의 다른 작업(`/home/honeynaps/data/shared/integrate_shared_ver4/somnum_release/device_verification_260929/scripts/run_pipeline_dump.py`)이 GPU 0–2에 프로세스당 약 2.2 GB로 올라왔다. 이 서버의 GPU는 다른 작업과 함께 쓰는 상황이다. 그 프로세스는 건드리지 않았다.
 
 ### 7단계. GPU와 워커 설정
-- 7.1 `supervisor.sh` 9–11줄 기본값: **바꾸지 않았다.** 허락된 GPU 번호를 아직 모르고, A안이라 이 서버에서는 R5 워커를 띄우지 않는다.
+- 7.1 `supervisor.sh` 기본값: GPU 답을 받은 뒤 `GPUS="0 1 2 3"`, GPU당 heavy 2 + light 4로 바꾸고 주석에 새 서버 정보를 적었다(`bash -n` 통과). GPU당 메모리는 최대 2×3.8 + 4×1.5 ≈ 13.6 GB로 24 GB 안이다. 전체 24 슬롯이면 남은 25개를 거의 동시에 돌릴 수 있다. A안에서는 이 서버에서 워커를 띄우지 않으므로, 계획이 B·C로 바뀔 때만 쓰는 값이다.
 - 7.2 cron: **넣지 않았다.** A안이라 이 서버에서 되살릴 워커가 없다.
 - 안전장치: `journal_expansion/runs/queue_r5/STOP`을 만들었다(`.gitignore` 대상이라 옛 서버로 전파되지 않음). 누가 `supervisor.sh`를 실행해도 워커가 뜨지 않는다.
 - 7.3 `r5_manifest.py` device 열: 고정 문자열 "cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)"을 `device()` 함수로 바꿨다. `provenance/<run_id>.json`의 `env.gpu`로 GPU 이름과 서버를 정하고(RTX 3090 Ti → ubuntu20, RTX 4090 → honeynaps, 표지 `[SERVER-GPU]`), 워커 로그 태그 `cuda:0/GPU<N>`에서 GPU 번호를 읽는다. 결과 예: `ubuntu20, RTX 3090 Ti, GPU 0`. 끝나지 않은 run 줄에는 워커 로그 태그만 적는다(시작 전이면 빈칸). provenance에는 hostname이 없어서 GPU 이름으로 서버를 가린다.

@@ -3,9 +3,9 @@
 # Pulls jobs until deadline_epoch, then exits (in-flight job finishes naturally).
 # Re-queues a job on non-zero exit so an end-of-window kill loses nothing.
 DEV="$1"; WID="$2"; DEADLINE="$3"
-QDIR="/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue"  # [SERVER-PATH:REPO_ROOT]
+QDIR="/home/honeynaps/data/driftgate/journal_expansion/runs/queue"  # [SERVER-PATH:REPO_ROOT]
 QFILE="$QDIR/queue.txt"; LOCK="$QDIR/queue.lock"; LOGDIR="$QDIR/logs"
-mkdir -p "$LOGDIR"; cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+mkdir -p "$LOGDIR"; cd /home/honeynaps/data/driftgate  # [SERVER-PATH:REPO_ROOT]
 export JX_THREADS=4
 while [ "$(date +%s)" -lt "$DEADLINE" ]; do
   JOB=$(flock "$LOCK" bash -c "head -n 1 '$QFILE' 2>/dev/null; sed -i '1d' '$QFILE' 2>/dev/null")

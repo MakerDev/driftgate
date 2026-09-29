@@ -25,7 +25,7 @@ GRAY = {"fixed 0.2": "#8C8C8C", "fixed 0.3": "#737373", "fixed 0.4": "#595959", 
 MK = {"DriftGate": "o", "entropy": "s", "fixed 0.2": "v", "fixed 0.3": "^", "fixed 0.4": "D", "fixed 0.5": "P", "fixed 0.6": "X"}
 HERE = Path(__file__).resolve().parent.parent
 TAB, FIG = HERE / "tables", HERE / "figures"; FIG.mkdir(parents=True, exist_ok=True)
-RUNS = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs")  # [SERVER-PATH:REPO_ROOT]
+RUNS = Path("/home/honeynaps/data/driftgate/journal_expansion/runs")  # [SERVER-PATH:REPO_ROOT]
 def rd(n): return list(csv.DictReader(open(TAB / n)))
 def save(fig, name):
     fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight"); fig.savefig(FIG / f"{name}.png", dpi=300, bbox_inches="tight")

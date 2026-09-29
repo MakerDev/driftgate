@@ -5,7 +5,7 @@ tables/final_closure_round2/table_settings.csv. Idempotent; safe to run partial.
 import json, glob, re, csv
 import numpy as np
 from pathlib import Path
-JR=Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR=Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 DATA=Path(__file__).resolve().parent.parent/"data"
 T3=JR/"runs/phaseT3_fixedref"
 def integ(f):

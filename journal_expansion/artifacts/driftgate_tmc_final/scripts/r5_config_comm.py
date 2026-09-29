@@ -5,7 +5,7 @@ Every value is read from config/code (source file:line given) or computed from t
 import csv, sys
 from pathlib import Path
 import numpy as np
-ROOT = Path("/disk2/Yujin/adaptive_splitomc_tmc"); JR = ROOT / "journal_expansion"  # [SERVER-PATH:REPO_ROOT]
+ROOT = Path("/home/honeynaps/data/driftgate"); JR = ROOT / "journal_expansion"  # [SERVER-PATH:REPO_ROOT]
 HERE = Path(__file__).resolve().parent.parent; TAB = HERE / "tables"; TAB.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(JR)); sys.path.insert(0, str(ROOT))
 import torch, yaml

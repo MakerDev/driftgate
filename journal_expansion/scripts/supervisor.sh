@@ -5,7 +5,7 @@
 # Migration (2026-09-29): GPUs and worker counts are variables. The defaults reproduce the old
 # server. On the new server set them here (cron does not pass your shell environment).
 # The pre-R5 pool (queue_worker.sh / resnet_worker.sh) is intentionally NOT launched any more.
-cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+cd /home/honeynaps/data/driftgate  # [SERVER-PATH:REPO_ROOT]
 GPUS="${R5_GPUS:-0}"                 # space-separated physical GPU indices allowed for R5  # [SERVER-GPU]
 NHEAVY="${R5_HEAVY_PER_GPU:-3}"      # heavy workers per GPU (Tiny-ImageNet ~3.8 GB, ResNet-18 ~2.5 GB)  # [SERVER-GPU]
 NLIGHT="${R5_LIGHT_PER_GPU:-5}"      # light workers per GPU (CIFAR/SVHN CNN ~1.5 GB)  # [SERVER-GPU]

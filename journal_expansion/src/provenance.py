@@ -18,7 +18,7 @@ from pathlib import Path
 
 JOURNAL_ROOT = Path(__file__).resolve().parent.parent
 PROVENANCE_DIR = JOURNAL_ROOT / "provenance"
-GIT_REPO_DIR = "/disk2/Yujin"  # repo root containing this project  # [SERVER-PATH:GIT_ROOT]
+GIT_REPO_DIR = "/home/honeynaps/data/driftgate"  # repo root containing this project  # [SERVER-PATH:GIT_ROOT]
 
 
 def new_run_id(prefix: str) -> str:

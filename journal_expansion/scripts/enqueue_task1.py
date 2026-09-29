@@ -7,7 +7,7 @@ Fixed grid uses the same-pool-established peak region {fx30,fx40,fx50}
 import sys
 from pathlib import Path
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 RV2 = f"python -u {JR}/scripts/run_v2.py"
 DV = "--mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --abs_cap"
 ENT = "--mode selfcal --signal ent_client --burn_in 10 --z_guard 0.5 --spatial_norm"

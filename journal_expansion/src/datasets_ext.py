@@ -24,7 +24,7 @@ import torch
 from torch.utils.data import Dataset
 from torchvision import datasets, transforms
 
-DATA_ROOT = Path("/disk2/Yujin/datasets")  # [SERVER-PATH:DATA_ROOT]
+DATA_ROOT = Path("/home/honeynaps/data/driftgate_datasets")  # [SERVER-PATH:DATA_ROOT]
 
 STATS = {
     "cifar10": ((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616)),

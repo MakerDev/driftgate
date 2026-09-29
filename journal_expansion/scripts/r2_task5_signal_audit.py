@@ -14,7 +14,7 @@ sys.path.insert(0, "."); sys.path.insert(0, "..")
 from src.evaluation.signal_metrics import evaluate_signal
 from scipy import stats
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 OUT = JR/"tables/final_closure_round2"; OUT.mkdir(parents=True, exist_ok=True)
 WARMUP=15; DRIFT=0.5
 

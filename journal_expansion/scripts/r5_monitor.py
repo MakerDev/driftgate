@@ -4,7 +4,7 @@ Exit codes: 0 = all 64 runs finished | 1 = still running, nothing to report |
 A run whose worker logged END exit!=0 without a JSON is re-queued ONCE at the head of its queue.
 """
 import fcntl, glob, json, os, re, subprocess, sys, datetime
-JR = "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion"  # [SERVER-PATH:REPO_ROOT]
+JR = "/home/honeynaps/data/driftgate/journal_expansion"  # [SERVER-PATH:REPO_ROOT]
 QD = f"{JR}/runs/queue_r5"
 EXPECTED = {}  # run_name -> (out_dir, queue)
 def add(q, out, names):

@@ -9,7 +9,7 @@ sys.path.insert(0,"."); sys.path.insert(0,"..")
 from src.evaluation.signal_metrics import evaluate_signal
 from src.controllers.self_calibrating import SIGNAL_RANGE, Z0, TAU_Z
 
-JR=Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR=Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 OUT=JR/"tables/final_closure_round2"
 T1="runs/phaseT1_disjoint"; T2="runs/phaseT2_signal"; R2="runs/phaseT2r2_signal"
 def load(p): return json.load(open(p))

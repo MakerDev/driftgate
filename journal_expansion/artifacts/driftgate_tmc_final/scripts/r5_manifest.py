@@ -5,7 +5,7 @@ eval_rounds, probe_eval_overlap, overlap_ok, device, worker exit code, start, en
 """
 import csv, glob, json, re
 from pathlib import Path
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 QD = JR / "runs/queue_r5"
 OUT = Path(__file__).resolve().parent.parent / "tables" / "run_manifest.csv"
 ENVN = {"A": "stepwise composition change", "mob": "client mobility", "svhn": "SVHN temporal",

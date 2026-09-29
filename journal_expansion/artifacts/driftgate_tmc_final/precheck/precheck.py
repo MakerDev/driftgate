@@ -9,7 +9,7 @@
 """
 import json, glob, re, math, csv, sys
 from pathlib import Path
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 OUT = Path(__file__).resolve().parent
 def sig(x): return 1.0 / (1.0 + math.exp(-max(-50.0, min(50.0, x))))
 GROUPS = {

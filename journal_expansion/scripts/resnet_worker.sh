@@ -3,9 +3,9 @@
 # OOM from fluctuating shared-machine load must not drop a job). Backs off when
 # the job fails so it doesn't hot-loop against a full GPU.
 DEV="$1"; WID="$2"
-QDIR="/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/resnet_queue"  # [SERVER-PATH:REPO_ROOT]
+QDIR="/home/honeynaps/data/driftgate/journal_expansion/runs/resnet_queue"  # [SERVER-PATH:REPO_ROOT]
 QFILE="$QDIR/queue.txt"; LOCK="$QDIR/queue.lock"; LOGDIR="$QDIR/logs"
-mkdir -p "$LOGDIR"; cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+mkdir -p "$LOGDIR"; cd /home/honeynaps/data/driftgate  # [SERVER-PATH:REPO_ROOT]
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 while [ ! -f "$QDIR/STOP" ]; do
   JOB=$(flock "$LOCK" bash -c "head -n 1 '$QFILE' 2>/dev/null; sed -i '1d' '$QFILE' 2>/dev/null")

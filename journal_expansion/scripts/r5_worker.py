@@ -21,14 +21,14 @@ can serve any GPU of a multi-GPU server. R5_HEAVY_MAX is therefore a per-GPU cap
 import datetime, fcntl, os, re, subprocess, sys, time
 
 KIND, WID = sys.argv[1], sys.argv[2]
-QDIR = "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue_r5"  # [SERVER-PATH:REPO_ROOT]
+QDIR = "/home/honeynaps/data/driftgate/journal_expansion/runs/queue_r5"  # [SERVER-PATH:REPO_ROOT]
 GPU = os.environ.get("R5_GPU", "0")  # physical GPU index (nvidia-smi, PCI order)  # [SERVER-GPU]
 LOCK, LOGDIR, RUNH = f"{QDIR}/queue.lock", f"{QDIR}/logs", f"{QDIR}/running_heavy_gpu{GPU}"
 HEAVY_MAX = int(os.environ.get("R5_HEAVY_MAX", "5"))
 ENV = dict(os.environ, CUDA_DEVICE_ORDER="PCI_BUS_ID", CUDA_VISIBLE_DEVICES=GPU)
 os.makedirs(LOGDIR, exist_ok=True)
 os.makedirs(RUNH, exist_ok=True)
-os.chdir("/disk2/Yujin/adaptive_splitomc_tmc")  # [SERVER-PATH:REPO_ROOT]
+os.chdir("/home/honeynaps/data/driftgate")  # [SERVER-PATH:REPO_ROOT]
 
 
 def log(msg):

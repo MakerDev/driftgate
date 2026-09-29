@@ -25,7 +25,7 @@ def roc_auc_score(label, score):
     if npos==0 or nneg==0: return float("nan")
     return (ranks[label==1].sum() - npos*(npos+1)/2.0)/(npos*nneg)
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 def load(p): return json.load(open(p))
 def integrated(h): return float(np.mean([e["acc_total"] for e in h["eval"]]))
 def erounds(h): return tuple(e["round"] for e in h["eval"])

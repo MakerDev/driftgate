@@ -4,7 +4,7 @@ All runs disjoint; same seeds/model_seed (100+seed) as the reference runs; eth=0
 Names match artifacts/driftgate_tmc_export_r4/scripts/r4_partA.py globs.
 """
 from pathlib import Path
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 RV2 = f"python -u {JR}/scripts/run_v2.py"
 Q = JR / "runs/queue/queue.txt"
 DJ = "--disjoint_pools"

@@ -5,7 +5,7 @@ import json, glob, sys, csv
 from pathlib import Path
 import numpy as np
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 
 def integrated(h):
     """Canonical metric: mean of acc_total over ALL eval rounds."""

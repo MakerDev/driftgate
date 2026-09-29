@@ -19,7 +19,7 @@ Order inside each queue: longest jobs first.
 """
 from pathlib import Path
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 RV2 = f"python -u {JR}/scripts/run_v2.py"
 QD = JR / "runs/queue_r5"; QD.mkdir(parents=True, exist_ok=True); (QD / "logs").mkdir(exist_ok=True)
 DJ = "--disjoint_pools"

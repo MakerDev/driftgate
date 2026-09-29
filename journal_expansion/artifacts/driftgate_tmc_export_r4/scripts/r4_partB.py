@@ -8,7 +8,7 @@ import numpy as np
 from pathlib import Path
 from scipy import stats
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 OUT = Path(__file__).resolve().parent.parent / "data"; OUT.mkdir(parents=True, exist_ok=True)
 R = JR / "runs"
 def load(p): return json.load(open(p))

@@ -4,7 +4,7 @@ config/code are marked '없음'. Writes ../data/a5_config_table.csv and ../data/
 import csv, sys
 from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "data"; OUT.mkdir(parents=True, exist_ok=True)
-ROOT = Path("/disk2/Yujin/adaptive_splitomc_tmc")  # [SERVER-PATH:REPO_ROOT]
+ROOT = Path("/home/honeynaps/data/driftgate")  # [SERVER-PATH:REPO_ROOT]
 sys.path.insert(0, str(ROOT))
 from models.architectures import ModelFactory
 f = ModelFactory("cifar10", 10, 32); c = f.make_client(); s = f.make_server()

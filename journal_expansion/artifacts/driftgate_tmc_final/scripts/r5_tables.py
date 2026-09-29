@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+JR = Path("/home/honeynaps/data/driftgate/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
 RUNS = JR / "runs"
 HERE = Path(__file__).resolve().parent.parent
 TAB = HERE / "tables"; TAB.mkdir(parents=True, exist_ok=True)

@@ -85,3 +85,10 @@
   - `enqueue_r5.py`(플래그 없이)는 실행하지 않았다. 이 서버에는 `heavy.txt`, `light.txt`가 없다.
   - 옛 서버의 sync 스크립트는 큐 파일과 snapshot을 복사하지 않으므로(`--exclude`), 이 변경과 충돌하지 않는다.
 - `r5_monitor.py`는 이 서버에서 실행하지 않는다. 옛 서버에서 올라온 워커 로그에 실패 기록이 있으면 이 서버의 `heavy/light.txt`에 run을 다시 넣기 때문이다. A안에서는 8.1의 확인 스크립트로 진행 상황을 본다.
+- 9단계 스크립트 사전 점검(새 run 없음): `artifacts/driftgate_tmc_final/`을 scratchpad로 복사하고, 복사본의 `precheck.py`, `r5_tables.py`, `r5_config_comm.py`, `r5_manifest.py`, `r5_figures.py`를 저장소 루트에서 실행했다. 출력이 스크립트 위치 기준이라 저장소의 산출물은 바뀌지 않았다.
+  - 다섯 개 모두 exit 0. precheck: "ALL MATCH relative-only mapping … True", `precheck_controller_path.csv`가 저장소 파일과 byte 단위로 같다.
+  - R5 run에 의존하지 않는 표(T2a, T6a–c, T7, T8, T9)는 저장소의 첫 버전과 byte 단위로 같다. 차이는 첫 버전 이후 끝난 R5 run이 채우는 칸(T1의 APFL, T3, T4b, T5, T10)뿐이다. 최종 표는 64개가 모두 끝난 뒤 9단계에서 다시 만든다.
+
+### 현재 상태와 다음 할 일 (2026-09-29 21:55경)
+- 1–7단계 완료. 8단계는 A안(옛 서버가 남은 25개를 마침)이라, 옛 서버가 `sync_results_from_old_server.sh`로 결과를 push하기를 기다린다.
+- 결과가 올라오면: `git pull` → 8.1 확인 스크립트로 64/64 확인(이 서버에서는 `r5_monitor.py`를 쓰지 않음) → 9단계(`precheck` → `r5_tables` → `r5_config_comm` → `r5_manifest` → `r5_figures`, 캡션 확인, 보고서) → 10단계.

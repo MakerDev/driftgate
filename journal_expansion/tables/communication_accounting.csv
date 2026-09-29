@@ -1,0 +1,6 @@
+component,underlying_splitomc,driftgate_additional
+smashed_activation_fwd_per_sample_bytes,32768,0
+activation_gradient_bwd_per_sample_bytes,32768,0
+model_exchange_per_round_bytes_overlap2,12149112,0
+client_drift_signal_per_client_per_round_bytes,0,4
+edge_consensus_per_es_per_round_bytes,0,4_times_degree

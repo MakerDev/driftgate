@@ -1,0 +1,56 @@
+========================================================================
+TASK 2 FINAL — direct server non-Main signal vs TV dual-exit divergence
+========================================================================
+
+### (A) DOWNSTREAM integrated accuracy (disjoint pools) ###
+
+Schedule A (5 seeds)
+  arm       mean(%)  n   per-seed
+  tv         65.84  5   [66.24, 65.6, 66.07, 62.79, 68.47]
+  soft       65.68  5   [66.45, 65.21, 65.41, 62.84, 68.48]
+  hard       66.45  5   [66.23, 65.68, 66.59, 64.12, 69.61]
+  ent        64.37  5   [64.95, 63.9, 64.54, 61.81, 66.64]
+  fixed      65.17  5   [65.59, 64.63, 65.15, 62.36, 68.13]
+    TV − soft: +0.160pp  CI95[-0.29,+0.61]  TV-higher 2/5  t-p=0.376 wilcox-p=0.812  per-seed=[np.float64(-0.2), np.float64(0.39), np.float64(0.67), np.float64(-0.05), np.float64(-0.01)]
+    TV − hard: -0.610pp  CI95[-1.36,+0.14]  TV-higher 1/5  t-p=0.088 wilcox-p=0.125  per-seed=[np.float64(0.01), np.float64(-0.08), np.float64(-0.52), np.float64(-1.33), np.float64(-1.13)]
+
+mobility-med (3 seeds)
+  arm       mean(%)  n   per-seed
+  tv         59.21  3   [58.9, 59.62, 59.11]
+  soft       58.82  3   [58.46, 59.27, 58.73]
+  hard       59.40  3   [59.06, 59.32, 59.82]
+  ent        57.21  3   [56.68, 57.47, 57.49]
+  fixed      58.58  3   [58.18, 59.03, 58.53]
+    TV − soft: +0.385pp  CI95[+0.26,+0.50]  TV-higher 3/3  t-p=0.005 wilcox-p=0.250  per-seed=[np.float64(0.44), np.float64(0.34), np.float64(0.37)]
+    TV − hard: -0.195pp  CI95[-1.46,+1.07]  TV-higher 1/3  t-p=0.574 wilcox-p=0.750  per-seed=[np.float64(-0.16), np.float64(0.3), np.float64(-0.72)]
+
+SVHN temporal (5 seeds)
+  arm       mean(%)  n   per-seed
+  tv         79.39  5   [79.45, 79.47, 77.03, 79.58, 81.41]
+  soft       80.45  5   [79.49, 80.0, 78.89, 80.92, 82.93]
+  hard       80.58  5   [79.57, 80.23, 78.97, 81.0, 83.1]
+  ent        76.97  5   [76.33, 76.16, 75.88, 77.59, 78.89]
+  fixed      80.43  5   [79.3, 80.19, 78.73, 80.87, 83.08]
+    TV − soft: -1.057pp  CI95[-1.99,-0.12]  TV-higher 0/5  t-p=0.035 wilcox-p=0.062  per-seed=[np.float64(-0.04), np.float64(-0.53), np.float64(-1.87), np.float64(-1.34), np.float64(-1.52)]
+    TV − hard: -1.187pp  CI95[-2.11,-0.26]  TV-higher 0/5  t-p=0.023 wilcox-p=0.062  per-seed=[np.float64(-0.12), np.float64(-0.76), np.float64(-1.95), np.float64(-1.42), np.float64(-1.69)]
+
+### (B) PASSIVE signal quality on SVHN (common neutral backbone = entropy run) ###
+Spearman(signal, rho) and AUROC(signal, drift-active := rho >= 0.4). Higher = better tracks drift.
+
+  signal    Spearman(vs rho)      AUROC(drift-active)
+  tv        +0.5570 (n=5)    0.9047 (n=5)   per-seed-spear=[np.float64(0.546), np.float64(0.764), np.float64(0.268), np.float64(0.607), np.float64(0.6)]
+  soft      +0.2747 (n=5)    0.7890 (n=5)   per-seed-spear=[np.float64(0.149), np.float64(0.172), np.float64(0.37), np.float64(0.307), np.float64(0.375)]
+  hard      +0.6892 (n=5)    0.9490 (n=5)   per-seed-spear=[np.float64(0.648), np.float64(0.635), np.float64(0.752), np.float64(0.694), np.float64(0.717)]
+  ent       -0.8282 (n=5)    0.1618 (n=5)   per-seed-spear=[np.float64(-0.602), np.float64(-0.934), np.float64(-0.823), np.float64(-0.937), np.float64(-0.845)]
+
+### TASK 2 VERDICT (§5.8) ###
+Downstream TV−direct (positive => TV better):
+  Schedule A (5 seeds)     TV−soft = +0.160pp  (2/5 TV-higher, t-p=0.376)  -> TV better
+  Schedule A (5 seeds)     TV−hard = -0.610pp  (1/5 TV-higher, t-p=0.088)  -> direct better
+  mobility-med (3 seeds)   TV−soft = +0.385pp  (3/3 TV-higher, t-p=0.005)  -> TV better
+  mobility-med (3 seeds)   TV−hard = -0.195pp  (1/3 TV-higher, t-p=0.574)  -> direct better
+  SVHN temporal (5 seeds)  TV−soft = -1.057pp  (0/5 TV-higher, t-p=0.035)  -> direct better
+  SVHN temporal (5 seeds)  TV−hard = -1.187pp  (0/5 TV-higher, t-p=0.023)  -> direct better
+
+Signal quality (SVHN, Spearman vs rho):
+  ranking: hard > tv > soft  (best=hard)

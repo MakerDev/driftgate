@@ -1,0 +1,18 @@
+[dvsig_tv_A_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.938 acc=0.400 worst=0.207 elapsed=2.0m ETA=299m
+  R 10 loss=0.394 acc=0.616 worst=0.484 elapsed=14.3m ETA=201m
+  R 20 loss=0.338 acc=0.670 worst=0.515 elapsed=27.6m ETA=179m
+  R 30 loss=0.263 acc=0.707 worst=0.551 elapsed=40.3m ETA=161m
+  R 40 loss=0.256 acc=0.596 worst=0.521 elapsed=53.2m ETA=146m
+  R 50 loss=0.238 acc=0.612 worst=0.547 elapsed=66.5m ETA=133m
+  R 60 loss=0.230 acc=0.616 worst=0.532 elapsed=79.8m ETA=120m
+  R 70 loss=0.241 acc=0.564 worst=0.534 elapsed=93.5m ETA=107m
+  R 80 loss=0.236 acc=0.575 worst=0.525 elapsed=107.4m ETA=94m
+  R 90 loss=0.223 acc=0.583 worst=0.567 elapsed=120.9m ETA=81m
+  R100 loss=0.198 acc=0.662 worst=0.640 elapsed=134.1m ETA=67m
+  R110 loss=0.180 acc=0.665 worst=0.626 elapsed=147.5m ETA=54m
+  R120 loss=0.185 acc=0.669 worst=0.639 elapsed=160.9m ETA=40m
+  R130 loss=0.102 acc=0.879 worst=0.821 elapsed=173.8m ETA=27m
+  R140 loss=0.096 acc=0.879 worst=0.767 elapsed=186.7m ETA=13m
+  R150 loss=0.096 acc=0.894 worst=0.806 elapsed=199.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_tv_A_s2.json

@@ -1,0 +1,3 @@
+[b3_tiny_fx15_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=100 device=cuda:0
+  R  1 loss=4.480 acc=0.008 worst=0.003 elapsed=6.9m ETA=679m
+  R 10 loss=3.568 acc=0.125 worst=0.107 elapsed=54.4m ETA=490m

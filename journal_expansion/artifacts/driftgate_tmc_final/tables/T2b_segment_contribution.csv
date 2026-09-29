@@ -1,0 +1,46 @@
+setting,comparison,segment,segment_diff_pp,ci95,n_pos,n,weight(n_eval_rounds/N),contribution_pp
+stepwise composition change,DriftGate − fixed 0.2,ρ=0 early,+2.7449,"[+1.82, +3.67]",5,5,0.2500,+0.6862
+stepwise composition change,DriftGate − fixed 0.2,ρ=0.4 rising,-0.9752,"[-1.57, -0.38]",0,5,0.1875,-0.1828
+stepwise composition change,DriftGate − fixed 0.2,ρ=0.8,-1.6431,"[-2.88, -0.40]",0,5,0.1875,-0.3081
+stepwise composition change,DriftGate − fixed 0.2,ρ=0.4 falling,-1.1083,"[-1.93, -0.29]",0,5,0.1875,-0.2078
+stepwise composition change,DriftGate − fixed 0.2,ρ=0 late,+6.6208,"[+2.27, +10.97]",5,5,0.1875,+1.2414
+stepwise composition change,DriftGate − fixed 0.2,SUM of contributions,+1.2289,,,5,1.0000,+1.2289  (integrated diff +1.2289)
+stepwise composition change,DriftGate − fixed 0.3,ρ=0 early,+1.9301,"[+1.36, +2.50]",5,5,0.2500,+0.4825
+stepwise composition change,DriftGate − fixed 0.3,ρ=0.4 rising,-0.9413,"[-1.30, -0.58]",0,5,0.1875,-0.1765
+stepwise composition change,DriftGate − fixed 0.3,ρ=0.8,-0.5621,"[-1.51, +0.38]",1,5,0.1875,-0.1054
+stepwise composition change,DriftGate − fixed 0.3,ρ=0.4 falling,-0.8633,"[-1.27, -0.46]",0,5,0.1875,-0.1619
+stepwise composition change,DriftGate − fixed 0.3,ρ=0 late,+4.2095,"[+0.35, +8.06]",5,5,0.1875,+0.7893
+stepwise composition change,DriftGate − fixed 0.3,SUM of contributions,+0.8281,,,5,1.0000,+0.8281  (integrated diff +0.8281)
+stepwise composition change,DriftGate − fixed 0.4,ρ=0 early,+1.1466,"[+0.84, +1.45]",5,5,0.2500,+0.2867
+stepwise composition change,DriftGate − fixed 0.4,ρ=0.4 rising,-0.4571,"[-0.59, -0.32]",0,5,0.1875,-0.0857
+stepwise composition change,DriftGate − fixed 0.4,ρ=0.8,+1.3103,"[+0.38, +2.24]",5,5,0.1875,+0.2457
+stepwise composition change,DriftGate − fixed 0.4,ρ=0.4 falling,-0.0587,"[-0.50, +0.39]",2,5,0.1875,-0.0110
+stepwise composition change,DriftGate − fixed 0.4,ρ=0 late,+1.7082,"[-1.68, +5.10]",3,5,0.1875,+0.3203
+stepwise composition change,DriftGate − fixed 0.4,SUM of contributions,+0.7559,,,5,1.0000,+0.7559  (integrated diff +0.7559)
+stepwise composition change,DriftGate − fixed 0.5,ρ=0 early,+0.3019,"[-0.09, +0.69]",4,5,0.2500,+0.0755
+stepwise composition change,DriftGate − fixed 0.5,ρ=0.4 rising,+0.3822,"[-0.20, +0.96]",4,5,0.1875,+0.0717
+stepwise composition change,DriftGate − fixed 0.5,ρ=0.8,+3.9181,"[+2.76, +5.08]",5,5,0.1875,+0.7346
+stepwise composition change,DriftGate − fixed 0.5,ρ=0.4 falling,+1.3187,"[+0.28, +2.36]",5,5,0.1875,+0.2473
+stepwise composition change,DriftGate − fixed 0.5,ρ=0 late,-0.3224,"[-3.29, +2.64]",3,5,0.1875,-0.0605
+stepwise composition change,DriftGate − fixed 0.5,SUM of contributions,+1.0686,,,5,1.0000,+1.0686  (integrated diff +1.0686)
+stepwise composition change,DriftGate − entropy,ρ=0 early,-0.3838,"[-0.63, -0.14]",0,5,0.2500,-0.0960
+stepwise composition change,DriftGate − entropy,ρ=0.4 rising,+0.9792,"[+0.51, +1.45]",5,5,0.1875,+0.1836
+stepwise composition change,DriftGate − entropy,ρ=0.8,+6.6679,"[+4.20, +9.14]",5,5,0.1875,+1.2502
+stepwise composition change,DriftGate − entropy,ρ=0.4 falling,+3.0762,"[+2.03, +4.12]",5,5,0.1875,+0.5768
+stepwise composition change,DriftGate − entropy,ρ=0 late,-1.8827,"[-4.55, +0.79]",1,5,0.1875,-0.3530
+stepwise composition change,DriftGate − entropy,SUM of contributions,+1.5616,,,5,1.0000,+1.5616  (integrated diff +1.5616)
+client mobility,DriftGate − fixed 0.2,ρ=0 (R1–60),+4.9617,"[+2.97, +6.95]",3,3,0.5385,+2.6717
+client mobility,DriftGate − fixed 0.2,ρ=0.8 (R70–120),-2.9657,"[-5.91, -0.02]",0,3,0.4615,-1.3688
+client mobility,DriftGate − fixed 0.2,SUM of contributions,+1.3029,,,3,1.0000,+1.3029  (integrated diff +1.3029)
+client mobility,DriftGate − fixed 0.4,ρ=0 (R1–60),+1.7418,"[+1.35, +2.13]",3,3,0.5385,+0.9379
+client mobility,DriftGate − fixed 0.4,ρ=0.8 (R70–120),-0.6230,"[-1.47, +0.22]",0,3,0.4615,-0.2875
+client mobility,DriftGate − fixed 0.4,SUM of contributions,+0.6504,,,3,1.0000,+0.6504  (integrated diff +0.6504)
+client mobility,DriftGate − fixed 0.5,ρ=0 (R1–60),+0.0516,"[-0.32, +0.42]",2,3,0.5385,+0.0278
+client mobility,DriftGate − fixed 0.5,ρ=0.8 (R70–120),+1.9522,"[+1.58, +2.32]",3,3,0.4615,+0.9010
+client mobility,DriftGate − fixed 0.5,SUM of contributions,+0.9288,,,3,1.0000,+0.9288  (integrated diff +0.9288)
+client mobility,DriftGate − fixed 0.6,ρ=0 (R1–60),-2.0469,"[-3.01, -1.08]",0,3,0.5385,-1.1022
+client mobility,DriftGate − fixed 0.6,ρ=0.8 (R70–120),+5.1685,"[+3.85, +6.49]",3,3,0.4615,+2.3855
+client mobility,DriftGate − fixed 0.6,SUM of contributions,+1.2833,,,3,1.0000,+1.2833  (integrated diff +1.2833)
+client mobility,DriftGate − entropy,ρ=0 (R1–60),-1.2064,"[-1.39, -1.02]",0,3,0.5385,-0.6496
+client mobility,DriftGate − entropy,ρ=0.8 (R70–120),+5.7748,"[+4.35, +7.20]",3,3,0.4615,+2.6653
+client mobility,DriftGate − entropy,SUM of contributions,+2.0157,,,3,1.0000,+2.0157  (integrated diff +2.0157)

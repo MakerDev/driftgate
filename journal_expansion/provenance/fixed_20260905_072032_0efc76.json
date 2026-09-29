@@ -1,0 +1,146 @@
+{
+ "run_id": "fixed_20260905_072032_0efc76",
+ "git_commit": "e82b96b76a5a1e644f742c701accefb4af33fc38",
+ "config": {
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 120,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 1,
+   "model_seed": 101,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.5,
+  "big_lambda_val": 0.5,
+  "schedule": "abrupt",
+  "spatial_mode": null,
+  "controller_mode": "fixed",
+  "controller_signal": "delta_hard",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "t1_mob_fx50_s1"
+ },
+ "config_sha256": "9de2029d70297db96f1529ea7a873b78dac2c41658d1a85049f006bf27ce2647",
+ "command": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode fixed --lambda_val 0.5 --big_lambda_val 0.5 --disjoint_pools --mobility --mobility_speed_level med --schedule abrupt --rounds 120 --probe_n 64 --seed 1 --model_seed 101 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT1_disjoint --device cuda:0 --run_name t1_mob_fx50_s1",
+ "start_time": "2026-09-05T07:20:32.615943",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3090 Ti"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 1,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "split_hash": "c889033a0667c3de",
+ "model_init_hash": "94e1a02e7298cd5e",
+ "mobility": {
+  "speed_level": "med"
+ },
+ "end_time": "2026-09-05T10:24:03.282636",
+ "wall_time_sec": 11010.606598377228,
+ "final_metrics": {
+  "acc_total_final": 0.5720732688304497,
+  "worst_cell_final": 0.5436972723638812,
+  "integrated_acc": 0.5872066615375116,
+  "wall_min": 183.40797469615936
+ }
+}

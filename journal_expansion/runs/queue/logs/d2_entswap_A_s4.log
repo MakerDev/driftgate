@@ -1,0 +1,18 @@
+[d2_entswap_A_s4] method=splitomcplus controller=selfcal signal=ent_client schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.923 acc=0.401 worst=0.282 elapsed=2.0m ETA=292m
+  R 10 loss=0.398 acc=0.642 worst=0.459 elapsed=13.7m ETA=192m
+  R 20 loss=0.337 acc=0.698 worst=0.517 elapsed=26.9m ETA=175m
+  R 30 loss=0.231 acc=0.766 worst=0.637 elapsed=39.8m ETA=159m
+  R 40 loss=0.193 acc=0.634 worst=0.561 elapsed=52.8m ETA=145m
+  R 50 loss=0.173 acc=0.621 worst=0.540 elapsed=66.7m ETA=133m
+  R 60 loss=0.161 acc=0.630 worst=0.538 elapsed=80.1m ETA=120m
+  R 70 loss=0.147 acc=0.534 worst=0.472 elapsed=93.6m ETA=107m
+  R 80 loss=0.127 acc=0.550 worst=0.471 elapsed=107.4m ETA=94m
+  R 90 loss=0.119 acc=0.553 worst=0.530 elapsed=120.8m ETA=81m
+  R100 loss=0.109 acc=0.659 worst=0.626 elapsed=134.1m ETA=67m
+  R110 loss=0.104 acc=0.658 worst=0.616 elapsed=148.5m ETA=54m
+  R120 loss=0.098 acc=0.657 worst=0.608 elapsed=161.8m ETA=40m
+  R130 loss=0.089 acc=0.881 worst=0.803 elapsed=175.1m ETA=27m
+  R140 loss=0.080 acc=0.884 worst=0.807 elapsed=188.2m ETA=13m
+  R150 loss=0.079 acc=0.897 worst=0.846 elapsed=201.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d2_horizon/d2_entswap_A_s4.json

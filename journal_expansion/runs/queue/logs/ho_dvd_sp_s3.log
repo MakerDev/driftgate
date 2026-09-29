@@ -1,0 +1,18 @@
+[ho_dvd_sp_s3] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=1.006 acc=0.263 worst=0.204 elapsed=4.5m ETA=665m
+  R 10 loss=0.453 acc=0.630 worst=0.513 elapsed=25.1m ETA=352m
+  R 20 loss=0.337 acc=0.738 worst=0.643 elapsed=47.8m ETA=310m
+  R 30 loss=0.254 acc=0.777 worst=0.698 elapsed=70.3m ETA=281m
+  R 40 loss=0.201 acc=0.802 worst=0.739 elapsed=92.9m ETA=256m
+  R 50 loss=0.166 acc=0.822 worst=0.770 elapsed=115.7m ETA=231m
+  R 60 loss=0.141 acc=0.837 worst=0.781 elapsed=138.2m ETA=207m
+  R 70 loss=0.118 acc=0.848 worst=0.794 elapsed=160.3m ETA=183m
+  R 80 loss=0.104 acc=0.859 worst=0.800 elapsed=182.7m ETA=160m
+  R 90 loss=0.092 acc=0.857 worst=0.801 elapsed=205.2m ETA=137m
+  R100 loss=0.084 acc=0.860 worst=0.800 elapsed=227.5m ETA=114m
+  R110 loss=0.079 acc=0.868 worst=0.810 elapsed=250.1m ETA=91m
+  R120 loss=0.071 acc=0.866 worst=0.805 elapsed=272.8m ETA=68m
+  R130 loss=0.065 acc=0.869 worst=0.811 elapsed=295.4m ETA=45m
+  R140 loss=0.060 acc=0.870 worst=0.810 elapsed=318.3m ETA=23m
+  R150 loss=0.053 acc=0.872 worst=0.811 elapsed=340.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseE_holdout/ho_dvd_sp_s3.json

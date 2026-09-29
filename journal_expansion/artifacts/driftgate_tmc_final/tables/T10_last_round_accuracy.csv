@@ -1,0 +1,28 @@
+setting,method,last_eval_round,n_seeds,acc_total_pct,sd_pct
+stepwise composition change,DriftGate,150,5,87.9838,2.7701
+stepwise composition change,fixed 0.2,150,5,79.6767,1.5713
+stepwise composition change,fixed 0.3,150,5,82.2870,1.9739
+stepwise composition change,fixed 0.4,150,5,84.8057,2.3541
+stepwise composition change,fixed 0.5,150,5,86.9420,2.7867
+stepwise composition change,entropy,150,5,88.1460,2.9893
+stepwise composition change,absonly,150,5,88.5815,2.4267
+client mobility,DriftGate,120,3,59.7212,1.2815
+client mobility,fixed 0.2,120,3,62.2324,0.7148
+client mobility,fixed 0.4,120,3,59.8868,0.9498
+client mobility,fixed 0.5,120,3,56.9231,0.8317
+client mobility,fixed 0.6,120,3,53.4317,0.9497
+client mobility,entropy,120,3,52.7712,0.9471
+client mobility,absonly,120,3,55.9055,1.0806
+CIFAR-10 gradual,fixed 0.15,150,1,62.8672,
+CIFAR-10 gradual,fixed 0.2,150,3,65.4188,2.6865
+CIFAR-10 gradual,fixed 0.4,150,3,62.0345,2.8023
+CIFAR-100 gradual,DriftGate,150,3,46.6804,1.0992
+CIFAR-100 gradual,fixed 0.15,150,1,48.7076,
+CIFAR-100 gradual,fixed 0.2,150,3,46.9652,1.2582
+CIFAR-100 gradual,fixed 0.4,150,3,43.9938,0.9297
+Tiny-ImageNet,fixed 0.2,100,3,32.2121,0.4734
+Tiny-ImageNet,fixed 0.4,100,3,31.1336,0.6346
+SVHN temporal,fixed 0.15,150,2,87.1063,0.5566
+SVHN temporal,fixed 0.2,150,5,87.0477,1.0411
+SVHN temporal,fixed 0.4,150,5,84.7377,1.1304
+SVHN temporal,entropy,150,5,76.9636,1.4311

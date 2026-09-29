@@ -1,0 +1,15 @@
+[cor_contrast_abrupt_sev_dv2_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.900 acc=0.278 worst=0.179 elapsed=7.7m ETA=916m
+  R 10 loss=0.379 acc=0.446 worst=0.342 elapsed=43.8m ETA=481m
+  R 20 loss=0.319 acc=0.521 worst=0.410 elapsed=81.4m ETA=407m
+  R 30 loss=0.241 acc=0.561 worst=0.475 elapsed=118.2m ETA=355m
+  R 40 loss=0.218 acc=0.584 worst=0.472 elapsed=149.6m ETA=299m
+  R 50 loss=0.198 acc=0.608 worst=0.556 elapsed=178.9m ETA=251m
+  R 60 loss=0.172 acc=0.617 worst=0.567 elapsed=216.1m ETA=216m
+  R 70 loss=0.153 acc=0.428 worst=0.382 elapsed=247.4m ETA=177m
+  R 80 loss=0.137 acc=0.455 worst=0.423 elapsed=280.8m ETA=140m
+  R 90 loss=0.133 acc=0.442 worst=0.402 elapsed=312.0m ETA=104m
+  R100 loss=0.126 acc=0.442 worst=0.396 elapsed=344.9m ETA=69m
+  R110 loss=0.115 acc=0.467 worst=0.397 elapsed=376.4m ETA=34m
+  R120 loss=0.104 acc=0.481 worst=0.462 elapsed=406.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_contrast_abrupt_sev_dv2_s1.json

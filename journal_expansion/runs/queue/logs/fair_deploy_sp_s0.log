@@ -1,0 +1,26 @@
+[fair_deploy_sp_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=100 device=cuda:0
+  R  1 loss=0.884 acc=0.209 worst=0.182 elapsed=2.6m ETA=259m
+  R 10 loss=0.403 acc=0.507 worst=0.447 elapsed=15.9m ETA=143m
+  R 20 loss=0.338 acc=0.556 worst=0.500 elapsed=30.4m ETA=122m
+  R 30 loss=0.216 acc=0.615 worst=0.538 elapsed=44.8m ETA=105m
+  R 40 loss=0.177 acc=0.611 worst=0.513 elapsed=58.9m ETA=88m
+  R 50 loss=0.155 acc=0.620 worst=0.521 elapsed=72.9m ETA=73m
+  R 60 loss=0.140 acc=0.652 worst=0.541 elapsed=87.8m ETA=59m
+  R 70 loss=0.123 acc=0.652 worst=0.568 elapsed=101.1m ETA=43m
+  R 80 loss=0.115 acc=0.654 worst=0.570 elapsed=115.8m ETA=29m
+  R 90 loss=0.108 acc=0.656 worst=0.551 elapsed=129.9m ETA=14m
+  R100 loss=0.093 acc=0.651 worst=0.555 elapsed=144.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/fair_deploy_sp_s0.json
+[fair_deploy_sp_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.209 worst=0.182 elapsed=2.5m ETA=249m
+  R 10 loss=0.403 acc=0.506 worst=0.446 elapsed=15.3m ETA=138m
+  R 20 loss=0.338 acc=0.555 worst=0.501 elapsed=30.0m ETA=120m
+  R 30 loss=0.217 acc=0.615 worst=0.538 elapsed=45.0m ETA=105m
+  R 40 loss=0.177 acc=0.611 worst=0.510 elapsed=59.1m ETA=89m
+  R 50 loss=0.158 acc=0.613 worst=0.474 elapsed=72.7m ETA=73m
+  R 60 loss=0.142 acc=0.651 worst=0.524 elapsed=86.9m ETA=58m
+  R 70 loss=0.124 acc=0.646 worst=0.521 elapsed=101.5m ETA=43m
+  R 80 loss=0.114 acc=0.653 worst=0.554 elapsed=115.4m ETA=29m
+  R 90 loss=0.108 acc=0.654 worst=0.539 elapsed=129.4m ETA=14m
+  R100 loss=0.092 acc=0.642 worst=0.511 elapsed=143.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/fair_deploy_sp_s0.json

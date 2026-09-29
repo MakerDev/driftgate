@@ -1,0 +1,9 @@
+setting,fixed_arm,mean_pct,sd_pct,n_seeds
+CIFAR-10 gradual,fx20,62.8556,0.5086,3
+CIFAR-10 gradual,fx40,62.1362,0.7857,3
+CIFAR-100 gradual,fx20,35.9081,1.4227,3
+CIFAR-100 gradual,fx40,35.0016,1.3326,3
+CIFAR-100 spatial,fx20,36.4366,1.5577,3
+CIFAR-100 spatial,fx40,35.7142,1.4791,3
+Tiny-ImageNet,fx20,24.3149,0.0911,3
+Tiny-ImageNet,fx40,23.8245,0.1587,3

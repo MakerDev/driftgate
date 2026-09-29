@@ -1,0 +1,143 @@
+{
+ "run_id": "selfcal_20260904_191400_5c2c0e",
+ "git_commit": "e82b96b76a5a1e644f742c701accefb4af33fc38",
+ "config": {
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 3,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 0,
+   "model_seed": 100,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "schedule": "A",
+  "spatial_mode": null,
+  "controller_mode": "selfcal",
+  "controller_signal": "server_nonmain_soft",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "smoke_soft"
+ },
+ "config_sha256": "abe1f320a31081ceafd20513a45ac38845b59df658a6e4754e0dd07011caef24",
+ "command": "journal_expansion/scripts/run_v2.py --mode selfcal --signal server_nonmain_soft --burn_in 10 --z_guard 0.5 --spatial_norm --abs_cap --disjoint_pools --schedule A --seed 0 --rounds 3 --device cuda:0 --run_name smoke_soft --output_dir journal_expansion/runs/_smoke --eval_every 3",
+ "start_time": "2026-09-04T19:14:00.995624",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3090 Ti"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 0,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "split_hash": "89e095ff3d7278dc",
+ "model_init_hash": "c3e43eeeae1fa2d9",
+ "end_time": "2026-09-04T19:19:46.951784",
+ "wall_time_sec": 345.89804553985596,
+ "final_metrics": {
+  "acc_total_final": 0.39496510774414423,
+  "worst_cell_final": 0.35419407894736843,
+  "integrated_acc": 0.33667630387207215,
+  "wall_min": 5.6790277600288395
+ }
+}

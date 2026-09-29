@@ -1,0 +1,13 @@
+[sc_ent_abrupt_s1] method=splitomcplus controller=selfcal signal=ent_client schedule=abrupt rounds=100 device=cuda:0
+  R  1 loss=0.900 acc=0.337 worst=0.181 elapsed=2.0m ETA=202m
+  R 10 loss=0.379 acc=0.556 worst=0.418 elapsed=14.6m ETA=132m
+  R 20 loss=0.236 acc=0.712 worst=0.597 elapsed=28.5m ETA=114m
+  R 30 loss=0.189 acc=0.748 worst=0.697 elapsed=43.3m ETA=101m
+  R 40 loss=0.173 acc=0.760 worst=0.628 elapsed=57.5m ETA=86m
+  R 50 loss=0.156 acc=0.779 worst=0.720 elapsed=71.2m ETA=71m
+  R 60 loss=0.143 acc=0.510 worst=0.468 elapsed=85.7m ETA=57m
+  R 70 loss=0.127 acc=0.516 worst=0.487 elapsed=100.2m ETA=43m
+  R 80 loss=0.112 acc=0.512 worst=0.487 elapsed=114.8m ETA=29m
+  R 90 loss=0.108 acc=0.499 worst=0.417 elapsed=129.4m ETA=14m
+  R100 loss=0.106 acc=0.498 worst=0.439 elapsed=143.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/downstream_pilot/sc_ent_abrupt_s1.json

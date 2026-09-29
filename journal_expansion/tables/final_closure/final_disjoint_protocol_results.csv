@@ -1,0 +1,6 @@
+block,comparison,mean_pp,ci_lo_pp,ci_hi_pp,n_pos,n_seeds
+A_disjoint,DriftGate-fixed_l0.4,0.6642,0.3146,1.0138,5,5
+A_disjoint,DriftGate-entropy,1.4699,1.0475,1.8923,5,5
+A_disjoint,DriftGate-a1(Lam=.5),-0.0711,-0.2311,0.0890,2,5
+mob_disjoint,DriftGate-fixed_l0.4,0.6291,0.4370,0.8212,3,3
+mob_disjoint,DriftGate-entropy,1.9945,1.1799,2.8092,3,3

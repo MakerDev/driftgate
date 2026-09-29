@@ -1,0 +1,18 @@
+[fx60_sp_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.281 worst=0.184 elapsed=2.5m ETA=375m
+  R 10 loss=0.323 acc=0.470 worst=0.358 elapsed=16.3m ETA=228m
+  R 20 loss=0.265 acc=0.540 worst=0.437 elapsed=29.9m ETA=194m
+  R 30 loss=0.224 acc=0.573 worst=0.499 elapsed=42.9m ETA=172m
+  R 40 loss=0.199 acc=0.598 worst=0.470 elapsed=56.3m ETA=155m
+  R 50 loss=0.177 acc=0.616 worst=0.520 elapsed=70.9m ETA=142m
+  R 60 loss=0.157 acc=0.631 worst=0.543 elapsed=86.4m ETA=130m
+  R 70 loss=0.140 acc=0.649 worst=0.560 elapsed=101.9m ETA=116m
+  R 80 loss=0.129 acc=0.659 worst=0.561 elapsed=116.4m ETA=102m
+  R 90 loss=0.124 acc=0.633 worst=0.557 elapsed=129.1m ETA=86m
+  R100 loss=0.115 acc=0.645 worst=0.554 elapsed=144.0m ETA=72m
+  R110 loss=0.107 acc=0.653 worst=0.576 elapsed=158.4m ETA=58m
+  R120 loss=0.097 acc=0.677 worst=0.545 elapsed=172.4m ETA=43m
+  R130 loss=0.096 acc=0.687 worst=0.562 elapsed=185.9m ETA=29m
+  R140 loss=0.079 acc=0.690 worst=0.567 elapsed=201.4m ETA=14m
+  R150 loss=0.076 acc=0.683 worst=0.568 elapsed=216.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_grid/fx60_sp_s1.json

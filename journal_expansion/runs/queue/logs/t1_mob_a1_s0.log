@@ -1,0 +1,15 @@
+[t1_mob_a1_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:1
+  R  1 loss=0.884 acc=0.271 worst=0.173 elapsed=3.1m ETA=367m
+  R 10 loss=0.405 acc=0.512 worst=0.439 elapsed=24.6m ETA=271m
+  R 20 loss=0.343 acc=0.578 worst=0.453 elapsed=50.1m ETA=251m
+  R 30 loss=0.271 acc=0.642 worst=0.564 elapsed=75.4m ETA=226m
+  R 40 loss=0.236 acc=0.674 worst=0.613 elapsed=100.3m ETA=201m
+  R 50 loss=0.207 acc=0.708 worst=0.661 elapsed=126.1m ETA=176m
+  R 60 loss=0.188 acc=0.722 worst=0.696 elapsed=152.0m ETA=152m
+  R 70 loss=0.216 acc=0.561 worst=0.538 elapsed=179.7m ETA=128m
+  R 80 loss=0.196 acc=0.576 worst=0.554 elapsed=206.4m ETA=103m
+  R 90 loss=0.189 acc=0.583 worst=0.565 elapsed=230.0m ETA=77m
+  R100 loss=0.176 acc=0.597 worst=0.581 elapsed=252.4m ETA=50m
+  R110 loss=0.167 acc=0.605 worst=0.584 elapsed=269.8m ETA=25m
+  R120 loss=0.155 acc=0.612 worst=0.586 elapsed=283.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT1_disjoint/t1_mob_a1_s0.json

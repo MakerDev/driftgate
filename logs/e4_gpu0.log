@@ -1,0 +1,15 @@
+
+[1/2] splitomcplus_lam0.2_Lam0.5_mob (mobility)
+[splitomcplus_lam0.2_Lam0.5_mob] Starting splitomcplus with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.246 acc_oop=0.156 acc_oor=0.059 acc_total=0.207 elapsed=1.9m ETA=286m
+  R 10 loss=0.480 acc_main=0.473 acc_oop=0.390 acc_oor=0.198 acc_total=0.429 elapsed=14.4m ETA=201m
+  R 20 loss=0.413 acc_main=0.539 acc_oop=0.442 acc_oor=0.232 acc_total=0.489 elapsed=31.4m ETA=204m
+  R 30 loss=0.365 acc_main=0.600 acc_oop=0.492 acc_oor=0.284 acc_total=0.547 elapsed=46.3m ETA=185m
+  R 40 loss=0.327 acc_main=0.634 acc_oop=0.524 acc_oor=0.292 acc_total=0.578 elapsed=63.1m ETA=173m
+  R 50 loss=0.298 acc_main=0.655 acc_oop=0.530 acc_oor=0.311 acc_total=0.595 elapsed=80.3m ETA=161m
+  R 60 loss=0.273 acc_main=0.661 acc_oop=0.546 acc_oor=0.330 acc_total=0.605 elapsed=96.9m ETA=145m
+  R 70 loss=0.254 acc_main=0.676 acc_oop=0.555 acc_oor=0.348 acc_total=0.618 elapsed=114.7m ETA=131m
+  R 80 loss=0.235 acc_main=0.678 acc_oop=0.554 acc_oor=0.383 acc_total=0.622 elapsed=132.0m ETA=116m
+  R 90 loss=0.221 acc_main=0.688 acc_oop=0.548 acc_oor=0.366 acc_total=0.626 elapsed=145.9m ETA=97m

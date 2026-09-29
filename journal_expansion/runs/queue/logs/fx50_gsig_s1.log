@@ -1,0 +1,18 @@
+[fx50_gsig_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.334 worst=0.169 elapsed=2.1m ETA=320m
+  R 10 loss=0.356 acc=0.562 worst=0.425 elapsed=15.5m ETA=218m
+  R 20 loss=0.298 acc=0.651 worst=0.515 elapsed=29.8m ETA=194m
+  R 30 loss=0.254 acc=0.689 worst=0.581 elapsed=43.9m ETA=176m
+  R 40 loss=0.227 acc=0.710 worst=0.560 elapsed=58.1m ETA=160m
+  R 50 loss=0.203 acc=0.716 worst=0.632 elapsed=72.8m ETA=146m
+  R 60 loss=0.181 acc=0.699 worst=0.618 elapsed=87.2m ETA=131m
+  R 70 loss=0.163 acc=0.670 worst=0.618 elapsed=101.9m ETA=116m
+  R 80 loss=0.150 acc=0.634 worst=0.583 elapsed=116.7m ETA=102m
+  R 90 loss=0.143 acc=0.570 worst=0.511 elapsed=131.5m ETA=88m
+  R100 loss=0.134 acc=0.561 worst=0.507 elapsed=146.5m ETA=73m
+  R110 loss=0.125 acc=0.574 worst=0.551 elapsed=161.3m ETA=59m
+  R120 loss=0.114 acc=0.577 worst=0.522 elapsed=176.8m ETA=44m
+  R130 loss=0.111 acc=0.585 worst=0.541 elapsed=192.8m ETA=30m
+  R140 loss=0.095 acc=0.585 worst=0.569 elapsed=208.6m ETA=15m
+  R150 loss=0.090 acc=0.582 worst=0.551 elapsed=224.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_grid/fx50_gsig_s1.json

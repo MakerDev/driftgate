@@ -1,0 +1,10 @@
+setting,client_server_TV,server_nonMain_rate,fixed_grid_best,pre_fixed_lambda0.2,predictive_entropy
+Schedule A,65.84(n5),66.45(n5),65.17(n5),64.70(n5),64.37(n5)
+CIFAR-10 gradual,62.72(n3),62.96(n3),unmatched(no disjoint grid),unmatched(no disjoint ref),unmatched(no disjoint ref)
+CIFAR-100 spatial,36.44(n3),35.00(n3),unmatched(no disjoint grid),unmatched(no disjoint ref),unmatched(no disjoint ref)
+CIFAR-100 gradual,36.10(n3),35.41(n3),unmatched(no disjoint grid),unmatched(no disjoint ref),unmatched(no disjoint ref)
+Tiny-ImageNet,23.93(n3),23.86(n3),unmatched(no disjoint grid),unmatched(no disjoint ref),unmatched(no disjoint ref)
+SVHN temporal,79.39(n5),80.58(n5),unmatched(no disjoint grid),80.43(n5),76.97(n5)
+mobility slow,,,,,not run (budget; hard not uniform default -> mobility figure stays TV)
+mobility medium,59.21(n3),59.40(n3),58.58(n3),57.93(n3),57.21(n3)
+mobility fast,,,,,not run (budget; hard not uniform default -> mobility figure stays TV)

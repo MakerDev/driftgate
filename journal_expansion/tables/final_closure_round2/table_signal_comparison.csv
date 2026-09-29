@@ -1,0 +1,5 @@
+signal,model_output_needed,client_metadata_needed,runtime_label_needed,signal_range,passive_spearman_A,passive_auroc_A(raw/dirfree),passive_spearman_SVHN,passive_auroc_SVHN(raw/dirfree),acc_ScheduleA,acc_mobility,acc_SVHN,acc_C100spatial,acc_C100gradual,acc_TinyImageNet
+predictive entropy,client+server logits,no,no,"[0, ln C]",+0.327,0.658/0.658,-0.764,0.190/0.810,64.37(n5),57.21(n3),76.97(n5),,,
+server non-Main prob mass (soft),server logits only,yes,no,"[0,1]",+0.373,0.691/0.691,+0.709,0.974/0.974,65.68(n5),58.82(n3),80.45(n5),,,
+server non-Main pred rate (hard),server argmax only,yes,no,"[0,1]",+0.700,0.885/0.885,+0.866,1.000/1.000,66.45(n5),59.40(n3),80.58(n5),35.00(n3),35.41(n3),23.86(n3)
+client-server TV,client+server logits,no,no,"[0,1]",+0.783,0.884/0.884,+0.433,0.876/0.876,65.84(n5),59.21(n3),79.39(n5),36.44(n3),36.10(n3),23.93(n3)

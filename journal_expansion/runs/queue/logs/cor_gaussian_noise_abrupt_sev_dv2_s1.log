@@ -1,0 +1,15 @@
+[cor_gaussian_noise_abrupt_sev_dv2_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.900 acc=0.278 worst=0.178 elapsed=5.1m ETA=609m
+  R 10 loss=0.379 acc=0.446 worst=0.342 elapsed=32.0m ETA=353m
+  R 20 loss=0.319 acc=0.521 worst=0.409 elapsed=64.2m ETA=321m
+  R 30 loss=0.241 acc=0.562 worst=0.479 elapsed=97.8m ETA=293m
+  R 40 loss=0.218 acc=0.584 worst=0.472 elapsed=131.6m ETA=263m
+  R 50 loss=0.198 acc=0.608 worst=0.557 elapsed=165.0m ETA=231m
+  R 60 loss=0.172 acc=0.619 worst=0.569 elapsed=196.4m ETA=196m
+  R 70 loss=0.196 acc=0.272 worst=0.149 elapsed=231.1m ETA=165m
+  R 80 loss=0.223 acc=0.228 worst=0.130 elapsed=263.1m ETA=132m
+  R 90 loss=0.203 acc=0.235 worst=0.134 elapsed=293.6m ETA=98m
+  R100 loss=0.189 acc=0.208 worst=0.105 elapsed=324.5m ETA=65m
+  R110 loss=0.168 acc=0.202 worst=0.075 elapsed=357.7m ETA=33m
+  R120 loss=0.155 acc=0.215 worst=0.093 elapsed=391.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_gaussian_noise_abrupt_sev_dv2_s1.json

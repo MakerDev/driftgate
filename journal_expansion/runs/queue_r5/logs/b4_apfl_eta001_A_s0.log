@@ -1,0 +1,18 @@
+[b4_apfl_eta001_A_s0] method=splitomcplus controller=apfl signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.272 worst=0.176 elapsed=3.0m ETA=442m
+  R 10 loss=0.373 acc=0.606 worst=0.525 elapsed=19.4m ETA=272m
+  R 20 loss=0.290 acc=0.662 worst=0.596 elapsed=39.0m ETA=253m
+  R 30 loss=0.233 acc=0.722 worst=0.660 elapsed=58.0m ETA=232m
+  R 40 loss=0.198 acc=0.601 worst=0.558 elapsed=76.4m ETA=210m
+  R 50 loss=0.171 acc=0.613 worst=0.570 elapsed=96.3m ETA=193m
+  R 60 loss=0.156 acc=0.621 worst=0.596 elapsed=116.3m ETA=174m
+  R 70 loss=0.141 acc=0.537 worst=0.491 elapsed=137.5m ETA=157m
+  R 80 loss=0.133 acc=0.541 worst=0.500 elapsed=156.4m ETA=137m
+  R 90 loss=0.129 acc=0.551 worst=0.504 elapsed=173.9m ETA=116m
+  R100 loss=0.118 acc=0.644 worst=0.605 elapsed=191.8m ETA=96m
+  R110 loss=0.109 acc=0.647 worst=0.593 elapsed=211.2m ETA=77m
+  R120 loss=0.107 acc=0.633 worst=0.595 elapsed=230.0m ETA=58m
+  R130 loss=0.105 acc=0.880 worst=0.837 elapsed=249.2m ETA=38m
+  R140 loss=0.100 acc=0.877 worst=0.834 elapsed=269.9m ETA=19m
+  R150 loss=0.095 acc=0.891 worst=0.852 elapsed=290.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B4_apfl/b4_apfl_eta001_A_s0.json

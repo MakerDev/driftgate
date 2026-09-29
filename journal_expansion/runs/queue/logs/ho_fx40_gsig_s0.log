@@ -1,0 +1,18 @@
+[ho_fx40_gsig_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.922 acc=0.215 worst=0.087 elapsed=4.0m ETA=595m
+  R 10 loss=0.379 acc=0.668 worst=0.603 elapsed=23.6m ETA=330m
+  R 20 loss=0.275 acc=0.777 worst=0.742 elapsed=45.6m ETA=296m
+  R 30 loss=0.220 acc=0.831 worst=0.797 elapsed=67.1m ETA=268m
+  R 40 loss=0.189 acc=0.850 worst=0.810 elapsed=89.5m ETA=246m
+  R 50 loss=0.161 acc=0.864 worst=0.821 elapsed=111.5m ETA=223m
+  R 60 loss=0.144 acc=0.857 worst=0.826 elapsed=134.2m ETA=201m
+  R 70 loss=0.130 acc=0.855 worst=0.818 elapsed=156.4m ETA=179m
+  R 80 loss=0.115 acc=0.841 worst=0.815 elapsed=180.3m ETA=158m
+  R 90 loss=0.104 acc=0.838 worst=0.812 elapsed=204.3m ETA=136m
+  R100 loss=0.096 acc=0.830 worst=0.811 elapsed=228.7m ETA=114m
+  R110 loss=0.090 acc=0.827 worst=0.810 elapsed=251.9m ETA=92m
+  R120 loss=0.085 acc=0.835 worst=0.819 elapsed=275.5m ETA=69m
+  R130 loss=0.082 acc=0.833 worst=0.821 elapsed=299.8m ETA=46m
+  R140 loss=0.075 acc=0.837 worst=0.831 elapsed=323.8m ETA=23m
+  R150 loss=0.069 acc=0.839 worst=0.834 elapsed=348.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseE_holdout/ho_fx40_gsig_s0.json

@@ -1,0 +1,15 @@
+[b3_c10gsig_fx15_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.240 worst=0.140 elapsed=3.0m ETA=445m
+  R 10 loss=0.487 acc=0.577 worst=0.486 elapsed=23.3m ETA=326m
+  R 20 loss=0.415 acc=0.631 worst=0.549 elapsed=46.1m ETA=299m
+  R 30 loss=0.369 acc=0.660 worst=0.586 elapsed=67.3m ETA=269m
+  R 40 loss=0.329 acc=0.674 worst=0.600 elapsed=89.1m ETA=245m
+  R 50 loss=0.298 acc=0.684 worst=0.624 elapsed=110.8m ETA=222m
+  R 60 loss=0.272 acc=0.688 worst=0.644 elapsed=132.8m ETA=199m
+  R 70 loss=0.252 acc=0.671 worst=0.629 elapsed=155.6m ETA=178m
+  R 80 loss=0.236 acc=0.658 worst=0.605 elapsed=178.5m ETA=156m
+  R 90 loss=0.218 acc=0.655 worst=0.606 elapsed=201.8m ETA=135m
+  R100 loss=0.203 acc=0.651 worst=0.588 elapsed=224.6m ETA=112m
+  R110 loss=0.194 acc=0.661 worst=0.616 elapsed=249.0m ETA=91m
+  R120 loss=0.183 acc=0.669 worst=0.621 elapsed=274.5m ETA=69m
+  R130 loss=0.171 acc=0.662 worst=0.611 elapsed=302.9m ETA=47m

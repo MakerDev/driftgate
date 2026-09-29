@@ -1,0 +1,18 @@
+[dve_abrupt_s0] method=splitomcplus controller=selfcal signal=ent_client schedule=abrupt rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.279 worst=0.186 elapsed=2.1m ETA=320m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=14.9m ETA=209m
+  R 20 loss=0.334 acc=0.646 worst=0.564 elapsed=28.8m ETA=187m
+  R 30 loss=0.228 acc=0.731 worst=0.666 elapsed=43.0m ETA=172m
+  R 40 loss=0.192 acc=0.752 worst=0.700 elapsed=57.3m ETA=158m
+  R 50 loss=0.170 acc=0.770 worst=0.707 elapsed=71.6m ETA=143m
+  R 60 loss=0.153 acc=0.805 worst=0.761 elapsed=85.6m ETA=128m
+  R 70 loss=0.135 acc=0.815 worst=0.728 elapsed=99.4m ETA=114m
+  R 80 loss=0.132 acc=0.549 worst=0.509 elapsed=114.4m ETA=100m
+  R 90 loss=0.124 acc=0.554 worst=0.518 elapsed=129.7m ETA=86m
+  R100 loss=0.101 acc=0.537 worst=0.474 elapsed=144.7m ETA=72m
+  R110 loss=0.097 acc=0.558 worst=0.498 elapsed=159.7m ETA=58m
+  R120 loss=0.116 acc=0.568 worst=0.490 elapsed=174.7m ETA=44m
+  R130 loss=0.154 acc=0.595 worst=0.505 elapsed=189.7m ETA=29m
+  R140 loss=0.186 acc=0.638 worst=0.596 elapsed=204.7m ETA=15m
+  R150 loss=0.168 acc=0.645 worst=0.599 elapsed=219.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dve_abrupt_s0.json

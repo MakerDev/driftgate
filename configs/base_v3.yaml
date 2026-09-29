@@ -1,0 +1,61 @@
+# SplitOMC reference-aligned config
+# Source: github.com/atifrizwan91/SplitOMC + ToN 2026 paper
+
+dataset: cifar10
+num_classes: 10
+data_root: ./data_cache
+
+# Network topology
+num_clients: 50
+num_edge_servers: 5
+overlap_percentage: 50   # %
+
+# Training schedule (compute-reduced from reference 300R x 5e)
+global_rounds: 150
+local_epochs: 3
+batch_size: 32
+learning_rate: 0.01
+weight_decay: 0.0001
+optimizer: sgd
+momentum: 0.0
+
+# SplitOMC core hyperparameters
+gamma: 0.5               # multi-exit, FIXED per paper footnote
+lambda_default: 0.2
+big_lambda_default: 0.5
+
+# Partition (ND1)
+partition_mode: nd1
+classes_per_es_min_frac: 0.4
+classes_per_es_max_frac: 0.7
+classes_per_client_frac: 0.2
+
+# Eval
+eth_default: 0.8
+eval_every_n_rounds: 10
+oop_ratio_default: 0.4
+oor_ratio_factor: 0.3
+
+# Seeds
+partition_seed: 0
+model_seed: 100
+mobility_seed: 42
+
+# Adaptive controller
+adaptive:
+  anchor_buffer_size: 16
+  drift_buffer_size: 64
+  consensus_steps: 1
+  lam_min: 0.15
+  lam_max: 0.7
+  Lam_min: 0.4
+  Lam_max: 0.7
+  mu_H: 2.0          # entropy-mode sigmoid center (kept for C2 entropy ablation)
+  tau_H: 0.5         # entropy-mode sigmoid width
+  use_delta: false
+  delta_weight: 0.3
+  # --- Disagreement signal (exit client-vs-server head) ---
+  signal_mode: disagreement   # 'entropy' | 'disagreement'
+  beta_margin: 0.0            # S2 margin weight; S1-only (G1 passed, margin not needed)
+  mu_drift: 0.31             # RE-CENTERED (final, 3rd & last): sustained high-ρ δ≈0.38, low-ρ δ≈0.13. mu=0.31 → high-ρ z=+1.56→λ≈0.24 (near lam_min, generalize), low-ρ z=-4.0→λ≈0.69 (near lam_max, personalize). Sharp separation for worst-cell. (was 0.35←0.392). NO further mu tuning.
+  tau_drift: 0.045           # CALIBRATED (STEP 2 gate): (delta_hi-delta_lo)/2.5 — /4 (0.028) over-amplified probe noise into λ ping-pong within constant-ρ segments

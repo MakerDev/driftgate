@@ -1,0 +1,18 @@
+[dv2_gradual_sigmoid_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.399 worst=0.207 elapsed=2.1m ETA=306m
+  R 10 loss=0.394 acc=0.613 worst=0.481 elapsed=14.1m ETA=197m
+  R 20 loss=0.338 acc=0.667 worst=0.514 elapsed=27.4m ETA=178m
+  R 30 loss=0.261 acc=0.698 worst=0.545 elapsed=40.2m ETA=161m
+  R 40 loss=0.234 acc=0.734 worst=0.594 elapsed=53.2m ETA=146m
+  R 50 loss=0.209 acc=0.728 worst=0.617 elapsed=66.3m ETA=133m
+  R 60 loss=0.194 acc=0.700 worst=0.599 elapsed=79.2m ETA=119m
+  R 70 loss=0.183 acc=0.650 worst=0.584 elapsed=92.5m ETA=106m
+  R 80 loss=0.191 acc=0.619 worst=0.553 elapsed=105.9m ETA=93m
+  R 90 loss=0.215 acc=0.598 worst=0.576 elapsed=119.5m ETA=80m
+  R100 loss=0.220 acc=0.603 worst=0.586 elapsed=133.6m ETA=67m
+  R110 loss=0.203 acc=0.598 worst=0.580 elapsed=147.3m ETA=54m
+  R120 loss=0.200 acc=0.610 worst=0.597 elapsed=161.1m ETA=40m
+  R130 loss=0.184 acc=0.606 worst=0.596 elapsed=174.6m ETA=27m
+  R140 loss=0.173 acc=0.614 worst=0.600 elapsed=188.2m ETA=13m
+  R150 loss=0.174 acc=0.618 worst=0.596 elapsed=201.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dv2_gradual_sigmoid_s2.json

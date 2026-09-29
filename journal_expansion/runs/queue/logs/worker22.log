@@ -1,0 +1,59 @@
+[worker22 cuda:0] START reverse_gsig_s1 2026. 07. 28. (화) 14:39:25 KST
+[worker22 cuda:0] START shift10_sp_s0 2026. 07. 28. (화) 17:47:35 KST
+[worker22 cuda:0] END shift10_sp_s0 exit=0 2026. 07. 28. (화) 23:38:54 KST
+[worker22 cuda:0] START reverse_sp_s1 2026. 07. 28. (화) 23:38:54 KST
+[worker22 cuda:0] END reverse_sp_s1 exit=0 2026. 07. 29. (수) 03:25:17 KST
+[worker22 cuda:0] START fx40_A_s1 2026. 07. 29. (수) 03:25:17 KST
+[worker22 cuda:0] END fx40_A_s1 exit=0 2026. 07. 29. (수) 07:04:59 KST
+[worker22 cuda:0] START fx60_A_s2 2026. 07. 29. (수) 07:04:59 KST
+[worker22 cuda:0] END fx60_A_s2 exit=0 2026. 07. 29. (수) 10:29:35 KST
+[worker22 cuda:0] START fx80_A_s0 2026. 07. 29. (수) 10:29:35 KST
+[worker22 cuda:0] END fx80_A_s0 exit=0 2026. 07. 29. (수) 14:13:52 KST
+[worker22 cuda:0] START fx20_L60_A_s1 2026. 07. 29. (수) 14:13:52 KST
+[worker22 cuda:0] END fx20_L60_A_s1 exit=0 2026. 07. 29. (수) 17:51:19 KST
+[worker22 cuda:0] START fx40_L40_A_s1 2026. 07. 29. (수) 17:51:19 KST
+[worker22 cuda:0] END fx40_L40_A_s1 exit=0 2026. 07. 29. (수) 21:22:31 KST
+[worker22 cuda:0] START fx40_L70_A_s2 2026. 07. 29. (수) 21:22:31 KST
+[worker22 cuda:0] END fx40_L70_A_s2 exit=0 2026. 07. 30. (목) 00:50:07 KST
+[worker22 cuda:0] START fx10_asym_s0 2026. 07. 30. (목) 00:50:07 KST
+[worker22 cuda:0] END fx10_asym_s0 exit=0 2026. 07. 30. (목) 04:36:14 KST
+[worker22 cuda:0] START fx50_asym_s1 2026. 07. 30. (목) 04:36:14 KST
+[worker22 cuda:0] END fx50_asym_s1 exit=0 2026. 07. 30. (목) 08:12:04 KST
+[worker22 cuda:0] START fx80_asym_s0 2026. 07. 30. (목) 08:12:04 KST
+[worker22 cuda:0] END fx80_asym_s0 exit=0 2026. 07. 30. (목) 11:51:37 KST
+[worker22 cuda:0] START fx50_gsig_s1 2026. 07. 30. (목) 11:51:37 KST
+[worker22 cuda:0] END fx50_gsig_s1 exit=0 2026. 07. 30. (목) 15:35:58 KST
+[worker22 cuda:0] START fx70_gsig_s1 2026. 07. 30. (목) 15:35:58 KST
+[worker22 cuda:0] END fx70_gsig_s1 exit=0 2026. 07. 30. (목) 19:19:47 KST
+[worker22 cuda:0] START fx00_c100gsig_s1 2026. 07. 30. (목) 19:19:47 KST
+[worker22 cuda:0] END fx00_c100gsig_s1 exit=0 2026. 07. 30. (목) 22:51:33 KST
+[worker22 cuda:0] START fx20_c100gsig_s1 2026. 07. 30. (목) 22:51:33 KST
+[worker22 cuda:0] END fx20_c100gsig_s1 exit=0 2026. 07. 31. (금) 02:27:30 KST
+[worker22 cuda:0] START fx50_c100gsig_s1 2026. 07. 31. (금) 02:27:30 KST
+[worker22 cuda:0] END fx50_c100gsig_s1 exit=0 2026. 07. 31. (금) 05:59:27 KST
+[worker22 cuda:0] START fx70_c100gsig_s1 2026. 07. 31. (금) 05:59:27 KST
+[worker22 cuda:0] END fx70_c100gsig_s1 exit=0 2026. 07. 31. (금) 09:32:43 KST
+[worker22 cuda:0] START fx10_tin_s1 2026. 07. 31. (금) 09:32:43 KST
+[worker22 cuda:0] END fx10_tin_s1 exit=0 2026. 07. 31. (금) 19:51:33 KST
+[worker22 cuda:0] START fx30_pwr_s0 2026. 07. 31. (금) 19:51:33 KST
+[worker22 cuda:0] END fx30_pwr_s0 exit=0 2026. 07. 31. (금) 23:44:13 KST
+[worker22 cuda:0] START fx60_pwr_s0 2026. 07. 31. (금) 23:44:13 KST
+[worker22 cuda:0] END fx60_pwr_s0 exit=0 2026. 08. 01. (토) 03:16:41 KST
+[worker22 cuda:0] START fx80_pwr_s0 2026. 08. 01. (토) 03:16:41 KST
+[worker22 cuda:0] END fx80_pwr_s0 exit=0 2026. 08. 01. (토) 06:52:33 KST
+[worker22 cuda:0] START fx10_sp_s0 2026. 08. 01. (토) 06:52:33 KST
+[worker22 cuda:0] END fx10_sp_s0 exit=0 2026. 08. 01. (토) 10:22:41 KST
+[worker22 cuda:0] START fx40_sp_s0 2026. 08. 01. (토) 10:22:41 KST
+[worker22 cuda:0] END fx40_sp_s0 exit=0 2026. 08. 01. (토) 13:58:07 KST
+[worker22 cuda:0] START fx60_sp_s0 2026. 08. 01. (토) 13:58:07 KST
+[worker22 cuda:0] END fx60_sp_s0 exit=0 2026. 08. 01. (토) 17:36:47 KST
+[worker22 cuda:0] START fx80_sp_s1 2026. 08. 01. (토) 17:36:47 KST
+[worker22 cuda:0] END fx80_sp_s1 exit=0 2026. 08. 01. (토) 21:09:11 KST
+[worker22 cuda:0] START fx20_c100sp_s2 2026. 08. 01. (토) 21:09:11 KST
+[worker22 cuda:0] END fx20_c100sp_s2 exit=0 2026. 08. 02. (일) 00:45:17 KST
+[worker22 cuda:0] START fx50_c100sp_s2 2026. 08. 02. (일) 00:45:17 KST
+[worker22 cuda:0] END fx50_c100sp_s2 exit=0 2026. 08. 02. (일) 04:21:22 KST
+[worker22 cuda:0] START fx70_c100sp_s2 2026. 08. 02. (일) 04:21:22 KST
+[worker22 cuda:0] END fx70_c100sp_s2 exit=0 2026. 08. 02. (일) 07:55:41 KST
+[worker22 cuda:0] START cor_motion_blur_gradual_sev_fx20_s1 2026. 08. 02. (일) 07:55:41 KST
+[worker22 cuda:0] END cor_motion_blur_gradual_sev_fx20_s1 exit=0 2026. 08. 02. (일) 11:04:00 KST

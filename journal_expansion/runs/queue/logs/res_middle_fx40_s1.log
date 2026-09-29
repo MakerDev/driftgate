@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py", line 171, in <module>
+    main()
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py", line 150, in main
+    run_experiment_v2(
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/src/runner.py", line 163, in run_experiment_v2
+    clients, edge_servers = build_clients_and_es(
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/disk2/Yujin/adaptive_splitomc_tmc/train/trainer.py", line 327, in build_clients_and_es
+    c = SplitOMCClient(
+        ^^^^^^^^^^^^^^^
+  File "/disk2/Yujin/adaptive_splitomc_tmc/train/trainer.py", line 65, in __init__
+    es_id: model_factory.make_server().to(device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1355, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 942, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1341, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 9.38 MiB is free. Process 856459 has 1.68 GiB memory in use. Process 2529526 has 1.85 GiB memory in use. Process 1682017 has 358.00 MiB memory in use. Process 1682633 has 342.00 MiB memory in use. Process 1699307 has 358.00 MiB memory in use. Process 3007713 has 358.00 MiB memory in use. Process 3481298 has 1.17 GiB memory in use. Process 2394214 has 1.42 GiB memory in use. Process 2431385 has 7.04 GiB memory in use. Process 2442660 has 7.05 GiB memory in use. Including non-PyTorch memory, this process has 1.85 GiB memory in use. Of the allocated memory 1.51 GiB is allocated by PyTorch, and 83.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

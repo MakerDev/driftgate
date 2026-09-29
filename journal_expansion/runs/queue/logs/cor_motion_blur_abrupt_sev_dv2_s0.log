@@ -1,0 +1,15 @@
+[cor_motion_blur_abrupt_sev_dv2_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.884 acc=0.228 worst=0.163 elapsed=5.9m ETA=702m
+  R 10 loss=0.398 acc=0.513 worst=0.441 elapsed=35.1m ETA=386m
+  R 20 loss=0.334 acc=0.558 worst=0.495 elapsed=68.9m ETA=345m
+  R 30 loss=0.263 acc=0.591 worst=0.530 elapsed=99.9m ETA=300m
+  R 40 loss=0.237 acc=0.601 worst=0.560 elapsed=135.6m ETA=271m
+  R 50 loss=0.212 acc=0.615 worst=0.580 elapsed=166.9m ETA=234m
+  R 60 loss=0.193 acc=0.646 worst=0.610 elapsed=197.4m ETA=197m
+  R 70 loss=0.173 acc=0.496 worst=0.454 elapsed=229.7m ETA=164m
+  R 80 loss=0.162 acc=0.497 worst=0.473 elapsed=265.6m ETA=133m
+  R 90 loss=0.154 acc=0.504 worst=0.476 elapsed=301.3m ETA=100m
+  R100 loss=0.143 acc=0.498 worst=0.473 elapsed=332.6m ETA=67m
+  R110 loss=0.135 acc=0.500 worst=0.471 elapsed=365.0m ETA=33m
+  R120 loss=0.126 acc=0.511 worst=0.472 elapsed=397.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_motion_blur_abrupt_sev_dv2_s0.json

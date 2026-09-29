@@ -1,0 +1,18 @@
+[r2_role_separated_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.268 worst=0.171 elapsed=2.2m ETA=327m
+  R 10 loss=0.408 acc=0.600 worst=0.509 elapsed=14.7m ETA=205m
+  R 20 loss=0.343 acc=0.646 worst=0.566 elapsed=30.1m ETA=195m
+  R 30 loss=0.301 acc=0.681 worst=0.614 elapsed=44.1m ETA=176m
+  R 40 loss=0.265 acc=0.608 worst=0.563 elapsed=60.4m ETA=166m
+  R 50 loss=0.237 acc=0.629 worst=0.591 elapsed=76.2m ETA=152m
+  R 60 loss=0.213 acc=0.649 worst=0.620 elapsed=92.5m ETA=139m
+  R 70 loss=0.193 acc=0.604 worst=0.531 elapsed=105.4m ETA=120m
+  R 80 loss=0.180 acc=0.607 worst=0.549 elapsed=118.8m ETA=104m
+  R 90 loss=0.166 acc=0.617 worst=0.567 elapsed=134.6m ETA=90m
+  R100 loss=0.152 acc=0.677 worst=0.607 elapsed=150.0m ETA=75m
+  R110 loss=0.146 acc=0.697 worst=0.648 elapsed=165.0m ETA=60m
+  R120 loss=0.136 acc=0.699 worst=0.665 elapsed=179.1m ETA=45m
+  R130 loss=0.128 acc=0.816 worst=0.781 elapsed=192.8m ETA=30m
+  R140 loss=0.118 acc=0.843 worst=0.800 elapsed=207.7m ETA=15m
+  R150 loss=0.110 acc=0.850 worst=0.815 elapsed=222.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT2r2_signal/r2_role_separated_s0.json

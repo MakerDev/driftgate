@@ -1,0 +1,6 @@
+[cluster_shuffle_A_s1] method=splitomcplus controller=replay signal=delta_hard schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.900 acc=0.337 worst=0.182 elapsed=8.1m ETA=1205m
+  R 10 loss=0.379 acc=0.556 worst=0.418 elapsed=105.0m ETA=1470m
+  R 20 loss=0.319 acc=0.644 worst=0.499 elapsed=272.4m ETA=1771m
+  R 30 loss=0.239 acc=0.706 worst=0.591 elapsed=504.6m ETA=2019m
+  R 40 loss=0.221 acc=0.583 worst=0.472 elapsed=594.7m ETA=1635m

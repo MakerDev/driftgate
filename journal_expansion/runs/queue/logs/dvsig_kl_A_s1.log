@@ -1,0 +1,18 @@
+[dvsig_kl_A_s1] method=splitomcplus controller=selfcal signal=kl_sym schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.338 worst=0.183 elapsed=2.0m ETA=300m
+  R 10 loss=0.379 acc=0.555 worst=0.418 elapsed=15.1m ETA=211m
+  R 20 loss=0.319 acc=0.645 worst=0.502 elapsed=30.1m ETA=195m
+  R 30 loss=0.267 acc=0.694 worst=0.573 elapsed=44.4m ETA=178m
+  R 40 loss=0.286 acc=0.588 worst=0.475 elapsed=59.1m ETA=162m
+  R 50 loss=0.272 acc=0.621 worst=0.540 elapsed=73.0m ETA=146m
+  R 60 loss=0.258 acc=0.635 worst=0.553 elapsed=87.4m ETA=131m
+  R 70 loss=0.240 acc=0.626 worst=0.567 elapsed=102.0m ETA=117m
+  R 80 loss=0.224 acc=0.621 worst=0.558 elapsed=117.5m ETA=103m
+  R 90 loss=0.209 acc=0.608 worst=0.547 elapsed=132.7m ETA=88m
+  R100 loss=0.198 acc=0.654 worst=0.571 elapsed=147.0m ETA=73m
+  R110 loss=0.187 acc=0.679 worst=0.616 elapsed=161.7m ETA=59m
+  R120 loss=0.173 acc=0.676 worst=0.596 elapsed=175.9m ETA=44m
+  R130 loss=0.164 acc=0.780 worst=0.674 elapsed=190.2m ETA=29m
+  R140 loss=0.149 acc=0.781 worst=0.692 elapsed=204.7m ETA=15m
+  R150 loss=0.146 acc=0.786 worst=0.681 elapsed=219.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_kl_A_s1.json

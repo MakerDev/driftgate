@@ -1,0 +1,25 @@
+setting,arm,seed,n_cluster_rounds,max_abs_err,mean_abs_err
+A,TV full,0,625,0.0000,0.00000
+A,TV full,1,625,0.0000,0.00000
+A,TV full,2,625,0.0000,0.00000
+A,TV full,3,625,0.0000,0.00000
+A,TV full,4,625,0.0000,0.00000
+A,"a1 (adaptive λ, Λ=0.5)",0,625,0.0000,0.00000
+A,"a1 (adaptive λ, Λ=0.5)",1,625,0.0000,0.00000
+A,"a1 (adaptive λ, Λ=0.5)",2,625,0.0000,0.00000
+A,"a1 (adaptive λ, Λ=0.5)",3,625,0.0000,0.00000
+A,"a1 (adaptive λ, Λ=0.5)",4,625,0.0000,0.00000
+A,server rate,0,625,0.0000,0.00000
+A,server rate,1,625,0.0000,0.00000
+A,server rate,2,625,0.0000,0.00000
+A,server rate,3,625,0.0000,0.00000
+A,server rate,4,625,0.0000,0.00000
+mob,TV full,0,475,0.0000,0.00000
+mob,TV full,1,475,0.0000,0.00000
+mob,TV full,2,475,0.0000,0.00000
+mob,"a1 (adaptive λ, Λ=0.5)",0,475,0.0000,0.00000
+mob,"a1 (adaptive λ, Λ=0.5)",1,475,0.0000,0.00000
+mob,"a1 (adaptive λ, Λ=0.5)",2,475,0.0000,0.00000
+mob,server rate,0,475,0.0000,0.00000
+mob,server rate,1,475,0.0000,0.00000
+mob,server rate,2,475,0.0000,0.00000

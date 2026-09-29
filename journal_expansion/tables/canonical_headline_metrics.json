@@ -1,0 +1,18 @@
+{
+ "scheduleA_adaptive_mean_5seed": 0.659425356250962,
+ "scheduleA_adaptive_per_seed": {
+  "0": 0.6597208329024056,
+  "1": 0.6570478118180471,
+  "2": 0.6617247393013581,
+  "3": 0.6293638046657204,
+  "4": 0.6892695925672785
+ },
+ "scheduleA_best_fixed_key": "fx40",
+ "scheduleA_best_fixed_mean_5seed": 0.6520887281293163,
+ "scheduleA_adaptive_minus_bestfixed_5seed_pp": 0.7336628121645639,
+ "taskC_dg_3seed": 0.6594977946739369,
+ "robust_fixed_lam02_A": 0.6445429981188151,
+ "c100sp_grid_max_key": "fx20",
+ "c100sp_grid_max": 0.3656840555399488,
+ "c100sp_fx20": 0.3656840555399488
+}

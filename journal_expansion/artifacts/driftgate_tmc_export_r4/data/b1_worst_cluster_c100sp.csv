@@ -1,0 +1,2 @@
+setting,arm,full_worst_pct,arm_worst_pct,full_minus_arm_pp,ci95,n_pos,n_seeds
+CIFAR-100 spatial,nospatial,31.7715,31.7688,+0.0027,"[-0.02,+0.03]",2,3

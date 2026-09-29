@@ -1,0 +1,18 @@
+[b1_relonly_A_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.900 acc=0.337 worst=0.179 elapsed=1.9m ETA=284m
+  R 10 loss=0.379 acc=0.553 worst=0.416 elapsed=18.3m ETA=256m
+  R 20 loss=0.319 acc=0.642 worst=0.497 elapsed=36.3m ETA=236m
+  R 30 loss=0.234 acc=0.707 worst=0.599 elapsed=55.9m ETA=224m
+  R 40 loss=0.242 acc=0.584 worst=0.466 elapsed=76.2m ETA=209m
+  R 50 loss=0.228 acc=0.612 worst=0.553 elapsed=96.4m ETA=193m
+  R 60 loss=0.206 acc=0.626 worst=0.562 elapsed=117.0m ETA=176m
+  R 70 loss=0.212 acc=0.603 worst=0.551 elapsed=136.9m ETA=156m
+  R 80 loss=0.200 acc=0.600 worst=0.541 elapsed=157.7m ETA=138m
+  R 90 loss=0.191 acc=0.580 worst=0.527 elapsed=178.5m ETA=119m
+  R100 loss=0.164 acc=0.644 worst=0.568 elapsed=198.7m ETA=99m
+  R110 loss=0.154 acc=0.666 worst=0.626 elapsed=218.9m ETA=80m
+  R120 loss=0.140 acc=0.664 worst=0.604 elapsed=240.3m ETA=60m
+  R130 loss=0.103 acc=0.888 worst=0.854 elapsed=260.8m ETA=40m
+  R140 loss=0.073 acc=0.903 worst=0.853 elapsed=280.0m ETA=20m
+  R150 loss=0.071 acc=0.904 worst=0.858 elapsed=301.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B1_views/b1_relonly_A_s1.json

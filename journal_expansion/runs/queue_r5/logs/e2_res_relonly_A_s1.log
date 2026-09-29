@@ -1,0 +1,10 @@
+[e2_res_relonly_A_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.392 acc=0.479 worst=0.349 elapsed=4.0m ETA=593m
+  R 10 loss=0.140 acc=0.604 worst=0.517 elapsed=37.1m ETA=519m
+  R 20 loss=0.100 acc=0.631 worst=0.592 elapsed=73.9m ETA=480m
+  R 30 loss=0.070 acc=0.695 worst=0.588 elapsed=111.0m ETA=444m
+  R 40 loss=0.061 acc=0.561 worst=0.447 elapsed=146.8m ETA=404m
+  R 50 loss=0.068 acc=0.491 worst=0.439 elapsed=183.8m ETA=368m
+  R 60 loss=0.032 acc=0.549 worst=0.448 elapsed=220.9m ETA=331m
+  R 70 loss=0.048 acc=0.420 worst=0.331 elapsed=257.5m ETA=294m
+  R 80 loss=0.058 acc=0.430 worst=0.403 elapsed=294.3m ETA=258m

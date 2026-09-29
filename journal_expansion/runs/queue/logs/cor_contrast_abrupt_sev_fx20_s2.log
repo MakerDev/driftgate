@@ -1,0 +1,15 @@
+[cor_contrast_abrupt_sev_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.938 acc=0.300 worst=0.175 elapsed=4.2m ETA=498m
+  R 10 loss=0.463 acc=0.498 worst=0.419 elapsed=23.5m ETA=258m
+  R 20 loss=0.400 acc=0.548 worst=0.455 elapsed=45.2m ETA=226m
+  R 30 loss=0.355 acc=0.569 worst=0.478 elapsed=70.5m ETA=211m
+  R 40 loss=0.325 acc=0.603 worst=0.533 elapsed=98.5m ETA=197m
+  R 50 loss=0.296 acc=0.614 worst=0.541 elapsed=125.6m ETA=176m
+  R 60 loss=0.275 acc=0.621 worst=0.547 elapsed=149.2m ETA=149m
+  R 70 loss=0.252 acc=0.427 worst=0.373 elapsed=173.4m ETA=124m
+  R 80 loss=0.240 acc=0.469 worst=0.438 elapsed=198.0m ETA=99m
+  R 90 loss=0.221 acc=0.463 worst=0.440 elapsed=221.9m ETA=74m
+  R100 loss=0.217 acc=0.472 worst=0.451 elapsed=246.3m ETA=49m
+  R110 loss=0.197 acc=0.458 worst=0.432 elapsed=270.4m ETA=25m
+  R120 loss=0.192 acc=0.475 worst=0.451 elapsed=294.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_contrast_abrupt_sev_fx20_s2.json

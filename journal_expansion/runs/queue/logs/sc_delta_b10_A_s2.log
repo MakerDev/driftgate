@@ -1,0 +1,13 @@
+[sc_delta_b10_A_s2] method=splitomcplus controller=selfcal signal=delta_hard schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.938 acc=0.400 worst=0.207 elapsed=1.8m ETA=182m
+  R 10 loss=0.394 acc=0.615 worst=0.482 elapsed=13.2m ETA=119m
+  R 20 loss=0.338 acc=0.669 worst=0.515 elapsed=25.8m ETA=103m
+  R 30 loss=0.252 acc=0.562 worst=0.469 elapsed=38.5m ETA=90m
+  R 40 loss=0.200 acc=0.593 worst=0.519 elapsed=51.4m ETA=77m
+  R 50 loss=0.204 acc=0.524 worst=0.485 elapsed=64.9m ETA=65m
+  R 60 loss=0.157 acc=0.503 worst=0.442 elapsed=78.6m ETA=52m
+  R 70 loss=0.136 acc=0.607 worst=0.522 elapsed=91.9m ETA=39m
+  R 80 loss=0.126 acc=0.618 worst=0.562 elapsed=105.1m ETA=26m
+  R 90 loss=0.112 acc=0.866 worst=0.770 elapsed=117.9m ETA=13m
+  R100 loss=0.117 acc=0.872 worst=0.808 elapsed=130.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/downstream_pilot/sc_delta_b10_A_s2.json

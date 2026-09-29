@@ -1,0 +1,18 @@
+[shift20_sp_s2] method=splitomcplus controller=replay signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.938 acc=0.364 worst=0.211 elapsed=2.7m ETA=406m
+  R 10 loss=0.336 acc=0.538 worst=0.377 elapsed=15.3m ETA=215m
+  R 20 loss=0.282 acc=0.564 worst=0.393 elapsed=29.3m ETA=191m
+  R 30 loss=0.299 acc=0.599 worst=0.433 elapsed=43.5m ETA=174m
+  R 40 loss=0.270 acc=0.631 worst=0.472 elapsed=57.3m ETA=158m
+  R 50 loss=0.222 acc=0.650 worst=0.496 elapsed=71.4m ETA=143m
+  R 60 loss=0.197 acc=0.656 worst=0.476 elapsed=85.6m ETA=128m
+  R 70 loss=0.180 acc=0.661 worst=0.510 elapsed=99.6m ETA=114m
+  R 80 loss=0.164 acc=0.672 worst=0.506 elapsed=113.7m ETA=99m
+  R 90 loss=0.146 acc=0.677 worst=0.549 elapsed=126.6m ETA=84m
+  R100 loss=0.143 acc=0.687 worst=0.534 elapsed=140.5m ETA=70m
+  R110 loss=0.124 acc=0.696 worst=0.537 elapsed=153.1m ETA=56m
+  R120 loss=0.119 acc=0.687 worst=0.557 elapsed=167.2m ETA=42m
+  R130 loss=0.103 acc=0.690 worst=0.546 elapsed=180.8m ETA=28m
+  R140 loss=0.096 acc=0.685 worst=0.562 elapsed=194.2m ETA=14m
+  R150 loss=0.101 acc=0.700 worst=0.558 elapsed=207.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/shift20_sp_s2.json

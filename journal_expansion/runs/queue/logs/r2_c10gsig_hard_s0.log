@@ -1,0 +1,18 @@
+[r2_c10gsig_hard_s0] method=splitomcplus controller=selfcal signal=server_nonmain_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.278 worst=0.185 elapsed=2.1m ETA=317m
+  R 10 loss=0.398 acc=0.604 worst=0.513 elapsed=21.4m ETA=299m
+  R 20 loss=0.334 acc=0.647 worst=0.568 elapsed=43.4m ETA=282m
+  R 30 loss=0.256 acc=0.696 worst=0.641 elapsed=65.7m ETA=263m
+  R 40 loss=0.218 acc=0.714 worst=0.674 elapsed=87.3m ETA=240m
+  R 50 loss=0.185 acc=0.713 worst=0.667 elapsed=109.1m ETA=218m
+  R 60 loss=0.167 acc=0.714 worst=0.679 elapsed=131.4m ETA=197m
+  R 70 loss=0.151 acc=0.669 worst=0.599 elapsed=154.0m ETA=176m
+  R 80 loss=0.201 acc=0.626 worst=0.588 elapsed=176.8m ETA=155m
+  R 90 loss=0.230 acc=0.628 worst=0.582 elapsed=200.2m ETA=133m
+  R100 loss=0.210 acc=0.625 worst=0.555 elapsed=224.1m ETA=112m
+  R110 loss=0.199 acc=0.646 worst=0.605 elapsed=254.5m ETA=93m
+  R120 loss=0.188 acc=0.657 worst=0.617 elapsed=285.5m ETA=71m
+  R130 loss=0.175 acc=0.649 worst=0.600 elapsed=316.3m ETA=49m
+  R140 loss=0.164 acc=0.663 worst=0.621 elapsed=348.8m ETA=25m
+  R150 loss=0.152 acc=0.667 worst=0.625 elapsed=376.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT2r2_signal/r2_c10gsig_hard_s0.json

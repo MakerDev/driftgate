@@ -1,0 +1,10 @@
+setting,control,adaptive_minus_control_pp,ci95,n_pos,n_seeds,protocol
+Schedule A,global mean λ,+0.4121,"[-0.10,+0.92]",3,3,same-pool replay
+Schedule A,per-cluster mean λ,+0.4367,"[+0.06,+0.81]",3,3,same-pool replay
+Schedule A,shuffled λ,+0.4179,"[-0.06,+0.90]",3,3,same-pool replay
+gradual,global mean λ,+0.4614,"[-0.10,+1.02]",3,3,same-pool replay
+gradual,per-cluster mean λ,+0.4904,"[-0.16,+1.14]",3,3,same-pool replay
+gradual,shuffled λ,+0.8066,"[-0.39,+2.00]",3,3,same-pool replay
+static spatial,global mean λ,+0.3347,"[+0.25,+0.41]",3,3,same-pool replay
+static spatial,per-cluster mean λ,+0.0117,"[-0.13,+0.16]",1,3,same-pool replay
+static spatial,shuffled λ,+0.0483,"[-0.35,+0.45]",2,3,same-pool replay

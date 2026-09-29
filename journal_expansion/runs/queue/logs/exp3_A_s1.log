@@ -1,0 +1,13 @@
+[exp3_A_s1] method=splitomcplus controller=exp3 signal=delta_hard schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.900 acc=0.326 worst=0.173 elapsed=2.1m ETA=211m
+  R 10 loss=0.373 acc=0.561 worst=0.416 elapsed=15.8m ETA=142m
+  R 20 loss=0.369 acc=0.642 worst=0.504 elapsed=29.6m ETA=118m
+  R 30 loss=0.316 acc=0.564 worst=0.496 elapsed=44.1m ETA=103m
+  R 40 loss=0.252 acc=0.591 worst=0.493 elapsed=58.8m ETA=88m
+  R 50 loss=0.253 acc=0.566 worst=0.511 elapsed=73.5m ETA=74m
+  R 60 loss=0.222 acc=0.575 worst=0.537 elapsed=88.6m ETA=59m
+  R 70 loss=0.201 acc=0.667 worst=0.614 elapsed=103.1m ETA=44m
+  R 80 loss=0.175 acc=0.661 worst=0.599 elapsed=117.4m ETA=29m
+  R 90 loss=0.169 acc=0.785 worst=0.721 elapsed=131.7m ETA=15m
+  R100 loss=0.147 acc=0.817 worst=0.647 elapsed=146.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase4_baselines/exp3_A_s1.json

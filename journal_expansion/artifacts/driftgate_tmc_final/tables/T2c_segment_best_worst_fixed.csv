@@ -1,0 +1,8 @@
+setting,segment,best_fixed,best_fixed_pct,worst_fixed,worst_fixed_pct,DriftGate_pct,DriftGate_minus_worst_pp,ci95,n_pos,DriftGate_minus_best_pp,ci95_vs_best,n
+stepwise composition change,ρ=0 early,fixed 0.5,57.9271,fixed 0.2,55.4841,58.2290,+2.7449,"[+1.82, +3.67]",5,+0.3019,"[-0.09, +0.69]",5
+stepwise composition change,ρ=0.4 rising,fixed 0.2,62.5771,fixed 0.5,61.2198,61.6020,+0.3822,"[-0.20, +0.96]",4,-0.9752,"[-1.57, -0.38]",5
+stepwise composition change,ρ=0.8,fixed 0.2,61.4035,fixed 0.5,55.8424,59.7605,+3.9181,"[+2.76, +5.08]",5,-1.6431,"[-2.88, -0.40]",5
+stepwise composition change,ρ=0.4 falling,fixed 0.2,68.0242,fixed 0.5,65.5971,66.9158,+1.3187,"[+0.28, +2.36]",5,-1.1083,"[-1.93, -0.29]",5
+stepwise composition change,ρ=0 late,fixed 0.5,86.0258,fixed 0.2,79.0826,85.7033,+6.6208,"[+2.27, +10.97]",5,-0.3224,"[-3.29, +2.64]",5
+client mobility,ρ=0 (R1–60),fixed 0.6,62.9245,fixed 0.2,55.9159,60.8776,+4.9617,"[+2.97, +6.95]",3,-2.0469,"[-3.01, -1.08]",3
+client mobility,ρ=0.8 (R70–120),fixed 0.2,60.2710,fixed 0.6,52.1368,57.3053,+5.1685,"[+3.85, +6.49]",3,-2.9657,"[-5.91, -0.02]",3

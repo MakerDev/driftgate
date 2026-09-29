@@ -1,0 +1,10 @@
+=== START sc_delta_A_s1 2026. 07. 11. (토) 07:00:48 KST
+=== END sc_delta_A_s1 2026. 07. 11. (토) 09:21:37 KST exit=0
+=== START sc_ent_A_s2 2026. 07. 11. (토) 09:21:37 KST
+=== END sc_ent_A_s2 2026. 07. 11. (토) 11:31:06 KST exit=0
+=== START sc_delta_abrupt_s0 2026. 07. 11. (토) 11:31:06 KST
+=== END sc_delta_abrupt_s0 2026. 07. 11. (토) 13:57:38 KST exit=0
+=== START sc_ent_abrupt_s1 2026. 07. 11. (토) 13:57:38 KST
+=== END sc_ent_abrupt_s1 2026. 07. 11. (토) 16:21:07 KST exit=0
+=== START legacy_delta_abrupt_s2 2026. 07. 11. (토) 16:21:07 KST
+=== END legacy_delta_abrupt_s2 2026. 07. 11. (토) 18:30:40 KST exit=0

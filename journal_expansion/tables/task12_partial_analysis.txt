@@ -1,0 +1,72 @@
+======================================================================
+TASK 1 — DISJOINT probe/eval pools (recomputed from raw JSON)
+======================================================================
+
+[Schedule A] per-seed integrated accuracy (disjoint pools)
+arm                s0 s1 s2 s3 s4   mean
+DriftGate(TV)      66.24 65.60 66.07 62.79 68.47   65.84  (n=5)
+entropy            64.95 63.90 64.54 61.81 66.64   64.37  (n=5)
+a1(adaptλ,Λ=.5)    66.24 65.78 65.95 62.95 68.62   65.91  (n=5)
+fixed λ0.3         65.30 64.52 64.97 62.69 68.01   65.10  (n=5)
+fixed λ0.4         65.59 64.63 65.15 62.36 68.13   65.17  (n=5)
+fixed λ0.5         65.33 64.45 65.10 61.67 67.75   64.86  (n=5)
+
+probe∩eval overlap: ALL ZERO ✓  (checked 30 A-runs)
+
+best fixed (by mean over 5 seeds) = fixed λ0.4  (65.173%)
+
+[Schedule A] PAIRED differences (seed-aligned, disjoint)
+  DriftGate − fixed λ0.4         +0.664pp  CI95[+0.31,+1.01]  5/5 seeds+  per-seed=[np.float64(0.65), np.float64(0.97), np.float64(0.92), np.float64(0.43), np.float64(0.34)]
+  DriftGate − entropy            +1.470pp  CI95[+1.05,+1.89]  5/5 seeds+  per-seed=[np.float64(1.29), np.float64(1.7), np.float64(1.54), np.float64(0.98), np.float64(1.84)]
+  DriftGate − a1(adaptλ,Λ=.5)    -0.071pp  CI95[-0.23,+0.09]  2/5 seeds+  per-seed=[np.float64(0.0), np.float64(-0.18), np.float64(0.12), np.float64(-0.16), np.float64(-0.15)]
+
+[mobility-med] per-seed integrated accuracy (disjoint pools)
+arm                s0 s1 s2   mean
+DriftGate(TV)      58.90 59.62 59.11   59.21  (n=3)
+entropy            56.68 57.47 57.49   57.21  (n=3)
+a1(adaptλ,Λ=.5)    58.78 59.57 59.07   59.14  (n=3)
+fixed λ0.3         58.04 58.93 58.39   58.45  (n=3)
+fixed λ0.4         58.18 59.03 58.53   58.58  (n=3)
+fixed λ0.5         57.95 58.72 58.23   58.30  (n=3)
+probe∩eval overlap: ALL ZERO ✓  (checked 18 mob-runs)
+best fixed(mob) = fixed λ0.4 (58.579%)
+  DriftGate − fixed λ0.4         +0.629pp  CI95[+0.44,+0.82]  3/3 seeds+  per-seed=[np.float64(0.72), np.float64(0.59), np.float64(0.58)]
+  DriftGate − entropy            +1.995pp  CI95[+1.18,+2.81]  3/3 seeds+  per-seed=[np.float64(2.22), np.float64(2.14), np.float64(1.62)]
+
+[sanity] disjoint − same-pool absolute integrated (matched eval rounds, paired by seed)
+  DriftGate(TV)      disjoint−samepool = -0.105pp (|max|=0.46pp, n=5 seeds [0, 1, 2, 3, 4], 16 matched rounds)
+  entropy            disjoint−samepool = -3.596pp (|max|=3.90pp, n=3 seeds [0, 1, 2], 11 matched rounds)
+  a1(adaptλ,Λ=.5)    disjoint−samepool = -0.071pp (|max|=0.38pp, n=5 seeds [0, 1, 2, 3, 4], 16 matched rounds)
+  fixed λ0.4         disjoint−samepool = -0.036pp (|max|=0.30pp, n=5 seeds [0, 1, 2, 3, 4], 16 matched rounds)
+  fixed λ0.5         disjoint−samepool = -0.041pp (|max|=0.28pp, n=5 seeds [0, 1, 2, 3, 4], 16 matched rounds)
+
+[TASK 1 VERDICT §4.7]
+  (1) DriftGate−best_fixed mean > 0 : True  (+0.664pp)
+  (2) ≥4/5 seeds positive           : True  (5/5)
+  (3) TV−entropy mean > 0           : True  (+1.470pp)
+  >>> CORE HOLDS under disjoint pools
+
+======================================================================
+TASK 2 — direct server non-Main signals (PARTIAL: done runs only)
+======================================================================
+
+[Schedule A] downstream integrated accuracy — disjoint pools
+signal             s0 s1 s2 s3 s4   mean  n
+TV (DriftGate)     66.24 65.60 66.07 62.79 68.47   65.84  5
+soft(non-Main)     66.45   --    --  62.84   --    64.64  2
+hard(non-Main)     66.23 65.68 66.59 64.12 69.61   66.45  5
+entropy            64.95 63.90 64.54 61.81 66.64   64.37  5
+fixed λ0.4         65.59 64.63 65.15 62.36 68.13   65.17  5
+  TV − soft(non-Main)   -0.125pp CI95[-1.13,+0.88] 0/2 seeds(TV higher)  per-seed=[np.float64(-0.2), np.float64(-0.05)]
+  TV − hard(non-Main)   -0.610pp CI95[-1.36,+0.14] 1/5 seeds(TV higher)  per-seed=[np.float64(0.01), np.float64(-0.08), np.float64(-0.52), np.float64(-1.33), np.float64(-1.13)]
+
+[mobility-med] downstream integrated accuracy — disjoint pools
+signal             s0 s1 s2   mean  n
+TV (DriftGate)     58.90 59.62 59.11   59.21  3
+soft(non-Main)     58.46 59.27   --    58.87  2
+hard(non-Main)     59.06 59.32   --    59.19  2
+entropy            56.68 57.47 57.49   57.21  3
+  TV − soft(non-Main)   +0.390pp 2/2 seeds(TV higher) per-seed=[np.float64(0.44), np.float64(0.34)]
+  TV − hard(non-Main)   +0.067pp 1/2 seeds(TV higher) per-seed=[np.float64(-0.16), np.float64(0.3)]
+
+[SVHN temporal] status: {'tv': 0, 'soft': 1, 'hard': 0, 'ent': 0, 'fx20': 0}  (target 5 each; signal-quality AUROC/Spearman + downstream deferred until SVHN completes)

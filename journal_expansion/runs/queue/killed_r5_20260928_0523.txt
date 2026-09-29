@@ -1,0 +1,28 @@
+# killed at 20260928_0523 (SIGSTOPped since ~3.3 days; GPU1 runs cannot resume under GPU-0-only rule)
+run_v2 2696951 run_name b3_svhn_fx15_s2 device cuda:1
+run_v2 2706840 run_name b3_svhn_fx15_s3 device cuda:1
+run_v2 2708198 run_name b3_svhn_fx15_s4 device cuda:1
+run_v2 2713823 run_name b3_c10gsig_fx15_s0 device cuda:1
+run_v2 2721689 run_name b3_c10gsig_fx15_s1 device cuda:1
+run_v2 2814463 run_name b3_c100gsig_fx15_s1 device cuda:0
+run_v2 2817867 run_name b3_c100gsig_fx15_s2 device cuda:0
+run_v2 2832996 run_name b3_c100sp_fx15_s0 device cuda:0
+run_v2 2833912 run_name b3_c100sp_fx15_s1 device cuda:0
+run_v2 2853985 run_name b3_c100sp_fx15_s2 device cuda:1
+run_v2 2854496 run_name b3_tiny_fx15_s0 device cuda:0
+run_v2 2871607 run_name b3_tiny_fx15_s1 device cuda:0
+run_v2 2978435 run_name [^ device [^
+worker 2978435 source /home/ubuntu/.claude/shell-snapshots/snapshot-bash-1790540340274-hgz8h0.sh
+worker 2978557 source /home/ubuntu/.claude/shell-snapshots/snapshot-bash-1790540340274-hgz8h0.sh
+worker 4020570 cuda:0 0
+worker 4020573 cuda:1 0
+worker 4020576 cuda:0 1
+worker 4020578 cuda:1 1
+worker 4020579 cuda:0 2
+worker 4020581 cuda:1 2
+worker 4020583 cuda:0 3
+worker 4020584 cuda:1 3
+worker 4020585 cuda:0 4
+worker 4020587 cuda:1 4
+worker 4020589 cuda:0 5
+worker 4020591 cuda:1 5

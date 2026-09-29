@@ -1,0 +1,5 @@
+[tw5 cuda:0] START reverse_A_s0 2026. 07. 28. (화) 01:09:54 KST
+[tw5 cuda:0] END reverse_A_s0 exit=0 2026. 07. 28. (화) 05:23:37 KST
+[tw5 cuda:0] START shift20_A_s1 2026. 07. 28. (화) 05:23:37 KST
+[tw5 cuda:0] END shift20_A_s1 exit=0 2026. 07. 28. (화) 10:08:38 KST
+[tw5 cuda:0] DEADLINE reached, stopping new pulls 2026. 07. 28. (화) 10:08:38 KST

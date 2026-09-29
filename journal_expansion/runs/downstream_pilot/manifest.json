@@ -1,0 +1,28 @@
+{
+ "slot0": [
+  "sc_delta_A_s0",
+  "sc_ent_A_s1",
+  "legacy_delta_A_s2",
+  "sc_ent_abrupt_s0",
+  "legacy_delta_abrupt_s1"
+ ],
+ "slot1": [
+  "sc_delta_A_s1",
+  "sc_ent_A_s2",
+  "sc_delta_abrupt_s0",
+  "sc_ent_abrupt_s1",
+  "legacy_delta_abrupt_s2"
+ ],
+ "slot2": [
+  "sc_delta_A_s2",
+  "legacy_delta_A_s0",
+  "sc_delta_abrupt_s1",
+  "sc_ent_abrupt_s2"
+ ],
+ "slot3": [
+  "sc_ent_A_s0",
+  "legacy_delta_A_s1",
+  "sc_delta_abrupt_s2",
+  "legacy_delta_abrupt_s0"
+ ]
+}

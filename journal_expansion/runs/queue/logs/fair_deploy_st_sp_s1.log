@@ -1,0 +1,13 @@
+[fair_deploy_st_sp_s1] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=100 device=cuda:1
+  R  1 loss=0.900 acc=0.251 worst=0.131 elapsed=2.4m ETA=236m
+  R 10 loss=0.383 acc=0.453 worst=0.313 elapsed=15.2m ETA=137m
+  R 20 loss=0.322 acc=0.528 worst=0.418 elapsed=29.4m ETA=118m
+  R 30 loss=0.215 acc=0.589 worst=0.498 elapsed=43.3m ETA=101m
+  R 40 loss=0.183 acc=0.606 worst=0.488 elapsed=58.5m ETA=88m
+  R 50 loss=0.164 acc=0.624 worst=0.516 elapsed=73.0m ETA=73m
+  R 60 loss=0.146 acc=0.639 worst=0.552 elapsed=87.9m ETA=59m
+  R 70 loss=0.132 acc=0.650 worst=0.549 elapsed=102.2m ETA=44m
+  R 80 loss=0.121 acc=0.658 worst=0.560 elapsed=116.3m ETA=29m
+  R 90 loss=0.117 acc=0.636 worst=0.548 elapsed=130.3m ETA=14m
+  R100 loss=0.109 acc=0.638 worst=0.542 elapsed=144.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/fair_deploy_st_sp_s1.json

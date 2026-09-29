@@ -1,0 +1,13 @@
+[delay2_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=100 device=cuda:0
+  R  1 loss=0.884 acc=0.267 worst=0.169 elapsed=2.1m ETA=207m
+  R 10 loss=0.398 acc=0.602 worst=0.511 elapsed=15.1m ETA=136m
+  R 20 loss=0.334 acc=0.646 worst=0.564 elapsed=29.9m ETA=120m
+  R 30 loss=0.228 acc=0.740 worst=0.674 elapsed=44.5m ETA=104m
+  R 40 loss=0.173 acc=0.771 worst=0.737 elapsed=58.8m ETA=88m
+  R 50 loss=0.153 acc=0.785 worst=0.733 elapsed=73.3m ETA=73m
+  R 60 loss=0.190 acc=0.568 worst=0.534 elapsed=88.4m ETA=59m
+  R 70 loss=0.151 acc=0.558 worst=0.493 elapsed=103.5m ETA=44m
+  R 80 loss=0.123 acc=0.547 worst=0.507 elapsed=118.9m ETA=30m
+  R 90 loss=0.104 acc=0.539 worst=0.499 elapsed=134.4m ETA=15m
+  R100 loss=0.091 acc=0.521 worst=0.456 elapsed=149.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase6_network/delay2_s0.json

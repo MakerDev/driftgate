@@ -1,0 +1,25 @@
+group,seed,post_warmup_cluster_rounds,max_abs_err_lambda,max_abs_err_Lambda,warmup_mismatches,lam_abs_log
+entropy A,0,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy A,1,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy A,2,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy A,3,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy A,4,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy mobility,0,475,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy mobility,1,475,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy mobility,2,475,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy SVHN,0,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy SVHN,1,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy SVHN,2,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy SVHN,3,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+entropy SVHN,4,625,1.11e-16,1.11e-16,0,not logged (pre-R4 run)
+relonly A,0,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly A,1,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly A,2,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly A,3,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly A,4,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly mobility,0,475,1.11e-16,1.11e-16,0,empty in all rounds
+relonly mobility,1,475,1.11e-16,1.11e-16,0,empty in all rounds
+relonly mobility,2,475,1.11e-16,1.11e-16,0,empty in all rounds
+relonly C100 gradual,0,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly C100 gradual,1,625,1.11e-16,1.11e-16,0,empty in all rounds
+relonly C100 gradual,2,625,1.11e-16,1.11e-16,0,empty in all rounds

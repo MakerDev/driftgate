@@ -1,0 +1,13 @@
+[res_late_dve_s1] method=splitomcplus controller=selfcal signal=ent_client schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.347 acc=0.516 worst=0.386 elapsed=25.7m ETA=2543m
+  R 10 loss=0.065 acc=0.553 worst=0.411 elapsed=1038.0m ETA=9342m
+  R 20 loss=0.053 acc=0.674 worst=0.621 elapsed=1413.1m ETA=5652m
+  R 30 loss=0.042 acc=0.581 worst=0.506 elapsed=1786.9m ETA=4169m
+  R 40 loss=0.044 acc=0.569 worst=0.480 elapsed=2162.4m ETA=3244m
+  R 50 loss=0.050 acc=0.452 worst=0.379 elapsed=2539.2m ETA=2539m
+  R 60 loss=0.038 acc=0.455 worst=0.393 elapsed=2927.4m ETA=1952m
+  R 70 loss=0.029 acc=0.570 worst=0.464 elapsed=3310.9m ETA=1419m
+  R 80 loss=0.014 acc=0.616 worst=0.597 elapsed=3696.1m ETA=924m
+  R 90 loss=0.025 acc=0.856 worst=0.701 elapsed=4073.1m ETA=453m
+  R100 loss=0.038 acc=0.833 worst=0.737 elapsed=4553.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseF_arch/res_late_dve_s1.json

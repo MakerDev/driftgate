@@ -1,0 +1,18 @@
+[a2_A_30L70_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.336 worst=0.215 elapsed=2.2m ETA=324m
+  R 10 loss=0.411 acc=0.544 worst=0.416 elapsed=14.6m ETA=205m
+  R 20 loss=0.348 acc=0.622 worst=0.470 elapsed=29.2m ETA=190m
+  R 30 loss=0.301 acc=0.669 worst=0.524 elapsed=42.8m ETA=171m
+  R 40 loss=0.270 acc=0.583 worst=0.481 elapsed=57.8m ETA=159m
+  R 50 loss=0.246 acc=0.613 worst=0.540 elapsed=72.8m ETA=146m
+  R 60 loss=0.221 acc=0.625 worst=0.559 elapsed=86.1m ETA=129m
+  R 70 loss=0.202 acc=0.606 worst=0.564 elapsed=101.6m ETA=116m
+  R 80 loss=0.188 acc=0.600 worst=0.551 elapsed=116.9m ETA=102m
+  R 90 loss=0.176 acc=0.579 worst=0.534 elapsed=132.0m ETA=88m
+  R100 loss=0.166 acc=0.640 worst=0.566 elapsed=146.7m ETA=73m
+  R110 loss=0.157 acc=0.672 worst=0.641 elapsed=161.3m ETA=59m
+  R120 loss=0.144 acc=0.675 worst=0.618 elapsed=176.3m ETA=44m
+  R130 loss=0.138 acc=0.825 worst=0.750 elapsed=190.6m ETA=29m
+  R140 loss=0.122 acc=0.830 worst=0.786 elapsed=205.5m ETA=15m
+  R150 loss=0.121 acc=0.838 worst=0.774 elapsed=220.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseS_supp/a2_A_30L70_s1.json

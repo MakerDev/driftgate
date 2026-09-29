@@ -1,0 +1,95 @@
+setting,arm,seed,last_round,acc_total_pct
+A,TV full,0,150,86.7900
+A,TV full,1,150,90.1000
+A,TV full,2,150,89.5900
+A,TV full,3,150,82.8125
+A,TV full,4,150,87.6100
+A,"a1 (adaptive λ, Λ=0.5)",0,150,87.9200
+A,"a1 (adaptive λ, Λ=0.5)",1,150,89.7238
+A,"a1 (adaptive λ, Λ=0.5)",2,150,89.7075
+A,"a1 (adaptive λ, Λ=0.5)",3,150,83.8650
+A,"a1 (adaptive λ, Λ=0.5)",4,150,89.3025
+A,entropy,0,150,89.1412
+A,entropy,1,150,90.1850
+A,entropy,2,150,88.8925
+A,entropy,3,150,82.8725
+A,entropy,4,150,89.6387
+A,server rate,0,150,84.6200
+A,server rate,1,150,88.4775
+A,server rate,2,150,89.7137
+A,server rate,3,150,85.7100
+A,server rate,4,150,90.3625
+A,fixed 0.2,0,150,79.0012
+A,fixed 0.2,1,150,80.3513
+A,fixed 0.2,2,150,80.2163
+A,fixed 0.2,3,150,77.3425
+A,fixed 0.2,4,150,81.4725
+A,fixed 0.3,0,150,82.0738
+A,fixed 0.3,1,150,83.2113
+A,fixed 0.3,2,150,83.0263
+A,fixed 0.3,3,150,79.0037
+A,fixed 0.3,4,150,84.1200
+A,fixed 0.4,0,150,84.8937
+A,fixed 0.4,1,150,85.9175
+A,fixed 0.4,2,150,85.9862
+A,fixed 0.4,3,150,80.7262
+A,fixed 0.4,4,150,86.5050
+A,fixed 0.5,0,150,87.7775
+A,fixed 0.5,1,150,88.2013
+A,fixed 0.5,2,150,88.2900
+A,fixed 0.5,3,150,81.9775
+A,fixed 0.5,4,150,88.4637
+A,B1 absonly,0,150,89.4638
+A,B1 absonly,1,150,90.3850
+A,B1 absonly,2,150,89.0962
+A,B1 absonly,3,150,84.3225
+A,B1 absonly,4,150,89.6400
+A,B1 relonly,0,150,88.3613
+A,B1 relonly,1,150,90.3775
+A,B1 relonly,2,150,89.8263
+A,B1 relonly,3,150,83.3550
+A,B1 relonly,4,150,87.9987
+A,B2 entnorm,0,150,85.0787
+A,B2 entnorm,1,150,87.1550
+A,B2 entnorm,2,150,86.8013
+A,B2 entnorm,3,150,81.9725
+A,B2 entnorm,4,150,87.5987
+mob,TV full,0,120,61.2012
+mob,TV full,1,120,59.4327
+mob,TV full,2,120,58.7322
+mob,"a1 (adaptive λ, Λ=0.5)",0,120,61.2005
+mob,"a1 (adaptive λ, Λ=0.5)",1,120,59.3892
+mob,"a1 (adaptive λ, Λ=0.5)",2,120,58.8900
+mob,entropy,0,120,53.6160
+mob,entropy,1,120,52.9502
+mob,entropy,2,120,51.7473
+mob,server rate,0,120,61.4595
+mob,server rate,1,120,56.6318
+mob,server rate,2,120,60.0610
+mob,fixed 0.2,0,120,62.8369
+mob,fixed 0.2,1,120,62.4169
+mob,fixed 0.2,2,120,61.4435
+mob,fixed 0.3,0,120,62.5468
+mob,fixed 0.3,1,120,61.5599
+mob,fixed 0.3,2,120,60.6379
+mob,fixed 0.4,0,120,60.9047
+mob,fixed 0.4,1,120,59.7314
+mob,fixed 0.4,2,120,59.0242
+mob,fixed 0.5,0,120,57.5754
+mob,fixed 0.5,1,120,57.2073
+mob,fixed 0.5,2,120,55.9865
+mob,B3 fixed 0.5,0,120,57.5988
+mob,B3 fixed 0.5,1,120,57.0884
+mob,B3 fixed 0.5,2,120,56.0958
+mob,B3 fixed 0.6,0,120,54.2620
+mob,B3 fixed 0.6,1,120,53.6368
+mob,B3 fixed 0.6,2,120,52.3961
+mob,B1 absonly,0,120,57.0672
+mob,B1 absonly,1,120,55.7191
+mob,B1 absonly,2,120,54.9303
+mob,B1 relonly,0,120,61.1737
+mob,B1 relonly,1,120,59.2396
+mob,B1 relonly,2,120,58.7503
+mob,B2 entnorm,0,120,62.7528
+mob,B2 entnorm,1,120,61.6371
+mob,B2 entnorm,2,120,60.7033

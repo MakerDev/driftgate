@@ -1,0 +1,1 @@
+svhn ready: 73257 26032 {'num_classes': 10, 'in_spatial': 8, 'classes_per_client': 2, 'classes_per_client_frac': 0.2}

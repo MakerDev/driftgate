@@ -1,0 +1,13 @@
+[part50_fixed_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=abrupt rounds=100 device=cuda:1
+  R  1 loss=0.867 acc=0.237 worst=0.049 elapsed=1.4m ETA=136m
+  R 10 loss=0.393 acc=0.477 worst=0.239 elapsed=8.0m ETA=72m
+  R 20 loss=0.375 acc=0.580 worst=0.497 elapsed=15.6m ETA=62m
+  R 30 loss=0.346 acc=0.649 worst=0.538 elapsed=22.9m ETA=53m
+  R 40 loss=0.337 acc=0.623 worst=0.457 elapsed=30.0m ETA=45m
+  R 50 loss=0.270 acc=0.700 worst=0.611 elapsed=37.1m ETA=37m
+  R 60 loss=0.266 acc=0.495 worst=0.436 elapsed=44.7m ETA=30m
+  R 70 loss=0.265 acc=0.485 worst=0.446 elapsed=52.6m ETA=23m
+  R 80 loss=0.243 acc=0.519 worst=0.475 elapsed=60.5m ETA=15m
+  R 90 loss=0.235 acc=0.513 worst=0.492 elapsed=68.4m ETA=8m
+  R100 loss=0.254 acc=0.520 worst=0.458 elapsed=76.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase6_network/part50_fixed_s1.json

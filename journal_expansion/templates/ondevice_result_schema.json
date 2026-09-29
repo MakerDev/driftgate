@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "On-device benchmark result (Phase J)",
+  "type": "object",
+  "required": ["metadata", "stages"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["device_model", "chipset", "cpu", "ram_gb", "os", "runtime",
+                   "thread_count", "precision", "power_mode", "model_format",
+                   "batch_size", "probe_size", "warmup", "iterations"],
+      "properties": {
+        "device_model": {"type": ["string"]},
+        "chipset": {"type": ["string"]},
+        "cpu": {"type": ["string"]},
+        "gpu_npu": {"type": ["string", "null"]},
+        "ram_gb": {"type": ["number"]},
+        "os": {"type": "string"},
+        "runtime": {"type": "string"},
+        "thread_count": {"type": "integer"},
+        "precision": {"enum": ["fp32", "fp16", "int8"]},
+        "power_mode": {"type": ["string"]},
+        "thermal_state": {"type": ["string", "null"]},
+        "model_format": {"type": "string"},
+        "batch_size": {"type": "integer"},
+        "probe_size": {"type": "integer"},
+        "warmup": {"type": "integer"},
+        "iterations": {"type": "integer"}
+      }
+    },
+    "stages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["mean_ms", "median_ms", "p95_ms", "p99_ms", "std_ms", "n"]
+      }
+    },
+    "peak_rss_mb": {"type": ["number", "null"]},
+    "energy_j": {"type": ["number", "null"],
+                 "description": "external power-meter measurement; never estimated"}
+  }
+}

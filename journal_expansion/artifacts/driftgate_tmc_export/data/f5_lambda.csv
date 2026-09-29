@@ -1,0 +1,3 @@
+setting,full_minus_fixedLambda_pp,ci95,n_full_higher,n_seeds,protocol
+Schedule A,-0.0711,"[-0.23,+0.09]",2,5,disjoint
+mobility-med,+0.0702,"[-0.05,+0.19]",3,3,disjoint

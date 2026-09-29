@@ -1,0 +1,18 @@
+[dv2_asym_return_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=asym_return rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.337 worst=0.183 elapsed=1.8m ETA=276m
+  R 10 loss=0.379 acc=0.556 worst=0.419 elapsed=14.8m ETA=207m
+  R 20 loss=0.319 acc=0.645 worst=0.500 elapsed=29.0m ETA=189m
+  R 30 loss=0.235 acc=0.706 worst=0.597 elapsed=43.2m ETA=173m
+  R 40 loss=0.206 acc=0.738 worst=0.593 elapsed=57.3m ETA=158m
+  R 50 loss=0.241 acc=0.547 worst=0.501 elapsed=72.6m ETA=145m
+  R 60 loss=0.224 acc=0.568 worst=0.514 elapsed=88.0m ETA=132m
+  R 70 loss=0.214 acc=0.605 worst=0.555 elapsed=102.9m ETA=118m
+  R 80 loss=0.196 acc=0.605 worst=0.549 elapsed=118.0m ETA=103m
+  R 90 loss=0.183 acc=0.592 worst=0.537 elapsed=132.4m ETA=88m
+  R100 loss=0.170 acc=0.616 worst=0.544 elapsed=146.7m ETA=73m
+  R110 loss=0.156 acc=0.661 worst=0.620 elapsed=161.4m ETA=59m
+  R120 loss=0.139 acc=0.689 worst=0.634 elapsed=175.9m ETA=44m
+  R130 loss=0.129 acc=0.744 worst=0.702 elapsed=191.2m ETA=29m
+  R140 loss=0.105 acc=0.802 worst=0.779 elapsed=206.3m ETA=15m
+  R150 loss=0.079 acc=0.892 worst=0.853 elapsed=220.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dv2_asym_return_s1.json

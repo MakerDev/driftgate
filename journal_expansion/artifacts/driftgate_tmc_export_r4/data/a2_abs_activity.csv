@@ -1,0 +1,64 @@
+setting,arm,segment,frac_abs_lt_rel,n_seeds,source
+A,TV full,ALL,0.1667,5,reconstructed
+A,TV full,rho0 early,0.8000,5,reconstructed
+A,TV full,rho0.4 up,0.0427,5,reconstructed
+A,TV full,rho0.8,0.0027,5,reconstructed
+A,TV full,rho0.4 down,0.0613,5,reconstructed
+A,TV full,rho0 late,0.4547,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",ALL,0.1696,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",rho0 early,0.6880,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 up,0.0400,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",rho0.8,0.0013,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 down,0.0560,5,reconstructed
+A,"a1 (adaptive λ, Λ=0.5)",rho0 late,0.4947,5,reconstructed
+A,entropy,ALL,n/a (abs disabled),5,reconstructed
+A,entropy,rho0 early,n/a,5,reconstructed
+A,entropy,rho0.4 up,n/a,5,reconstructed
+A,entropy,rho0.8,n/a,5,reconstructed
+A,entropy,rho0.4 down,n/a,5,reconstructed
+A,entropy,rho0 late,n/a,5,reconstructed
+A,server rate,ALL,0.1277,5,reconstructed
+A,server rate,rho0 early,0.8240,5,reconstructed
+A,server rate,rho0.4 up,0.1227,5,reconstructed
+A,server rate,rho0.8,0.0053,5,reconstructed
+A,server rate,rho0.4 down,0.1093,5,reconstructed
+A,server rate,rho0 late,0.1573,5,reconstructed
+A,B1 absonly,ALL,0.3450,5,exact
+A,B1 absonly,rho0 early,0.8800,5,exact
+A,B1 absonly,rho0.4 up,0.0453,5,exact
+A,B1 absonly,rho0.8,0.0333,5,exact
+A,B1 absonly,rho0.4 down,0.2267,5,exact
+A,B1 absonly,rho0 late,0.9853,5,exact
+A,B1 relonly,ALL,n/a (abs disabled),5,exact
+A,B1 relonly,rho0 early,n/a,5,exact
+A,B1 relonly,rho0.4 up,n/a,5,exact
+A,B1 relonly,rho0.8,n/a,5,exact
+A,B1 relonly,rho0.4 down,n/a,5,exact
+A,B1 relonly,rho0 late,n/a,5,exact
+A,B2 entnorm,ALL,1.0000,5,exact
+A,B2 entnorm,rho0 early,1.0000,5,exact
+A,B2 entnorm,rho0.4 up,1.0000,5,exact
+A,B2 entnorm,rho0.8,1.0000,5,exact
+A,B2 entnorm,rho0.4 down,1.0000,5,exact
+A,B2 entnorm,rho0 late,1.0000,5,exact
+mob,TV full,ALL,0.2232,3,reconstructed
+mob,TV full,pre-move,0.6038,3,reconstructed
+mob,TV full,post-move,0.0011,3,reconstructed
+mob,"a1 (adaptive λ, Λ=0.5)",ALL,0.2211,3,reconstructed
+mob,"a1 (adaptive λ, Λ=0.5)",pre-move,0.5981,3,reconstructed
+mob,"a1 (adaptive λ, Λ=0.5)",post-move,0.0011,3,reconstructed
+mob,entropy,ALL,n/a (abs disabled),3,reconstructed
+mob,entropy,pre-move,n/a,3,reconstructed
+mob,entropy,post-move,n/a,3,reconstructed
+mob,server rate,ALL,0.4049,3,reconstructed
+mob,server rate,pre-move,0.9238,3,reconstructed
+mob,server rate,post-move,0.1022,3,reconstructed
+mob,B1 absonly,ALL,0.1986,3,exact
+mob,B1 absonly,pre-move,0.5181,3,exact
+mob,B1 absonly,post-move,0.0122,3,exact
+mob,B1 relonly,ALL,n/a (abs disabled),3,exact
+mob,B1 relonly,pre-move,n/a,3,exact
+mob,B1 relonly,post-move,n/a,3,exact
+mob,B2 entnorm,ALL,1.0000,3,exact
+mob,B2 entnorm,pre-move,1.0000,3,exact
+mob,B2 entnorm,post-move,1.0000,3,exact

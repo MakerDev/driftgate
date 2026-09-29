@@ -1,0 +1,98 @@
+file	line	category	marked_inline	text
+journal_expansion/README.md	20	SERVER-PATH:REPO_ROOT	no	cd /disk2/Yujin/adaptive_splitomc_tmc
+journal_expansion/artifacts/DriftGate_TMC_최종패키지/reproducibility/evidence_index.md	3	SERVER-PATH:REPO_ROOT	no	Commit `e82b96b` · config `configs/base_v3.yaml`. 경로는 저장소 루트(`/disk2/Yujin/adaptive_splitomc_tmc/`) 기준.
+journal_expansion/artifacts/driftgate_tmc_export/reproducibility/evidence_index.md	3	SERVER-PATH:REPO_ROOT	no	Commit `e82b96b` · config `configs/base_v3.yaml`. 경로는 저장소 루트(`/disk2/Yujin/adaptive_splitomc_tmc/`) 기준.
+journal_expansion/artifacts/driftgate_tmc_export/scripts/build_data.py	12	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_export/scripts/fill_fixed_refs.py	8	SERVER-PATH:REPO_ROOT	yes	JR=Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_export_r4/RESUME_NOTE.md	12	SERVER-PATH:REPO_ROOT	no	1. `rm /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue/STOP`
+journal_expansion/artifacts/driftgate_tmc_export_r4/scripts/r4_config_tables.py	7	SERVER-PATH:REPO_ROOT	yes	ROOT = Path("/disk2/Yujin/adaptive_splitomc_tmc")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_export_r4/scripts/r4_partA.py	15	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_export_r4/scripts/r4_partB.py	11	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_final/precheck/precheck.py	12	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_final/scripts/r5_config_comm.py	8	SERVER-PATH:REPO_ROOT	yes	ROOT = Path("/disk2/Yujin/adaptive_splitomc_tmc"); JR = ROOT / "journal_expansion"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_final/scripts/r5_figures.py	28	SERVER-PATH:REPO_ROOT	yes	RUNS = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_final/scripts/r5_manifest.py	8	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/artifacts/driftgate_tmc_final/scripts/r5_manifest.py	41	SERVER-GPU	yes	"cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)", ends.get(rn, ("", ""))[1],  # [SERVER-GPU]
+journal_expansion/artifacts/driftgate_tmc_final/scripts/r5_tables.py	13	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_dslot0.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_dslot0.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule A --seed 0 --model_seed 100 --rou
+journal_expansion/scripts/_dslot0.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule A --seed 1 --model_seed 101 --rou
+journal_expansion/scripts/_dslot0.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule A --seed 2 --model_seed 102 --roun
+journal_expansion/scripts/_dslot0.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule abrupt --seed 0 --model_seed 100 
+journal_expansion/scripts/_dslot0.sh	16	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule abrupt --seed 1 --model_seed 101 -
+journal_expansion/scripts/_dslot1.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_dslot1.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule A --seed 1 --model_seed 101 --rou
+journal_expansion/scripts/_dslot1.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule A --seed 2 --model_seed 102 --rou
+journal_expansion/scripts/_dslot1.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule abrupt --seed 0 --model_seed 100 
+journal_expansion/scripts/_dslot1.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule abrupt --seed 1 --model_seed 101 
+journal_expansion/scripts/_dslot1.sh	16	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule abrupt --seed 2 --model_seed 102 -
+journal_expansion/scripts/_dslot2.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_dslot2.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule A --seed 2 --model_seed 102 --rou
+journal_expansion/scripts/_dslot2.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule A --seed 0 --model_seed 100 --roun
+journal_expansion/scripts/_dslot2.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule abrupt --seed 1 --model_seed 101 
+journal_expansion/scripts/_dslot2.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule abrupt --seed 2 --model_seed 102 
+journal_expansion/scripts/_dslot3.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_dslot3.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal ent_client --schedule A --seed 0 --model_seed 100 --rou
+journal_expansion/scripts/_dslot3.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule A --seed 1 --model_seed 101 --roun
+journal_expansion/scripts/_dslot3.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal delta_hard --schedule abrupt --seed 2 --model_seed 102 
+journal_expansion/scripts/_dslot3.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode legacy --signal delta_hard --schedule abrupt --seed 0 --model_seed 100 -
+journal_expansion/scripts/_slot0.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_slot0.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 0 --model_seed 100 --rounds 100 --probe_n 64
+journal_expansion/scripts/_slot0.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 0 --model_seed 100 --rounds 100 --probe
+journal_expansion/scripts/_slot0.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 0 --model_seed 100 --rounds 100 --pr
+journal_expansion/scripts/_slot0.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 0 --model_seed 100 --rounds 100 --probe_
+journal_expansion/scripts/_slot1.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_slot1.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 1 --model_seed 101 --rounds 100 --probe_n 64
+journal_expansion/scripts/_slot1.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 1 --model_seed 101 --rounds 100 --probe
+journal_expansion/scripts/_slot1.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 1 --model_seed 101 --rounds 100 --pr
+journal_expansion/scripts/_slot1.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 1 --model_seed 101 --rounds 100 --probe_
+journal_expansion/scripts/_slot2.sh	2	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/_slot2.sh	4	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 2 --model_seed 102 --rounds 100 --probe_n 64
+journal_expansion/scripts/_slot2.sh	7	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 2 --model_seed 102 --rounds 100 --probe
+journal_expansion/scripts/_slot2.sh	10	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 2 --model_seed 102 --rounds 100 --pr
+journal_expansion/scripts/_slot2.sh	13	SERVER-PATH:REPO_ROOT	yes	python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 2 --model_seed 102 --rounds 100 --probe_
+journal_expansion/scripts/analyze_operating_point.py	18	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/analyze_task12_partial.py	11	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/analyze_task2_final.py	28	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/enqueue_r4.py	7	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/enqueue_r5.py	22	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/enqueue_supp.py	9	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/enqueue_task1.py	10	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/launch_downstream.py	27	SERVER-GPU	yes	SLOTS = ["cuda:0", "cuda:0", "cuda:1", "cuda:1"]  # [SERVER-GPU]
+journal_expansion/scripts/launch_gatec.py	20	SERVER-GPU	yes	SLOTS = ["cuda:0", "cuda:0", "cuda:1", "cuda:1"]  # [SERVER-GPU]
+journal_expansion/scripts/launch_pilots.py	23	SERVER-GPU	yes	SLOTS = ["cuda:0", "cuda:1", "cuda:1"]  # slot0 shares GPU0 with repro; GPU1 x2  # [SERVER-GPU]
+journal_expansion/scripts/launch_v3b.py	11	SERVER-GPU	yes	SLOTS = ["cuda:0", "cuda:0", "cuda:1", "cuda:1"]  # [SERVER-GPU]
+journal_expansion/scripts/measure_overhead.py	44	SERVER-GPU	yes	def main(device="cuda:1"):  # [SERVER-GPU]
+journal_expansion/scripts/measure_overhead.py	98	SERVER-GPU	yes	main(sys.argv[1] if len(sys.argv) > 1 else "cuda:1")  # [SERVER-GPU]
+journal_expansion/scripts/queue_worker.sh	8	SERVER-PATH:REPO_ROOT	yes	QDIR="/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/queue_worker.sh	13	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r2_task5_signal_audit.py	17	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r2_task7_finalize.py	12	SERVER-PATH:REPO_ROOT	yes	JR=Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r2_task7_tables.py	14	SERVER-PATH:REPO_ROOT	yes	JR=Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r5_monitor.py	7	SERVER-PATH:REPO_ROOT	yes	JR = "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r5_worker.py	4	SERVER-GPU	no	Every job runs with CUDA_DEVICE_ORDER=PCI_BUS_ID and CUDA_VISIBLE_DEVICES=0, so the
+journal_expansion/scripts/r5_worker.py	24	SERVER-PATH:REPO_ROOT	yes	QDIR = "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue_r5"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/r5_worker.py	25	SERVER-GPU	yes	GPU = os.environ.get("R5_GPU", "0")  # physical GPU index (nvidia-smi, PCI order)  # [SERVER-GPU]
+journal_expansion/scripts/r5_worker.py	31	SERVER-PATH:REPO_ROOT	yes	os.chdir("/disk2/Yujin/adaptive_splitomc_tmc")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/resnet_worker.sh	6	SERVER-PATH:REPO_ROOT	yes	QDIR="/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/resnet_queue"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/resnet_worker.sh	8	SERVER-PATH:REPO_ROOT	yes	mkdir -p "$LOGDIR"; cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/supervisor.sh	8	SERVER-PATH:REPO_ROOT	yes	cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/supervisor.sh	9	SERVER-GPU	yes	GPUS="${R5_GPUS:-0}"                 # space-separated physical GPU indices allowed for R5  # [SERVER-GPU]
+journal_expansion/scripts/supervisor.sh	10	SERVER-GPU	yes	NHEAVY="${R5_HEAVY_PER_GPU:-3}"      # heavy workers per GPU (Tiny-ImageNet ~3.8 GB, ResNet-18 ~2.5 GB)  # [SERVER-GPU]
+journal_expansion/scripts/supervisor.sh	11	SERVER-GPU	yes	NLIGHT="${R5_LIGHT_PER_GPU:-5}"      # light workers per GPU (CIFAR/SVHN CNN ~1.5 GB)  # [SERVER-GPU]
+journal_expansion/scripts/supervisor.sh.bak_pre_r5_20260928_0524	4	SERVER-PATH:REPO_ROOT	no	cd /disk2/Yujin/adaptive_splitomc_tmc
+journal_expansion/scripts/task0_headline_audit.py	8	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/task3_final_tables.py	11	SERVER-PATH:REPO_ROOT	yes	JR = Path("/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion")  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/timed_worker.sh	6	SERVER-PATH:REPO_ROOT	yes	QDIR="/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/queue"  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/scripts/timed_worker.sh	8	SERVER-PATH:REPO_ROOT	yes	mkdir -p "$LOGDIR"; cd /disk2/Yujin/adaptive_splitomc_tmc  # [SERVER-PATH:REPO_ROOT]
+journal_expansion/src/datasets_ext.py	27	SERVER-PATH:DATA_ROOT	yes	DATA_ROOT = Path("/disk2/Yujin/datasets")  # [SERVER-PATH:DATA_ROOT]
+journal_expansion/src/provenance.py	21	SERVER-PATH:GIT_ROOT	yes	GIT_REPO_DIR = "/disk2/Yujin"  # repo root containing this project  # [SERVER-PATH:GIT_ROOT]
+logs/backup_2155/master.log	4	SERVER-PATH:EXTERNAL	no	[2026-05-27 21:55:13] Project dir: /disk2/Yujin/adaptive_splitomc_v3
+logs/backup_2155/master.log	10	SERVER-PATH:HOME	no	platform linux -- Python 3.12.7, pytest-7.4.4, pluggy-1.0.0 -- /home/ubuntu/anaconda3/bin/python
+logs/backup_2155/master.log	12	SERVER-PATH:EXTERNAL	no	rootdir: /disk2/Yujin/adaptive_splitomc_v3
+logs/master.log	4	SERVER-PATH:EXTERNAL	no	[2026-05-27 22:44:06] Project dir: /disk2/Yujin/adaptive_splitomc_v3
+logs/master.log	10	SERVER-PATH:HOME	no	platform linux -- Python 3.12.7, pytest-7.4.4, pluggy-1.0.0 -- /home/ubuntu/anaconda3/bin/python
+logs/master.log	12	SERVER-PATH:EXTERNAL	no	rootdir: /disk2/Yujin/adaptive_splitomc_v3
+run_all.sh	19	SERVER-GPU	yes	DEVICE1="${DEVICE1:-cuda:1}"  # [SERVER-GPU]
+scripts/gen_integrated.py	4	SERVER-PATH:EXTERNAL	yes	V4='/disk2/Yujin/adaptive_splitomc_v4/'  # [SERVER-PATH:EXTERNAL]
+scripts/gen_integrated.py	5	SERVER-PATH:EXTERNAL	yes	V3='/disk2/Yujin/adaptive_splitomc_v3/'  # [SERVER-PATH:EXTERNAL]

@@ -1,0 +1,18 @@
+[dvsig_delta_abrupt_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.184 elapsed=2.4m ETA=363m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=18.2m ETA=254m
+  R 20 loss=0.334 acc=0.647 worst=0.563 elapsed=35.5m ETA=231m
+  R 30 loss=0.264 acc=0.697 worst=0.637 elapsed=52.5m ETA=210m
+  R 40 loss=0.221 acc=0.726 worst=0.685 elapsed=69.9m ETA=192m
+  R 50 loss=0.191 acc=0.749 worst=0.696 elapsed=87.5m ETA=175m
+  R 60 loss=0.167 acc=0.789 worst=0.753 elapsed=105.3m ETA=158m
+  R 70 loss=0.142 acc=0.798 worst=0.707 elapsed=123.5m ETA=141m
+  R 80 loss=0.171 acc=0.581 worst=0.522 elapsed=142.2m ETA=124m
+  R 90 loss=0.202 acc=0.610 worst=0.557 elapsed=160.9m ETA=107m
+  R100 loss=0.179 acc=0.612 worst=0.527 elapsed=180.4m ETA=90m
+  R110 loss=0.172 acc=0.636 worst=0.589 elapsed=199.4m ETA=73m
+  R120 loss=0.160 acc=0.642 worst=0.606 elapsed=218.0m ETA=54m
+  R130 loss=0.147 acc=0.636 worst=0.580 elapsed=237.5m ETA=37m
+  R140 loss=0.133 acc=0.655 worst=0.609 elapsed=257.0m ETA=18m
+  R150 loss=0.119 acc=0.654 worst=0.603 elapsed=276.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_delta_abrupt_s0.json

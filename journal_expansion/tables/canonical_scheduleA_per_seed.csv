@@ -1,0 +1,6 @@
+method,seed,integrated,high_drift,worst_cell,n_eval_rounds,path
+adaptive_DriftGate,0,0.659721,0.615105,0.596376,16,runs/phaseC_signals/dvsig_tv_A_s0.json
+adaptive_DriftGate,1,0.657048,0.593301,0.581373,16,runs/phaseC_signals/dvsig_tv_A_s1.json
+adaptive_DriftGate,2,0.661725,0.573705,0.580071,16,runs/phaseC_signals/dvsig_tv_A_s2.json
+adaptive_DriftGate,3,0.629364,0.566833,0.567812,16,runs/phaseS_supp/b1_adaptive_A_s3.json
+adaptive_DriftGate,4,0.68927,0.643533,0.582047,16,runs/phaseS_supp/b1_adaptive_A_s4.json

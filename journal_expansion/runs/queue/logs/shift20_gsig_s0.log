@@ -1,0 +1,2 @@
+[shift20_gsig_s0] method=splitomcplus controller=replay signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.238 worst=0.134 elapsed=5.9m ETA=873m

@@ -1,0 +1,13 @@
+[topo_dynamic_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=2.1m ETA=212m
+  R 10 loss=0.398 acc=0.602 worst=0.510 elapsed=14.6m ETA=131m
+  R 20 loss=0.334 acc=0.647 worst=0.564 elapsed=29.1m ETA=117m
+  R 30 loss=0.214 acc=0.756 worst=0.689 elapsed=44.1m ETA=103m
+  R 40 loss=0.174 acc=0.769 worst=0.733 elapsed=58.8m ETA=88m
+  R 50 loss=0.154 acc=0.785 worst=0.731 elapsed=72.9m ETA=73m
+  R 60 loss=0.208 acc=0.573 worst=0.537 elapsed=88.1m ETA=59m
+  R 70 loss=0.171 acc=0.571 worst=0.507 elapsed=103.5m ETA=44m
+  R 80 loss=0.135 acc=0.566 worst=0.515 elapsed=119.2m ETA=30m
+  R 90 loss=0.112 acc=0.549 worst=0.506 elapsed=135.2m ETA=15m
+  R100 loss=0.088 acc=0.527 worst=0.467 elapsed=150.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase6_network/topo_dynamic_s0.json

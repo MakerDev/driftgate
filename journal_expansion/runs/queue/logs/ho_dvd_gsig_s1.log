@@ -1,0 +1,18 @@
+[ho_dvd_gsig_s1] method=splitomcplus controller=selfcal signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.974 acc=0.255 worst=0.107 elapsed=3.7m ETA=544m
+  R 10 loss=0.426 acc=0.679 worst=0.529 elapsed=23.2m ETA=324m
+  R 20 loss=0.317 acc=0.796 worst=0.670 elapsed=44.8m ETA=291m
+  R 30 loss=0.222 acc=0.840 worst=0.740 elapsed=66.1m ETA=264m
+  R 40 loss=0.178 acc=0.867 worst=0.801 elapsed=87.2m ETA=240m
+  R 50 loss=0.154 acc=0.862 worst=0.805 elapsed=108.2m ETA=216m
+  R 60 loss=0.135 acc=0.851 worst=0.809 elapsed=130.4m ETA=196m
+  R 70 loss=0.132 acc=0.850 worst=0.808 elapsed=152.6m ETA=174m
+  R 80 loss=0.139 acc=0.837 worst=0.804 elapsed=175.4m ETA=153m
+  R 90 loss=0.134 acc=0.837 worst=0.805 elapsed=198.4m ETA=132m
+  R100 loss=0.123 acc=0.833 worst=0.799 elapsed=222.7m ETA=111m
+  R110 loss=0.114 acc=0.842 worst=0.815 elapsed=246.4m ETA=90m
+  R120 loss=0.102 acc=0.844 worst=0.818 elapsed=270.1m ETA=68m
+  R130 loss=0.096 acc=0.849 worst=0.822 elapsed=293.2m ETA=45m
+  R140 loss=0.087 acc=0.845 worst=0.823 elapsed=316.6m ETA=23m
+  R150 loss=0.083 acc=0.851 worst=0.829 elapsed=340.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseE_holdout/ho_dvd_gsig_s1.json

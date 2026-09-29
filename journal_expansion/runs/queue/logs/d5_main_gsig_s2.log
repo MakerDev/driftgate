@@ -1,0 +1,13 @@
+[d5_main_gsig_s2] method=splitomcplus controller=selfcal signal=delta_hard schedule=gradual_sigmoid rounds=100 device=cuda:0
+  R  1 loss=4.464 acc=0.011 worst=0.007 elapsed=6.5m ETA=646m
+  R 10 loss=3.364 acc=0.129 worst=0.121 elapsed=50.1m ETA=451m
+  R 20 loss=2.999 acc=0.202 worst=0.189 elapsed=98.8m ETA=395m
+  R 30 loss=2.581 acc=0.246 worst=0.225 elapsed=147.2m ETA=344m
+  R 40 loss=2.350 acc=0.260 worst=0.237 elapsed=195.8m ETA=294m
+  R 50 loss=2.177 acc=0.257 worst=0.229 elapsed=244.8m ETA=245m
+  R 60 loss=2.028 acc=0.261 worst=0.248 elapsed=294.8m ETA=197m
+  R 70 loss=1.889 acc=0.262 worst=0.235 elapsed=345.3m ETA=148m
+  R 80 loss=1.763 acc=0.266 worst=0.239 elapsed=396.3m ETA=99m
+  R 90 loss=1.652 acc=0.273 worst=0.254 elapsed=446.1m ETA=50m
+  R100 loss=1.545 acc=0.262 worst=0.241 elapsed=496.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d5_tinyimagenet/d5_main_gsig_s2.json

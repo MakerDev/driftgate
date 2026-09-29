@@ -1,0 +1,7 @@
+[heavy0 cuda:0/GPU0] START b3_tiny_fx15_s1 (heavy) 2026-09-28 05:25:26
+[heavy0 cuda:0/GPU0] END b3_tiny_fx15_s1 exit=0 2026-09-28 16:21:28
+[heavy0 cuda:0/GPU0] START e1_relonly_tiny_s1 (heavy) 2026-09-28 16:21:28
+[heavy0 cuda:0/GPU0] END e1_relonly_tiny_s1 exit=0 2026-09-29 03:16:27
+[heavy0 cuda:0/GPU0] START e2_res_relonly_A_s0 (heavy) 2026-09-29 03:16:27
+[heavy0 cuda:0/GPU0] END e2_res_relonly_A_s0 exit=0 2026-09-29 12:32:59
+[heavy0 cuda:0/GPU0] START e2_res_fx20_A_s1 (heavy) 2026-09-29 12:32:59

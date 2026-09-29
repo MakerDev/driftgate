@@ -1,0 +1,18 @@
+[dvsig_cos_A_s2] method=splitomcplus controller=selfcal signal=cos_logit_dist schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.400 worst=0.207 elapsed=2.1m ETA=310m
+  R 10 loss=0.394 acc=0.615 worst=0.482 elapsed=13.8m ETA=194m
+  R 20 loss=0.338 acc=0.670 worst=0.517 elapsed=26.8m ETA=174m
+  R 30 loss=0.272 acc=0.706 worst=0.554 elapsed=39.6m ETA=158m
+  R 40 loss=0.271 acc=0.598 worst=0.520 elapsed=52.8m ETA=145m
+  R 50 loss=0.264 acc=0.616 worst=0.548 elapsed=66.3m ETA=133m
+  R 60 loss=0.265 acc=0.617 worst=0.533 elapsed=80.0m ETA=120m
+  R 70 loss=0.259 acc=0.573 worst=0.547 elapsed=93.7m ETA=107m
+  R 80 loss=0.249 acc=0.583 worst=0.538 elapsed=107.4m ETA=94m
+  R 90 loss=0.230 acc=0.590 worst=0.575 elapsed=121.4m ETA=81m
+  R100 loss=0.224 acc=0.660 worst=0.628 elapsed=134.7m ETA=67m
+  R110 loss=0.205 acc=0.664 worst=0.631 elapsed=148.1m ETA=54m
+  R120 loss=0.200 acc=0.675 worst=0.648 elapsed=161.6m ETA=40m
+  R130 loss=0.186 acc=0.778 worst=0.722 elapsed=174.9m ETA=27m
+  R140 loss=0.175 acc=0.789 worst=0.716 elapsed=187.7m ETA=13m
+  R150 loss=0.174 acc=0.791 worst=0.716 elapsed=200.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_cos_A_s2.json

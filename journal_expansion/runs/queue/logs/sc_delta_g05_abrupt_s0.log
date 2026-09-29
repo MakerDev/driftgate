@@ -1,0 +1,13 @@
+[sc_delta_g05_abrupt_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.278 worst=0.182 elapsed=1.9m ETA=188m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=14.6m ETA=131m
+  R 20 loss=0.334 acc=0.647 worst=0.562 elapsed=28.7m ETA=115m
+  R 30 loss=0.214 acc=0.755 worst=0.685 elapsed=43.6m ETA=102m
+  R 40 loss=0.174 acc=0.769 worst=0.733 elapsed=58.6m ETA=88m
+  R 50 loss=0.154 acc=0.782 worst=0.725 elapsed=73.4m ETA=73m
+  R 60 loss=0.224 acc=0.580 worst=0.538 elapsed=88.4m ETA=59m
+  R 70 loss=0.205 acc=0.584 worst=0.514 elapsed=103.7m ETA=44m
+  R 80 loss=0.181 acc=0.588 worst=0.525 elapsed=119.2m ETA=30m
+  R 90 loss=0.165 acc=0.601 worst=0.541 elapsed=134.5m ETA=15m
+  R100 loss=0.141 acc=0.596 worst=0.505 elapsed=149.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/downstream_pilot/sc_delta_g05_abrupt_s0.json

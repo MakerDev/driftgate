@@ -1,0 +1,18 @@
+[d4_fixed04_sp_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=150 device=cuda:1
+  R  1 loss=4.006 acc=0.014 worst=0.012 elapsed=2.3m ETA=345m
+  R 10 loss=2.868 acc=0.133 worst=0.106 elapsed=16.1m ETA=226m
+  R 20 loss=2.509 acc=0.200 worst=0.172 elapsed=31.5m ETA=205m
+  R 30 loss=2.226 acc=0.261 worst=0.232 elapsed=47.4m ETA=190m
+  R 40 loss=1.993 acc=0.303 worst=0.277 elapsed=64.8m ETA=178m
+  R 50 loss=1.805 acc=0.349 worst=0.318 elapsed=82.2m ETA=164m
+  R 60 loss=1.640 acc=0.373 worst=0.341 elapsed=103.5m ETA=155m
+  R 70 loss=1.496 acc=0.393 worst=0.365 elapsed=126.3m ETA=144m
+  R 80 loss=1.372 acc=0.410 worst=0.382 elapsed=149.4m ETA=131m
+  R 90 loss=1.265 acc=0.420 worst=0.398 elapsed=172.1m ETA=115m
+  R100 loss=1.160 acc=0.433 worst=0.414 elapsed=194.2m ETA=97m
+  R110 loss=1.071 acc=0.444 worst=0.411 elapsed=215.8m ETA=78m
+  R120 loss=0.990 acc=0.453 worst=0.422 elapsed=237.4m ETA=59m
+  R130 loss=0.919 acc=0.456 worst=0.427 elapsed=258.8m ETA=40m
+  R140 loss=0.851 acc=0.458 worst=0.421 elapsed=280.1m ETA=20m
+  R150 loss=0.799 acc=0.473 worst=0.442 elapsed=301.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d4_cifar100/d4_fixed04_sp_s2.json

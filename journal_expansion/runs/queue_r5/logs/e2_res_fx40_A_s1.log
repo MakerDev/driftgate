@@ -1,0 +1,10 @@
+[e2_res_fx40_A_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.392 acc=0.466 worst=0.340 elapsed=3.8m ETA=572m
+  R 10 loss=0.142 acc=0.583 worst=0.521 elapsed=36.8m ETA=515m
+  R 20 loss=0.098 acc=0.629 worst=0.577 elapsed=73.6m ETA=478m
+  R 30 loss=0.084 acc=0.562 worst=0.440 elapsed=109.4m ETA=438m
+  R 40 loss=0.063 acc=0.498 worst=0.389 elapsed=146.3m ETA=402m
+  R 50 loss=0.072 acc=0.459 worst=0.361 elapsed=183.0m ETA=366m
+  R 60 loss=0.037 acc=0.516 worst=0.414 elapsed=219.8m ETA=330m
+  R 70 loss=0.053 acc=0.426 worst=0.307 elapsed=256.7m ETA=293m
+  R 80 loss=0.059 acc=0.435 worst=0.382 elapsed=293.0m ETA=256m

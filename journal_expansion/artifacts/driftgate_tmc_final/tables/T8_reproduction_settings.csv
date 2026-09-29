@@ -1,0 +1,30 @@
+분류,항목,값,출처(파일:줄)
+학습,optimizer,SGD (client block과 server block 각각),"configs/base_v3.yaml:19; train/trainer.py:86,90"
+학습,learning rate와 schedule,"0.01, 전 라운드 고정 (scheduler 없음)",configs/base_v3.yaml:17; train/trainer.py:72-141
+학습,"momentum, weight decay","0.0, 1e-4","configs/base_v3.yaml:18,20"
+학습,local epoch,3 epoch / 라운드,configs/base_v3.yaml:15; train/trainer.py:94
+학습,batch 크기,32,configs/base_v3.yaml:16
+학습,참여율,1.0 (모든 client가 매 라운드 참여),"src/runner.py:284,290"
+학습,손실 가중치 γ,0.5 (client exit와 server exit의 cross-entropy를 반씩),configs/base_v3.yaml:23
+학습,client별 학습 표본 수 (seed 0) CIFAR-10,min 620 / median 908 / max 2120 (Main classes per client: [2]),data/partition.py:50-104 (nd1_partition 재구성)
+학습,client별 학습 표본 수 (seed 0) CIFAR-100,min 800 / median 945 / max 1419 (Main classes per client: [20]),"같은 함수, 실제 학습 label 사용"
+학습,client별 학습 표본 수 (seed 0) Tiny-ImageNet,min 1537 / median 1919 / max 2729 (Main classes per client: [40]),"같은 함수, 실제 학습 label 사용"
+학습,client별 학습 표본 수 (seed 0) SVHN,min 703 / median 1405 / max 2898 (Main classes per client: [2]),"같은 함수, 실제 학습 label 사용"
+학습,client별 Main class 비율,"전체 class의 20% (CIFAR-10·SVHN 2개, CIFAR-100 20개, Tiny 40개). datasets_ext.py의 META 값(5, 10)은 config 값이 있어 쓰이지 않음",configs/base_v3.yaml:31; src/runner.py:121 (setdefault)
+모델,CNN client block,"conv 3→32→64→64→128 (BN, conv2·conv4 뒤 max-pool) + 보조 exit(conv 128 + GAP + fc). 279,882 parameters",models/architectures.py:14-52
+모델,CNN split 위치,"conv4 + pool 뒤. 32×32 입력에서 feature (128, 8, 8) (Tiny 64×64 입력에서는 (128, 16, 16))",models/architectures.py:37-53
+모델,CNN server block,"conv 128→256 + BN, flatten, fc 256→128→C. 1,378,698 parameters",models/architectures.py:54-79
+모델,ResNet-18 middle split,"client = stem(conv 3→64) + stage 1(64) + stage 2(128), feature (128, 16, 16), 676,682 parameters. server = stage 3(256) + stage 4(512) + fc, 10,498,570 parameters",src/models_ext.py:93-130 (RESNET_SPLITS middle=2)
+모델,ResNet-18 실행의 client 수,16명 (기존 ResNet-18 분할 실험과 같음. static topology에서 4명이 두 cluster에 속함),provenance: phaseF_arch res_middle_* (--num_clients 16)
+데이터,전처리 CIFAR-10,"학습: RandomCrop(32, padding 4) + RandomHorizontalFlip + Normalize. 평가·probe: Normalize만",data/partition.py:154-167
+데이터,"전처리 CIFAR-100, Tiny-ImageNet, SVHN",ToTensor + Normalize만 (augmentation 없음). Tiny는 64×64 그대로,src/datasets_ext.py:101-141
+데이터,OOP와 OOR의 비율,"Main 표본 수를 기준으로 OOP 표본 = ρ배, OOR 표본 = 0.3ρ배 (class별로 나눠 채움). 즉 OOP:OOR = 1:0.3",data/partition.py:107-143; configs/base_v3.yaml:37
+traffic,stepwise composition change의 ρ,"5등분 계단 0→0.4→0.8→0.4→0. 150 라운드에서 R31, R61, R91, R121에 바뀜",src/schedules.py:31-32
+traffic,gradual의 ρ 식,"ρ(r) = 0.8 / (1 + exp(−(f − 0.5)/0.08)), f = (r − 1)/T",src/schedules.py:58-59
+traffic,client mobility의 ρ,abrupt 일정. 120 라운드에서 R61에 0→0.8,src/schedules.py:42-43
+traffic,client mobility의 membership 변화,"모든 client가 매 라운드 Gauss-Markov 모델로 이동(α=0.9, 속도 12, dt=10 s, 1000×1000 지도, seed 42). 5 라운드마다 각 client의 가장 가까운 edge 2개를 다시 구하고, 그 집합이 바뀐 client만 재배치. R5에 50명 전원이 static topology에서 이동 topology로 옮겨가고, 이후 5 라운드마다 1–10명이 바뀜(로그 기준)","src/runner.py:206-213, 343-355; network/mobility.py:17-63"
+traffic,late abrupt change (passive 신호 실행),abrupt 일정을 100 라운드로 실행. R51에 ρ 0→0.8,src/schedules.py:42-43; rec_abrupt 실행
+cluster,cluster 구성,"edge server 5개, client 50명. cluster마다 10명 중 뒤쪽 5명이 다음 cluster에도 속해 20명이 두 cluster에 속함",configs/base_v3.yaml:9-11; data/partition.py:17-47
+cluster,edge 사이의 scalar 교환,점수 평균: 이웃 edge(선형 0-1-2-3-4)와 1단계 평균. spatial 비교: 같은 라운드의 모든 cluster TV의 중앙값·MAD를 사용,"data/partition.py:189-199; src/controllers/self_calibrating.py:51-61, 157-164"
+초기 구간,burn-in과 warm-up,"burn-in 10 라운드 + warm-up 15 라운드 = 처음 25 라운드. 이 동안 λ=0.425, Λ=0.55 (범위의 중간값)","src/controllers/self_calibrating.py:91,132-136,181-182; 실행 flag --burn_in 10; src/runner.py:246 (warmup 15)"
+평가,평가 라운드와 최종 예측,"R1과 10 라운드마다 (150 R: 16회, 120 R: 13회, 100 R: 11회). client exit의 entropy가 0.8을 넘으면 server exit 예측을 씀",configs/base_v3.yaml:34-35; src/runner.py:564; eval/evaluator.py

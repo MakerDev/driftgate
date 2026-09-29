@@ -1,0 +1,18 @@
+[identity_A_s0] method=splitomcplus controller=replay signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=2.3m ETA=341m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=15.3m ETA=214m
+  R 20 loss=0.334 acc=0.647 worst=0.564 elapsed=31.2m ETA=203m
+  R 30 loss=0.264 acc=0.696 worst=0.636 elapsed=46.9m ETA=188m
+  R 40 loss=0.250 acc=0.603 worst=0.560 elapsed=62.1m ETA=171m
+  R 50 loss=0.219 acc=0.619 worst=0.583 elapsed=77.5m ETA=155m
+  R 60 loss=0.190 acc=0.646 worst=0.611 elapsed=92.7m ETA=139m
+  R 70 loss=0.199 acc=0.595 worst=0.520 elapsed=109.4m ETA=125m
+  R 80 loss=0.180 acc=0.601 worst=0.538 elapsed=125.6m ETA=110m
+  R 90 loss=0.165 acc=0.611 worst=0.555 elapsed=141.8m ETA=95m
+  R100 loss=0.123 acc=0.665 worst=0.595 elapsed=159.7m ETA=80m
+  R110 loss=0.118 acc=0.683 worst=0.630 elapsed=178.6m ETA=65m
+  R120 loss=0.109 acc=0.677 worst=0.628 elapsed=196.3m ETA=49m
+  R130 loss=0.082 acc=0.861 worst=0.821 elapsed=214.7m ETA=33m
+  R140 loss=0.078 acc=0.891 worst=0.841 elapsed=233.6m ETA=17m
+  R150 loss=0.091 acc=0.887 worst=0.810 elapsed=252.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/identity_A_s0.json

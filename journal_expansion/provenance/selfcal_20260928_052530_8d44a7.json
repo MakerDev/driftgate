@@ -1,0 +1,143 @@
+{
+ "run_id": "selfcal_20260928_052530_8d44a7",
+ "git_commit": "e82b96b76a5a1e644f742c701accefb4af33fc38",
+ "config": {
+  "cfg": {
+   "dataset": "svhn",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 150,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 1,
+   "model_seed": 101,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "schedule": "gradual_sigmoid",
+  "spatial_mode": null,
+  "controller_mode": "selfcal",
+  "controller_signal": "tv_dist",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "e1_relonly_svhn_s1"
+ },
+ "config_sha256": "8621691a305a8e3267b9ea13861c8f25d1c71af8376af9926387dc7e2db8e8a6",
+ "command": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --disjoint_pools --dataset svhn --schedule gradual_sigmoid --rounds 150 --probe_n 64 --seed 1 --model_seed 101 --run_name e1_relonly_svhn_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT5_E1_relonly_transfer --device cuda:0",
+ "start_time": "2026-09-28T05:25:30.229755",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3090 Ti"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 1,
+  "per_class": {
+   "0": {
+    "n_total": 1744,
+    "n_controller": 349,
+    "n_eval": 1395
+   },
+   "1": {
+    "n_total": 5099,
+    "n_controller": 1020,
+    "n_eval": 4079
+   },
+   "2": {
+    "n_total": 4149,
+    "n_controller": 830,
+    "n_eval": 3319
+   },
+   "3": {
+    "n_total": 2882,
+    "n_controller": 576,
+    "n_eval": 2306
+   },
+   "4": {
+    "n_total": 2523,
+    "n_controller": 505,
+    "n_eval": 2018
+   },
+   "5": {
+    "n_total": 2384,
+    "n_controller": 477,
+    "n_eval": 1907
+   },
+   "6": {
+    "n_total": 1977,
+    "n_controller": 395,
+    "n_eval": 1582
+   },
+   "7": {
+    "n_total": 2019,
+    "n_controller": 404,
+    "n_eval": 1615
+   },
+   "8": {
+    "n_total": 1660,
+    "n_controller": 332,
+    "n_eval": 1328
+   },
+   "9": {
+    "n_total": 1595,
+    "n_controller": 319,
+    "n_eval": 1276
+   }
+  },
+  "controller_pool_size": 5207,
+  "eval_pool_size": 20825,
+  "global_overlap": 0
+ },
+ "split_hash": "1be13f1fc44aaf58",
+ "model_init_hash": "94e1a02e7298cd5e",
+ "end_time": "2026-09-28T12:17:00.799656",
+ "wall_time_sec": 24690.51026034355,
+ "final_metrics": {
+  "acc_total_final": 0.8574616485464349,
+  "worst_cell_final": 0.8395377117586378,
+  "integrated_acc": 0.8002437397914789,
+  "wall_min": 411.35362008810046
+ }
+}

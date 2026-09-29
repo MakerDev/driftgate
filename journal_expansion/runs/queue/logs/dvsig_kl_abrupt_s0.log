@@ -1,0 +1,18 @@
+[dvsig_kl_abrupt_s0] method=splitomcplus controller=selfcal signal=kl_sym schedule=abrupt rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.278 worst=0.183 elapsed=2.2m ETA=323m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=15.8m ETA=222m
+  R 20 loss=0.334 acc=0.646 worst=0.565 elapsed=31.1m ETA=202m
+  R 30 loss=0.289 acc=0.685 worst=0.617 elapsed=45.9m ETA=184m
+  R 40 loss=0.285 acc=0.688 worst=0.609 elapsed=60.5m ETA=166m
+  R 50 loss=0.294 acc=0.695 worst=0.613 elapsed=75.4m ETA=151m
+  R 60 loss=0.274 acc=0.711 worst=0.650 elapsed=90.3m ETA=135m
+  R 70 loss=0.253 acc=0.710 worst=0.638 elapsed=105.1m ETA=120m
+  R 80 loss=0.237 acc=0.618 worst=0.557 elapsed=120.4m ETA=105m
+  R 90 loss=0.219 acc=0.634 worst=0.584 elapsed=135.7m ETA=90m
+  R100 loss=0.203 acc=0.636 worst=0.574 elapsed=151.3m ETA=76m
+  R110 loss=0.194 acc=0.655 worst=0.611 elapsed=167.4m ETA=61m
+  R120 loss=0.183 acc=0.666 worst=0.623 elapsed=182.8m ETA=46m
+  R130 loss=0.171 acc=0.656 worst=0.607 elapsed=198.4m ETA=31m
+  R140 loss=0.162 acc=0.669 worst=0.627 elapsed=213.7m ETA=15m
+  R150 loss=0.151 acc=0.674 worst=0.631 elapsed=229.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_kl_abrupt_s0.json

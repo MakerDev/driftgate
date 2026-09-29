@@ -1,0 +1,18 @@
+[b1_absonly_c100gsig_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=4.006 acc=0.017 worst=0.012 elapsed=2.8m ETA=425m
+  R 10 loss=2.844 acc=0.154 worst=0.130 elapsed=21.3m ETA=298m
+  R 20 loss=2.482 acc=0.225 worst=0.205 elapsed=41.7m ETA=271m
+  R 30 loss=2.161 acc=0.291 worst=0.268 elapsed=62.0m ETA=248m
+  R 40 loss=1.942 acc=0.330 worst=0.317 elapsed=82.2m ETA=226m
+  R 50 loss=1.764 acc=0.380 worst=0.368 elapsed=102.2m ETA=204m
+  R 60 loss=1.603 acc=0.389 worst=0.382 elapsed=122.3m ETA=183m
+  R 70 loss=1.462 acc=0.391 worst=0.375 elapsed=142.6m ETA=163m
+  R 80 loss=1.342 acc=0.393 worst=0.383 elapsed=162.6m ETA=142m
+  R 90 loss=1.237 acc=0.393 worst=0.367 elapsed=183.2m ETA=122m
+  R100 loss=1.134 acc=0.400 worst=0.383 elapsed=203.9m ETA=102m
+  R110 loss=1.049 acc=0.405 worst=0.387 elapsed=224.6m ETA=82m
+  R120 loss=0.970 acc=0.413 worst=0.398 elapsed=245.7m ETA=61m
+  R130 loss=0.898 acc=0.415 worst=0.391 elapsed=267.2m ETA=41m
+  R140 loss=0.832 acc=0.419 worst=0.412 elapsed=289.1m ETA=21m
+  R150 loss=0.783 acc=0.433 worst=0.416 elapsed=310.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B1_views/b1_absonly_c100gsig_s2.json

@@ -1,0 +1,18 @@
+[shuf_A_s2] method=splitomcplus controller=replay signal=delta_hard schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.415 worst=0.225 elapsed=1.9m ETA=288m
+  R 10 loss=0.346 acc=0.625 worst=0.485 elapsed=13.5m ETA=190m
+  R 20 loss=0.328 acc=0.671 worst=0.511 elapsed=26.4m ETA=172m
+  R 30 loss=0.264 acc=0.721 worst=0.562 elapsed=39.4m ETA=158m
+  R 40 loss=0.264 acc=0.594 worst=0.516 elapsed=53.1m ETA=146m
+  R 50 loss=0.241 acc=0.614 worst=0.545 elapsed=66.6m ETA=133m
+  R 60 loss=0.201 acc=0.613 worst=0.538 elapsed=79.9m ETA=120m
+  R 70 loss=0.158 acc=0.518 worst=0.461 elapsed=93.3m ETA=107m
+  R 80 loss=0.172 acc=0.521 worst=0.475 elapsed=107.0m ETA=94m
+  R 90 loss=0.134 acc=0.549 worst=0.494 elapsed=120.5m ETA=80m
+  R100 loss=0.165 acc=0.651 worst=0.624 elapsed=133.8m ETA=67m
+  R110 loss=0.131 acc=0.648 worst=0.610 elapsed=147.4m ETA=54m
+  R120 loss=0.147 acc=0.661 worst=0.626 elapsed=161.0m ETA=40m
+  R130 loss=0.125 acc=0.873 worst=0.829 elapsed=173.9m ETA=27m
+  R140 loss=0.090 acc=0.858 worst=0.769 elapsed=186.8m ETA=13m
+  R150 loss=0.132 acc=0.889 worst=0.787 elapsed=199.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/shuf_A_s2.json

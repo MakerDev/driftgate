@@ -1,0 +1,13 @@
+[loss20_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=2.2m ETA=215m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=14.7m ETA=132m
+  R 20 loss=0.334 acc=0.647 worst=0.564 elapsed=29.0m ETA=116m
+  R 30 loss=0.214 acc=0.753 worst=0.688 elapsed=43.1m ETA=101m
+  R 40 loss=0.174 acc=0.769 worst=0.734 elapsed=57.5m ETA=86m
+  R 50 loss=0.154 acc=0.784 worst=0.732 elapsed=71.5m ETA=72m
+  R 60 loss=0.221 acc=0.580 worst=0.536 elapsed=86.8m ETA=58m
+  R 70 loss=0.184 acc=0.579 worst=0.500 elapsed=102.2m ETA=44m
+  R 80 loss=0.151 acc=0.571 worst=0.513 elapsed=117.5m ETA=29m
+  R 90 loss=0.129 acc=0.573 worst=0.511 elapsed=132.6m ETA=15m
+  R100 loss=0.098 acc=0.539 worst=0.467 elapsed=147.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase6_network/loss20_s0.json

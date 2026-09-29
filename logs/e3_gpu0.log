@@ -1,0 +1,47 @@
+
+[1/3] splitomcplus_lam0.2_Lam0.5 spatial=equal_spread
+[splitomcplus_lam0.2_Lam0.5] Starting splitomcplus with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.247 acc_oop=0.124 acc_oor=0.055 acc_total=0.210 elapsed=1.7m ETA=255m
+  R 20 loss=0.401 acc_main=0.630 acc_oop=0.442 acc_oor=0.057 acc_total=0.568 elapsed=27.9m ETA=181m
+  R 40 loss=0.317 acc_main=0.688 acc_oop=0.485 acc_oor=0.105 acc_total=0.625 elapsed=57.2m ETA=157m
+  R 60 loss=0.260 acc_main=0.718 acc_oop=0.510 acc_oor=0.138 acc_total=0.656 elapsed=85.1m ETA=128m
+  R 80 loss=0.222 acc_main=0.745 acc_oop=0.523 acc_oor=0.168 acc_total=0.683 elapsed=111.2m ETA=97m
+  R100 loss=0.193 acc_main=0.757 acc_oop=0.523 acc_oor=0.180 acc_total=0.691 elapsed=139.7m ETA=70m
+  R120 loss=0.171 acc_main=0.766 acc_oop=0.531 acc_oor=0.197 acc_total=0.703 elapsed=167.8m ETA=42m
+  R140 loss=0.153 acc_main=0.783 acc_oop=0.535 acc_oor=0.207 acc_total=0.716 elapsed=195.8m ETA=14m
+  R150 loss=0.140 acc_main=0.790 acc_oop=0.535 acc_oor=0.218 acc_total=0.723 elapsed=208.7m ETA=0m
+  Saved: ./results/e3_spatial/mode_equal_spread/splitomcplus_lam0.2_Lam0.5.json
+
+[2/3] splitomcplus_lam0.4_Lam0.5 spatial=equal_spread
+[splitomcplus_lam0.4_Lam0.5] Starting splitomcplus with lambda=0.4, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.267 acc_oop=0.121 acc_oor=0.055 acc_total=0.223 elapsed=1.3m ETA=188m
+  R 20 loss=0.343 acc_main=0.644 acc_oop=0.408 acc_oor=0.047 acc_total=0.568 elapsed=25.6m ETA=167m
+  R 40 loss=0.264 acc_main=0.706 acc_oop=0.429 acc_oor=0.089 acc_total=0.621 elapsed=54.7m ETA=150m
+  R 60 loss=0.212 acc_main=0.750 acc_oop=0.450 acc_oor=0.116 acc_total=0.660 elapsed=83.4m ETA=125m
+  R 80 loss=0.179 acc_main=0.777 acc_oop=0.447 acc_oor=0.133 acc_total=0.683 elapsed=118.6m ETA=104m
+  R100 loss=0.151 acc_main=0.805 acc_oop=0.439 acc_oor=0.139 acc_total=0.698 elapsed=154.4m ETA=77m
+  R120 loss=0.133 acc_main=0.821 acc_oop=0.444 acc_oor=0.144 acc_total=0.714 elapsed=187.2m ETA=47m
+  R140 loss=0.121 acc_main=0.844 acc_oop=0.443 acc_oor=0.158 acc_total=0.730 elapsed=214.8m ETA=15m
+  R150 loss=0.107 acc_main=0.847 acc_oop=0.425 acc_oor=0.156 acc_total=0.729 elapsed=228.6m ETA=0m
+  Saved: ./results/e3_spatial/mode_equal_spread/splitomcplus_lam0.4_Lam0.5.json
+
+[3/3] splitomcplus_lam0.6_Lam0.5 spatial=equal_spread
+[splitomcplus_lam0.6_Lam0.5] Starting splitomcplus with lambda=0.6, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.290 acc_oop=0.119 acc_oor=0.052 acc_total=0.238 elapsed=1.8m ETA=274m
+  R 20 loss=0.280 acc_main=0.671 acc_oop=0.346 acc_oor=0.035 acc_total=0.570 elapsed=28.2m ETA=183m
+  R 40 loss=0.207 acc_main=0.736 acc_oop=0.315 acc_oor=0.066 acc_total=0.609 elapsed=55.8m ETA=154m
+  R 60 loss=0.158 acc_main=0.784 acc_oop=0.318 acc_oor=0.073 acc_total=0.644 elapsed=83.7m ETA=126m
+  R 80 loss=0.130 acc_main=0.822 acc_oop=0.284 acc_oor=0.080 acc_total=0.662 elapsed=110.4m ETA=97m
+  R100 loss=0.107 acc_main=0.858 acc_oop=0.259 acc_oor=0.076 acc_total=0.681 elapsed=136.7m ETA=68m
+  R120 loss=0.094 acc_main=0.867 acc_oop=0.262 acc_oor=0.075 acc_total=0.691 elapsed=162.5m ETA=41m
+  R140 loss=0.092 acc_main=0.896 acc_oop=0.251 acc_oor=0.081 acc_total=0.708 elapsed=189.9m ETA=14m
+  R150 loss=0.082 acc_main=0.883 acc_oop=0.221 acc_oor=0.074 acc_total=0.689 elapsed=203.8m ETA=0m
+  Saved: ./results/e3_spatial/mode_equal_spread/splitomcplus_lam0.6_Lam0.5.json
+
+E3 done. Total: 641.2m

@@ -1,0 +1,9 @@
+# Both servers append to these files; a union merge keeps every line from both sides.
+journal_expansion/provenance/all_runs.jsonl merge=union
+journal_expansion/runs/queue_r5/logs/*.log merge=union
+journal_expansion/runs/queue_r5/requeued.txt merge=union
+# large binary run records
+*.npz binary
+*.pdf binary
+*.png binary
+*.zip binary

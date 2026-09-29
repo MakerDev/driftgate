@@ -1,0 +1,18 @@
+[d1_dual_gradual_sigmoid_s1] method=splitomcplus controller=selfcal signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.337 worst=0.183 elapsed=2.1m ETA=320m
+  R 10 loss=0.379 acc=0.554 worst=0.417 elapsed=15.4m ETA=215m
+  R 20 loss=0.318 acc=0.643 worst=0.499 elapsed=30.0m ETA=195m
+  R 30 loss=0.240 acc=0.696 worst=0.584 elapsed=44.4m ETA=178m
+  R 40 loss=0.205 acc=0.718 worst=0.572 elapsed=59.3m ETA=163m
+  R 50 loss=0.182 acc=0.724 worst=0.642 elapsed=74.6m ETA=149m
+  R 60 loss=0.161 acc=0.703 worst=0.627 elapsed=90.5m ETA=136m
+  R 70 loss=0.146 acc=0.666 worst=0.625 elapsed=105.9m ETA=121m
+  R 80 loss=0.137 acc=0.627 worst=0.584 elapsed=121.2m ETA=106m
+  R 90 loss=0.138 acc=0.559 worst=0.496 elapsed=135.8m ETA=91m
+  R100 loss=0.141 acc=0.554 worst=0.503 elapsed=151.0m ETA=75m
+  R110 loss=0.151 acc=0.585 worst=0.570 elapsed=166.7m ETA=61m
+  R120 loss=0.139 acc=0.589 worst=0.524 elapsed=182.5m ETA=46m
+  R130 loss=0.142 acc=0.612 worst=0.562 elapsed=198.1m ETA=30m
+  R140 loss=0.118 acc=0.611 worst=0.591 elapsed=213.6m ETA=15m
+  R150 loss=0.095 acc=0.586 worst=0.551 elapsed=229.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_dual_gradual_sigmoid_s1.json

@@ -1,0 +1,5 @@
+schedule,signal,spearman_vs_rho,sd,raw_direction_auroc,direction_free_auroc,n_seeds
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",TV,+0.9071,0.0044,0.9779,0.9779,3
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",entropy,+0.4374,0.0084,0.6431,0.6431,3
+late abrupt change (ρ 0→0.8 at R51),TV,+0.8525,0.0000,1.0000,1.0000,3
+late abrupt change (ρ 0→0.8 at R51),entropy,-0.5784,0.0782,0.1608,0.8392,3

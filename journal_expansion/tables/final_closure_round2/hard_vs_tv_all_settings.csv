@@ -1,0 +1,8 @@
+setting,protocol,seeds,n_seeds,tv_mean,server_nonmain_rate_mean,fixed_grid_reference_mean,fixed_grid_reference_lambda,fixed_lambda02_mean,entropy_mean,hard_minus_tv_mean,hard_minus_tv_ci95,seeds_hard_higher,hard_minus_fixed_grid_mean,hard_minus_fixed_grid_ci95,seeds_hard_over_fixed,tv_minus_fixed_grid_mean,tv_minus_fixed_grid_ci95,abs_active_fraction_tv,abs_active_fraction_hard,signal_mean_hard_min,signal_mean_hard_max,lambda_min_hard,lambda_max_hard,matched_comparison_valid,unmatched_reason
+Schedule A,disjoint,"[0, 1, 2, 3, 4]",5,65.8371,66.4469,65.1729,fx40,64.6999,64.3672,+0.6098,"[-0.14,+1.36]",4,+1.2740,"[+0.73,+1.82]",5,+0.6642,"[+0.31,+1.01]",0.136,0.094,0.037,0.933,0.15,0.66,yes,
+mobility-med,disjoint,"[0, 1, 2]",3,59.2077,59.4025,58.5785,fx40,57.9260,57.2131,+0.1949,"[-1.07,+1.46]",2,+0.8240,"[-0.43,+2.07]",3,+0.6291,"[+0.44,+0.82]",0.324,0.421,0.128,0.933,0.18,0.59,yes,
+SVHN temporal,disjoint,"[0, 1, 2, 3, 4]",5,79.3885,80.5755,80.4345,fx20,80.4345,76.9699,+1.1870,"[+0.26,+2.11]",5,+0.1410,"[+0.00,+0.28]",5,-1.0460,"[-2.01,-0.08]",0.424,0.150,0.097,0.933,0.15,0.64,yes,
+CIFAR-10 gradual,disjoint,"[0, 1, 2]",3,62.7243,62.9581,,,,,+0.2338,"[-0.74,+1.21]",2,,,,,,0.171,0.347,0.157,0.933,0.15,0.59,yes,
+CIFAR-100 spatial,disjoint,"[0, 1, 2]",3,36.4355,34.9957,,,,,-1.4399,"[-1.78,-1.10]",0,,,,,,0.061,0.998,0.203,0.800,0.42,0.56,yes,
+CIFAR-100 gradual,disjoint,"[0, 1, 2]",3,36.1029,35.4104,,,,,-0.6925,"[-1.02,-0.37]",0,,,,,,0.062,0.440,0.292,0.800,0.15,0.52,yes,
+Tiny-ImageNet,disjoint,"[0, 1, 2]",3,23.9308,23.8570,,,,,-0.0739,"[-0.14,-0.01]",0,,,,,,0.568,0.755,0.297,1.000,0.19,0.47,yes,

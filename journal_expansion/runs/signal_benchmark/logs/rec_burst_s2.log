@@ -1,0 +1,13 @@
+[rec_burst_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=burst rounds=100 device=cuda:1
+  R  1 loss=0.938 acc=0.387 worst=0.179 elapsed=1.9m ETA=188m
+  R 10 loss=0.404 acc=0.609 worst=0.475 elapsed=13.6m ETA=122m
+  R 20 loss=0.347 acc=0.668 worst=0.513 elapsed=26.4m ETA=106m
+  R 30 loss=0.305 acc=0.695 worst=0.546 elapsed=39.2m ETA=92m
+  R 40 loss=0.277 acc=0.741 worst=0.616 elapsed=52.0m ETA=78m
+  R 50 loss=0.250 acc=0.550 worst=0.510 elapsed=65.8m ETA=66m
+  R 60 loss=0.230 acc=0.770 worst=0.634 elapsed=79.1m ETA=53m
+  R 70 loss=0.210 acc=0.782 worst=0.689 elapsed=92.3m ETA=40m
+  R 80 loss=0.198 acc=0.798 worst=0.682 elapsed=105.4m ETA=26m
+  R 90 loss=0.181 acc=0.807 worst=0.723 elapsed=118.4m ETA=13m
+  R100 loss=0.177 acc=0.829 worst=0.772 elapsed=131.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark/rec_burst_s2.json

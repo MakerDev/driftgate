@@ -1,0 +1,12 @@
+item,bytes_or_value,basis
+client block bytes (fp32),1119528,"models/architectures.py; 279,882 params"
+server block bytes (fp32),5514792,"1,378,698 params"
+recorded model exchange / round (overlap-2 client),12149112,= client block + 2 server blocks = 12149112 (exact match)
+→ interpretation,one direction of the SplitOMC+ state exchange for ONE overlap-2 client per round,producer script not in repo; derived from parameter counts
+replica refresh downlink / client / round (2 server-block replicas ← cell averages),11029584,"trainer.update_client_models: set_server_state(es, server_avg) for each ES; NOT separately counted in 12,149,112"
+cluster client-avg downlink / client / round,1119528,update_client_models: mix with clients_avg_weights
+uplink / client / round (local client block + 2 server blocks),12149112,EdgeServer.aggregate reads client & server states
+DriftGate scalar uplink,4,1 float32 per client per round; consensus 4·degree B per ES
+edge-placed server exit: extra uplink @probe 16,524328,ESTIMATE: 32 KiB activation × 16 + client prob vector C×4 B (C=10)
+edge-placed server exit: extra uplink @probe 32,1048616,ESTIMATE
+edge-placed server exit: extra uplink @probe 64,2097192,ESTIMATE

@@ -1,0 +1,13 @@
+[fair_oracle_sp_s2] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=100 device=cuda:1
+  R  1 loss=0.938 acc=0.323 worst=0.143 elapsed=2.1m ETA=211m
+  R 10 loss=0.409 acc=0.475 worst=0.329 elapsed=14.4m ETA=129m
+  R 20 loss=0.348 acc=0.544 worst=0.375 elapsed=28.0m ETA=112m
+  R 30 loss=0.232 acc=0.594 worst=0.435 elapsed=41.3m ETA=96m
+  R 40 loss=0.198 acc=0.626 worst=0.455 elapsed=54.9m ETA=82m
+  R 50 loss=0.178 acc=0.643 worst=0.491 elapsed=68.8m ETA=69m
+  R 60 loss=0.161 acc=0.640 worst=0.449 elapsed=82.6m ETA=55m
+  R 70 loss=0.150 acc=0.637 worst=0.481 elapsed=96.1m ETA=41m
+  R 80 loss=0.140 acc=0.652 worst=0.466 elapsed=108.6m ETA=27m
+  R 90 loss=0.127 acc=0.665 worst=0.518 elapsed=121.9m ETA=14m
+  R100 loss=0.125 acc=0.661 worst=0.484 elapsed=135.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/fair_oracle_sp_s2.json

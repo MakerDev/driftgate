@@ -1,0 +1,230 @@
+[worker0 cuda:0] START sc_delta_b10_A_s0 2026. 07. 11. (토) 13:39:49 KST
+[worker0 cuda:0] END sc_delta_b10_A_s0 exit=0 2026. 07. 11. (토) 16:05:40 KST
+[worker0 cuda:0] START sc_delta_b10_abrupt_s0 2026. 07. 11. (토) 16:05:40 KST
+[worker0 cuda:0] END sc_delta_b10_abrupt_s0 exit=0 2026. 07. 11. (토) 18:31:11 KST
+[worker0 cuda:0] START sc_delta_b10_abrupt_s2 2026. 07. 11. (토) 18:31:11 KST
+[worker0 cuda:0] END sc_delta_b10_abrupt_s2 exit=0 2026. 07. 11. (토) 20:37:54 KST
+[worker0 cuda:0] START sc_delta_st_sp_s0 2026. 07. 11. (토) 20:37:54 KST
+[worker0 cuda:0] END sc_delta_st_sp_s0 exit=0 2026. 07. 11. (토) 23:02:48 KST
+[worker0 cuda:0] START sc_delta_st_sp_s2 2026. 07. 11. (토) 23:02:48 KST
+[worker0 cuda:0] END sc_delta_st_sp_s2 exit=0 2026. 07. 12. (일) 01:13:49 KST
+[worker0 cuda:0] START sc_delta_g05_A_s2 2026. 07. 12. (일) 01:13:49 KST
+[worker0 cuda:0] END sc_delta_g05_A_s2 exit=0 2026. 07. 12. (일) 03:22:20 KST
+[worker0 cuda:0] START fair_oracle_sp_s0 2026. 07. 12. (일) 03:22:20 KST
+[worker0 cuda:0] END fair_oracle_sp_s0 exit=0 2026. 07. 12. (일) 05:48:42 KST
+[worker0 cuda:0] START fair_deploy_sp_s1 2026. 07. 12. (일) 05:48:42 KST
+[worker0 cuda:0] END fair_deploy_sp_s1 exit=0 2026. 07. 12. (일) 08:16:01 KST
+[worker0 cuda:0] START sc_delta_b10_sp_s2 2026. 07. 12. (일) 08:16:01 KST
+[worker0 cuda:0] END sc_delta_b10_sp_s2 exit=0 2026. 07. 12. (일) 10:24:55 KST
+[worker0 cuda:0] START fixed04_sp_s2 2026. 07. 12. (일) 10:24:55 KST
+[worker0 cuda:0] END fixed04_sp_s2 exit=0 2026. 07. 12. (일) 12:31:27 KST
+[worker0 cuda:0] START ucb_A_s2 2026. 07. 12. (일) 12:31:27 KST
+[worker0 cuda:0] END ucb_A_s2 exit=0 2026. 07. 12. (일) 14:37:19 KST
+[worker0 cuda:0] START oracle_greedy_A_s0 2026. 07. 12. (일) 14:37:19 KST
+[worker0 cuda:0] END oracle_greedy_A_s0 exit=0 2026. 07. 12. (일) 18:19:47 KST
+[worker0 cuda:0] START sc_updatenorm_A_s0 2026. 07. 12. (일) 18:19:47 KST
+[worker0 cuda:0] END sc_updatenorm_A_s0 exit=0 2026. 07. 12. (일) 20:42:12 KST
+[worker0 cuda:0] START oracle_greedy_abrupt_s1 2026. 07. 12. (일) 20:42:12 KST
+[worker0 cuda:0] END oracle_greedy_abrupt_s1 exit=0 2026. 07. 13. (월) 00:50:56 KST
+[worker0 cuda:0] START delay10_s2 2026. 07. 13. (월) 00:50:57 KST
+[worker0 cuda:0] END delay10_s2 exit=0 2026. 07. 13. (월) 03:03:21 KST
+[worker0 cuda:0] START loss20_s2 2026. 07. 13. (월) 03:03:21 KST
+[worker0 cuda:0] END loss20_s2 exit=0 2026. 07. 13. (월) 05:15:48 KST
+[worker0 cuda:0] START d2_main_A_s0 2026. 07. 13. (월) 09:09:52 KST
+[worker0 cuda:0] END d2_main_A_s0 exit=0 2026. 07. 13. (월) 12:49:21 KST
+[worker0 cuda:0] START d2_rec_A_s2 2026. 07. 13. (월) 12:49:21 KST
+[worker0 cuda:0] END d2_rec_A_s2 exit=0 2026. 07. 13. (월) 16:07:39 KST
+[worker0 cuda:0] START d1_legacy_gradual_sigmoid_s0 2026. 07. 13. (월) 16:07:39 KST
+[worker0 cuda:0] END d1_legacy_gradual_sigmoid_s0 exit=0 2026. 07. 13. (월) 19:44:46 KST
+[worker0 cuda:0] START d1_fixed02_gradual_sigmoid_s3 2026. 07. 13. (월) 19:44:46 KST
+[worker0 cuda:0] END d1_fixed02_gradual_sigmoid_s3 exit=0 2026. 07. 13. (월) 23:20:14 KST
+[worker0 cuda:0] START d1_entswap_gradual_sigmoid_s2 2026. 07. 13. (월) 23:20:14 KST
+[worker0 cuda:0] END d1_entswap_gradual_sigmoid_s2 exit=0 2026. 07. 14. (화) 02:39:53 KST
+[worker0 cuda:0] START d1_main_asym_return_s4 2026. 07. 14. (화) 02:39:53 KST
+[worker0 cuda:0] END d1_main_asym_return_s4 exit=0 2026. 07. 14. (화) 05:58:01 KST
+[worker0 cuda:0] START d1_fixed02_asym_return_s1 2026. 07. 14. (화) 05:58:01 KST
+[worker0 cuda:0] END d1_fixed02_asym_return_s1 exit=0 2026. 07. 14. (화) 09:31:34 KST
+[worker0 cuda:0] START d1_entswap_asym_return_s0 2026. 07. 14. (화) 09:31:34 KST
+[worker0 cuda:0] END d1_entswap_asym_return_s0 exit=0 2026. 07. 14. (화) 13:11:54 KST
+[worker0 cuda:0] START d1_main_piecewise_random_s2 2026. 07. 14. (화) 13:11:54 KST
+[worker0 cuda:0] END d1_main_piecewise_random_s2 exit=0 2026. 07. 14. (화) 16:33:33 KST
+[worker0 cuda:0] START d1_legacy_piecewise_random_s0 2026. 07. 14. (화) 16:33:33 KST
+[worker0 cuda:0] END d1_legacy_piecewise_random_s0 exit=0 2026. 07. 14. (화) 20:32:34 KST
+[worker0 cuda:0] START d1_fixed02_piecewise_random_s4 2026. 07. 14. (화) 20:32:34 KST
+[worker0 cuda:0] END d1_fixed02_piecewise_random_s4 exit=0 2026. 07. 14. (화) 23:48:50 KST
+[worker0 cuda:0] START d1_entswap_piecewise_random_s1 2026. 07. 14. (화) 23:48:50 KST
+[worker0 cuda:0] END d1_entswap_piecewise_random_s1 exit=0 2026. 07. 15. (수) 03:23:16 KST
+[worker0 cuda:0] START d3_main_sp_s4 2026. 07. 15. (수) 03:23:16 KST
+[worker0 cuda:0] END d3_main_sp_s4 exit=0 2026. 07. 15. (수) 06:38:21 KST
+[worker0 cuda:0] START d3_st_lm05_sp_s3 2026. 07. 15. (수) 06:38:21 KST
+[worker0 cuda:0] END d3_st_lm05_sp_s3 exit=0 2026. 07. 15. (수) 10:17:16 KST
+[worker0 cuda:0] START d4_main_gsig_s2 2026. 07. 15. (수) 10:17:16 KST
+[worker0 cuda:0] END d4_main_gsig_s2 exit=0 2026. 07. 15. (수) 13:56:14 KST
+[worker0 cuda:0] START d4_main_sp_s1 2026. 07. 15. (수) 13:56:14 KST
+[worker0 cuda:0] END d4_main_sp_s1 exit=0 2026. 07. 15. (수) 17:35:42 KST
+[worker0 cuda:0] START d5_main_gsig_s2 2026. 07. 15. (수) 17:35:42 KST
+[worker0 cuda:0] END d5_main_gsig_s2 exit=0 2026. 07. 16. (목) 01:52:09 KST
+[worker0 cuda:0] START d4_dual_gsig_s1 2026. 07. 16. (목) 14:41:21 KST
+[worker0 cuda:0] END d4_dual_gsig_s1 exit=0 2026. 07. 16. (목) 18:27:46 KST
+[worker0 cuda:0] START d2_dual_A_s1 2026. 07. 16. (목) 18:27:46 KST
+[worker0 cuda:0] END d2_dual_A_s1 exit=0 2026. 07. 16. (목) 22:08:44 KST
+[worker0 cuda:0] START d1_dual_gradual_sigmoid_s2 2026. 07. 16. (목) 22:08:44 KST
+[worker0 cuda:0] END d1_dual_gradual_sigmoid_s2 exit=0 2026. 07. 17. (금) 01:28:59 KST
+[worker0 cuda:0] START d3_dual_sp_s1 2026. 07. 17. (금) 01:28:59 KST
+[worker0 cuda:0] END d3_dual_sp_s1 exit=0 2026. 07. 17. (금) 05:12:46 KST
+[worker0 cuda:0] START pcm_A_s1 2026. 07. 18. (토) 23:19:26 KST
+[worker0 cuda:0] END pcm_A_s1 exit=0 2026. 07. 19. (일) 02:53:35 KST
+[worker0 cuda:0] START gmm_gsig_s1 2026. 07. 19. (일) 02:53:35 KST
+[worker0 cuda:0] END gmm_gsig_s1 exit=0 2026. 07. 19. (일) 06:34:14 KST
+[worker0 cuda:0] START pcm_sp_s1 2026. 07. 19. (일) 06:34:14 KST
+[worker0 cuda:0] END pcm_sp_s1 exit=0 2026. 07. 19. (일) 10:13:19 KST
+[worker0 cuda:0] START dvsig_tv_A_s1 2026. 07. 19. (일) 10:13:19 KST
+[worker0 cuda:0] END dvsig_tv_A_s1 exit=0 2026. 07. 19. (일) 13:55:02 KST
+[worker0 cuda:0] START dvsig_tv_c100gsig_s2 2026. 07. 19. (일) 13:55:02 KST
+[worker0 cuda:0] END dvsig_tv_c100gsig_s2 exit=0 2026. 07. 19. (일) 17:32:55 KST
+[worker0 cuda:0] START dvsig_js_A_s1 2026. 07. 19. (일) 17:32:55 KST
+[worker0 cuda:0] END dvsig_js_A_s1 exit=0 2026. 07. 19. (일) 21:15:03 KST
+[worker0 cuda:0] START dvsig_js_abrupt_s1 2026. 07. 19. (일) 21:15:03 KST
+[worker0 cuda:0] END dvsig_js_abrupt_s1 exit=0 2026. 07. 20. (월) 00:59:21 KST
+[worker0 cuda:0] START dvsig_kl_abrupt_s1 2026. 07. 20. (월) 00:59:21 KST
+[worker0 cuda:0] END dvsig_kl_abrupt_s1 exit=0 2026. 07. 20. (월) 04:36:07 KST
+[worker0 cuda:0] START dvsig_cos_abrupt_s2 2026. 07. 20. (월) 04:36:07 KST
+[worker0 cuda:0] END dvsig_cos_abrupt_s2 exit=0 2026. 07. 20. (월) 07:53:25 KST
+[worker0 cuda:0] START fx20_A_s1 2026. 07. 20. (월) 07:53:25 KST
+[worker0 cuda:0] END fx20_A_s1 exit=0 2026. 07. 20. (월) 11:27:20 KST
+[worker0 cuda:0] START ho_dv2_gsig_s0 2026. 07. 20. (월) 11:27:21 KST
+[worker0 cuda:0] END ho_dv2_gsig_s0 exit=0 2026. 07. 20. (월) 17:06:53 KST
+[worker0 cuda:0] START ho_dvd_gsig_s3 2026. 07. 20. (월) 17:06:53 KST
+[worker0 cuda:0] END ho_dvd_gsig_s3 exit=0 2026. 07. 20. (월) 22:40:29 KST
+[worker0 cuda:0] START ho_fx20_gsig_s2 2026. 07. 20. (월) 22:40:29 KST
+[worker0 cuda:0] END ho_fx20_gsig_s2 exit=0 2026. 07. 21. (화) 03:49:17 KST
+[worker0 cuda:0] START ho_fx40_gsig_s4 2026. 07. 21. (화) 03:49:17 KST
+[worker0 cuda:0] END ho_fx40_gsig_s4 exit=0 2026. 07. 21. (화) 08:58:46 KST
+[worker0 cuda:0] START ho_fx30_gsig_s1 2026. 07. 21. (화) 08:58:46 KST
+[worker0 cuda:0] END ho_fx30_gsig_s1 exit=0 2026. 07. 21. (화) 14:25:29 KST
+[worker0 cuda:0] START ho_dv2_sp_s3 2026. 07. 21. (화) 14:25:29 KST
+[worker0 cuda:0] END ho_dv2_sp_s3 exit=0 2026. 07. 21. (화) 20:02:13 KST
+[worker0 cuda:0] START ho_dve_sp_s1 2026. 07. 21. (화) 20:02:13 KST
+[worker0 cuda:0] END ho_dve_sp_s1 exit=0 2026. 07. 22. (수) 01:43:57 KST
+[worker0 cuda:0] START ho_fx40_sp_s0 2026. 07. 22. (수) 01:43:57 KST
+[worker0 cuda:0] END ho_fx40_sp_s0 exit=0 2026. 07. 22. (수) 07:13:19 KST
+[worker0 cuda:0] START ho_fx10_sp_s0 2026. 07. 22. (수) 07:13:19 KST
+[worker0 cuda:0] END ho_fx10_sp_s0 exit=0 2026. 07. 22. (수) 12:45:44 KST
+[worker0 cuda:0] START ho_fx60_sp_s2 2026. 07. 22. (수) 12:45:44 KST
+[worker0 cuda:0] END ho_fx60_sp_s2 exit=0 2026. 07. 22. (수) 17:48:14 KST
+[worker0 cuda:0] START dv2_piecewise_random_s2 2026. 07. 22. (수) 17:48:14 KST
+[worker0 cuda:0] END dv2_piecewise_random_s2 exit=0 2026. 07. 22. (수) 21:08:11 KST
+[worker0 cuda:0] START dve_gradual_sigmoid_s1 2026. 07. 22. (수) 21:08:11 KST
+[worker0 cuda:0] END dve_gradual_sigmoid_s1 exit=0 2026. 07. 23. (목) 00:59:30 KST
+[worker0 cuda:0] START cor_contrast_abrupt_sev_fx20_s1 2026. 07. 23. (목) 00:59:30 KST
+[worker0 cuda:0] END cor_contrast_abrupt_sev_fx20_s1 exit=0 2026. 07. 23. (목) 04:08:22 KST
+[worker0 cuda:0] START cor_gaussian_noise_abrupt_sev_fx20_s1 2026. 07. 23. (목) 04:08:22 KST
+[worker0 cuda:0] END cor_gaussian_noise_abrupt_sev_fx20_s1 exit=0 2026. 07. 23. (목) 07:05:56 KST
+[worker0 cuda:0] START cor_motion_blur_abrupt_sev_fx20_s0 2026. 07. 23. (목) 07:05:56 KST
+[worker0 cuda:0] END cor_motion_blur_abrupt_sev_fx20_s0 exit=0 2026. 07. 23. (목) 10:18:33 KST
+[worker0 cuda:0] START cor_motion_blur_gradual_sev_fx20_s2 2026. 07. 23. (목) 10:18:33 KST
+[worker0 cuda:1] START reverse_gsig_s0 2026. 07. 28. (화) 14:36:12 KST
+[worker0 cuda:1] START identity_gsig_s2 2026. 07. 28. (화) 17:47:35 KST
+[worker0 cuda:1] END identity_gsig_s2 exit=0 2026. 07. 30. (목) 08:15:03 KST
+[worker0 cuda:1] START fx80_asym_s1 2026. 07. 30. (목) 08:15:03 KST
+[worker0 cuda:1] END fx80_asym_s1 exit=0 2026. 07. 31. (금) 14:41:38 KST
+[worker0 cuda:1] START fx00_pwr_s0 2026. 07. 31. (금) 14:41:38 KST
+[worker0 cuda:1] END fx00_pwr_s0 exit=0 2026. 08. 01. (토) 19:25:59 KST
+[worker0 cuda:1] START fx00_c100sp_s2 2026. 08. 01. (토) 19:25:59 KST
+[worker0 cuda:1] END fx00_c100sp_s2 exit=0 2026. 08. 02. (일) 15:45:42 KST
+[worker0 cuda:1] START role_same_role_s1 2026. 08. 02. (일) 21:34:19 KST
+[worker0 cuda:0] START role_same_role_s2 2026. 08. 02. (일) 21:34:19 KST
+[worker0 cuda:0] END role_same_role_s2 exit=0 2026. 08. 03. (월) 01:04:01 KST
+[worker0 cuda:1] END role_same_role_s1 exit=0 2026. 08. 03. (월) 04:13:45 KST
+[worker0 cuda:1] START a1_A_s0 2026. 08. 03. (월) 20:52:46 KST
+[worker0 cuda:0] START a1_mobmed_s0 2026. 08. 03. (월) 20:52:46 KST
+[worker0 cuda:0] END a1_mobmed_s0 exit=0 2026. 08. 04. (화) 00:10:42 KST
+[worker0 cuda:1] END a1_A_s0 exit=0 2026. 08. 04. (화) 00:25:37 KST
+[worker0 cuda:1] START a1_A_s3 2026. 08. 04. (화) 00:34:37 KST
+[worker0 cuda:0] START a1_A_s4 2026. 08. 04. (화) 00:34:42 KST
+[worker0 cuda:0] END a1_A_s4 exit=0 2026. 08. 04. (화) 03:59:54 KST
+[worker0 cuda:0] START a2_mobmed_30L60_s1 2026. 08. 04. (화) 03:59:54 KST
+[worker0 cuda:0] END a2_mobmed_30L60_s1 exit=0 2026. 08. 04. (화) 07:16:19 KST
+[worker0 cuda:0] START a2_mobmed_30L70_s1 2026. 08. 04. (화) 07:16:19 KST
+[worker0 cuda:0] END a2_mobmed_30L70_s1 exit=0 2026. 08. 04. (화) 10:32:45 KST
+[worker0 cuda:0] START a2_A_40L40_s1 2026. 08. 04. (화) 10:32:45 KST
+[worker0 cuda:0] END a2_A_40L40_s1 exit=0 2026. 08. 04. (화) 14:11:18 KST
+[worker0 cuda:0] START a2_A_40L70_s1 2026. 08. 04. (화) 14:11:18 KST
+[worker0 cuda:1] END a1_A_s3 exit=0 2026. 08. 04. (화) 16:34:42 KST
+[worker0 cuda:1] START a2_mobmed_50L40_s0 2026. 08. 04. (화) 16:34:42 KST
+[worker0 cuda:0] END a2_A_40L70_s1 exit=0 2026. 08. 04. (화) 17:49:44 KST
+[worker0 cuda:0] START a2_mobmed_50L60_s0 2026. 08. 04. (화) 17:49:44 KST
+[worker0 cuda:0] END a2_mobmed_50L60_s0 exit=0 2026. 08. 04. (화) 21:04:48 KST
+[worker0 cuda:0] START a2_A_50L70_s0 2026. 08. 04. (화) 21:04:48 KST
+[worker0 cuda:0] END a2_A_50L70_s0 exit=0 2026. 08. 05. (수) 00:47:16 KST
+[worker0 cuda:0] START b1_fx40_A_s0 2026. 08. 05. (수) 00:47:16 KST
+[worker0 cuda:0] END b1_fx40_A_s0 exit=0 2026. 08. 05. (수) 04:20:47 KST
+[worker0 cuda:1] END a2_mobmed_50L40_s0 exit=0 2026. 08. 05. (수) 05:45:10 KST
+[worker0 cuda:0] START t1_A_dg_s0 2026. 09. 04. (금) 19:11:18 KST
+[worker0 cuda:1] START t1_A_a1_s0 2026. 09. 04. (금) 19:11:18 KST
+[worker0 cuda:0] END t1_A_dg_s0 exit=0 2026. 09. 04. (금) 22:34:41 KST
+[worker0 cuda:1] END t1_A_a1_s0 exit=0 2026. 09. 04. (금) 22:35:13 KST
+[worker0 cuda:1] START t1_A_a1_s1 2026. 09. 05. (토) 00:06:14 KST
+[worker0 cuda:0] START t1_A_fx50_s2 2026. 09. 05. (토) 00:06:42 KST
+[worker0 cuda:0] END t1_A_fx50_s2 exit=0 2026. 09. 05. (토) 03:21:53 KST
+[worker0 cuda:0] START t1_A_fx30_s3 2026. 09. 05. (토) 03:21:53 KST
+[worker0 cuda:1] END t1_A_a1_s1 exit=0 2026. 09. 05. (토) 05:30:41 KST
+[worker0 cuda:1] START t1_A_fx50_s4 2026. 09. 05. (토) 05:30:41 KST
+[worker0 cuda:0] END t1_A_fx30_s3 exit=0 2026. 09. 05. (토) 06:58:00 KST
+[worker0 cuda:0] START t1_mob_a1_s1 2026. 09. 05. (토) 06:58:00 KST
+[worker0 cuda:0] END t1_mob_a1_s1 exit=0 2026. 09. 05. (토) 10:12:47 KST
+[worker0 cuda:0] START t1_mob_ent_s0 2026. 09. 05. (토) 10:12:47 KST
+[worker0 cuda:1] END t1_A_fx50_s4 exit=0 2026. 09. 05. (토) 10:26:55 KST
+[worker0 cuda:1] START t1_mob_fx50_s0 2026. 09. 05. (토) 10:26:55 KST
+[worker0 cuda:0] END t1_mob_ent_s0 exit=0 2026. 09. 05. (토) 13:15:02 KST
+[worker0 cuda:0] START t2_svhn_soft_s0 2026. 09. 05. (토) 13:15:02 KST
+[worker0 cuda:1] END t1_mob_fx50_s0 exit=0 2026. 09. 05. (토) 15:04:34 KST
+[worker0 cuda:0] END t2_svhn_soft_s0 exit=0 2026. 09. 05. (토) 18:14:17 KST
+[worker0 cuda:0] START t2_A_hard_s3 2026. 09. 05. (토) 18:22:17 KST
+[worker0 cuda:1] START t2_mob_soft_s1 2026. 09. 05. (토) 18:22:37 KST
+[worker0 cuda:0] END t2_A_hard_s3 exit=0 2026. 09. 05. (토) 21:56:18 KST
+[worker0 cuda:0] START t2_svhn_ent_s0 2026. 09. 05. (토) 21:56:18 KST
+[worker0 cuda:1] END t2_mob_soft_s1 exit=0 2026. 09. 05. (토) 23:17:38 KST
+[worker0 cuda:1] START t2_svhn_soft_s1 2026. 09. 05. (토) 23:17:38 KST
+[worker0 cuda:0] END t2_svhn_ent_s0 exit=0 2026. 09. 06. (일) 03:25:01 KST
+[worker0 cuda:0] START t2_svhn_fx20_s2 2026. 09. 06. (일) 03:25:01 KST
+[worker0 cuda:1] END t2_svhn_soft_s1 exit=0 2026. 09. 06. (일) 07:37:10 KST
+[worker0 cuda:1] START t2_svhn_soft_s4 2026. 09. 06. (일) 07:37:10 KST
+[worker0 cuda:0] END t2_svhn_fx20_s2 exit=0 2026. 09. 06. (일) 08:16:28 KST
+[worker0 cuda:1] END t2_svhn_soft_s4 exit=0 2026. 09. 06. (일) 14:23:15 KST
+[worker0 cuda:1] START r2_c100sp_tv_s0 2026. 09. 06. (일) 18:51:19 KST
+[worker0 cuda:0] START r2_tiny_tv_s0 2026. 09. 06. (일) 18:51:38 KST
+[worker0 cuda:1] END r2_c100sp_tv_s0 exit=0 2026. 09. 07. (월) 02:24:01 KST
+[worker0 cuda:1] START r2_c100gsig_hard_s2 2026. 09. 07. (월) 04:17:02 KST
+[worker0 cuda:0] END r2_tiny_tv_s0 exit=0 2026. 09. 07. (월) 04:20:28 KST
+[worker0 cuda:0] START r2_c10gsig_hard_s1 2026. 09. 07. (월) 04:20:28 KST
+[worker0 cuda:0] END r2_c10gsig_hard_s1 exit=0 2026. 09. 07. (월) 07:59:09 KST
+[worker0 cuda:0] START r2_tiny_tv_s2 2026. 09. 07. (월) 07:59:09 KST
+[worker0 cuda:1] END r2_c100gsig_hard_s2 exit=0 2026. 09. 07. (월) 10:32:20 KST
+[worker0 cuda:0] END r2_tiny_tv_s2 exit=0 2026. 09. 07. (월) 16:56:21 KST
+[worker0 cuda:0] START t3_c10gsig_fx20_s2 2026. 09. 14. (월) 22:56:58 KST
+[worker0 cuda:1] START t3_c100sp_fx20_s0 2026. 09. 14. (월) 22:57:04 KST
+[worker0 cuda:0] END t3_c10gsig_fx20_s2 exit=0 2026. 09. 15. (화) 02:25:37 KST
+[worker0 cuda:0] START t3_c100gsig_fx20_s0 2026. 09. 15. (화) 02:25:37 KST
+[worker0 cuda:1] END t3_c100sp_fx20_s0 exit=0 2026. 09. 15. (화) 03:59:30 KST
+[worker0 cuda:1] START t3_tiny_fx20_s1 2026. 09. 15. (화) 03:59:30 KST
+[worker0 cuda:0] END t3_c100gsig_fx20_s0 exit=0 2026. 09. 15. (화) 05:53:46 KST
+[worker0 cuda:1] END t3_tiny_fx20_s1 exit=0 2026. 09. 16. (수) 01:52:17 KST
+[worker0 cuda:0] START b1_absonly_A_s1 2026. 09. 24. (목) 03:12:02 KST
+[worker0 cuda:1] START b1_relonly_A_s0 2026. 09. 24. (목) 03:12:14 KST
+[worker0 cuda:0] END b1_absonly_A_s1 exit=0 2026. 09. 24. (목) 06:50:26 KST
+[worker0 cuda:0] START b1_relonly_mob_s2 2026. 09. 24. (목) 06:50:26 KST
+[worker0 cuda:1] END b1_relonly_A_s0 exit=0 2026. 09. 24. (목) 08:21:55 KST
+[worker0 cuda:1] START b1_nospatial_c100sp_s1 2026. 09. 24. (목) 08:21:55 KST
+[worker0 cuda:0] END b1_relonly_mob_s2 exit=0 2026. 09. 24. (목) 09:43:32 KST
+[worker0 cuda:0] START b2_entnorm_A_s2 2026. 09. 24. (목) 09:43:32 KST
+[worker0 cuda:0] END b2_entnorm_A_s2 exit=0 2026. 09. 24. (목) 13:04:03 KST
+[worker0 cuda:0] START b3_mob_fx50_s0 2026. 09. 24. (목) 13:04:03 KST
+[worker0 cuda:1] END b1_nospatial_c100sp_s1 exit=0 2026. 09. 24. (목) 13:37:37 KST
+[worker0 cuda:1] START b3_svhn_fx40_s0 2026. 09. 24. (목) 13:37:37 KST
+[worker0 cuda:0] END b3_mob_fx50_s0 exit=0 2026. 09. 24. (목) 15:54:36 KST
+[worker0 cuda:0] START b3_svhn_fx40_s3 2026. 09. 24. (목) 15:54:36 KST
+[worker0 cuda:0] END b3_svhn_fx40_s3 exit=0 2026. 09. 24. (목) 21:05:01 KST
+[worker0 cuda:0] START b3_c100gsig_fx15_s2 2026. 09. 24. (목) 21:05:01 KST
+[worker0 cuda:1] END b3_svhn_fx40_s0 exit=0 2026. 09. 24. (목) 22:09:15 KST
+[worker0 cuda:1] START b3_c100sp_fx15_s2 2026. 09. 24. (목) 22:09:15 KST

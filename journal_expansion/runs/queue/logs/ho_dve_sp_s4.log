@@ -1,0 +1,18 @@
+[ho_dve_sp_s4] method=splitomcplus controller=selfcal signal=ent_client schedule=static rounds=150 device=cuda:1
+  R  1 loss=0.981 acc=0.280 worst=0.230 elapsed=4.9m ETA=728m
+  R 10 loss=0.397 acc=0.662 worst=0.577 elapsed=23.9m ETA=334m
+  R 20 loss=0.284 acc=0.757 worst=0.671 elapsed=45.3m ETA=295m
+  R 30 loss=0.176 acc=0.797 worst=0.710 elapsed=65.9m ETA=264m
+  R 40 loss=0.140 acc=0.806 worst=0.710 elapsed=86.8m ETA=239m
+  R 50 loss=0.121 acc=0.826 worst=0.751 elapsed=106.9m ETA=214m
+  R 60 loss=0.104 acc=0.833 worst=0.742 elapsed=128.1m ETA=192m
+  R 70 loss=0.094 acc=0.842 worst=0.771 elapsed=149.6m ETA=171m
+  R 80 loss=0.083 acc=0.849 worst=0.781 elapsed=171.3m ETA=150m
+  R 90 loss=0.078 acc=0.858 worst=0.803 elapsed=193.0m ETA=129m
+  R100 loss=0.073 acc=0.859 worst=0.796 elapsed=214.3m ETA=107m
+  R110 loss=0.064 acc=0.861 worst=0.795 elapsed=236.4m ETA=86m
+  R120 loss=0.061 acc=0.865 worst=0.808 elapsed=257.5m ETA=64m
+  R130 loss=0.054 acc=0.864 worst=0.811 elapsed=279.1m ETA=43m
+  R140 loss=0.058 acc=0.865 worst=0.809 elapsed=300.6m ETA=21m
+  R150 loss=0.051 acc=0.862 worst=0.797 elapsed=321.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseE_holdout/ho_dve_sp_s4.json

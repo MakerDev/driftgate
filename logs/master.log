@@ -1,0 +1,338 @@
+[2026-05-27 22:44:06] ============================================================
+[2026-05-27 22:44:06] Adaptive-SplitOMC v3 Master Execution
+[2026-05-27 22:44:06] ============================================================
+[2026-05-27 22:44:06] Project dir: /disk2/Yujin/adaptive_splitomc_v3
+[2026-05-27 22:44:06] Config: configs/base_v3.yaml
+[2026-05-27 22:44:06] Devices: cuda:0 + cuda:1
+[2026-05-27 22:44:06] Results root: ./results
+[2026-05-27 22:44:06] 
+[2026-05-27 22:44:06] [Pre-flight] Unit tests...
+platform linux -- Python 3.12.7, pytest-7.4.4, pluggy-1.0.0 -- /home/ubuntu/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /disk2/Yujin/adaptive_splitomc_v3
+plugins: anyio-4.2.0
+collecting ... collected 12 items
+
+tests/test_all.py::test_topology_basic PASSED                            [  8%]
+tests/test_all.py::test_nd1_partition_cifar10 PASSED                     [ 16%]
+tests/test_all.py::test_test_set_construction PASSED                     [ 25%]
+tests/test_all.py::test_multi_exit_loss_basic PASSED                     [ 33%]
+tests/test_all.py::test_multi_exit_loss_no_server PASSED                 [ 41%]
+tests/test_all.py::test_model_factory PASSED                             [ 50%]
+tests/test_all.py::test_uniform_average PASSED                           [ 58%]
+tests/test_all.py::test_mix_state_dicts_lambda_extremes PASSED           [ 66%]
+tests/test_all.py::test_sigmoid_monotone PASSED                          [ 75%]
+tests/test_all.py::test_consensus_step PASSED                            [ 83%]
+tests/test_all.py::test_adaptive_controller_step PASSED                  [ 91%]
+tests/test_all.py::test_tiny_training_loop_runs PASSED                   [100%]
+
+============================== 12 passed in 4.81s ==============================
+[2026-05-27 22:44:12] [Pre-flight] Unit tests PASSED
+[2026-05-27 22:44:12] 
+[2026-05-27 22:44:12] ============================================================
+[2026-05-27 22:44:12] Phase 0: E0 smoke (50R x 3e, ~3h on 1 GPU)
+[2026-05-27 22:44:12] ============================================================
+
+============================================================
+E0 Running: splitomc_lam0.2
+============================================================
+[splitomc_lam0.2] Starting splitomc with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.314 acc_oop=0.202 acc_oor=0.006 acc_total=0.260 elapsed=1.9m ETA=93m
+  R 25 loss=0.336 acc_main=0.680 acc_oop=0.526 acc_oor=0.019 acc_total=0.587 elapsed=32.9m ETA=33m
+  R 50 loss=0.250 acc_main=0.742 acc_oop=0.584 acc_oor=0.046 acc_total=0.645 elapsed=65.2m ETA=0m
+  Saved: ./results/e0_smoke/splitomc_lam0.2.json
+
+============================================================
+E0 Running: splitomc_lam0.6
+============================================================
+[splitomc_lam0.6] Starting splitomc with lambda=0.6, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.343 acc_oop=0.190 acc_oor=0.005 acc_total=0.276 elapsed=1.7m ETA=83m
+  R 25 loss=0.226 acc_main=0.729 acc_oop=0.371 acc_oor=0.011 acc_total=0.578 elapsed=34.7m ETA=35m
+  R 50 loss=0.158 acc_main=0.810 acc_oop=0.358 acc_oor=0.028 acc_total=0.629 elapsed=66.4m ETA=0m
+  Saved: ./results/e0_smoke/splitomc_lam0.6.json
+
+============================================================
+E0 Running: splitomcplus_lam0.2_Lam0.5
+============================================================
+[splitomcplus_lam0.2_Lam0.5] Starting splitomcplus with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.246 acc_oop=0.156 acc_oor=0.058 acc_total=0.208 elapsed=1.8m ETA=89m
+  R 25 loss=0.376 acc_main=0.643 acc_oop=0.534 acc_oor=0.070 acc_total=0.569 elapsed=34.8m ETA=35m
+  R 50 loss=0.289 acc_main=0.702 acc_oop=0.600 acc_oor=0.149 acc_total=0.631 elapsed=70.2m ETA=0m
+  Saved: ./results/e0_smoke/splitomcplus_lam0.2_Lam0.5.json
+
+============================================================
+E0 Running: adaptive_splitomc
+============================================================
+[adaptive_splitomc] Starting adaptive_splitomc with lambda=0.4, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.278 acc_oop=0.157 acc_oor=0.047 acc_total=0.228 elapsed=2.1m ETA=103m
+  R 25 loss=0.387 acc_main=0.630 acc_oop=0.543 acc_oor=0.143 acc_total=0.568 elapsed=33.8m ETA=34m
+  R 50 loss=0.299 acc_main=0.676 acc_oop=0.598 acc_oor=0.255 acc_total=0.622 elapsed=68.0m ETA=0m
+  Saved: ./results/e0_smoke/adaptive_splitomc.json
+
+============================================================
+E0 SUMMARY
+============================================================
+✓ splitomc_lam0.2: ran to completion, last loss=0.250
+✓ splitomc_lam0.6: ran to completion, last loss=0.158
+✓ splitomcplus_lam0.2_Lam0.5: ran to completion, last loss=0.289
+✓ adaptive_splitomc: ran to completion, last loss=0.299
+
+Final-round accuracies (eval at ρ=oop_ratio_default):
+  splitomc_lam0.2: acc_total=0.645, acc_main=0.742, acc_oop=0.584, acc_oor=0.046
+  splitomc_lam0.6: acc_total=0.629, acc_main=0.810, acc_oop=0.358, acc_oor=0.028
+  splitomcplus_lam0.2_Lam0.5: acc_total=0.631, acc_main=0.702, acc_oop=0.600, acc_oor=0.149
+  adaptive_splitomc: acc_total=0.622, acc_main=0.676, acc_oop=0.598, acc_oor=0.255
+
+✓ PERSONALIZATION TREND OK: λ=0.6 acc_main (0.810) ≈/> λ=0.2 (0.742)
+
+E0 done. Summary saved to ./results/e0_smoke/e0_summary.json
+E0 verification OK
+[2026-05-28 03:14:20] Phase 0 PASSED
+[2026-05-28 03:14:20] 
+[2026-05-28 03:14:20] ============================================================
+[2026-05-28 03:14:20] Phase 1: E1 static Pareto
+[2026-05-28 03:14:20] ============================================================
+[2026-05-28 03:14:20] E1 launched on both GPUs (PIDs: 3707219, 3707220). Tailing GPU0 log...
+
+[1/8] fedavg  elapsed=0m
+[fedavg] Starting fedavg with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.541 acc_main=0.188 acc_oop=0.203 acc_oor=0.089 acc_total=0.184 elapsed=1.6m ETA=240m
+  R 10 loss=0.282 acc_main=0.498 acc_oop=0.470 acc_oor=0.269 acc_total=0.473 elapsed=11.0m ETA=154m
+  R 20 loss=0.219 acc_main=0.565 acc_oop=0.528 acc_oor=0.329 acc_total=0.537 elapsed=21.2m ETA=138m
+  R 30 loss=0.182 acc_main=0.610 acc_oop=0.568 acc_oor=0.370 acc_total=0.580 elapsed=31.7m ETA=127m
+  R 40 loss=0.152 acc_main=0.630 acc_oop=0.595 acc_oor=0.395 acc_total=0.602 elapsed=42.2m ETA=116m
+  R 50 loss=0.136 acc_main=0.646 acc_oop=0.616 acc_oor=0.426 acc_total=0.620 elapsed=52.7m ETA=105m
+  R 60 loss=0.124 acc_main=0.659 acc_oop=0.633 acc_oor=0.447 acc_total=0.636 elapsed=63.6m ETA=95m
+  R 70 loss=0.110 acc_main=0.665 acc_oop=0.641 acc_oor=0.463 acc_total=0.642 elapsed=74.0m ETA=85m
+  R 80 loss=0.102 acc_main=0.672 acc_oop=0.648 acc_oor=0.481 acc_total=0.650 elapsed=84.5m ETA=74m
+  R 90 loss=0.091 acc_main=0.676 acc_oop=0.655 acc_oor=0.490 acc_total=0.656 elapsed=95.0m ETA=63m
+  R100 loss=0.086 acc_main=0.679 acc_oop=0.659 acc_oor=0.513 acc_total=0.661 elapsed=105.4m ETA=53m
+  R110 loss=0.074 acc_main=0.685 acc_oop=0.669 acc_oor=0.527 acc_total=0.668 elapsed=115.6m ETA=42m
+  R120 loss=0.072 acc_main=0.690 acc_oop=0.677 acc_oor=0.536 acc_total=0.674 elapsed=126.2m ETA=32m
+  R130 loss=0.068 acc_main=0.693 acc_oop=0.680 acc_oor=0.552 acc_total=0.678 elapsed=136.6m ETA=21m
+  R140 loss=0.062 acc_main=0.695 acc_oop=0.682 acc_oor=0.557 acc_total=0.681 elapsed=147.4m ETA=11m
+  R150 loss=0.062 acc_main=0.696 acc_oop=0.678 acc_oor=0.550 acc_total=0.680 elapsed=157.9m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.696
+    ρ=0.2: acc_total=0.686
+    ρ=0.4: acc_total=0.680
+    ρ=0.6: acc_total=0.675
+    ρ=0.8: acc_total=0.671
+  Saved: ./results/e1_static/fedavg.json
+
+[2/8] fedprox  elapsed=161m
+[fedprox] Starting fedprox with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.543 acc_main=0.186 acc_oop=0.201 acc_oor=0.087 acc_total=0.182 elapsed=2.6m ETA=391m
+  R 10 loss=0.284 acc_main=0.498 acc_oop=0.470 acc_oor=0.270 acc_total=0.473 elapsed=20.9m ETA=292m
+  R 20 loss=0.220 acc_main=0.565 acc_oop=0.531 acc_oor=0.331 acc_total=0.537 elapsed=41.9m ETA=272m
+  R 30 loss=0.183 acc_main=0.610 acc_oop=0.564 acc_oor=0.363 acc_total=0.578 elapsed=65.9m ETA=264m
+  R 40 loss=0.153 acc_main=0.629 acc_oop=0.594 acc_oor=0.398 acc_total=0.602 elapsed=87.5m ETA=241m
+  R 50 loss=0.137 acc_main=0.645 acc_oop=0.610 acc_oor=0.416 acc_total=0.617 elapsed=107.7m ETA=215m
+  R 60 loss=0.125 acc_main=0.659 acc_oop=0.634 acc_oor=0.448 acc_total=0.635 elapsed=127.9m ETA=192m
+  R 70 loss=0.110 acc_main=0.664 acc_oop=0.638 acc_oor=0.461 acc_total=0.641 elapsed=147.8m ETA=169m
+  R 80 loss=0.104 acc_main=0.671 acc_oop=0.647 acc_oor=0.475 acc_total=0.649 elapsed=168.3m ETA=147m
+  R 90 loss=0.092 acc_main=0.675 acc_oop=0.652 acc_oor=0.491 acc_total=0.655 elapsed=188.9m ETA=126m
+  R100 loss=0.088 acc_main=0.680 acc_oop=0.661 acc_oor=0.511 acc_total=0.661 elapsed=209.5m ETA=105m
+  R110 loss=0.076 acc_main=0.685 acc_oop=0.668 acc_oor=0.529 acc_total=0.668 elapsed=229.9m ETA=84m
+  R120 loss=0.072 acc_main=0.688 acc_oop=0.671 acc_oor=0.534 acc_total=0.671 elapsed=247.9m ETA=62m
+  R130 loss=0.068 acc_main=0.689 acc_oop=0.674 acc_oor=0.544 acc_total=0.674 elapsed=266.6m ETA=41m
+  R140 loss=0.065 acc_main=0.695 acc_oop=0.681 acc_oor=0.558 acc_total=0.681 elapsed=287.1m ETA=21m
+  R150 loss=0.064 acc_main=0.694 acc_oop=0.677 acc_oor=0.553 acc_total=0.679 elapsed=307.3m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.694
+    ρ=0.2: acc_total=0.684
+    ρ=0.4: acc_total=0.679
+    ρ=0.6: acc_total=0.674
+    ρ=0.8: acc_total=0.670
+  Saved: ./results/e1_static/fedprox.json
+
+[3/8] splitfed  elapsed=470m
+[splitfed] Starting splitfed with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.541 acc_main=0.187 acc_oop=0.201 acc_oor=0.087 acc_total=0.183 elapsed=1.5m ETA=230m
+  R 10 loss=0.282 acc_main=0.500 acc_oop=0.473 acc_oor=0.271 acc_total=0.475 elapsed=11.3m ETA=158m
+  R 20 loss=0.219 acc_main=0.564 acc_oop=0.529 acc_oor=0.330 acc_total=0.536 elapsed=21.8m ETA=141m
+  R 30 loss=0.182 acc_main=0.609 acc_oop=0.565 acc_oor=0.365 acc_total=0.578 elapsed=33.0m ETA=132m
+  R 40 loss=0.152 acc_main=0.629 acc_oop=0.592 acc_oor=0.395 acc_total=0.601 elapsed=44.1m ETA=121m
+  R 50 loss=0.136 acc_main=0.644 acc_oop=0.610 acc_oor=0.420 acc_total=0.618 elapsed=55.2m ETA=110m
+  R 60 loss=0.124 acc_main=0.659 acc_oop=0.631 acc_oor=0.447 acc_total=0.635 elapsed=65.9m ETA=99m
+  R 70 loss=0.110 acc_main=0.663 acc_oop=0.639 acc_oor=0.460 acc_total=0.641 elapsed=76.6m ETA=88m
+  R 80 loss=0.102 acc_main=0.673 acc_oop=0.648 acc_oor=0.478 acc_total=0.651 elapsed=87.3m ETA=76m
+  R 90 loss=0.091 acc_main=0.678 acc_oop=0.657 acc_oor=0.497 acc_total=0.658 elapsed=98.0m ETA=65m
+  R100 loss=0.086 acc_main=0.682 acc_oop=0.660 acc_oor=0.511 acc_total=0.663 elapsed=109.0m ETA=54m
+  R110 loss=0.074 acc_main=0.686 acc_oop=0.669 acc_oor=0.532 acc_total=0.669 elapsed=119.7m ETA=44m
+  R120 loss=0.072 acc_main=0.690 acc_oop=0.675 acc_oor=0.535 acc_total=0.674 elapsed=130.9m ETA=33m
+  R130 loss=0.070 acc_main=0.691 acc_oop=0.677 acc_oor=0.547 acc_total=0.676 elapsed=141.1m ETA=22m
+  R140 loss=0.063 acc_main=0.694 acc_oop=0.678 acc_oor=0.557 acc_total=0.679 elapsed=152.1m ETA=11m
+  R150 loss=0.064 acc_main=0.696 acc_oop=0.678 acc_oor=0.555 acc_total=0.680 elapsed=162.5m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.696
+    ρ=0.2: acc_total=0.686
+    ρ=0.4: acc_total=0.680
+    ρ=0.6: acc_total=0.676
+    ρ=0.8: acc_total=0.671
+  Saved: ./results/e1_static/splitfed.json
+
+[4/8] fedmes  elapsed=635m
+[fedmes] Starting fedmes with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.541 acc_main=0.308 acc_oop=0.298 acc_oor=0.019 acc_total=0.283 elapsed=1.4m ETA=216m
+  R 10 loss=0.228 acc_main=0.552 acc_oop=0.487 acc_oor=0.001 acc_total=0.492 elapsed=10.3m ETA=145m
+  R 20 loss=0.156 acc_main=0.614 acc_oop=0.544 acc_oor=0.008 acc_total=0.547 elapsed=21.1m ETA=137m
+  R 30 loss=0.114 acc_main=0.639 acc_oop=0.574 acc_oor=0.019 acc_total=0.573 elapsed=31.9m ETA=128m
+  R 40 loss=0.081 acc_main=0.655 acc_oop=0.597 acc_oor=0.025 acc_total=0.590 elapsed=42.4m ETA=117m
+  R 50 loss=0.062 acc_main=0.662 acc_oop=0.606 acc_oor=0.028 acc_total=0.597 elapsed=53.4m ETA=107m
+  R 60 loss=0.056 acc_main=0.672 acc_oop=0.622 acc_oor=0.030 acc_total=0.608 elapsed=64.1m ETA=96m
+  R 70 loss=0.041 acc_main=0.673 acc_oop=0.626 acc_oor=0.031 acc_total=0.610 elapsed=74.3m ETA=85m
+  R 80 loss=0.042 acc_main=0.677 acc_oop=0.630 acc_oor=0.035 acc_total=0.614 elapsed=85.2m ETA=75m
+  R 90 loss=0.031 acc_main=0.677 acc_oop=0.634 acc_oor=0.040 acc_total=0.615 elapsed=95.5m ETA=64m
+  R100 loss=0.028 acc_main=0.679 acc_oop=0.632 acc_oor=0.040 acc_total=0.616 elapsed=105.8m ETA=53m
+  R110 loss=0.016 acc_main=0.676 acc_oop=0.633 acc_oor=0.044 acc_total=0.615 elapsed=116.6m ETA=42m
+  R120 loss=0.030 acc_main=0.683 acc_oop=0.634 acc_oor=0.043 acc_total=0.620 elapsed=128.0m ETA=32m
+  R130 loss=0.028 acc_main=0.680 acc_oop=0.640 acc_oor=0.046 acc_total=0.619 elapsed=139.0m ETA=21m
+  R140 loss=0.016 acc_main=0.684 acc_oop=0.637 acc_oor=0.050 acc_total=0.621 elapsed=149.5m ETA=11m
+  R150 loss=0.009 acc_main=0.684 acc_oop=0.639 acc_oor=0.042 acc_total=0.622 elapsed=160.5m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.684
+    ρ=0.2: acc_total=0.646
+    ρ=0.4: acc_total=0.622
+    ρ=0.6: acc_total=0.604
+    ρ=0.8: acc_total=0.591
+  Saved: ./results/e1_static/fedmes.json
+
+[5/8] splitgp_lam0.2  elapsed=798m
+[splitgp_lam0.2] Starting splitgp with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.150 acc_oop=0.149 acc_oor=0.095 acc_total=0.145 elapsed=1.9m ETA=283m
+  R 10 loss=0.487 acc_main=0.477 acc_oop=0.411 acc_oor=0.210 acc_total=0.439 elapsed=12.9m ETA=180m
+  R 20 loss=0.418 acc_main=0.538 acc_oop=0.460 acc_oor=0.258 acc_total=0.495 elapsed=25.3m ETA=165m
+  R 30 loss=0.368 acc_main=0.597 acc_oop=0.518 acc_oor=0.321 acc_total=0.554 elapsed=39.4m ETA=158m
+  R 40 loss=0.328 acc_main=0.616 acc_oop=0.534 acc_oor=0.334 acc_total=0.572 elapsed=53.9m ETA=148m
+  R 50 loss=0.299 acc_main=0.642 acc_oop=0.560 acc_oor=0.362 acc_total=0.598 elapsed=67.9m ETA=136m
+  R 60 loss=0.274 acc_main=0.661 acc_oop=0.571 acc_oor=0.384 acc_total=0.616 elapsed=82.6m ETA=124m
+  R 70 loss=0.255 acc_main=0.669 acc_oop=0.578 acc_oor=0.394 acc_total=0.623 elapsed=97.0m ETA=111m
+  R 80 loss=0.237 acc_main=0.682 acc_oop=0.580 acc_oor=0.409 acc_total=0.634 elapsed=111.3m ETA=97m
+  R 90 loss=0.220 acc_main=0.689 acc_oop=0.577 acc_oor=0.413 acc_total=0.638 elapsed=125.5m ETA=84m
+  R100 loss=0.205 acc_main=0.699 acc_oop=0.588 acc_oor=0.423 acc_total=0.648 elapsed=139.8m ETA=70m
+  R110 loss=0.187 acc_main=0.712 acc_oop=0.598 acc_oor=0.437 acc_total=0.661 elapsed=154.6m ETA=56m
+  R120 loss=0.180 acc_main=0.724 acc_oop=0.601 acc_oor=0.444 acc_total=0.669 elapsed=168.1m ETA=42m
+  R130 loss=0.170 acc_main=0.729 acc_oop=0.602 acc_oor=0.447 acc_total=0.673 elapsed=181.4m ETA=28m
+  R140 loss=0.164 acc_main=0.727 acc_oop=0.600 acc_oor=0.450 acc_total=0.672 elapsed=195.6m ETA=14m
+  R150 loss=0.153 acc_main=0.727 acc_oop=0.602 acc_oor=0.448 acc_total=0.672 elapsed=209.5m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.727
+    ρ=0.2: acc_total=0.694
+    ρ=0.4: acc_total=0.672
+    ρ=0.6: acc_total=0.656
+    ρ=0.8: acc_total=0.644
+  Saved: ./results/e1_static/splitgp_lam0.2.json
+
+[6/8] splitgp_lam0.5  elapsed=1010m
+[splitgp_lam0.5] Starting splitgp with lambda=0.5, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.175 acc_oop=0.141 acc_oor=0.092 acc_total=0.159 elapsed=1.9m ETA=278m
+  R 10 loss=0.385 acc_main=0.525 acc_oop=0.367 acc_oor=0.176 acc_total=0.456 elapsed=14.4m ETA=202m
+  R 20 loss=0.325 acc_main=0.569 acc_oop=0.397 acc_oor=0.187 acc_total=0.494 elapsed=28.3m ETA=184m
+  R 30 loss=0.281 acc_main=0.626 acc_oop=0.430 acc_oor=0.223 acc_total=0.543 elapsed=43.1m ETA=172m
+  R 40 loss=0.244 acc_main=0.663 acc_oop=0.434 acc_oor=0.241 acc_total=0.570 elapsed=57.2m ETA=157m
+  R 50 loss=0.219 acc_main=0.700 acc_oop=0.449 acc_oor=0.260 acc_total=0.599 elapsed=71.8m ETA=144m
+  R 60 loss=0.198 acc_main=0.721 acc_oop=0.442 acc_oor=0.262 acc_total=0.611 elapsed=86.3m ETA=129m
+  R 70 loss=0.183 acc_main=0.741 acc_oop=0.440 acc_oor=0.267 acc_total=0.625 elapsed=100.7m ETA=115m
+  R 80 loss=0.166 acc_main=0.763 acc_oop=0.437 acc_oor=0.274 acc_total=0.639 elapsed=113.7m ETA=100m
+  R 90 loss=0.153 acc_main=0.777 acc_oop=0.420 acc_oor=0.263 acc_total=0.642 elapsed=128.1m ETA=85m
+  R100 loss=0.142 acc_main=0.780 acc_oop=0.411 acc_oor=0.267 acc_total=0.643 elapsed=141.0m ETA=71m
+  R110 loss=0.124 acc_main=0.800 acc_oop=0.423 acc_oor=0.270 acc_total=0.659 elapsed=153.1m ETA=56m
+  R120 loss=0.122 acc_main=0.829 acc_oop=0.415 acc_oor=0.274 acc_total=0.676 elapsed=167.5m ETA=42m
+  R130 loss=0.112 acc_main=0.843 acc_oop=0.402 acc_oor=0.272 acc_total=0.682 elapsed=181.9m ETA=28m
+  R140 loss=0.112 acc_main=0.839 acc_oop=0.398 acc_oor=0.260 acc_total=0.677 elapsed=196.0m ETA=14m
+  R150 loss=0.101 acc_main=0.838 acc_oop=0.387 acc_oor=0.246 acc_total=0.673 elapsed=209.5m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.838
+    ρ=0.2: acc_total=0.738
+    ρ=0.4: acc_total=0.673
+    ρ=0.6: acc_total=0.628
+    ρ=0.8: acc_total=0.592
+  Saved: ./results/e1_static/splitgp_lam0.5.json
+
+[7/8] splitgp_lam0.8  elapsed=1223m
+[splitgp_lam0.8] Starting splitgp with lambda=0.8, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.224 acc_oop=0.134 acc_oor=0.085 acc_total=0.189 elapsed=1.9m ETA=280m
+  R 10 loss=0.269 acc_main=0.680 acc_oop=0.217 acc_oor=0.102 acc_total=0.512 elapsed=14.6m ETA=205m
+  R 20 loss=0.205 acc_main=0.720 acc_oop=0.203 acc_oor=0.088 acc_total=0.534 elapsed=28.4m ETA=185m
+  R 30 loss=0.167 acc_main=0.761 acc_oop=0.180 acc_oor=0.087 acc_total=0.555 elapsed=42.7m ETA=171m
+  R 40 loss=0.138 acc_main=0.798 acc_oop=0.155 acc_oor=0.076 acc_total=0.572 elapsed=56.0m ETA=154m
+  R 50 loss=0.119 acc_main=0.806 acc_oop=0.143 acc_oor=0.070 acc_total=0.573 elapsed=70.3m ETA=141m
+  R 60 loss=0.102 acc_main=0.809 acc_oop=0.108 acc_oor=0.060 acc_total=0.565 elapsed=84.6m ETA=127m
+  R 70 loss=0.095 acc_main=0.841 acc_oop=0.112 acc_oor=0.056 acc_total=0.587 elapsed=98.5m ETA=113m
+  R 80 loss=0.092 acc_main=0.849 acc_oop=0.107 acc_oor=0.052 acc_total=0.591 elapsed=112.5m ETA=98m
+  R 90 loss=0.087 acc_main=0.852 acc_oop=0.081 acc_oor=0.047 acc_total=0.586 elapsed=126.6m ETA=84m
+  R100 loss=0.079 acc_main=0.853 acc_oop=0.077 acc_oor=0.037 acc_total=0.585 elapsed=140.8m ETA=70m
+  R110 loss=0.061 acc_main=0.888 acc_oop=0.077 acc_oor=0.035 acc_total=0.608 elapsed=154.8m ETA=56m
+  R120 loss=0.059 acc_main=0.907 acc_oop=0.077 acc_oor=0.034 acc_total=0.620 elapsed=169.0m ETA=42m
+  R130 loss=0.063 acc_main=0.907 acc_oop=0.064 acc_oor=0.032 acc_total=0.616 elapsed=181.9m ETA=28m
+  R140 loss=0.063 acc_main=0.879 acc_oop=0.052 acc_oor=0.026 acc_total=0.594 elapsed=196.1m ETA=14m
+  R150 loss=0.051 acc_main=0.895 acc_oop=0.059 acc_oor=0.022 acc_total=0.607 elapsed=209.9m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.895
+    ρ=0.2: acc_total=0.722
+    ρ=0.4: acc_total=0.607
+    ρ=0.6: acc_total=0.525
+    ρ=0.8: acc_total=0.465
+  Saved: ./results/e1_static/splitgp_lam0.8.json
+
+[8/8] splitomc_lam0.0  elapsed=1435m
+[splitomc_lam0.0] Starting splitomc with lambda=0.0, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.300 acc_oop=0.206 acc_oor=0.007 acc_total=0.252 elapsed=1.9m ETA=276m
+  R 10 loss=0.491 acc_main=0.587 acc_oop=0.462 acc_oor=0.013 acc_total=0.509 elapsed=14.4m ETA=202m
+  R 20 loss=0.416 acc_main=0.640 acc_oop=0.531 acc_oor=0.018 acc_total=0.562 elapsed=28.3m ETA=184m
+  R 30 loss=0.363 acc_main=0.674 acc_oop=0.577 acc_oor=0.030 acc_total=0.598 elapsed=41.2m ETA=165m
+  R 40 loss=0.322 acc_main=0.697 acc_oop=0.604 acc_oor=0.035 acc_total=0.620 elapsed=54.8m ETA=151m
+  R 50 loss=0.292 acc_main=0.712 acc_oop=0.616 acc_oor=0.049 acc_total=0.634 elapsed=68.5m ETA=137m
+  R 60 loss=0.268 acc_main=0.720 acc_oop=0.628 acc_oor=0.058 acc_total=0.643 elapsed=82.6m ETA=124m
+  R 70 loss=0.248 acc_main=0.722 acc_oop=0.635 acc_oor=0.066 acc_total=0.647 elapsed=96.0m ETA=110m
+  R 80 loss=0.228 acc_main=0.727 acc_oop=0.646 acc_oor=0.075 acc_total=0.654 elapsed=110.0m ETA=96m
+  R 90 loss=0.212 acc_main=0.731 acc_oop=0.646 acc_oor=0.073 acc_total=0.657 elapsed=124.0m ETA=83m
+  R100 loss=0.202 acc_main=0.735 acc_oop=0.651 acc_oor=0.077 acc_total=0.661 elapsed=138.0m ETA=69m
+  R110 loss=0.182 acc_main=0.735 acc_oop=0.652 acc_oor=0.088 acc_total=0.662 elapsed=152.0m ETA=55m
+  R120 loss=0.174 acc_main=0.738 acc_oop=0.654 acc_oor=0.083 acc_total=0.664 elapsed=165.9m ETA=41m
+  R130 loss=0.167 acc_main=0.741 acc_oop=0.659 acc_oor=0.088 acc_total=0.668 elapsed=179.8m ETA=28m
+  R140 loss=0.161 acc_main=0.738 acc_oop=0.659 acc_oor=0.095 acc_total=0.667 elapsed=193.5m ETA=14m
+  R150 loss=0.149 acc_main=0.737 acc_oop=0.663 acc_oor=0.092 acc_total=0.667 elapsed=207.3m ETA=0m
+  Running final rho sweep: [0.0, 0.2, 0.4, 0.6, 0.8]
+    ρ=0.0: acc_total=0.737
+    ρ=0.2: acc_total=0.695
+    ρ=0.4: acc_total=0.667
+    ρ=0.6: acc_total=0.646
+    ρ=0.8: acc_total=0.631
+  Saved: ./results/e1_static/splitomc_lam0.0.json
+
+E1 done. Total time: 1644.7m
+Results in: ./results/e1_static
+[2026-05-29 10:07:05] Phase 1 done.
+[2026-05-29 10:07:05] 
+[2026-05-29 10:07:05] ============================================================
+[2026-05-29 10:07:05] Phase 2: E2 temporal drift (CORE EXPERIMENT)
+[2026-05-29 10:07:05] ============================================================
+[2026-05-29 19:18:31] E2 schedule A done.
+========================================
+[2026-05-29 19:18:31] E2 schedule A done.

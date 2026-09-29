@@ -1,0 +1,13 @@
+[res_early_dv2_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.455 acc=0.435 worst=0.239 elapsed=7.8m ETA=776m
+  R 10 loss=0.220 acc=0.600 worst=0.466 elapsed=67.0m ETA=603m
+  R 20 loss=0.190 acc=0.642 worst=0.463 elapsed=121.5m ETA=486m
+  R 30 loss=0.165 acc=0.521 worst=0.473 elapsed=175.7m ETA=410m
+  R 40 loss=0.150 acc=0.549 worst=0.534 elapsed=229.6m ETA=344m
+  R 50 loss=0.145 acc=0.446 worst=0.414 elapsed=284.1m ETA=284m
+  R 60 loss=0.139 acc=0.456 worst=0.435 elapsed=338.4m ETA=226m
+  R 70 loss=0.131 acc=0.560 worst=0.525 elapsed=390.6m ETA=167m
+  R 80 loss=0.123 acc=0.570 worst=0.542 elapsed=442.3m ETA=111m
+  R 90 loss=0.120 acc=0.740 worst=0.578 elapsed=485.1m ETA=54m
+  R100 loss=0.106 acc=0.798 worst=0.760 elapsed=521.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseF_arch/res_early_dv2_s0.json

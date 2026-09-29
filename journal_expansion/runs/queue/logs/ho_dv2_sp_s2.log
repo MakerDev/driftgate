@@ -1,0 +1,18 @@
+[ho_dv2_sp_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.980 acc=0.257 worst=0.155 elapsed=4.4m ETA=648m
+  R 10 loss=0.459 acc=0.498 worst=0.334 elapsed=23.7m ETA=331m
+  R 20 loss=0.358 acc=0.689 worst=0.593 elapsed=44.4m ETA=289m
+  R 30 loss=0.281 acc=0.762 worst=0.684 elapsed=65.5m ETA=262m
+  R 40 loss=0.227 acc=0.802 worst=0.733 elapsed=86.8m ETA=239m
+  R 50 loss=0.195 acc=0.823 worst=0.761 elapsed=107.6m ETA=215m
+  R 60 loss=0.180 acc=0.832 worst=0.768 elapsed=128.0m ETA=192m
+  R 70 loss=0.146 acc=0.845 worst=0.789 elapsed=148.5m ETA=170m
+  R 80 loss=0.126 acc=0.853 worst=0.797 elapsed=169.7m ETA=149m
+  R 90 loss=0.105 acc=0.860 worst=0.805 elapsed=190.3m ETA=127m
+  R100 loss=0.097 acc=0.861 worst=0.806 elapsed=210.9m ETA=105m
+  R110 loss=0.089 acc=0.865 worst=0.810 elapsed=231.6m ETA=84m
+  R120 loss=0.081 acc=0.865 worst=0.814 elapsed=252.4m ETA=63m
+  R130 loss=0.076 acc=0.861 worst=0.805 elapsed=273.6m ETA=42m
+  R140 loss=0.070 acc=0.860 worst=0.805 elapsed=294.4m ETA=21m
+  R150 loss=0.070 acc=0.867 worst=0.815 elapsed=314.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseE_holdout/ho_dv2_sp_s2.json

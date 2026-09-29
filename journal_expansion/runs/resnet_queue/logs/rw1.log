@@ -1,0 +1,14 @@
+[rw1 cuda:0] START res_early_fx20_s1 2026. 07. 24. (금) 00:11:17 KST
+[rw1 cuda:0] END res_early_fx20_s1 exit=0 2026. 07. 24. (금) 05:31:46 KST
+[rw1 cuda:0] START res_early_fx40_s1 2026. 07. 24. (금) 05:31:46 KST
+[rw1 cuda:0] END res_early_fx40_s1 exit=0 2026. 07. 24. (금) 09:22:32 KST
+[rw1 cuda:0] START res_early_dve_s1 2026. 07. 24. (금) 09:22:32 KST
+[rw1 cuda:0] END res_early_dve_s1 exit=0 2026. 07. 24. (금) 13:10:06 KST
+[rw1 cuda:0] START res_middle_dv2_s1 2026. 07. 24. (금) 13:10:06 KST
+[rw1 cuda:1] START res_late_fx40_s1 2026. 07. 28. (화) 14:36:12 KST
+[rw1 cuda:1] START res_late_dve_s2 2026. 07. 28. (화) 17:47:35 KST
+[rw1 cuda:1] END res_late_dve_s2 exit=0 2026. 07. 31. (금) 08:59:47 KST
+[rw1 cuda:1] START res_late_fx20_s1 2026. 08. 02. (일) 21:34:19 KST
+[rw1 cuda:1] END res_late_fx20_s1 exit=0 2026. 08. 03. (월) 05:37:58 KST
+[rw1 cuda:1] START res_late_fx40_s1 2026. 08. 03. (월) 05:37:58 KST
+[rw1 cuda:1] END res_late_fx40_s1 exit=0 2026. 08. 03. (월) 09:14:37 KST

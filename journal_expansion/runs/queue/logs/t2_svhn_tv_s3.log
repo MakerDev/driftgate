@@ -1,0 +1,18 @@
+[t2_svhn_tv_s3] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=1.005 acc=0.325 worst=0.233 elapsed=3.4m ETA=509m
+  R 10 loss=0.453 acc=0.724 worst=0.569 elapsed=22.1m ETA=309m
+  R 20 loss=0.337 acc=0.810 worst=0.692 elapsed=43.2m ETA=281m
+  R 30 loss=0.247 acc=0.839 worst=0.740 elapsed=64.2m ETA=257m
+  R 40 loss=0.198 acc=0.856 worst=0.773 elapsed=87.2m ETA=240m
+  R 50 loss=0.164 acc=0.863 worst=0.789 elapsed=109.2m ETA=218m
+  R 60 loss=0.144 acc=0.859 worst=0.793 elapsed=129.4m ETA=194m
+  R 70 loss=0.123 acc=0.848 worst=0.787 elapsed=150.6m ETA=172m
+  R 80 loss=0.113 acc=0.838 worst=0.786 elapsed=171.4m ETA=150m
+  R 90 loss=0.103 acc=0.823 worst=0.782 elapsed=194.2m ETA=129m
+  R100 loss=0.093 acc=0.822 worst=0.785 elapsed=215.0m ETA=107m
+  R110 loss=0.091 acc=0.825 worst=0.785 elapsed=236.9m ETA=86m
+  R120 loss=0.082 acc=0.821 worst=0.776 elapsed=259.8m ETA=65m
+  R130 loss=0.075 acc=0.826 worst=0.795 elapsed=281.0m ETA=43m
+  R140 loss=0.070 acc=0.825 worst=0.782 elapsed=303.5m ETA=22m
+  R150 loss=0.059 acc=0.827 worst=0.796 elapsed=324.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT2_signal/t2_svhn_tv_s3.json

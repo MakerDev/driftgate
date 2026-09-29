@@ -1,0 +1,18 @@
+[lowpass_sp_s2] method=splitomcplus controller=replay signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.938 acc=0.345 worst=0.190 elapsed=2.5m ETA=372m
+  R 10 loss=0.394 acc=0.530 worst=0.381 elapsed=14.9m ETA=208m
+  R 20 loss=0.337 acc=0.574 worst=0.409 elapsed=28.8m ETA=187m
+  R 30 loss=0.279 acc=0.600 worst=0.435 elapsed=42.7m ETA=171m
+  R 40 loss=0.242 acc=0.632 worst=0.470 elapsed=56.8m ETA=156m
+  R 50 loss=0.215 acc=0.647 worst=0.495 elapsed=70.9m ETA=142m
+  R 60 loss=0.194 acc=0.654 worst=0.480 elapsed=85.1m ETA=128m
+  R 70 loss=0.175 acc=0.656 worst=0.503 elapsed=99.3m ETA=113m
+  R 80 loss=0.159 acc=0.671 worst=0.497 elapsed=113.8m ETA=100m
+  R 90 loss=0.143 acc=0.676 worst=0.540 elapsed=128.2m ETA=85m
+  R100 loss=0.139 acc=0.685 worst=0.531 elapsed=141.7m ETA=71m
+  R110 loss=0.120 acc=0.692 worst=0.522 elapsed=155.1m ETA=56m
+  R120 loss=0.120 acc=0.685 worst=0.553 elapsed=168.8m ETA=42m
+  R130 loss=0.103 acc=0.689 worst=0.540 elapsed=182.3m ETA=28m
+  R140 loss=0.097 acc=0.680 worst=0.548 elapsed=196.0m ETA=14m
+  R150 loss=0.102 acc=0.699 worst=0.560 elapsed=209.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/lowpass_sp_s2.json

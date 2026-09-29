@@ -1,0 +1,32 @@
+{
+ "samepool_scheduleA_adaptive_mean_5seed": 0.659425356250962,
+ "samepool_best_fixed_key": "fx40",
+ "samepool_adaptive_minus_bestfixed_pp": 0.7336628121645639,
+ "disjoint_A_DriftGate_mean": 0.6583707876902252,
+ "disjoint_A_DriftGate_per_seed": {
+  "0": 0.6624356401287902,
+  "1": 0.6560128983629764,
+  "2": 0.6607468675575423,
+  "3": 0.627943945853382,
+  "4": 0.6847145865484346
+ },
+ "disjoint_A_best_fixed_key": "fixed_l0.4",
+ "disjoint_A_DriftGate_minus_bestfixed_pp": 0.664184251223412,
+ "disjoint_A_DriftGate_minus_entropy_pp": 1.4699254749053958,
+ "disjoint_A_DriftGate_minus_a1_pp": -0.0710581930547205,
+ "disjoint_mob_DriftGate_minus_bestfixed_pp": 0.6291420724003831,
+ "svhn_TV_minus_soft_pp": -1.0572524752254608,
+ "svhn_TV_minus_hard_pp": -1.1869744147096695,
+ "svhn_signal_spearman": {
+  "tv": 0.5569602204542424,
+  "soft": 0.2747453664607316,
+  "hard": 0.6891580939612839,
+  "entropy": -0.8281843637495001
+ },
+ "svhn_signal_auroc": {
+  "tv": 0.9046755555555557,
+  "soft": 0.7889777777777778,
+  "hard": 0.9489955555555556,
+  "entropy": 0.16177777777777777
+ }
+}

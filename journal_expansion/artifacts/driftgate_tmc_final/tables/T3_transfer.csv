@@ -1,0 +1,18 @@
+setting,method,n_seeds,integrated_acc_pct,sd_pct,DriftGate_minus_method_pp,ci95,n_pos,n_matched,source_runs
+CIFAR-10 gradual,DriftGate,0,,,,,,,
+CIFAR-10 gradual,fixed 0.15,1,62.5753,,,,,,b3_c10gsig_fx15_s{2}
+CIFAR-10 gradual,fixed 0.2,3,62.8556,0.5086,,,,,"t3_c10gsig_fx20_s{0,1,2}"
+CIFAR-10 gradual,fixed 0.4,3,62.1362,0.7857,,,,,"t3_c10gsig_fx40_s{0,1,2}"
+CIFAR-100 gradual,DriftGate,3,36.0912,1.3614,,,,,"b1_relonly_c100gsig_s{0,1,2}"
+CIFAR-100 gradual,fixed 0.15,1,37.5710,,+0.0897,,1,1,b3_c100gsig_fx15_s{0}
+CIFAR-100 gradual,fixed 0.2 (best fixed),3,35.9081,1.4227,+0.1831,"[-0.13, +0.50]",3,3,"t3_c100gsig_fx20_s{0,1,2}"
+CIFAR-100 gradual,fixed 0.4,3,35.0016,1.3326,+1.0895,"[+1.02, +1.16]",3,3,"t3_c100gsig_fx40_s{0,1,2}"
+Tiny-ImageNet,DriftGate,0,,,,,,,
+Tiny-ImageNet,fixed 0.15,0,,,,,,,
+Tiny-ImageNet,fixed 0.2,3,24.3149,0.0911,,,,,"t3_tiny_fx20_s{0,1,2}"
+Tiny-ImageNet,fixed 0.4,3,23.8245,0.1587,,,,,"t3_tiny_fx40_s{0,1,2}"
+SVHN temporal,DriftGate,0,,,,,,,
+SVHN temporal,fixed 0.15,2,79.7137,0.6724,,,,,"b3_svhn_fx15_s{0,1}"
+SVHN temporal,fixed 0.2,5,80.4345,1.6900,,,,,"t2_svhn_fx20_s{0,1,2,3,4}"
+SVHN temporal,fixed 0.4,5,79.7948,1.6860,,,,,"b3_svhn_fx40_s{0,1,2,3,4}"
+SVHN temporal,entropy,5,76.9699,1.2574,,,,,"t2_svhn_ent_s{0,1,2,3,4}"

@@ -1,0 +1,18 @@
+[d1_fixed02_asym_return_s4] method=splitomcplus controller=fixed signal=delta_hard schedule=asym_return rounds=150 device=cuda:0
+  R  1 loss=0.923 acc=0.387 worst=0.258 elapsed=2.0m ETA=298m
+  R 10 loss=0.468 acc=0.607 worst=0.407 elapsed=13.2m ETA=185m
+  R 20 loss=0.400 acc=0.667 worst=0.480 elapsed=25.6m ETA=166m
+  R 30 loss=0.354 acc=0.695 worst=0.520 elapsed=38.3m ETA=153m
+  R 40 loss=0.315 acc=0.717 worst=0.561 elapsed=51.1m ETA=141m
+  R 50 loss=0.285 acc=0.606 worst=0.537 elapsed=64.3m ETA=129m
+  R 60 loss=0.265 acc=0.630 worst=0.557 elapsed=77.7m ETA=116m
+  R 70 loss=0.244 acc=0.637 worst=0.559 elapsed=90.9m ETA=104m
+  R 80 loss=0.217 acc=0.653 worst=0.583 elapsed=104.0m ETA=91m
+  R 90 loss=0.207 acc=0.667 worst=0.613 elapsed=117.2m ETA=78m
+  R100 loss=0.193 acc=0.685 worst=0.629 elapsed=130.2m ETA=65m
+  R110 loss=0.180 acc=0.709 worst=0.633 elapsed=143.0m ETA=52m
+  R120 loss=0.169 acc=0.727 worst=0.633 elapsed=155.7m ETA=39m
+  R130 loss=0.160 acc=0.752 worst=0.662 elapsed=167.8m ETA=26m
+  R140 loss=0.152 acc=0.777 worst=0.684 elapsed=180.5m ETA=13m
+  R150 loss=0.147 acc=0.813 worst=0.715 elapsed=193.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_fixed02_asym_return_s4.json

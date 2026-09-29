@@ -1,0 +1,7 @@
+setting,variant,n_seeds,variant_acc_pct,sd_pct,default_DriftGate_same_seeds_pct,variant_minus_default_pp,ci95,n_pos,best_fixed_same_seeds,variant_minus_best_fixed_pp,ci95_vs_best_fixed
+stepwise composition change,guard 0.25,0,,,,,,,,,
+stepwise composition change,guard 1.0,0,,,,,,,,,
+stepwise composition change,λ_max 0.60,0,,,,,,,,,
+stepwise composition change,λ_max 0.80,0,,,,,,,,,
+client mobility,λ_max 0.60,0,,,,,,,,,
+client mobility,λ_max 0.80,0,,,,,,,,,

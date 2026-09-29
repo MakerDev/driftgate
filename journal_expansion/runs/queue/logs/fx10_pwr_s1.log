@@ -1,0 +1,18 @@
+[fx10_pwr_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=piecewise_random rounds=150 device=cuda:1
+  R  1 loss=0.900 acc=0.292 worst=0.124 elapsed=20.6m ETA=3069m
+  R 10 loss=0.484 acc=0.516 worst=0.401 elapsed=149.4m ETA=2091m
+  R 20 loss=0.412 acc=0.569 worst=0.443 elapsed=274.3m ETA=1783m
+  R 30 loss=0.359 acc=0.612 worst=0.483 elapsed=375.9m ETA=1504m
+  R 40 loss=0.324 acc=0.672 worst=0.548 elapsed=474.5m ETA=1305m
+  R 50 loss=0.296 acc=0.687 worst=0.582 elapsed=572.4m ETA=1145m
+  R 60 loss=0.269 acc=0.698 worst=0.594 elapsed=669.2m ETA=1004m
+  R 70 loss=0.247 acc=0.696 worst=0.614 elapsed=767.7m ETA=877m
+  R 80 loss=0.232 acc=0.690 worst=0.601 elapsed=866.5m ETA=758m
+  R 90 loss=0.217 acc=0.681 worst=0.595 elapsed=965.3m ETA=644m
+  R100 loss=0.206 acc=0.634 worst=0.561 elapsed=1067.6m ETA=534m
+  R110 loss=0.195 acc=0.691 worst=0.626 elapsed=1177.3m ETA=428m
+  R120 loss=0.182 acc=0.685 worst=0.610 elapsed=1291.3m ETA=323m
+  R130 loss=0.173 acc=0.711 worst=0.635 elapsed=1403.0m ETA=216m
+  R140 loss=0.157 acc=0.728 worst=0.662 elapsed=1512.5m ETA=108m
+  R150 loss=0.154 acc=0.736 worst=0.660 elapsed=1616.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_grid/fx10_pwr_s1.json

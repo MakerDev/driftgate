@@ -1,0 +1,5 @@
+condition,tv_rho_spearman_mean,sd,per_seed,n_seeds,protocol,source_runs
+standard,+0.8656,0.0967,+0.754 +0.927 +0.916,3,same-pool; runs used the earlier controller with the absolute branch,"dvsig_tv_A_s{0,1,2}"
+same-role exits,-0.2133,0.0276,-0.226 -0.233 -0.182,3,same-pool; runs used the earlier controller with the absolute branch,"role_same_role_s{0,1,2}"
+same-role independent init,+0.1514,0.3303,+0.404 -0.222 +0.273,3,same-pool; runs used the earlier controller with the absolute branch,"role_same_role_indep_s{0,1,2}"
+weakened server,+0.0186,0.4123,-0.457 +0.258 +0.255,3,same-pool; runs used the earlier controller with the absolute branch,"role_weak_server_s{0,1,2}"

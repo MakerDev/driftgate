@@ -1,0 +1,18 @@
+[dvsig_js_abrupt_s2] method=splitomcplus controller=selfcal signal=js_div schedule=abrupt rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.400 worst=0.207 elapsed=2.9m ETA=427m
+  R 10 loss=0.394 acc=0.615 worst=0.482 elapsed=18.1m ETA=253m
+  R 20 loss=0.338 acc=0.670 worst=0.514 elapsed=34.1m ETA=221m
+  R 30 loss=0.269 acc=0.705 worst=0.550 elapsed=51.6m ETA=207m
+  R 40 loss=0.261 acc=0.746 worst=0.605 elapsed=69.0m ETA=190m
+  R 50 loss=0.254 acc=0.747 worst=0.612 elapsed=86.4m ETA=173m
+  R 60 loss=0.269 acc=0.740 worst=0.592 elapsed=102.6m ETA=154m
+  R 70 loss=0.256 acc=0.756 worst=0.646 elapsed=120.0m ETA=137m
+  R 80 loss=0.260 acc=0.578 worst=0.529 elapsed=138.5m ETA=121m
+  R 90 loss=0.241 acc=0.583 worst=0.560 elapsed=157.4m ETA=105m
+  R100 loss=0.233 acc=0.601 worst=0.582 elapsed=174.6m ETA=87m
+  R110 loss=0.212 acc=0.606 worst=0.588 elapsed=192.2m ETA=70m
+  R120 loss=0.206 acc=0.616 worst=0.607 elapsed=210.7m ETA=53m
+  R130 loss=0.191 acc=0.616 worst=0.605 elapsed=228.5m ETA=35m
+  R140 loss=0.180 acc=0.621 worst=0.607 elapsed=245.0m ETA=18m
+  R150 loss=0.178 acc=0.624 worst=0.609 elapsed=260.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseC_signals/dvsig_js_abrupt_s2.json

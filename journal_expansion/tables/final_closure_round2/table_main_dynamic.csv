@@ -1,0 +1,13 @@
+setting,method,mean_acc,n_seeds,method_minus_TV_pp,method_minus_fixedgrid_pp,method_minus_entropy_pp,method_minus_TV_ci95,seeds_method_over_TV
+Schedule A,TV,65.8371,5,-,+0.6642,+1.4699,-,-
+Schedule A,server non-Main rate (hard),66.4469,5,+0.6098,+1.2740,+2.0797,"[-0.14,+1.36]",4
+Schedule A,adaptive-lambda Lambda=0.5 (a1),65.9081,5,+0.0711,+0.7352,+1.5410,"[-0.09,+0.23]",3
+Schedule A,fixed-grid best (fx40),65.1729,5,-0.6642,+0.0000,+0.8057,"[-1.01,-0.31]",0
+Schedule A,pre-fixed lambda0.2,64.6999,5,-1.1372,-0.4730,+0.3328,"[-1.91,-0.37]",0
+Schedule A,predictive entropy,64.3672,5,-1.4699,-0.8057,+0.0000,"[-1.89,-1.05]",0
+mobility-med,TV,59.2077,3,-,+0.6291,+1.9945,-,-
+mobility-med,server non-Main rate (hard),59.4025,3,+0.1949,+0.8240,+2.1894,"[-1.07,+1.46]",2
+mobility-med,adaptive-lambda Lambda=0.5 (a1),59.1375,3,-0.0702,+0.5590,+1.9244,"[-0.19,+0.05]",0
+mobility-med,fixed-grid best (fx40),58.5785,3,-0.6291,+0.0000,+1.3654,"[-0.82,-0.44]",0
+mobility-med,pre-fixed lambda0.2,57.9260,3,-1.2817,-0.6525,+0.7128,"[-1.68,-0.89]",0
+mobility-med,predictive entropy,57.2131,3,-1.9945,-1.3654,+0.0000,"[-2.81,-1.18]",0

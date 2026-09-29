@@ -1,0 +1,15 @@
+[mob_fast_dv2_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=6.1m ETA=730m
+  R 10 loss=0.403 acc=0.506 worst=0.407 elapsed=42.2m ETA=464m
+  R 20 loss=0.343 acc=0.571 worst=0.481 elapsed=83.2m ETA=416m
+  R 30 loss=0.268 acc=0.637 worst=0.572 elapsed=124.1m ETA=372m
+  R 40 loss=0.234 acc=0.656 worst=0.601 elapsed=180.1m ETA=360m
+  R 50 loss=0.207 acc=0.702 worst=0.665 elapsed=223.3m ETA=313m
+  R 60 loss=0.185 acc=0.751 worst=0.692 elapsed=284.3m ETA=284m
+  R 70 loss=0.216 acc=0.560 worst=0.555 elapsed=373.6m ETA=267m
+  R 80 loss=0.201 acc=0.569 worst=0.555 elapsed=416.4m ETA=208m
+  R 90 loss=0.192 acc=0.583 worst=0.565 elapsed=464.7m ETA=155m
+  R100 loss=0.182 acc=0.591 worst=0.569 elapsed=508.0m ETA=102m
+  R110 loss=0.173 acc=0.605 worst=0.590 elapsed=551.4m ETA=50m
+  R120 loss=0.165 acc=0.601 worst=0.596 elapsed=595.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseH_mobility/mob_fast_dv2_s0.json

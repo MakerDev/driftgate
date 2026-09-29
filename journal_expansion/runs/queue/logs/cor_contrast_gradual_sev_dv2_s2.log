@@ -1,0 +1,15 @@
+[cor_contrast_gradual_sev_dv2_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.938 acc=0.311 worst=0.195 elapsed=5.5m ETA=650m
+  R 10 loss=0.394 acc=0.497 worst=0.414 elapsed=33.4m ETA=368m
+  R 20 loss=0.338 acc=0.540 worst=0.444 elapsed=62.1m ETA=310m
+  R 30 loss=0.266 acc=0.563 worst=0.471 elapsed=91.4m ETA=274m
+  R 40 loss=0.240 acc=0.592 worst=0.514 elapsed=121.0m ETA=242m
+  R 50 loss=0.217 acc=0.605 worst=0.546 elapsed=154.1m ETA=216m
+  R 60 loss=0.200 acc=0.582 worst=0.502 elapsed=183.4m ETA=183m
+  R 70 loss=0.182 acc=0.549 worst=0.493 elapsed=214.0m ETA=153m
+  R 80 loss=0.164 acc=0.516 worst=0.478 elapsed=243.5m ETA=122m
+  R 90 loss=0.149 acc=0.469 worst=0.418 elapsed=277.0m ETA=92m
+  R100 loss=0.147 acc=0.491 worst=0.455 elapsed=307.3m ETA=61m
+  R110 loss=0.129 acc=0.464 worst=0.440 elapsed=337.6m ETA=31m
+  R120 loss=0.129 acc=0.475 worst=0.422 elapsed=366.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_contrast_gradual_sev_dv2_s2.json

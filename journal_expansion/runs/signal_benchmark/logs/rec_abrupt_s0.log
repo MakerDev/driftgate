@@ -1,0 +1,13 @@
+[rec_abrupt_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=abrupt rounds=100 device=cuda:0
+  R  1 loss=0.884 acc=0.267 worst=0.170 elapsed=2.0m ETA=198m
+  R 10 loss=0.408 acc=0.597 worst=0.505 elapsed=14.6m ETA=131m
+  R 20 loss=0.343 acc=0.643 worst=0.560 elapsed=28.4m ETA=113m
+  R 30 loss=0.301 acc=0.678 worst=0.608 elapsed=41.7m ETA=97m
+  R 40 loss=0.265 acc=0.702 worst=0.639 elapsed=55.6m ETA=83m
+  R 50 loss=0.237 acc=0.729 worst=0.669 elapsed=69.8m ETA=70m
+  R 60 loss=0.213 acc=0.596 worst=0.559 elapsed=84.6m ETA=56m
+  R 70 loss=0.194 acc=0.600 worst=0.522 elapsed=99.5m ETA=43m
+  R 80 loss=0.181 acc=0.603 worst=0.542 elapsed=114.2m ETA=29m
+  R 90 loss=0.166 acc=0.615 worst=0.565 elapsed=128.7m ETA=14m
+  R100 loss=0.152 acc=0.615 worst=0.536 elapsed=143.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark/rec_abrupt_s0.json

@@ -1,0 +1,17 @@
+dataset,seed,main_source,eval_label_access,probe_label_access,current_traffic_label_access,mobility_main_changed,mean_main_per_client,main_ratio,assignment_hash_sha1
+cifar10,0,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,d2d97a721042
+cifar10,1,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,249e08cc6057
+cifar10,2,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,f6637951b759
+cifar10,3,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,e4ce26e962d4
+cifar10,4,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,7c1f4e8f8a69
+cifar100,0,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),20.0,0.200,8a789693a6b2
+cifar100,1,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),20.0,0.200,4e6a7cbeb537
+cifar100,2,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),20.0,0.200,d4f0d039a52e
+tinyimagenet,0,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),40.0,0.200,993e942ef0ab
+tinyimagenet,1,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),40.0,0.200,d05a51318aae
+tinyimagenet,2,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),40.0,0.200,3dfa7f13de07
+svhn,0,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,d2d97a721042
+svhn,1,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,249e08cc6057
+svhn,2,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,f6637951b759
+svhn,3,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,e4ce26e962d4
+svhn,4,nd1_partition(train_labels) [training split],no,no,no(OOP/OOR derived FROM Main),no(Main fixed),2.0,0.200,7c1f4e8f8a69

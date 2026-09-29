@@ -1,0 +1,65 @@
+"""R4 A5 (reproduction settings table, resolved from config/code with file:line sources)
+and A6 (communication accounting supplement). Facts verified in-session; values not in
+config/code are marked '없음'. Writes ../data/a5_config_table.csv and ../data/a6_comm.csv."""
+import csv, sys
+from pathlib import Path
+OUT = Path(__file__).resolve().parent.parent / "data"; OUT.mkdir(parents=True, exist_ok=True)
+ROOT = Path("/disk2/Yujin/adaptive_splitomc_tmc")  # [SERVER-PATH:REPO_ROOT]
+sys.path.insert(0, str(ROOT))
+from models.architectures import ModelFactory
+f = ModelFactory("cifar10", 10, 32); c = f.make_client(); s = f.make_server()
+PC = sum(p.numel() for p in c.parameters()); PS = sum(p.numel() for p in s.parameters())
+
+A5 = [
+ # 항목, 값, 출처(파일:줄)
+ ("optimizer", "SGD", "configs/base_v3.yaml:19; train/trainer.py:85 (torch.optim.SGD)"),
+ ("learning rate / schedule", "0.01, constant (schedule 없음)", "configs/base_v3.yaml:17; train/trainer.py:85-91 (scheduler 없음)"),
+ ("momentum", "0.0", "configs/base_v3.yaml:20"),
+ ("weight decay", "1e-4", "configs/base_v3.yaml:18"),
+ ("local epochs", "3 (epoch 단위; step 수 = batches/epoch × 3)", "configs/base_v3.yaml:15; train/trainer.py:94"),
+ ("train batch size", "32", "configs/base_v3.yaml:16"),
+ ("participation", "1.0 (전원 참여; network stress 제외)", "src/runner.py:284-292"),
+ ("train samples / client (CIFAR-10, seed 0)", "min 620 / median 908 / max 2120 (Main 2 classes)", "data/partition.py:50-104 nd1_partition 재구성"),
+ ("client block (CNN)", "conv3→32→64→64→128 (4 conv+BN, maxpool after conv2/conv4) + aux exit (conv128+BN, GAP, fc→C); 279,882 params", "models/architectures.py:14-52"),
+ ("split / feature shape", "cut after conv4+pool: rep [B,128,8,8] (32×32 입력)", "models/architectures.py:37-53 (comment line 16)"),
+ ("server block", "conv128→256+BN, flatten, fc 256→128→C; 1,378,698 params", "models/architectures.py:54-79"),
+ ("ResNet-18 split (early/middle/late)", "client keeps stages 1/2/3 of layer1-4 (BasicBlock ×2 each)", "src/models_ext.py:93-99 (RESNET_SPLITS)"),
+ ("preprocessing / augmentation (train)", "RandomCrop(32,pad4)+RandomHorizontalFlip+ToTensor+Normalize(CIFAR mean/std)", "data/partition.py:154-158"),
+ ("preprocessing (test/probe)", "ToTensor+Normalize (augmentation 없음)", "data/partition.py:165-167"),
+ ("Main classes / client", "20% of C (CIFAR-10: 2; C100: 20; Tiny: 40; SVHN: 2), sampled from primary-ES scope", "configs/base_v3.yaml:31; data/partition.py:77-84"),
+ ("ES scope", "각 ES가 전체 class의 40–70% 무작위", "configs/base_v3.yaml:29-30; data/partition.py:67-75"),
+ ("non-Main traffic OOP:OOR", "per-class count: OOP = int(main_total·ρ/|OOP|), OOR = int(main_total·0.3ρ/|OOR|) → OOP:OOR ≈ 1:0.3 (class-count 보정)", "data/partition.py:107-143; eval/evaluator.py:159 (oor_ratio_factor=0.3)"),
+ ("ρ schedule A (stepwise)", "frac=(r−1)/T, equal fifths: 0→0.4→0.8→0.4→0 (T=150: R31/61/91/121)", "src/schedules.py:31-32"),
+ ("ρ gradual_sigmoid", "0.8 / (1+exp(−(frac−0.5)/0.08))", "src/schedules.py:58-59"),
+ ("ρ late abrupt", "0 for frac<0.5 else 0.8 (T=100: R51; T=120: R61)", "src/schedules.py:42-43"),
+ ("static spatial per-cluster ρ", "linspace(0, 0.8, 5) = {0,0.2,0.4,0.6,0.8}", "scripts/run_single.py:81-89 (equal_spread)"),
+ ("mobility", "Gauss-Markov (α=0.9, map 1000, dt=10s/round), speed slow/med/fast = 3/12/30, seed 42; ALL clients move every round; top-2 nearest ES re-evaluated every 5 rounds → rewire if set changes (1–10 clients / 5 rounds observed)", "src/runner.py:206-213, 343-355; network/mobility.py:17-63"),
+ ("corruption severity", "abrupt_sev: 0→0.8 at frac 0.5; gradual_sev: 0.8·(frac−0.3)/0.4 clipped; recurring_sev: 5 segments", "src/corruptions.py:58-70"),
+ ("edge servers / overlap", "5 ES, 50 clients, overlap 50% (client → 2 ES)", "configs/base_v3.yaml:9-11; data/partition.py:17"),
+ ("consensus graph (1-step)", "line 0-1-2-3-4 (sequential neighbors)", "data/partition.py:189-199; self_calibrating.py:61-69"),
+ ("eval rounds", "R1 then every 10 (150R: 16; 120R: 13; 100R: 11)", "configs/base_v3.yaml:35; src/runner.py:538"),
+ ("warm-up / burn-in λ,Λ", "n_obs ≤ 25 (burn-in 10 + warm-up 15): λ=(0.15+0.70)/2=0.425, Λ=0.55 (F3의 R1–25 = 0.425 확인)", "self_calibrating.py:83,124-128,167-169"),
+ ("routing threshold eth", "0.8 (모든 방법 동일)", "configs/base_v3.yaml:34; eval/evaluator.py (route_to_server)"),
+ ("γ (multi-exit loss)", "0.5", "configs/base_v3.yaml:23"),
+]
+with open(OUT / "a5_config_table.csv", "w", newline="") as fh:
+    w = csv.writer(fh); w.writerow(["item", "value", "source(file:line)"]); w.writerows(A5)
+
+# ---------------- A6 communication ----------------
+CB = PC * 4; SB = PS * 4
+A6 = [
+ ("client block bytes (fp32)", CB, "models/architectures.py; 279,882 params"),
+ ("server block bytes (fp32)", SB, "1,378,698 params"),
+ ("recorded model exchange / round (overlap-2 client)", 12149112, "= client block + 2 server blocks = %d (exact match)" % (CB + 2 * SB)),
+ ("→ interpretation", "one direction of the SplitOMC+ state exchange for ONE overlap-2 client per round", "producer script not in repo; derived from parameter counts"),
+ ("replica refresh downlink / client / round (2 server-block replicas ← cell averages)", 2 * SB, "trainer.update_client_models: set_server_state(es, server_avg) for each ES; NOT separately counted in 12,149,112"),
+ ("cluster client-avg downlink / client / round", CB, "update_client_models: mix with clients_avg_weights"),
+ ("uplink / client / round (local client block + 2 server blocks)", CB + 2 * SB, "EdgeServer.aggregate reads client & server states"),
+ ("DriftGate scalar uplink", 4, "1 float32 per client per round; consensus 4·degree B per ES"),
+ ("edge-placed server exit: extra uplink @probe 16", 32768 * 16 + 10 * 4, "ESTIMATE: 32 KiB activation × 16 + client prob vector C×4 B (C=10)"),
+ ("edge-placed server exit: extra uplink @probe 32", 32768 * 32 + 10 * 4, "ESTIMATE"),
+ ("edge-placed server exit: extra uplink @probe 64", 32768 * 64 + 10 * 4, "ESTIMATE"),
+]
+with open(OUT / "a6_comm.csv", "w", newline="") as fh:
+    w = csv.writer(fh); w.writerow(["item", "bytes_or_value", "basis"]); w.writerows(A6)
+print("A5 rows", len(A5), "| A6 rows", len(A6), "| client", CB, "server", SB, "sum", CB + 2 * SB)

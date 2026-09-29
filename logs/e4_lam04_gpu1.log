@@ -1,0 +1,20 @@
+[splitomcplus_lam0.4_Lam0.5_mob] Starting splitomcplus with lambda=0.4, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:1
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.268 acc_oop=0.153 acc_oor=0.056 acc_total=0.221 elapsed=1.8m ETA=275m
+  R 10 loss=0.415 acc_main=0.493 acc_oop=0.367 acc_oor=0.187 acc_total=0.436 elapsed=16.7m ETA=234m
+  R 20 loss=0.354 acc_main=0.559 acc_oop=0.409 acc_oor=0.209 acc_total=0.492 elapsed=32.0m ETA=208m
+  R 30 loss=0.310 acc_main=0.625 acc_oop=0.452 acc_oor=0.245 acc_total=0.549 elapsed=49.3m ETA=197m
+  R 40 loss=0.275 acc_main=0.663 acc_oop=0.484 acc_oor=0.254 acc_total=0.584 elapsed=66.7m ETA=184m
+  R 50 loss=0.248 acc_main=0.685 acc_oop=0.483 acc_oor=0.267 acc_total=0.599 elapsed=84.2m ETA=168m
+  R 60 loss=0.225 acc_main=0.693 acc_oop=0.489 acc_oor=0.270 acc_total=0.606 elapsed=101.7m ETA=152m
+  R 70 loss=0.206 acc_main=0.717 acc_oop=0.488 acc_oor=0.291 acc_total=0.623 elapsed=119.8m ETA=137m
+  R 80 loss=0.189 acc_main=0.724 acc_oop=0.487 acc_oor=0.321 acc_total=0.630 elapsed=136.6m ETA=120m
+  R 90 loss=0.177 acc_main=0.734 acc_oop=0.459 acc_oor=0.299 acc_total=0.627 elapsed=153.9m ETA=103m
+  R100 loss=0.161 acc_main=0.755 acc_oop=0.473 acc_oor=0.321 acc_total=0.647 elapsed=170.8m ETA=85m
+  R110 loss=0.155 acc_main=0.770 acc_oop=0.492 acc_oor=0.340 acc_total=0.663 elapsed=187.7m ETA=68m
+  R120 loss=0.143 acc_main=0.769 acc_oop=0.451 acc_oor=0.320 acc_total=0.650 elapsed=204.1m ETA=51m
+  R130 loss=0.131 acc_main=0.790 acc_oop=0.470 acc_oor=0.321 acc_total=0.669 elapsed=221.8m ETA=34m
+  R140 loss=0.129 acc_main=0.797 acc_oop=0.470 acc_oor=0.322 acc_total=0.674 elapsed=237.1m ETA=17m
+  R150 loss=0.120 acc_main=0.817 acc_oop=0.455 acc_oor=0.324 acc_total=0.683 elapsed=253.5m ETA=0m
+  Saved: ./results/e4_mobility/splitomcplus_lam0.4_Lam0.5_mob.json

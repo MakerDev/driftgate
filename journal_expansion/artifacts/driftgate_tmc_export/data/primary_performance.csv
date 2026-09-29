@@ -1,0 +1,13 @@
+setting,arm,mean_pct,sd_pct,n_seeds
+CIFAR-10 Schedule A,tv,65.8371,2.0295,5
+CIFAR-10 Schedule A,ent,64.3672,1.7507,5
+CIFAR-10 Schedule A,fx40,65.1729,2.0678,5
+CIFAR-10 Schedule A,fx30,65.1007,1.9145,5
+CIFAR-10 Schedule A,fx50,64.8602,2.1774,5
+CIFAR-10 Schedule A,a1,65.9081,2.0123,5
+CIFAR-10 medium mobility,tv,59.2077,0.3679,3
+CIFAR-10 medium mobility,ent,57.2131,0.4615,3
+CIFAR-10 medium mobility,fx40,58.5785,0.4231,3
+CIFAR-10 medium mobility,a1,59.1375,0.3998,3
+CIFAR-10 Schedule A,fx20_prereg,64.6999,1.7295,5
+CIFAR-10 medium mobility,fx20_prereg,57.9260,0.4539,3

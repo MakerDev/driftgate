@@ -1,0 +1,8 @@
+- [Long-running jobs survive Claude sandbox cleanup](feedback_long_running_jobs.md) — use `setsid nohup ... &` not tmux; verify PPID=1
+- [Adaptive-SplitOMC v3 paper framing locked](project_adaptive_splitomc_paper_framing.md) — E2 = two-signal ablation contribution, E3 spatial = potential main result
+- [Disagreement-signal result (v4)](project_disagreement_signal_result.md) — fixes entropy convergence-death (E3 stratification held to R150) but E2 PARTIAL +1.3pp, E3 worst_cell below best fixed; calibration locked mu=0.35
+- [Phase 3 fairness-weighting (v5)](project_phase3_fairness_status.md) — PATH-2 STEP1 done+tested (η drift-aware aggregation); STEP2 gate E3 η=1.0 next; v5 separate branch
+- [Fig1 signal_decay real numbers](project_fig1_signal_decay_numbers.md) — AUDIT 07-12: baseline reopened, full-pre-mean(→1.18×) is warmup-contaminated; R25≈final-10-window→δ peak 1.42×@R67, 100% active-drift ≥1.0; CONFOUND: entropy vs δ are 2 different runs → READY_WITH_LIMITATION; use signal_decay_verified.pdf
+- [TMC expansion state](project_tmc_expansion_state.md) — full history Gate A → Round 4 (relonly chosen, R4 paused 09-24); Round 5 status lives in MIGRATION/ROUND5_STATUS.md
+- [Paired shadow experiment (E2-A)](project_paired_shadow_experiment.md) — DONE 07-15 PAIRED_SIGNAL_CONFIRMED (3 seeds, same-run H vs δ); δ severe 1.35× tracks ρ, H ρ-corr≈0; peak round seed-unstable (avoid 1.42×); paper fig replaced sha b584597c
+- [Server migration 2026-09-29](project_server_migration.md) — repo moved ubuntu20 → GitHub MakerDev/driftgate → new server; follow MIGRATION/START_HERE.md

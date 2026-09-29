@@ -1,0 +1,102 @@
+# Integrated Results — R100 (early-cutoff)
+
+**Adaptive-SplitOMC v4 · all phases at the R100 training horizon · auto-generated from result JSONs (no hand-transcribed numbers).** Companion: `Integrated_R150.md`.
+
+## Signal-mode provenance
+
+| Phase | adaptive signal |
+|---|---|
+| E1 static | entropy |
+| E2 temporal | disagreement (mu=0.31) |
+| E3 spatial | disagreement (mu=0.31) |
+| E4 mobility | disagreement (mu=0.31) + entropy backup |
+| E5 signal ablation | 3-way: entropy / disagreement / disagreement+margin (β=0.5), 150R |
+
+Calibration (disagreement): `mu_drift=0.31, tau_drift=0.045, lam[0.15,0.7], Lam[0.4,0.7]`; entropy: `mu_H=2.0, tau_H=0.5`.
+
+---
+
+## E1 — Static Pareto (no drift, ρ=0.4 eval)  [adaptive = ENTROPY]
+
+| Rank | Method | acc_total | main | oop | oor | worst_cell |
+|---:|---|---:|---:|---:|---:|---:|
+| 1 | splitomcplus_lam0.2_Lam0.5 | 0.6790 | 0.753 | 0.629 | 0.226 | 0.638 |
+| 2 | **adaptive_splitomc** | 0.6771 | 0.736 | 0.631 | 0.342 | 0.629 |
+| 3 | splitomcplus_lam0.4_Lam0.5 | 0.6756 | 0.794 | 0.531 | 0.170 | 0.637 |
+| 4 | splitomc_lam0.2 | 0.6741 | 0.777 | 0.599 | 0.065 | 0.612 |
+| 5 | splitomc_lam0.4 | 0.6718 | 0.820 | 0.488 | 0.052 | 0.612 |
+| 6 | splitfed | 0.6626 | 0.682 | 0.660 | 0.511 | 0.624 |
+| 7 | fedprox | 0.6613 | 0.680 | 0.661 | 0.511 | 0.623 |
+| 8 | fedavg | 0.6609 | 0.679 | 0.659 | 0.513 | 0.623 |
+| 9 | splitomc_lam0.0 | 0.6608 | 0.735 | 0.651 | 0.077 | 0.592 |
+| 10 | splitgp_lam0.2 | 0.6481 | 0.699 | 0.588 | 0.423 | 0.602 |
+| 11 | splitgp_lam0.5 | 0.6428 | 0.780 | 0.411 | 0.267 | 0.627 |
+| 12 | splitomc_lam0.6 | 0.6278 | 0.834 | 0.291 | 0.029 | 0.571 |
+| 13 | splitomcplus_lam0.6_Lam0.5 | 0.6244 | 0.813 | 0.313 | 0.091 | 0.585 |
+| 14 | fedmes | 0.6161 | 0.679 | 0.632 | 0.040 | 0.479 |
+| 15 | splitomc_lam0.8 | 0.5885 | 0.852 | 0.103 | 0.009 | 0.539 |
+| 16 | splitgp_lam0.8 | 0.5846 | 0.853 | 0.077 | 0.037 | 0.551 |
+
+## E2 — Temporal drift (Schedule A)  [adaptive = DISAGREEMENT mu=0.31]
+
+| Method | integrated | ρ=0 | ρ=0.4 | ρ=0.8 |
+|---|---:|---:|---:|---:|
+| adaptive (disagree mu=0.31) | 0.6001 | 0.5360 | 0.6463 | 0.6240 |
+| adaptive (disagree mu=0.35) | 0.5999 | 0.5394 | 0.6449 | 0.6205 |
+| adaptive (disagree mu=0.392) | 0.5988 | 0.5538 | 0.6373 | 0.6076 |
+| adaptive (entropy) | 0.5761 | 0.5506 | 0.6248 | 0.5450 |
+| fixed λ=0.2 | 0.5973 | 0.5277 | 0.6427 | 0.6294 |
+| fixed λ=0.4 | 0.5969 | 0.5431 | 0.6396 | 0.6118 |
+| fixed λ=0.6 | 0.5786 | 0.5663 | 0.6127 | 0.5494 |
+
+- best fixed = fixed λ=0.2 (0.5973); adaptive(mu=0.31) **+0.28 pp = PARTIAL** · vs entropy **+2.41 pp**
+
+## E3 — Spatial heterogeneity (equal_spread: cell0 ρ=0 … cell4 ρ=0.8)  [adaptive = DISAGREEMENT mu=0.31]
+
+| Method | acc_total | worst_cell | best_cell | cell_gap |
+|---|---:|---:|---:|---:|
+| adaptive (disagree mu=0.31) | 0.7177 | 0.6445 | 0.8310 | 0.1865 |
+| adaptive (disagree mu=0.35) | 0.7193 | 0.6369 | 0.8572 | 0.2204 |
+| adaptive (entropy) | 0.6833 | 0.5412 | 0.8728 | 0.3316 |
+| fixed λ=0.2 | 0.6911 | 0.6480 | 0.7480 | 0.1000 |
+| fixed λ=0.4 | 0.6980 | 0.6319 | 0.7714 | 0.1395 |
+| fixed λ=0.6 | 0.6809 | 0.5849 | 0.8219 | 0.2370 |
+
+- acc_total: adaptive 0.7177 vs best fixed 0.6980 (fixed λ=0.4) → **+1.97 pp**
+- worst_cell: adaptive 0.6445 vs best fixed 0.6480 (fixed λ=0.2) → **-0.35 pp = NOT MET**
+- λ stratification spread @R100: disagreement **0.355** vs entropy **0.015** (FLAT)
+
+## E4 — Mobility (Gauss-Markov rewiring)  [adaptive = DISAGREEMENT mu=0.31]
+
+| Method | acc_total | main | oop | oor | worst_cell |
+|---|---:|---:|---:|---:|---:|
+| adaptive (disagreement) | 0.6385 | 0.705 | 0.548 | 0.387 | 0.6110 |
+| adaptive (entropy) | 0.6236 | 0.811 | 0.286 | 0.192 | 0.5980 |
+| fixed λ=0.2 | 0.6434 | 0.707 | 0.558 | 0.394 | 0.6132 |
+| fixed λ=0.4 | 0.6467 | 0.755 | 0.473 | 0.321 | 0.6252 |
+| fixed λ=0.6 | 0.6236 | 0.818 | 0.273 | 0.173 | 0.6109 |
+
+- disagreement vs entropy: **acc +1.49 pp, worst +1.30 pp**
+- disagreement vs **best fixed acc (fixed λ=0.4, 0.6467)**: **-0.82 pp**
+- disagreement vs **best fixed worst (fixed λ=0.4, 0.6252)**: **-1.43 pp = NOT MET**
+
+## E5 — 3-way SIGNAL ablation (Schedule A, 150R, same controller — only signal source changes)
+
+| Signal | integrated | ρ=0 | ρ=0.4 | ρ=0.8 |
+|---|---:|---:|---:|---:|
+| entropy | 0.5768 | 0.5502 | 0.6263 | 0.5463 |
+| disagreement (S1) | 0.6000 | 0.5359 | 0.6463 | 0.6238 |
+| disagreement+margin (β=0.5) | 0.5973 | 0.5267 | 0.6443 | 0.6288 |
+
+- **disagreement − entropy = +2.32 pp** (same controller, only the signal swapped) — direct C1 isolation.
+- **(disagreement+margin) − disagreement = -0.27 pp** — margin HURTS → S1 alone best, β=0 confirmed.
+
+---
+
+## Headline summary (R100)
+
+- **C1 (signal): disagreement > entropy everywhere** — E5 signal-swap +2.32 pp; E2 +2.41; E3 acc +3.44; E4 acc +1.49.
+- **vs best hand-tuned fixed λ:** E2 PARTIAL (+0.28 pp); E3 worst_cell -0.35 pp; E4 acc -0.82 pp / worst -1.43 pp. Disagreement does NOT beat best fixed on these aggregates at R100.
+- **S1 sufficiency:** adding S2 margin hurts (β=0 is correct).
+
+_Generated by `scripts/gen_integrated.py`. All values are real eval points at the R100 cutoff (eval_every=10/20)._

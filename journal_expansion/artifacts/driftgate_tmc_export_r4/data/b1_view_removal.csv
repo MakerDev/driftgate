@@ -1,0 +1,8 @@
+setting,arm,arm_mean_pct,arm_sd,full_mean_pct,full_minus_arm_pp,ci95,n_pos,n_seeds
+stepwise composition change,absonly,64.9176,1.9646,65.8371,+0.9195,"[+0.58,+1.25]",5,5
+stepwise composition change,relonly,65.9288,2.0067,65.8371,-0.0917,"[-0.18,-0.01]",0,5
+client mobility,absonly,57.9330,0.3068,59.2077,+1.2746,"[+0.97,+1.57]",3,3
+client mobility,relonly,59.2289,0.3560,59.2077,-0.0212,"[-0.09,+0.04]",1,3
+CIFAR-100 gradual,absonly,34.8870,1.3094,36.1029,+1.2159,"[+1.09,+1.34]",3,3
+CIFAR-100 gradual,relonly,36.0912,1.3614,36.1029,+0.0118,"[-0.02,+0.04]",3,3
+CIFAR-100 spatial,nospatial,36.4420,1.4880,36.4355,-0.0065,"[-0.04,+0.03]",1,3

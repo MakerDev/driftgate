@@ -1,0 +1,1 @@
+device_model,chipset,precision,model_format,batch_size,probe_size,client_forward_ms,client_exit_ms,probe_path_ms,signal_computation_ms,controller_update_ms,e2e_local_probe_ms,p95_e2e_ms,peak_rss_mb,energy_j

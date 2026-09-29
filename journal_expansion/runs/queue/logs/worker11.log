@@ -1,0 +1,23 @@
+[worker11 cuda:1] START cor_contrast_abrupt_sev_dv2_s0 2026. 07. 24. (금) 15:17:00 KST
+[worker11 cuda:1] END cor_contrast_abrupt_sev_dv2_s0 exit=0 2026. 07. 24. (금) 22:20:33 KST
+[worker11 cuda:1] START cor_gaussian_noise_abrupt_sev_dv2_s0 2026. 07. 24. (금) 22:20:33 KST
+[worker11 cuda:1] END cor_gaussian_noise_abrupt_sev_dv2_s0 exit=0 2026. 07. 25. (토) 04:47:51 KST
+[worker11 cuda:1] START cor_motion_blur_abrupt_sev_dv2_s2 2026. 07. 25. (토) 04:47:51 KST
+[worker11 cuda:1] END cor_motion_blur_abrupt_sev_dv2_s2 exit=0 2026. 07. 25. (토) 11:23:51 KST
+[worker11 cuda:1] START mob_slow_fx20_s0 2026. 07. 25. (토) 11:23:51 KST
+[worker11 cuda:1] END mob_slow_fx20_s0 exit=0 2026. 07. 25. (토) 19:53:11 KST
+[worker11 cuda:1] START mob_slow_dve_s2 2026. 07. 25. (토) 19:53:11 KST
+[worker11 cuda:1] END mob_slow_dve_s2 exit=0 2026. 07. 26. (일) 03:41:18 KST
+[worker11 cuda:1] START mob_med_fx40_s1 2026. 07. 26. (일) 03:41:18 KST
+[worker11 cuda:1] END mob_med_fx40_s1 exit=0 2026. 07. 26. (일) 12:53:00 KST
+[worker11 cuda:1] START mob_fast_fx20_s0 2026. 07. 26. (일) 12:53:01 KST
+[worker11 cuda:1] END mob_fast_fx20_s0 exit=0 2026. 07. 26. (일) 21:05:21 KST
+[worker11 cuda:1] START mob_fast_dve_s2 2026. 07. 26. (일) 21:05:21 KST
+[worker11 cuda:1] END mob_fast_dve_s2 exit=0 2026. 07. 27. (월) 04:53:15 KST
+[worker11 cuda:1] START net_delay2_s2 2026. 07. 27. (월) 04:53:15 KST
+[worker11 cuda:1] END net_delay2_s2 exit=0 2026. 07. 27. (월) 11:47:49 KST
+[worker11 cuda:1] START net_loss20_s1 2026. 07. 27. (월) 11:47:49 KST
+[worker11 cuda:1] END net_loss20_s1 exit=0 2026. 07. 27. (월) 19:18:29 KST
+[worker11 cuda:1] START net_ring_s2 2026. 07. 27. (월) 19:18:29 KST
+[worker11 cuda:1] END net_ring_s2 exit=0 2026. 07. 28. (화) 02:18:33 KST
+[worker11 cuda:1] START cluster_shuffle_A_s1 2026. 07. 28. (화) 02:18:33 KST

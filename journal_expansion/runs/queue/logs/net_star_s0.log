@@ -1,0 +1,15 @@
+[net_star_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=5.9m ETA=703m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=38.9m ETA=428m
+  R 20 loss=0.334 acc=0.646 worst=0.562 elapsed=77.3m ETA=387m
+  R 30 loss=0.255 acc=0.700 worst=0.642 elapsed=116.1m ETA=348m
+  R 40 loss=0.224 acc=0.721 worst=0.667 elapsed=153.6m ETA=307m
+  R 50 loss=0.194 acc=0.746 worst=0.693 elapsed=189.2m ETA=265m
+  R 60 loss=0.172 acc=0.786 worst=0.745 elapsed=223.8m ETA=224m
+  R 70 loss=0.244 acc=0.593 worst=0.526 elapsed=259.3m ETA=185m
+  R 80 loss=0.232 acc=0.600 worst=0.538 elapsed=297.5m ETA=149m
+  R 90 loss=0.216 acc=0.621 worst=0.572 elapsed=335.7m ETA=112m
+  R100 loss=0.200 acc=0.624 worst=0.553 elapsed=372.9m ETA=75m
+  R110 loss=0.192 acc=0.645 worst=0.602 elapsed=409.9m ETA=37m
+  R120 loss=0.182 acc=0.658 worst=0.616 elapsed=491.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseI_network/net_star_s0.json

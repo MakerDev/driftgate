@@ -1,0 +1,24 @@
+setting,lambda,mean_pct,sd,n_seeds
+stepwise composition change,0.2,64.6999,1.7295,5
+stepwise composition change,0.3,65.1007,1.9145,5
+stepwise composition change,0.4,65.1729,2.0678,5
+stepwise composition change,0.5,64.8602,2.1774,5
+client mobility,0.2,57.9260,0.4539,3
+client mobility,0.3,58.4530,0.4513,3
+client mobility,0.4,58.5785,0.4231,3
+client mobility,0.5,58.3001,0.3909,3
+client mobility,0.5(B3),58.2740,0.3790,3
+client mobility,0.6,57.9456,0.4541,3
+SVHN temporal,0.15,79.7137,0.6724,2
+SVHN temporal,0.2,80.4345,1.6900,5
+SVHN temporal,0.4,79.7948,1.6860,5
+CIFAR-10 gradual,0.15,62.5753,,1
+CIFAR-10 gradual,0.2,62.8556,0.5086,3
+CIFAR-10 gradual,0.4,62.1362,0.7857,3
+CIFAR-100 gradual,0.15,37.5710,,1
+CIFAR-100 gradual,0.2,35.9081,1.4227,3
+CIFAR-100 gradual,0.4,35.0016,1.3326,3
+CIFAR-100 spatial,0.2,36.4366,1.5577,3
+CIFAR-100 spatial,0.4,35.7142,1.4791,3
+Tiny-ImageNet,0.2,24.3149,0.0911,3
+Tiny-ImageNet,0.4,23.8245,0.1587,3

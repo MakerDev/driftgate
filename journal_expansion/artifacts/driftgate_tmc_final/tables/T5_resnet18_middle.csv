@@ -1,0 +1,4 @@
+setting,method,n_seeds,integrated_acc_pct,sd_pct,DriftGate_minus_method_pp,ci95,n_pos,n_matched,source_runs
+ResNet-18 middle split (stepwise),DriftGate,0,,,,,,,
+ResNet-18 middle split (stepwise),fixed 0.2,0,,,,,,,
+ResNet-18 middle split (stepwise),fixed 0.4,0,,,,,,,

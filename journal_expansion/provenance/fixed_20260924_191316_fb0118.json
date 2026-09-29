@@ -1,0 +1,593 @@
+{
+ "run_id": "fixed_20260924_191316_fb0118",
+ "git_commit": "e82b96b76a5a1e644f742c701accefb4af33fc38",
+ "config": {
+  "cfg": {
+   "dataset": "cifar100",
+   "num_classes": 100,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 150,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 0,
+   "model_seed": 100,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.15,
+  "big_lambda_val": 0.5,
+  "schedule": "gradual_sigmoid",
+  "spatial_mode": null,
+  "controller_mode": "fixed",
+  "controller_signal": "delta_hard",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "b3_c100gsig_fx15_s0"
+ },
+ "config_sha256": "189327bbedf54c22b2c1df271455ce8bdafbdc93206443da5263eca42f2e7cfd",
+ "command": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode fixed --lambda_val 0.15 --big_lambda_val 0.5 --disjoint_pools --dataset cifar100 --schedule gradual_sigmoid --rounds 150 --probe_n 64 --seed 0 --model_seed 100 --run_name b3_c100gsig_fx15_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B3_fixedgrid --device cuda:0",
+ "start_time": "2026-09-24T19:13:16.261413",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 3090 Ti"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 0,
+  "per_class": {
+   "0": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "1": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "2": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "3": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "4": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "5": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "6": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "7": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "8": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "9": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "10": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "11": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "12": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "13": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "14": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "15": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "16": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "17": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "18": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "19": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "20": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "21": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "22": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "23": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "24": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "25": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "26": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "27": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "28": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "29": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "30": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "31": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "32": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "33": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "34": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "35": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "36": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "37": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "38": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "39": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "40": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "41": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "42": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "43": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "44": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "45": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "46": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "47": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "48": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "49": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "50": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "51": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "52": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "53": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "54": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "55": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "56": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "57": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "58": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "59": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "60": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "61": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "62": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "63": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "64": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "65": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "66": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "67": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "68": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "69": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "70": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "71": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "72": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "73": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "74": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "75": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "76": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "77": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "78": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "79": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "80": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "81": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "82": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "83": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "84": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "85": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "86": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "87": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "88": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "89": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "90": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "91": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "92": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "93": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "94": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "95": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "96": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "97": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "98": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   },
+   "99": {
+    "n_total": 100,
+    "n_controller": 20,
+    "n_eval": 80
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "split_hash": "09347ee04e973024",
+ "model_init_hash": "475456e04a04f670",
+ "end_time": "2026-09-24T22:40:35.597130",
+ "wall_time_sec": 12439.110889911652,
+ "final_metrics": {
+  "acc_total_final": 0.4870763173405409,
+  "worst_cell_final": 0.44494001845585973,
+  "integrated_acc": 0.37571032588585584,
+  "wall_min": 207.2113206744194
+ }
+}

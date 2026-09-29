@@ -1,0 +1,13 @@
+[sc_delta_b10_sp_s2] method=splitomcplus controller=selfcal signal=delta_hard schedule=static rounds=100 device=cuda:0
+  R  1 loss=0.938 acc=0.345 worst=0.190 elapsed=2.4m ETA=236m
+  R 10 loss=0.394 acc=0.531 worst=0.383 elapsed=13.9m ETA=126m
+  R 20 loss=0.338 acc=0.575 worst=0.410 elapsed=26.6m ETA=106m
+  R 30 loss=0.229 acc=0.598 worst=0.428 elapsed=39.0m ETA=91m
+  R 40 loss=0.188 acc=0.630 worst=0.453 elapsed=51.9m ETA=78m
+  R 50 loss=0.168 acc=0.643 worst=0.470 elapsed=64.8m ETA=65m
+  R 60 loss=0.152 acc=0.640 worst=0.438 elapsed=77.6m ETA=52m
+  R 70 loss=0.140 acc=0.643 worst=0.486 elapsed=90.4m ETA=39m
+  R 80 loss=0.129 acc=0.655 worst=0.468 elapsed=103.0m ETA=26m
+  R 90 loss=0.118 acc=0.666 worst=0.516 elapsed=115.9m ETA=13m
+  R100 loss=0.117 acc=0.661 worst=0.483 elapsed=128.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/sc_delta_b10_sp_s2.json

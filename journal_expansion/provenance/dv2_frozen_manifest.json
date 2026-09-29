@@ -1,0 +1,106 @@
+{
+ "name": "selfcal-DV-2 (dual-exit divergence, TV) \u2014 FINAL FROZEN (Gate 3)",
+ "freeze_timestamp": "2026-07-20T08:22:27.851543",
+ "git_commit": "e82b96b76a5a1e644f742c701accefb4af33fc38",
+ "source_hashes_sha256_16": {
+  "src/controllers/self_calibrating.py": "013e7afd411a37d5",
+  "src/controllers/normalizers.py": "47161d583be555df",
+  "src/signals/library.py": "29a0992c4021a049",
+  "src/runner.py": "fcd0e985972c5dc2"
+ },
+ "controller": {
+  "signal": "tv_dist (selected at Gate 2: env-mean +0.37pp vs delta, no meaningful worst-case loss; delta_hard retained as hard-variant ablation)",
+  "probe": {
+   "n": 64,
+   "frequency": "every round",
+   "source": "unlabeled rho-mixed deployment traffic"
+  },
+  "temporal_normalizer": {
+   "type": "GuardedRobustNormalizer",
+   "warmup": 15,
+   "burn_in": 10,
+   "beta": 0.05,
+   "z_guard_hi": 0.5,
+   "sigma_floor_rel": 0.1,
+   "sigma_floor_abs": 0.001,
+   "z_clip": [
+    -2.0,
+    6.0
+   ]
+  },
+  "spatial_normalizer": {
+   "type": "cross-cell robust z (current round)",
+   "mad_scale": 1.4826,
+   "floor": "max(1e-3, 0.10*max(|median|,0.05))",
+   "clip": [
+    -2.0,
+    6.0
+   ]
+  },
+  "view_combination": "z = max(EWMA(z_temporal), EWMA(z_spatial)); lambda = min(lambda_selfcal(z), lambda_abs)",
+  "ewma_alpha": 0.3,
+  "mapping": {
+   "z0": 1.5,
+   "tau_z": 0.75,
+   "form": "lam_max-(lam_max-lam_min)*sigmoid((z-z0)/tau_z)"
+  },
+  "absolute_view": {
+   "lambda_abs": "lam_max-(lam_max-lam_min)*clip(EWMA(consensus(delta)),0,1)",
+   "justification": "delta is a probability (fraction of traffic outside client-head competence)"
+  },
+  "warmup_output": "lambda=(lam_min+lam_max)/2 for first burn_in+warmup rounds",
+  "consensus": {
+   "steps": 1,
+   "graph": "ES line topology (default)"
+  },
+  "bounds": {
+   "lam_min": 0.15,
+   "lam_max": 0.7,
+   "Lam_min": 0.4,
+   "Lam_max": 0.7,
+   "inherited_from": "ICTC v4 config (not re-tuned)"
+  },
+  "signal_range": 1.0
+ },
+ "design_contaminated_datasets": [
+  "cifar10",
+  "cifar100",
+  "tinyimagenet"
+ ],
+ "design_contaminated_schedules": [
+  "A",
+  "abrupt",
+  "recurring",
+  "burst",
+  "gradual_sigmoid",
+  "asym_return",
+  "piecewise_random",
+  "spatial_equal_spread"
+ ],
+ "valid_holdout_candidates": [
+  "svhn",
+  "emnist/femnist",
+  "pacs",
+  "gtsrb",
+  "stl10"
+ ],
+ "note": "FINAL method freeze (Gate 3). No further signal/constant changes. Holdout (SVHN) preregistered AFTER this freeze.",
+ "amendments": [
+  {
+   "timestamp": "2026-07-18T23:18:44.757879",
+   "change": "SIGNAL_RANGE table + signal_range param added for Gate-2 signal-family comparison (mathematical-range normalization of the absolute view for non-delta signals)",
+   "behavior_for_frozen_delta_config": "IDENTICAL (delta_hard range=1.0; d_hat=sig/1.0)",
+   "old_hash_self_calibrating": "16ccf6c42e25ee3c",
+   "new_hash_self_calibrating": "013e7afd411a37d5"
+  },
+  {
+   "timestamp": "2026-07-22T18:40:02.841643",
+   "change": "runner.py: composition-coupled mobility (Phase H) + covariate corruption (Phase G) harness; routing.py: false-agreement aggregation (eval-only). Controller math UNCHANGED.",
+   "controller_behavior": "identical (verified: 52 tests pass; mobility/corruption are environment harness, not controller)",
+   "runner_hash": "61afaaddb931a66c",
+   "routing_hash": "ec171f91d1b35478"
+  }
+ ],
+ "gate2_evidence": "tables/final_signal_comparison.csv",
+ "invocation": "--mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --abs_cap"
+}

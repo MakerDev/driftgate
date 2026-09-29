@@ -1,0 +1,14 @@
+[e3_lmax060_A_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.333 worst=0.170 elapsed=3.8m ETA=573m
+  R 10 loss=0.394 acc=0.549 worst=0.414 elapsed=23.5m ETA=329m
+  R 20 loss=0.333 acc=0.637 worst=0.491 elapsed=47.1m ETA=306m
+  R 30 loss=0.253 acc=0.694 worst=0.570 elapsed=70.2m ETA=281m
+  R 40 loss=0.261 acc=0.586 worst=0.472 elapsed=94.5m ETA=260m
+  R 50 loss=0.247 acc=0.616 worst=0.545 elapsed=118.4m ETA=237m
+  R 60 loss=0.228 acc=0.631 worst=0.556 elapsed=143.5m ETA=215m
+  R 70 loss=0.225 acc=0.616 worst=0.557 elapsed=168.8m ETA=193m
+  R 80 loss=0.214 acc=0.610 worst=0.547 elapsed=194.3m ETA=170m
+  R 90 loss=0.203 acc=0.595 worst=0.533 elapsed=219.1m ETA=146m
+  R100 loss=0.186 acc=0.652 worst=0.567 elapsed=243.4m ETA=122m
+  R110 loss=0.178 acc=0.678 worst=0.617 elapsed=267.9m ETA=97m
+  R120 loss=0.166 acc=0.672 worst=0.590 elapsed=291.4m ETA=73m

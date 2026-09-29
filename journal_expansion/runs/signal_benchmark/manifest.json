@@ -1,0 +1,48 @@
+{
+ "jobs": [
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_A_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_A_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_A_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_abrupt_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_abrupt_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_abrupt_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_recurring_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_recurring_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_recurring_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_burst_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_burst_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+  "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_burst_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}"
+ ],
+ "slots": {
+  "slot0": {
+   "device": "cuda:0",
+   "jobs": [
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_A_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_abrupt_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_recurring_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 0 --model_seed 100 --rounds 100 --probe_n 64 --run_name rec_burst_s0 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}"
+   ],
+   "script": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/_slot0.sh"
+  },
+  "slot1": {
+   "device": "cuda:1",
+   "jobs": [
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_A_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_abrupt_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_recurring_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 1 --model_seed 101 --rounds 100 --probe_n 64 --run_name rec_burst_s1 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}"
+   ],
+   "script": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/_slot1.sh"
+  },
+  "slot2": {
+   "device": "cuda:1",
+   "jobs": [
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule A --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_A_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule abrupt --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_abrupt_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule recurring --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_recurring_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}",
+    "python -u /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py --mode passive --schedule burst --seed 2 --model_seed 102 --rounds 100 --probe_n 64 --run_name rec_burst_s2 --output_dir /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/signal_benchmark --device {DEV}"
+   ],
+   "script": "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/_slot2.sh"
+  }
+ }
+}

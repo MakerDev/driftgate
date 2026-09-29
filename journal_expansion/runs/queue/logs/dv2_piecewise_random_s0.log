@@ -1,0 +1,18 @@
+[dv2_piecewise_random_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=piecewise_random rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.221 worst=0.159 elapsed=2.5m ETA=371m
+  R 10 loss=0.398 acc=0.500 worst=0.429 elapsed=16.6m ETA=232m
+  R 20 loss=0.334 acc=0.581 worst=0.513 elapsed=30.8m ETA=200m
+  R 30 loss=0.259 acc=0.619 worst=0.562 elapsed=45.7m ETA=183m
+  R 40 loss=0.255 acc=0.562 worst=0.513 elapsed=61.0m ETA=168m
+  R 50 loss=0.236 acc=0.575 worst=0.535 elapsed=77.5m ETA=155m
+  R 60 loss=0.224 acc=0.601 worst=0.561 elapsed=93.2m ETA=140m
+  R 70 loss=0.154 acc=0.744 worst=0.680 elapsed=108.4m ETA=124m
+  R 80 loss=0.143 acc=0.713 worst=0.671 elapsed=123.6m ETA=108m
+  R 90 loss=0.134 acc=0.725 worst=0.684 elapsed=138.5m ETA=92m
+  R100 loss=0.179 acc=0.623 worst=0.545 elapsed=153.9m ETA=77m
+  R110 loss=0.184 acc=0.652 worst=0.608 elapsed=169.2m ETA=62m
+  R120 loss=0.170 acc=0.661 worst=0.622 elapsed=184.4m ETA=46m
+  R130 loss=0.155 acc=0.666 worst=0.617 elapsed=199.5m ETA=31m
+  R140 loss=0.136 acc=0.700 worst=0.658 elapsed=214.5m ETA=15m
+  R150 loss=0.106 acc=0.695 worst=0.659 elapsed=229.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dv2_piecewise_random_s0.json

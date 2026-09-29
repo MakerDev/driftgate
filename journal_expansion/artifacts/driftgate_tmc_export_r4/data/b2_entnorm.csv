@@ -1,0 +1,5 @@
+setting,arm,mean_pct,sd,TV_minus_arm_pp,ci95,n_pos,n_seeds
+stepwise composition change,"entropy (relative-only, as run)",64.3672,1.7507,+1.4699,"[+1.05,+1.89]",5,5
+stepwise composition change,"entnorm (H/lnC, full controller)",65.8122,1.9946,+0.0249,"[-0.42,+0.47]",3,5
+client mobility,"entropy (relative-only, as run)",57.2131,0.4615,+1.9945,"[+1.18,+2.81]",3,3
+client mobility,"entnorm (H/lnC, full controller)",58.7446,0.4655,+0.4630,"[+0.19,+0.74]",3,3

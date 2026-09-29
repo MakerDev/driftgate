@@ -1,0 +1,18 @@
+[fx10_asym_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=asym_return rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.300 worst=0.120 elapsed=2.5m ETA=366m
+  R 10 loss=0.484 acc=0.532 worst=0.415 elapsed=16.7m ETA=233m
+  R 20 loss=0.412 acc=0.609 worst=0.475 elapsed=32.6m ETA=212m
+  R 30 loss=0.359 acc=0.650 worst=0.514 elapsed=46.4m ETA=186m
+  R 40 loss=0.324 acc=0.686 worst=0.558 elapsed=60.9m ETA=167m
+  R 50 loss=0.296 acc=0.589 worst=0.520 elapsed=75.9m ETA=152m
+  R 60 loss=0.269 acc=0.601 worst=0.537 elapsed=91.2m ETA=137m
+  R 70 loss=0.247 acc=0.636 worst=0.577 elapsed=106.3m ETA=122m
+  R 80 loss=0.232 acc=0.632 worst=0.565 elapsed=121.6m ETA=106m
+  R 90 loss=0.217 acc=0.635 worst=0.568 elapsed=136.4m ETA=91m
+  R100 loss=0.206 acc=0.642 worst=0.563 elapsed=150.6m ETA=75m
+  R110 loss=0.194 acc=0.680 worst=0.619 elapsed=165.2m ETA=60m
+  R120 loss=0.182 acc=0.689 worst=0.611 elapsed=179.6m ETA=45m
+  R130 loss=0.173 acc=0.720 worst=0.640 elapsed=194.1m ETA=30m
+  R140 loss=0.157 acc=0.741 worst=0.668 elapsed=208.7m ETA=15m
+  R150 loss=0.154 acc=0.773 worst=0.682 elapsed=223.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_grid/fx10_asym_s1.json

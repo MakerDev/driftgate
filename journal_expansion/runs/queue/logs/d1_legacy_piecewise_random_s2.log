@@ -1,0 +1,18 @@
+[d1_legacy_piecewise_random_s2] method=splitomcplus controller=legacy signal=delta_hard schedule=piecewise_random rounds=150 device=cuda:0
+  R  1 loss=0.938 acc=0.264 worst=0.145 elapsed=2.6m ETA=392m
+  R 10 loss=0.455 acc=0.458 worst=0.388 elapsed=15.4m ETA=216m
+  R 20 loss=0.381 acc=0.489 worst=0.424 elapsed=29.8m ETA=194m
+  R 30 loss=0.334 acc=0.518 worst=0.450 elapsed=45.1m ETA=180m
+  R 40 loss=0.247 acc=0.665 worst=0.564 elapsed=58.9m ETA=162m
+  R 50 loss=0.237 acc=0.668 worst=0.567 elapsed=73.2m ETA=146m
+  R 60 loss=0.196 acc=0.685 worst=0.562 elapsed=87.5m ETA=131m
+  R 70 loss=0.233 acc=0.577 worst=0.530 elapsed=102.1m ETA=117m
+  R 80 loss=0.153 acc=0.711 worst=0.611 elapsed=115.8m ETA=101m
+  R 90 loss=0.135 acc=0.719 worst=0.651 elapsed=129.8m ETA=87m
+  R100 loss=0.121 acc=0.716 worst=0.671 elapsed=143.5m ETA=72m
+  R110 loss=0.162 acc=0.571 worst=0.541 elapsed=158.1m ETA=57m
+  R120 loss=0.155 acc=0.570 worst=0.538 elapsed=174.7m ETA=44m
+  R130 loss=0.099 acc=0.641 worst=0.604 elapsed=189.2m ETA=29m
+  R140 loss=0.123 acc=0.542 worst=0.451 elapsed=203.1m ETA=15m
+  R150 loss=0.122 acc=0.554 worst=0.507 elapsed=218.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_legacy_piecewise_random_s2.json

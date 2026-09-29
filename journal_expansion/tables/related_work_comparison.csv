@@ -1,0 +1,11 @@
+method,base_architecture,signal_source,extra_detector_or_model,runtime_labels,control_target,temporal_adapt,spatial_adapt,cluster_level_control,role_separated_exits,env_specific_calibration,mobility_eval
+SplitGP,split learning dual-exit,none (fixed),no,no,fixed personalization,no,no,no,yes,no,no
+SplitOMC,split learning multi-cell,none (fixed lambda/Lambda),no,no,fixed personalization+sharing,no,no,yes,yes,no,no
+early-exit personalized SFL (label shift),early-exit,exit confidence/entropy,no,sometimes,routing/exit,partial,no,no,partial,varies,no
+Fed-ADE (adaptive drift),FL,accuracy/loss drift,yes (detector),often (val labels),aggregation,yes,no,no,no,yes,no
+PGFedSplit,personalized split,none,no,no,personalization,no,no,no,yes,yes,no
+HARMONY,multi-modal/edge FL,modality/representation,yes,varies,aggregation,partial,no,partial,no,varies,partial
+Maximum Classifier Discrepancy (MCD),UDA dual classifiers,classifier discrepancy (adversarial),yes (2 trained classifiers, adversarial obj),target domain data,feature alignment,no,no,no,no (same-role classifiers),n/a,no
+entropy drift detector,any,predictive entropy,no,no,varies,partial,no,no,no,varies,no
+representation-drift detector,any,feature-distance,yes (reference stats),no,varies,partial,no,no,no,varies,no
+DriftGate (ours),split learning role-separated dual-exit,TV divergence of role-separated exits,no,no,cluster-level lambda/Lambda,yes,yes,yes,yes (personalized client + generalized server),no,yes (composition-coupled)

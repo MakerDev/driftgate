@@ -1,0 +1,13 @@
+[light10 cuda:0/GPU0] START b3_svhn_fx15_s2 (light) 2026-09-28 05:25:26
+[light10 cuda:0/GPU0] END b3_svhn_fx15_s2 exit=0 2026-09-28 11:38:10
+[light10 cuda:0/GPU0] START e1_relonly_svhn_s2 (light) 2026-09-28 11:38:10
+[light10 cuda:0/GPU0] END e1_relonly_svhn_s2 exit=0 2026-09-28 18:06:21
+[light10 cuda:0/GPU0] START e1_relonly_c10gsig_s2 (light) 2026-09-28 18:06:21
+[light10 cuda:0/GPU0] END e1_relonly_c10gsig_s2 exit=0 2026-09-28 22:21:52
+[light10 cuda:0/GPU0] START b4_apfl_eta001_A_s4 (light) 2026-09-28 22:21:52
+[light10 cuda:0/GPU0] END b4_apfl_eta001_A_s4 exit=0 2026-09-29 02:40:08
+[light10 cuda:0/GPU0] START b4_apfl_eta010_A_s4 (light) 2026-09-29 02:40:08
+[light10 cuda:0/GPU0] END b4_apfl_eta010_A_s4 exit=0 2026-09-29 08:46:12
+[light10 cuda:0/GPU0] START e3_guard100_A_s1 (light) 2026-09-29 08:46:12
+[light10 cuda:0/GPU0] END e3_guard100_A_s1 exit=0 2026-09-29 14:57:26
+[light10 cuda:0/GPU0] START e3_lmax080_A_s0 (light) 2026-09-29 14:57:26

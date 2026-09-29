@@ -1,0 +1,82 @@
+setting,arm,segment,acc_mean_pct,acc_sd_pct,n_seeds
+A,TV full,rho0 early,58.1611,2.7440,5
+A,TV full,rho0.4 up,61.5844,1.9108,5
+A,TV full,rho0.8,59.8013,3.2917,5
+A,TV full,rho0.4 down,66.9950,2.6689,5
+A,TV full,rho0 late,85.2023,3.9195,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 early,57.6967,2.7073,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 up,61.8211,1.8558,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.8,59.8446,3.2744,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 down,67.1847,2.5603,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 late,85.7308,3.4313,5
+A,entropy,rho0 early,58.6128,2.6745,5
+A,entropy,rho0.4 up,60.6228,1.6059,5
+A,entropy,rho0.8,53.0926,1.7777,5
+A,entropy,rho0.4 down,63.8397,2.2524,5
+A,entropy,rho0 late,87.5861,2.9944,5
+A,server rate,rho0 early,58.1935,2.7814,5
+A,server rate,rho0.4 up,61.4399,1.7252,5
+A,server rate,rho0.8,60.5985,2.8760,5
+A,server rate,rho0.4 down,67.6055,2.4298,5
+A,server rate,rho0 late,87.1482,2.3023,5
+A,fixed 0.2,rho0 early,55.4841,2.8189,5
+A,fixed 0.2,rho0.4 up,62.5771,1.6058,5
+A,fixed 0.2,rho0.8,61.4035,2.6531,5
+A,fixed 0.2,rho0.4 down,68.0242,2.1457,5
+A,fixed 0.2,rho0 late,79.0826,1.6829,5
+A,fixed 0.3,rho0 early,56.2989,2.8192,5
+A,fixed 0.3,rho0.4 up,62.5433,1.7496,5
+A,fixed 0.3,rho0.8,60.3226,2.8001,5
+A,fixed 0.3,rho0.4 down,67.7791,2.3686,5
+A,fixed 0.3,rho0 late,81.4938,2.0099,5
+A,fixed 0.4,rho0 early,57.0824,2.7732,5
+A,fixed 0.4,rho0.4 up,62.0591,1.8264,5
+A,fixed 0.4,rho0.8,58.4501,2.8654,5
+A,fixed 0.4,rho0.4 down,66.9745,2.6829,5
+A,fixed 0.4,rho0 late,83.9952,2.3077,5
+A,fixed 0.5,rho0 early,57.9271,2.7315,5
+A,fixed 0.5,rho0.4 up,61.2198,1.8429,5
+A,fixed 0.5,rho0.8,55.8424,2.8118,5
+A,fixed 0.5,rho0.4 down,65.5971,2.8997,5
+A,fixed 0.5,rho0 late,86.0258,2.5919,5
+A,B1 absonly,rho0 early,58.1679,2.7471,5
+A,B1 absonly,rho0.4 up,61.0329,1.8439,5
+A,B1 absonly,rho0.8,55.0344,2.8479,5
+A,B1 absonly,rho0.4 down,64.9354,2.5981,5
+A,B1 absonly,rho0 late,87.6671,2.3973,5
+A,B1 relonly,rho0 early,58.2290,2.7684,5
+A,B1 relonly,rho0.4 up,61.6020,1.8797,5
+A,B1 relonly,rho0.8,59.7605,3.3139,5
+A,B1 relonly,rho0.4 down,66.9158,2.6850,5
+A,B1 relonly,rho0 late,85.7033,4.0144,5
+A,B2 entnorm,rho0 early,57.0529,2.8997,5
+A,B2 entnorm,rho0.4 up,62.2992,1.7254,5
+A,B2 entnorm,rho0.8,60.3599,2.9534,5
+A,B2 entnorm,rho0.4 down,67.8666,2.4294,5
+A,B2 entnorm,rho0 late,84.4020,2.3499,5
+mob,TV full,pre-move,60.7638,1.5853,3
+mob,TV full,post-move,57.3922,1.5540,3
+mob,"a1 (adaptive λ, Λ=0.5)",pre-move,60.5924,1.6995,3
+mob,"a1 (adaptive λ, Λ=0.5)",post-move,57.4401,1.5559,3
+mob,entropy,pre-move,62.0840,1.6672,3
+mob,entropy,post-move,51.5305,0.9996,3
+mob,server rate,pre-move,61.1264,1.8008,3
+mob,server rate,post-move,57.3914,1.4315,3
+mob,fixed 0.2,pre-move,55.9159,1.1080,3
+mob,fixed 0.2,post-move,60.2710,1.2572,3
+mob,fixed 0.3,pre-move,57.5114,1.2798,3
+mob,fixed 0.3,post-move,59.5517,1.3432,3
+mob,fixed 0.4,pre-move,59.1358,1.4666,3
+mob,fixed 0.4,post-move,57.9283,1.3519,3
+mob,fixed 0.5,pre-move,60.8260,1.6004,3
+mob,fixed 0.5,post-move,55.3531,1.4215,3
+mob,B3 fixed 0.5,pre-move,60.8131,1.5788,3
+mob,B3 fixed 0.5,post-move,55.3118,1.4020,3
+mob,B3 fixed 0.6,pre-move,62.9245,1.7631,3
+mob,B3 fixed 0.6,post-move,52.1368,1.2085,3
+mob,B1 absonly,pre-move,60.8470,1.6512,3
+mob,B1 absonly,post-move,54.5334,1.4571,3
+mob,B1 relonly,pre-move,60.8776,1.6041,3
+mob,B1 relonly,post-move,57.3053,1.5400,3
+mob,B2 entnorm,pre-move,57.8513,1.3301,3
+mob,B2 entnorm,post-move,59.7869,1.4633,3

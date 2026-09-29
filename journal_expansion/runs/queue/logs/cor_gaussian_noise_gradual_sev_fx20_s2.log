@@ -1,0 +1,15 @@
+[cor_gaussian_noise_gradual_sev_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=120 device=cuda:0
+  R  1 loss=0.938 acc=0.300 worst=0.175 elapsed=2.3m ETA=279m
+  R 10 loss=0.463 acc=0.498 worst=0.418 elapsed=14.6m ETA=161m
+  R 20 loss=0.400 acc=0.548 worst=0.455 elapsed=27.6m ETA=138m
+  R 30 loss=0.355 acc=0.568 worst=0.477 elapsed=40.0m ETA=120m
+  R 40 loss=0.325 acc=0.600 worst=0.530 elapsed=54.0m ETA=108m
+  R 50 loss=0.296 acc=0.555 worst=0.475 elapsed=67.5m ETA=94m
+  R 60 loss=0.275 acc=0.488 worst=0.378 elapsed=80.9m ETA=81m
+  R 70 loss=0.252 acc=0.407 worst=0.308 elapsed=94.0m ETA=67m
+  R 80 loss=0.240 acc=0.378 worst=0.261 elapsed=107.8m ETA=54m
+  R 90 loss=0.221 acc=0.329 worst=0.220 elapsed=121.7m ETA=41m
+  R100 loss=0.217 acc=0.322 worst=0.236 elapsed=135.9m ETA=27m
+  R110 loss=0.197 acc=0.307 worst=0.222 elapsed=150.1m ETA=14m
+  R120 loss=0.192 acc=0.296 worst=0.219 elapsed=164.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_gaussian_noise_gradual_sev_fx20_s2.json

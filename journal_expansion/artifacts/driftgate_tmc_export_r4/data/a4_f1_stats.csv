@@ -1,0 +1,5 @@
+schedule,signal,n_seeds,value_R16,value_last,decline_R16_to_last,pre_shift_mean(R46-50),post_shift_mean(R51-55),shift_delta,rho_change_rounds
+shortened stepwise schedule (100 rounds),TV,3,0.2390,0.2421,-0.0030,,,,21 41 61 81
+shortened stepwise schedule (100 rounds),entropy_norm,3,0.7926,0.5656,+0.2270,,,,21 41 61 81
+late abrupt change (round 51),TV,3,0.2390,0.3234,-0.0845,0.2521,0.3066,+0.0545,
+late abrupt change (round 51),entropy_norm,3,0.7923,0.6520,+0.1403,0.6848,0.7219,+0.0371,

@@ -1,0 +1,13 @@
+[t3_tiny_fx40_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=100 device=cuda:1
+  R  1 loss=4.494 acc=0.012 worst=0.003 elapsed=17.9m ETA=1772m
+  R 10 loss=3.401 acc=0.130 worst=0.096 elapsed=150.1m ETA=1351m
+  R 20 loss=3.022 acc=0.207 worst=0.178 elapsed=283.9m ETA=1136m
+  R 30 loss=2.762 acc=0.249 worst=0.219 elapsed=419.2m ETA=978m
+  R 40 loss=2.557 acc=0.272 worst=0.240 elapsed=557.6m ETA=836m
+  R 50 loss=2.386 acc=0.281 worst=0.253 elapsed=689.7m ETA=690m
+  R 60 loss=2.232 acc=0.280 worst=0.258 elapsed=825.9m ETA=551m
+  R 70 loss=2.099 acc=0.285 worst=0.268 elapsed=945.6m ETA=405m
+  R 80 loss=1.980 acc=0.295 worst=0.275 elapsed=1064.7m ETA=266m
+  R 90 loss=1.876 acc=0.304 worst=0.283 elapsed=1190.3m ETA=132m
+  R100 loss=1.774 acc=0.313 worst=0.293 elapsed=1312.8m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT3_fixedref/t3_tiny_fx40_s1.json

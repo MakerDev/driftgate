@@ -1,0 +1,13 @@
+[fx10_tin_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=100 device=cuda:0
+  R  1 loss=4.481 acc=0.008 worst=0.003 elapsed=10.9m ETA=1076m
+  R 10 loss=3.591 acc=0.125 worst=0.104 elapsed=58.1m ETA=523m
+  R 20 loss=3.234 acc=0.197 worst=0.177 elapsed=111.6m ETA=447m
+  R 30 loss=2.981 acc=0.247 worst=0.217 elapsed=165.5m ETA=386m
+  R 40 loss=2.779 acc=0.273 worst=0.250 elapsed=223.1m ETA=335m
+  R 50 loss=2.604 acc=0.281 worst=0.261 elapsed=288.2m ETA=288m
+  R 60 loss=2.448 acc=0.287 worst=0.268 elapsed=354.5m ETA=236m
+  R 70 loss=2.318 acc=0.298 worst=0.277 elapsed=420.8m ETA=180m
+  R 80 loss=2.197 acc=0.308 worst=0.292 elapsed=487.0m ETA=122m
+  R 90 loss=2.088 acc=0.315 worst=0.294 elapsed=553.3m ETA=61m
+  R100 loss=1.987 acc=0.322 worst=0.302 elapsed=619.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_grid/fx10_tin_s0.json

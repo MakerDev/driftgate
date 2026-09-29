@@ -1,0 +1,7 @@
+
+[1/1] splitomcplus_lam0.4_Lam0.5 schedule=B
+[splitomcplus_lam0.4_Lam0.5] Starting splitomcplus with lambda=0.4, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.267 acc_oop=0.152 acc_oor=0.056 acc_total=0.219 elapsed=2.1m ETA=309m
+  R 10 loss=0.404 acc_main=0.599 acc_oop=0.440 acc_oor=0.021 acc_total=0.509 elapsed=13.3m ETA=186m

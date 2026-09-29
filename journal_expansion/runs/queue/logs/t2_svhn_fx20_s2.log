@@ -1,0 +1,18 @@
+[t2_svhn_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.980 acc=0.297 worst=0.180 elapsed=3.3m ETA=499m
+  R 10 loss=0.521 acc=0.558 worst=0.379 elapsed=19.8m ETA=277m
+  R 20 loss=0.423 acc=0.750 worst=0.637 elapsed=37.6m ETA=244m
+  R 30 loss=0.359 acc=0.809 worst=0.719 elapsed=56.9m ETA=227m
+  R 40 loss=0.301 acc=0.840 worst=0.769 elapsed=76.3m ETA=210m
+  R 50 loss=0.258 acc=0.850 worst=0.794 elapsed=95.2m ETA=190m
+  R 60 loss=0.227 acc=0.846 worst=0.797 elapsed=114.7m ETA=172m
+  R 70 loss=0.200 acc=0.848 worst=0.817 elapsed=133.9m ETA=153m
+  R 80 loss=0.185 acc=0.842 worst=0.821 elapsed=151.6m ETA=133m
+  R 90 loss=0.161 acc=0.844 worst=0.827 elapsed=172.3m ETA=115m
+  R100 loss=0.147 acc=0.846 worst=0.831 elapsed=192.9m ETA=96m
+  R110 loss=0.136 acc=0.849 worst=0.839 elapsed=212.7m ETA=77m
+  R120 loss=0.123 acc=0.852 worst=0.844 elapsed=231.4m ETA=58m
+  R130 loss=0.119 acc=0.853 worst=0.845 elapsed=252.4m ETA=39m
+  R140 loss=0.110 acc=0.855 worst=0.850 elapsed=272.3m ETA=19m
+  R150 loss=0.107 acc=0.860 worst=0.849 elapsed=291.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT2_signal/t2_svhn_fx20_s2.json

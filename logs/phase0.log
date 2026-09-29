@@ -1,0 +1,62 @@
+
+============================================================
+E0 Running: splitomc_lam0.2
+============================================================
+[splitomc_lam0.2] Starting splitomc with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.314 acc_oop=0.202 acc_oor=0.006 acc_total=0.260 elapsed=1.9m ETA=93m
+  R 25 loss=0.336 acc_main=0.680 acc_oop=0.526 acc_oor=0.019 acc_total=0.587 elapsed=32.9m ETA=33m
+  R 50 loss=0.250 acc_main=0.742 acc_oop=0.584 acc_oor=0.046 acc_total=0.645 elapsed=65.2m ETA=0m
+  Saved: ./results/e0_smoke/splitomc_lam0.2.json
+
+============================================================
+E0 Running: splitomc_lam0.6
+============================================================
+[splitomc_lam0.6] Starting splitomc with lambda=0.6, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.343 acc_oop=0.190 acc_oor=0.005 acc_total=0.276 elapsed=1.7m ETA=83m
+  R 25 loss=0.226 acc_main=0.729 acc_oop=0.371 acc_oor=0.011 acc_total=0.578 elapsed=34.7m ETA=35m
+  R 50 loss=0.158 acc_main=0.810 acc_oop=0.358 acc_oor=0.028 acc_total=0.629 elapsed=66.4m ETA=0m
+  Saved: ./results/e0_smoke/splitomc_lam0.6.json
+
+============================================================
+E0 Running: splitomcplus_lam0.2_Lam0.5
+============================================================
+[splitomcplus_lam0.2_Lam0.5] Starting splitomcplus with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.246 acc_oop=0.156 acc_oor=0.058 acc_total=0.208 elapsed=1.8m ETA=89m
+  R 25 loss=0.376 acc_main=0.643 acc_oop=0.534 acc_oor=0.070 acc_total=0.569 elapsed=34.8m ETA=35m
+  R 50 loss=0.289 acc_main=0.702 acc_oop=0.600 acc_oor=0.149 acc_total=0.631 elapsed=70.2m ETA=0m
+  Saved: ./results/e0_smoke/splitomcplus_lam0.2_Lam0.5.json
+
+============================================================
+E0 Running: adaptive_splitomc
+============================================================
+[adaptive_splitomc] Starting adaptive_splitomc with lambda=0.4, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:0
+  Total rounds: 50, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.278 acc_oop=0.157 acc_oor=0.047 acc_total=0.228 elapsed=2.1m ETA=103m
+  R 25 loss=0.387 acc_main=0.630 acc_oop=0.543 acc_oor=0.143 acc_total=0.568 elapsed=33.8m ETA=34m
+  R 50 loss=0.299 acc_main=0.676 acc_oop=0.598 acc_oor=0.255 acc_total=0.622 elapsed=68.0m ETA=0m
+  Saved: ./results/e0_smoke/adaptive_splitomc.json
+
+============================================================
+E0 SUMMARY
+============================================================
+✓ splitomc_lam0.2: ran to completion, last loss=0.250
+✓ splitomc_lam0.6: ran to completion, last loss=0.158
+✓ splitomcplus_lam0.2_Lam0.5: ran to completion, last loss=0.289
+✓ adaptive_splitomc: ran to completion, last loss=0.299
+
+Final-round accuracies (eval at ρ=oop_ratio_default):
+  splitomc_lam0.2: acc_total=0.645, acc_main=0.742, acc_oop=0.584, acc_oor=0.046
+  splitomc_lam0.6: acc_total=0.629, acc_main=0.810, acc_oop=0.358, acc_oor=0.028
+  splitomcplus_lam0.2_Lam0.5: acc_total=0.631, acc_main=0.702, acc_oop=0.600, acc_oor=0.149
+  adaptive_splitomc: acc_total=0.622, acc_main=0.676, acc_oop=0.598, acc_oor=0.255
+
+✓ PERSONALIZATION TREND OK: λ=0.6 acc_main (0.810) ≈/> λ=0.2 (0.742)
+
+E0 done. Summary saved to ./results/e0_smoke/e0_summary.json

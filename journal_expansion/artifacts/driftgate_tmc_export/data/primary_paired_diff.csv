@@ -1,0 +1,5 @@
+setting,comparison,mean_pp,ci95,n_pos,n_seeds,protocol
+CIFAR-10 Schedule A,TV - fixed l0.4,+0.6642,"[+0.31,+1.01]",5,5,disjoint
+CIFAR-10 Schedule A,TV - entropy,+1.4699,"[+1.05,+1.89]",5,5,disjoint
+CIFAR-10 medium mobility,TV - fixed l0.4,+0.6291,"[+0.44,+0.82]",3,3,disjoint
+CIFAR-10 medium mobility,TV - entropy,+1.9945,"[+1.18,+2.81]",3,3,disjoint

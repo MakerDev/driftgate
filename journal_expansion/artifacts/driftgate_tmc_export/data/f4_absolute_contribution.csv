@@ -1,0 +1,4 @@
+setting,full_dual_acc,relative_main_acc,full_minus_relative_pp,ci95,n_pos,n_seeds,note
+CIFAR-100 gradual,35.3985,31.3766,+4.0219,"[+3.45,+4.59]",3,3,"development-version: dual=tv+abs, main=ST relative-only (delta_hard); same-pool"
+CIFAR-100 spatial,36.0567,32.6606,+3.3960,"[+2.99,+3.80]",3,3,"development-version: dual=tv+abs, main=ST relative-only (delta_hard); same-pool"
+Tiny-ImageNet,24.0933,22.2400,+1.8533,"[+1.24,+2.47]",3,3,"development-version: dual=tv+abs, main=ST relative-only (delta_hard); same-pool"

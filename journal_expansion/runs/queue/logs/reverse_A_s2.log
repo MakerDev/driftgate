@@ -1,0 +1,2 @@
+[reverse_A_s2] method=splitomcplus controller=replay signal=delta_hard schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.432 worst=0.264 elapsed=14.9m ETA=2216m

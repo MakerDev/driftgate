@@ -1,0 +1,244 @@
+setting,arm,segment,task,acc_mean_pct,n_seeds
+A,TV full,rho0 early,main,58.1611,5
+A,TV full,rho0 early,oop,0.0000,5
+A,TV full,rho0 early,oor,0.0000,5
+A,TV full,rho0.4 up,main,73.1865,5
+A,TV full,rho0.4 up,oop,46.7915,5
+A,TV full,rho0.4 up,oor,14.0059,5
+A,TV full,rho0.8,main,74.2777,5
+A,TV full,rho0.8,oop,52.7621,5
+A,TV full,rho0.8,oor,22.7953,5
+A,TV full,rho0.4 down,main,77.7105,5
+A,TV full,rho0.4 down,oop,52.8092,5
+A,TV full,rho0.4 down,oor,24.8055,5
+A,TV full,rho0 late,main,85.2023,5
+A,TV full,rho0 late,oop,0.0000,5
+A,TV full,rho0 late,oor,0.0000,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 early,main,57.6967,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 early,oop,0.0000,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 early,oor,0.0000,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 up,main,73.4174,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 up,oop,47.0562,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 up,oor,14.1974,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.8,main,74.8672,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.8,oop,52.7776,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.8,oor,20.6476,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 down,main,78.1221,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 down,oop,53.1148,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0.4 down,oor,22.7506,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 late,main,85.7308,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 late,oop,0.0000,5
+A,"a1 (adaptive λ, Λ=0.5)",rho0 late,oor,0.0000,5
+A,entropy,rho0 early,main,58.6128,5
+A,entropy,rho0 early,oop,0.0000,5
+A,entropy,rho0 early,oor,0.0000,5
+A,entropy,rho0.4 up,main,77.7508,5
+A,entropy,rho0.4 up,oop,33.8318,5
+A,entropy,rho0.4 up,oor,6.9412,5
+A,entropy,rho0.8,main,81.5455,5
+A,entropy,rho0.8,oop,30.9012,5
+A,entropy,rho0.8,oor,8.3015,5
+A,entropy,rho0.4 down,main,84.5241,5
+A,entropy,rho0.4 down,oop,28.7838,5
+A,entropy,rho0.4 down,oor,8.0524,5
+A,entropy,rho0 late,main,87.5861,5
+A,entropy,rho0 late,oop,0.0000,5
+A,entropy,rho0 late,oor,0.0000,5
+A,server rate,rho0 early,main,58.1935,5
+A,server rate,rho0 early,oop,0.0000,5
+A,server rate,rho0 early,oor,0.0000,5
+A,server rate,rho0.4 up,main,71.0942,5
+A,server rate,rho0.4 up,oop,50.2819,5
+A,server rate,rho0.4 up,oor,18.0025,5
+A,server rate,rho0.8,main,72.9862,5
+A,server rate,rho0.8,oop,55.4508,5
+A,server rate,rho0.8,oor,25.9998,5
+A,server rate,rho0.4 down,main,79.0137,5
+A,server rate,rho0.4 down,oop,52.0417,5
+A,server rate,rho0.4 down,oor,24.2320,5
+A,server rate,rho0 late,main,87.1482,5
+A,server rate,rho0 late,oop,0.0000,5
+A,server rate,rho0 late,oor,0.0000,5
+A,fixed 0.2,rho0 early,main,55.4841,5
+A,fixed 0.2,rho0 early,oop,0.0000,5
+A,fixed 0.2,rho0 early,oor,0.0000,5
+A,fixed 0.2,rho0.4 up,main,71.7148,5
+A,fixed 0.2,rho0.4 up,oop,53.1844,5
+A,fixed 0.2,rho0.4 up,oor,17.5539,5
+A,fixed 0.2,rho0.8,main,75.0157,5
+A,fixed 0.2,rho0.8,oop,55.8020,5
+A,fixed 0.2,rho0.8,oor,23.2038,5
+A,fixed 0.2,rho0.4 down,main,77.3943,5
+A,fixed 0.2,rho0.4 down,oop,57.0905,5
+A,fixed 0.2,rho0.4 down,oor,26.2055,5
+A,fixed 0.2,rho0 late,main,79.0826,5
+A,fixed 0.2,rho0 late,oop,0.0000,5
+A,fixed 0.2,rho0 late,oor,0.0000,5
+A,fixed 0.3,rho0 early,main,56.2989,5
+A,fixed 0.3,rho0 early,oop,0.0000,5
+A,fixed 0.3,rho0 early,oor,0.0000,5
+A,fixed 0.3,rho0.4 up,main,73.0258,5
+A,fixed 0.3,rho0.4 up,oop,50.2790,5
+A,fixed 0.3,rho0.4 up,oor,15.8738,5
+A,fixed 0.3,rho0.8,main,76.6272,5
+A,fixed 0.3,rho0.8,oop,51.8034,5
+A,fixed 0.3,rho0.8,oor,20.6180,5
+A,fixed 0.3,rho0.4 down,main,79.4143,5
+A,fixed 0.3,rho0.4 down,oop,52.2272,5
+A,fixed 0.3,rho0.4 down,oor,22.4577,5
+A,fixed 0.3,rho0 late,main,81.4938,5
+A,fixed 0.3,rho0 late,oop,0.0000,5
+A,fixed 0.3,rho0 late,oor,0.0000,5
+A,fixed 0.4,rho0 early,main,57.0824,5
+A,fixed 0.4,rho0 early,oop,0.0000,5
+A,fixed 0.4,rho0 early,oor,0.0000,5
+A,fixed 0.4,rho0.4 up,main,74.1526,5
+A,fixed 0.4,rho0.4 up,oop,46.1960,5
+A,fixed 0.4,rho0.4 up,oor,13.9485,5
+A,fixed 0.4,rho0.8,main,78.1988,5
+A,fixed 0.4,rho0.8,oop,46.0630,5
+A,fixed 0.4,rho0.8,oor,17.2757,5
+A,fixed 0.4,rho0.4 down,main,81.3052,5
+A,fixed 0.4,rho0.4 down,oop,45.6931,5
+A,fixed 0.4,rho0.4 down,oor,18.2688,5
+A,fixed 0.4,rho0 late,main,83.9952,5
+A,fixed 0.4,rho0 late,oop,0.0000,5
+A,fixed 0.4,rho0 late,oor,0.0000,5
+A,fixed 0.5,rho0 early,main,57.9271,5
+A,fixed 0.5,rho0 early,oop,0.0000,5
+A,fixed 0.5,rho0 early,oor,0.0000,5
+A,fixed 0.5,rho0.4 up,main,75.3568,5
+A,fixed 0.5,rho0.4 up,oop,40.7619,5
+A,fixed 0.5,rho0.4 up,oor,11.3809,5
+A,fixed 0.5,rho0.8,main,79.6511,5
+A,fixed 0.5,rho0.8,oop,38.7264,5
+A,fixed 0.5,rho0.8,oor,13.5016,5
+A,fixed 0.5,rho0.4 down,main,83.1385,5
+A,fixed 0.5,rho0.4 down,oop,37.2770,5
+A,fixed 0.5,rho0.4 down,oor,13.5738,5
+A,fixed 0.5,rho0 late,main,86.0258,5
+A,fixed 0.5,rho0 late,oop,0.0000,5
+A,fixed 0.5,rho0 late,oor,0.0000,5
+A,B1 absonly,rho0 early,main,58.1679,5
+A,B1 absonly,rho0 early,oop,0.0000,5
+A,B1 absonly,rho0 early,oor,0.0000,5
+A,B1 absonly,rho0.4 up,main,76.0968,5
+A,B1 absonly,rho0.4 up,oop,39.0391,5
+A,B1 absonly,rho0.4 up,oor,8.5761,5
+A,B1 absonly,rho0.8,main,80.3603,5
+A,B1 absonly,rho0.8,oop,36.6982,5
+A,B1 absonly,rho0.8,oor,10.4293,5
+A,B1 absonly,rho0.4 down,main,84.1275,5
+A,B1 absonly,rho0.4 down,oop,33.4599,5
+A,B1 absonly,rho0.4 down,oor,9.6576,5
+A,B1 absonly,rho0 late,main,87.6671,5
+A,B1 absonly,rho0 late,oop,0.0000,5
+A,B1 absonly,rho0 late,oor,0.0000,5
+A,B1 relonly,rho0 early,main,58.2290,5
+A,B1 relonly,rho0 early,oop,0.0000,5
+A,B1 relonly,rho0 early,oor,0.0000,5
+A,B1 relonly,rho0.4 up,main,73.2450,5
+A,B1 relonly,rho0.4 up,oop,46.7232,5
+A,B1 relonly,rho0.4 up,oor,13.9688,5
+A,B1 relonly,rho0.8,main,74.2605,5
+A,B1 relonly,rho0.8,oop,52.6819,5
+A,B1 relonly,rho0.8,oor,22.7873,5
+A,B1 relonly,rho0.4 down,main,77.7835,5
+A,B1 relonly,rho0.4 down,oop,52.3723,5
+A,B1 relonly,rho0.4 down,oor,24.6507,5
+A,B1 relonly,rho0 late,main,85.7033,5
+A,B1 relonly,rho0 late,oop,0.0000,5
+A,B1 relonly,rho0 late,oor,0.0000,5
+A,B2 entnorm,rho0 early,main,57.0529,5
+A,B2 entnorm,rho0 early,oop,0.0000,5
+A,B2 entnorm,rho0 early,oor,0.0000,5
+A,B2 entnorm,rho0.4 up,main,72.3097,5
+A,B2 entnorm,rho0.4 up,oop,50.7024,5
+A,B2 entnorm,rho0.4 up,oor,17.3451,5
+A,B2 entnorm,rho0.8,main,76.4093,5
+A,B2 entnorm,rho0.8,oop,51.9091,5
+A,B2 entnorm,rho0.8,oor,21.4931,5
+A,B2 entnorm,rho0.4 down,main,80.3463,5
+A,B2 entnorm,rho0.4 down,oop,50.5685,5
+A,B2 entnorm,rho0.4 down,oor,21.3206,5
+A,B2 entnorm,rho0 late,main,84.4020,5
+A,B2 entnorm,rho0 late,oop,0.0000,5
+A,B2 entnorm,rho0 late,oor,0.0000,5
+mob,TV full,pre-move,main,60.7638,3
+mob,TV full,pre-move,oop,0.0000,3
+mob,TV full,pre-move,oor,0.0000,3
+mob,TV full,post-move,main,75.1887,3
+mob,TV full,post-move,oop,43.4521,3
+mob,TV full,post-move,oor,28.7306,3
+mob,"a1 (adaptive λ, Λ=0.5)",pre-move,main,60.5924,3
+mob,"a1 (adaptive λ, Λ=0.5)",pre-move,oop,0.0000,3
+mob,"a1 (adaptive λ, Λ=0.5)",pre-move,oor,0.0000,3
+mob,"a1 (adaptive λ, Λ=0.5)",post-move,main,75.2556,3
+mob,"a1 (adaptive λ, Λ=0.5)",post-move,oop,43.5009,3
+mob,"a1 (adaptive λ, Λ=0.5)",post-move,oor,28.6952,3
+mob,entropy,pre-move,main,62.0840,3
+mob,entropy,pre-move,oop,0.0000,3
+mob,entropy,pre-move,oor,0.0000,3
+mob,entropy,post-move,main,81.3205,3
+mob,entropy,post-move,oop,24.8404,3
+mob,entropy,post-move,oor,15.4293,3
+mob,server rate,pre-move,main,61.1264,3
+mob,server rate,pre-move,oop,0.0000,3
+mob,server rate,pre-move,oor,0.0000,3
+mob,server rate,post-move,main,72.5160,3
+mob,server rate,post-move,oop,46.1317,3
+mob,server rate,post-move,oor,30.9643,3
+mob,fixed 0.2,pre-move,main,55.9159,3
+mob,fixed 0.2,pre-move,oop,0.0000,3
+mob,fixed 0.2,pre-move,oor,0.0000,3
+mob,fixed 0.2,post-move,main,70.8806,3
+mob,fixed 0.2,post-move,oop,53.4924,3
+mob,fixed 0.2,post-move,oor,37.6921,3
+mob,fixed 0.3,pre-move,main,57.5114,3
+mob,fixed 0.3,pre-move,oop,0.0000,3
+mob,fixed 0.3,pre-move,oor,0.0000,3
+mob,fixed 0.3,post-move,main,73.4472,3
+mob,fixed 0.3,post-move,oop,49.4566,3
+mob,fixed 0.3,post-move,oor,34.3243,3
+mob,fixed 0.4,pre-move,main,59.1358,3
+mob,fixed 0.4,pre-move,oop,0.0000,3
+mob,fixed 0.4,pre-move,oor,0.0000,3
+mob,fixed 0.4,post-move,main,76.0016,3
+mob,fixed 0.4,post-move,oop,43.6618,3
+mob,fixed 0.4,post-move,oor,29.1897,3
+mob,fixed 0.5,pre-move,main,60.8260,3
+mob,fixed 0.5,pre-move,oop,0.0000,3
+mob,fixed 0.5,pre-move,oor,0.0000,3
+mob,fixed 0.5,post-move,main,78.6172,3
+mob,fixed 0.5,post-move,oop,35.7128,3
+mob,fixed 0.5,post-move,oor,22.9069,3
+mob,B3 fixed 0.5,pre-move,main,60.8131,3
+mob,B3 fixed 0.5,pre-move,oop,0.0000,3
+mob,B3 fixed 0.5,pre-move,oor,0.0000,3
+mob,B3 fixed 0.5,post-move,main,78.5786,3
+mob,B3 fixed 0.5,post-move,oop,35.6658,3
+mob,B3 fixed 0.5,post-move,oor,22.8750,3
+mob,B3 fixed 0.6,pre-move,main,62.9245,3
+mob,B3 fixed 0.6,pre-move,oop,0.0000,3
+mob,B3 fixed 0.6,pre-move,oor,0.0000,3
+mob,B3 fixed 0.6,post-move,main,81.2774,3
+mob,B3 fixed 0.6,post-move,oop,26.3338,3
+mob,B3 fixed 0.6,post-move,oor,15.7845,3
+mob,B1 absonly,pre-move,main,60.8470,3
+mob,B1 absonly,pre-move,oop,0.0000,3
+mob,B1 absonly,pre-move,oor,0.0000,3
+mob,B1 absonly,post-move,main,78.9494,3
+mob,B1 absonly,post-move,oop,33.6225,3
+mob,B1 absonly,post-move,oor,21.5268,3
+mob,B1 relonly,pre-move,main,60.8776,3
+mob,B1 relonly,pre-move,oop,0.0000,3
+mob,B1 relonly,pre-move,oor,0.0000,3
+mob,B1 relonly,post-move,main,75.2208,3
+mob,B1 relonly,post-move,oop,43.2578,3
+mob,B1 relonly,post-move,oor,28.5063,3
+mob,B2 entnorm,pre-move,main,57.8513,3
+mob,B2 entnorm,pre-move,oop,0.0000,3
+mob,B2 entnorm,pre-move,oor,0.0000,3
+mob,B2 entnorm,post-move,main,73.1747,3
+mob,B2 entnorm,post-move,oop,50.2559,3
+mob,B2 entnorm,post-move,oor,34.7956,3

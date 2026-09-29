@@ -1,0 +1,23 @@
+[worker8 cuda:1] START cor_motion_blur_gradual_sev_dve_s2 2026. 07. 24. (금) 15:17:00 KST
+[worker8 cuda:1] END cor_motion_blur_gradual_sev_dve_s2 exit=0 2026. 07. 24. (금) 22:20:18 KST
+[worker8 cuda:1] START cor_contrast_gradual_sev_dv2_s2 2026. 07. 24. (금) 22:20:18 KST
+[worker8 cuda:1] END cor_contrast_gradual_sev_dv2_s2 exit=0 2026. 07. 25. (토) 04:26:46 KST
+[worker8 cuda:1] START cor_motion_blur_abrupt_sev_dv2_s1 2026. 07. 25. (토) 04:26:46 KST
+[worker8 cuda:1] END cor_motion_blur_abrupt_sev_dv2_s1 exit=0 2026. 07. 25. (토) 11:29:17 KST
+[worker8 cuda:1] START mob_slow_fx20_s1 2026. 07. 25. (토) 11:29:17 KST
+[worker8 cuda:1] END mob_slow_fx20_s1 exit=0 2026. 07. 25. (토) 20:01:12 KST
+[worker8 cuda:1] START mob_med_dv2_s0 2026. 07. 25. (토) 20:01:12 KST
+[worker8 cuda:1] END mob_med_dv2_s0 exit=0 2026. 07. 26. (일) 04:14:16 KST
+[worker8 cuda:1] START mob_med_fx40_s2 2026. 07. 26. (일) 04:14:16 KST
+[worker8 cuda:1] END mob_med_fx40_s2 exit=0 2026. 07. 26. (일) 12:55:09 KST
+[worker8 cuda:1] START mob_fast_fx20_s1 2026. 07. 26. (일) 12:55:10 KST
+[worker8 cuda:1] END mob_fast_fx20_s1 exit=0 2026. 07. 26. (일) 21:19:04 KST
+[worker8 cuda:1] START net_part50_s0 2026. 07. 26. (일) 21:19:04 KST
+[worker8 cuda:1] END net_part50_s0 exit=0 2026. 07. 27. (월) 01:34:53 KST
+[worker8 cuda:1] START net_delay10_s1 2026. 07. 27. (월) 01:34:53 KST
+[worker8 cuda:1] END net_delay10_s1 exit=0 2026. 07. 27. (월) 08:54:34 KST
+[worker8 cuda:1] START net_loss10_s1 2026. 07. 27. (월) 08:54:35 KST
+[worker8 cuda:1] END net_loss10_s1 exit=0 2026. 07. 27. (월) 16:36:50 KST
+[worker8 cuda:1] START net_ring_s0 2026. 07. 27. (월) 16:36:50 KST
+[worker8 cuda:1] END net_ring_s0 exit=0 2026. 07. 28. (화) 00:11:40 KST
+[worker8 cuda:1] START fx30_A_s2 2026. 07. 28. (화) 00:11:40 KST

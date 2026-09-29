@@ -1,0 +1,13 @@
+[r2_tiny_tv_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=100 device=cuda:0
+  R  1 loss=4.494 acc=0.012 worst=0.004 elapsed=7.2m ETA=709m
+  R 10 loss=3.376 acc=0.131 worst=0.097 elapsed=59.2m ETA=533m
+  R 20 loss=2.995 acc=0.209 worst=0.181 elapsed=116.8m ETA=467m
+  R 30 loss=2.749 acc=0.250 worst=0.223 elapsed=174.6m ETA=407m
+  R 40 loss=2.551 acc=0.273 worst=0.245 elapsed=229.7m ETA=345m
+  R 50 loss=2.383 acc=0.282 worst=0.254 elapsed=279.9m ETA=280m
+  R 60 loss=2.231 acc=0.281 worst=0.259 elapsed=331.4m ETA=221m
+  R 70 loss=2.098 acc=0.286 worst=0.269 elapsed=382.7m ETA=164m
+  R 80 loss=1.980 acc=0.296 worst=0.275 elapsed=434.0m ETA=109m
+  R 90 loss=1.878 acc=0.304 worst=0.283 elapsed=485.7m ETA=54m
+  R100 loss=1.777 acc=0.314 worst=0.294 elapsed=537.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT2r2_signal/r2_tiny_tv_s1.json

@@ -1,0 +1,152 @@
+[d1_oracle_gradual_sigmoid_s2] method=splitomcplus controller=oracle_greedy signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.386 worst=0.179 elapsed=2.0m ETA=298m
+  R  2 loss=0.595 acc=0.404 worst=0.175 elapsed=3.9m ETA=291m
+  R  3 loss=0.521 acc=0.488 worst=0.309 elapsed=5.8m ETA=286m
+  R  4 loss=0.487 acc=0.523 worst=0.372 elapsed=7.8m ETA=283m
+  R  5 loss=0.465 acc=0.544 worst=0.406 elapsed=9.6m ETA=279m
+  R  6 loss=0.449 acc=0.564 worst=0.457 elapsed=11.6m ETA=277m
+  R  7 loss=0.433 acc=0.590 worst=0.458 elapsed=13.5m ETA=276m
+  R  8 loss=0.418 acc=0.606 worst=0.498 elapsed=15.4m ETA=274m
+  R  9 loss=0.399 acc=0.615 worst=0.504 elapsed=17.4m ETA=272m
+  R 10 loss=0.391 acc=0.633 worst=0.525 elapsed=19.1m ETA=268m
+  R 11 loss=0.380 acc=0.646 worst=0.550 elapsed=21.0m ETA=265m
+  R 12 loss=0.374 acc=0.637 worst=0.523 elapsed=22.9m ETA=263m
+  R 13 loss=0.362 acc=0.635 worst=0.503 elapsed=24.8m ETA=262m
+  R 14 loss=0.358 acc=0.652 worst=0.523 elapsed=26.7m ETA=259m
+  R 15 loss=0.346 acc=0.663 worst=0.549 elapsed=28.7m ETA=258m
+  R 16 loss=0.343 acc=0.676 worst=0.567 elapsed=30.6m ETA=256m
+  R 17 loss=0.335 acc=0.690 worst=0.561 elapsed=32.5m ETA=254m
+  R 18 loss=0.325 acc=0.679 worst=0.542 elapsed=34.4m ETA=252m
+  R 19 loss=0.318 acc=0.688 worst=0.587 elapsed=36.3m ETA=250m
+  R 20 loss=0.307 acc=0.684 worst=0.578 elapsed=38.3m ETA=249m
+  R 21 loss=0.297 acc=0.684 worst=0.545 elapsed=40.1m ETA=247m
+  R 22 loss=0.300 acc=0.694 worst=0.592 elapsed=42.2m ETA=246m
+  R 23 loss=0.295 acc=0.707 worst=0.602 elapsed=44.0m ETA=243m
+  R 24 loss=0.292 acc=0.709 worst=0.619 elapsed=45.9m ETA=241m
+  R 25 loss=0.289 acc=0.712 worst=0.607 elapsed=47.9m ETA=239m
+  R 26 loss=0.286 acc=0.699 worst=0.592 elapsed=49.8m ETA=237m
+  R 27 loss=0.284 acc=0.712 worst=0.630 elapsed=51.7m ETA=235m
+  R 28 loss=0.282 acc=0.731 worst=0.647 elapsed=53.7m ETA=234m
+  R 29 loss=0.271 acc=0.730 worst=0.623 elapsed=55.6m ETA=232m
+  R 30 loss=0.258 acc=0.728 worst=0.607 elapsed=57.7m ETA=231m
+  R 31 loss=0.259 acc=0.729 worst=0.619 elapsed=59.6m ETA=229m
+  R 32 loss=0.256 acc=0.750 worst=0.654 elapsed=61.5m ETA=227m
+  R 33 loss=0.249 acc=0.719 worst=0.598 elapsed=63.5m ETA=225m
+  R 34 loss=0.251 acc=0.728 worst=0.626 elapsed=65.2m ETA=223m
+  R 35 loss=0.253 acc=0.730 worst=0.622 elapsed=67.2m ETA=221m
+  R 36 loss=0.255 acc=0.724 worst=0.607 elapsed=69.4m ETA=220m
+  R 37 loss=0.249 acc=0.737 worst=0.667 elapsed=71.4m ETA=218m
+  R 38 loss=0.246 acc=0.731 worst=0.642 elapsed=73.4m ETA=216m
+  R 39 loss=0.254 acc=0.732 worst=0.663 elapsed=75.2m ETA=214m
+  R 40 loss=0.245 acc=0.735 worst=0.651 elapsed=77.1m ETA=212m
+  R 41 loss=0.245 acc=0.727 worst=0.626 elapsed=79.2m ETA=211m
+  R 42 loss=0.236 acc=0.740 worst=0.660 elapsed=81.2m ETA=209m
+  R 43 loss=0.227 acc=0.720 worst=0.651 elapsed=83.0m ETA=207m
+  R 44 loss=0.229 acc=0.747 worst=0.668 elapsed=85.1m ETA=205m
+  R 45 loss=0.228 acc=0.722 worst=0.668 elapsed=87.0m ETA=203m
+  R 46 loss=0.229 acc=0.731 worst=0.676 elapsed=89.1m ETA=201m
+  R 47 loss=0.227 acc=0.738 worst=0.676 elapsed=91.0m ETA=199m
+  R 48 loss=0.212 acc=0.735 worst=0.674 elapsed=93.0m ETA=198m
+  R 49 loss=0.213 acc=0.736 worst=0.676 elapsed=95.1m ETA=196m
+  R 50 loss=0.218 acc=0.738 worst=0.683 elapsed=97.1m ETA=194m
+  R 51 loss=0.209 acc=0.714 worst=0.639 elapsed=99.3m ETA=193m
+  R 52 loss=0.204 acc=0.726 worst=0.668 elapsed=101.3m ETA=191m
+  R 53 loss=0.205 acc=0.735 worst=0.668 elapsed=103.4m ETA=189m
+  R 54 loss=0.209 acc=0.719 worst=0.640 elapsed=105.6m ETA=188m
+  R 55 loss=0.211 acc=0.712 worst=0.647 elapsed=107.6m ETA=186m
+  R 56 loss=0.205 acc=0.713 worst=0.633 elapsed=109.7m ETA=184m
+  R 57 loss=0.210 acc=0.697 worst=0.598 elapsed=111.8m ETA=182m
+  R 58 loss=0.214 acc=0.683 worst=0.606 elapsed=114.2m ETA=181m
+  R 59 loss=0.210 acc=0.697 worst=0.640 elapsed=116.3m ETA=179m
+  R 60 loss=0.216 acc=0.686 worst=0.641 elapsed=118.4m ETA=178m
+  R 61 loss=0.219 acc=0.682 worst=0.583 elapsed=120.4m ETA=176m
+  R 62 loss=0.215 acc=0.678 worst=0.608 elapsed=122.4m ETA=174m
+  R 63 loss=0.206 acc=0.674 worst=0.602 elapsed=124.4m ETA=172m
+  R 64 loss=0.209 acc=0.674 worst=0.611 elapsed=126.5m ETA=170m
+  R 65 loss=0.210 acc=0.672 worst=0.573 elapsed=128.6m ETA=168m
+  R 66 loss=0.212 acc=0.667 worst=0.612 elapsed=130.8m ETA=166m
+  R 67 loss=0.210 acc=0.667 worst=0.612 elapsed=132.9m ETA=165m
+  R 68 loss=0.208 acc=0.667 worst=0.612 elapsed=135.1m ETA=163m
+  R 69 loss=0.209 acc=0.648 worst=0.628 elapsed=137.2m ETA=161m
+  R 70 loss=0.206 acc=0.652 worst=0.595 elapsed=139.4m ETA=159m
+  R 71 loss=0.209 acc=0.642 worst=0.596 elapsed=141.4m ETA=157m
+  R 72 loss=0.203 acc=0.632 worst=0.568 elapsed=143.7m ETA=156m
+  R 73 loss=0.202 acc=0.651 worst=0.616 elapsed=145.9m ETA=154m
+  R 74 loss=0.202 acc=0.638 worst=0.579 elapsed=148.1m ETA=152m
+  R 75 loss=0.194 acc=0.632 worst=0.606 elapsed=150.3m ETA=150m
+  R 76 loss=0.191 acc=0.624 worst=0.587 elapsed=152.4m ETA=148m
+  R 77 loss=0.185 acc=0.627 worst=0.570 elapsed=154.6m ETA=147m
+  R 78 loss=0.185 acc=0.616 worst=0.584 elapsed=156.9m ETA=145m
+  R 79 loss=0.180 acc=0.604 worst=0.573 elapsed=159.2m ETA=143m
+  R 80 loss=0.177 acc=0.621 worst=0.598 elapsed=161.5m ETA=141m
+  R 81 loss=0.173 acc=0.610 worst=0.583 elapsed=163.9m ETA=140m
+  R 82 loss=0.173 acc=0.609 worst=0.567 elapsed=166.1m ETA=138m
+  R 83 loss=0.170 acc=0.606 worst=0.574 elapsed=168.5m ETA=136m
+  R 84 loss=0.172 acc=0.604 worst=0.584 elapsed=170.8m ETA=134m
+  R 85 loss=0.169 acc=0.599 worst=0.570 elapsed=173.0m ETA=132m
+  R 86 loss=0.174 acc=0.607 worst=0.562 elapsed=175.4m ETA=131m
+  R 87 loss=0.173 acc=0.591 worst=0.573 elapsed=177.9m ETA=129m
+  R 88 loss=0.174 acc=0.598 worst=0.583 elapsed=180.4m ETA=127m
+  R 89 loss=0.181 acc=0.597 worst=0.579 elapsed=182.9m ETA=125m
+  R 90 loss=0.180 acc=0.597 worst=0.565 elapsed=185.4m ETA=124m
+  R 91 loss=0.171 acc=0.583 worst=0.543 elapsed=187.9m ETA=122m
+  R 92 loss=0.179 acc=0.594 worst=0.574 elapsed=190.4m ETA=120m
+  R 93 loss=0.171 acc=0.567 worst=0.532 elapsed=192.9m ETA=118m
+  R 94 loss=0.166 acc=0.584 worst=0.554 elapsed=195.4m ETA=116m
+  R 95 loss=0.167 acc=0.580 worst=0.536 elapsed=198.0m ETA=115m
+  R 96 loss=0.167 acc=0.583 worst=0.554 elapsed=200.5m ETA=113m
+  R 97 loss=0.164 acc=0.583 worst=0.549 elapsed=203.1m ETA=111m
+  R 98 loss=0.165 acc=0.586 worst=0.560 elapsed=205.5m ETA=109m
+  R 99 loss=0.165 acc=0.586 worst=0.562 elapsed=208.1m ETA=107m
+  R100 loss=0.168 acc=0.569 worst=0.501 elapsed=210.6m ETA=105m
+  R101 loss=0.166 acc=0.580 worst=0.550 elapsed=213.1m ETA=103m
+  R102 loss=0.172 acc=0.579 worst=0.545 elapsed=215.7m ETA=102m
+  R103 loss=0.174 acc=0.581 worst=0.565 elapsed=218.3m ETA=100m
+  R104 loss=0.164 acc=0.579 worst=0.551 elapsed=220.9m ETA=98m
+  R105 loss=0.164 acc=0.577 worst=0.546 elapsed=223.5m ETA=96m
+  R106 loss=0.166 acc=0.565 worst=0.519 elapsed=226.0m ETA=94m
+  R107 loss=0.163 acc=0.585 worst=0.569 elapsed=228.6m ETA=92m
+  R108 loss=0.168 acc=0.577 worst=0.536 elapsed=231.1m ETA=90m
+  R109 loss=0.179 acc=0.581 worst=0.566 elapsed=233.7m ETA=88m
+  R110 loss=0.181 acc=0.581 worst=0.568 elapsed=236.3m ETA=86m
+  R111 loss=0.175 acc=0.573 worst=0.521 elapsed=238.9m ETA=84m
+  R112 loss=0.169 acc=0.588 worst=0.567 elapsed=241.5m ETA=82m
+  R113 loss=0.165 acc=0.587 worst=0.535 elapsed=244.2m ETA=80m
+  R114 loss=0.168 acc=0.568 worst=0.556 elapsed=246.7m ETA=78m
+  R115 loss=0.165 acc=0.588 worst=0.578 elapsed=249.2m ETA=76m
+  R116 loss=0.163 acc=0.588 worst=0.577 elapsed=251.8m ETA=74m
+  R117 loss=0.177 acc=0.577 worst=0.563 elapsed=254.4m ETA=72m
+  R118 loss=0.173 acc=0.588 worst=0.570 elapsed=257.0m ETA=70m
+  R119 loss=0.164 acc=0.593 worst=0.575 elapsed=259.7m ETA=68m
+  R120 loss=0.178 acc=0.587 worst=0.568 elapsed=262.3m ETA=66m
+  R121 loss=0.170 acc=0.590 worst=0.565 elapsed=265.0m ETA=64m
+  R122 loss=0.172 acc=0.590 worst=0.582 elapsed=267.6m ETA=61m
+  R123 loss=0.172 acc=0.593 worst=0.577 elapsed=270.2m ETA=59m
+  R124 loss=0.164 acc=0.593 worst=0.575 elapsed=272.8m ETA=57m
+  R125 loss=0.162 acc=0.591 worst=0.577 elapsed=275.4m ETA=55m
+  R126 loss=0.160 acc=0.587 worst=0.564 elapsed=278.1m ETA=53m
+  R127 loss=0.160 acc=0.590 worst=0.555 elapsed=280.7m ETA=51m
+  R128 loss=0.166 acc=0.586 worst=0.573 elapsed=283.3m ETA=49m
+  R129 loss=0.173 acc=0.596 worst=0.574 elapsed=286.0m ETA=47m
+  R130 loss=0.160 acc=0.601 worst=0.580 elapsed=288.4m ETA=44m
+  R131 loss=0.150 acc=0.576 worst=0.546 elapsed=291.1m ETA=42m
+  R132 loss=0.151 acc=0.600 worst=0.589 elapsed=293.7m ETA=40m
+  R133 loss=0.151 acc=0.585 worst=0.566 elapsed=296.3m ETA=38m
+  R134 loss=0.150 acc=0.589 worst=0.563 elapsed=298.9m ETA=36m
+  R135 loss=0.146 acc=0.596 worst=0.569 elapsed=301.6m ETA=34m
+  R136 loss=0.157 acc=0.587 worst=0.560 elapsed=304.2m ETA=31m
+  R137 loss=0.152 acc=0.588 worst=0.575 elapsed=306.9m ETA=29m
+  R138 loss=0.153 acc=0.578 worst=0.558 elapsed=309.5m ETA=27m
+  R139 loss=0.151 acc=0.593 worst=0.569 elapsed=312.1m ETA=25m
+  R140 loss=0.150 acc=0.591 worst=0.574 elapsed=314.7m ETA=22m
+  R141 loss=0.145 acc=0.589 worst=0.558 elapsed=317.3m ETA=20m
+  R142 loss=0.156 acc=0.596 worst=0.587 elapsed=320.0m ETA=18m
+  R143 loss=0.147 acc=0.584 worst=0.544 elapsed=322.7m ETA=16m
+  R144 loss=0.151 acc=0.585 worst=0.571 elapsed=325.3m ETA=14m
+  R145 loss=0.149 acc=0.592 worst=0.575 elapsed=327.9m ETA=11m
+  R146 loss=0.145 acc=0.579 worst=0.534 elapsed=330.5m ETA=9m
+  R147 loss=0.137 acc=0.584 worst=0.554 elapsed=333.1m ETA=7m
+  R148 loss=0.134 acc=0.586 worst=0.565 elapsed=335.8m ETA=5m
+  R149 loss=0.143 acc=0.596 worst=0.588 elapsed=338.5m ETA=2m
+  R150 loss=0.147 acc=0.600 worst=0.584 elapsed=341.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_oracle_gradual_sigmoid_s2.json

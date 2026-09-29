@@ -1,0 +1,15 @@
+[cor_motion_blur_abrupt_sev_fx20_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=120 device=cuda:0
+  R  1 loss=0.884 acc=0.208 worst=0.141 elapsed=2.4m ETA=289m
+  R 10 loss=0.471 acc=0.509 worst=0.440 elapsed=15.3m ETA=169m
+  R 20 loss=0.401 acc=0.561 worst=0.501 elapsed=29.9m ETA=149m
+  R 30 loss=0.356 acc=0.594 worst=0.537 elapsed=43.7m ETA=131m
+  R 40 loss=0.316 acc=0.613 worst=0.561 elapsed=58.2m ETA=116m
+  R 50 loss=0.286 acc=0.632 worst=0.588 elapsed=72.4m ETA=101m
+  R 60 loss=0.261 acc=0.653 worst=0.616 elapsed=86.5m ETA=86m
+  R 70 loss=0.241 acc=0.469 worst=0.441 elapsed=103.8m ETA=74m
+  R 80 loss=0.225 acc=0.476 worst=0.450 elapsed=121.5m ETA=61m
+  R 90 loss=0.208 acc=0.469 worst=0.447 elapsed=139.1m ETA=46m
+  R100 loss=0.193 acc=0.470 worst=0.451 elapsed=156.9m ETA=31m
+  R110 loss=0.185 acc=0.472 worst=0.448 elapsed=174.9m ETA=16m
+  R120 loss=0.174 acc=0.475 worst=0.444 elapsed=192.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_motion_blur_abrupt_sev_fx20_s0.json

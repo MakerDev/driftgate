@@ -1,0 +1,18 @@
+[b1_nospatial_c100sp_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=static rounds=150 device=cuda:1
+  R  1 loss=4.008 acc=0.023 worst=0.016 elapsed=3.4m ETA=505m
+  R 10 loss=2.797 acc=0.147 worst=0.105 elapsed=22.1m ETA=310m
+  R 20 loss=2.436 acc=0.220 worst=0.151 elapsed=42.7m ETA=277m
+  R 30 loss=2.099 acc=0.285 worst=0.208 elapsed=62.6m ETA=250m
+  R 40 loss=1.944 acc=0.336 worst=0.263 elapsed=82.7m ETA=228m
+  R 50 loss=1.812 acc=0.378 worst=0.298 elapsed=103.0m ETA=206m
+  R 60 loss=1.691 acc=0.401 worst=0.322 elapsed=123.4m ETA=185m
+  R 70 loss=1.563 acc=0.425 worst=0.346 elapsed=143.8m ETA=164m
+  R 80 loss=1.449 acc=0.450 worst=0.373 elapsed=164.0m ETA=143m
+  R 90 loss=1.346 acc=0.465 worst=0.388 elapsed=184.2m ETA=123m
+  R100 loss=1.253 acc=0.470 worst=0.397 elapsed=204.2m ETA=102m
+  R110 loss=1.172 acc=0.489 worst=0.410 elapsed=224.8m ETA=82m
+  R120 loss=1.101 acc=0.496 worst=0.411 elapsed=245.3m ETA=61m
+  R130 loss=1.031 acc=0.499 worst=0.421 elapsed=265.9m ETA=41m
+  R140 loss=0.973 acc=0.511 worst=0.434 elapsed=286.7m ETA=20m
+  R150 loss=0.916 acc=0.512 worst=0.440 elapsed=307.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B1_views/b1_nospatial_c100sp_s0.json

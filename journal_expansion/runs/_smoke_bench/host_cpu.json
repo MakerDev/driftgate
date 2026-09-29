@@ -1,0 +1,75 @@
+{
+ "metadata": {
+  "device_model": null,
+  "chipset": null,
+  "cpu": "x86_64",
+  "gpu_npu": null,
+  "ram_gb": null,
+  "os": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "runtime": "torch 2.7.1+cu126",
+  "thread_count": 4,
+  "precision": "fp32",
+  "power_mode": null,
+  "thermal_state": null,
+  "model_format": "torchscript",
+  "batch_size": 1,
+  "probe_size": 64,
+  "warmup": 10,
+  "iterations": 50,
+  "export": "journal_expansion/exported/cnn_cifar10_middle",
+  "note": "null metadata fields MUST be filled in by the person who ran this"
+ },
+ "stages": {
+  "client_forward": {
+   "mean_ms": 2.564014047384262,
+   "median_ms": 2.4382807314395905,
+   "p95_ms": 3.3713113516569138,
+   "p99_ms": 3.4477151930332184,
+   "std_ms": 0.6574731076061169,
+   "n": 50
+  },
+  "client_exit": {
+   "mean_ms": 0.009153410792350769,
+   "median_ms": 0.00832974910736084,
+   "p95_ms": 0.0133514404296875,
+   "p99_ms": 0.018378719687461853,
+   "std_ms": 0.0024183008835046297,
+   "n": 50
+  },
+  "probe_path": {
+   "mean_ms": 81.11181925982237,
+   "median_ms": 80.17358742654324,
+   "p95_ms": 86.54888533055782,
+   "p99_ms": 88.36882933974266,
+   "std_ms": 3.2159099468116294,
+   "n": 50
+  },
+  "signal_computation": {
+   "mean_ms": 0.9398717433214188,
+   "median_ms": 0.9418241679668427,
+   "p95_ms": 0.9752530604600906,
+   "p99_ms": 0.985071063041687,
+   "std_ms": 0.02494811226504846,
+   "n": 50
+  },
+  "controller_update": {
+   "mean_ms": 0.04755765199661255,
+   "median_ms": 0.046662986278533936,
+   "p95_ms": 0.04902668297290802,
+   "p99_ms": 0.04924461245536804,
+   "std_ms": 0.0036702676123439738,
+   "n": 50
+  },
+  "e2e_local_probe": {
+   "mean_ms": 87.27727554738522,
+   "median_ms": 87.01314777135849,
+   "p95_ms": 89.13333527743816,
+   "p99_ms": 94.88634578883648,
+   "std_ms": 2.0598894814029753,
+   "n": 50
+  }
+ },
+ "errors": {},
+ "peak_rss_mb": 553.41796875,
+ "energy_j": null
+}

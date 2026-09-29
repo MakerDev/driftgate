@@ -1,0 +1,27 @@
+[cor_motion_blur_abrupt_sev_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=120 device=cuda:0
+  R  1 loss=0.938 acc=0.300 worst=0.174 elapsed=2.2m ETA=267m
+  R 10 loss=0.463 acc=0.498 worst=0.419 elapsed=14.4m ETA=158m
+  R 20 loss=0.400 acc=0.548 worst=0.455 elapsed=27.5m ETA=138m
+  R 30 loss=0.355 acc=0.569 worst=0.478 elapsed=40.6m ETA=122m
+  R 40 loss=0.325 acc=0.603 worst=0.533 elapsed=54.1m ETA=108m
+  R 50 loss=0.296 acc=0.614 worst=0.541 elapsed=67.5m ETA=94m
+  R 60 loss=0.275 acc=0.621 worst=0.544 elapsed=80.4m ETA=80m
+  R 70 loss=0.252 acc=0.482 worst=0.362 elapsed=97.1m ETA=69m
+  R 80 loss=0.240 acc=0.504 worst=0.435 elapsed=623.1m ETA=312m
+  R 90 loss=0.221 acc=0.492 worst=0.420 elapsed=1204.4m ETA=401m
+  R100 loss=0.216 acc=0.491 worst=0.437 elapsed=1630.8m ETA=326m
+[cor_motion_blur_abrupt_sev_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=120 device=cuda:0
+  R  1 loss=0.938 acc=0.300 worst=0.174 elapsed=2.5m ETA=293m
+  R 10 loss=0.463 acc=0.499 worst=0.419 elapsed=15.1m ETA=166m
+  R 20 loss=0.400 acc=0.548 worst=0.456 elapsed=28.3m ETA=142m
+  R 30 loss=0.355 acc=0.569 worst=0.478 elapsed=40.6m ETA=122m
+  R 40 loss=0.325 acc=0.603 worst=0.532 elapsed=53.3m ETA=107m
+  R 50 loss=0.296 acc=0.614 worst=0.542 elapsed=65.0m ETA=91m
+  R 60 loss=0.275 acc=0.620 worst=0.542 elapsed=76.1m ETA=76m
+  R 70 loss=0.252 acc=0.482 worst=0.362 elapsed=91.4m ETA=65m
+  R 80 loss=0.240 acc=0.505 worst=0.437 elapsed=106.7m ETA=53m
+  R 90 loss=0.221 acc=0.492 worst=0.420 elapsed=122.2m ETA=41m
+  R100 loss=0.216 acc=0.492 worst=0.435 elapsed=137.2m ETA=27m
+  R110 loss=0.197 acc=0.479 worst=0.423 elapsed=152.7m ETA=14m
+  R120 loss=0.192 acc=0.481 worst=0.424 elapsed=168.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_motion_blur_abrupt_sev_fx20_s2.json

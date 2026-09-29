@@ -1,0 +1,19 @@
+setting,method,n_seeds,integrated_acc_pct,sd_pct,DriftGate_minus_method_pp,ci95,n_pos,n_matched,source_runs
+stepwise composition change,DriftGate,5,65.9288,2.0067,,,,,"b1_relonly_A_s{0,1,2,3,4}"
+stepwise composition change,fixed 0.2,5,64.6999,1.7295,+1.2289,"[+0.46, +2.00]",5,5,"r2_A_fx20_s{0,1,2,3,4}"
+stepwise composition change,fixed 0.3,5,65.1007,1.9145,+0.8281,"[+0.28, +1.37]",5,5,"t1_A_fx30_s{0,1,2,3,4}"
+stepwise composition change,fixed 0.4 (best fixed),5,65.1729,2.0678,+0.7559,"[+0.41, +1.11]",5,5,"t1_A_fx40_s{0,1,2,3,4}"
+stepwise composition change,fixed 0.5,5,64.8602,2.1774,+1.0686,"[+0.82, +1.32]",5,5,"t1_A_fx50_s{0,1,2,3,4}"
+stepwise composition change,entropy,5,64.3672,1.7507,+1.5616,"[+1.18, +1.94]",5,5,"t1_A_ent_s{0,1,2,3,4}"
+stepwise composition change,APFL η=0.01,0,,,,,,,missing
+stepwise composition change,APFL η=0.1,0,,,,,,,missing
+stepwise composition change,absonly,5,64.9176,1.9646,+1.0112,"[+0.73, +1.29]",5,5,"b1_absonly_A_s{0,1,2,3,4}"
+client mobility,DriftGate,3,59.2289,0.3560,,,,,"b1_relonly_mob_s{0,1,2}"
+client mobility,fixed 0.2,3,57.9260,0.4539,+1.3029,"[+0.94, +1.66]",3,3,"r2_mob_fx20_s{0,1,2}"
+client mobility,fixed 0.4 (best fixed),3,58.5785,0.4231,+0.6504,"[+0.47, +0.83]",3,3,"t1_mob_fx40_s{0,1,2}"
+client mobility,fixed 0.5,3,58.3001,0.3909,+0.9288,"[+0.84, +1.02]",3,3,"t1_mob_fx50_s{0,1,2}"
+client mobility,fixed 0.6,3,57.9456,0.4541,+1.2833,"[+0.88, +1.69]",3,3,"b3_mob_fx60_s{0,1,2}"
+client mobility,entropy,3,57.2131,0.4615,+2.0157,"[+1.26, +2.77]",3,3,"t1_mob_ent_s{0,1,2}"
+client mobility,APFL η=0.01,0,,,,,,,missing
+client mobility,APFL η=0.1,0,,,,,,,missing
+client mobility,absonly,3,57.9330,0.3068,+1.2958,"[+1.06, +1.53]",3,3,"b1_absonly_mob_s{0,1,2}"

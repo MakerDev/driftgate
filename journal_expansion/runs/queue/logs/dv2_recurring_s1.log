@@ -1,0 +1,18 @@
+[dv2_recurring_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=recurring rounds=150 device=cuda:1
+  R  1 loss=0.900 acc=0.337 worst=0.182 elapsed=2.1m ETA=319m
+  R 10 loss=0.379 acc=0.556 worst=0.418 elapsed=16.0m ETA=224m
+  R 20 loss=0.318 acc=0.645 worst=0.501 elapsed=31.1m ETA=202m
+  R 30 loss=0.234 acc=0.706 worst=0.598 elapsed=46.0m ETA=184m
+  R 40 loss=0.257 acc=0.524 worst=0.422 elapsed=61.4m ETA=169m
+  R 50 loss=0.243 acc=0.561 worst=0.513 elapsed=77.2m ETA=154m
+  R 60 loss=0.222 acc=0.576 worst=0.522 elapsed=92.7m ETA=139m
+  R 70 loss=0.146 acc=0.822 worst=0.764 elapsed=107.6m ETA=123m
+  R 80 loss=0.127 acc=0.849 worst=0.774 elapsed=122.2m ETA=107m
+  R 90 loss=0.121 acc=0.814 worst=0.736 elapsed=137.0m ETA=91m
+  R100 loss=0.197 acc=0.573 worst=0.499 elapsed=152.5m ETA=76m
+  R110 loss=0.189 acc=0.614 worst=0.572 elapsed=168.0m ETA=61m
+  R120 loss=0.172 acc=0.611 worst=0.548 elapsed=183.3m ETA=46m
+  R130 loss=0.128 acc=0.849 worst=0.783 elapsed=197.9m ETA=30m
+  R140 loss=0.092 acc=0.883 worst=0.850 elapsed=212.6m ETA=15m
+  R150 loss=0.071 acc=0.900 worst=0.857 elapsed=227.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dv2_recurring_s1.json

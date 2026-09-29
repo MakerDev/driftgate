@@ -1,0 +1,18 @@
+[role_same_role_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.238 worst=0.134 elapsed=2.1m ETA=311m
+  R 10 loss=0.534 acc=0.569 worst=0.479 elapsed=16.3m ETA=228m
+  R 20 loss=0.456 acc=0.623 worst=0.538 elapsed=31.5m ETA=205m
+  R 30 loss=0.405 acc=0.655 worst=0.579 elapsed=45.7m ETA=183m
+  R 40 loss=0.365 acc=0.609 worst=0.560 elapsed=57.3m ETA=158m
+  R 50 loss=0.334 acc=0.627 worst=0.587 elapsed=72.4m ETA=145m
+  R 60 loss=0.308 acc=0.644 worst=0.606 elapsed=88.3m ETA=132m
+  R 70 loss=0.287 acc=0.625 worst=0.577 elapsed=103.7m ETA=119m
+  R 80 loss=0.269 acc=0.628 worst=0.576 elapsed=119.4m ETA=104m
+  R 90 loss=0.251 acc=0.639 worst=0.591 elapsed=135.7m ETA=90m
+  R100 loss=0.235 acc=0.662 worst=0.612 elapsed=149.6m ETA=75m
+  R110 loss=0.225 acc=0.673 worst=0.625 elapsed=165.1m ETA=60m
+  R120 loss=0.213 acc=0.683 worst=0.638 elapsed=181.2m ETA=45m
+  R130 loss=0.201 acc=0.714 worst=0.643 elapsed=196.3m ETA=30m
+  R140 loss=0.192 acc=0.722 worst=0.652 elapsed=211.6m ETA=15m
+  R150 loss=0.179 acc=0.728 worst=0.662 elapsed=225.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseR_role/role_same_role_s0.json

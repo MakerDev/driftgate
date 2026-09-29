@@ -1,0 +1,18 @@
+[gmm_gsig_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.272 worst=0.177 elapsed=2.0m ETA=303m
+  R 10 loss=0.408 acc=0.597 worst=0.504 elapsed=14.7m ETA=206m
+  R 20 loss=0.344 acc=0.643 worst=0.561 elapsed=28.6m ETA=186m
+  R 30 loss=0.302 acc=0.674 worst=0.606 elapsed=42.9m ETA=172m
+  R 40 loss=0.265 acc=0.690 worst=0.628 elapsed=56.8m ETA=156m
+  R 50 loss=0.237 acc=0.699 worst=0.645 elapsed=71.0m ETA=142m
+  R 60 loss=0.214 acc=0.697 worst=0.664 elapsed=84.9m ETA=127m
+  R 70 loss=0.194 acc=0.671 worst=0.598 elapsed=98.6m ETA=113m
+  R 80 loss=0.181 acc=0.648 worst=0.591 elapsed=112.9m ETA=99m
+  R 90 loss=0.166 acc=0.638 worst=0.588 elapsed=127.5m ETA=85m
+  R100 loss=0.152 acc=0.628 worst=0.551 elapsed=141.7m ETA=71m
+  R110 loss=0.146 acc=0.640 worst=0.591 elapsed=156.1m ETA=57m
+  R120 loss=0.137 acc=0.636 worst=0.607 elapsed=170.8m ETA=43m
+  R130 loss=0.128 acc=0.631 worst=0.582 elapsed=185.8m ETA=29m
+  R140 loss=0.119 acc=0.648 worst=0.607 elapsed=200.3m ETA=14m
+  R150 loss=0.110 acc=0.646 worst=0.603 elapsed=215.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/gmm_gsig_s0.json

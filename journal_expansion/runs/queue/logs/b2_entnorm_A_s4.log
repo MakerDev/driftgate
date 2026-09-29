@@ -1,0 +1,18 @@
+[b2_entnorm_A_s4] method=splitomcplus controller=selfcal signal=ent_client_norm schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.923 acc=0.401 worst=0.285 elapsed=1.7m ETA=252m
+  R 10 loss=0.398 acc=0.640 worst=0.458 elapsed=14.0m ETA=196m
+  R 20 loss=0.337 acc=0.697 worst=0.514 elapsed=26.1m ETA=169m
+  R 30 loss=0.341 acc=0.704 worst=0.530 elapsed=39.7m ETA=159m
+  R 40 loss=0.306 acc=0.632 worst=0.524 elapsed=53.0m ETA=146m
+  R 50 loss=0.274 acc=0.645 worst=0.544 elapsed=65.9m ETA=132m
+  R 60 loss=0.250 acc=0.669 worst=0.566 elapsed=78.8m ETA=118m
+  R 70 loss=0.228 acc=0.629 worst=0.545 elapsed=91.6m ETA=105m
+  R 80 loss=0.199 acc=0.639 worst=0.579 elapsed=102.4m ETA=90m
+  R 90 loss=0.187 acc=0.640 worst=0.599 elapsed=116.6m ETA=78m
+  R100 loss=0.168 acc=0.702 worst=0.644 elapsed=130.5m ETA=65m
+  R110 loss=0.154 acc=0.709 worst=0.647 elapsed=144.1m ETA=52m
+  R120 loss=0.143 acc=0.711 worst=0.628 elapsed=157.0m ETA=39m
+  R130 loss=0.125 acc=0.852 worst=0.748 elapsed=169.2m ETA=26m
+  R140 loss=0.114 acc=0.857 worst=0.749 elapsed=182.2m ETA=13m
+  R150 loss=0.108 acc=0.876 worst=0.799 elapsed=195.5m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B2_entnorm/b2_entnorm_A_s4.json

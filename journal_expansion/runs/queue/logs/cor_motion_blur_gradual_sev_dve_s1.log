@@ -1,0 +1,15 @@
+[cor_motion_blur_gradual_sev_dve_s1] method=splitomcplus controller=selfcal signal=ent_client schedule=static rounds=120 device=cuda:1
+  R  1 loss=0.900 acc=0.277 worst=0.178 elapsed=6.7m ETA=798m
+  R 10 loss=0.379 acc=0.446 worst=0.341 elapsed=40.7m ETA=448m
+  R 20 loss=0.319 acc=0.521 worst=0.408 elapsed=78.4m ETA=392m
+  R 30 loss=0.211 acc=0.569 worst=0.501 elapsed=118.4m ETA=355m
+  R 40 loss=0.185 acc=0.583 worst=0.483 elapsed=156.7m ETA=313m
+  R 50 loss=0.165 acc=0.542 worst=0.511 elapsed=197.3m ETA=276m
+  R 60 loss=0.157 acc=0.485 worst=0.409 elapsed=233.5m ETA=234m
+  R 70 loss=0.163 acc=0.481 worst=0.403 elapsed=282.8m ETA=202m
+  R 80 loss=0.147 acc=0.430 worst=0.377 elapsed=317.9m ETA=159m
+  R 90 loss=0.140 acc=0.417 worst=0.342 elapsed=354.6m ETA=118m
+  R100 loss=0.142 acc=0.429 worst=0.352 elapsed=388.7m ETA=78m
+  R110 loss=0.124 acc=0.463 worst=0.401 elapsed=424.4m ETA=39m
+  R120 loss=0.119 acc=0.470 worst=0.417 elapsed=460.1m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseG_corrupt/cor_motion_blur_gradual_sev_dve_s1.json

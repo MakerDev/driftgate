@@ -1,0 +1,18 @@
+[identity_gsig_s2] method=splitomcplus controller=replay signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.938 acc=0.399 worst=0.206 elapsed=3.8m ETA=565m
+  R 10 loss=0.394 acc=0.613 worst=0.481 elapsed=422.2m ETA=5911m
+  R 20 loss=0.338 acc=0.667 worst=0.514 elapsed=690.1m ETA=4486m
+  R 30 loss=0.267 acc=0.700 worst=0.545 elapsed=945.7m ETA=3783m
+  R 40 loss=0.234 acc=0.734 worst=0.595 elapsed=1070.4m ETA=2944m
+  R 50 loss=0.206 acc=0.730 worst=0.618 elapsed=1180.3m ETA=2361m
+  R 60 loss=0.187 acc=0.703 worst=0.605 elapsed=1290.1m ETA=1935m
+  R 70 loss=0.173 acc=0.646 worst=0.577 elapsed=1401.3m ETA=1601m
+  R 80 loss=0.162 acc=0.608 worst=0.549 elapsed=1513.4m ETA=1324m
+  R 90 loss=0.197 acc=0.596 worst=0.567 elapsed=1626.4m ETA=1084m
+  R100 loss=0.213 acc=0.599 worst=0.583 elapsed=1740.2m ETA=870m
+  R110 loss=0.203 acc=0.597 worst=0.580 elapsed=1854.4m ETA=674m
+  R120 loss=0.199 acc=0.606 worst=0.595 elapsed=1968.3m ETA=492m
+  R130 loss=0.176 acc=0.601 worst=0.590 elapsed=2081.8m ETA=320m
+  R140 loss=0.168 acc=0.609 worst=0.592 elapsed=2194.6m ETA=157m
+  R150 loss=0.167 acc=0.613 worst=0.590 elapsed=2307.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/identity_gsig_s2.json

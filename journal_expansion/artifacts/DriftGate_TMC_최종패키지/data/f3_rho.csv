@@ -1,0 +1,271 @@
+setting,round,rho
+Schedule A,1,0.0000
+Schedule A,2,0.0000
+Schedule A,3,0.0000
+Schedule A,4,0.0000
+Schedule A,5,0.0000
+Schedule A,6,0.0000
+Schedule A,7,0.0000
+Schedule A,8,0.0000
+Schedule A,9,0.0000
+Schedule A,10,0.0000
+Schedule A,11,0.0000
+Schedule A,12,0.0000
+Schedule A,13,0.0000
+Schedule A,14,0.0000
+Schedule A,15,0.0000
+Schedule A,16,0.0000
+Schedule A,17,0.0000
+Schedule A,18,0.0000
+Schedule A,19,0.0000
+Schedule A,20,0.0000
+Schedule A,21,0.0000
+Schedule A,22,0.0000
+Schedule A,23,0.0000
+Schedule A,24,0.0000
+Schedule A,25,0.0000
+Schedule A,26,0.0000
+Schedule A,27,0.0000
+Schedule A,28,0.0000
+Schedule A,29,0.0000
+Schedule A,30,0.0000
+Schedule A,31,0.4000
+Schedule A,32,0.4000
+Schedule A,33,0.4000
+Schedule A,34,0.4000
+Schedule A,35,0.4000
+Schedule A,36,0.4000
+Schedule A,37,0.4000
+Schedule A,38,0.4000
+Schedule A,39,0.4000
+Schedule A,40,0.4000
+Schedule A,41,0.4000
+Schedule A,42,0.4000
+Schedule A,43,0.4000
+Schedule A,44,0.4000
+Schedule A,45,0.4000
+Schedule A,46,0.4000
+Schedule A,47,0.4000
+Schedule A,48,0.4000
+Schedule A,49,0.4000
+Schedule A,50,0.4000
+Schedule A,51,0.4000
+Schedule A,52,0.4000
+Schedule A,53,0.4000
+Schedule A,54,0.4000
+Schedule A,55,0.4000
+Schedule A,56,0.4000
+Schedule A,57,0.4000
+Schedule A,58,0.4000
+Schedule A,59,0.4000
+Schedule A,60,0.4000
+Schedule A,61,0.8000
+Schedule A,62,0.8000
+Schedule A,63,0.8000
+Schedule A,64,0.8000
+Schedule A,65,0.8000
+Schedule A,66,0.8000
+Schedule A,67,0.8000
+Schedule A,68,0.8000
+Schedule A,69,0.8000
+Schedule A,70,0.8000
+Schedule A,71,0.8000
+Schedule A,72,0.8000
+Schedule A,73,0.8000
+Schedule A,74,0.8000
+Schedule A,75,0.8000
+Schedule A,76,0.8000
+Schedule A,77,0.8000
+Schedule A,78,0.8000
+Schedule A,79,0.8000
+Schedule A,80,0.8000
+Schedule A,81,0.8000
+Schedule A,82,0.8000
+Schedule A,83,0.8000
+Schedule A,84,0.8000
+Schedule A,85,0.8000
+Schedule A,86,0.8000
+Schedule A,87,0.8000
+Schedule A,88,0.8000
+Schedule A,89,0.8000
+Schedule A,90,0.8000
+Schedule A,91,0.4000
+Schedule A,92,0.4000
+Schedule A,93,0.4000
+Schedule A,94,0.4000
+Schedule A,95,0.4000
+Schedule A,96,0.4000
+Schedule A,97,0.4000
+Schedule A,98,0.4000
+Schedule A,99,0.4000
+Schedule A,100,0.4000
+Schedule A,101,0.4000
+Schedule A,102,0.4000
+Schedule A,103,0.4000
+Schedule A,104,0.4000
+Schedule A,105,0.4000
+Schedule A,106,0.4000
+Schedule A,107,0.4000
+Schedule A,108,0.4000
+Schedule A,109,0.4000
+Schedule A,110,0.4000
+Schedule A,111,0.4000
+Schedule A,112,0.4000
+Schedule A,113,0.4000
+Schedule A,114,0.4000
+Schedule A,115,0.4000
+Schedule A,116,0.4000
+Schedule A,117,0.4000
+Schedule A,118,0.4000
+Schedule A,119,0.4000
+Schedule A,120,0.4000
+Schedule A,121,0.0000
+Schedule A,122,0.0000
+Schedule A,123,0.0000
+Schedule A,124,0.0000
+Schedule A,125,0.0000
+Schedule A,126,0.0000
+Schedule A,127,0.0000
+Schedule A,128,0.0000
+Schedule A,129,0.0000
+Schedule A,130,0.0000
+Schedule A,131,0.0000
+Schedule A,132,0.0000
+Schedule A,133,0.0000
+Schedule A,134,0.0000
+Schedule A,135,0.0000
+Schedule A,136,0.0000
+Schedule A,137,0.0000
+Schedule A,138,0.0000
+Schedule A,139,0.0000
+Schedule A,140,0.0000
+Schedule A,141,0.0000
+Schedule A,142,0.0000
+Schedule A,143,0.0000
+Schedule A,144,0.0000
+Schedule A,145,0.0000
+Schedule A,146,0.0000
+Schedule A,147,0.0000
+Schedule A,148,0.0000
+Schedule A,149,0.0000
+Schedule A,150,0.0000
+mobility-med,1,0.0000
+mobility-med,2,0.0000
+mobility-med,3,0.0000
+mobility-med,4,0.0000
+mobility-med,5,0.0000
+mobility-med,6,0.0000
+mobility-med,7,0.0000
+mobility-med,8,0.0000
+mobility-med,9,0.0000
+mobility-med,10,0.0000
+mobility-med,11,0.0000
+mobility-med,12,0.0000
+mobility-med,13,0.0000
+mobility-med,14,0.0000
+mobility-med,15,0.0000
+mobility-med,16,0.0000
+mobility-med,17,0.0000
+mobility-med,18,0.0000
+mobility-med,19,0.0000
+mobility-med,20,0.0000
+mobility-med,21,0.0000
+mobility-med,22,0.0000
+mobility-med,23,0.0000
+mobility-med,24,0.0000
+mobility-med,25,0.0000
+mobility-med,26,0.0000
+mobility-med,27,0.0000
+mobility-med,28,0.0000
+mobility-med,29,0.0000
+mobility-med,30,0.0000
+mobility-med,31,0.0000
+mobility-med,32,0.0000
+mobility-med,33,0.0000
+mobility-med,34,0.0000
+mobility-med,35,0.0000
+mobility-med,36,0.0000
+mobility-med,37,0.0000
+mobility-med,38,0.0000
+mobility-med,39,0.0000
+mobility-med,40,0.0000
+mobility-med,41,0.0000
+mobility-med,42,0.0000
+mobility-med,43,0.0000
+mobility-med,44,0.0000
+mobility-med,45,0.0000
+mobility-med,46,0.0000
+mobility-med,47,0.0000
+mobility-med,48,0.0000
+mobility-med,49,0.0000
+mobility-med,50,0.0000
+mobility-med,51,0.0000
+mobility-med,52,0.0000
+mobility-med,53,0.0000
+mobility-med,54,0.0000
+mobility-med,55,0.0000
+mobility-med,56,0.0000
+mobility-med,57,0.0000
+mobility-med,58,0.0000
+mobility-med,59,0.0000
+mobility-med,60,0.0000
+mobility-med,61,0.8000
+mobility-med,62,0.8000
+mobility-med,63,0.8000
+mobility-med,64,0.8000
+mobility-med,65,0.8000
+mobility-med,66,0.8000
+mobility-med,67,0.8000
+mobility-med,68,0.8000
+mobility-med,69,0.8000
+mobility-med,70,0.8000
+mobility-med,71,0.8000
+mobility-med,72,0.8000
+mobility-med,73,0.8000
+mobility-med,74,0.8000
+mobility-med,75,0.8000
+mobility-med,76,0.8000
+mobility-med,77,0.8000
+mobility-med,78,0.8000
+mobility-med,79,0.8000
+mobility-med,80,0.8000
+mobility-med,81,0.8000
+mobility-med,82,0.8000
+mobility-med,83,0.8000
+mobility-med,84,0.8000
+mobility-med,85,0.8000
+mobility-med,86,0.8000
+mobility-med,87,0.8000
+mobility-med,88,0.8000
+mobility-med,89,0.8000
+mobility-med,90,0.8000
+mobility-med,91,0.8000
+mobility-med,92,0.8000
+mobility-med,93,0.8000
+mobility-med,94,0.8000
+mobility-med,95,0.8000
+mobility-med,96,0.8000
+mobility-med,97,0.8000
+mobility-med,98,0.8000
+mobility-med,99,0.8000
+mobility-med,100,0.8000
+mobility-med,101,0.8000
+mobility-med,102,0.8000
+mobility-med,103,0.8000
+mobility-med,104,0.8000
+mobility-med,105,0.8000
+mobility-med,106,0.8000
+mobility-med,107,0.8000
+mobility-med,108,0.8000
+mobility-med,109,0.8000
+mobility-med,110,0.8000
+mobility-med,111,0.8000
+mobility-med,112,0.8000
+mobility-med,113,0.8000
+mobility-med,114,0.8000
+mobility-med,115,0.8000
+mobility-med,116,0.8000
+mobility-med,117,0.8000
+mobility-med,118,0.8000
+mobility-med,119,0.8000
+mobility-med,120,0.8000

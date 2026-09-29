@@ -1,0 +1,4 @@
+probe_n,client_fwd_ms,probe_fwd_ms,all16_signals_ms,entropy_only_extra_ms,delta_extra_vs_entropy_ms,scalar_uplink_bytes,consensus_bytes_per_es_per_step,activation_upload_bytes
+16,0.873,1.539,6.032,0.0,0.666,4,8,0
+64,0.831,1.526,6.91,0.0,0.695,4,8,0
+128,1.051,2.51,7.507,0.0,1.46,4,8,0

@@ -1,0 +1,13 @@
+[legacy_delta_abrupt_s2] method=splitomcplus controller=legacy signal=delta_hard schedule=abrupt rounds=100 device=cuda:0
+  R  1 loss=0.938 acc=0.359 worst=0.140 elapsed=1.9m ETA=190m
+  R 10 loss=0.446 acc=0.595 worst=0.462 elapsed=13.5m ETA=121m
+  R 20 loss=0.337 acc=0.657 worst=0.500 elapsed=26.4m ETA=105m
+  R 30 loss=0.268 acc=0.705 worst=0.544 elapsed=38.8m ETA=91m
+  R 40 loss=0.218 acc=0.761 worst=0.601 elapsed=50.7m ETA=76m
+  R 50 loss=0.186 acc=0.782 worst=0.641 elapsed=63.2m ETA=63m
+  R 60 loss=0.251 acc=0.540 worst=0.482 elapsed=76.5m ETA=51m
+  R 70 loss=0.233 acc=0.544 worst=0.503 elapsed=89.6m ETA=38m
+  R 80 loss=0.220 acc=0.557 worst=0.513 elapsed=103.0m ETA=26m
+  R 90 loss=0.198 acc=0.560 worst=0.532 elapsed=116.4m ETA=13m
+  R100 loss=0.179 acc=0.564 worst=0.545 elapsed=129.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/downstream_pilot/legacy_delta_abrupt_s2.json

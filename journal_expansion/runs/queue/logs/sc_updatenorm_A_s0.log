@@ -1,0 +1,13 @@
+[sc_updatenorm_A_s0] method=splitomcplus controller=selfcal signal=update_norm schedule=A rounds=100 device=cuda:0
+  R  1 loss=0.884 acc=0.267 worst=0.171 elapsed=1.7m ETA=168m
+  R 10 loss=0.398 acc=0.603 worst=0.511 elapsed=14.4m ETA=130m
+  R 20 loss=0.334 acc=0.647 worst=0.562 elapsed=28.6m ETA=114m
+  R 30 loss=0.235 acc=0.596 worst=0.536 elapsed=43.0m ETA=100m
+  R 40 loss=0.192 acc=0.597 worst=0.569 elapsed=57.4m ETA=86m
+  R 50 loss=0.168 acc=0.528 worst=0.503 elapsed=71.8m ETA=72m
+  R 60 loss=0.149 acc=0.551 worst=0.520 elapsed=86.0m ETA=57m
+  R 70 loss=0.131 acc=0.632 worst=0.568 elapsed=100.2m ETA=43m
+  R 80 loss=0.120 acc=0.635 worst=0.598 elapsed=113.9m ETA=28m
+  R 90 loss=0.110 acc=0.842 worst=0.796 elapsed=128.1m ETA=14m
+  R100 loss=0.098 acc=0.839 worst=0.772 elapsed=142.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase4_baselines/sc_updatenorm_A_s0.json

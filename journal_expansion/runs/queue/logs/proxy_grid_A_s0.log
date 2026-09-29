@@ -1,0 +1,13 @@
+[proxy_grid_A_s0] method=splitomcplus controller=proxy_grid signal=delta_hard schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.241 worst=0.142 elapsed=1.9m ETA=189m
+  R 10 loss=0.439 acc=0.595 worst=0.506 elapsed=14.7m ETA=132m
+  R 20 loss=0.281 acc=0.656 worst=0.584 elapsed=28.2m ETA=113m
+  R 30 loss=0.241 acc=0.583 worst=0.530 elapsed=42.6m ETA=99m
+  R 40 loss=0.208 acc=0.575 worst=0.517 elapsed=57.2m ETA=86m
+  R 50 loss=0.266 acc=0.570 worst=0.529 elapsed=71.1m ETA=71m
+  R 60 loss=0.161 acc=0.568 worst=0.541 elapsed=85.9m ETA=57m
+  R 70 loss=0.143 acc=0.634 worst=0.572 elapsed=100.1m ETA=43m
+  R 80 loss=0.131 acc=0.608 worst=0.545 elapsed=114.7m ETA=29m
+  R 90 loss=0.193 acc=0.786 worst=0.737 elapsed=128.7m ETA=14m
+  R100 loss=0.107 acc=0.830 worst=0.769 elapsed=142.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase4_baselines/proxy_grid_A_s0.json

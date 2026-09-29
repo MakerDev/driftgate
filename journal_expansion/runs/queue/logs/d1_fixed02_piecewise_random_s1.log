@@ -1,0 +1,18 @@
+[d1_fixed02_piecewise_random_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=piecewise_random rounds=150 device=cuda:1
+  R  1 loss=0.900 acc=0.300 worst=0.132 elapsed=2.4m ETA=363m
+  R 10 loss=0.452 acc=0.522 worst=0.401 elapsed=17.3m ETA=242m
+  R 20 loss=0.384 acc=0.577 worst=0.448 elapsed=33.8m ETA=220m
+  R 30 loss=0.333 acc=0.620 worst=0.490 elapsed=50.3m ETA=201m
+  R 40 loss=0.300 acc=0.683 worst=0.558 elapsed=66.7m ETA=183m
+  R 50 loss=0.274 acc=0.698 worst=0.595 elapsed=83.1m ETA=166m
+  R 60 loss=0.248 acc=0.710 worst=0.607 elapsed=99.2m ETA=149m
+  R 70 loss=0.227 acc=0.704 worst=0.626 elapsed=113.2m ETA=129m
+  R 80 loss=0.212 acc=0.697 worst=0.612 elapsed=127.4m ETA=111m
+  R 90 loss=0.199 acc=0.683 worst=0.601 elapsed=141.8m ETA=95m
+  R100 loss=0.188 acc=0.625 worst=0.556 elapsed=156.7m ETA=78m
+  R110 loss=0.178 acc=0.693 worst=0.632 elapsed=171.3m ETA=62m
+  R120 loss=0.165 acc=0.692 worst=0.617 elapsed=185.6m ETA=46m
+  R130 loss=0.157 acc=0.718 worst=0.649 elapsed=199.8m ETA=31m
+  R140 loss=0.141 acc=0.743 worst=0.684 elapsed=214.2m ETA=15m
+  R150 loss=0.138 acc=0.751 worst=0.680 elapsed=228.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_fixed02_piecewise_random_s1.json

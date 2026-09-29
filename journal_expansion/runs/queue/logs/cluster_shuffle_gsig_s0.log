@@ -1,0 +1,2 @@
+[cluster_shuffle_gsig_s0] method=splitomcplus controller=replay signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.277 worst=0.183 elapsed=5.9m ETA=883m

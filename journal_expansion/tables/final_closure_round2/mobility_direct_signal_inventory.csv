@@ -1,0 +1,16 @@
+signal,seed,run_id,protocol,complete,overlap,eval_rounds,valid,exclusion_reason,rerun_required
+tv,0,selfcal_20260904_191121_0dabd8,disjoint,yes,0,13,yes,,no
+tv,1,selfcal_20260905_065107_bd82ed,disjoint,yes,0,13,yes,,no
+tv,2,selfcal_20260905_095209_72c344,disjoint,yes,0,13,yes,,no
+entropy,0,selfcal_20260905_101250_357421,disjoint,yes,0,13,yes,,no
+entropy,1,selfcal_20260905_065216_1947b8,disjoint,yes,0,13,yes,,no
+entropy,2,selfcal_20260905_100125_93b166,disjoint,yes,0,13,yes,,no
+fixed_l0.4,0,fixed_20260904_191121_a47323,disjoint,yes,0,13,yes,,no
+fixed_l0.4,1,fixed_20260905_071020_45c560,disjoint,yes,0,13,yes,,no
+fixed_l0.4,2,fixed_20260905_100735_280baf,disjoint,yes,0,13,yes,,no
+soft,0,selfcal_20260905_182230_3ec4ef,disjoint,yes,0,13,yes,,no
+soft,1,selfcal_20260905_182240_e5033d,disjoint,yes,0,13,yes,,no
+soft,2,selfcal_20260905_213557_b39417,disjoint,yes,0,13,yes,,no
+hard,0,selfcal_20260905_182239_0f5a14,disjoint,yes,0,13,yes,,no
+hard,1,selfcal_20260905_182251_dd010e,disjoint,yes,0,13,yes,,no
+hard,2,selfcal_20260905_213735_16e342,disjoint,yes,0,13,yes,,no

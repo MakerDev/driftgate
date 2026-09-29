@@ -1,0 +1,5 @@
+condition,tv_rho_spearman_mean,sd,n_seeds,protocol
+standard (separated),+0.8656,0.0967,3,same-pool
+same-role exits,-0.2133,0.0276,3,same-pool
+same-role independent init,+0.1514,0.3303,3,same-pool
+weakened server,+0.0186,0.4123,3,same-pool

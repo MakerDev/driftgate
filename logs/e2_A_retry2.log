@@ -1,0 +1,6 @@
+
+[1/1] adaptive_splitomc schedule=A
+[adaptive_splitomc] Starting adaptive_splitomc with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:1
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.257 acc_oop=0.000 acc_oor=0.000 acc_total=0.257 elapsed=1.7m ETA=255m

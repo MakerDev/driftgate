@@ -1,0 +1,13 @@
+[ucb_A_s1] method=splitomcplus controller=ucb signal=delta_hard schedule=A rounds=100 device=cuda:0
+  R  1 loss=0.900 acc=0.304 worst=0.123 elapsed=2.0m ETA=197m
+  R 10 loss=0.357 acc=0.558 worst=0.424 elapsed=14.3m ETA=129m
+  R 20 loss=0.323 acc=0.613 worst=0.479 elapsed=28.2m ETA=113m
+  R 30 loss=0.290 acc=0.568 worst=0.444 elapsed=42.2m ETA=98m
+  R 40 loss=0.235 acc=0.579 worst=0.489 elapsed=56.1m ETA=84m
+  R 50 loss=0.215 acc=0.560 worst=0.492 elapsed=70.8m ETA=71m
+  R 60 loss=0.231 acc=0.562 worst=0.517 elapsed=84.8m ETA=57m
+  R 70 loss=0.148 acc=0.653 worst=0.611 elapsed=98.4m ETA=42m
+  R 80 loss=0.135 acc=0.654 worst=0.594 elapsed=112.9m ETA=28m
+  R 90 loss=0.129 acc=0.814 worst=0.706 elapsed=126.8m ETA=14m
+  R100 loss=0.125 acc=0.824 worst=0.715 elapsed=141.0m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase4_baselines/ucb_A_s1.json

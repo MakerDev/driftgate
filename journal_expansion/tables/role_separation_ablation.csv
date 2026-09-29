@@ -1,0 +1,5 @@
+variant,tv_rho_spearman,auroc,both_correct,server_only_correct,both_wrong_diff
+R1_role-separated,0.844,0.826,nan,nan,nan
+R2_same-role,-0.438,0.603,0.563,0.177,0.074
+R3_same+indep,0.078,0.101,0.519,0.241,0.074
+R4_weak-server,0.21,0.769,0.835,0.081,0.008

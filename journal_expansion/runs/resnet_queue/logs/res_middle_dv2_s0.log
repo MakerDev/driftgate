@@ -1,0 +1,20 @@
+[res_middle_dv2_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=100 device=cuda:0
+  R  1 loss=0.404 acc=0.477 worst=0.316 elapsed=2.7m ETA=264m
+  R 10 loss=0.165 acc=0.584 worst=0.519 elapsed=23.6m ETA=212m
+  R 20 loss=0.123 acc=0.658 worst=0.593 elapsed=48.0m ETA=192m
+  R 30 loss=0.074 acc=0.516 worst=0.435 elapsed=74.2m ETA=173m
+  R 40 loss=0.056 acc=0.563 worst=0.533 elapsed=99.5m ETA=149m
+  R 50 loss=0.044 acc=0.419 worst=0.357 elapsed=125.9m ETA=126m
+[res_middle_dv2_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=100 device=cuda:0
+  R  1 loss=0.405 acc=0.469 worst=0.304 elapsed=3.6m ETA=356m
+  R 10 loss=0.163 acc=0.612 worst=0.539 elapsed=34.9m ETA=315m
+  R 20 loss=0.120 acc=0.682 worst=0.602 elapsed=68.0m ETA=272m
+  R 30 loss=0.077 acc=0.505 worst=0.446 elapsed=111.0m ETA=259m
+  R 40 loss=0.057 acc=0.538 worst=0.486 elapsed=152.9m ETA=229m
+  R 50 loss=0.046 acc=0.431 worst=0.358 elapsed=189.6m ETA=190m
+  R 60 loss=0.060 acc=0.430 worst=0.392 elapsed=224.1m ETA=149m
+  R 70 loss=0.044 acc=0.577 worst=0.543 elapsed=258.8m ETA=111m
+  R 80 loss=0.036 acc=0.570 worst=0.515 elapsed=295.3m ETA=74m
+  R 90 loss=0.030 acc=0.835 worst=0.786 elapsed=332.6m ETA=37m
+  R100 loss=0.042 acc=0.826 worst=0.683 elapsed=366.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseF_arch/res_middle_dv2_s0.json

@@ -1,0 +1,18 @@
+[dve_gradual_sigmoid_s0] method=splitomcplus controller=selfcal signal=ent_client schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.278 worst=0.185 elapsed=2.0m ETA=296m
+  R 10 loss=0.398 acc=0.601 worst=0.510 elapsed=14.7m ETA=206m
+  R 20 loss=0.334 acc=0.645 worst=0.562 elapsed=28.7m ETA=186m
+  R 30 loss=0.228 acc=0.721 worst=0.659 elapsed=43.0m ETA=172m
+  R 40 loss=0.192 acc=0.732 worst=0.685 elapsed=57.3m ETA=158m
+  R 50 loss=0.170 acc=0.723 worst=0.671 elapsed=71.9m ETA=144m
+  R 60 loss=0.154 acc=0.714 worst=0.675 elapsed=86.4m ETA=130m
+  R 70 loss=0.139 acc=0.665 worst=0.591 elapsed=101.5m ETA=116m
+  R 80 loss=0.133 acc=0.616 worst=0.566 elapsed=117.5m ETA=103m
+  R 90 loss=0.129 acc=0.589 worst=0.558 elapsed=133.7m ETA=89m
+  R100 loss=0.113 acc=0.565 worst=0.503 elapsed=150.1m ETA=75m
+  R110 loss=0.129 acc=0.588 worst=0.559 elapsed=166.3m ETA=60m
+  R120 loss=0.138 acc=0.608 worst=0.575 elapsed=182.6m ETA=46m
+  R130 loss=0.188 acc=0.620 worst=0.568 elapsed=199.0m ETA=31m
+  R140 loss=0.176 acc=0.646 worst=0.604 elapsed=215.3m ETA=15m
+  R150 loss=0.162 acc=0.650 worst=0.605 elapsed=231.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseD_final/dve_gradual_sigmoid_s0.json

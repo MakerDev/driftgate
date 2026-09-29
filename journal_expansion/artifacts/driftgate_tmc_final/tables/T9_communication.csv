@@ -1,0 +1,11 @@
+분류,항목,bytes,근거,출처
+기본 split,"CNN split activation (표본 1개, fp32)",32768,"feature (128, 8, 8) × 4 B",계산
+기본 split,"ResNet-18 middle split activation (표본 1개, fp32)",131072,"feature (128, 16, 16) × 4 B",계산
+기본 split,"client block / server block 크기 (CNN, fp32)",1119528 / 5514792,"279,882 / 1,378,698 parameters × 4 B",계산
+기본 split,"라운드당 모델 교환량 (두 cluster에 속한 client 1명, 한 방향)",12149112,"client block 1개 + server block 2개. tables/communication_accounting.csv의 12,149,112 B와 정확히 같음",journal_expansion/tables/communication_accounting.csv
+기본 split,"server-block 사본을 맞추는 downlink (두 cluster client, 라운드당)",11029584,"cluster 평균 server block 2개를 받음(한 cluster client는 5,514,792 B). 12,149,112 B는 한 방향의 크기이므로 이 downlink는 따로 더해야 함","train/trainer.py:276 (set_server_state, cell-based 경로)"
+기본 split,"client block downlink (cluster 평균과 섞을 모델, 라운드당)",1119528,cluster 평균 client block 1개,"train/trainer.py:259-273 (mix_state_dicts, 271줄)"
+DriftGate 추가,client → edge TV scalar,4,client가 속한 edge마다 라운드당 4 B (두 cluster client는 8 B),src/signals/library.py:215-223 (aggregate_per_es)
+DriftGate 추가,edge ↔ 이웃 edge 점수 평균,4·deg(e),"선형 graph라 deg(e)는 1 또는 2, 즉 edge당 4 B 또는 8 B","self_calibrating.py:63-71,164"
+DriftGate 추가,spatial 비교를 위한 cluster TV 공유,4·(Z−1),spatial 점수는 같은 라운드의 모든 cluster TV를 쓰므로 edge마다 다른 Z−1개 cluster의 TV가 필요함. Z=5면 16 B,"self_calibrating.py:51-61,157"
+추정치,edge에서 server exit를 계산할 때 probe 업로드 (probe 64개),2099712,"추정치. activation 64 × 32,768 B + client 확률 벡터 64 × C × 4 B (C=10). 확률 벡터 대신 edge가 server 확률 벡터 64 × 40 B를 내려보내도 같은 크기",계산 (현재 구현은 client가 가진 server-block 사본으로 계산하므로 이 전송이 없음)

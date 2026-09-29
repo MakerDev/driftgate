@@ -1,0 +1,46 @@
+
+[1/2] splitomcplus_lam0.6_Lam0.5 schedule=A
+[splitomcplus_lam0.6_Lam0.5] Starting splitomcplus with lambda=0.6, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:1
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.290 acc_oop=0.000 acc_oor=0.000 acc_total=0.290 elapsed=1.7m ETA=256m
+  R 10 loss=0.338 acc_main=0.626 acc_oop=0.000 acc_oor=0.000 acc_total=0.626 elapsed=13.9m ETA=195m
+  R 20 loss=0.280 acc_main=0.653 acc_oop=0.000 acc_oor=0.000 acc_total=0.653 elapsed=26.6m ETA=173m
+  R 30 loss=0.239 acc_main=0.697 acc_oop=0.000 acc_oor=0.000 acc_total=0.697 elapsed=40.1m ETA=160m
+  R 40 loss=0.205 acc_main=0.739 acc_oop=0.400 acc_oor=0.066 acc_total=0.596 elapsed=52.9m ETA=145m
+  R 50 loss=0.182 acc_main=0.767 acc_oop=0.405 acc_oor=0.079 acc_total=0.618 elapsed=67.6m ETA=135m
+  R 60 loss=0.163 acc_main=0.775 acc_oop=0.361 acc_oor=0.082 acc_total=0.612 elapsed=81.1m ETA=122m
+  R 70 loss=0.149 acc_main=0.800 acc_oop=0.360 acc_oor=0.093 acc_total=0.545 elapsed=94.9m ETA=108m
+  R 80 loss=0.135 acc_main=0.823 acc_oop=0.358 acc_oor=0.100 acc_total=0.556 elapsed=109.5m ETA=96m
+  R 90 loss=0.126 acc_main=0.835 acc_oop=0.328 acc_oor=0.086 acc_total=0.548 elapsed=123.2m ETA=82m
+  R100 loss=0.113 acc_main=0.813 acc_oop=0.315 acc_oor=0.092 acc_total=0.625 elapsed=136.6m ETA=68m
+  R110 loss=0.098 acc_main=0.844 acc_oop=0.314 acc_oor=0.092 acc_total=0.645 elapsed=150.9m ETA=55m
+  R120 loss=0.097 acc_main=0.880 acc_oop=0.310 acc_oor=0.089 acc_total=0.667 elapsed=165.7m ETA=41m
+  R130 loss=0.090 acc_main=0.886 acc_oop=0.000 acc_oor=0.000 acc_total=0.886 elapsed=192.2m ETA=30m
+  R140 loss=0.095 acc_main=0.882 acc_oop=0.000 acc_oor=0.000 acc_total=0.882 elapsed=218.7m ETA=16m
+  R150 loss=0.080 acc_main=0.879 acc_oop=0.000 acc_oor=0.000 acc_total=0.879 elapsed=246.1m ETA=0m
+  Saved: ./results/e2_temporal/schedule_A/splitomcplus_lam0.6_Lam0.5.json
+
+[2/2] adaptive_splitomc schedule=A
+[adaptive_splitomc] Starting adaptive_splitomc with lambda=0.2, big_lambda=0.5
+  Clients: 50, ES: 5, Device: cuda:1
+  Total rounds: 150, Local epochs: 3
+  R  1 loss=0.884 acc_main=0.258 acc_oop=0.000 acc_oor=0.000 acc_total=0.258 elapsed=3.3m ETA=485m
+  R 10 loss=0.488 acc_main=0.559 acc_oop=0.000 acc_oor=0.000 acc_total=0.559 elapsed=27.8m ETA=390m
+  R 20 loss=0.417 acc_main=0.613 acc_oop=0.000 acc_oor=0.000 acc_total=0.613 elapsed=48.9m ETA=318m
+  R 30 loss=0.370 acc_main=0.644 acc_oop=0.000 acc_oor=0.000 acc_total=0.644 elapsed=70.0m ETA=280m
+  R 40 loss=0.335 acc_main=0.674 acc_oop=0.588 acc_oor=0.214 acc_total=0.615 elapsed=91.4m ETA=251m
+  R 50 loss=0.300 acc_main=0.680 acc_oop=0.597 acc_oor=0.248 acc_total=0.624 elapsed=112.7m ETA=225m
+  R 60 loss=0.274 acc_main=0.697 acc_oop=0.617 acc_oor=0.296 acc_total=0.645 elapsed=134.8m ETA=202m
+  R 70 loss=0.253 acc_main=0.696 acc_oop=0.605 acc_oor=0.293 acc_total=0.613 elapsed=155.8m ETA=178m
+  R 80 loss=0.239 acc_main=0.716 acc_oop=0.616 acc_oor=0.307 acc_total=0.629 elapsed=176.8m ETA=155m
+  R 90 loss=0.218 acc_main=0.727 acc_oop=0.619 acc_oor=0.313 acc_total=0.636 elapsed=198.4m ETA=132m
+  R100 loss=0.214 acc_main=0.736 acc_oop=0.630 acc_oor=0.345 acc_total=0.677 elapsed=219.6m ETA=110m
+  R110 loss=0.196 acc_main=0.733 acc_oop=0.632 acc_oor=0.363 acc_total=0.677 elapsed=240.8m ETA=88m
+  R120 loss=0.181 acc_main=0.746 acc_oop=0.627 acc_oor=0.357 acc_total=0.684 elapsed=257.7m ETA=64m
+  R130 loss=0.170 acc_main=0.760 acc_oop=0.000 acc_oor=0.000 acc_total=0.760 elapsed=273.4m ETA=42m
+  R140 loss=0.164 acc_main=0.753 acc_oop=0.000 acc_oor=0.000 acc_total=0.753 elapsed=289.1m ETA=21m
+  R150 loss=0.145 acc_main=0.764 acc_oop=0.000 acc_oor=0.000 acc_total=0.764 elapsed=304.9m ETA=0m
+  Saved: ./results/e2_temporal/schedule_A/adaptive_splitomc.json
+
+E2 done. Total: 551.4m

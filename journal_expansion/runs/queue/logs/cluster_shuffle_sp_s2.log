@@ -1,0 +1,18 @@
+[cluster_shuffle_sp_s2] method=splitomcplus controller=replay signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.938 acc=0.345 worst=0.190 elapsed=3.8m ETA=561m
+  R 10 loss=0.394 acc=0.530 worst=0.382 elapsed=17.6m ETA=246m
+  R 20 loss=0.338 acc=0.575 worst=0.410 elapsed=31.5m ETA=204m
+  R 30 loss=0.269 acc=0.598 worst=0.429 elapsed=45.1m ETA=180m
+  R 40 loss=0.234 acc=0.622 worst=0.453 elapsed=58.6m ETA=161m
+  R 50 loss=0.209 acc=0.641 worst=0.483 elapsed=72.2m ETA=144m
+  R 60 loss=0.187 acc=0.643 worst=0.462 elapsed=85.8m ETA=129m
+  R 70 loss=0.168 acc=0.644 worst=0.494 elapsed=99.5m ETA=114m
+  R 80 loss=0.151 acc=0.659 worst=0.486 elapsed=113.4m ETA=99m
+  R 90 loss=0.137 acc=0.667 worst=0.533 elapsed=126.8m ETA=85m
+  R100 loss=0.133 acc=0.669 worst=0.503 elapsed=140.6m ETA=70m
+  R110 loss=0.113 acc=0.679 worst=0.500 elapsed=154.2m ETA=56m
+  R120 loss=0.113 acc=0.680 worst=0.537 elapsed=167.7m ETA=42m
+  R130 loss=0.095 acc=0.676 worst=0.516 elapsed=181.4m ETA=28m
+  R140 loss=0.091 acc=0.667 worst=0.528 elapsed=195.1m ETA=14m
+  R150 loss=0.093 acc=0.687 worst=0.532 elapsed=208.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/cluster_shuffle_sp_s2.json

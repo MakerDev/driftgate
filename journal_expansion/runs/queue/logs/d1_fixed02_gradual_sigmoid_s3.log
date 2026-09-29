@@ -1,0 +1,18 @@
+[d1_fixed02_gradual_sigmoid_s3] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.935 acc=0.337 worst=0.302 elapsed=2.0m ETA=300m
+  R 10 loss=0.519 acc=0.563 worst=0.520 elapsed=14.7m ETA=206m
+  R 20 loss=0.447 acc=0.610 worst=0.588 elapsed=28.7m ETA=186m
+  R 30 loss=0.399 acc=0.644 worst=0.597 elapsed=42.7m ETA=171m
+  R 40 loss=0.367 acc=0.676 worst=0.629 elapsed=56.6m ETA=156m
+  R 50 loss=0.332 acc=0.685 worst=0.632 elapsed=70.2m ETA=140m
+  R 60 loss=0.310 acc=0.672 worst=0.594 elapsed=83.8m ETA=126m
+  R 70 loss=0.291 acc=0.646 worst=0.589 elapsed=97.8m ETA=112m
+  R 80 loss=0.262 acc=0.629 worst=0.576 elapsed=112.7m ETA=99m
+  R 90 loss=0.252 acc=0.622 worst=0.566 elapsed=126.7m ETA=84m
+  R100 loss=0.235 acc=0.612 worst=0.557 elapsed=140.9m ETA=70m
+  R110 loss=0.223 acc=0.626 worst=0.567 elapsed=155.8m ETA=57m
+  R120 loss=0.208 acc=0.628 worst=0.574 elapsed=170.5m ETA=43m
+  R130 loss=0.199 acc=0.629 worst=0.571 elapsed=185.5m ETA=29m
+  R140 loss=0.188 acc=0.630 worst=0.574 elapsed=200.4m ETA=14m
+  R150 loss=0.175 acc=0.635 worst=0.583 elapsed=215.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gated/d1_unseen/d1_fixed02_gradual_sigmoid_s3.json

@@ -1,0 +1,6 @@
+paper_claim_id,old_value,old_wording,source_found,exact_definition_found,status,final_value,final_setting,final_seed_count,final_wording_scope,source_run_ids
+intro_TV_spearman,~0.92,TV Spearman vs rho @150R,yes,yes(evaluate_signal drift=0.5),REPRODUCED,0.907,"rec_A passive fixed-lambda, 3 seeds",3,Schedule A (rec runs),rec_A_s0..s2
+intro_entropy_spearman,~0.50,entropy Spearman vs rho,yes,yes,REPLACED,A:+0.44 / abrupt:-0.58,rec_A / rec_abrupt passive,3,"schedule-dependent, sign flips","rec_A_s*,rec_abrupt_s*"
+intro_TV_auroc,0.98-1.00,TV AUROC drift vs no-drift,yes,yes,REPRODUCED,A:0.978 abrupt:1.000,rec passive,3,raw-direction AUROC,"rec_A_s*,rec_abrupt_s*"
+intro_entropy_auroc,0.16,entropy AUROC abrupt,yes,yes,REPRODUCED,0.161 (dir-free 0.839),rec_abrupt passive,3,raw-direction; MUST cite dir-free too,rec_abrupt_s*
+highdrift_signal_gap,+3.64pp,TV-entropy @rho=0.8 (same-pool),yes,yes,REPLACED,+6.71pp (disjoint 5-seed),Schedule A disjoint,5,recomputed disjoint; same-pool not mixed,"t1_A_dg_s*,t1_A_ent_s*"

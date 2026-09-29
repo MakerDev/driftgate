@@ -1,0 +1,29 @@
+{
+ "family": "cnn",
+ "dataset": "cifar10",
+ "split": "middle",
+ "input_size": 32,
+ "stats": {
+  "client_params": 279882,
+  "server_params": 1378698,
+  "activation_floats_per_sample": 8192,
+  "rep_shape": [
+   128,
+   8,
+   8
+  ],
+  "out_classes": 10
+ },
+ "exports": {
+  "eager": "eager_state.pt",
+  "torchscript": [
+   "client_block.pt",
+   "server_block.pt",
+   "probe_path.pt"
+  ],
+  "onnx": [
+   "client_block.onnx",
+   "server_block.onnx"
+  ]
+ }
+}

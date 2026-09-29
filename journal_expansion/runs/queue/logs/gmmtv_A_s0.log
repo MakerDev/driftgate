@@ -1,0 +1,18 @@
+[gmmtv_A_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.259 worst=0.161 elapsed=2.1m ETA=319m
+  R 10 loss=0.429 acc=0.590 worst=0.499 elapsed=15.3m ETA=214m
+  R 20 loss=0.363 acc=0.639 worst=0.554 elapsed=29.6m ETA=193m
+  R 30 loss=0.320 acc=0.673 worst=0.600 elapsed=44.3m ETA=177m
+  R 40 loss=0.283 acc=0.611 worst=0.564 elapsed=59.0m ETA=162m
+  R 50 loss=0.254 acc=0.631 worst=0.588 elapsed=73.9m ETA=148m
+  R 60 loss=0.230 acc=0.650 worst=0.618 elapsed=88.5m ETA=133m
+  R 70 loss=0.210 acc=0.611 worst=0.534 elapsed=104.0m ETA=119m
+  R 80 loss=0.196 acc=0.615 worst=0.551 elapsed=119.3m ETA=104m
+  R 90 loss=0.180 acc=0.627 worst=0.576 elapsed=134.8m ETA=90m
+  R100 loss=0.166 acc=0.677 worst=0.612 elapsed=149.6m ETA=75m
+  R110 loss=0.158 acc=0.696 worst=0.651 elapsed=164.5m ETA=60m
+  R120 loss=0.149 acc=0.701 worst=0.665 elapsed=179.6m ETA=45m
+  R130 loss=0.140 acc=0.800 worst=0.751 elapsed=194.3m ETA=30m
+  R140 loss=0.130 acc=0.821 worst=0.772 elapsed=208.6m ETA=15m
+  R150 loss=0.121 acc=0.828 worst=0.787 elapsed=223.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/gmmtv_A_s0.json

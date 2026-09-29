@@ -1,0 +1,18 @@
+[reverse_sp_s0] method=splitomcplus controller=replay signal=delta_hard schedule=static rounds=150 device=cuda:0
+  R  1 loss=0.884 acc=0.256 worst=0.213 elapsed=3.5m ETA=528m
+  R 10 loss=0.360 acc=0.533 worst=0.483 elapsed=22.0m ETA=307m
+  R 20 loss=0.297 acc=0.574 worst=0.517 elapsed=43.8m ETA=285m
+  R 30 loss=0.257 acc=0.607 worst=0.533 elapsed=66.2m ETA=265m
+  R 40 loss=0.222 acc=0.619 worst=0.536 elapsed=93.4m ETA=257m
+  R 50 loss=0.196 acc=0.632 worst=0.529 elapsed=127.0m ETA=254m
+  R 60 loss=0.176 acc=0.661 worst=0.568 elapsed=153.5m ETA=230m
+  R 70 loss=0.159 acc=0.662 worst=0.586 elapsed=175.9m ETA=201m
+  R 80 loss=0.152 acc=0.663 worst=0.587 elapsed=198.5m ETA=174m
+  R 90 loss=0.140 acc=0.684 worst=0.616 elapsed=221.0m ETA=147m
+  R100 loss=0.131 acc=0.682 worst=0.623 elapsed=242.4m ETA=121m
+  R110 loss=0.128 acc=0.704 worst=0.616 elapsed=264.8m ETA=96m
+  R120 loss=0.125 acc=0.702 worst=0.620 elapsed=288.2m ETA=72m
+  R130 loss=0.122 acc=0.699 worst=0.628 elapsed=309.9m ETA=48m
+  R140 loss=0.113 acc=0.722 worst=0.660 elapsed=331.3m ETA=24m
+  R150 loss=0.108 acc=0.727 worst=0.652 elapsed=353.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseB_decomp/reverse_sp_s0.json

@@ -1,0 +1,18 @@
+#!/bin/bash
+# Restarts the worker pool if it has died and there is queued work.
+# Idempotent: does nothing if workers are already running. Meant for cron.
+cd /disk2/Yujin/adaptive_splitomc_tmc
+QMAIN=journal_expansion/runs/queue/queue.txt
+QRES=journal_expansion/runs/resnet_queue/queue.txt
+nq=$(( $(wc -l < $QMAIN 2>/dev/null || echo 0) + $(wc -l < $QRES 2>/dev/null || echo 0) ))
+nw=$(ps -eo args | grep -E 'queue_worker\.sh|resnet_worker\.sh' | grep -vc grep)
+[ "$nq" -eq 0 ] && exit 0        # nothing left to do
+[ "$nw" -gt 0 ] && exit 0        # workers already up
+launch(){ setsid nohup bash "$@" >/dev/null 2>&1 < /dev/null & }
+for i in 0 1 2 3 4 5 6 7; do launch journal_expansion/scripts/queue_worker.sh cuda:1 $i; done
+for i in 20 21 22 23 24 25; do launch journal_expansion/scripts/queue_worker.sh cuda:0 $i; done
+launch journal_expansion/scripts/resnet_worker.sh cuda:1 0
+launch journal_expansion/scripts/resnet_worker.sh cuda:1 1
+launch journal_expansion/scripts/resnet_worker.sh cuda:0 20
+launch journal_expansion/scripts/resnet_worker.sh cuda:0 21
+echo "$(date) supervisor restarted workers (queue=$nq)" >> journal_expansion/runs/queue/logs/supervisor.log

@@ -1,0 +1,13 @@
+[res_middle_fx40_s0] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=100 device=cuda:1
+  R  1 loss=0.403 acc=0.475 worst=0.327 elapsed=6.1m ETA=600m
+  R 10 loss=0.167 acc=0.616 worst=0.527 elapsed=49.8m ETA=448m
+  R 20 loss=0.125 acc=0.683 worst=0.560 elapsed=122.1m ETA=488m
+  R 30 loss=0.090 acc=0.494 worst=0.437 elapsed=210.8m ETA=492m
+  R 40 loss=0.075 acc=0.520 worst=0.492 elapsed=287.1m ETA=431m
+  R 50 loss=0.054 acc=0.438 worst=0.391 elapsed=366.6m ETA=367m
+  R 60 loss=0.067 acc=0.422 worst=0.387 elapsed=447.4m ETA=298m
+  R 70 loss=0.057 acc=0.563 worst=0.530 elapsed=527.9m ETA=226m
+  R 80 loss=0.044 acc=0.531 worst=0.469 elapsed=609.6m ETA=152m
+  R 90 loss=0.043 acc=0.795 worst=0.762 elapsed=687.9m ETA=76m
+  R100 loss=0.047 acc=0.775 worst=0.656 elapsed=763.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseF_arch/res_middle_fx40_s0.json

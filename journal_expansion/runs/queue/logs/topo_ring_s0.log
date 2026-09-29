@@ -1,0 +1,13 @@
+[topo_ring_s0] method=splitomcplus controller=selfcal signal=delta_hard schedule=abrupt rounds=100 device=cuda:1
+  R  1 loss=0.884 acc=0.279 worst=0.184 elapsed=2.1m ETA=212m
+  R 10 loss=0.398 acc=0.602 worst=0.510 elapsed=15.4m ETA=139m
+  R 20 loss=0.334 acc=0.646 worst=0.563 elapsed=30.4m ETA=122m
+  R 30 loss=0.214 acc=0.755 worst=0.687 elapsed=45.4m ETA=106m
+  R 40 loss=0.174 acc=0.768 worst=0.734 elapsed=60.4m ETA=91m
+  R 50 loss=0.154 acc=0.783 worst=0.729 elapsed=75.3m ETA=75m
+  R 60 loss=0.210 acc=0.575 worst=0.534 elapsed=90.9m ETA=61m
+  R 70 loss=0.174 acc=0.573 worst=0.500 elapsed=106.5m ETA=46m
+  R 80 loss=0.139 acc=0.564 worst=0.514 elapsed=121.9m ETA=30m
+  R 90 loss=0.115 acc=0.556 worst=0.502 elapsed=137.4m ETA=15m
+  R100 loss=0.091 acc=0.532 worst=0.467 elapsed=152.6m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phase6_network/topo_ring_s0.json

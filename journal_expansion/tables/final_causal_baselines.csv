@@ -1,0 +1,16 @@
+schedule,arm,n,integ,worst,churn
+gsig,DV2(ours),3,0.6272,0.5554,0.0063
+gsig,fixed0.2,5,0.6323,0.5559,0.0
+gsig,fixed0.4,5,0.6233,0.5489,0.0
+gsig,legacy,5,0.6162,0.5412,0.0391
+gsig,labeled_oracle,3,0.6393,0.5797,0.046
+asym,DV2(ours),3,0.6472,0.5741,0.0083
+asym,fixed0.2,5,0.6423,0.5641,0.0
+asym,fixed0.4,5,0.6426,0.5682,0.0
+asym,legacy,5,0.6479,0.5765,0.0392
+asym,labeled_oracle,3,0.6535,0.5928,0.0466
+pwr,DV2(ours),3,0.6231,0.5607,0.008
+pwr,fixed0.2,5,0.6284,0.5562,0.0
+pwr,fixed0.4,5,0.6259,0.5571,0.0
+pwr,legacy,5,0.6251,0.5587,0.0418
+pwr,labeled_oracle,3,0.6389,0.5816,0.0466

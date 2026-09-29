@@ -1,0 +1,18 @@
+[role_weak_server_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:1
+  R  1 loss=0.884 acc=0.767 worst=0.681 elapsed=2.2m ETA=332m
+  R 10 loss=0.373 acc=0.873 worst=0.827 elapsed=28.2m ETA=394m
+  R 20 loss=0.314 acc=0.897 worst=0.861 elapsed=65.5m ETA=426m
+  R 30 loss=0.253 acc=0.903 worst=0.866 elapsed=104.8m ETA=419m
+  R 40 loss=0.214 acc=0.609 worst=0.596 elapsed=145.0m ETA=399m
+  R 50 loss=0.187 acc=0.622 worst=0.603 elapsed=185.0m ETA=370m
+  R 60 loss=0.167 acc=0.628 worst=0.605 elapsed=223.8m ETA=336m
+  R 70 loss=0.149 acc=0.498 worst=0.464 elapsed=251.8m ETA=288m
+  R 80 loss=0.137 acc=0.501 worst=0.471 elapsed=271.8m ETA=238m
+  R 90 loss=0.129 acc=0.508 worst=0.488 elapsed=291.3m ETA=194m
+  R100 loss=0.112 acc=0.638 worst=0.586 elapsed=310.5m ETA=155m
+  R110 loss=0.110 acc=0.644 worst=0.600 elapsed=329.5m ETA=120m
+  R120 loss=0.103 acc=0.639 worst=0.591 elapsed=348.1m ETA=87m
+  R130 loss=0.120 acc=0.901 worst=0.869 elapsed=366.3m ETA=56m
+  R140 loss=0.137 acc=0.920 worst=0.895 elapsed=384.9m ETA=27m
+  R150 loss=0.159 acc=0.922 worst=0.891 elapsed=402.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseR_role/role_weak_server_s0.json

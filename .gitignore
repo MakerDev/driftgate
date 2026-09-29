@@ -1,0 +1,13 @@
+# datasets are re-downloaded on each server (MIGRATION/DATASETS.md)
+/data_cache
+/journal_expansion/data_cache/
+# python / test caches
+__pycache__/
+*.pyc
+.pytest_cache/
+# local agent state
+/.claude/
+# live queue state (per server, recreated by the workers)
+journal_expansion/runs/queue*/queue.lock
+journal_expansion/runs/queue*/running_heavy*/
+journal_expansion/runs/queue*/STOP

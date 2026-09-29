@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py", line 194, in <module>
+    main()
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/scripts/run_v2.py", line 172, in main
+    run_experiment_v2(
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/src/runner.py", line 177, in run_experiment_v2
+    reinit_client_aux(clients, seed_offset=777 + cfg.get("partition_seed", 0))
+  File "/disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/src/role_ablation.py", line 93, in reinit_client_aux
+    torch.nn.init.kaiming_uniform_(p, a=5 ** 0.5, generator=g)
+  File "/home/ubuntu/anaconda3/lib/python3.12/site-packages/torch/nn/init.py", line 518, in kaiming_uniform_
+    return tensor.uniform_(-bound, bound, generator=generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected a 'cuda' device type for generator but found 'cpu'
+[role_same_role_indep_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=1.484 acc=0.374 worst=0.191 elapsed=1.8m ETA=269m
+  R 10 loss=1.228 acc=0.604 worst=0.469 elapsed=11.0m ETA=154m
+  R 20 loss=1.186 acc=0.664 worst=0.522 elapsed=22.5m ETA=146m
+  R 30 loss=1.151 acc=0.681 worst=0.525 elapsed=37.2m ETA=149m
+  R 40 loss=1.107 acc=0.613 worst=0.529 elapsed=53.1m ETA=146m
+  R 50 loss=1.008 acc=0.620 worst=0.534 elapsed=67.4m ETA=135m
+  R 60 loss=0.837 acc=0.630 worst=0.567 elapsed=80.1m ETA=120m
+  R 70 loss=0.642 acc=0.602 worst=0.573 elapsed=93.1m ETA=106m
+  R 80 loss=0.508 acc=0.600 worst=0.543 elapsed=106.1m ETA=93m
+  R 90 loss=0.419 acc=0.615 worst=0.584 elapsed=119.1m ETA=79m
+  R100 loss=0.368 acc=0.664 worst=0.616 elapsed=131.9m ETA=66m
+  R110 loss=0.323 acc=0.669 worst=0.625 elapsed=144.6m ETA=53m
+  R120 loss=0.297 acc=0.679 worst=0.633 elapsed=157.2m ETA=39m
+  R130 loss=0.269 acc=0.760 worst=0.680 elapsed=169.6m ETA=26m
+  R140 loss=0.245 acc=0.768 worst=0.688 elapsed=182.0m ETA=13m
+  R150 loss=0.236 acc=0.765 worst=0.685 elapsed=194.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseR_role/role_same_role_indep_s2.json

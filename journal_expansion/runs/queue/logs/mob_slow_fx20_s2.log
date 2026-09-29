@@ -1,0 +1,15 @@
+[mob_slow_fx20_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=abrupt rounds=120 device=cuda:1
+  R  1 loss=0.938 acc=0.382 worst=0.177 elapsed=6.0m ETA=710m
+  R 10 loss=0.490 acc=0.519 worst=0.499 elapsed=39.2m ETA=432m
+  R 20 loss=0.421 acc=0.578 worst=0.550 elapsed=79.8m ETA=399m
+  R 30 loss=0.375 acc=0.605 worst=0.557 elapsed=121.4m ETA=364m
+  R 40 loss=0.342 acc=0.635 worst=0.575 elapsed=160.0m ETA=320m
+  R 50 loss=0.310 acc=0.652 worst=0.598 elapsed=198.6m ETA=278m
+  R 60 loss=0.285 acc=0.664 worst=0.640 elapsed=238.9m ETA=239m
+  R 70 loss=0.267 acc=0.565 worst=0.551 elapsed=279.2m ETA=199m
+  R 80 loss=0.249 acc=0.587 worst=0.572 elapsed=320.3m ETA=160m
+  R 90 loss=0.233 acc=0.595 worst=0.577 elapsed=360.4m ETA=120m
+  R100 loss=0.216 acc=0.591 worst=0.572 elapsed=402.8m ETA=81m
+  R110 loss=0.203 acc=0.611 worst=0.585 elapsed=442.3m ETA=40m
+  R120 loss=0.192 acc=0.612 worst=0.594 elapsed=481.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseH_mobility/mob_slow_fx20_s2.json

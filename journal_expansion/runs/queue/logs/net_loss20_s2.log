@@ -1,0 +1,15 @@
+[net_loss20_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:1
+  R  1 loss=0.938 acc=0.393 worst=0.177 elapsed=5.9m ETA=703m
+  R 10 loss=0.394 acc=0.615 worst=0.481 elapsed=37.2m ETA=410m
+  R 20 loss=0.338 acc=0.670 worst=0.514 elapsed=71.0m ETA=355m
+  R 30 loss=0.264 acc=0.707 worst=0.550 elapsed=106.6m ETA=320m
+  R 40 loss=0.241 acc=0.753 worst=0.603 elapsed=142.2m ETA=284m
+  R 50 loss=0.207 acc=0.774 worst=0.647 elapsed=176.9m ETA=248m
+  R 60 loss=0.188 acc=0.800 worst=0.673 elapsed=211.5m ETA=212m
+  R 70 loss=0.251 acc=0.563 worst=0.537 elapsed=249.1m ETA=178m
+  R 80 loss=0.246 acc=0.573 worst=0.526 elapsed=287.2m ETA=144m
+  R 90 loss=0.228 acc=0.581 worst=0.564 elapsed=325.2m ETA=108m
+  R100 loss=0.220 acc=0.598 worst=0.584 elapsed=362.0m ETA=72m
+  R110 loss=0.204 acc=0.601 worst=0.585 elapsed=398.1m ETA=36m
+  R120 loss=0.200 acc=0.612 worst=0.602 elapsed=436.3m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseI_network/net_loss20_s2.json

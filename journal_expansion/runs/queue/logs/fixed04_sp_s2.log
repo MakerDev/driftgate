@@ -1,0 +1,13 @@
+[fixed04_sp_s2] method=splitomcplus controller=fixed signal=delta_hard schedule=static rounds=100 device=cuda:0
+  R  1 loss=0.938 acc=0.337 worst=0.173 elapsed=2.1m ETA=212m
+  R 10 loss=0.404 acc=0.529 worst=0.380 elapsed=13.4m ETA=120m
+  R 20 loss=0.347 acc=0.578 worst=0.413 elapsed=25.6m ETA=103m
+  R 30 loss=0.305 acc=0.602 worst=0.439 elapsed=38.4m ETA=90m
+  R 40 loss=0.277 acc=0.635 worst=0.489 elapsed=50.8m ETA=76m
+  R 50 loss=0.250 acc=0.651 worst=0.510 elapsed=63.6m ETA=64m
+  R 60 loss=0.230 acc=0.656 worst=0.492 elapsed=76.8m ETA=51m
+  R 70 loss=0.210 acc=0.663 worst=0.531 elapsed=90.0m ETA=39m
+  R 80 loss=0.198 acc=0.678 worst=0.526 elapsed=101.6m ETA=25m
+  R 90 loss=0.181 acc=0.682 worst=0.569 elapsed=114.5m ETA=13m
+  R100 loss=0.177 acc=0.697 worst=0.574 elapsed=126.4m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/gatec_fairness/fixed04_sp_s2.json

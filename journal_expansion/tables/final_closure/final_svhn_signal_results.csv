@@ -1,0 +1,5 @@
+signal,spearman_vs_rho,auroc_drift_active,n_seeds
+tv,0.5570,0.9047,5
+soft,0.2747,0.7890,5
+hard,0.6892,0.9490,5
+entropy,-0.8282,0.1618,5

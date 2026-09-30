@@ -1,0 +1,6 @@
+[s1_driftgate_s0] scenario=S1 arm=driftgate mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.854 acc=0.3277 off=1.000 active=50 elapsed=0.5m ETA=75m
+  R  5 loss=0.437 acc=0.5037 off=1.000 active=50 elapsed=2.3m ETA=66m
+  R 10 loss=0.381 acc=0.5707 off=0.999 active=50 elapsed=4.6m ETA=64m
+  R 15 loss=0.349 acc=0.6125 off=0.997 active=50 elapsed=6.9m ETA=62m
+  R 20 loss=0.320 acc=0.6356 off=0.990 active=50 elapsed=9.1m ETA=59m

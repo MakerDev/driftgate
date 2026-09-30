@@ -1,0 +1,6 @@
+[s1_entropy_s1] scenario=S1 arm=entropy mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.865 acc=0.3237 off=1.000 active=50 elapsed=0.5m ETA=77m
+  R  5 loss=0.417 acc=0.4764 off=1.000 active=50 elapsed=2.5m ETA=73m
+  R 10 loss=0.362 acc=0.5318 off=0.988 active=50 elapsed=5.0m ETA=69m
+  R 15 loss=0.331 acc=0.5683 off=0.976 active=50 elapsed=7.5m ETA=68m
+  R 20 loss=0.303 acc=0.5925 off=0.982 active=50 elapsed=9.9m ETA=64m

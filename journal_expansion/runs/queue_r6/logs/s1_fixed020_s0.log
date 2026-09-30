@@ -1,0 +1,6 @@
+[s1_fixed020_s0] scenario=S1 arm=fixed020 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.854 acc=0.3160 off=1.000 active=50 elapsed=0.5m ETA=74m
+  R  5 loss=0.512 acc=0.4921 off=1.000 active=50 elapsed=2.2m ETA=65m
+  R 10 loss=0.452 acc=0.5567 off=1.000 active=50 elapsed=4.4m ETA=62m
+  R 15 loss=0.416 acc=0.6017 off=1.000 active=50 elapsed=6.7m ETA=60m
+  R 20 loss=0.385 acc=0.6231 off=1.000 active=50 elapsed=8.9m ETA=58m

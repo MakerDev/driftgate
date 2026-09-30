@@ -12,3 +12,7 @@
   R100 loss=0.186 acc=0.652 worst=0.567 elapsed=243.4m ETA=122m
   R110 loss=0.178 acc=0.678 worst=0.617 elapsed=267.9m ETA=97m
   R120 loss=0.166 acc=0.672 worst=0.590 elapsed=291.4m ETA=73m
+  R130 loss=0.129 acc=0.843 worst=0.768 elapsed=316.2m ETA=49m
+  R140 loss=0.110 acc=0.857 worst=0.820 elapsed=339.6m ETA=24m
+  R150 loss=0.107 acc=0.867 worst=0.830 elapsed=362.2m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT5_E3_const/e3_lmax060_A_s1.json

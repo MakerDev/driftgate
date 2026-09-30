@@ -11,3 +11,8 @@
 [light12 cuda:0/GPU0] START e3_guard100_A_s2 (light) 2026-09-29 10:41:57
 [light12 cuda:0/GPU0] END e3_guard100_A_s2 exit=0 2026-09-29 16:22:57
 [light12 cuda:0/GPU0] START e3_lmax080_A_s1 (light) 2026-09-29 16:22:57
+[light12 cuda:0/GPU0] END e3_lmax080_A_s1 exit=0 2026-09-29 22:34:44
+[light12 cuda:0/GPU0] START e3_lmax060_mob_s0 (light) 2026-09-29 22:34:44
+[light12 cuda:0/GPU0] END e3_lmax060_mob_s0 exit=0 2026-09-30 05:00:44
+[light12 cuda:0/GPU0] START b3_c100gsig_fx15_s1 (light) 2026-09-30 05:00:44
+[light12 cuda:0/GPU0] END b3_c100gsig_fx15_s1 exit=0 2026-09-30 09:12:21

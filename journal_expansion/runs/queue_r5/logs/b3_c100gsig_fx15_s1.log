@@ -1,0 +1,18 @@
+[b3_c100gsig_fx15_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=3.966 acc=0.020 worst=0.009 elapsed=4.1m ETA=607m
+  R 10 loss=2.943 acc=0.140 worst=0.107 elapsed=25.0m ETA=350m
+  R 20 loss=2.613 acc=0.226 worst=0.192 elapsed=49.8m ETA=324m
+  R 30 loss=2.354 acc=0.287 worst=0.241 elapsed=73.9m ETA=295m
+  R 40 loss=2.140 acc=0.333 worst=0.293 elapsed=92.0m ETA=253m
+  R 50 loss=1.959 acc=0.367 worst=0.331 elapsed=107.1m ETA=214m
+  R 60 loss=1.797 acc=0.390 worst=0.348 elapsed=122.2m ETA=183m
+  R 70 loss=1.668 acc=0.400 worst=0.362 elapsed=137.1m ETA=157m
+  R 80 loss=1.549 acc=0.403 worst=0.364 elapsed=151.6m ETA=133m
+  R 90 loss=1.444 acc=0.411 worst=0.373 elapsed=166.0m ETA=111m
+  R100 loss=1.348 acc=0.421 worst=0.378 elapsed=180.4m ETA=90m
+  R110 loss=1.271 acc=0.433 worst=0.397 elapsed=194.5m ETA=71m
+  R120 loss=1.191 acc=0.442 worst=0.405 elapsed=208.6m ETA=52m
+  R130 loss=1.118 acc=0.451 worst=0.415 elapsed=222.6m ETA=34m
+  R140 loss=1.059 acc=0.456 worst=0.417 elapsed=236.7m ETA=17m
+  R150 loss=1.001 acc=0.468 worst=0.433 elapsed=250.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT4_B3_fixedgrid/b3_c100gsig_fx15_s1.json

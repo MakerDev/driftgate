@@ -11,3 +11,6 @@
 [light13 cuda:0/GPU0] START e3_lmax060_A_s0 (light) 2026-09-29 10:43:48
 [light13 cuda:0/GPU0] END e3_lmax060_A_s0 exit=0 2026-09-29 16:47:31
 [light13 cuda:0/GPU0] START e3_lmax080_A_s2 (light) 2026-09-29 16:47:31
+[light13 cuda:0/GPU0] END e3_lmax080_A_s2 exit=0 2026-09-29 22:36:19
+[light13 cuda:0/GPU0] START e3_lmax060_mob_s1 (light) 2026-09-29 22:36:19
+[light13 cuda:0/GPU0] END e3_lmax060_mob_s1 exit=0 2026-09-30 05:07:11

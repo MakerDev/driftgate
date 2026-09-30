@@ -102,3 +102,8 @@
   - 옛 서버의 GitHub 복사본(`/disk2/Yujin/driftgate_github`)에서 `bash MIGRATION/tools/sync_results_from_old_server.sh`를 실행해야 run JSON, 신호 npz, 워커 로그, provenance가 올라온다.
 - 받은 `tables/run_manifest.csv`는 64행 모두 `complete = yes`, `overlap_ok = yes`다. 다만 device 열이 옛 고정 문자열 `cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)`이다. 저장소의 `r5_manifest.py`(7.3에서 고친 판)는 `ubuntu20, RTX 3090 Ti, GPU 0`을 쓰므로, 이 CSV는 저장소 스크립트가 아니라 옛 live checkout의 스크립트로 만든 것으로 보인다. commit 메시지는 "r5_manifest.py keeps the new-server version"이라고 적었다.
 - 받은 `r5_tables.py`, `r5_report.py`는 새 서버 경로(`JR = /home/honeynaps/...`)를 쓰고 `py_compile`을 통과한다.
+
+## 2026-10-01 — 옛 서버 run 기록 동기화 완료
+
+- `40ea11c Sync Round 5 run records from ubuntu20 (25 runs)`를 merge했다(`236e0cc`, 충돌 없음). R5 run 64개의 JSON이 모두 이 서버에 있다.
+- 이 서버에서 Round 6을 진행 중이다(`journal_expansion/artifacts/driftgate_tmc_r6/WORKLOG.md`).

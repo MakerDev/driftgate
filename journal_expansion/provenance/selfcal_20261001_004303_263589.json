@@ -1,0 +1,143 @@
+{
+ "run_id": "selfcal_20261001_004303_263589",
+ "git_commit": "791cfd091ae112b7c08e7becd10d4cdbb6d2a4c6",
+ "config": {
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 2,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 0,
+   "model_seed": 100,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "schedule": "A",
+  "spatial_mode": null,
+  "controller_mode": "selfcal",
+  "controller_signal": "tv_dist",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "nn_p0_absonly"
+ },
+ "config_sha256": "4e5fae94ddda1f5c0022d5a3307174223080801b70ddf0ab5b34b6c80a376206",
+ "command": "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_v2.py --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --abs_only --no_neighbor_avg --disjoint_pools --schedule A --rounds 2 --probe_n 64 --seed 0 --model_seed 100 --run_name nn_p0_absonly --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/_r6_check --device cuda:0",
+ "start_time": "2026-10-01T00:43:03.810926",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 0,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "split_hash": "89e095ff3d7278dc",
+ "model_init_hash": "c3e43eeeae1fa2d9",
+ "end_time": "2026-10-01T00:45:25.511357",
+ "wall_time_sec": 141.66505646705627,
+ "final_metrics": {
+  "acc_total_final": 0.29999020510598345,
+  "worst_cell_final": 0.2651319828115408,
+  "integrated_acc": 0.2901388525529917,
+  "wall_min": 2.2809548219045004
+ }
+}

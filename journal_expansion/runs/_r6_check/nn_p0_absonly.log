@@ -1,0 +1,4 @@
+[nn_p0_absonly] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=2 device=cuda:0
+  R  1 loss=0.884 acc=0.280 worst=0.186 elapsed=0.9m ETA=1m
+  R  2 loss=0.573 acc=0.300 worst=0.265 elapsed=2.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/_r6_check/nn_p0_absonly.json

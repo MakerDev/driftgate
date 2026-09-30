@@ -1,0 +1,29 @@
+[s1_fixed015_s4] scenario=S1 arm=fixed015 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.893 acc=0.3481 off=1.000 active=50 elapsed=0.5m ETA=82m
+  R  5 loss=0.523 acc=0.5173 off=1.000 active=50 elapsed=2.1m ETA=61m
+  R 10 loss=0.467 acc=0.5697 off=1.000 active=50 elapsed=4.3m ETA=60m
+  R 15 loss=0.426 acc=0.6040 off=1.000 active=50 elapsed=6.7m ETA=60m
+  R 20 loss=0.398 acc=0.6362 off=1.000 active=50 elapsed=8.9m ETA=58m
+  R 25 loss=0.379 acc=0.6253 off=1.000 active=50 elapsed=11.1m ETA=56m
+  R 30 loss=0.362 acc=0.6364 off=1.000 active=50 elapsed=13.5m ETA=54m
+  R 35 loss=0.346 acc=0.5998 off=1.000 active=50 elapsed=15.8m ETA=52m
+  R 40 loss=0.334 acc=0.5911 off=1.000 active=50 elapsed=18.1m ETA=50m
+  R 45 loss=0.318 acc=0.6050 off=1.000 active=50 elapsed=20.4m ETA=48m
+  R 50 loss=0.304 acc=0.6147 off=1.000 active=50 elapsed=22.8m ETA=46m
+  R 55 loss=0.288 acc=0.6228 off=1.000 active=50 elapsed=25.1m ETA=43m
+  R 60 loss=0.277 acc=0.6247 off=1.000 active=50 elapsed=27.5m ETA=41m
+  R 65 loss=0.265 acc=0.6273 off=1.000 active=50 elapsed=29.8m ETA=39m
+  R 70 loss=0.255 acc=0.6395 off=1.000 active=50 elapsed=32.1m ETA=37m
+  R 75 loss=0.248 acc=0.6343 off=0.998 active=50 elapsed=34.5m ETA=34m
+  R 80 loss=0.238 acc=0.6339 off=0.999 active=50 elapsed=36.8m ETA=32m
+  R 85 loss=0.229 acc=0.6579 off=0.999 active=50 elapsed=39.0m ETA=30m
+  R 90 loss=0.221 acc=0.6583 off=0.999 active=50 elapsed=41.4m ETA=28m
+  R 95 loss=0.208 acc=0.6488 off=0.997 active=50 elapsed=43.7m ETA=25m
+  R100 loss=0.200 acc=0.6716 off=0.996 active=50 elapsed=46.1m ETA=23m
+  R105 loss=0.197 acc=0.6794 off=0.997 active=50 elapsed=48.4m ETA=21m
+  R110 loss=0.194 acc=0.6760 off=0.995 active=50 elapsed=50.8m ETA=18m
+  R115 loss=0.184 acc=0.6875 off=0.996 active=50 elapsed=53.2m ETA=16m
+  R120 loss=0.181 acc=0.6935 off=0.995 active=50 elapsed=55.5m ETA=14m
+  R125 loss=0.181 acc=0.7106 off=0.983 active=50 elapsed=58.0m ETA=12m
+  R130 loss=0.171 acc=0.7324 off=0.981 active=50 elapsed=60.1m ETA=9m
+  R135 loss=0.163 acc=0.7323 off=0.978 active=50 elapsed=62.2m ETA=7m

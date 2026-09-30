@@ -1,0 +1,25 @@
+[s1_fixed060_s4] scenario=S1 arm=fixed060 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.893 acc=0.3547 off=1.000 active=50 elapsed=0.7m ETA=109m
+  R  5 loss=0.389 acc=0.5431 off=0.981 active=50 elapsed=2.8m ETA=80m
+  R 10 loss=0.333 acc=0.6023 off=0.960 active=50 elapsed=5.3m ETA=74m
+  R 15 loss=0.297 acc=0.6367 off=0.910 active=50 elapsed=7.5m ETA=67m
+  R 20 loss=0.274 acc=0.6818 off=0.900 active=50 elapsed=9.9m ETA=64m
+  R 25 loss=0.255 acc=0.6532 off=0.883 active=50 elapsed=12.3m ETA=61m
+  R 30 loss=0.240 acc=0.6750 off=0.885 active=50 elapsed=14.7m ETA=59m
+  R 35 loss=0.225 acc=0.6281 off=0.883 active=50 elapsed=17.2m ETA=57m
+  R 40 loss=0.216 acc=0.6052 off=0.892 active=50 elapsed=19.7m ETA=54m
+  R 45 loss=0.204 acc=0.6263 off=0.855 active=50 elapsed=22.2m ETA=52m
+  R 50 loss=0.193 acc=0.6197 off=0.872 active=50 elapsed=24.6m ETA=49m
+  R 55 loss=0.180 acc=0.6200 off=0.804 active=50 elapsed=27.1m ETA=47m
+  R 60 loss=0.171 acc=0.6282 off=0.843 active=50 elapsed=29.5m ETA=44m
+  R 65 loss=0.162 acc=0.6197 off=0.796 active=50 elapsed=32.0m ETA=42m
+  R 70 loss=0.157 acc=0.6480 off=0.811 active=50 elapsed=34.4m ETA=39m
+  R 75 loss=0.149 acc=0.6073 off=0.723 active=50 elapsed=37.0m ETA=37m
+  R 80 loss=0.144 acc=0.6217 off=0.744 active=50 elapsed=39.4m ETA=34m
+  R 85 loss=0.138 acc=0.6420 off=0.742 active=50 elapsed=41.8m ETA=32m
+  R 90 loss=0.132 acc=0.6368 off=0.709 active=50 elapsed=44.4m ETA=30m
+  R 95 loss=0.123 acc=0.6289 off=0.699 active=50 elapsed=46.8m ETA=27m
+  R100 loss=0.116 acc=0.6473 off=0.698 active=50 elapsed=49.1m ETA=25m
+  R105 loss=0.115 acc=0.6516 off=0.650 active=50 elapsed=51.8m ETA=22m
+  R110 loss=0.112 acc=0.6573 off=0.680 active=50 elapsed=54.1m ETA=20m
+  R115 loss=0.103 acc=0.6753 off=0.665 active=50 elapsed=56.2m ETA=17m

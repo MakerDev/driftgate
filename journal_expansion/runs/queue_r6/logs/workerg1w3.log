@@ -1,1 +1,5 @@
 [wg1w3 cuda:0/GPU1] START s1_driftgate_s1 (K50) 2026-09-30 22:19:50
+[wg1w3 cuda:0/GPU1] END s1_driftgate_s1 exit=0 2026-09-30 23:30:41
+[wg1w3 cuda:0/GPU1] START s1_fixed060_s3 (K50) 2026-09-30 23:30:41
+[wg1w3 cuda:0/GPU1] END s1_fixed060_s3 exit=0 2026-10-01 00:42:14
+[wg1w3 cuda:0/GPU1] START s2_fixed030_s0 (K50) 2026-10-01 00:42:14

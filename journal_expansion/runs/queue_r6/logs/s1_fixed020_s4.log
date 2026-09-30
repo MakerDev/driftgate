@@ -1,0 +1,28 @@
+[s1_fixed020_s4] scenario=S1 arm=fixed020 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.893 acc=0.3488 off=1.000 active=50 elapsed=0.5m ETA=76m
+  R  5 loss=0.508 acc=0.5194 off=1.000 active=50 elapsed=2.2m ETA=62m
+  R 10 loss=0.452 acc=0.5722 off=1.000 active=50 elapsed=4.2m ETA=58m
+  R 15 loss=0.413 acc=0.6086 off=1.000 active=50 elapsed=7.3m ETA=66m
+  R 20 loss=0.385 acc=0.6417 off=1.000 active=50 elapsed=9.9m ETA=64m
+  R 25 loss=0.366 acc=0.6305 off=1.000 active=50 elapsed=12.1m ETA=61m
+  R 30 loss=0.350 acc=0.6441 off=1.000 active=50 elapsed=14.6m ETA=58m
+  R 35 loss=0.334 acc=0.6065 off=1.000 active=50 elapsed=17.0m ETA=56m
+  R 40 loss=0.322 acc=0.5966 off=1.000 active=50 elapsed=19.4m ETA=53m
+  R 45 loss=0.307 acc=0.6097 off=1.000 active=50 elapsed=21.7m ETA=51m
+  R 50 loss=0.293 acc=0.6205 off=1.000 active=50 elapsed=24.1m ETA=48m
+  R 55 loss=0.277 acc=0.6271 off=0.999 active=50 elapsed=26.5m ETA=46m
+  R 60 loss=0.266 acc=0.6306 off=1.000 active=50 elapsed=28.8m ETA=43m
+  R 65 loss=0.255 acc=0.6321 off=0.999 active=50 elapsed=31.3m ETA=41m
+  R 70 loss=0.245 acc=0.6447 off=0.999 active=50 elapsed=33.7m ETA=39m
+  R 75 loss=0.238 acc=0.6367 off=0.996 active=50 elapsed=36.1m ETA=36m
+  R 80 loss=0.228 acc=0.6396 off=0.997 active=50 elapsed=38.5m ETA=34m
+  R 85 loss=0.219 acc=0.6629 off=0.997 active=50 elapsed=40.8m ETA=31m
+  R 90 loss=0.211 acc=0.6604 off=0.996 active=50 elapsed=43.3m ETA=29m
+  R 95 loss=0.199 acc=0.6497 off=0.994 active=50 elapsed=45.7m ETA=26m
+  R100 loss=0.191 acc=0.6756 off=0.992 active=50 elapsed=48.0m ETA=24m
+  R105 loss=0.187 acc=0.6828 off=0.993 active=50 elapsed=50.5m ETA=22m
+  R110 loss=0.186 acc=0.6806 off=0.990 active=50 elapsed=52.9m ETA=19m
+  R115 loss=0.176 acc=0.6921 off=0.990 active=50 elapsed=55.2m ETA=17m
+  R120 loss=0.173 acc=0.6981 off=0.990 active=50 elapsed=57.6m ETA=14m
+  R125 loss=0.172 acc=0.7162 off=0.973 active=50 elapsed=59.8m ETA=12m
+  R130 loss=0.163 acc=0.7375 off=0.965 active=50 elapsed=61.8m ETA=10m

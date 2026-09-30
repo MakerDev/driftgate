@@ -1,0 +1,4 @@
+[nn_r6_dg] scenario=S1 arm=driftgate_own mode=selfcal K=50 L=5 rounds=2 delay=0 device=cuda:0
+  R  1 loss=0.854 acc=0.3278 off=1.000 active=50 elapsed=0.6m ETA=1m
+  R  2 loss=0.550 acc=0.3922 off=1.000 active=50 elapsed=1.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/_r6_check/nn_r6_dg.json  integrated=0.3600

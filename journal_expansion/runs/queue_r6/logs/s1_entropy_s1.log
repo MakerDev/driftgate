@@ -4,3 +4,30 @@
   R 10 loss=0.362 acc=0.5318 off=0.988 active=50 elapsed=5.0m ETA=69m
   R 15 loss=0.331 acc=0.5683 off=0.976 active=50 elapsed=7.5m ETA=68m
   R 20 loss=0.303 acc=0.5925 off=0.982 active=50 elapsed=9.9m ETA=64m
+  R 25 loss=0.284 acc=0.6226 off=0.971 active=50 elapsed=12.4m ETA=62m
+  R 30 loss=0.211 acc=0.6609 off=0.822 active=50 elapsed=14.8m ETA=59m
+  R 35 loss=0.201 acc=0.6059 off=0.857 active=50 elapsed=17.2m ETA=57m
+  R 40 loss=0.199 acc=0.5859 off=0.857 active=50 elapsed=19.6m ETA=54m
+  R 45 loss=0.179 acc=0.6136 off=0.835 active=50 elapsed=22.2m ETA=52m
+  R 50 loss=0.166 acc=0.6137 off=0.791 active=50 elapsed=24.5m ETA=49m
+  R 55 loss=0.157 acc=0.5963 off=0.757 active=50 elapsed=26.9m ETA=46m
+  R 60 loss=0.152 acc=0.6136 off=0.757 active=50 elapsed=29.4m ETA=44m
+  R 65 loss=0.142 acc=0.5937 off=0.678 active=50 elapsed=31.8m ETA=42m
+  R 70 loss=0.138 acc=0.6176 off=0.761 active=50 elapsed=34.2m ETA=39m
+  R 75 loss=0.128 acc=0.5976 off=0.679 active=50 elapsed=36.6m ETA=37m
+  R 80 loss=0.146 acc=0.6138 off=0.761 active=50 elapsed=39.0m ETA=34m
+  R 85 loss=0.136 acc=0.6316 off=0.740 active=50 elapsed=41.4m ETA=32m
+  R 90 loss=0.123 acc=0.6148 off=0.651 active=50 elapsed=43.8m ETA=29m
+  R 95 loss=0.109 acc=0.6150 off=0.617 active=50 elapsed=46.2m ETA=27m
+  R100 loss=0.114 acc=0.6111 off=0.650 active=50 elapsed=48.6m ETA=24m
+  R105 loss=0.106 acc=0.6019 off=0.615 active=50 elapsed=51.0m ETA=22m
+  R110 loss=0.096 acc=0.6068 off=0.603 active=50 elapsed=53.6m ETA=19m
+  R115 loss=0.092 acc=0.6145 off=0.586 active=50 elapsed=55.9m ETA=17m
+  R120 loss=0.100 acc=0.6403 off=0.561 active=50 elapsed=58.3m ETA=15m
+  R125 loss=0.095 acc=0.6745 off=0.536 active=50 elapsed=60.9m ETA=12m
+  R130 loss=0.097 acc=0.7390 off=0.569 active=50 elapsed=63.3m ETA=10m
+  R135 loss=0.096 acc=0.7602 off=0.580 active=50 elapsed=65.6m ETA=7m
+  R140 loss=0.104 acc=0.8014 off=0.548 active=50 elapsed=68.0m ETA=5m
+  R145 loss=0.105 acc=0.7926 off=0.546 active=50 elapsed=70.1m ETA=2m
+  R150 loss=0.101 acc=0.7820 off=0.544 active=50 elapsed=72.4m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1/s1_entropy_s1.json  integrated=0.6230

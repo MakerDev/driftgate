@@ -1,0 +1,28 @@
+[s1_fixed040_s4] scenario=S1 arm=fixed040 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.893 acc=0.3520 off=1.000 active=50 elapsed=0.5m ETA=71m
+  R  5 loss=0.449 acc=0.5279 off=1.000 active=50 elapsed=2.1m ETA=61m
+  R 10 loss=0.395 acc=0.5847 off=0.999 active=50 elapsed=4.3m ETA=60m
+  R 15 loss=0.358 acc=0.6224 off=0.995 active=50 elapsed=6.7m ETA=60m
+  R 20 loss=0.333 acc=0.6595 off=0.997 active=50 elapsed=8.7m ETA=57m
+  R 25 loss=0.315 acc=0.6432 off=0.994 active=50 elapsed=11.0m ETA=55m
+  R 30 loss=0.299 acc=0.6676 off=0.994 active=50 elapsed=13.3m ETA=53m
+  R 35 loss=0.283 acc=0.6270 off=0.996 active=50 elapsed=15.7m ETA=52m
+  R 40 loss=0.273 acc=0.6089 off=0.995 active=50 elapsed=18.0m ETA=50m
+  R 45 loss=0.258 acc=0.6276 off=0.978 active=50 elapsed=20.3m ETA=47m
+  R 50 loss=0.246 acc=0.6321 off=0.990 active=50 elapsed=22.7m ETA=45m
+  R 55 loss=0.231 acc=0.6321 off=0.969 active=50 elapsed=25.1m ETA=43m
+  R 60 loss=0.221 acc=0.6390 off=0.980 active=50 elapsed=27.4m ETA=41m
+  R 65 loss=0.212 acc=0.6389 off=0.978 active=50 elapsed=29.8m ETA=39m
+  R 70 loss=0.204 acc=0.6579 off=0.975 active=50 elapsed=32.2m ETA=37m
+  R 75 loss=0.196 acc=0.6334 off=0.947 active=50 elapsed=34.5m ETA=34m
+  R 80 loss=0.188 acc=0.6459 off=0.949 active=50 elapsed=36.8m ETA=32m
+  R 85 loss=0.179 acc=0.6675 off=0.958 active=50 elapsed=39.2m ETA=30m
+  R 90 loss=0.173 acc=0.6612 off=0.937 active=50 elapsed=41.5m ETA=28m
+  R 95 loss=0.161 acc=0.6482 off=0.933 active=50 elapsed=43.9m ETA=25m
+  R100 loss=0.154 acc=0.6726 off=0.930 active=50 elapsed=46.4m ETA=23m
+  R105 loss=0.152 acc=0.6833 off=0.913 active=50 elapsed=48.8m ETA=21m
+  R110 loss=0.150 acc=0.6783 off=0.915 active=50 elapsed=51.2m ETA=19m
+  R115 loss=0.140 acc=0.6929 off=0.907 active=50 elapsed=53.6m ETA=16m
+  R120 loss=0.140 acc=0.6993 off=0.907 active=50 elapsed=55.8m ETA=14m
+  R125 loss=0.140 acc=0.7251 off=0.879 active=50 elapsed=58.0m ETA=12m
+  R130 loss=0.130 acc=0.7397 off=0.809 active=50 elapsed=60.1m ETA=9m

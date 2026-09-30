@@ -216,7 +216,7 @@ def fig2():
                 ax.text(151, v, f" fixed {v:g}", va="center", fontsize=6.5, color=INK2)
             ax.set_ylabel(f"lambda, {nm}")
             ax.set_ylim(0.12, 0.73)
-        axes[0, 1].set_title(f"GeoLife trace ({len(runs2['driftgate'])} seeds)")
+        axes[0, 1].set_title(f"GeoLife trace ({len(runs2[T.DG])} seeds)")
     axes[0, 0].set_ylabel("cell mean rho")
     axes[0, 1].set_ylabel("cell mean rho")
     for a in axes[2]:

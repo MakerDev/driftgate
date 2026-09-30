@@ -4,3 +4,30 @@
   R 10 loss=0.310 acc=0.5519 off=0.928 active=50 elapsed=4.5m ETA=64m
   R 15 loss=0.280 acc=0.5838 off=0.905 active=50 elapsed=6.7m ETA=61m
   R 20 loss=0.253 acc=0.6187 off=0.907 active=50 elapsed=9.0m ETA=58m
+  R 25 loss=0.235 acc=0.6497 off=0.895 active=50 elapsed=11.2m ETA=56m
+  R 30 loss=0.223 acc=0.6513 off=0.885 active=50 elapsed=13.5m ETA=54m
+  R 35 loss=0.208 acc=0.6052 off=0.886 active=50 elapsed=15.9m ETA=52m
+  R 40 loss=0.197 acc=0.5844 off=0.874 active=50 elapsed=18.4m ETA=51m
+  R 45 loss=0.183 acc=0.6092 off=0.878 active=50 elapsed=20.7m ETA=48m
+  R 50 loss=0.175 acc=0.6071 off=0.841 active=50 elapsed=23.0m ETA=46m
+  R 55 loss=0.167 acc=0.5910 off=0.810 active=50 elapsed=25.3m ETA=44m
+  R 60 loss=0.162 acc=0.6123 off=0.815 active=50 elapsed=27.6m ETA=41m
+  R 65 loss=0.155 acc=0.5953 off=0.752 active=50 elapsed=29.9m ETA=39m
+  R 70 loss=0.148 acc=0.6160 off=0.774 active=50 elapsed=32.1m ETA=37m
+  R 75 loss=0.136 acc=0.6009 off=0.712 active=50 elapsed=34.5m ETA=34m
+  R 80 loss=0.134 acc=0.6067 off=0.705 active=50 elapsed=37.0m ETA=32m
+  R 85 loss=0.134 acc=0.6256 off=0.724 active=50 elapsed=39.3m ETA=30m
+  R 90 loss=0.126 acc=0.6182 off=0.670 active=50 elapsed=41.6m ETA=28m
+  R 95 loss=0.120 acc=0.6198 off=0.676 active=50 elapsed=44.0m ETA=25m
+  R100 loss=0.121 acc=0.6115 off=0.691 active=50 elapsed=46.4m ETA=23m
+  R105 loss=0.116 acc=0.6048 off=0.672 active=50 elapsed=48.7m ETA=21m
+  R110 loss=0.104 acc=0.6070 off=0.639 active=50 elapsed=50.9m ETA=19m
+  R115 loss=0.102 acc=0.6198 off=0.646 active=50 elapsed=53.3m ETA=16m
+  R120 loss=0.107 acc=0.6454 off=0.622 active=50 elapsed=55.7m ETA=14m
+  R125 loss=0.102 acc=0.6715 off=0.591 active=50 elapsed=58.1m ETA=12m
+  R130 loss=0.100 acc=0.7335 off=0.559 active=50 elapsed=60.4m ETA=9m
+  R135 loss=0.087 acc=0.7565 off=0.454 active=50 elapsed=62.6m ETA=7m
+  R140 loss=0.089 acc=0.8146 off=0.473 active=50 elapsed=64.9m ETA=5m
+  R145 loss=0.086 acc=0.8072 off=0.447 active=50 elapsed=67.2m ETA=2m
+  R150 loss=0.084 acc=0.7995 off=0.420 active=50 elapsed=69.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1/s1_fixed060_s1.json  integrated=0.6272

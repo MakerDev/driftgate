@@ -1,1 +1,7 @@
 [wg0w4 cuda:0/GPU0] START s1_fixed020_s0 (K50) 2026-09-30 22:19:50
+[wg0w4 cuda:0/GPU0] END s1_fixed020_s0 exit=0 2026-09-30 23:28:10
+[wg0w4 cuda:0/GPU0] START s1_fixed040_s2 (K50) 2026-09-30 23:28:10
+[wg0w4 cuda:0/GPU0] END s1_fixed040_s2 exit=0 2026-10-01 00:29:55
+[wg0w4 cuda:0/GPU0] START s1_driftgate_s4 (K50) 2026-10-01 00:29:55
+[wg0w4 cuda:0/GPU0] END s1_driftgate_s4 exit=-15 2026-10-01 00:40:21
+[wg0w4 cuda:0/GPU0] START s1_apfl010_s0 (K50) 2026-10-01 00:40:21

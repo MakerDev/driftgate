@@ -1,0 +1,4 @@
+[light17 cuda:0/GPU0] START b4_apfl_eta010_mob_s2 (light) 2026-09-29 21:50:43
+[light17 cuda:0/GPU0] END b4_apfl_eta010_mob_s2 exit=0 2026-09-30 04:42:59
+[light17 cuda:0/GPU0] START e3_lmax080_mob_s2 (light) 2026-09-30 04:42:59
+[light17 cuda:0/GPU0] END e3_lmax080_mob_s2 exit=0 2026-09-30 08:18:12

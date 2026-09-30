@@ -7,3 +7,12 @@
   R 50 loss=0.219 acc=0.618 worst=0.584 elapsed=123.3m ETA=247m
   R 60 loss=0.205 acc=0.645 worst=0.615 elapsed=147.4m ETA=221m
   R 70 loss=0.215 acc=0.598 worst=0.531 elapsed=172.5m ETA=197m
+  R 80 loss=0.208 acc=0.605 worst=0.542 elapsed=197.7m ETA=173m
+  R 90 loss=0.198 acc=0.624 worst=0.570 elapsed=223.4m ETA=149m
+  R100 loss=0.155 acc=0.674 worst=0.600 elapsed=247.4m ETA=124m
+  R110 loss=0.144 acc=0.698 worst=0.649 elapsed=272.9m ETA=99m
+  R120 loss=0.124 acc=0.688 worst=0.665 elapsed=296.0m ETA=74m
+  R130 loss=0.069 acc=0.878 worst=0.815 elapsed=319.4m ETA=49m
+  R140 loss=0.065 acc=0.900 worst=0.842 elapsed=342.7m ETA=24m
+  R150 loss=0.084 acc=0.894 worst=0.803 elapsed=366.7m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT5_E3_const/e3_lmax080_A_s0.json

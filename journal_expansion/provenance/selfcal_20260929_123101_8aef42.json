@@ -72,7 +72,7 @@
   "cuda": "12.6",
   "gpu": "NVIDIA GeForce RTX 3090 Ti"
  },
- "status": "running",
+ "status": "completed",
  "disjoint_pools": {
   "controller_frac": 0.2,
   "seed": 1,
@@ -133,5 +133,13 @@
   "global_overlap": 0
  },
  "split_hash": "1282d8ae2e05fd9a",
- "model_init_hash": "f3edfb041a6a521e"
+ "model_init_hash": "f3edfb041a6a521e",
+ "end_time": "2026-09-29T21:40:21.711456",
+ "wall_time_sec": 32959.78083586693,
+ "final_metrics": {
+  "acc_total_final": 0.882890625,
+  "worst_cell_final": 0.82875,
+  "integrated_acc": 0.5956301875186258,
+  "wall_min": 548.881006538868
+ }
 }

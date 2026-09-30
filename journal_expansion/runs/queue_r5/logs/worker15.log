@@ -1,0 +1,4 @@
+[light15 cuda:0/GPU0] START b4_apfl_eta010_mob_s1 (light) 2026-09-29 21:50:43
+[light15 cuda:0/GPU0] END b4_apfl_eta010_mob_s1 exit=0 2026-09-30 05:03:50
+[light15 cuda:0/GPU0] START b3_c100gsig_fx15_s2 (light) 2026-09-30 05:03:50
+[light15 cuda:0/GPU0] END b3_c100gsig_fx15_s2 exit=0 2026-09-30 09:10:05

@@ -8,3 +8,11 @@
   R 60 loss=0.032 acc=0.549 worst=0.448 elapsed=220.9m ETA=331m
   R 70 loss=0.048 acc=0.420 worst=0.331 elapsed=257.5m ETA=294m
   R 80 loss=0.058 acc=0.430 worst=0.403 elapsed=294.3m ETA=258m
+  R 90 loss=0.053 acc=0.438 worst=0.394 elapsed=331.1m ETA=221m
+  R100 loss=0.037 acc=0.557 worst=0.507 elapsed=367.9m ETA=184m
+  R110 loss=0.025 acc=0.569 worst=0.481 elapsed=404.4m ETA=147m
+  R120 loss=0.022 acc=0.567 worst=0.428 elapsed=441.4m ETA=110m
+  R130 loss=0.027 acc=0.864 worst=0.704 elapsed=477.2m ETA=73m
+  R140 loss=0.029 acc=0.792 worst=0.662 elapsed=512.8m ETA=37m
+  R150 loss=0.030 acc=0.883 worst=0.829 elapsed=548.9m ETA=0m
+  Saved: /disk2/Yujin/adaptive_splitomc_tmc/journal_expansion/runs/phaseT5_E2_resnet/e2_res_relonly_A_s1.json

@@ -172,18 +172,18 @@ def fig2():
     x = np.arange(1, 151)
     info = {}
     # S1: hub vs residential
-    runs = {arm: lam_series("S1", arm) for arm in ("driftgate", "entropy")}
-    if runs["driftgate"]:
-        any_run = next(iter(runs["driftgate"].values()))
+    runs = {arm: lam_series("S1", arm) for arm in (T.DG, T.ENT)}
+    if runs[T.DG]:
+        any_run = next(iter(runs[T.DG].values()))
         hub = np.flatnonzero(any_run["env"]["cell_is_hub"])
         res = np.flatnonzero(~any_run["env"]["cell_is_hub"])
-        rho = np.mean([r["rho_cell"] for r in runs["driftgate"].values()], axis=0)
+        rho = np.mean([r["rho_cell"] for r in runs[T.DG].values()], axis=0)
         axes[0, 0].plot(x, np.nanmean(rho[:, hub], axis=1), color=INK, label="hub cell")
         axes[0, 0].plot(x, np.nanmean(rho[:, res], axis=1), color=MUTED, label="residential cells (mean)")
         axes[0, 0].legend(loc="lower center")
         for row, cells, lab in ((1, hub, "hub cell"), (2, res, "residential cells (mean)")):
             ax = axes[row, 0]
-            for arm, col, nm in (("driftgate", C_DG, "DriftGate"), ("entropy", C_ENT, "entropy controller")):
+            for arm, col, nm in ((T.DG, C_DG, "DriftGate"), (T.ENT, C_ENT, "entropy controller")):
                 if runs[arm]:
                     lam = np.mean([r["lam"][:, cells].mean(axis=1) for r in runs[arm].values()], axis=0)
                     ax.plot(x, lam, color=col, label=nm)
@@ -193,31 +193,28 @@ def fig2():
                 ax.text(151, v, f" fixed {v:g}", va="center", fontsize=6.5, color=INK2)
             ax.set_ylabel(f"lambda, {lab}")
             ax.set_ylim(0.12, 0.73)
-        n = len(runs["driftgate"])
+        n = len(runs[T.DG])
         axes[0, 0].set_title(f"commute mobility ({n} seeds)")
     # S2: per cell rho, one lambda line per method (all cells share lambda)
-    runs2 = {arm: lam_series("S2", arm) for arm in ("driftgate", "entropy")}
-    if runs2["driftgate"]:
-        rho = np.mean([r["rho_cell"] for r in runs2["driftgate"].values()], axis=0)
+    runs2 = {arm: lam_series("S2", arm) for arm in (T.DG, T.ENT)}
+    if runs2[T.DG]:
+        rho = np.mean([r["rho_cell"] for r in runs2[T.DG].values()], axis=0)
         L = rho.shape[1]
-        meta = next(iter(runs2["driftgate"].values()))["h"]["env_meta"]
+        meta = next(iter(runs2[T.DG].values()))["h"]["env_meta"]
         for z in range(L):
             axes[0, 1].plot(x, rho[:, z], color=CELL_COLORS[z], lw=1.2,
                             label=f"cell {z} ({meta['residents_per_cell'][z]})")
         axes[0, 1].legend(loc="upper right", ncol=2, fontsize=6.5, title="cell (residents)", title_fontsize=6.5)
-        for row in (1, 2):
+        for row, (arm, nm) in ((1, (T.DG, "DriftGate")), (2, (T.ENT, "entropy controller"))):
             ax = axes[row, 1]
-            for arm, col, nm in (("driftgate", C_DG, "DriftGate"), ("entropy", C_ENT, "entropy controller")):
-                if runs2[arm]:
-                    lams = np.stack([r["lam"] for r in runs2[arm].values()])       # [seeds, T, L]
-                    same = float(np.abs(lams - lams[:, :, :1]).max())
-                    info[(arm, "S2 max spread across cells")] = same
-                    cells = [0] if row == 1 else list(range(1, L))
-                    ax.plot(x, lams[:, :, cells].mean(axis=(0, 2)), color=col, label=nm)
+            if runs2[arm]:
+                lams = np.stack([r["lam"] for r in runs2[arm].values()])       # [seeds, T, L]
+                for z in range(L):
+                    ax.plot(x, lams[:, :, z].mean(axis=0), color=CELL_COLORS[z], lw=1.2)
             for v in (0.4, 0.2):
                 ax.axhline(v, color=MUTED, ls="--", lw=0.9)
                 ax.text(151, v, f" fixed {v:g}", va="center", fontsize=6.5, color=INK2)
-            ax.set_ylabel("lambda, cell 0" if row == 1 else "lambda, cells 1-4 (mean)")
+            ax.set_ylabel(f"lambda, {nm}")
             ax.set_ylim(0.12, 0.73)
         axes[0, 1].set_title(f"GeoLife trace ({len(runs2['driftgate'])} seeds)")
     axes[0, 0].set_ylabel("cell mean rho")
@@ -236,12 +233,12 @@ def fig3():
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 2.4), sharey=False)
     out = {}
     for ax, scen in zip(axes, ("S1", "S2")):
-        dg = T.metric(scen, "driftgate", "integ")
+        dg = T.metric(scen, T.DG, "integ")
         if not dg:
             continue
         bf = T.best_fixed(scen, T.FIXED_ALL, sorted(dg))
-        for arm, col, nm in (("driftgate", C_DG, "DriftGate"), (bf, C_FIX, f"best fixed ({T.ARM_NAME[bf]})" if bf else ""),
-                             ("entropy", C_ENT, "entropy controller")):
+        for arm, col, nm in ((T.DG, C_DG, "DriftGate"), (bf, C_FIX, f"best fixed ({T.ARM_NAME[bf]})" if bf else ""),
+                             (T.ENT, C_ENT, "entropy controller")):
             if arm is None:
                 continue
             rr = {s: T.run(f, scen, s) for s, f in T.fam(scen, arm).items()}
@@ -303,7 +300,7 @@ def fig5():
         return None
     fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw={"width_ratios": [1.25, 1, 1]})
     out = {}
-    order = ["driftgate"] + T.FIXED_ALL + ["entropy", "apfl001", "apfl010"]
+    order = [T.DG] + T.FIXED_ALL + [T.ENT, "apfl001", "apfl010"]
     names = [T.ARM_NAME[a] for a in order]
     off = {}
     for r in lat:
@@ -320,11 +317,11 @@ def fig5():
     axes[0].set_title("(a) offload rate")
     axes[0].legend(loc="lower right")
     axes[0].grid(axis="y", visible=False)
-    bf = T.best_fixed("S1", T.FIXED_ALL, sorted(T.metric("S1", "driftgate", "integ")))
+    bf = T.best_fixed("S1", T.FIXED_ALL, sorted(T.metric("S1", T.DG, "integ")))
     for ax, key, title in ((axes[1], "mean_e2e_ms", "(b) mean latency, commute mobility"),
                            (axes[2], "p95_e2e_ms", "(c) p95 latency, commute mobility")):
-        for arm, col, nm in (("driftgate", C_DG, "DriftGate"), (bf, C_FIX, f"best fixed ({T.ARM_NAME[bf]})"),
-                             ("entropy", C_ENT, "entropy controller")):
+        for arm, col, nm in ((T.DG, C_DG, "DriftGate"), (bf, C_FIX, f"best fixed ({T.ARM_NAME[bf]})"),
+                             (T.ENT, C_ENT, "entropy controller")):
             pts = sorted((float(r["bandwidth_mbps"]), float(r[key])) for r in lat
                          if r["scenario"] == "S1" and r["arm"] == arm and r["rtt_ms"] in ("20", "20.0"))
             if pts:
@@ -363,9 +360,9 @@ def main():
     if info2:
         CAPS.append(("fig2_lambda_trajectories",
                      "Cell mean rho (top) and lambda chosen by DriftGate and the entropy controller (middle and bottom). "
-                     "Left: commute mobility, hub cell and the mean of the residential cells. Right: GeoLife trace. "
-                     "In the GeoLife trace every pair of edges is a neighbour, so the one-step neighbour average gives every "
-                     "cell the same score and the same lambda. Dashed lines mark fixed lambda 0.4 and 0.2. "
+                     "Left: commute mobility, hub cell and the mean of the residential cells, lambda of both methods. "
+                     "Right: GeoLife trace, one line per cell (DriftGate in the middle, entropy controller at the bottom). "
+                     "Each edge sets lambda from its own cell score only. Dashed lines mark fixed lambda 0.4 and 0.2. "
                      "Lines are means over seeds."))
     f3 = fig3()
     if f3:

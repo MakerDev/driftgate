@@ -33,13 +33,18 @@ sys.path.insert(0, str(JR.parent))
 sys.path.insert(0, str(JR))
 from src import r6_env  # noqa: E402
 
-R5_T1 = JR / "artifacts" / "driftgate_tmc_final" / "tables" / "T1_main_results.csv"
+# Schedule A column of T2: the Round-5 main table recomputed with the new DriftGate definition (P0, r6_p0_tables.py);
+# fixed-lambda and APFL rows there are the unchanged Round-5 runs.
+R5_T1 = HERE / "p0" / "tables" / "T1_main_results.csv"
 SLOTS = [("pre-commute", "05:00-07:30", 1, 25), ("commute", "07:30-09:30", 26, 45),
          ("daytime", "09:30-16:00", 46, 110), ("return", "16:00-19:00", 111, 140),
          ("evening", "19:00-20:00", 141, 150)]
 FIXED_ALL = ["fixed015", "fixed020", "fixed030", "fixed040", "fixed050", "fixed060"]
 FIXED3 = ["fixed020", "fixed040", "fixed060"]
-ARM_NAME = {"driftgate": "DriftGate", "entropy": "entropy controller", "apfl001": "APFL η=0.01",
+# 2026-10-01: DriftGate / entropy arms without the neighbour score average (arm names *_own). The earlier
+# arms "driftgate" / "entropy" (with the average) are retired records and appear in no table.
+DG, ENT = "driftgate_own", "entropy_own"
+ARM_NAME = {DG: "DriftGate", ENT: "entropy controller", "apfl001": "APFL η=0.01",
             "apfl010": "APFL η=0.1", **{f: f"fixed {int(f[5:]) / 100:g}" for f in FIXED_ALL}}
 SCEN = {  # label -> (run dir, run prefix, display name)
     "S1": ("phaseT6_S1", "s1", "commute mobility"),
@@ -245,33 +250,33 @@ def s_range(r):
 def t2():
     rows = []
     # Schedule A from Round 5 (read only)
-    r5 = [r for r in csv.DictReader(open(R5_T1)) if r["setting"] == "stepwise composition change"]
-    mapname = {"DriftGate": "driftgate", "entropy": "entropy", "APFL η=0.01": "apfl001", "APFL η=0.1": "apfl010"}
+    r5 = [r for r in csv.DictReader(open(R5_T1)) if r["setting"] == "stepwise composition change"] if R5_T1.exists() else []
+    mapname = {"DriftGate": DG, "entropy": ENT, "APFL η=0.01": "apfl001", "APFL η=0.1": "apfl010"}
     for r in r5:
         m = r["method"].replace(" (best fixed)", "")
         arm = mapname.get(m) or ("fixed" + f"{int(round(float(m.split()[1]) * 100)):03d}" if m.startswith("fixed") else None)
         if arm is None:
             continue
-        rows.append(["stepwise composition change (Round 5)", ARM_NAME[arm], r["n_seeds"], r["integrated_acc_pct"],
+        rows.append(["stepwise composition change (Round-5 runs, P0 definition)", ARM_NAME[arm], r["n_seeds"], r["integrated_acc_pct"],
                      r["sd_pct"], r["DriftGate_minus_method_pp"], r["ci95"], r["n_pos"], r["n_matched"],
                      "yes" if "(best fixed)" in r["method"] else "", r["source_runs"]])
     for scen in ("S1", "S2"):
-        dg = metric(scen, "driftgate", "integ")
+        dg = metric(scen, DG, "integ")
         fx_seeds = sorted(dg)
         bf = best_fixed(scen, FIXED_ALL, fx_seeds)
-        for arm in ["driftgate"] + FIXED_ALL + ["entropy", "apfl001", "apfl010"]:
+        for arm in [DG] + FIXED_ALL + [ENT, "apfl001", "apfl010"]:
             v = metric(scen, arm, "integ")
             if not v:
                 rows.append([SCEN[scen][2], ARM_NAME[arm], 0, "", "", "", "", "", "", "", "missing"])
                 continue
             m, sd, n = msd(v)
-            p = None if arm == "driftgate" else paired(dg, v)
+            p = None if arm == DG else paired(dg, v)
             rows.append([SCEN[scen][2], ARM_NAME[arm], n, f4(m), f4(sd), fdiff(p), fci(p),
                          "" if p is None else p["n_pos"], "" if p is None else p["n"],
                          "yes" if arm == bf else "", src(scen, arm, v)])
             if p is not None:
                 pn(f"{SCEN[scen][2]}: DriftGate − {ARM_NAME[arm]}" + (" (best fixed)" if arm == bf else ""), p,
-                   [src(scen, "driftgate", p["seeds"]), src(scen, arm, p["seeds"])])
+                   [src(scen, DG, p["seeds"]), src(scen, arm, p["seeds"])])
     wcsv("T2_main_results.csv", ["setting", "method", "n_seeds", "integrated_acc_pct", "sd_pct",
                                  "DriftGate_minus_method_pp", "ci95", "n_pos", "n_matched", "best_fixed", "source_runs"], rows)
 
@@ -284,9 +289,9 @@ EXTRA = [("p10", "bottom-10% client accuracy"), ("home", "accuracy at home"), ("
 def t3():
     rows, drows = [], []
     for scen in ("S1", "S2"):
-        dgm = {k: metric(scen, "driftgate", k) for k, _ in EXTRA}
+        dgm = {k: metric(scen, DG, k) for k, _ in EXTRA}
         bf = best_fixed(scen, FIXED_ALL, sorted(dgm["p10"]))
-        for arm in ["driftgate"] + FIXED_ALL + ["entropy", "apfl001", "apfl010"]:
+        for arm in [DG] + FIXED_ALL + [ENT, "apfl001", "apfl010"]:
             vals = {k: metric(scen, arm, k) for k, _ in EXTRA}
             if not vals["p10"]:
                 continue
@@ -295,7 +300,7 @@ def t3():
                 m, sd, _ = msd(vals[k])
                 row += [f4(m), f4(sd)]
             rows.append(row)
-            if arm == "driftgate":
+            if arm == DG:
                 continue
             for k, lab in EXTRA:
                 p = paired(dgm[k], vals[k])
@@ -303,7 +308,7 @@ def t3():
                               "" if p is None else p["n_pos"], "" if p is None else p["n"]])
                 if arm == bf and k in ("home", "away", "p10"):
                     pn(f"{SCEN[scen][2]}: {lab}, DriftGate − {ARM_NAME[arm]} (best fixed)", p,
-                       [src(scen, "driftgate", p["seeds"]), src(scen, arm, p["seeds"])])
+                       [src(scen, DG, p["seeds"]), src(scen, arm, p["seeds"])])
     hdr = ["setting", "method", "n_seeds", "best_fixed"]
     for k, lab in EXTRA:
         hdr += [f"{k}_pct" if k != "offload" else "offload_rate_pct", f"{k}_sd"]
@@ -316,12 +321,12 @@ def t3():
 def t4():
     rows, crows = [], []
     for scen in ("S1", "S2"):
-        dg = {s: run(f, scen, s) for s, f in fam(scen, "driftgate").items()}
+        dg = {s: run(f, scen, s) for s, f in fam(scen, DG).items()}
         if not dg:
             continue
         er = next(iter(dg.values()))["rounds"]
         nslot = {name: int(sum(lo <= r <= hi for r in er)) for name, _, lo, hi in SLOTS}
-        for arm in ["driftgate"] + FIXED_ALL + ["entropy", "apfl001", "apfl010"]:
+        for arm in [DG] + FIXED_ALL + [ENT, "apfl001", "apfl010"]:
             runs_ = {s: run(f, scen, s) for s, f in fam(scen, arm).items()}
             if not runs_:
                 continue
@@ -329,7 +334,7 @@ def t4():
             for name, clock, lo, hi in SLOTS:
                 row.append(f4(np.mean([r["slot"][name] for r in runs_.values()]) * 100))
             rows.append(row)
-            if arm == "driftgate":
+            if arm == DG:
                 continue
             seeds = sorted(set(dg) & set(runs_))
             if not seeds:
@@ -373,7 +378,7 @@ def response_times(lam, rho):
 def t5():
     rows, srows, lrows = [], [], []
     for scen in ("S1", "S2"):
-        for arm in ("driftgate", "entropy"):
+        for arm in (DG, ENT):
             for s, f in fam(scen, arm).items():
                 r = run(f, scen, s)
                 ctype = ["hub" if r["env"]["cell_is_hub"][z] else ("cell " + str(z) if scen == "S2" else "residential")
@@ -419,7 +424,7 @@ def t5():
                       f"{np.mean(d['recov']) * 6:.1f}" if d["recov"] else ""])
         if method == "DriftGate" and d["react"]:
             PN.append([f"{setting}: DriftGate reaction time, {typ} cells", f"{np.mean(d['react']) * 6:.1f} min",
-                       "", d["n"], f"{SCEN['S1' if setting == SCEN['S1'][2] else 'S2'][1]}_driftgate (all seeds)"])
+                       "", d["n"], f"{SCEN['S1' if setting == SCEN['S1'][2] else 'S2'][1]}_{DG} (all seeds)"])
             if d["recov"]:
                 PN.append([f"{setting}: DriftGate recovery time, {typ} cells", f"{np.mean(d['recov']) * 6:.1f} min",
                            "", len(d["recov"]), "same runs"])
@@ -439,7 +444,7 @@ def t5():
 # ============================================================================= T6-T8 DriftGate vs fixed
 def dg_vs_fixed(scen, fixed_arms, seeds, bf_scen=None, bf_arms=None):
     """DriftGate accuracy, fixed accuracies, best fixed (selected over `seeds`) and the paired difference."""
-    dg = metric(scen, "driftgate", "integ", seeds)
+    dg = metric(scen, DG, "integ", seeds)
     fs = bf_scen or scen
     arms = bf_arms or fixed_arms
     fx = {a: metric(fs, a, "integ", seeds) for a in arms}
@@ -456,20 +461,20 @@ def t6():
                     ["" if bf is None else ARM_NAME[bf], fdiff(p), fci(p), "" if p is None else p["n_pos"],
                      "" if p is None else p["n"]])
         pn(f"{SCEN[scen][2]}: DriftGate − best of fixed 0.2/0.4/0.6", p,
-           [src(scen, "driftgate", [0, 1, 2])] + ([src(scen, bf, [0, 1, 2])] if bf else []))
+           [src(scen, DG, [0, 1, 2])] + ([src(scen, bf, [0, 1, 2])] if bf else []))
     wcsv("T6_speed.csv", ["setting", "n_seeds", "DriftGate_pct", "fixed_0.2_pct", "fixed_0.4_pct", "fixed_0.6_pct",
                           "best_fixed", "DriftGate_minus_best_pp", "ci95", "n_pos", "n"], rows)
 
 
 def signal_bytes(env):
-    """§5.2 per-round signal bytes (mean over rounds): client TV to each of its edges, neighbour score
-    exchange (4 B per neighbour per edge), d-bar sharing (4 (L-1) B per edge)."""
+    """§5.2 per-round signal bytes (mean over rounds): client TV to each of its edges (4 B per edge) and
+    d-bar sharing for the spatial score (4 (L-1) B per edge). The neighbour score exchange was removed
+    with the neighbour average (2026-10-01)."""
     m = env["member"]
     tv = 4 * (m >= 0).sum(axis=2).sum(axis=0).mean()
     L = len(env["cell_xy"])
-    nb = 4 * env["neighbors"].sum()
     share = 4 * L * (L - 1)
-    return tv, nb, share
+    return tv, share
 
 
 def t7():
@@ -477,27 +482,27 @@ def t7():
     for scen, K in (("S1", 50), ("S3_K200", 200), ("S3_K500", 500)):
         dg, fx, bf, p = dg_vs_fixed(scen, FIXED3, [0, 1, 2])
         env = env_of(scen, 0)
-        tv, nb, share = signal_bytes(env)
+        tv, share = signal_bytes(env)
         L = len(env["cell_xy"])
-        ns = [run(f, scen, s)["ctrl_ns"] for s, f in fam(scen, "driftgate").items() if s in (0, 1, 2)]
+        ns = [run(f, scen, s)["ctrl_ns"] for s, f in fam(scen, DG).items() if s in (0, 1, 2)]
         us = np.concatenate([n[25:].ravel() for n in ns]) / 1e3 if ns else np.array([])
         rows.append([K, L, SCEN[scen][2], len(dg), f4(msd(dg)[0])] + [f4(msd(fx[a])[0]) for a in FIXED3] +
                     ["" if bf is None else ARM_NAME[bf], fdiff(p), fci(p), "" if p is None else p["n_pos"],
-                     "" if p is None else p["n"], f"{tv:.0f}", f"{nb:.0f}", f"{share:.0f}", f"{tv + nb + share:.0f}",
-                     f"{(tv + nb + share) / L:.1f}",
+                     "" if p is None else p["n"], f"{tv:.0f}", f"{share:.0f}", f"{tv + share:.0f}",
+                     f"{(tv + share) / L:.1f}",
                      f"{np.median(us):.1f}" if len(us) else "", f"{np.percentile(us, 95):.1f}" if len(us) else ""])
         pn(f"K={K}: DriftGate − best of fixed 0.2/0.4/0.6", p,
-           [src(scen, "driftgate", [0, 1, 2])] + ([src(scen, bf, [0, 1, 2])] if bf else []))
+           [src(scen, DG, [0, 1, 2])] + ([src(scen, bf, [0, 1, 2])] if bf else []))
     wcsv("T7_scale.csv", ["K", "L", "setting", "n_seeds", "DriftGate_pct", "fixed_0.2_pct", "fixed_0.4_pct",
                           "fixed_0.6_pct", "best_fixed", "DriftGate_minus_best_pp", "ci95", "n_pos", "n",
-                          "signal_bytes_client_TV", "signal_bytes_neighbour_scores", "signal_bytes_dbar_sharing",
+                          "signal_bytes_client_TV", "signal_bytes_dbar_sharing",
                           "signal_bytes_total_per_round", "signal_bytes_per_edge", "controller_us_per_edge_round_median",
                           "controller_us_per_edge_round_p95"], rows)
 
 
 def t8():
     rows = []
-    s1dg = metric("S1", "driftgate", "integ", [0, 1, 2])
+    s1dg = metric("S1", DG, "integ", [0, 1, 2])
     for scen in ("S4_loss01", "S4_loss03", "S4_delay1", "S4_delay3", "S4_lowreq", "S4_part07", "S4_part05"):
         part = scen.startswith("S4_part")
         if part:
@@ -511,8 +516,8 @@ def t8():
                      "" if bf is None else ARM_NAME[bf], "" if bf is None else f4(msd(fx[bf])[0]),
                      fdiff(p), fci(p), "" if p is None else p["n_pos"], "" if p is None else p["n"]])
         pn(f"{SCEN[scen][2]}: DriftGate − best fixed ({ref})", p,
-           [src(scen, "driftgate", [0, 1, 2])] + ([src("S1" if not part else scen, bf, [0, 1, 2])] if bf else []))
-        pn(f"{SCEN[scen][2]}: DriftGate change vs S1 DriftGate", ch, [src(scen, "driftgate", [0, 1, 2]), src("S1", "driftgate", [0, 1, 2])])
+           [src(scen, DG, [0, 1, 2])] + ([src("S1" if not part else scen, bf, [0, 1, 2])] if bf else []))
+        pn(f"{SCEN[scen][2]}: DriftGate change vs S1 DriftGate", ch, [src(scen, DG, [0, 1, 2]), src("S1", DG, [0, 1, 2])])
     wcsv("T8_robustness.csv", ["condition", "n_seeds", "DriftGate_pct", "change_vs_S1_DriftGate_pp", "ci95_change",
                                "fixed_reference", "best_fixed", "best_fixed_pct", "DriftGate_minus_best_pp", "ci95",
                                "n_pos", "n"], rows)
@@ -531,17 +536,22 @@ def t10():
             m = re.match(r"\[(\S+) (\S+)\] END (\S+) exit=(\d+) (.+)$", line.strip())
             if m:
                 ends[m.group(3)] = (m.group(5), m.group(4))
-    for line in open(qd / "enqueued_snapshot.txt"):
+    for line in open(qd / "enqueued_snapshot_v2.txt"):
         cls, cmd = line.split(" ", 1)
         g = lambda k: re.search(rf"--{k} (\S+)", cmd).group(1)
-        rn, od, scen, arm, seed = g("run_name"), g("output_dir"), g("scenario"), g("arm"), int(g("seed"))
-        env = f"runs/phaseT6_env/{g('env')}_seed{seed}.npz"
+        rn, od, seed = g("run_name"), g("output_dir"), int(g("seed"))
+        if cls == "P0":
+            scen, arm, env = "P0 (Round-5 setting)", rn[3:].rsplit("_s", 1)[0], "none (Round-5 schedule)"
+        else:
+            scen, arm = g("scenario"), g("arm")
+            env = f"runs/phaseT6_env/{g('env')}_seed{seed}.npz"
         f = Path(od) / f"{rn}.json"
         if f.exists():
             h = json.load(open(f))
             prov = JR / "provenance" / f"{h['config']['run_id']}.json"
             gpu = json.load(open(prov))["env"].get("gpu", "") if prov.exists() else ""
-            ok = len(h["round"]) == 150 and len(h["eval"]) == 31
+            want = int(re.search(r"--rounds (\d+)", cmd).group(1)) if "--rounds" in cmd else 150
+            ok = len(h["round"]) == want and (cls == "P0" or len(h["eval"]) == 31)
             rows.append([h["config"]["run_id"], rn, scen, arm, seed, 100 + seed, env, cls, "yes" if ok else "no",
                          len(h["round"]), len(h["eval"]), h["probe_eval_overlap"],
                          "yes" if h["probe_eval_overlap"] == 0 else "NO", f"honeynaps, {gpu.replace('NVIDIA GeForce ', '')}, "
@@ -553,7 +563,7 @@ def t10():
     wcsv("T10_run_manifest.csv", ["run_id", "run_name", "scenario", "arm", "seed", "model_seed", "env_file", "size",
                                   "complete", "rounds", "eval_rounds", "probe_eval_overlap", "overlap_ok", "device",
                                   "worker_exit_code", "start", "end", "wall_min"], rows)
-    return sum(1 for r in rows if r[8] == "yes")
+    return sum(1 for r in rows if r[8] == "yes"), len(rows)
 
 
 def main():
@@ -565,12 +575,12 @@ def main():
     t6()
     t7()
     t8()
-    n = t10()
+    n, total = t10()
     with open(HERE / "paper_numbers_r6.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["item", "value", "ci95", "n_seeds", "source_runs"])
         w.writerows(PN)
-    print(f"  [paper_numbers_r6.csv] {len(PN)} rows; complete runs {n}/151")
+    print(f"  [paper_numbers_r6.csv] {len(PN)} rows; complete runs {n}/{total}")
 
 
 if __name__ == "__main__":

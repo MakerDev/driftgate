@@ -65,6 +65,8 @@ def runs():
         h = json.load(open(jf))
         cfg = h["config"]
         seed = int(re.search(r"_s(\d+)$", Path(jf).stem).group(1))
+        if cfg["arm"] in ("driftgate", "entropy"):      # retired (neighbour score average), 2026-10-01
+            continue
         yield cfg["scenario"], cfg["arm"], seed, tr, h["eval_rounds"]
 
 

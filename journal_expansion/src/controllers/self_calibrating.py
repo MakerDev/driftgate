@@ -79,8 +79,12 @@ class SelfCalController:
                  normalizer="guarded", consensus_steps=1,
                  max_step=None, z0=Z0, tau_z=TAU_Z, burn_in=0, z_guard=None,
                  spatial_norm=False, abs_cap=False, signal_range=1.0,
-                 abs_only=False):
+                 abs_only=False, neighbor_avg=True):
         self.neighbors = neighbors
+        # R6 (2026-10-01, user decision): neighbor_avg=False drops the one-step
+        # neighbour average of the score (and of the raw signal on the absolute
+        # path): each edge sets q from its own cluster's score only.
+        self.neighbor_avg = neighbor_avg
         # R4/B1: abs_only -> lambda = lambda_abs, Lambda = Lambda_abs (relative
         # views ignored). Implies the absolute-signal smoothing path.
         self.abs_only = abs_only
@@ -161,14 +165,14 @@ class SelfCalController:
                 self._zsp_smooth[es] = sm
                 z[es] = max(z[es], sm)
 
-        zc = _consensus(z, self.neighbors, self.consensus_steps)
+        zc = _consensus(z, self.neighbors, self.consensus_steps) if self.neighbor_avg else dict(z)
         self.last_z = dict(zc)
 
         sig_c = {}
         use_abs = self.abs_cap or self.abs_only
         if use_abs:
-            sig_c = _consensus(dict(signal_per_es), self.neighbors,
-                               self.consensus_steps)
+            sig_c = (_consensus(dict(signal_per_es), self.neighbors, self.consensus_steps)
+                     if self.neighbor_avg else dict(signal_per_es))
             for es, v in sig_c.items():
                 prev = self._sig_smooth.get(es, v)
                 sig_c[es] = (1 - EWMA_ALPHA) * prev + EWMA_ALPHA * v

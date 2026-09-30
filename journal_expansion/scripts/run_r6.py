@@ -49,6 +49,8 @@ def main():
     ap.add_argument("--lambda_val", type=float, default=0.4)
     ap.add_argument("--big_lambda_val", type=float, default=0.5)
     ap.add_argument("--apfl_eta", type=float, default=None)
+    ap.add_argument("--no_neighbor_avg", action="store_true",
+                    help="q from the edge's own score only (the R6 final DriftGate definition)")
     ap.add_argument("--signal_delay", type=int, default=0)
     ap.add_argument("--probe_n", type=int, default=64)
     ap.add_argument("--rounds", type=int, default=150)
@@ -79,7 +81,8 @@ def main():
                global_rounds=args.rounds)
     ckw = {}
     if args.mode == "selfcal":
-        ckw = dict(burn_in=args.burn_in, z_guard=args.z_guard, spatial_norm=args.spatial_norm)
+        ckw = dict(burn_in=args.burn_in, z_guard=args.z_guard, spatial_norm=args.spatial_norm,
+                   no_neighbor_avg=args.no_neighbor_avg)
     run_r6(cfg, env_path, args.mode, signal=args.signal, lambda_val=args.lambda_val,
            big_lambda_val=args.big_lambda_val, apfl_eta=args.apfl_eta,
            signal_delay=args.signal_delay, probe_n=args.probe_n, controller_kwargs=ckw,

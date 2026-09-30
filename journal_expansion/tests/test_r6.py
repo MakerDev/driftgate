@@ -229,3 +229,53 @@ def test_cached_loader_training_is_bit_identical():
     for a, b in zip(cA, cB):
         for k, v in a.client_model.state_dict().items():
             assert torch.equal(v, b.client_model.state_dict()[k]), k
+
+
+@pytest.mark.parametrize("graph", ["line", "star", "complete"])
+def test_no_neighbor_avg_both_controllers_agree_and_use_own_score(graph):
+    """--no_neighbor_avg: q = own smoothed max score; SelfCalController and EdgeDriftGate bit-identical,
+    and the neighbour structure no longer matters."""
+    L = 5
+    nb = {"line": {0: [1], 1: [0, 2], 2: [1, 3], 3: [2, 4], 4: [3]},
+          "star": {0: [4], 1: [4], 2: [4], 3: [4], 4: [0, 1, 2, 3]},
+          "complete": {z: [w for w in range(L) if w != z] for z in range(L)}}[graph]
+    rng = np.random.default_rng(3)
+    a = SelfCalController(neighbors=nb, warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True,
+                          consensus_steps=1, neighbor_avg=False)
+    iso = SelfCalController(neighbors={z: [] for z in range(L)}, warmup=15, burn_in=10, z_guard=0.5,
+                            spatial_norm=True, consensus_steps=1)
+    b = EdgeDriftGate(L, nb, neighbor_avg=False)
+    for t in range(150):
+        sig = {z: float(0.3 + 0.2 * (z == 4 and 60 <= t < 110) + 0.03 * rng.standard_normal()) for z in range(L)}
+        la, La = a.step(sig)
+        li, Li = iso.step(sig)
+        lb, Lb = b.step(sig)
+        assert la == lb == li and La == Lb == Li, t
+        assert a.last_z == {z: b.q[z] for z in range(L)}
+
+
+def test_neighbor_avg_default_unchanged():
+    """default (neighbor_avg=True) still averages: with a star graph the hub's q differs from its own score."""
+    nb = {0: [4], 1: [4], 2: [4], 3: [4], 4: [0, 1, 2, 3]}
+    a = SelfCalController(neighbors=nb, warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True, consensus_steps=1)
+    b = SelfCalController(neighbors=nb, warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True, consensus_steps=1,
+                          neighbor_avg=False)
+    for t in range(60):
+        sig = {z: 0.3 + (0.3 if (z == 4 and t >= 40) else 0.0) for z in range(5)}
+        a.step(sig)
+        b.step(sig)
+    assert a.last_z[4] < b.last_z[4] and a.last_z[0] > b.last_z[0]
+
+
+def test_absonly_no_neighbor_avg_uses_own_signal():
+    nb = {0: [1], 1: [0, 2], 2: [1]}
+    c = SelfCalController(neighbors=nb, warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True,
+                          abs_cap=True, abs_only=True, neighbor_avg=False)
+    ema = {z: None for z in range(3)}
+    for t in range(40):
+        sig = {0: 0.2, 1: 0.5, 2: 0.8}
+        lam, _ = c.step(sig)
+        for z, v in sig.items():
+            ema[z] = v if ema[z] is None else 0.7 * ema[z] + 0.3 * v
+    for z in range(3):
+        assert lam[z] == pytest.approx(0.7 - 0.55 * ema[z])

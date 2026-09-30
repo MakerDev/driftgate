@@ -249,6 +249,7 @@ def run_experiment_v2(cfg,
             z_guard=ckw.get("z_guard"), spatial_norm=ckw.get("spatial_norm", False),
             abs_cap=ckw.get("abs_cap", False),
             abs_only=ckw.get("abs_only", False),   # R4/B1
+            neighbor_avg=not ckw.get("no_neighbor_avg", False),   # R6 P0
             signal_range=__import__("src.controllers.self_calibrating",
                                     fromlist=["SIGNAL_RANGE"]).SIGNAL_RANGE.get(
                                         controller_signal, 1.0))
@@ -608,6 +609,8 @@ def run_experiment_v2(cfg,
         "partition_seed": cfg.get("partition_seed"), "model_seed": cfg.get("model_seed"),
         "run_id": rec.run_id,
     }
+    if ckw.get("no_neighbor_avg"):
+        history["config"]["no_neighbor_avg"] = True
 
     # ---------- save ----------
     if output_dir is not None:

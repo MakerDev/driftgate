@@ -260,7 +260,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     if mode == "selfcal":
         ctrl = EdgeDriftGate(L, neighbors, lam_min, lam_max, Lam_min, Lam_max,
                              warmup=ckw.get("warmup", 15), burn_in=ckw["burn_in"],
-                             z_guard=ckw["z_guard"], spatial_norm=ckw["spatial_norm"])
+                             z_guard=ckw["z_guard"], spatial_norm=ckw["spatial_norm"],
+                             neighbor_avg=not ckw.get("no_neighbor_avg", False))
     elif mode == "apfl":
         apfl = dict(lams={c.cid: 0.5 * (lam_min + lam_max) for c in clients},
                     eta=float(apfl_eta if apfl_eta is not None else cfg["learning_rate"]),
@@ -350,7 +351,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         if mode == "selfcal":
             cur_lam, cur_Lam = ctrl.step(dbar_used,
                                          lost_dbar=env["lost_dbar"][t] if lossy else None,
-                                         lost_nbr=env["lost_nbr"][t] if lossy else None)
+                                         lost_nbr=env["lost_nbr"][t] if (lossy and ctrl.neighbor_avg) else None)
             R["ctrl_ns"][t] = [ctrl.last["t_ns"][z] for z in range(L)]
         # 4. training
         mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl)

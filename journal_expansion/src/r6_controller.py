@@ -26,8 +26,10 @@ from src.controllers.self_calibrating import EWMA_ALPHA, TAU_Z, Z0, _sigmoid, sp
 
 class EdgeDriftGate:
     def __init__(self, L, neighbors, lam_min=0.15, lam_max=0.70, Lam_min=0.40, Lam_max=0.70,
-                 warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True, normalizer="guarded"):
+                 warmup=15, burn_in=10, z_guard=0.5, spatial_norm=True, normalizer="guarded",
+                 neighbor_avg=True):
         self.L = L
+        self.neighbor_avg = neighbor_avg   # False (R6 final method): q = own cluster score, no neighbour messages
         self.neighbors = {z: list(neighbors.get(z, [])) for z in range(L)}
         self.lam_min, self.lam_max, self.Lam_min, self.Lam_max = lam_min, lam_max, Lam_min, Lam_max
         self.warmup_total = warmup + burn_in
@@ -72,9 +74,12 @@ class EdgeDriftGate:
         # pass 2: one neighbour average, then lambda / Lambda
         for z in present:
             t0 = time.perf_counter_ns()
-            nb = [zhat[w] for w in self.neighbors[z]
-                  if w in zhat and (lost_nbr is None or not lost_nbr[w, z])]
-            q = (zhat[z] + sum(nb)) / (1 + len(nb))
+            if self.neighbor_avg:
+                nb = [zhat[w] for w in self.neighbors[z]
+                      if w in zhat and (lost_nbr is None or not lost_nbr[w, z])]
+                q = (zhat[z] + sum(nb)) / (1 + len(nb))
+            else:
+                q = zhat[z]
             self.q[z] = q
             if self._n_obs[z] <= self.warmup_total:
                 lam, Lam = 0.5 * (self.lam_min + self.lam_max), 0.5 * (self.Lam_min + self.Lam_max)

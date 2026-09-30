@@ -124,6 +124,8 @@ def main():
     ap.add_argument("--controller_pool_frac", type=float, default=0.2)
     ap.add_argument("--abs_only", action="store_true",
                     help="R4/B1: lambda=lambda_abs, Lambda=Lambda_abs (absolute view only)")
+    ap.add_argument("--no_neighbor_avg", action="store_true",
+                    help="R6 P0: q from the edge's own score only (no one-step neighbour average)")
     ap.add_argument("--apfl_eta", type=float, default=None,
                     help="R4/B4: APFL-style lambda_k learning rate (default = model lr)")
     args = ap.parse_args()
@@ -158,6 +160,8 @@ def main():
         ckw["abs_cap"] = True   # abs_only needs the absolute-signal smoothing path
     if args.apfl_eta is not None:
         ckw["apfl_eta"] = args.apfl_eta
+    if args.no_neighbor_avg:
+        ckw["no_neighbor_avg"] = True
     lambda_val = args.lambda_val
     big_lambda_val = args.big_lambda_val
     if args.lambda_per_cell:

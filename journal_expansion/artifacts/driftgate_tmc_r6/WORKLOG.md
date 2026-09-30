@@ -64,3 +64,32 @@
 - 23:28–23:32 첫 16개(S1 seed 0, 1의 8개 arm) 완료, 모두 exit 0, overlap 0, run당 약 68–70분.
 - 표 스크립트를 부분 결과로 점검했다. 5.2의 반응·회복 시간 정의에서는, 변화 시작 시점에 λ가 이미 0.425 이하이면 반응 시간이 0이 되고 회복 시작 시점에 이미 0.425를 넘으면 회복 시간이 0이 된다. 해석을 돕도록 T5a에 두 시점의 λ와 라운드 25 이후 최소 λ 열을 추가했다(정의는 바꾸지 않음).
 - 6.3 모델 파일: S1 DriftGate seed 0의 마지막 모델에서 client 0의 client block + exit와 hub cell의 server block + exit를 내보냈다(`device/models/`). TorchScript는 원래 모델과 출력이 같고(차이 0), lite interpreter는 최대 7.6e-6, ONNX(onnxruntime 1.30.0, batch 1과 64)는 최대 6.4e-6 차이다. 확인을 위해 onnxruntime 1.30.0을 가상 환경에 추가했다.
+
+## 2026-10-01 00:40 사용자 결정: 이웃 점수 평균을 뺀다
+
+사용자가 DriftGate에서 이웃 점수 평균을 빼기로 결정했다(결과를 보기 전의 결정, 새 정의를 논문의 방법으로 쓴다).
+
+### 확인한 코드 (보고서에 적을 것)
+- 이웃 평균의 식: `journal_expansion/src/controllers/self_calibrating.py:63–71` `_consensus(vals, neighbors, steps)`:
+  new[z] = (v_z + Σ_{w ∈ N(z), w가 이번 라운드에 값이 있음} v_w) / (1 + |{그런 w}|), steps번 반복.
+  점수에는 `:164` `zc = _consensus(z, self.neighbors, self.consensus_steps)`로 적용되고, 그 결과가 q(`last_z`)이다.
+  steps = `configs/base_v3.yaml:48` `consensus_steps: 1` → `runner.py:247`.
+- 이웃 구조: `journal_expansion/src/runner.py:217–223`. `--topology`를 주지 않으면 `data/partition.py:189–199` `es_neighbors_sequential`(선형 0–1–2–3–4)이다. Round 4·5의 모든 run은 `--topology`를 쓰지 않았다.
+- Round 6 구현: `journal_expansion/src/r6_controller.py:75–77`(같은 식), 이웃 구조는 `r6_env.py:93–97` `neighbor_matrix`(중심 거리 ≤ 2 km, S2는 모든 쌍) → `runner_r6.py:257–258`.
+- entropy arm: 같은 `SelfCalController`에 `--signal ent_client`만 다르므로 `:164`를 거친다.
+- absonly: `--abs_only`는 `abs_cap`도 켠다(`run_v2.py:156–158`). λ를 정하는 absolute 경로가 `:170–171`에서 raw 신호 d̄에 같은 이웃 평균을 적용한 뒤 EMA로 평활한다. 따라서 absonly도 이웃 평균을 거친다 → 지시대로 absonly 11 runs도 다시 돌린다.
+
+### 구현
+- `SelfCalController(neighbor_avg=True)`: False이면 `zc = dict(z)`, absolute 경로는 `sig_c = dict(signal_per_es)`. 기본값의 동작은 그대로다.
+- `run_v2.py --no_neighbor_avg` → `runner.py`가 `neighbor_avg=False`로 넘기고 결과 JSON `config.no_neighbor_avg = True`에 기록한다.
+- `EdgeDriftGate(neighbor_avg=False)`: q = 자기 점수. 이웃 점수 메시지가 없으므로 S4 손실 (3)은 쓰지 않는다. `run_r6.py --no_neighbor_avg`.
+- 테스트(`tests/test_r6.py`) 3개 추가: 두 controller가 새 정의에서 bit 단위로 같고 이웃 구조와 무관함, 기본값은 여전히 평균함, absonly가 자기 신호의 EMA를 씀. 전체 98개 통과.
+- 이 변경은 실행 중인 프로세스에 영향을 주지 않는다. 이후 시작하는 고정 λ/APFL run은 selfcal 경로를 쓰지 않으므로 동작이 같다.
+
+### 실행 계획 변경 (큐 v2, `scripts/enqueue_r6_v2.py`, `runs/queue_r6/enqueued_snapshot_v2.txt`, 218 runs)
+- 00:40 구 정의 DriftGate/entropy 36줄을 큐에서 빼서 `runs/queue_r6/held_old_definition.txt`에 보관했다.
+- 이미 끝났거나 거의 끝난 구 정의 run(S1 seed 0–3의 DriftGate, entropy)은 기록으로 남기고 표에는 넣지 않는다. 막 시작한 `s1_driftgate_s4`, `s1_entropy_s4`는 PID로 멈췄다(provenance status가 running으로 남음).
+- 순서: P0 67 → R6 P1 고정 λ/APFL → R6 P1 DriftGate/entropy(새 정의, arm 이름 `driftgate_own`, `entropy_own`) → R6 P2(표 순서). P0 안에서는 오래 걸리는 run을 앞에 둔다(Tiny-ImageNet, ResNet-18, SVHN, ...).
+- P0: Round 4·5 원래 명령줄(provenance 기록과 R5 snapshot)에 `--no_neighbor_avg`만 더했다. `run_v2.py` 경로, seed, rounds, disjoint pool이 같다. 저장 위치 `runs/phaseT6_p0/`, 이름 `p0_<원래 이름>`. absonly의 원래 명령에는 `--spatial_norm`이 없고, 그대로 따른다.
+- 주의: P0는 RTX 4090(honeynaps)에서, 비교 대상인 원래 run은 RTX 3090 Ti(ubuntu20)에서 돌았다. 이웃 평균이 있을 때와 없을 때의 paired 차이에는 하드웨어 차이(부동소수점 연산 순서)가 함께 들어간다.
+- R6: 3.2의 이웃 규칙과 S2 전처리 8번의 이웃 규칙은 controller에 쓰지 않는다(env 파일의 `neighbors` 배열은 남아 있지만 읽지 않는다). S4 신호 손실은 (1) 클라이언트 TV와 (2) d̄ 공유만 대상이다. 추가 통신량에서 이웃 교환 항목을 뺀다.

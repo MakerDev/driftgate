@@ -1,0 +1,29 @@
+setting,method,n_seeds,integrated_acc_pct,sd_pct,DriftGate_minus_method_pp,ci95,n_pos,n_matched,best_fixed,source_runs
+stepwise composition change (Round 5),DriftGate,5,65.9288,2.0067,,,,,,"b1_relonly_A_s{0,1,2,3,4}"
+stepwise composition change (Round 5),fixed 0.2,5,64.6999,1.7295,+1.2289,"[+0.46, +2.00]",5,5,,"r2_A_fx20_s{0,1,2,3,4}"
+stepwise composition change (Round 5),fixed 0.3,5,65.1007,1.9145,+0.8281,"[+0.28, +1.37]",5,5,,"t1_A_fx30_s{0,1,2,3,4}"
+stepwise composition change (Round 5),fixed 0.4,5,65.1729,2.0678,+0.7559,"[+0.41, +1.11]",5,5,yes,"t1_A_fx40_s{0,1,2,3,4}"
+stepwise composition change (Round 5),fixed 0.5,5,64.8602,2.1774,+1.0686,"[+0.82, +1.32]",5,5,,"t1_A_fx50_s{0,1,2,3,4}"
+stepwise composition change (Round 5),entropy controller,5,64.3672,1.7507,+1.5616,"[+1.18, +1.94]",5,5,,"t1_A_ent_s{0,1,2,3,4}"
+stepwise composition change (Round 5),APFL η=0.01,5,64.2537,1.9996,+1.6751,"[+1.37, +1.98]",5,5,,"b4_apfl_eta001_A_s{0,1,2,3,4}"
+stepwise composition change (Round 5),APFL η=0.1,5,64.9724,1.9717,+0.9564,"[+0.52, +1.39]",5,5,,"b4_apfl_eta010_A_s{0,1,2,3,4}"
+commute mobility,DriftGate,2,63.3345,0.0965,,,,,,"s1_driftgate_s{0,1}"
+commute mobility,fixed 0.15,2,62.0753,0.0438,+1.2592,"[+0.79, +1.73]",2,2,,"s1_fixed015_s{0,1}"
+commute mobility,fixed 0.2,2,62.4665,0.0700,+0.8680,"[+0.63, +1.11]",2,2,,"s1_fixed020_s{0,1}"
+commute mobility,fixed 0.3,2,63.1068,0.1645,+0.2277,"[-0.38, +0.84]",2,2,,"s1_fixed030_s{0,1}"
+commute mobility,fixed 0.4,2,63.4005,0.1872,-0.0660,"[-0.88, +0.75]",0,2,yes,"s1_fixed040_s{0,1}"
+commute mobility,fixed 0.5,2,63.2587,0.1249,+0.0758,"[-0.18, +0.33]",2,2,,"s1_fixed050_s{0,1}"
+commute mobility,fixed 0.6,2,62.6484,0.0950,+0.6861,"[+0.67, +0.70]",2,2,,"s1_fixed060_s{0,1}"
+commute mobility,entropy controller,2,62.3451,0.0615,+0.9894,"[-0.43, +2.41]",2,2,,"s1_entropy_s{0,1}"
+commute mobility,APFL η=0.01,0,,,,,,,,missing
+commute mobility,APFL η=0.1,0,,,,,,,,missing
+GeoLife trace,DriftGate,0,,,,,,,,missing
+GeoLife trace,fixed 0.15,0,,,,,,,,missing
+GeoLife trace,fixed 0.2,0,,,,,,,,missing
+GeoLife trace,fixed 0.3,0,,,,,,,,missing
+GeoLife trace,fixed 0.4,0,,,,,,,,missing
+GeoLife trace,fixed 0.5,0,,,,,,,,missing
+GeoLife trace,fixed 0.6,0,,,,,,,,missing
+GeoLife trace,entropy controller,0,,,,,,,,missing
+GeoLife trace,APFL η=0.01,0,,,,,,,,missing
+GeoLife trace,APFL η=0.1,0,,,,,,,,missing

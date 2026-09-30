@@ -357,7 +357,7 @@ def response_times(lam, rho):
     out = []
     for z in range(L):
         r = rho[:, z]
-        react = recov = None
+        react = recov = end = None
         start = next((t for t in range(25, T) if r[t] > 0.3), None)          # round >= 26 (index 25)
         if start is not None:
             hit = next((t for t in range(start, T) if lam[t, z] <= 0.425), None)
@@ -366,7 +366,7 @@ def response_times(lam, rho):
             if end is not None:
                 hit2 = next((t for t in range(end, T) if lam[t, z] > 0.425), None)
                 recov = None if hit2 is None else hit2 - end
-        out.append((start, react, recov))
+        out.append((start, react, recov, end))
     return out
 
 
@@ -378,12 +378,16 @@ def t5():
                 r = run(f, scen, s)
                 ctype = ["hub" if r["env"]["cell_is_hub"][z] else ("cell " + str(z) if scen == "S2" else "residential")
                          for z in range(r["L"])]
-                for z, (start, react, recov) in enumerate(response_times(r["lam"], r["rho_cell"])):
+                for z, (start, react, recov, end) in enumerate(response_times(r["lam"], r["rho_cell"])):
                     rows.append([SCEN[scen][2], ARM_NAME[arm], s, z, ctype[z],
                                  "" if start is None else start + 1,
                                  "never above 0.3" if start is None else ("not reached" if react is None else react),
                                  "" if react is None else react * 6,
-                                 "" if recov is None else recov, "" if recov is None else recov * 6])
+                                 "" if recov is None else recov, "" if recov is None else recov * 6,
+                                 "" if start is None else f"{r['lam'][start, z]:.3f}",
+                                 "" if end is None else end + 1,
+                                 "" if end is None else f"{r['lam'][end, z]:.3f}",
+                                 f"{r['lam'][25:, z].min():.3f}"])
                 for name, clock, lo, hi in SLOTS:
                     for typ in sorted(set(ctype)):
                         cells = [z for z in range(r["L"]) if ctype[z] == typ]
@@ -391,7 +395,9 @@ def t5():
                                       f"{r['lam'][lo - 1:hi, cells].mean():.4f}",
                                       f"{np.nanmean(r['rho_cell'][lo - 1:hi, cells]):.4f}"])
     wcsv("T5a_lambda_response_per_cell.csv", ["setting", "method", "seed", "cell", "cell_type", "change_start_round",
-                                              "reaction_rounds", "reaction_min", "recovery_rounds", "recovery_min"], rows)
+                                              "reaction_rounds", "reaction_min", "recovery_rounds", "recovery_min",
+                                              "lambda_at_change_start", "recovery_start_round",
+                                              "lambda_at_recovery_start", "min_lambda_after_round_25"], rows)
     # summary by cell type (cells whose rho never exceeded 0.3 after round 25 are not counted)
     by = {}
     for r in rows:

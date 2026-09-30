@@ -168,7 +168,7 @@ def lam_series(scen, arm):
 
 
 def fig2():
-    fig, axes = plt.subplots(3, 2, figsize=(7.2, 5.0), sharex=True, gridspec_kw={"height_ratios": [1, 1, 1]})
+    fig, axes = plt.subplots(3, 2, figsize=(7.2, 5.2), sharex=True, layout="constrained")
     x = np.arange(1, 151)
     info = {}
     # S1: hub vs residential
@@ -180,7 +180,7 @@ def fig2():
         rho = np.mean([r["rho_cell"] for r in runs["driftgate"].values()], axis=0)
         axes[0, 0].plot(x, np.nanmean(rho[:, hub], axis=1), color=INK, label="hub cell")
         axes[0, 0].plot(x, np.nanmean(rho[:, res], axis=1), color=MUTED, label="residential cells (mean)")
-        axes[0, 0].legend(loc="upper left")
+        axes[0, 0].legend(loc="lower center")
         for row, cells, lab in ((1, hub, "hub cell"), (2, res, "residential cells (mean)")):
             ax = axes[row, 0]
             for arm, col, nm in (("driftgate", C_DG, "DriftGate"), ("entropy", C_ENT, "entropy controller")):
@@ -193,7 +193,6 @@ def fig2():
                 ax.text(151, v, f" fixed {v:g}", va="center", fontsize=6.5, color=INK2)
             ax.set_ylabel(f"lambda, {lab}")
             ax.set_ylim(0.12, 0.73)
-        axes[1, 0].legend(loc="lower left")
         n = len(runs["driftgate"])
         axes[0, 0].set_title(f"commute mobility ({n} seeds)")
     # S2: per cell rho, one lambda line per method (all cells share lambda)
@@ -225,7 +224,9 @@ def fig2():
     axes[0, 1].set_ylabel("cell mean rho")
     for a in axes[2]:
         clock_axis(a)
-    fig.tight_layout(h_pad=0.6, w_pad=2.5)
+    from matplotlib.lines import Line2D
+    fig.legend([Line2D([], [], color=C_DG), Line2D([], [], color=C_ENT), Line2D([], [], color=MUTED, ls="--", lw=0.9)],
+               ["DriftGate", "entropy controller", "fixed lambda (reference)"], loc="outside lower center", ncol=3)
     save(fig, "fig2_lambda_trajectories")
     return info
 

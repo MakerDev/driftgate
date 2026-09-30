@@ -1,0 +1,8 @@
+condition,n_seeds,DriftGate_pct,change_vs_S1_DriftGate_pp,ci95_change,fixed_reference,best_fixed,best_fixed_pct,DriftGate_minus_best_pp,ci95,n_pos,n
+signal loss p=0.1,0,,,,"S1 fixed runs (seeds 0-2), best of 0.15-0.6",,,,,,
+signal loss p=0.3,0,,,,"S1 fixed runs (seeds 0-2), best of 0.15-0.6",,,,,,
+signal delay 1 round,0,,,,"S1 fixed runs (seeds 0-2), best of 0.15-0.6",,,,,,
+signal delay 3 rounds,0,,,,"S1 fixed runs (seeds 0-2), best of 0.15-0.6",,,,,,
+low request rate,0,,,,"S1 fixed runs (seeds 0-2), best of 0.15-0.6",,,,,,
+participation 0.7,0,,,,"same participation, best of fixed 0.2/0.4/0.6",,,,,,
+participation 0.5,0,,,,"same participation, best of fixed 0.2/0.4/0.6",,,,,,

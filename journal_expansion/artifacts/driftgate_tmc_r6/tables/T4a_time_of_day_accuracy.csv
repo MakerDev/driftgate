@@ -1,0 +1,9 @@
+setting,method,n_seeds,pre-commute 05:00-07:30 acc_pct,commute 07:30-09:30 acc_pct,daytime 09:30-16:00 acc_pct,return 16:00-19:00 acc_pct,evening 19:00-20:00 acc_pct
+commute mobility,DriftGate,2,53.2643,60.0510,62.3251,72.1442,80.2442
+commute mobility,fixed 0.15,2,52.2021,59.2902,62.0753,69.1784,75.9557
+commute mobility,fixed 0.2,2,52.3818,59.6022,62.3817,69.8833,76.7495
+commute mobility,fixed 0.3,2,52.7766,60.0592,62.7795,71.1052,78.3252
+commute mobility,fixed 0.4,2,53.2106,60.2840,62.6679,71.8905,79.4954
+commute mobility,fixed 0.5,2,53.7965,60.2310,62.0189,71.7656,80.2386
+commute mobility,fixed 0.6,2,54.8582,60.1042,60.6281,70.6828,80.1364
+commute mobility,entropy controller,2,53.2711,60.5067,60.6197,70.7480,79.2508

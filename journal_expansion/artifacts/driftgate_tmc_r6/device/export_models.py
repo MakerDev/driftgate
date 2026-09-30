@@ -71,9 +71,26 @@ def main():
         diffs["server_block_exit.ptl"] = (_load_for_lite_interpreter(str(OUT / "server_block_exit.ptl"))(f) - ref_s).abs().max().item()
     import onnx
     for name in ("client_block_exit.onnx", "server_block_exit.onnx"):
-        m = onnx.load(str(OUT / name))
-        onnx.checker.check_model(m)
-        diffs[name] = "onnx.checker ok (no runtime installed on the server)"
+        onnx.checker.check_model(onnx.load(str(OUT / name)))
+        diffs[name] = "onnx.checker ok"
+    try:
+        import numpy as np
+        import onnxruntime as ort
+        worst = {"client_block_exit.onnx": 0.0, "server_block_exit.onnx": 0.0}
+        for b in (1, 64):
+            xb, fb = torch.randn(b, 3, 32, 32), torch.randn(b, 128, 8, 8)
+            with torch.no_grad():
+                rc, rf = c(xb)
+                rs = s(fb)
+            oc = ort.InferenceSession(str(OUT / "client_block_exit.onnx")).run(None, {"image": xb.numpy()})
+            osv = ort.InferenceSession(str(OUT / "server_block_exit.onnx")).run(None, {"feature": fb.numpy()})
+            worst["client_block_exit.onnx"] = max(worst["client_block_exit.onnx"], float(np.abs(oc[0] - rc.numpy()).max()),
+                                                  float(np.abs(oc[1] - rf.numpy()).max()))
+            worst["server_block_exit.onnx"] = max(worst["server_block_exit.onnx"], float(np.abs(osv[0] - rs.numpy()).max()))
+        for k, v in worst.items():
+            diffs[k] = f"{v:.3g} (onnxruntime {ort.__version__}, batch 1 and 64)"
+    except ImportError:
+        pass
     for p in sorted(OUT.iterdir()):
         if p.name == "MANIFEST.csv":
             continue

@@ -1,0 +1,4 @@
+K,L,setting,n_seeds,DriftGate_pct,fixed_0.2_pct,fixed_0.4_pct,fixed_0.6_pct,best_fixed,DriftGate_minus_best_pp,ci95,n_pos,n,signal_bytes_client_TV,signal_bytes_neighbour_scores,signal_bytes_dbar_sharing,signal_bytes_total_per_round,signal_bytes_per_edge,controller_us_per_edge_round_median,controller_us_per_edge_round_p95
+50,5,commute mobility,2,63.3345,62.4665,63.4005,62.6484,,,,,,228,32,80,340,67.9,35.9,110.1
+200,20,"commute mobility, K=200",0,,,,,,,,,,921,160,1520,2601,130.0,,
+500,50,"commute mobility, K=500",0,,,,,,,,,,2344,424,9800,12568,251.4,,

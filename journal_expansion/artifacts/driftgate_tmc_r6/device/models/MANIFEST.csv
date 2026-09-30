@@ -1,0 +1,8 @@
+file,bytes,sha256,max_abs_diff_vs_eager
+client_block_exit.onnx,1118505,fc87ff206d9f5f818222f8ab72c7139316e7ab778ab6da79a8c88facfb884de5,"6.44e-06 (onnxruntime 1.30.0, batch 1 and 64)"
+client_block_exit.pt,1152986,f67e42e1540426533eaaff6317e496a4b826c327988e03acb294c0825b2bcf0b,0.0
+client_block_exit.ptl,1125843,6af54218ee1d430f72a83e0b8d5c944c43c5fd756e6f75ce16ba0e2e16677def,8.881092071533203e-06
+driftgate_s1_s0_weights.pth,6656269,1dfdc03b74cde86dafeaaab583fd2beb44c13570a8f5ec38a7e1d2be4f78fc28,
+server_block_exit.onnx,5514007,e8fe99896e21f2007450b3a320d38cc329a108c11e2389b39e9ccb89652d34a1,"5.72e-06 (onnxruntime 1.30.0, batch 1 and 64)"
+server_block_exit.pt,5530976,dfe5fa2d2664f28d85c7a4aa358216613e50e6f230d5d9d36046d0415e1eb073,0.0
+server_block_exit.ptl,5520325,cd79d6d4fdcd6cee5b805ec068b4b382698fc007fbeb0e7a03aeb8389a34154c,7.748603820800781e-06

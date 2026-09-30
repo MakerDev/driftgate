@@ -11,3 +11,5 @@ __pycache__/
 journal_expansion/runs/queue*/queue.lock
 journal_expansion/runs/queue*/running_heavy*/
 journal_expansion/runs/queue*/STOP
+# mobility traces for Round 6 S2 (re-downloaded, not committed; see artifacts/driftgate_tmc_r6)
+/data/traces

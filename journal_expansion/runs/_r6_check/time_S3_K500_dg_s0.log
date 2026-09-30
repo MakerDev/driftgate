@@ -1,0 +1,4 @@
+[time_S3_K500_dg_s0] scenario=S3_K500 arm=driftgate mode=selfcal K=500 L=50 rounds=5 delay=0 device=cuda:0
+  R  1 loss=0.892 acc=0.3686 off=1.000 active=500 elapsed=1.6m ETA=6m
+  R  5 loss=0.451 acc=0.5224 off=1.000 active=500 elapsed=7.7m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/time_S3_K500_dg_s0.json  integrated=0.4455

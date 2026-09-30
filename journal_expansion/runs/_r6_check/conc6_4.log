@@ -1,0 +1,4 @@
+[conc6_4] scenario=S1 arm=fixed0.4 mode=fixed K=50 L=5 rounds=5 delay=0 device=cuda:0
+  R  1 loss=0.893 acc=0.3519 off=1.000 active=50 elapsed=0.7m ETA=3m
+  R  5 loss=0.449 acc=0.5279 off=1.000 active=50 elapsed=3.2m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/conc6_4.json  integrated=0.4399

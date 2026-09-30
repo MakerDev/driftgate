@@ -1,0 +1,4 @@
+[sm_delay3] scenario=S4_delay3 arm=driftgate mode=selfcal K=50 L=5 rounds=3 delay=3 device=cuda:0
+  R  1 loss=0.865 acc=0.3237 off=1.000 active=50 elapsed=0.5m ETA=1m
+  R  3 loss=0.465 acc=0.4276 off=1.000 active=50 elapsed=1.5m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/sm_delay3.json  integrated=0.3756

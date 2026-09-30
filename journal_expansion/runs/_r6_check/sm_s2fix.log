@@ -1,0 +1,4 @@
+[sm_s2fix] scenario=S2 arm=fixed015 mode=fixed K=50 L=5 rounds=3 delay=0 device=cuda:0
+  R  1 loss=0.968 acc=0.2144 off=1.000 active=50 elapsed=0.4m ETA=1m
+  R  3 loss=0.665 acc=0.5029 off=1.000 active=50 elapsed=1.0m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/sm_s2fix.json  integrated=0.3586

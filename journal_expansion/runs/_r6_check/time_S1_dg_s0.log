@@ -1,0 +1,4 @@
+[time_S1_dg_s0] scenario=S1 arm=driftgate mode=selfcal K=50 L=5 rounds=5 delay=0 device=cuda:0
+  R  1 loss=0.854 acc=0.3281 off=1.000 active=50 elapsed=0.2m ETA=1m
+  R  5 loss=0.437 acc=0.5030 off=1.000 active=50 elapsed=0.8m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/time_S1_dg_s0.json  integrated=0.4155

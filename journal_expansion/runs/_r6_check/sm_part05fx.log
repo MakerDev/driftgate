@@ -1,0 +1,4 @@
+[sm_part05fx] scenario=S4_part05 arm=fixed040 mode=fixed K=50 L=5 rounds=3 delay=0 device=cuda:0
+  R  1 loss=0.866 acc=0.2331 off=1.000 active=22 elapsed=0.3m ETA=1m
+  R  3 loss=0.614 acc=0.3553 off=1.000 active=23 elapsed=0.7m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/sm_part05fx.json  integrated=0.2942

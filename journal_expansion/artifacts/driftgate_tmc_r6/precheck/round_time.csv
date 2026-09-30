@@ -1,0 +1,7 @@
+size,K,L,measured_run,rounds_measured,eval_rounds_measured,sec_per_round_alone,hours_per_150_round_run_alone,runs_in_round6,gpu_hours_alone
+K50,50,5,time_S1_dg_s0,5,2,9.7,0.4,127,51.4
+K200,200,20,time_S3_K200_dg_s0,5,2,37.3,1.56,12,18.7
+K500,500,50,time_S3_K500_dg_s0,5,2,92.1,3.84,12,46.0
+# measured on honeynaps, one RTX 4090 per run, 2026-09-30; 5 rounds each incl. evaluation at rounds 1 and 5
+# concurrency: 6 K=50 runs on one GPU -> each 4.05x slower than alone (throughput 1.48x)
+# total alone 116 GPU-hours; with 4 GPUs x throughput 1.48: about 20 h of wall time if packed

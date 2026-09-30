@@ -92,3 +92,13 @@
 ### 현재 상태와 다음 할 일 (2026-09-29 21:55경)
 - 1–7단계 완료. 8단계는 A안(옛 서버가 남은 25개를 마침)이라, 옛 서버가 `sync_results_from_old_server.sh`로 결과를 push하기를 기다린다.
 - 결과가 올라오면: `git pull` → 8.1 확인 스크립트로 64/64 확인(이 서버에서는 `r5_monitor.py`를 쓰지 않음) → 9단계(`precheck` → `r5_tables` → `r5_config_comm` → `r5_manifest` → `r5_figures`, 캡션 확인, 보고서) → 10단계.
+
+## 2026-09-30 — 옛 서버 결과 동기화
+
+- `git pull --ff-only`: `1ad6f75..3ac18e9` fast-forward. 받은 commit은 `3ac18e9 Round 5 final package (ubuntu20): report, tables, paper numbers, figures` 하나다. 옛 서버에서 64개가 모두 끝났고(마지막 종료 2026-09-30 09:12), 9·10단계(표, 그림, 보고서)도 옛 서버에서 했다고 적혀 있다.
+- 바뀐 파일 25개는 모두 `journal_expansion/artifacts/driftgate_tmc_final/` 아래에 있다: `DriftGate_final_report_ko.md`, `README.md`, 표(T1, T3, T4b, T5, T10, run_manifest 수정, T4c·T4d 추가), `paper_numbers.csv`, 그림 PDF 5개와 캡션, `r5_tables.py` 수정, `r5_report.py`와 `scripts/launch/` 추가.
+- **run 기록은 올라오지 않았다.** `journal_expansion/runs/`와 `journal_expansion/provenance/`에는 바뀐 것이 없다. 이 서버에 JSON이 있는 run은 여전히 39/64다. 없는 25개: E2 ResNet-18 s1–s2(6), E3 λ_max A(5)와 mobility(6), B4 APFL mobility(6), B3 CIFAR-100 gradual fx15 s1–s2(2). 이 commit은 `sync_results_from_old_server.sh`로 만든 것이 아니다(그 스크립트는 runs와 provenance를 "Sync run records from old server …"로 commit한다).
+  - 따라서 이 25개에 기대는 표와 보고서 수치는 지금 이 서버에서 raw JSON부터 다시 계산해서 확인할 수 없다.
+  - 옛 서버의 GitHub 복사본(`/disk2/Yujin/driftgate_github`)에서 `bash MIGRATION/tools/sync_results_from_old_server.sh`를 실행해야 run JSON, 신호 npz, 워커 로그, provenance가 올라온다.
+- 받은 `tables/run_manifest.csv`는 64행 모두 `complete = yes`, `overlap_ok = yes`다. 다만 device 열이 옛 고정 문자열 `cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0)`이다. 저장소의 `r5_manifest.py`(7.3에서 고친 판)는 `ubuntu20, RTX 3090 Ti, GPU 0`을 쓰므로, 이 CSV는 저장소 스크립트가 아니라 옛 live checkout의 스크립트로 만든 것으로 보인다. commit 메시지는 "r5_manifest.py keeps the new-server version"이라고 적었다.
+- 받은 `r5_tables.py`, `r5_report.py`는 새 서버 경로(`JR = /home/honeynaps/...`)를 쓰고 `py_compile`을 통과한다.

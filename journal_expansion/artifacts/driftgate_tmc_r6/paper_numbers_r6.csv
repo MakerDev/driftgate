@@ -1,15 +1,1 @@
 item,value,ci95,n_seeds,source_runs
-commute mobility: DriftGate − fixed 0.15,+1.259 pp,"[+0.79, +1.73]",2,"s1_driftgate_s{0,1}; s1_fixed015_s{0,1}"
-commute mobility: DriftGate − fixed 0.2,+0.868 pp,"[+0.63, +1.11]",2,"s1_driftgate_s{0,1}; s1_fixed020_s{0,1}"
-commute mobility: DriftGate − fixed 0.3,+0.228 pp,"[-0.38, +0.84]",2,"s1_driftgate_s{0,1}; s1_fixed030_s{0,1}"
-commute mobility: DriftGate − fixed 0.4 (best fixed),-0.066 pp,"[-0.88, +0.75]",2,"s1_driftgate_s{0,1}; s1_fixed040_s{0,1}"
-commute mobility: DriftGate − fixed 0.5,+0.076 pp,"[-0.18, +0.33]",2,"s1_driftgate_s{0,1}; s1_fixed050_s{0,1}"
-commute mobility: DriftGate − fixed 0.6,+0.686 pp,"[+0.67, +0.70]",2,"s1_driftgate_s{0,1}; s1_fixed060_s{0,1}"
-commute mobility: DriftGate − entropy controller,+0.989 pp,"[-0.43, +2.41]",2,"s1_driftgate_s{0,1}; s1_entropy_s{0,1}"
-"commute mobility: bottom-10% client accuracy, DriftGate − fixed 0.4 (best fixed)",-0.744 pp,"[-1.73, +0.24]",2,"s1_driftgate_s{0,1}; s1_fixed040_s{0,1}"
-"commute mobility: accuracy at home, DriftGate − fixed 0.4 (best fixed)",-0.091 pp,"[-8.40, +8.22]",2,"s1_driftgate_s{0,1}; s1_fixed040_s{0,1}"
-"commute mobility: accuracy away from home, DriftGate − fixed 0.4 (best fixed)",-1.168 pp,"[-9.29, +6.95]",2,"s1_driftgate_s{0,1}; s1_fixed040_s{0,1}"
-"commute mobility: DriftGate reaction time, hub cells",96.0 min,,2,s1_driftgate (all seeds)
-"commute mobility: DriftGate recovery time, hub cells",0.0 min,,2,same runs
-"commute mobility: DriftGate reaction time, residential cells",39.4 min,,8,s1_driftgate (all seeds)
-"commute mobility: DriftGate recovery time, residential cells",25.5 min,,8,same runs

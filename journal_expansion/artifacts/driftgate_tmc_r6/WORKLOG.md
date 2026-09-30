@@ -93,3 +93,20 @@
 - P0: Round 4·5 원래 명령줄(provenance 기록과 R5 snapshot)에 `--no_neighbor_avg`만 더했다. `run_v2.py` 경로, seed, rounds, disjoint pool이 같다. 저장 위치 `runs/phaseT6_p0/`, 이름 `p0_<원래 이름>`. absonly의 원래 명령에는 `--spatial_norm`이 없고, 그대로 따른다.
 - 주의: P0는 RTX 4090(honeynaps)에서, 비교 대상인 원래 run은 RTX 3090 Ti(ubuntu20)에서 돌았다. 이웃 평균이 있을 때와 없을 때의 paired 차이에는 하드웨어 차이(부동소수점 연산 순서)가 함께 들어간다.
 - R6: 3.2의 이웃 규칙과 S2 전처리 8번의 이웃 규칙은 controller에 쓰지 않는다(env 파일의 `neighbors` 배열은 남아 있지만 읽지 않는다). S4 신호 손실은 (1) 클라이언트 TV와 (2) d̄ 공유만 대상이다. 추가 통신량에서 이웃 교환 항목을 뺀다.
+
+## 2026-10-01 00:56 — 대화 되감기(rewind)와 작업 상태 정리
+
+- 사용자의 결정(이웃 점수 평균 제거, 기존 controller run 재실행)이 이 세션의 앞선 대화 branch에서 먼저 처리되었다. 그 branch는 commit `18a0d02`(flag와 큐 v2), `20e3d3d`(분석 스크립트)를 남기고 되감겼다. 되감기는 Edit/Write 도구로 고친 파일만 되돌렸고(00:53:47), bash로 고친 파일, git commit, 큐 파일, 백그라운드 대기 프로세스는 그대로 남았다. 그래서 `self_calibrating.py`·`runner.py`·`run_v2.py`(flag 있음)와 `r6_controller.py`·`runner_r6.py`·`run_r6.py`(flag 없음)가 서로 맞지 않았고, 순서가 다른 큐 v2(178줄)가 살아 있었다.
+- 조치: (1) 큐를 flock 아래에서 `queue_v2_paused_20261001_0058.txt`로 옮기고 빈 큐로 바꿨다. v2의 P0 줄은 한 줄도 실행되지 않았다. (2) 앞선 branch의 대기 프로세스(PID 1915234)를 PID로 종료했다. (3) 코드 파일을 HEAD(`20e3d3d`)로 맞췄다. flag 구현을 검토했고 테스트 98개가 통과한다. (4) 실행 중이던 16개(S1 고정 λ seed 4, APFL, S2 고정 λ)는 controller를 쓰지 않으므로 그대로 두었다.
+- 옛 정의(이웃 평균 있음)의 R6 run: S1 DriftGate와 entropy controller seed 0–3(8개)가 끝났다. 기록으로 남기고 표에는 쓰지 않는다. 같은 seed의 새 정의 run과의 차이는 R0 기록표에 함께 적는다.
+
+## 2026-10-01 사용자 결정: 이웃 점수 평균 제거
+
+- DriftGate의 q_z = cluster z의 temporal 점수와 spatial 점수를 각각 EMA(0.3)로 평활한 뒤 고른 큰 값. 이웃 edge와 평균하지 않는다. spatial 점수를 위한 d̄ 공유는 그대로. 최종 방법으로 확정, 되돌리지 않음. entropy controller도 같은 controller.
+- flag `--no_neighbor_avg`(기본값은 이웃 평균 있음, 기존 동작 유지). 바뀐 곳: `src/controllers/self_calibrating.py`(`neighbor_avg` 인자, `zc`와 absolute 경로의 `sig_c`), `src/runner.py`(`neighbor_avg=not ckw["no_neighbor_avg"]`, 결과 JSON의 config에 기록), `scripts/run_v2.py`(flag), `src/r6_controller.py`(`neighbor_avg` 인자, q = 자기 점수), `src/runner_r6.py`, `scripts/run_r6.py`. 정확한 줄 번호는 보고서에 적는다.
+- absonly 경로 확인: 원래 코드는 absolute 경로에서 raw 신호를 이웃과 한 번 평균했다(`sig_c = _consensus(signal_per_es, ...)`). 따라서 absonly도 이웃 평균을 거치며, flag를 주면 이 평균도 빠진다. absonly 11 run을 다시 돌린다.
+- R0 = 기존 controller run 67개(DriftGate 25, entropy 13, E3 18, absonly 11)를 원래 명령줄 + `--no_neighbor_avg`로 다시 돌린다. 67개 명령줄은 원래 run의 provenance(54개)나 R5 snapshot(13개, 옛 서버가 아직 보내지 않은 run)과 flag 단위로 같음을 확인했다. 출력 `runs/phaseT6_R0/r0_<원래 이름>`.
+- R6 DriftGate/entropy arm 이름은 `driftgate_own`/`entropy_own`, 옛 정의 arm(`driftgate`/`entropy`)은 기록으로만 남긴다.
+- 프롬프트 변경 반영: 이웃 규칙 없음(controller가 이웃을 쓰지 않음), S4 신호 손실은 (1) 클라이언트 TV, (2) edge 사이 d̄ 공유만(환경 파일의 `lost_nbr` 배열은 쓰지 않는다), 5.2 통신량에서 이웃 교환 항목 제거.
+- 큐 v3(`enqueue_r6_v3.py`, snapshot 218줄): S3 K=500 12개 → R0 67개 → S1, S2, S3 K=200 → S4, S1-fast.
+- 분석 추가(T11): S1과 S2의 고정 λ run에서 cell 종류(S1 hub/주거, S2 cell별) × 시간대마다 가장 좋은 고정 λ.

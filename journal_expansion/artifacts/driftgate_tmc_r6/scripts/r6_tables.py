@@ -33,9 +33,9 @@ sys.path.insert(0, str(JR.parent))
 sys.path.insert(0, str(JR))
 from src import r6_env  # noqa: E402
 
-# Schedule A column of T2: the Round-5 main table recomputed with the new DriftGate definition (P0, r6_p0_tables.py);
+# Schedule A column of T2: the Round-5 main table recomputed with the new DriftGate definition (R0, r6_r0_tables.py);
 # fixed-lambda and APFL rows there are the unchanged Round-5 runs.
-R5_T1 = HERE / "p0" / "tables" / "T1_main_results.csv"
+R5_T1 = HERE / "r0" / "tables" / "T1_main_results.csv"
 SLOTS = [("pre-commute", "05:00-07:30", 1, 25), ("commute", "07:30-09:30", 26, 45),
          ("daytime", "09:30-16:00", 46, 110), ("return", "16:00-19:00", 111, 140),
          ("evening", "19:00-20:00", 141, 150)]
@@ -98,6 +98,7 @@ def run(path, scen, seed):
     hm = [acc[e][home[e]].mean() for e in range(len(er)) if home[e].any()]
     aw = [acc[e][~home[e]].mean() for e in range(len(er)) if (~home[e]).any()]
     r = dict(
+        acc_ck=acc,
         integ=float(np.mean([e["acc_total"] for e in h["eval"]])),
         acc_round=np.array([e["acc_total"] for e in h["eval"]]),
         rounds=er,
@@ -206,7 +207,9 @@ def best_fixed(scen, arms, seeds):
 def t1():
     rows = []
     sc = r6_env.SCENARIOS
-    common = [("rounds", "150 (05:00-20:00, 6 min per round)"), ("evaluation rounds", "1, 5, 10, ..., 150 (31)"),
+    common = [("DriftGate", "relonly flags + --no_neighbor_avg: q = max(EMA temporal score, EMA spatial score) of the "
+                             "cluster itself, no neighbour average; d-bar shared between edges for the spatial score"),
+              ("rounds", "150 (05:00-20:00, 6 min per round)"), ("evaluation rounds", "1, 5, 10, ..., 150 (31)"),
               ("edge coverage radius R", "1.0 km, a client belongs to <= 2 nearest cells within R (else the nearest)"),
               ("rho at home / away", "0.1 / 0.8 (non-Main share 11.5% / 51%)"),
               ("request count", "N ~ Poisson(mu_k), probe n = min(N, 64)"),
@@ -222,8 +225,7 @@ def t1():
         rows.append([name, "speed (m/s)", f"U[{s_range(r6_env.SPEED_RANGE[s['speed']])}]"])
         rows.append([name, "mu_k (requests per round)", f"U[{s_range(r6_env.MU_RANGE[s['mu']])}]"])
         rows.append([name, "participation a", f"{s['avail']}"])
-        rows.append([name, "signal loss p (client TV, shared d-bar, neighbour score; each independent)", f"{s['loss']}"])
-        rows.append([name, "neighbour cells (centre distance <= 2 km)", f"{int(env['neighbors'].sum() // 2)} pairs"])
+        rows.append([name, "signal loss p (client TV to an edge, d-bar shared between edges; each independent)", f"{s['loss']}"])
     rows.append(["S4_delay1 / S4_delay3", "signal delay d (rounds)", "1 / 3 (S1 environment)"])
     rows.append(["S1", "daily plans (residential)", "0.6 hub work, 0.2 other residential cell, 0.2 stay; hub residents 0.8 stay"])
     rows.append(["S3", "daily plans (residential)", "0.45 own hub, 0.15 nearest other district's hub, 0.2 other residential, 0.2 stay"])
@@ -237,7 +239,7 @@ def t1():
              ["S2", "edge positions (km, around the mean position)", "; ".join(f"({x:.2f}, {y:.2f})" for x, y in meta["edge_xy_km"])],
              ["S2", "edge positions (lat, lon)", "; ".join(f"({a:.4f}, {b:.4f})" for a, b in meta["edge_latlon"])],
              ["S2", "residents per cell", " ".join(map(str, meta["residents_per_cell"]))],
-             ["S2", "membership", "nearest edge, plus the second if its distance <= 1.2 x the nearest; all edge pairs are neighbours"],
+             ["S2", "membership", "nearest edge, plus the second if its distance <= 1.2 x the nearest"],
              ["S2", "mu_k / participation / loss", f"U[{s_range(meta['mu_range'])}] / 1.0 / 0"]]
     wcsv("T1_scenarios.csv", ["scenario", "parameter", "value"], rows)
 
@@ -257,7 +259,7 @@ def t2():
         arm = mapname.get(m) or ("fixed" + f"{int(round(float(m.split()[1]) * 100)):03d}" if m.startswith("fixed") else None)
         if arm is None:
             continue
-        rows.append(["stepwise composition change (Round-5 runs, P0 definition)", ARM_NAME[arm], r["n_seeds"], r["integrated_acc_pct"],
+        rows.append(["stepwise composition change (Round-5 runs re-run as R0)", ARM_NAME[arm], r["n_seeds"], r["integrated_acc_pct"],
                      r["sd_pct"], r["DriftGate_minus_method_pp"], r["ci95"], r["n_pos"], r["n_matched"],
                      "yes" if "(best fixed)" in r["method"] else "", r["source_runs"]])
     for scen in ("S1", "S2"):
@@ -523,6 +525,75 @@ def t8():
                                "n_pos", "n"], rows)
 
 
+# ============================================================================= T11 best fixed by cell and time
+def t11():
+    """User request 2026-10-01 (no new runs): accuracy of every fixed-lambda run by cell group and time slot.
+    A client's accuracy at an evaluation round counts for every cell it belongs to at that round
+    (Z_k^t, two cells -> both). S1: hub cell vs residential cells (pooled); S2: each cell.
+    Per (cell group, slot): mean over the slot's evaluation rounds of the mean client accuracy in the group
+    (rounds with no client in the group are skipped), then the seed mean; the best fixed lambda is the
+    arm with the highest seed mean; margin = best - runner-up (seed means)."""
+    rows, brows = [], []
+    for scen in ("S1", "S2"):
+        groups = None
+        acc = {}
+        for arm in FIXED_ALL:
+            for sd, f in fam(scen, arm).items():
+                r = run(f, scen, sd)
+                env = r["env"]
+                if groups is None:
+                    L = len(env["cell_xy"])
+                    groups = ([("hub", [z for z in range(L) if env["cell_is_hub"][z]]),
+                               ("residential", [z for z in range(L) if not env["cell_is_hub"][z]])]
+                              if scen == "S1" else [(f"cell {z}", [z]) for z in range(L)])
+                for gname, cells in groups:
+                    for name, clock, lo, hi in SLOTS:
+                        vals = []
+                        for e, rr in enumerate(r["rounds"]):
+                            if not lo <= rr <= hi:
+                                continue
+                            inc = np.isin(env["member"][:, rr - 1, :], cells).any(axis=1)
+                            if inc.any():
+                                vals.append(r["acc_ck"][e][inc].mean())
+                        if vals:
+                            acc.setdefault((gname, name, clock, arm), {})[sd] = float(np.mean(vals))
+        if groups is None:
+            continue
+        for gname, _ in groups:
+            for name, clock, _, _ in SLOTS:
+                means = {}
+                for arm in FIXED_ALL:
+                    v = acc.get((gname, name, clock, arm), {})
+                    if v:
+                        m, sd_, n = msd(v)
+                        means[arm] = m
+                        rows.append([SCEN[scen][2], gname, name, clock, ARM_NAME[arm], n, f4(m), f4(sd_)])
+                if len(means) == len(FIXED_ALL):
+                    order = sorted(means, key=lambda a: -means[a])
+                    brows.append([SCEN[scen][2], gname, name, clock, ARM_NAME[order[0]], f4(means[order[0]]),
+                                  ARM_NAME[order[1]], f"{means[order[0]] - means[order[1]]:.4f}",
+                                  ARM_NAME[order[-1]], f"{means[order[0]] - means[order[-1]]:.4f}"])
+    wcsv("T11a_fixed_accuracy_by_cell_and_time.csv", ["setting", "cell_group", "slot", "clock", "fixed_lambda",
+                                                      "n_seeds", "acc_pct", "sd_pct"], rows)
+    summ = []
+    for scen in ("S1", "S2"):
+        b = [r for r in brows if r[0] == SCEN[scen][2]]
+        if not b:
+            continue
+        for name, clock, _, _ in SLOTS:
+            best = sorted({r[4] for r in b if r[2] == name})
+            summ.append([SCEN[scen][2], "same time, across cells", f"{name} {clock}", " / ".join(best),
+                         "differs" if len(best) > 1 else "same"])
+        for g in sorted({r[1] for r in b}):
+            best = [r[4] for r in b if r[1] == g]
+            summ.append([SCEN[scen][2], "same cell, across time", g, " -> ".join(best),
+                         "differs" if len(set(best)) > 1 else "same"])
+    wcsv("T11b_best_fixed_by_cell_and_time.csv", ["setting", "cell_group", "slot", "clock", "best_fixed", "best_acc_pct",
+                                                  "runner_up", "margin_to_runner_up_pp", "worst_fixed",
+                                                  "margin_to_worst_pp"], brows)
+    wcsv("T11c_best_fixed_changes.csv", ["setting", "comparison", "where", "best fixed", "verdict"], summ)
+
+
 # ============================================================================= T10 manifest
 def t10():
     rows = []
@@ -536,12 +607,12 @@ def t10():
             m = re.match(r"\[(\S+) (\S+)\] END (\S+) exit=(\d+) (.+)$", line.strip())
             if m:
                 ends[m.group(3)] = (m.group(5), m.group(4))
-    for line in open(qd / "enqueued_snapshot_v2.txt"):
+    for line in open(qd / "enqueued_snapshot_v3.txt"):
         cls, cmd = line.split(" ", 1)
         g = lambda k: re.search(rf"--{k} (\S+)", cmd).group(1)
         rn, od, seed = g("run_name"), g("output_dir"), int(g("seed"))
-        if cls == "P0":
-            scen, arm, env = "P0 (Round-5 setting)", rn[3:].rsplit("_s", 1)[0], "none (Round-5 schedule)"
+        if cls in ("R0", "R0H"):
+            scen, arm, env = "R0 (Round-5 setting)", rn[3:].rsplit("_s", 1)[0], "none (Round-5 schedule)"
         else:
             scen, arm = g("scenario"), g("arm")
             env = f"runs/phaseT6_env/{g('env')}_seed{seed}.npz"
@@ -551,7 +622,7 @@ def t10():
             prov = JR / "provenance" / f"{h['config']['run_id']}.json"
             gpu = json.load(open(prov))["env"].get("gpu", "") if prov.exists() else ""
             want = int(re.search(r"--rounds (\d+)", cmd).group(1)) if "--rounds" in cmd else 150
-            ok = len(h["round"]) == want and (cls == "P0" or len(h["eval"]) == 31)
+            ok = len(h["round"]) == want and (cls in ("R0", "R0H") or len(h["eval"]) == 31)
             rows.append([h["config"]["run_id"], rn, scen, arm, seed, 100 + seed, env, cls, "yes" if ok else "no",
                          len(h["round"]), len(h["eval"]), h["probe_eval_overlap"],
                          "yes" if h["probe_eval_overlap"] == 0 else "NO", f"honeynaps, {gpu.replace('NVIDIA GeForce ', '')}, "
@@ -575,6 +646,7 @@ def main():
     t6()
     t7()
     t8()
+    t11()
     n, total = t10()
     with open(HERE / "paper_numbers_r6.csv", "w", newline="") as f:
         w = csv.writer(f)

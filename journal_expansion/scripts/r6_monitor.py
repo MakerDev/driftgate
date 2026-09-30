@@ -1,5 +1,5 @@
 """Round-6 progress check. Never modifies the queue (failed runs are reported, not re-queued).
-Exit codes: 0 = all 218 runs (v2 snapshot) finished | 1 = still running | 2 = a run failed, or runs are missing
+Exit codes: 0 = all 218 runs (v3 snapshot) finished | 1 = still running | 2 = a run failed, or runs are missing
 while the queue is empty and no worker is alive.
 """
 import glob
@@ -13,7 +13,7 @@ JR = "/home/honeynaps/data/driftgate/journal_expansion"  # [SERVER-PATH:REPO_ROO
 QD = f"{JR}/runs/queue_r6"
 
 expected = []
-for line in open(f"{QD}/enqueued_snapshot_v2.txt"):   # v2: P0 67 + Round 6 151 (2026-10-01)
+for line in open(f"{QD}/enqueued_snapshot_v3.txt"):   # v3: R0 67 + Round 6 151 (2026-10-01)
     rn = re.search(r"--run_name (\S+)", line).group(1)
     od = re.search(r"--output_dir (\S+)", line).group(1)
     expected.append((rn, od, line.split(" ", 1)[0]))

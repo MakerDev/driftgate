@@ -1,0 +1,11 @@
+setting,cell_group,slot,clock,best_fixed,best_acc_pct,runner_up,margin_to_runner_up_pp,worst_fixed,margin_to_worst_pp
+commute mobility,hub,pre-commute,05:00-07:30,fixed 0.6,52.0914,fixed 0.5,1.1235,fixed 0.15,2.9815
+commute mobility,hub,commute,07:30-09:30,fixed 0.4,56.3096,fixed 0.3,0.0908,fixed 0.15,0.7607
+commute mobility,hub,daytime,09:30-16:00,fixed 0.3,61.4764,fixed 0.2,0.1339,fixed 0.6,2.5079
+commute mobility,hub,return,16:00-19:00,fixed 0.4,68.3714,fixed 0.3,0.2636,fixed 0.15,1.5427
+commute mobility,hub,evening,19:00-20:00,fixed 0.6,79.5637,fixed 0.5,0.3013,fixed 0.15,4.3524
+commute mobility,residential,pre-commute,05:00-07:30,fixed 0.6,56.9831,fixed 0.5,0.7253,fixed 0.15,1.7686
+commute mobility,residential,commute,07:30-09:30,fixed 0.4,59.9185,fixed 0.5,0.0228,fixed 0.15,0.6954
+commute mobility,residential,daytime,09:30-16:00,fixed 0.3,61.9442,fixed 0.2,0.1306,fixed 0.6,1.6224
+commute mobility,residential,return,16:00-19:00,fixed 0.5,71.8371,fixed 0.4,0.0920,fixed 0.15,1.7882
+commute mobility,residential,evening,19:00-20:00,fixed 0.6,79.4630,fixed 0.5,0.1480,fixed 0.15,3.7351

@@ -1,5 +1,1 @@
 setting,method,cell_type,cells_with_change,reaction_not_reached,reaction_mean_rounds,reaction_mean_min,reaction_median_rounds,cells_with_recovery,recovery_mean_rounds,recovery_mean_min
-commute mobility,DriftGate,hub,2,0,16.00,96.0,16.0,2,0.00,0.0
-commute mobility,DriftGate,residential,8,1,6.57,39.4,1.0,8,4.25,25.5
-commute mobility,entropy controller,hub,2,2,,,,2,0.00,0.0
-commute mobility,entropy controller,residential,8,6,8.00,48.0,8.0,8,0.00,0.0

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Round-6 file-queue worker (one per slot; started by scripts/supervisor_r6.sh).
 
-Queue runs/queue_r6/queue.txt: "<K50|K200|K500> <command with {DEV}>" per line, served in
-file order. A worker takes the FIRST line it may run: at most R6_MAX_K500 K=500 jobs and
-R6_MAX_K200 K=200 jobs run at once on its GPU (GPU memory: K=500 ~8.7 GB, K=200 ~4 GB,
-K=50 ~2 GB). Pops and the per-GPU counters are updated under one flock.
+Queue runs/queue_r6/queue.txt: "<K50|K200|K500|R0|R0H> <command with {DEV}>" per line, served in
+file order. A worker takes the FIRST line it may run: at most R6_MAX_K500 K=500 jobs (3),
+R6_MAX_K200 K=200 jobs (3) and R6_MAX_R0H heavy R0 jobs (1) run at once on its GPU
+(GPU memory with expandable segments: K=500 ~6 GB, Tiny-ImageNet ~4 GB, K=50 ~2 GB). Pops and the per-GPU counters are updated under one flock.
 Every job runs with CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=<R6_GPU>, so the job's
 cuda:0 is physical GPU R6_GPU. Stops when runs/queue_r6/STOP exists.
 Usage: R6_GPU=<index> r6_worker.py <worker_id>
@@ -20,10 +20,12 @@ import time
 WID = sys.argv[1]
 QDIR = "/home/honeynaps/data/driftgate/journal_expansion/runs/queue_r6"  # [SERVER-PATH:REPO_ROOT]
 GPU = os.environ.get("R6_GPU", "0")  # physical GPU index (nvidia-smi, PCI order)  # [SERVER-GPU]
-CAPS = {"K500": int(os.environ.get("R6_MAX_K500", "2")), "K200": int(os.environ.get("R6_MAX_K200", "3"))}
+CAPS = {"K500": int(os.environ.get("R6_MAX_K500", "3")), "K200": int(os.environ.get("R6_MAX_K200", "3")),
+        "R0H": int(os.environ.get("R6_MAX_R0H", "1"))}   # R0H = Round-5 Tiny-ImageNet / ResNet-18 re-runs (R0)
 LOCK, LOGDIR, RUND = f"{QDIR}/queue.lock", f"{QDIR}/logs", f"{QDIR}/running_gpu{GPU}"
 ENV = dict(os.environ, CUDA_DEVICE_ORDER="PCI_BUS_ID", CUDA_VISIBLE_DEVICES=GPU,
-           JX_THREADS=os.environ.get("JX_THREADS", "2"))
+           JX_THREADS=os.environ.get("JX_THREADS", "2"),
+           PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True")   # K=500 ~6 GB instead of ~8.7 GB (allocator only)
 os.makedirs(LOGDIR, exist_ok=True)
 os.makedirs(RUND, exist_ok=True)
 os.chdir("/home/honeynaps/data/driftgate")  # [SERVER-PATH:REPO_ROOT]

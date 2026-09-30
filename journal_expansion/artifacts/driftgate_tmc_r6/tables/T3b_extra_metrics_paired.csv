@@ -1,43 +1,37 @@
 setting,method,best_fixed,metric,DriftGate_minus_method_pp,ci95,n_pos,n
-commute mobility,fixed 0.15,,bottom-10% client accuracy,+0.6619,"[-11.01, +12.33]",1,2
-commute mobility,fixed 0.15,,accuracy at home,+3.5682,"[-3.54, +10.67]",2,2
-commute mobility,fixed 0.15,,accuracy away from home,-2.2777,"[-14.61, +10.06]",0,2
-commute mobility,fixed 0.15,,Main-request accuracy,+5.0790,"[-1.79, +11.95]",2,2
-commute mobility,fixed 0.15,,non-Main-request accuracy,-9.8131,"[-29.74, +10.12]",0,2
-commute mobility,fixed 0.15,,offload rate,-10.1810,"[-31.61, +11.25]",0,2
-commute mobility,fixed 0.2,,bottom-10% client accuracy,+0.2673,"[-9.11, +9.65]",1,2
-commute mobility,fixed 0.2,,accuracy at home,+2.7754,"[-4.76, +10.31]",2,2
-commute mobility,fixed 0.2,,accuracy away from home,-2.3209,"[-14.66, +10.02]",0,2
-commute mobility,fixed 0.2,,Main-request accuracy,+4.0750,"[-3.91, +12.06]",2,2
-commute mobility,fixed 0.2,,non-Main-request accuracy,-8.7405,"[-30.36, +12.88]",0,2
-commute mobility,fixed 0.2,,offload rate,-9.6403,"[-32.85, +13.57]",0,2
-commute mobility,fixed 0.3,,bottom-10% client accuracy,-0.4650,"[-6.25, +5.32]",0,2
-commute mobility,fixed 0.3,,accuracy at home,+1.2306,"[-7.69, +10.15]",2,2
-commute mobility,fixed 0.3,,accuracy away from home,-2.0812,"[-13.09, +8.93]",0,2
-commute mobility,fixed 0.3,,Main-request accuracy,+1.9929,"[-8.27, +12.25]",2,2
-commute mobility,fixed 0.3,,non-Main-request accuracy,-6.0073,"[-29.37, +17.35]",0,2
-commute mobility,fixed 0.3,,offload rate,-7.4650,"[-33.66, +18.73]",0,2
-commute mobility,fixed 0.4,yes,bottom-10% client accuracy,-0.7440,"[-1.73, +0.24]",0,2
-commute mobility,fixed 0.4,yes,accuracy at home,-0.0911,"[-8.40, +8.22]",1,2
-commute mobility,fixed 0.4,yes,accuracy away from home,-1.1684,"[-9.29, +6.95]",0,2
-commute mobility,fixed 0.4,yes,Main-request accuracy,-0.0702,"[-11.52, +11.38]",1,2
-commute mobility,fixed 0.4,yes,non-Main-request accuracy,-2.0078,"[-25.77, +21.76]",0,2
-commute mobility,fixed 0.4,yes,offload rate,-3.1171,"[-31.52, +25.29]",0,2
-commute mobility,fixed 0.5,,bottom-10% client accuracy,+0.2688,"[-6.11, +6.65]",1,2
-commute mobility,fixed 0.5,,accuracy at home,-1.2232,"[-9.21, +6.77]",0,2
-commute mobility,fixed 0.5,,accuracy away from home,+0.6170,"[-6.65, +7.88]",2,2
-commute mobility,fixed 0.5,,Main-request accuracy,-2.1327,"[-13.33, +9.07]",0,2
-commute mobility,fixed 0.5,,non-Main-request accuracy,+3.3928,"[-20.19, +26.97]",2,2
-commute mobility,fixed 0.5,,offload rate,+3.8405,"[-26.12, +33.80]",2,2
-commute mobility,fixed 0.6,,bottom-10% client accuracy,+2.0212,"[-0.10, +4.14]",2,2
-commute mobility,fixed 0.6,,accuracy at home,-2.2592,"[-8.95, +4.43]",0,2
-commute mobility,fixed 0.6,,accuracy away from home,+3.4637,"[-2.60, +9.53]",2,2
-commute mobility,fixed 0.6,,Main-request accuracy,-4.2974,"[-14.69, +6.09]",0,2
-commute mobility,fixed 0.6,,non-Main-request accuracy,+10.3751,"[-9.70, +30.45]",2,2
-commute mobility,fixed 0.6,,offload rate,+14.1363,"[-18.49, +46.77]",2,2
-commute mobility,entropy controller,,bottom-10% client accuracy,+2.4697,"[+0.46, +4.48]",2,2
-commute mobility,entropy controller,,accuracy at home,-1.4726,"[-11.02, +8.07]",0,2
-commute mobility,entropy controller,,accuracy away from home,+2.7894,"[-5.36, +10.94]",2,2
-commute mobility,entropy controller,,Main-request accuracy,-3.3150,"[-19.84, +13.21]",0,2
-commute mobility,entropy controller,,non-Main-request accuracy,+8.5738,"[-19.71, +36.86]",2,2
-commute mobility,entropy controller,,offload rate,+13.0594,"[-44.69, +70.81]",2,2
+commute mobility,fixed 0.15,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.15,,accuracy at home,,,,
+commute mobility,fixed 0.15,,accuracy away from home,,,,
+commute mobility,fixed 0.15,,Main-request accuracy,,,,
+commute mobility,fixed 0.15,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.15,,offload rate,,,,
+commute mobility,fixed 0.2,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.2,,accuracy at home,,,,
+commute mobility,fixed 0.2,,accuracy away from home,,,,
+commute mobility,fixed 0.2,,Main-request accuracy,,,,
+commute mobility,fixed 0.2,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.2,,offload rate,,,,
+commute mobility,fixed 0.3,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.3,,accuracy at home,,,,
+commute mobility,fixed 0.3,,accuracy away from home,,,,
+commute mobility,fixed 0.3,,Main-request accuracy,,,,
+commute mobility,fixed 0.3,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.3,,offload rate,,,,
+commute mobility,fixed 0.4,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.4,,accuracy at home,,,,
+commute mobility,fixed 0.4,,accuracy away from home,,,,
+commute mobility,fixed 0.4,,Main-request accuracy,,,,
+commute mobility,fixed 0.4,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.4,,offload rate,,,,
+commute mobility,fixed 0.5,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.5,,accuracy at home,,,,
+commute mobility,fixed 0.5,,accuracy away from home,,,,
+commute mobility,fixed 0.5,,Main-request accuracy,,,,
+commute mobility,fixed 0.5,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.5,,offload rate,,,,
+commute mobility,fixed 0.6,,bottom-10% client accuracy,,,,
+commute mobility,fixed 0.6,,accuracy at home,,,,
+commute mobility,fixed 0.6,,accuracy away from home,,,,
+commute mobility,fixed 0.6,,Main-request accuracy,,,,
+commute mobility,fixed 0.6,,non-Main-request accuracy,,,,
+commute mobility,fixed 0.6,,offload rate,,,,

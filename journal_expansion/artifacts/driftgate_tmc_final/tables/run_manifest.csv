@@ -1,65 +1,65 @@
 run_id,run_name,experiment,arm,setting,seed,output_dir,complete,rounds,eval_rounds,probe_eval_overlap,overlap_ok,device,worker_exit_code,start,end
-,b3_tiny_fx15_s0,B3,fixed 0.15,Tiny-ImageNet,0,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,e1_relonly_tiny_s0,E1,DriftGate (relonly),Tiny-ImageNet,0,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,b3_tiny_fx15_s1,B3,fixed 0.15,Tiny-ImageNet,1,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,e1_relonly_tiny_s1,E1,DriftGate (relonly),Tiny-ImageNet,1,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_tiny_fx15_s2,B3,fixed 0.15,Tiny-ImageNet,2,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_tiny_s2,E1,DriftGate (relonly),Tiny-ImageNet,2,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_relonly_A_s0,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx20_A_s0,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx40_A_s0,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_relonly_A_s1,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx20_A_s1,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx40_A_s1,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_relonly_A_s2,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx20_A_s2,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e2_res_fx40_A_s2,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_svhn_fx15_s2,B3,fixed 0.15,SVHN temporal,2,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,b3_svhn_fx15_s3,B3,fixed 0.15,SVHN temporal,3,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,b3_svhn_fx15_s4,B3,fixed 0.15,SVHN temporal,4,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,e1_relonly_svhn_s0,E1,DriftGate (relonly),SVHN temporal,0,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,e1_relonly_svhn_s1,E1,DriftGate (relonly),SVHN temporal,1,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,2026-09-28 05:25:26,
-,e1_relonly_svhn_s2,E1,DriftGate (relonly),SVHN temporal,2,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_svhn_s3,E1,DriftGate (relonly),SVHN temporal,3,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_svhn_s4,E1,DriftGate (relonly),SVHN temporal,4,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_c10gsig_fx15_s0,B3,fixed 0.15,CIFAR-10 gradual,0,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_c10gsig_fx15_s1,B3,fixed 0.15,CIFAR-10 gradual,1,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_c10gsig_s0,E1,DriftGate (relonly),CIFAR-10 gradual,0,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_c10gsig_s1,E1,DriftGate (relonly),CIFAR-10 gradual,1,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e1_relonly_c10gsig_s2,E1,DriftGate (relonly),CIFAR-10 gradual,2,runs/phaseT5_E1_relonly_transfer,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_A_s0,B4,APFL η=0.01,stepwise composition change,0,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_A_s1,B4,APFL η=0.01,stepwise composition change,1,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_A_s2,B4,APFL η=0.01,stepwise composition change,2,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_A_s3,B4,APFL η=0.01,stepwise composition change,3,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_A_s4,B4,APFL η=0.01,stepwise composition change,4,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_A_s0,B4,APFL η=0.1,stepwise composition change,0,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_A_s1,B4,APFL η=0.1,stepwise composition change,1,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_A_s2,B4,APFL η=0.1,stepwise composition change,2,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_A_s3,B4,APFL η=0.1,stepwise composition change,3,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_A_s4,B4,APFL η=0.1,stepwise composition change,4,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard025_A_s0,E3,DriftGate guard 0.25,stepwise composition change,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard025_A_s1,E3,DriftGate guard 0.25,stepwise composition change,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard025_A_s2,E3,DriftGate guard 0.25,stepwise composition change,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard100_A_s0,E3,DriftGate guard 1.0,stepwise composition change,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard100_A_s1,E3,DriftGate guard 1.0,stepwise composition change,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_guard100_A_s2,E3,DriftGate guard 1.0,stepwise composition change,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_A_s0,E3,DriftGate λ_max 0.60,stepwise composition change,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_A_s1,E3,DriftGate λ_max 0.60,stepwise composition change,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_A_s2,E3,DriftGate λ_max 0.60,stepwise composition change,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_A_s0,E3,DriftGate λ_max 0.80,stepwise composition change,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_A_s1,E3,DriftGate λ_max 0.80,stepwise composition change,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_A_s2,E3,DriftGate λ_max 0.80,stepwise composition change,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_mob_s0,B4,APFL η=0.01,client mobility,0,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_mob_s1,B4,APFL η=0.01,client mobility,1,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta001_mob_s2,B4,APFL η=0.01,client mobility,2,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_mob_s0,B4,APFL η=0.1,client mobility,0,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_mob_s1,B4,APFL η=0.1,client mobility,1,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b4_apfl_eta010_mob_s2,B4,APFL η=0.1,client mobility,2,runs/phaseT4_B4_apfl,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_mob_s0,E3,DriftGate λ_max 0.60,client mobility,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_mob_s1,E3,DriftGate λ_max 0.60,client mobility,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax060_mob_s2,E3,DriftGate λ_max 0.60,client mobility,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_mob_s0,E3,DriftGate λ_max 0.80,client mobility,0,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_mob_s1,E3,DriftGate λ_max 0.80,client mobility,1,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,e3_lmax080_mob_s2,E3,DriftGate λ_max 0.80,client mobility,2,runs/phaseT5_E3_const,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_c100gsig_fx15_s1,B3,fixed 0.15,CIFAR-100 gradual,1,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
-,b3_c100gsig_fx15_s2,B3,fixed 0.15,CIFAR-100 gradual,2,runs/phaseT4_B3_fixedgrid,no (running or queued),,,,,cuda:0 = physical GPU 0,,,
+fixed_20260928_052530_ad173d,b3_tiny_fx15_s0,B3,fixed 0.15,Tiny-ImageNet,0,runs/phaseT4_B3_fixedgrid,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 16:28:42
+selfcal_20260928_052530_ef5ff9,e1_relonly_tiny_s0,E1,DriftGate (relonly),Tiny-ImageNet,0,runs/phaseT5_E1_relonly_transfer,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 16:29:03
+fixed_20260928_052530_bd27eb,b3_tiny_fx15_s1,B3,fixed 0.15,Tiny-ImageNet,1,runs/phaseT4_B3_fixedgrid,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 16:21:28
+selfcal_20260928_162131_2ff7aa,e1_relonly_tiny_s1,E1,DriftGate (relonly),Tiny-ImageNet,1,runs/phaseT5_E1_relonly_transfer,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 16:21:28,2026-09-29 03:16:27
+fixed_20260928_162845_f631a0,b3_tiny_fx15_s2,B3,fixed 0.15,Tiny-ImageNet,2,runs/phaseT4_B3_fixedgrid,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 16:28:42,2026-09-29 03:19:29
+selfcal_20260928_162907_1ec9e6,e1_relonly_tiny_s2,E1,DriftGate (relonly),Tiny-ImageNet,2,runs/phaseT5_E1_relonly_transfer,yes,100,11,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 16:29:03,2026-09-29 03:23:09
+selfcal_20260929_031630_9ad14c,e2_res_relonly_A_s0,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 03:16:27,2026-09-29 12:32:59
+fixed_20260929_031932_59b16e,e2_res_fx20_A_s0,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 03:19:29,2026-09-29 12:30:58
+fixed_20260929_032312_dda380,e2_res_fx40_A_s0,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",0,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 03:23:09,2026-09-29 12:33:06
+selfcal_20260929_123101_8aef42,e2_res_relonly_A_s1,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 12:30:58,2026-09-29 21:40:22
+fixed_20260929_123302_9986da,e2_res_fx20_A_s1,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 12:32:59,2026-09-29 21:39:05
+fixed_20260929_123309_dd1ed5,e2_res_fx40_A_s1,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",1,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 12:33:06,2026-09-29 21:37:34
+selfcal_20260929_213738_d54fd0,e2_res_relonly_A_s2,E2,DriftGate (relonly),"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:37:34,2026-09-30 06:26:32
+fixed_20260929_213908_41a9ea,e2_res_fx20_A_s2,E2,fixed 0.2,"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:39:05,2026-09-30 06:24:18
+fixed_20260929_214026_a5f010,e2_res_fx40_A_s2,E2,fixed 0.4,"ResNet-18 middle split, stepwise composition change",2,runs/phaseT5_E2_resnet,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:40:22,2026-09-30 06:24:53
+fixed_20260928_052530_8987ae,b3_svhn_fx15_s2,B3,fixed 0.15,SVHN temporal,2,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 11:38:10
+fixed_20260928_052530_8b2904,b3_svhn_fx15_s3,B3,fixed 0.15,SVHN temporal,3,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 12:14:53
+fixed_20260928_052530_7b949b,b3_svhn_fx15_s4,B3,fixed 0.15,SVHN temporal,4,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 11:55:04
+selfcal_20260928_052530_c3b535,e1_relonly_svhn_s0,E1,DriftGate (relonly),SVHN temporal,0,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 12:25:46
+selfcal_20260928_052530_8d44a7,e1_relonly_svhn_s1,E1,DriftGate (relonly),SVHN temporal,1,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 05:25:26,2026-09-28 12:17:02
+selfcal_20260928_113813_75083f,e1_relonly_svhn_s2,E1,DriftGate (relonly),SVHN temporal,2,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 11:38:10,2026-09-28 18:06:21
+selfcal_20260928_115507_502a01,e1_relonly_svhn_s3,E1,DriftGate (relonly),SVHN temporal,3,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 11:55:04,2026-09-28 18:50:43
+selfcal_20260928_121456_07c99d,e1_relonly_svhn_s4,E1,DriftGate (relonly),SVHN temporal,4,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 12:14:53,2026-09-28 18:43:40
+fixed_20260928_121705_9a2ca6,b3_c10gsig_fx15_s0,B3,fixed 0.15,CIFAR-10 gradual,0,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 12:17:02,2026-09-28 16:48:12
+fixed_20260928_122550_2d16d7,b3_c10gsig_fx15_s1,B3,fixed 0.15,CIFAR-10 gradual,1,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 12:25:46,2026-09-28 17:01:04
+selfcal_20260928_164815_bb5ced,e1_relonly_c10gsig_s0,E1,DriftGate (relonly),CIFAR-10 gradual,0,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 16:48:12,2026-09-28 21:34:35
+selfcal_20260928_170108_048906,e1_relonly_c10gsig_s1,E1,DriftGate (relonly),CIFAR-10 gradual,1,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 17:01:04,2026-09-28 21:41:33
+selfcal_20260928_180624_f11bc7,e1_relonly_c10gsig_s2,E1,DriftGate (relonly),CIFAR-10 gradual,2,runs/phaseT5_E1_relonly_transfer,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 18:06:21,2026-09-28 22:21:52
+apfl_20260928_184343_61ccec,b4_apfl_eta001_A_s0,B4,APFL η=0.01,stepwise composition change,0,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 18:43:40,2026-09-28 23:34:11
+apfl_20260928_185046_ba9139,b4_apfl_eta001_A_s1,B4,APFL η=0.01,stepwise composition change,1,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 18:50:43,2026-09-28 23:27:26
+apfl_20260928_213439_bc3abd,b4_apfl_eta001_A_s2,B4,APFL η=0.01,stepwise composition change,2,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 21:34:35,2026-09-29 01:58:50
+apfl_20260928_214136_8c1b5d,b4_apfl_eta001_A_s3,B4,APFL η=0.01,stepwise composition change,3,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 21:41:33,2026-09-29 02:30:22
+apfl_20260928_222156_8646ee,b4_apfl_eta001_A_s4,B4,APFL η=0.01,stepwise composition change,4,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 22:21:52,2026-09-29 02:40:08
+apfl_20260928_232729_fe534f,b4_apfl_eta010_A_s0,B4,APFL η=0.1,stepwise composition change,0,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 23:27:26,2026-09-29 04:30:37
+apfl_20260928_233414_b4a77e,b4_apfl_eta010_A_s1,B4,APFL η=0.1,stepwise composition change,1,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-28 23:34:11,2026-09-29 04:44:50
+apfl_20260929_015853_8ec263,b4_apfl_eta010_A_s2,B4,APFL η=0.1,stepwise composition change,2,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 01:58:50,2026-09-29 07:29:49
+apfl_20260929_023025_d4b43e,b4_apfl_eta010_A_s3,B4,APFL η=0.1,stepwise composition change,3,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 02:30:22,2026-09-29 08:42:00
+apfl_20260929_024012_330b9f,b4_apfl_eta010_A_s4,B4,APFL η=0.1,stepwise composition change,4,runs/phaseT4_B4_apfl,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 02:40:08,2026-09-29 08:46:12
+selfcal_20260929_043041_d40d6b,e3_guard025_A_s0,E3,DriftGate guard 0.25,stepwise composition change,0,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 04:30:37,2026-09-29 10:43:48
+selfcal_20260929_044453_aa7cb3,e3_guard025_A_s1,E3,DriftGate guard 0.25,stepwise composition change,1,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 04:44:50,2026-09-29 10:41:57
+selfcal_20260929_072952_49cfef,e3_guard025_A_s2,E3,DriftGate guard 0.25,stepwise composition change,2,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 07:29:49,2026-09-29 13:04:21
+selfcal_20260929_084203_154f20,e3_guard100_A_s0,E3,DriftGate guard 1.0,stepwise composition change,0,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 08:42:00,2026-09-29 14:44:52
+selfcal_20260929_084615_c77080,e3_guard100_A_s1,E3,DriftGate guard 1.0,stepwise composition change,1,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 08:46:12,2026-09-29 14:57:26
+selfcal_20260929_104200_b3d23e,e3_guard100_A_s2,E3,DriftGate guard 1.0,stepwise composition change,2,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 10:41:57,2026-09-29 16:22:57
+selfcal_20260929_104352_d586f4,e3_lmax060_A_s0,E3,DriftGate λ_max 0.60,stepwise composition change,0,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 10:43:48,2026-09-29 16:47:31
+selfcal_20260929_130424_e479b5,e3_lmax060_A_s1,E3,DriftGate λ_max 0.60,stepwise composition change,1,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 13:04:21,2026-09-29 19:07:20
+selfcal_20260929_144456_f71c1f,e3_lmax060_A_s2,E3,DriftGate λ_max 0.60,stepwise composition change,2,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 14:44:52,2026-09-29 20:11:39
+selfcal_20260929_145729_29717b,e3_lmax080_A_s0,E3,DriftGate λ_max 0.80,stepwise composition change,0,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 14:57:26,2026-09-29 21:04:40
+selfcal_20260929_162300_ffefeb,e3_lmax080_A_s1,E3,DriftGate λ_max 0.80,stepwise composition change,1,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 16:22:57,2026-09-29 22:34:44
+selfcal_20260929_164735_f5d73b,e3_lmax080_A_s2,E3,DriftGate λ_max 0.80,stepwise composition change,2,runs/phaseT5_E3_const,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 16:47:31,2026-09-29 22:36:19
+apfl_20260929_190723_666657,b4_apfl_eta001_mob_s0,B4,APFL η=0.01,client mobility,0,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 19:07:20,2026-09-30 01:44:32
+apfl_20260929_201143_7fec73,b4_apfl_eta001_mob_s1,B4,APFL η=0.01,client mobility,1,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 20:11:39,2026-09-30 03:09:56
+apfl_20260929_210443_e031d9,b4_apfl_eta001_mob_s2,B4,APFL η=0.01,client mobility,2,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:04:40,2026-09-30 03:53:47
+apfl_20260929_215047_3a6601,b4_apfl_eta010_mob_s0,B4,APFL η=0.1,client mobility,0,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:50:43,2026-09-30 05:08:29
+apfl_20260929_215047_79ad2d,b4_apfl_eta010_mob_s1,B4,APFL η=0.1,client mobility,1,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:50:43,2026-09-30 05:03:50
+apfl_20260929_215047_45f105,b4_apfl_eta010_mob_s2,B4,APFL η=0.1,client mobility,2,runs/phaseT4_B4_apfl,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 21:50:43,2026-09-30 04:42:59
+selfcal_20260929_223447_4a0ada,e3_lmax060_mob_s0,E3,DriftGate λ_max 0.60,client mobility,0,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 22:34:44,2026-09-30 05:00:44
+selfcal_20260929_223622_738de2,e3_lmax060_mob_s1,E3,DriftGate λ_max 0.60,client mobility,1,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-29 22:36:19,2026-09-30 05:07:11
+selfcal_20260930_014436_3dadbe,e3_lmax060_mob_s2,E3,DriftGate λ_max 0.60,client mobility,2,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 01:44:32,2026-09-30 07:00:23
+selfcal_20260930_030959_d6f723,e3_lmax080_mob_s0,E3,DriftGate λ_max 0.80,client mobility,0,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 03:09:56,2026-09-30 08:01:22
+selfcal_20260930_035351_7db315,e3_lmax080_mob_s1,E3,DriftGate λ_max 0.80,client mobility,1,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 03:53:47,2026-09-30 08:23:21
+selfcal_20260930_044303_b8d303,e3_lmax080_mob_s2,E3,DriftGate λ_max 0.80,client mobility,2,runs/phaseT5_E3_const,yes,120,13,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 04:42:59,2026-09-30 08:18:12
+fixed_20260930_050048_162cf3,b3_c100gsig_fx15_s1,B3,fixed 0.15,CIFAR-100 gradual,1,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 05:00:44,2026-09-30 09:12:21
+fixed_20260930_050353_e7ccdf,b3_c100gsig_fx15_s2,B3,fixed 0.15,CIFAR-100 gradual,2,runs/phaseT4_B3_fixedgrid,yes,150,16,0,yes,cuda:0 = physical GPU 0 (CUDA_VISIBLE_DEVICES=0),0,2026-09-30 05:03:50,2026-09-30 09:10:05

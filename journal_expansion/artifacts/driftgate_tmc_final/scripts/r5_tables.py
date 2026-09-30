@@ -143,7 +143,7 @@ for st, dg, ab in (("A", MAIN["A"]["DriftGate"], MAIN["A"]["absonly"]), ("mob", 
     if p is None: continue
     ma, _, _ = msd({s: a[s] for s in p["seeds"]}); mb, _, _ = msd({s: b[s] for s in p["seeds"]})
     rows.append([SNAME[st], "DriftGate vs absonly (λ from TV level)", f4(ma), f4(mb), f"{p['mean']:+.4f}", fci(p), p["n_pos"], p["n"]])
-    pn(f"{SNAME[st]}: DriftGate − absonly", f"{p['mean']:+.3f} pp", fci(p), p["n"], src_of(dg, ab))
+    if st == "c100gsig": pn(f"{SNAME[st]}: DriftGate − absonly", f"{p['mean']:+.3f} pp", fci(p), p["n"], src_of(dg, ab))
 wcsv("T4a_controller_relonly_vs_absonly.csv", ["setting", "comparison", "DriftGate_pct", "absonly_pct",
      "DriftGate_minus_absonly_pp", "ci95", "n_pos", "n"], rows)
 
@@ -162,6 +162,7 @@ for st, arms in E3.items():
         rows.append([SNAME[st], lbl, n, f4(mv), f4(sdv), f4(np.mean([base[s] for s in seeds]) * 100),
                      f"{p['mean']:+.4f}", fci(p), p["n_pos"], bk, f"{pb['mean']:+.4f}", fci(pb)])
         pn(f"{SNAME[st]}: DriftGate[{lbl}] − DriftGate[default]", f"{p['mean']:+.3f} pp", fci(p), p["n"], src_of(pat, MAIN[st]["DriftGate"]))
+        pn(f"{SNAME[st]}: DriftGate[{lbl}] − best fixed on the same seeds ({bk})", f"{pb['mean']:+.3f} pp", fci(pb), pb["n"], src_of(pat, MAIN[st][bk]))
 wcsv("T4b_constant_sensitivity.csv", ["setting", "variant", "n_seeds", "variant_acc_pct", "sd_pct",
      "default_DriftGate_same_seeds_pct", "variant_minus_default_pp", "ci95", "n_pos",
      "best_fixed_same_seeds", "variant_minus_best_fixed_pp", "ci95_vs_best_fixed"], rows)
@@ -210,6 +211,9 @@ for st in ("A", "mob"):
         dgm = np.mean([dg[s][sg]["acc_total"] for s in dg]) * 100
         dbest = np.array([dg[s][sg]["acc_total"] - segstore[(st, bk)][s][sg]["acc_total"] for s in seeds]) * 100
         lo2, hi2 = ci95(dbest)
+        pn(f"{SNAME[st]}, segment {sg}: best fixed / worst fixed", f"{bk} ({means[bk]:.2f} %) / {wk} ({means[wk]:.2f} %)", "", len(seeds), "fixed-λ runs of T1")
+        pn(f"{SNAME[st]}, segment {sg}: DriftGate − worst fixed ({wk})", f"{d.mean():+.3f} pp", f"[{lo:+.2f}, {hi:+.2f}]", len(seeds), src_of(MAIN[st]["DriftGate"], MAIN[st][wk]))
+        pn(f"{SNAME[st]}, segment {sg}: DriftGate − best fixed ({bk})", f"{dbest.mean():+.3f} pp", f"[{lo2:+.2f}, {hi2:+.2f}]", len(seeds), src_of(MAIN[st]["DriftGate"], MAIN[st][bk]))
         rows_best.append([SNAME[st], sg, bk, f4(means[bk]), wk, f4(means[wk]), f4(dgm), f"{d.mean():+.4f}",
                           f"[{lo:+.2f}, {hi:+.2f}]", int((d > 0).sum()), f"{dbest.mean():+.4f}", f"[{lo2:+.2f}, {hi2:+.2f}]", len(seeds)])
 wcsv("T2a_segment_accuracy.csv", ["setting", "method", "segment", "eval_rounds", "acc_total_pct", "sd_pct",
@@ -233,6 +237,10 @@ for st, arms in TRANSFER.items():
         rows.append([SNAME[st], m + (" (best fixed)" if m == best else ""), n, f4(mean), f4(sd),
                      "" if p is None else f"{p['mean']:+.4f}", fci(p), "" if p is None else p["n_pos"],
                      "" if p is None else p["n"], src_of(pat)])
+    if dg:
+        mm, sdd, nn = msd(dg); pn(f"{SNAME[st]}: DriftGate integrated accuracy", f"{mm:.2f} % (SD {sdd:.2f})", "", nn, src_of(arms["DriftGate"]))
+    if "entropy" in arms and ifam(arms["entropy"]):
+        pe = paired(dg, ifam(arms["entropy"])); pn(f"{SNAME[st]}: DriftGate − entropy", f"{pe['mean']:+.3f} pp", fci(pe), pe["n"], src_of(arms["DriftGate"], arms["entropy"]))
     if best:
         p = paired(dg, fv[best])
         pn(f"{SNAME[st]}: DriftGate − best fixed ({best})", f"{p['mean']:+.3f} pp", fci(p), p["n"], src_of(arms["DriftGate"], arms[best]))
@@ -250,6 +258,8 @@ for m, pat in RESNET.items():
     rows.append([SNAME["resA"], m + (" (best fixed)" if m == best else ""), n, f4(mean), f4(sd),
                  "" if p is None else f"{p['mean']:+.4f}", fci(p), "" if p is None else p["n_pos"], "" if p is None else p["n"], src_of(pat)])
     if p is not None: pn(f"ResNet-18 middle split: DriftGate − {m}", f"{p['mean']:+.3f} pp", fci(p), p["n"], src_of(RESNET["DriftGate"], pat))
+if dg:
+    mm, sdd, nn = msd(dg); pn("ResNet-18 middle split: DriftGate integrated accuracy", f"{mm:.2f} % (SD {sdd:.2f})", "", nn, src_of(RESNET["DriftGate"]))
 wcsv("T5_resnet18_middle.csv", ["setting", "method", "n_seeds", "integrated_acc_pct", "sd_pct", "DriftGate_minus_method_pp",
      "ci95", "n_pos", "n_matched", "source_runs"], rows)
 
@@ -331,6 +341,47 @@ for cond, pat in ROLE.items():
                  "same-pool; runs used the earlier controller with the absolute branch", src_of(pat)])
     pn(f"role experiment: TV–ρ Spearman, {cond}", f"{cs.mean():+.3f} (SD {cs.std(ddof=1):.3f})", "", len(cs), src_of(pat))
 wcsv("T7_role_experiment.csv", ["condition", "tv_rho_spearman_mean", "sd", "per_seed", "n_seeds", "protocol", "source_runs"], rows)
+
+# ============================================================ T4c APFL: does λ follow ρ? (claim 4 evidence)
+# λ per round = mean over clients of the APFL λ_k (apfl_client_lams); DriftGate λ = mean over clusters (lamdas).
+rows_l, rows_a = [], []
+# segment means start at round 26 so that the 25 initial rounds (DriftGate midpoint, APFL start at 0.425) are excluded
+LSEG = {"A": [("ρ=0 early R26–30", 26, 30), ("ρ=0.4 rising R31–60", 31, 60), ("ρ=0.8 R61–90", 61, 90),
+              ("ρ=0.4 falling R91–120", 91, 120), ("ρ=0 late R121–150", 121, 150)],
+        "mob": [("ρ=0 R26–60", 26, 60), ("ρ=0.8 R61–120", 61, 120)]}
+for st in ("A", "mob"):
+    for m in ("DriftGate", "APFL η=0.01", "APFL η=0.1"):
+        fs = famf(MAIN[st][m])
+        if not fs: continue
+        L, sp = [], []
+        for f in fs.values():
+            h = load(f)
+            lam = (np.array([np.mean(list(d.values())) for d in h["apfl_client_lams"]]) if m.startswith("APFL")
+                   else np.array([np.mean([float(x) for x in d.values()]) for d in h["lamdas"]]))
+            rho = np.array([r if not isinstance(r, dict) else np.mean(list(r.values())) for r in h["rho_trace"]])
+            L.append(lam); sp.append(stats.spearmanr(lam[25:], rho[25:]).statistic)   # after DriftGate's 25 midpoint rounds
+        L = np.array(L); sp = np.array(sp)
+        segv = [L[:, a - 1:b].mean() for _, a, b in LSEG[st]]
+        rows_l.append([SNAME[st], m, len(fs)] + [f"{v:.3f}" for v in segv] + [""] * (5 - len(segv)) +
+                      [f"{L[:, 25:].min():.3f}", f"{L[:, 25:].max():.3f}", f"{sp.mean():+.3f}", f4(sp.std(ddof=1))])
+        pn(f"{SNAME[st]}: {m} mean λ by segment ({' / '.join(x[0] for x in LSEG[st])})", " / ".join(f"{v:.3f}" for v in segv), "", len(fs), src_of(MAIN[st][m]))
+        if m.startswith("APFL"):
+            pn(f"{SNAME[st]}: {m} Spearman(λ, ρ) after round 25", f"{sp.mean():+.3f} (SD {sp.std(ddof=1):.3f})", "", len(sp), src_of(MAIN[st][m]))
+        if m.startswith("APFL"):
+            per = {}
+            for s, f in fs.items():
+                ev = {e["round"]: e for e in load(f)["eval"]}
+                per[s] = {sg: np.mean([ev[r]["acc_total"] for r in rr if r in ev]) for sg, rr in SEG[st]}
+            dg = segstore[(st, "DriftGate")]
+            for sg, _ in SEG[st]:
+                seeds = sorted(set(per) & set(dg)); d = np.array([dg[s][sg]["acc_total"] - per[s][sg] for s in seeds]) * 100
+                lo, hi = ci95(d)
+                rows_a.append([SNAME[st], m, sg, f4(np.mean([per[s][sg] for s in per]) * 100), f"{d.mean():+.4f}",
+                               f"[{lo:+.2f}, {hi:+.2f}]", int((d > 0).sum()), len(d)])
+wcsv("T4c_apfl_lambda_by_segment.csv", ["setting", "method", "n_seeds", "lambda_seg1(A: R26–30, mob: R26–60)", "lambda_seg2(A: R31–60, mob: R61–120)",
+     "lambda_seg3(A: R61–90)", "lambda_seg4(A: R91–120)", "lambda_seg5(A: R121–150)", "lambda_min_after_R25", "lambda_max_after_R25", "spearman_lambda_vs_rho_after_R25", "sd"], rows_l)
+wcsv("T4d_apfl_segment_accuracy.csv", ["setting", "method", "segment", "acc_total_pct", "DriftGate_minus_APFL_pp", "ci95",
+     "n_pos", "n"], rows_a)
 
 with open(HERE / "paper_numbers.csv", "w", newline="") as f:
     w = csv.writer(f); w.writerow(["item", "value", "ci95", "n_seeds", "source_runs"]); w.writerows(PN)

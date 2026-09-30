@@ -28,7 +28,7 @@ and then over seeds (bands show the seed SD). (a) Stepwise composition change, 5
 3 seeds, where ρ goes from 0 to 0.8 at round 61 while clients keep moving between clusters. Dotted lines mark
 the fixed weights λ = 0.4 and λ = 0.2. The first 25 rounds (burn-in and warm-up, shaded) use λ = 0.425.
 On the stepwise schedule DriftGate lowers λ to 0.23 on average while ρ = 0.8 and raises it again when ρ returns
-to 0. Under client mobility it uses 0.55 before ρ changes and 0.37 after. The entropy controller stays between
+to 0. Under client mobility it uses 0.55 before ρ changes (rounds 26 to 60) and 0.38 after (rounds 61 to 120). The entropy controller stays between
 0.58 and 0.64 after warm-up in both settings.
 
 **Figure 4** (`fig4_segment_accuracy.pdf`, double column).

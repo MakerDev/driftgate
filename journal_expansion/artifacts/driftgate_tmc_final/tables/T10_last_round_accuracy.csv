@@ -5,6 +5,8 @@ stepwise composition change,fixed 0.3,150,5,82.2870,1.9739
 stepwise composition change,fixed 0.4,150,5,84.8057,2.3541
 stepwise composition change,fixed 0.5,150,5,86.9420,2.7867
 stepwise composition change,entropy,150,5,88.1460,2.9893
+stepwise composition change,APFL η=0.01,150,5,87.3167,1.9896
+stepwise composition change,APFL η=0.1,150,5,87.3178,1.4572
 stepwise composition change,absonly,150,5,88.5815,2.4267
 client mobility,DriftGate,120,3,59.7212,1.2815
 client mobility,fixed 0.2,120,3,62.2324,0.7148
@@ -12,17 +14,26 @@ client mobility,fixed 0.4,120,3,59.8868,0.9498
 client mobility,fixed 0.5,120,3,56.9231,0.8317
 client mobility,fixed 0.6,120,3,53.4317,0.9497
 client mobility,entropy,120,3,52.7712,0.9471
+client mobility,APFL η=0.01,120,3,52.3560,1.5216
+client mobility,APFL η=0.1,120,3,53.2378,2.3040
 client mobility,absonly,120,3,55.9055,1.0806
-CIFAR-10 gradual,fixed 0.15,150,1,62.8672,
+CIFAR-10 gradual,DriftGate,150,3,63.1734,3.1656
+CIFAR-10 gradual,fixed 0.15,150,3,65.7032,2.5143
 CIFAR-10 gradual,fixed 0.2,150,3,65.4188,2.6865
 CIFAR-10 gradual,fixed 0.4,150,3,62.0345,2.8023
 CIFAR-100 gradual,DriftGate,150,3,46.6804,1.0992
-CIFAR-100 gradual,fixed 0.15,150,1,48.7076,
+CIFAR-100 gradual,fixed 0.15,150,3,47.1959,1.3684
 CIFAR-100 gradual,fixed 0.2,150,3,46.9652,1.2582
 CIFAR-100 gradual,fixed 0.4,150,3,43.9938,0.9297
+Tiny-ImageNet,DriftGate,100,3,31.2051,0.6960
+Tiny-ImageNet,fixed 0.15,100,3,32.2882,0.4182
 Tiny-ImageNet,fixed 0.2,100,3,32.2121,0.4734
 Tiny-ImageNet,fixed 0.4,100,3,31.1336,0.6346
-SVHN temporal,fixed 0.15,150,2,87.1063,0.5566
+SVHN temporal,DriftGate,150,5,83.6976,2.7165
+SVHN temporal,fixed 0.15,150,5,87.2582,1.0419
 SVHN temporal,fixed 0.2,150,5,87.0477,1.0411
 SVHN temporal,fixed 0.4,150,5,84.7377,1.1304
 SVHN temporal,entropy,150,5,76.9636,1.4311
+ResNet-18 middle split (stepwise),DriftGate,150,3,89.1289,2.2590
+ResNet-18 middle split (stepwise),fixed 0.2,150,3,74.0247,2.4152
+ResNet-18 middle split (stepwise),fixed 0.4,150,3,81.9167,0.3947

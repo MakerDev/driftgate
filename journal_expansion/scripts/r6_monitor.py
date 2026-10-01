@@ -27,7 +27,10 @@ for wl in glob.glob(f"{QD}/logs/worker*.log"):
         if m and m.group(2) != "0":
             fails[m.group(1)] = fails.get(m.group(1), 0) + 1
 names = {rn for rn, _, _ in expected}
-failed = sorted(n for n in fails if n in names and n not in done)   # retired v1 runs are not counted
+queued = set(re.findall(r"--run_name (\S+)", open(f"{QD}/queue.txt").read())) if os.path.exists(f"{QD}/queue.txt") else set()
+running_now = {os.path.basename(f).rsplit('.', 1)[0] for f in glob.glob(f"{QD}/running_gpu*/*")}
+# retired v1 runs and runs that were re-queued (or are running again) are not failures
+failed = sorted(n for n in fails if n in names and n not in done and n not in queued and n not in running_now)
 nq = sum(1 for l in open(f"{QD}/queue.txt") if l.strip()) if os.path.exists(f"{QD}/queue.txt") else 0
 running = sorted(os.path.basename(f) for f in glob.glob(f"{QD}/running_gpu*/*"))
 workers = subprocess.run("ps -eo args | grep -c '[r]6_worker\\.py'", shell=True, capture_output=True,

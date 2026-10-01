@@ -11,8 +11,7 @@ nq=$(grep -c . "$Q/queue.txt" 2>/dev/null || echo 0)
 nw=$(ps -eo args | grep -c '[r]6_worker\.py')
 [ "$nq" -eq 0 ] && exit 0
 [ "$nw" -gt 0 ] && exit 0
-# workers were all gone: clear stale per-GPU running markers (their jobs died with them)
-rm -f $Q/running_gpu*/* 2>/dev/null
+# running markers are NOT cleared here: workers count only markers whose job is alive (r6_worker.py)
 for g in $GPUS; do
   for i in $(seq 1 "$NPER"); do
     setsid nohup env R6_GPU="$g" python3 journal_expansion/scripts/r6_worker.py "g${g}w${i}" >/dev/null 2>&1 < /dev/null &

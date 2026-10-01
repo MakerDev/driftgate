@@ -4,7 +4,8 @@
 Queue runs/queue_r6/queue.txt: "<K50|K200|K500|R0|R0H> <command with {DEV}>" per line, served in
 file order. A worker takes the FIRST line it may run: at most R6_MAX_K500 K=500 jobs (3),
 R6_MAX_K200 K=200 jobs (3) and R6_MAX_R0H heavy R0 jobs (1) run at once on its GPU
-(GPU memory with expandable segments: K=500 ~6 GB, Tiny-ImageNet ~4 GB, K=50 ~2 GB). Pops and the per-GPU counters are updated under one flock.
+(GPU memory with expandable segments: K=500 ~7.9 GB, Tiny-ImageNet ~4 GB, K=50 ~2 GB), and at most
+R6_MAX_JOBS_PER_GPU (4) jobs in total, counted from live processes (see running_on_gpu). Pops and the per-GPU counters are updated under one flock.
 Every job runs with CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=<R6_GPU>, so the job's
 cuda:0 is physical GPU R6_GPU. Stops when runs/queue_r6/STOP exists.
 Usage: R6_GPU=<index> r6_worker.py <worker_id>
@@ -20,8 +21,10 @@ import time
 WID = sys.argv[1]
 QDIR = "/home/honeynaps/data/driftgate/journal_expansion/runs/queue_r6"  # [SERVER-PATH:REPO_ROOT]
 GPU = os.environ.get("R6_GPU", "0")  # physical GPU index (nvidia-smi, PCI order)  # [SERVER-GPU]
-CAPS = {"K500": int(os.environ.get("R6_MAX_K500", "3")), "K200": int(os.environ.get("R6_MAX_K200", "3")),
+CAPS = {"K500": int(os.environ.get("R6_MAX_K500", "2")), "K200": int(os.environ.get("R6_MAX_K200", "3")),
         "R0H": int(os.environ.get("R6_MAX_R0H", "1"))}   # R0H = Round-5 Tiny-ImageNet / ResNet-18 re-runs (R0)
+# 2026-10-01: three K=500 runs on one 24 GB GPU ran out of memory (~7.9 GB each) -> at most 2 per GPU.
+MAX_JOBS = int(os.environ.get("R6_MAX_JOBS_PER_GPU", "4"))   # all jobs on this GPU, whoever started them
 LOCK, LOGDIR, RUND = f"{QDIR}/queue.lock", f"{QDIR}/logs", f"{QDIR}/running_gpu{GPU}"
 ENV = dict(os.environ, CUDA_DEVICE_ORDER="PCI_BUS_ID", CUDA_VISIBLE_DEVICES=GPU,
            JX_THREADS=os.environ.get("JX_THREADS", "2"),
@@ -36,6 +39,36 @@ def log(msg):
         f.write(f"[w{WID} cuda:0/GPU{GPU}] {msg} {datetime.datetime.now():%Y-%m-%d %H:%M:%S}\n")
 
 
+def live_tags():
+    """run names of processes alive on this machine (python argv or the worker's /bin/sh -c string)."""
+    out = set()
+    for pid in os.listdir("/proc"):
+        if not pid.isdigit():
+            continue
+        try:
+            cmd = open(f"/proc/{pid}/cmdline", "rb").read().decode(errors="ignore")
+        except OSError:
+            continue
+        for m in re.finditer(r"--run_name[\x00 ](\S+?)(?=[\x00 ]|$)", cmd):
+            out.add(m.group(1))
+    return out
+
+
+def running_on_gpu():
+    """markers of this GPU whose job is alive (a marker younger than 120 s counts as alive: its job may
+    not have started yet). Stale markers (job gone) are removed. Jobs started by a previous worker
+    generation keep their markers and are counted while they run."""
+    live, out = live_tags(), []
+    for f in os.listdir(RUND):
+        tag, cls = f.rsplit(".", 1)
+        young = time.time() - os.path.getmtime(f"{RUND}/{f}") < 120
+        if tag in live or young:
+            out.append(cls)
+        else:
+            os.remove(f"{RUND}/{f}")
+    return out
+
+
 def pop():
     with open(LOCK, "a") as lk:
         fcntl.flock(lk, fcntl.LOCK_EX)
@@ -44,7 +77,9 @@ def pop():
             if not os.path.exists(path):
                 return None, None, None
             lines = [l for l in open(path).read().splitlines() if l.strip()]
-            running = [f.rsplit(".", 1)[-1] for f in os.listdir(RUND)]
+            running = running_on_gpu()
+            if len(running) >= MAX_JOBS:
+                return None, None, None
             for i, line in enumerate(lines):
                 cls, cmd = line.split(" ", 1)
                 if cls in CAPS and running.count(cls) >= CAPS[cls]:

@@ -6,8 +6,7 @@
    use no controller). Nothing in the Round-5 package is modified.
 2. Writes r0/tables/R0_neighbor_avg_record.csv: for every R0 run group, the paired difference
    (without neighbour average - with neighbour average) over matched seeds, where "with" is the original
-   Round-4/5 run. The original runs ran on ubuntu20 (RTX 3090 Ti), the R0 runs on honeynaps (RTX 4090),
-   so the difference also contains the hardware (floating-point order) effect.
+   Round-4/5 run.
    Also the Round-6 commute-mobility runs that were made with the neighbour average before the decision
    (seeds with both versions).
 """
@@ -113,7 +112,7 @@ def record():
         rows.append([label, f"{a.mean():.4f}", f"{b.mean():.4f}", f"{d.mean():+.4f}", ci, int((d > 0).sum()), len(d),
                      note, "{" + ",".join(map(str, seeds)) + "}", " ".join(f"{x:+.2f}" for x in d)])
     for label, pat in GROUPS:
-        add(label, fam(pat), fam(swap(pat)), "with = Round 4/5 run (ubuntu20, RTX 3090 Ti); without = R0 (honeynaps, RTX 4090)")
+        add(label, fam(pat), fam(swap(pat)), "with = Round 4/5 run; without = R0 re-run")
     for arm, lab in (("driftgate", "DriftGate"), ("entropy", "entropy controller")):
         add(f"Round 6 commute mobility / {lab}", fam(f"phaseT6_S1/s1_{arm}_s*.json"), fam(f"phaseT6_S1/s1_{arm}_own_s*.json"),
             "both on honeynaps; the with-average runs were made before the 2026-10-01 decision")

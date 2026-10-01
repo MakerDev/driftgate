@@ -1,0 +1,18 @@
+[r0_b1_absonly_A_s1] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.337 worst=0.180 elapsed=0.7m ETA=108m
+  R 10 loss=0.379 acc=0.553 worst=0.416 elapsed=6.1m ETA=85m
+  R 20 loss=0.318 acc=0.642 worst=0.498 elapsed=11.8m ETA=77m
+  R 30 loss=0.234 acc=0.705 worst=0.595 elapsed=17.5m ETA=70m
+  R 40 loss=0.212 acc=0.581 worst=0.468 elapsed=23.3m ETA=64m
+  R 50 loss=0.190 acc=0.608 worst=0.554 elapsed=29.2m ETA=58m
+  R 60 loss=0.168 acc=0.617 worst=0.560 elapsed=34.9m ETA=52m
+  R 70 loss=0.154 acc=0.556 worst=0.527 elapsed=40.7m ETA=47m
+  R 80 loss=0.140 acc=0.559 worst=0.527 elapsed=46.5m ETA=41m
+  R 90 loss=0.132 acc=0.527 worst=0.459 elapsed=52.5m ETA=35m
+  R100 loss=0.123 acc=0.625 worst=0.569 elapsed=58.1m ETA=29m
+  R110 loss=0.112 acc=0.647 worst=0.623 elapsed=63.8m ETA=23m
+  R120 loss=0.102 acc=0.659 worst=0.615 elapsed=69.6m ETA=17m
+  R130 loss=0.090 acc=0.894 worst=0.858 elapsed=75.2m ETA=12m
+  R140 loss=0.076 acc=0.904 worst=0.864 elapsed=80.8m ETA=6m
+  R150 loss=0.073 acc=0.902 worst=0.851 elapsed=86.5m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_R0/r0_b1_absonly_A_s1.json

@@ -1,0 +1,7 @@
+setting,method,n_seeds,"lambda_seg1(A: R26–30, mob: R26–60)","lambda_seg2(A: R31–60, mob: R61–120)",lambda_seg3(A: R61–90),lambda_seg4(A: R91–120),lambda_seg5(A: R121–150),lambda_min_after_R25,lambda_max_after_R25,spearman_lambda_vs_rho_after_R25,sd
+stepwise composition change,DriftGate,5,0.579,0.383,0.248,0.269,0.452,0.162,0.638,-0.754,0.1416
+stepwise composition change,APFL η=0.01,5,0.614,0.640,0.634,0.613,0.589,0.567,0.657,+0.681,0.1151
+stepwise composition change,APFL η=0.1,5,0.663,0.634,0.608,0.584,0.558,0.470,0.690,+0.363,0.0878
+client mobility,DriftGate,3,0.550,0.385,,,,0.324,0.628,-0.836,0.0000
+client mobility,APFL η=0.01,3,0.643,0.614,,,,0.577,0.664,-0.709,0.1107
+client mobility,APFL η=0.1,3,0.636,0.590,,,,0.539,0.681,-0.717,0.0189

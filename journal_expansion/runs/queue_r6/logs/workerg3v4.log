@@ -1,0 +1,5 @@
+[wg3v4 cuda:0/GPU3] START r0_t1_mob_ent_s1 (R0) 2026-10-02 06:40:42
+[wg3v4 cuda:0/GPU3] END r0_t1_mob_ent_s1 exit=0 2026-10-02 07:50:38
+[wg3v4 cuda:0/GPU3] START s1_entropy_own_s0 (K50) 2026-10-02 07:50:38
+[wg3v4 cuda:0/GPU3] END s1_entropy_own_s0 exit=0 2026-10-02 08:55:25
+[wg3v4 cuda:0/GPU3] START s2_entropy_own_s0 (K50) 2026-10-02 08:55:25

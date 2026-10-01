@@ -1,0 +1,5 @@
+[wg0v1 cuda:0/GPU0] START r0_e3_lmax080_A_s1 (R0) 2026-10-02 05:58:41
+[wg0v1 cuda:0/GPU0] END r0_e3_lmax080_A_s1 exit=0 2026-10-02 07:15:06
+[wg0v1 cuda:0/GPU0] START r0_b1_absonly_mob_s2 (R0) 2026-10-02 07:15:06
+[wg0v1 cuda:0/GPU0] END r0_b1_absonly_mob_s2 exit=0 2026-10-02 08:20:23
+[wg0v1 cuda:0/GPU0] START s1_driftgate_own_s2 (K50) 2026-10-02 08:20:23

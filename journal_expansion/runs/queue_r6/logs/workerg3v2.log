@@ -1,0 +1,15 @@
+[wg3v2 cuda:0/GPU3] START r0_t2_svhn_ent_s2 (R0) 2026-10-01 21:51:34
+[wg3v2 cuda:0/GPU3] END r0_t2_svhn_ent_s2 exit=0 2026-10-02 00:32:14
+[wg3v2 cuda:0/GPU3] START r0_b1_relonly_c100gsig_s1 (R0) 2026-10-02 00:32:14
+[wg3v2 cuda:0/GPU3] END r0_b1_relonly_c100gsig_s1 exit=0 2026-10-02 02:04:28
+[wg3v2 cuda:0/GPU3] START r0_b1_relonly_A_s3 (R0) 2026-10-02 02:04:28
+[wg3v2 cuda:0/GPU3] END r0_b1_relonly_A_s3 exit=0 2026-10-02 03:35:20
+[wg3v2 cuda:0/GPU3] START r0_b1_absonly_A_s1 (R0) 2026-10-02 03:35:20
+[wg3v2 cuda:0/GPU3] END r0_b1_absonly_A_s1 exit=0 2026-10-02 05:01:52
+[wg3v2 cuda:0/GPU3] START r0_e3_guard100_A_s1 (R0) 2026-10-02 05:01:52
+[wg3v2 cuda:0/GPU3] END r0_e3_guard100_A_s1 exit=0 2026-10-02 06:29:45
+[wg3v2 cuda:0/GPU3] START r0_b1_relonly_mob_s2 (R0) 2026-10-02 06:29:45
+[wg3v2 cuda:0/GPU3] END r0_b1_relonly_mob_s2 exit=0 2026-10-02 07:35:09
+[wg3v2 cuda:0/GPU3] START r0_e3_lmax080_mob_s2 (R0) 2026-10-02 07:35:09
+[wg3v2 cuda:0/GPU3] END r0_e3_lmax080_mob_s2 exit=0 2026-10-02 08:44:24
+[wg3v2 cuda:0/GPU3] START s2_fixed060_s0 (K50) 2026-10-02 08:44:24

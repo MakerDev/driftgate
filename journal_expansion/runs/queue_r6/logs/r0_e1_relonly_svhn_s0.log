@@ -1,0 +1,18 @@
+[r0_e1_relonly_svhn_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=150 device=cuda:0
+  R  1 loss=0.922 acc=0.229 worst=0.104 elapsed=1.6m ETA=236m
+  R 10 loss=0.370 acc=0.674 worst=0.613 elapsed=9.3m ETA=130m
+  R 20 loss=0.268 acc=0.782 worst=0.749 elapsed=18.0m ETA=117m
+  R 30 loss=0.169 acc=0.859 worst=0.813 elapsed=26.5m ETA=106m
+  R 40 loss=0.146 acc=0.861 worst=0.807 elapsed=35.9m ETA=99m
+  R 50 loss=0.142 acc=0.863 worst=0.787 elapsed=45.8m ETA=92m
+  R 60 loss=0.134 acc=0.845 worst=0.784 elapsed=56.1m ETA=84m
+  R 70 loss=0.121 acc=0.836 worst=0.786 elapsed=66.2m ETA=76m
+  R 80 loss=0.118 acc=0.825 worst=0.793 elapsed=76.6m ETA=67m
+  R 90 loss=0.128 acc=0.827 worst=0.788 elapsed=87.5m ETA=58m
+  R100 loss=0.120 acc=0.827 worst=0.786 elapsed=98.8m ETA=49m
+  R110 loss=0.110 acc=0.825 worst=0.778 elapsed=110.0m ETA=40m
+  R120 loss=0.103 acc=0.831 worst=0.768 elapsed=121.2m ETA=30m
+  R130 loss=0.099 acc=0.831 worst=0.762 elapsed=132.6m ETA=20m
+  R140 loss=0.090 acc=0.835 worst=0.769 elapsed=143.8m ETA=10m
+  R150 loss=0.082 acc=0.836 worst=0.765 elapsed=155.2m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_R0/r0_e1_relonly_svhn_s0.json

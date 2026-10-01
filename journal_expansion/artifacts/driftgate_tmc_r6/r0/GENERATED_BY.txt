@@ -1,0 +1,9 @@
+Tables in this folder = Round-5 r5_tables.py (unchanged logic) with controller runs swapped to runs/phaseT6_R0 (no neighbour score average). Swaps:
+  phaseT4_B1_views/b1_relonly_ -> phaseT6_R0/r0_b1_relonly_
+  phaseT4_B1_views/b1_absonly_ -> phaseT6_R0/r0_b1_absonly_
+  phaseT1_disjoint/t1_A_ent_ -> phaseT6_R0/r0_t1_A_ent_
+  phaseT1_disjoint/t1_mob_ent_ -> phaseT6_R0/r0_t1_mob_ent_
+  phaseT2_signal/t2_svhn_ent_ -> phaseT6_R0/r0_t2_svhn_ent_
+  phaseT5_E1_relonly_transfer/e1_relonly_ -> phaseT6_R0/r0_e1_relonly_
+  phaseT5_E2_resnet/e2_res_relonly_ -> phaseT6_R0/r0_e2_res_relonly_
+  phaseT5_E3_const/e3_ -> phaseT6_R0/r0_e3_

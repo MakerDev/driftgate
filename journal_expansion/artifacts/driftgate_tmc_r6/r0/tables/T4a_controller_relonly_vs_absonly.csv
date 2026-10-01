@@ -1,0 +1,4 @@
+setting,comparison,DriftGate_pct,absonly_pct,DriftGate_minus_absonly_pp,ci95,n_pos,n
+stepwise composition change,DriftGate vs absonly (λ from TV level),65.8146,64.9264,+0.8882,"[+0.66, +1.12]",5,5
+client mobility,DriftGate vs absonly (λ from TV level),59.1528,57.9334,+1.2193,"[+0.92, +1.52]",3,3
+CIFAR-100 gradual,DriftGate vs absonly (λ from TV level),36.0826,34.8937,+1.1889,"[+1.01, +1.37]",3,3

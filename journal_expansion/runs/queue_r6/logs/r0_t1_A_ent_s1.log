@@ -1,0 +1,18 @@
+[r0_t1_A_ent_s1] method=splitomcplus controller=selfcal signal=ent_client schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.900 acc=0.336 worst=0.178 elapsed=0.8m ETA=116m
+  R 10 loss=0.379 acc=0.553 worst=0.415 elapsed=6.0m ETA=85m
+  R 20 loss=0.319 acc=0.642 worst=0.497 elapsed=11.7m ETA=76m
+  R 30 loss=0.213 acc=0.722 worst=0.611 elapsed=17.3m ETA=69m
+  R 40 loss=0.200 acc=0.581 worst=0.466 elapsed=23.1m ETA=64m
+  R 50 loss=0.183 acc=0.602 worst=0.541 elapsed=28.9m ETA=58m
+  R 60 loss=0.167 acc=0.612 worst=0.539 elapsed=34.4m ETA=52m
+  R 70 loss=0.161 acc=0.541 worst=0.516 elapsed=40.4m ETA=46m
+  R 80 loss=0.147 acc=0.541 worst=0.511 elapsed=46.4m ETA=41m
+  R 90 loss=0.149 acc=0.525 worst=0.486 elapsed=52.4m ETA=35m
+  R100 loss=0.123 acc=0.617 worst=0.549 elapsed=57.9m ETA=29m
+  R110 loss=0.110 acc=0.637 worst=0.614 elapsed=63.8m ETA=23m
+  R120 loss=0.102 acc=0.639 worst=0.595 elapsed=69.7m ETA=17m
+  R130 loss=0.096 acc=0.886 worst=0.799 elapsed=75.2m ETA=12m
+  R140 loss=0.085 acc=0.895 worst=0.816 elapsed=80.8m ETA=6m
+  R150 loss=0.086 acc=0.873 worst=0.783 elapsed=86.6m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_R0/r0_t1_A_ent_s1.json

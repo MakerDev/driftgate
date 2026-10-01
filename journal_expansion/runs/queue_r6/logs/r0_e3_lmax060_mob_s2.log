@@ -1,0 +1,15 @@
+[r0_e3_lmax060_mob_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:0
+  R  1 loss=0.938 acc=0.399 worst=0.205 elapsed=0.8m ETA=95m
+  R 10 loss=0.436 acc=0.543 worst=0.505 elapsed=6.2m ETA=69m
+  R 20 loss=0.370 acc=0.604 worst=0.569 elapsed=12.1m ETA=61m
+  R 30 loss=0.304 acc=0.653 worst=0.624 elapsed=18.4m ETA=55m
+  R 40 loss=0.271 acc=0.664 worst=0.607 elapsed=24.6m ETA=49m
+  R 50 loss=0.240 acc=0.689 worst=0.581 elapsed=30.7m ETA=43m
+  R 60 loss=0.220 acc=0.713 worst=0.623 elapsed=36.6m ETA=37m
+  R 70 loss=0.242 acc=0.546 worst=0.536 elapsed=42.9m ETA=31m
+  R 80 loss=0.231 acc=0.559 worst=0.487 elapsed=48.9m ETA=24m
+  R 90 loss=0.217 acc=0.570 worst=0.536 elapsed=55.0m ETA=18m
+  R100 loss=0.207 acc=0.571 worst=0.559 elapsed=60.8m ETA=12m
+  R110 loss=0.198 acc=0.582 worst=0.564 elapsed=67.2m ETA=6m
+  R120 loss=0.183 acc=0.600 worst=0.584 elapsed=73.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_R0/r0_e3_lmax060_mob_s2.json

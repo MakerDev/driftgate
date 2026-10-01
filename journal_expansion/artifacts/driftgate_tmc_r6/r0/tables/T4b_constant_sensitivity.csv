@@ -1,0 +1,7 @@
+setting,variant,n_seeds,variant_acc_pct,sd_pct,default_DriftGate_same_seeds_pct,variant_minus_default_pp,ci95,n_pos,best_fixed_same_seeds,variant_minus_best_fixed_pp,ci95_vs_best_fixed
+stepwise composition change,guard 0.25,3,65.8284,0.4077,65.8324,-0.0040,"[-0.20, +0.19]",1,fixed 0.4,+0.7029,"[+0.51, +0.90]"
+stepwise composition change,guard 1.0,3,65.6135,0.6069,65.8324,-0.2189,"[-0.73, +0.29]",0,fixed 0.4,+0.4881,"[+0.13, +0.84]"
+stepwise composition change,λ_max 0.60,3,65.4826,0.2693,65.8324,-0.3498,"[-0.68, -0.02]",0,fixed 0.4,+0.3572,"[-0.20, +0.91]"
+stepwise composition change,λ_max 0.80,3,65.5840,0.7351,65.8324,-0.2484,"[-1.08, +0.58]",1,fixed 0.4,+0.4586,"[-0.22, +1.13]"
+client mobility,λ_max 0.60,3,59.2816,0.5361,59.1528,+0.1288,"[-0.26, +0.52]",2,fixed 0.4,+0.7031,"[+0.42, +0.99]"
+client mobility,λ_max 0.80,3,58.0985,0.3325,59.1528,-1.0542,"[-1.20, -0.91]",0,fixed 0.4,-0.4800,"[-0.77, -0.19]"

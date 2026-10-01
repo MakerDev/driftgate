@@ -1,0 +1,8 @@
+schedule,segment,rounds,TV_mean,TV_sd,H_over_lnC_mean,H_over_lnC_sd,n_seeds
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",ρ=0,R16–R20,0.2440,0.0146,0.7855,0.0359,3
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",ρ=0.4,R21–R40,0.2746,0.0205,0.7645,0.0378,3
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",ρ=0.8,R41–R60,0.3030,0.0271,0.7305,0.0343,3
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",ρ=0.4,R61–R80,0.2912,0.0268,0.6692,0.0319,3
+"100-round stepwise variant (ρ changes at R21, R41, R61, R81)",ρ=0,R81–R100,0.2482,0.0244,0.5897,0.0350,3
+late abrupt change (ρ 0→0.8 at R51),ρ=0,R16–R50,0.2490,0.0175,0.7311,0.0374,3
+late abrupt change (ρ 0→0.8 at R51),ρ=0.8,R51–R100,0.3131,0.0289,0.6834,0.0300,3

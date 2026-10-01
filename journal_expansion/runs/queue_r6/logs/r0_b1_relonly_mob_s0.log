@@ -1,0 +1,15 @@
+[r0_b1_relonly_mob_s0] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:0
+  R  1 loss=0.884 acc=0.279 worst=0.185 elapsed=0.8m ETA=97m
+  R 10 loss=0.405 acc=0.512 worst=0.437 elapsed=6.3m ETA=70m
+  R 20 loss=0.343 acc=0.578 worst=0.458 elapsed=12.5m ETA=63m
+  R 30 loss=0.272 acc=0.644 worst=0.572 elapsed=18.9m ETA=57m
+  R 40 loss=0.232 acc=0.677 worst=0.617 elapsed=25.3m ETA=51m
+  R 50 loss=0.201 acc=0.708 worst=0.661 elapsed=31.3m ETA=44m
+  R 60 loss=0.175 acc=0.733 worst=0.713 elapsed=37.4m ETA=37m
+  R 70 loss=0.217 acc=0.558 worst=0.533 elapsed=43.9m ETA=31m
+  R 80 loss=0.196 acc=0.571 worst=0.541 elapsed=50.0m ETA=25m
+  R 90 loss=0.188 acc=0.581 worst=0.563 elapsed=56.1m ETA=19m
+  R100 loss=0.175 acc=0.596 worst=0.580 elapsed=62.0m ETA=12m
+  R110 loss=0.168 acc=0.602 worst=0.584 elapsed=67.9m ETA=6m
+  R120 loss=0.156 acc=0.608 worst=0.577 elapsed=73.9m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_R0/r0_b1_relonly_mob_s0.json

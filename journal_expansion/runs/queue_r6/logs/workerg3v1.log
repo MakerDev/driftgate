@@ -1,0 +1,3 @@
+[wg3v1 cuda:0/GPU3] START r0_t1_mob_ent_s2 (R0) 2026-10-02 06:57:42
+[wg3v1 cuda:0/GPU3] END r0_t1_mob_ent_s2 exit=0 2026-10-02 08:01:43
+[wg3v1 cuda:0/GPU3] START s1_driftgate_own_s1 (K50) 2026-10-02 08:01:43

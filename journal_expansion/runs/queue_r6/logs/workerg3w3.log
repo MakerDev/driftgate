@@ -3,3 +3,5 @@
 [wg3w3 cuda:0/GPU3] START s1_fixed015_s3 (K50) 2026-09-30 23:29:16
 [wg3w3 cuda:0/GPU3] END s1_fixed015_s3 exit=0 2026-10-01 00:40:38
 [wg3w3 cuda:0/GPU3] START s1_apfl001_s2 (K50) 2026-10-01 00:40:38
+[wg3w3 cuda:0/GPU3] END s1_apfl001_s2 exit=0 2026-10-01 01:52:37
+[wg3w3 cuda:0/GPU3] START s3k500_driftgate_own_s1 (K500) 2026-10-01 18:58:57

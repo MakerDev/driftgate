@@ -3,3 +3,7 @@
 [wg2w4 cuda:0/GPU2] START s1_driftgate_s2 (K50) 2026-09-30 23:27:35
 [wg2w4 cuda:0/GPU2] END s1_driftgate_s2 exit=0 2026-10-01 00:32:17
 [wg2w4 cuda:0/GPU2] START s1_fixed050_s4 (K50) 2026-10-01 00:32:17
+[wg2w4 cuda:0/GPU2] END s1_fixed050_s4 exit=0 2026-10-01 01:41:25
+[wg2w4 cuda:0/GPU2] START s3k500_fixed060_s2 (K500) 2026-10-01 18:58:57
+[wg2w4 cuda:0/GPU2] END s3k500_fixed060_s2 exit=143 2026-10-01 19:00:44
+[wg2w4 cuda:0/GPU2] START r0_e1_relonly_svhn_s2 (R0) 2026-10-01 19:00:44

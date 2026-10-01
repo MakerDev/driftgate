@@ -1,1 +1,5 @@
 Wed Sep 30 10:19:50 PM KST 2026 supervisor(R6, GPUs: 0 1 2 3, 4 per GPU) restarted workers (queue=151)
+Thu Oct  1 06:59:05 PM KST 2026 manual start of 15 workers after supervisor cut short (GPUs 0-3, 4 per GPU)
+Thu Oct  1 06:59:39 PM KST 2026 requeued s3k500_fixed020_s0 (popped by a 5-s test worker that was killed before the job ran)
+Thu Oct  1 07:00:57 PM KST 2026 OOM risk: 3 K=500 per GPU need ~23.7 GB; killed s3k500_fixed060_s0/s1/s2 (GPU1-3) and held 4 K500 lines (held_k500.txt)
+Thu Oct  1 07:01:35 PM KST 2026 worker pool replaced (g*v*): K500 cap 2/GPU, 4 live jobs/GPU; old-pool jobs keep running; 4 held K500 lines re-added at the head

@@ -3,3 +3,5 @@
 [wg2w2 cuda:0/GPU2] START s1_fixed015_s2 (K50) 2026-09-30 23:27:47
 [wg2w2 cuda:0/GPU2] END s1_fixed015_s2 exit=0 2026-10-01 00:30:19
 [wg2w2 cuda:0/GPU2] START s1_fixed020_s4 (K50) 2026-10-01 00:30:19
+[wg2w2 cuda:0/GPU2] END s1_fixed020_s4 exit=0 2026-10-01 01:40:25
+[wg2w2 cuda:0/GPU2] START r0_e1_relonly_tiny_s1 (R0H) 2026-10-01 18:58:57

@@ -1,0 +1,33 @@
+[s3k500_fixed020_s2] scenario=S3_K500 arm=fixed020 mode=fixed K=500 L=50 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.907 acc=0.3482 off=1.000 active=500 elapsed=6.5m ETA=975m
+  R  5 loss=0.535 acc=0.5235 off=1.000 active=500 elapsed=29.2m ETA=846m
+  R 10 loss=0.481 acc=0.5818 off=1.000 active=500 elapsed=57.1m ETA=799m
+  R 15 loss=0.446 acc=0.6215 off=1.000 active=500 elapsed=84.6m ETA=762m
+  R 20 loss=0.416 acc=0.6553 off=1.000 active=500 elapsed=111.7m ETA=726m
+  R 25 loss=0.396 acc=0.6637 off=1.000 active=500 elapsed=138.9m ETA=694m
+  R 30 loss=0.382 acc=0.6469 off=1.000 active=500 elapsed=165.9m ETA=664m
+  R 35 loss=0.370 acc=0.6169 off=1.000 active=500 elapsed=194.5m ETA=639m
+  R 40 loss=0.355 acc=0.6222 off=1.000 active=500 elapsed=222.9m ETA=613m
+  R 45 loss=0.341 acc=0.6274 off=1.000 active=500 elapsed=250.7m ETA=585m
+  R 50 loss=0.327 acc=0.6405 off=1.000 active=500 elapsed=278.8m ETA=558m
+  R 55 loss=0.314 acc=0.6478 off=1.000 active=500 elapsed=307.0m ETA=530m
+  R 60 loss=0.303 acc=0.6516 off=0.999 active=500 elapsed=329.7m ETA=495m
+  R 65 loss=0.293 acc=0.6611 off=0.999 active=500 elapsed=350.3m ETA=458m
+  R 70 loss=0.281 acc=0.6664 off=0.999 active=500 elapsed=371.0m ETA=424m
+  R 75 loss=0.273 acc=0.6757 off=0.999 active=500 elapsed=391.8m ETA=392m
+  R 80 loss=0.265 acc=0.6800 off=0.999 active=500 elapsed=412.8m ETA=361m
+  R 85 loss=0.258 acc=0.6825 off=0.998 active=500 elapsed=433.8m ETA=332m
+  R 90 loss=0.251 acc=0.6863 off=0.998 active=500 elapsed=454.6m ETA=303m
+  R 95 loss=0.244 acc=0.6859 off=0.997 active=500 elapsed=475.0m ETA=275m
+  R100 loss=0.237 acc=0.6910 off=0.996 active=500 elapsed=495.8m ETA=248m
+  R105 loss=0.232 acc=0.6962 off=0.995 active=500 elapsed=516.6m ETA=221m
+  R110 loss=0.227 acc=0.6955 off=0.995 active=500 elapsed=537.2m ETA=195m
+  R115 loss=0.221 acc=0.7031 off=0.995 active=500 elapsed=558.0m ETA=170m
+  R120 loss=0.215 acc=0.7126 off=0.993 active=500 elapsed=578.7m ETA=145m
+  R125 loss=0.211 acc=0.7263 off=0.989 active=500 elapsed=599.5m ETA=120m
+  R130 loss=0.204 acc=0.7517 off=0.981 active=500 elapsed=620.0m ETA=95m
+  R135 loss=0.197 acc=0.7766 off=0.976 active=500 elapsed=640.0m ETA=71m
+  R140 loss=0.190 acc=0.7915 off=0.970 active=500 elapsed=659.9m ETA=47m
+  R145 loss=0.184 acc=0.8075 off=0.958 active=500 elapsed=680.6m ETA=23m
+  R150 loss=0.180 acc=0.8100 off=0.952 active=500 elapsed=700.9m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S3/s3k500_fixed020_s2.json  integrated=0.6693

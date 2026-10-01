@@ -1,0 +1,5 @@
+[wg0v4 cuda:0/GPU0] START r0_e3_lmax060_A_s2 (R0) 2026-10-02 05:55:41
+[wg0v4 cuda:0/GPU0] END r0_e3_lmax060_A_s2 exit=0 2026-10-02 07:04:38
+[wg0v4 cuda:0/GPU0] START r0_b1_absonly_mob_s0 (R0) 2026-10-02 07:04:38
+[wg0v4 cuda:0/GPU0] END r0_b1_absonly_mob_s0 exit=0 2026-10-02 08:14:00
+[wg0v4 cuda:0/GPU0] START s1_entropy_own_s1 (K50) 2026-10-02 08:14:00

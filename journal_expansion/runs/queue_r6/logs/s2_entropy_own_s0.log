@@ -1,0 +1,2 @@
+[s2_entropy_own_s0] scenario=S2 arm=entropy_own mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.975 acc=0.2550 off=1.000 active=50 elapsed=0.6m ETA=83m

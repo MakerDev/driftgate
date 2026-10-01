@@ -27,3 +27,7 @@
   R125 loss=0.181 acc=0.7106 off=0.983 active=50 elapsed=58.0m ETA=12m
   R130 loss=0.171 acc=0.7324 off=0.981 active=50 elapsed=60.1m ETA=9m
   R135 loss=0.163 acc=0.7323 off=0.978 active=50 elapsed=62.2m ETA=7m
+  R140 loss=0.155 acc=0.7717 off=0.969 active=50 elapsed=64.1m ETA=5m
+  R145 loss=0.152 acc=0.7892 off=0.963 active=50 elapsed=66.0m ETA=2m
+  R150 loss=0.143 acc=0.7861 off=0.944 active=50 elapsed=68.0m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1/s1_fixed015_s4.json  integrated=0.6460

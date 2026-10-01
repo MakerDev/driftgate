@@ -1,0 +1,13 @@
+[s3k500_fixed060_s2] scenario=S3_K500 arm=fixed060 mode=fixed K=500 L=50 rounds=150 delay=0 device=cuda:0
+Terminated
+[s3k500_fixed060_s2] scenario=S3_K500 arm=fixed060 mode=fixed K=500 L=50 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.907 acc=0.3642 off=0.999 active=500 elapsed=4.6m ETA=681m
+  R  5 loss=0.405 acc=0.5440 off=0.985 active=500 elapsed=20.8m ETA=603m
+  R 10 loss=0.351 acc=0.6019 off=0.966 active=500 elapsed=40.5m ETA=567m
+  R 15 loss=0.320 acc=0.6384 off=0.955 active=500 elapsed=59.9m ETA=539m
+  R 20 loss=0.294 acc=0.6668 off=0.940 active=500 elapsed=79.4m ETA=516m
+  R 25 loss=0.275 acc=0.6711 off=0.934 active=500 elapsed=98.8m ETA=494m
+  R 30 loss=0.262 acc=0.6455 off=0.934 active=500 elapsed=118.3m ETA=473m
+  R 35 loss=0.249 acc=0.6015 off=0.937 active=500 elapsed=138.4m ETA=455m
+  R 40 loss=0.237 acc=0.6002 off=0.930 active=500 elapsed=158.9m ETA=437m
+  R 45 loss=0.225 acc=0.6008 off=0.914 active=500 elapsed=180.0m ETA=420m

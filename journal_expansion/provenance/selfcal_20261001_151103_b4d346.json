@@ -1,0 +1,1093 @@
+{
+ "run_id": "selfcal_20261001_151103_b4d346",
+ "git_commit": "6a201d0b9347812bba0a45606f64b120c874a7fd",
+ "config": {
+  "cfg": {
+   "dataset": "tinyimagenet",
+   "num_classes": 200,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 3,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 0,
+   "model_seed": 100,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "method": "splitomcplus",
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "schedule": "gradual_sigmoid",
+  "spatial_mode": null,
+  "controller_mode": "selfcal",
+  "controller_signal": "tv_dist",
+  "normalizer": "guarded",
+  "probe_n": 64,
+  "run_name": "t_tiny"
+ },
+ "config_sha256": "accc86f5fef57429dd97217256038f325d38ed782bca272f89b055e4bf806ebf",
+ "command": "journal_expansion/scripts/run_v2.py --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --no_neighbor_avg --disjoint_pools --probe_n 64 --seed 0 --model_seed 100 --dataset tinyimagenet --schedule gradual_sigmoid --rounds 3 --run_name t_tiny --output_dir journal_expansion/runs/_r6_check/prestart --device cuda:0",
+ "start_time": "2026-10-01T15:11:03.593412",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 0,
+  "per_class": {
+   "0": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "1": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "2": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "3": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "4": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "5": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "6": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "7": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "8": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "9": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "10": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "11": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "12": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "13": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "14": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "15": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "16": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "17": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "18": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "19": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "20": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "21": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "22": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "23": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "24": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "25": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "26": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "27": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "28": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "29": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "30": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "31": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "32": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "33": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "34": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "35": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "36": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "37": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "38": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "39": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "40": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "41": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "42": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "43": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "44": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "45": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "46": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "47": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "48": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "49": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "50": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "51": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "52": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "53": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "54": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "55": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "56": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "57": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "58": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "59": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "60": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "61": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "62": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "63": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "64": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "65": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "66": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "67": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "68": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "69": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "70": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "71": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "72": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "73": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "74": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "75": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "76": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "77": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "78": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "79": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "80": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "81": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "82": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "83": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "84": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "85": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "86": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "87": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "88": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "89": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "90": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "91": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "92": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "93": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "94": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "95": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "96": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "97": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "98": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "99": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "100": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "101": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "102": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "103": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "104": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "105": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "106": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "107": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "108": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "109": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "110": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "111": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "112": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "113": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "114": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "115": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "116": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "117": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "118": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "119": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "120": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "121": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "122": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "123": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "124": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "125": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "126": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "127": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "128": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "129": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "130": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "131": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "132": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "133": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "134": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "135": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "136": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "137": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "138": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "139": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "140": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "141": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "142": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "143": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "144": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "145": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "146": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "147": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "148": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "149": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "150": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "151": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "152": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "153": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "154": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "155": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "156": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "157": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "158": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "159": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "160": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "161": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "162": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "163": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "164": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "165": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "166": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "167": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "168": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "169": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "170": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "171": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "172": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "173": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "174": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "175": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "176": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "177": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "178": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "179": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "180": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "181": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "182": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "183": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "184": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "185": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "186": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "187": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "188": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "189": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "190": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "191": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "192": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "193": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "194": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "195": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "196": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "197": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "198": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   },
+   "199": {
+    "n_total": 50,
+    "n_controller": 10,
+    "n_eval": 40
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "split_hash": "7fdfe842e12addca",
+ "model_init_hash": "99455f58b56fbbb8",
+ "end_time": "2026-10-01T15:17:37.665966",
+ "wall_time_sec": 394.0337657928467,
+ "final_metrics": {
+  "acc_total_final": 0.03284328318604758,
+  "worst_cell_final": 0.021162099702872233,
+  "integrated_acc": 0.020348790141686283,
+  "wall_min": 6.529779414335887
+ }
+}

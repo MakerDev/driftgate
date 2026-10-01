@@ -21,3 +21,13 @@
   R 95 loss=0.131 acc=0.6092 off=0.644 active=50 elapsed=47.3m ETA=27m
   R100 loss=0.139 acc=0.6174 off=0.664 active=50 elapsed=49.7m ETA=25m
   R105 loss=0.129 acc=0.5965 off=0.605 active=50 elapsed=52.0m ETA=22m
+  R110 loss=0.124 acc=0.6216 off=0.632 active=50 elapsed=54.4m ETA=20m
+  R115 loss=0.117 acc=0.6166 off=0.624 active=50 elapsed=56.7m ETA=17m
+  R120 loss=0.122 acc=0.6308 off=0.608 active=50 elapsed=59.1m ETA=15m
+  R125 loss=0.107 acc=0.6412 off=0.593 active=50 elapsed=61.4m ETA=12m
+  R130 loss=0.108 acc=0.6668 off=0.576 active=50 elapsed=63.8m ETA=10m
+  R135 loss=0.105 acc=0.7501 off=0.523 active=50 elapsed=66.1m ETA=7m
+  R140 loss=0.099 acc=0.8000 off=0.489 active=50 elapsed=68.3m ETA=5m
+  R145 loss=0.095 acc=0.8113 off=0.517 active=50 elapsed=70.1m ETA=2m
+  R150 loss=0.100 acc=0.7923 off=0.473 active=50 elapsed=71.8m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1/s1_apfl001_s2.json  integrated=0.6222

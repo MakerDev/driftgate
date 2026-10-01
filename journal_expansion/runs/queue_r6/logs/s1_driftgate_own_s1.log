@@ -1,0 +1,27 @@
+[s1_driftgate_own_s1] scenario=S1 arm=driftgate_own mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.865 acc=0.3234 off=1.000 active=50 elapsed=0.5m ETA=82m
+  R  5 loss=0.417 acc=0.4757 off=1.000 active=50 elapsed=2.2m ETA=64m
+  R 10 loss=0.362 acc=0.5322 off=0.988 active=50 elapsed=4.3m ETA=60m
+  R 15 loss=0.331 acc=0.5680 off=0.976 active=50 elapsed=6.4m ETA=57m
+  R 20 loss=0.303 acc=0.5920 off=0.982 active=50 elapsed=8.5m ETA=55m
+  R 25 loss=0.284 acc=0.6221 off=0.972 active=50 elapsed=10.6m ETA=53m
+  R 30 loss=0.240 acc=0.6409 off=0.957 active=50 elapsed=12.7m ETA=51m
+  R 35 loss=0.259 acc=0.6038 off=0.965 active=50 elapsed=14.8m ETA=49m
+  R 40 loss=0.252 acc=0.5789 off=0.980 active=50 elapsed=16.9m ETA=47m
+  R 45 loss=0.241 acc=0.6081 off=0.968 active=50 elapsed=19.0m ETA=44m
+  R 50 loss=0.234 acc=0.6069 off=0.957 active=50 elapsed=21.2m ETA=42m
+  R 55 loss=0.231 acc=0.5933 off=0.949 active=50 elapsed=23.3m ETA=40m
+  R 60 loss=0.233 acc=0.6125 off=0.961 active=50 elapsed=25.5m ETA=38m
+  R 65 loss=0.223 acc=0.6003 off=0.940 active=50 elapsed=27.7m ETA=36m
+  R 70 loss=0.222 acc=0.6054 off=0.932 active=50 elapsed=29.7m ETA=34m
+  R 75 loss=0.218 acc=0.6057 off=0.926 active=50 elapsed=32.0m ETA=32m
+  R 80 loss=0.206 acc=0.6390 off=0.964 active=50 elapsed=34.1m ETA=30m
+  R 85 loss=0.210 acc=0.6427 off=0.976 active=50 elapsed=36.1m ETA=28m
+  R 90 loss=0.204 acc=0.6457 off=0.983 active=50 elapsed=38.4m ETA=26m
+  R 95 loss=0.203 acc=0.6466 off=0.968 active=50 elapsed=40.7m ETA=24m
+  R100 loss=0.194 acc=0.6418 off=0.956 active=50 elapsed=42.9m ETA=21m
+  R105 loss=0.186 acc=0.6295 off=0.950 active=50 elapsed=45.2m ETA=19m
+  R110 loss=0.183 acc=0.6372 off=0.937 active=50 elapsed=47.5m ETA=17m
+  R115 loss=0.177 acc=0.6309 off=0.935 active=50 elapsed=49.9m ETA=15m
+  R120 loss=0.184 acc=0.6644 off=0.933 active=50 elapsed=52.3m ETA=13m
+  R125 loss=0.165 acc=0.6698 off=0.904 active=50 elapsed=54.6m ETA=11m

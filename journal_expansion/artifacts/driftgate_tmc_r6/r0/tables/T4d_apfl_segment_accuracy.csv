@@ -1,0 +1,15 @@
+setting,method,segment,acc_total_pct,DriftGate_minus_APFL_pp,ci95,n_pos,n
+stepwise composition change,APFL η=0.01,ρ=0 early,58.7892,-0.5534,"[-1.03, -0.07]",1,5
+stepwise composition change,APFL η=0.01,ρ=0.4 rising,60.5631,+1.0916,"[+0.15, +2.04]",5,5
+stepwise composition change,APFL η=0.01,ρ=0.8,52.8122,+6.8577,"[+4.68, +9.03]",5,5
+stepwise composition change,APFL η=0.01,ρ=0.4 falling,63.5786,+3.1354,"[+1.12, +5.15]",5,5
+stepwise composition change,APFL η=0.01,ρ=0 late,87.3469,-2.0221,"[-4.83, +0.79]",2,5
+stepwise composition change,APFL η=0.1,ρ=0 early,61.2067,-2.9709,"[-3.62, -2.33]",0,5
+stepwise composition change,APFL η=0.1,ρ=0.4 rising,60.4230,+1.2317,"[+0.09, +2.37]",4,5
+stepwise composition change,APFL η=0.1,ρ=0.8,52.8663,+6.8035,"[+4.55, +9.06]",5,5
+stepwise composition change,APFL η=0.1,ρ=0.4 falling,64.1723,+2.5418,"[+0.61, +4.48]",5,5
+stepwise composition change,APFL η=0.1,ρ=0 late,87.4491,-2.1242,"[-4.72, +0.47]",0,5
+client mobility,APFL η=0.01,ρ=0 (R1–60),63.2854,-2.4615,"[-3.22, -1.70]",0,3
+client mobility,APFL η=0.01,ρ=0.8 (R70–120),51.8375,+5.3657,"[+3.64, +7.09]",3,3
+client mobility,APFL η=0.1,ρ=0 (R1–60),65.5792,-4.7553,"[-6.39, -3.12]",0,3
+client mobility,APFL η=0.1,ρ=0.8 (R70–120),52.5790,+4.6241,"[+3.38, +5.87]",3,3

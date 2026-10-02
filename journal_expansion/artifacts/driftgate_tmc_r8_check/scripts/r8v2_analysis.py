@@ -20,6 +20,7 @@ comparison uses the same N weighting without probes.
 """
 import csv
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -28,11 +29,12 @@ from scipy import stats
 
 HERE = Path(__file__).resolve().parent.parent
 JR = HERE.parents[1]
-RUNS = JR / "runs" / "phaseT8_check"
+RUNS = Path(os.environ.get("R8V2_RUNS", JR / "runs" / "phaseT8_check"))   # overrides only for smoke tests
 R7RUNS = JR / "runs" / "phaseT7_gate"
 ENV = JR / "runs" / "phaseT6_env"
-RED = HERE / "reduced"
-TAB, FIG = HERE / "tables", HERE / "figures"
+RED = Path(os.environ.get("R8V2_RED", HERE / "reduced"))
+OUT = Path(os.environ.get("R8V2_OUT", HERE))
+TAB, FIG = OUT / "tables", OUT / "figures"
 TAB.mkdir(parents=True, exist_ok=True)
 FIG.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(JR.parent))
@@ -417,7 +419,7 @@ def main():
     dec = {"question1_inference_lambda": decide("P1", ("P2", "P3"), ["T15", "T40"]),
            "question2_threshold": decide("Q1", ("Q2", "Q3"), ARMS),
            "definition": "G = mean over server use 0.5, 0.7, 0.9 of (policy - B*), B* = best single-tau curve of T15/T40/T60"}
-    json.dump(dec, open(HERE / "decision_v2.json", "w"), indent=1)
+    json.dump(dec, open(OUT / "decision_v2.json", "w"), indent=1)
     print(json.dumps(dec, indent=1))
     lt1, lt2 = dec["question1_inference_lambda"]["chosen_lambda_t"], dec["question2_threshold"]["chosen_lambda_t"]
     # ---------- splits at server use 0.9
@@ -533,7 +535,8 @@ def figures(grid, lt1, lt2, PG, R):
     axes[1].set_ylabel("difference from B* (pp)")
     axes[0].set_title("(a) accuracy", fontsize=8)
     axes[1].set_title("(b) difference from B*", fontsize=8)
-    axes[0].legend(loc="lower right", fontsize=6)
+    h_, l_ = axes[0].get_legend_handles_labels()
+    fig.legend(h_, l_, loc="lower center", ncol=3, fontsize=6.5, bbox_to_anchor=(0.5, -0.16))
     fig.savefig(FIG / "v2_figA_accuracy_vs_server_use.pdf")
     fig.savefig(FIG / "v2_figA_accuracy_vs_server_use.png", dpi=300)
     plt.close(fig)

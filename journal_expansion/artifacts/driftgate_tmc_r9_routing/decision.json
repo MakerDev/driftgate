@@ -1,0 +1,70 @@
+{
+ "window": "late (evaluation rounds 30-150)",
+ "A": {
+  "G_A_pp": -1.4001217344406107,
+  "ci95": [
+   -1.6934067897210145,
+   -1.106836679160207
+  ],
+  "per_seed": [
+   -1.316543471593501,
+   -1.3486375770352277,
+   -1.5351841546931033
+  ],
+  "threshold_pp": 3.0,
+  "passes": false
+ },
+ "B": {
+  "G_B_pp": 0.13988375123569577,
+  "ci95": [
+   -0.1629574080163569,
+   0.4427249104877484
+  ],
+  "per_seed": [
+   0.0907706159122205,
+   0.0501907400641007,
+   0.27868989773076613
+  ],
+  "threshold_pp": 2.0,
+  "passes": false
+ },
+ "full_window": {
+  "G_A_pp": -2.929215175762449,
+  "G_B_pp": 0.2366922551129321
+ },
+ "best_settings": {
+  "late": {
+   "A-fixed": [
+    "A-fixed",
+    "T15",
+    "0.4",
+    "None",
+    "0"
+   ],
+   "A-scope": [
+    "A-scope",
+    "T15",
+    "0.4",
+    "None",
+    "None"
+   ]
+  },
+  "full": {
+   "A-fixed": [
+    "A-fixed",
+    "T15",
+    "0.3",
+    "None",
+    "46"
+   ],
+   "A-scope": [
+    "A-scope",
+    "T15",
+    "0.4",
+    "None",
+    "None"
+   ]
+  }
+ },
+ "verdict": "A does not pass; B does not pass (neither passes)"
+}

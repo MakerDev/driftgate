@@ -1,0 +1,92 @@
+  T15 s5: 3734808 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T15 s6: 3884510 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T15 s7: 3737699 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T40 s5: 3734808 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T40 s6: 3884510 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T40 s7: 3737699 requests, 5 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T60 s5: 3734808 requests, 6 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T60 s6: 3884510 requests, 6 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  T60 s7: 3737699 requests, 6 blocks, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'fixed_counts_equal_round8_reduced': True}
+  [R9_T0_checks.csv] 9 rows
+  [R9_T1_recompute_tau08.csv] 3 rows
+/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r9_routing/scripts/r9_routing_analysis.py:357: RuntimeWarning: All-NaN axis encountered
+  sc = np.nanmax([v for v in bres[(w, s, "bsc")].values()], axis=0)
+  [R9_T2_placementA.csv] 12 rows
+  [R9_T3_placementB.csv] 20 rows
+{
+ "window": "late (evaluation rounds 30-150)",
+ "A": {
+  "G_A_pp": -1.4001217344406107,
+  "ci95": [
+   -1.6934067897210145,
+   -1.106836679160207
+  ],
+  "per_seed": [
+   -1.316543471593501,
+   -1.3486375770352277,
+   -1.5351841546931033
+  ],
+  "threshold_pp": 3.0,
+  "passes": false
+ },
+ "B": {
+  "G_B_pp": 0.13988375123569577,
+  "ci95": [
+   -0.1629574080163569,
+   0.4427249104877484
+  ],
+  "per_seed": [
+   0.0907706159122205,
+   0.0501907400641007,
+   0.27868989773076613
+  ],
+  "threshold_pp": 2.0,
+  "passes": false
+ },
+ "full_window": {
+  "G_A_pp": -2.929215175762449,
+  "G_B_pp": 0.2366922551129321
+ },
+ "best_settings": {
+  "late": {
+   "A-fixed": [
+    "A-fixed",
+    "T15",
+    "0.4",
+    "None",
+    "0"
+   ],
+   "A-scope": [
+    "A-scope",
+    "T15",
+    "0.4",
+    "None",
+    "None"
+   ]
+  },
+  "full": {
+   "A-fixed": [
+    "A-fixed",
+    "T15",
+    "0.3",
+    "None",
+    "46"
+   ],
+   "A-scope": [
+    "A-scope",
+    "T15",
+    "0.4",
+    "None",
+    "None"
+   ]
+  }
+ },
+ "verdict": "A does not pass; B does not pass (neither passes)"
+}
+  [R9_T4_splits.csv] 26 rows
+  [R9_T5_A_scope_tau_curve.csv] 96 rows
+  [R9_T6_B_kind_oracle_points.csv] 32 rows
+/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r9_routing/scripts/r9_routing_analysis.py:485: RuntimeWarning: All-NaN axis encountered
+  grid[(w, "B-scope envelope")] = np.mean([np.nanmax(list(bres[(w, s, "bsc")].values()), axis=0) for s in SEEDS], axis=0)
+  [R9_T7_B_curves.csv] 202 rows
+  figures written

@@ -516,7 +516,7 @@ def figures(res, best, grid, G):
         ax.bar(x + off, m, width=0.38, color=col, label=lab, zorder=2)
         for i in range(len(rules)):
             ax.plot([x[i] + off] * 3, vals[i], ls="none", marker="o", ms=2.2, color=INK, zorder=3)
-            ax.text(x[i] + off, m[i] + 0.3, f"{m[i]:.1f}", ha="center", va="bottom", fontsize=6, color=INK2)
+            ax.text(x[i] + off, max(m[i], vals[i].max()) + 0.4, f"{m[i]:.1f}", ha="center", va="bottom", fontsize=6, color=INK2)
     lo = min(np.min([res[w][best[(w, r)]] for r, _ in rules for w in WINDOWS]) * 100 - 3, 55)
     ax.set_ylim(lo, None)
     ax.set_xticks(x)

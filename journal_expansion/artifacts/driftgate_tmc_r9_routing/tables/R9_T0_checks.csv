@@ -1,0 +1,10 @@
+arm,seed,run_id,Mk_rebuilt_equals_provenance_client_main,label_in_Mk_equals_kind_Main_all_requests,tau_counts_equal_round8_reduced
+T15,5,r6_fixed_20261003_005001_092d04,True,True,True
+T15,6,r6_fixed_20261003_005001_0d502a,True,True,True
+T15,7,r6_fixed_20261003_005001_554b95,True,True,True
+T40,5,r6_fixed_20261003_005001_b4fbcf,True,True,True
+T40,6,r6_fixed_20261003_005001_43120a,True,True,True
+T40,7,r6_fixed_20261003_005001_adc3cb,True,True,True
+T60,5,r6_fixed_20261003_005001_7c39a1,True,True,True
+T60,6,r6_fixed_20261003_005001_8b926a,True,True,True
+T60,7,r6_fixed_20261003_005001_ec0cda,True,True,True

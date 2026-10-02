@@ -1,0 +1,21 @@
+window,seed,server_use,B_fixed_acc_pct,B_fixed_setting,B_scope_acc_pct,B_scope_setting,B_scope_minus_B_fixed_pp
+late,5,0.3,65.3044,T15 lambda_inf 0.55,65.5557,T15 lambda_inf 0.15,+0.2514
+late,5,0.5,65.2795,T15 lambda_inf 0.7,65.2897,T15 lambda_inf 0.7,+0.0102
+late,5,0.7,64.6379,T15 lambda_inf 0.4,64.6486,T15 lambda_inf 0.4,+0.0107
+late,6,0.3,63.0763,T15 lambda_inf 0.55,63.2227,T15 lambda_inf 0.3,+0.1464
+late,6,0.5,63.5125,T15 lambda_inf 0.55,63.5164,T15 lambda_inf 0.55,+0.0039
+late,6,0.7,63.1953,T15 lambda_inf 0.55,63.1956,T15 lambda_inf 0.55,+0.0003
+late,7,0.3,64.0186,T15 lambda_inf 0.4,64.7406,T15 lambda_inf 0.3,+0.7220
+late,7,0.5,64.7629,T15 lambda_inf 0.55,64.8571,T15 lambda_inf 0.15,+0.0942
+late,7,0.7,65.3214,T15 lambda_inf 0.4,65.3412,T15 lambda_inf 0.4,+0.0198
+late,G_B,,,,,,"+0.1399 [-0.16, +0.44] (3/3)"
+full,5,0.3,65.0073,T15 lambda_inf 0.55,65.3105,T15 lambda_inf 0.15,+0.3032
+full,5,0.5,64.5229,T15 lambda_inf 0.7,64.5371,T15 lambda_inf 0.7,+0.0142
+full,5,0.7,63.3339,T15 lambda_inf 0.4,63.3505,T15 lambda_inf 0.4,+0.0166
+full,6,0.3,63.2680,T15 lambda_inf 0.55,64.1854,T15 lambda_inf 0.15,+0.9173
+full,6,0.5,63.0883,T15 lambda_inf 0.7,63.0893,T15 lambda_inf 0.7,+0.0010
+full,6,0.7,62.4664,T15 lambda_inf 0.7,62.4665,T15 lambda_inf 0.7,+0.0001
+full,7,0.3,63.4192,T15 lambda_inf 0.55,64.2482,T15 lambda_inf 0.3,+0.8290
+full,7,0.5,63.6160,T15 lambda_inf 0.55,63.6438,T15 lambda_inf 0.55,+0.0278
+full,7,0.7,63.7022,T15 lambda_inf 0.4,63.7231,T15 lambda_inf 0.4,+0.0209
+full,G_B,,,,,,"+0.2367 [-0.03, +0.51] (3/3)"

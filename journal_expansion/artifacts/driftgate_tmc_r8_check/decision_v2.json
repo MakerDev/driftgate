@@ -1,0 +1,60 @@
+{
+ "question1_inference_lambda": {
+  "G_oracle_pp": {
+   "T15": 3.1325205348442533,
+   "T40": 1.9307293439514035
+  },
+  "chosen_lambda_t": "T15",
+  "G_oracle_chosen_pp": 3.1325205348442533,
+  "threshold_pp": 1.0,
+  "room": "enough",
+  "signals": {
+   "P2": {
+    "G_pp": 1.8122125784020617,
+    "needed_pp": 1.5662602674221267,
+    "seeds_positive": 3,
+    "passes": true
+   },
+   "P3": {
+    "G_pp": 0.5785471773503539,
+    "needed_pp": 1.5662602674221267,
+    "seeds_positive": 3,
+    "passes": false
+   }
+  },
+  "candidate": "P2",
+  "SR_minus_TV_pp": 1.2336654010517079,
+  "chosen": "x_SR",
+  "verdict": "pass: x_SR"
+ },
+ "question2_threshold": {
+  "G_oracle_pp": {
+   "T15": 0.8353239554268427,
+   "T40": 2.520766485797441,
+   "T60": 1.1381295860287206
+  },
+  "chosen_lambda_t": "T40",
+  "G_oracle_chosen_pp": 2.520766485797441,
+  "threshold_pp": 1.0,
+  "room": "enough",
+  "signals": {
+   "Q2": {
+    "G_pp": 1.680300260995235,
+    "needed_pp": 1.2603832428987205,
+    "seeds_positive": 3,
+    "passes": true
+   },
+   "Q3": {
+    "G_pp": 1.6307758989756413,
+    "needed_pp": 1.2603832428987205,
+    "seeds_positive": 3,
+    "passes": true
+   }
+  },
+  "candidate": "Q2",
+  "SR_minus_TV_pp": 0.04952436201959376,
+  "chosen": "x_TV",
+  "verdict": "pass: x_TV"
+ },
+ "definition": "G = mean over server use 0.5, 0.7, 0.9 of (policy - B*), B* = best single-tau curve of T15/T40/T60"
+}

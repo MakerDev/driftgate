@@ -1,0 +1,49 @@
+server_use_counted_over,curve,lambda_t,probes_counted,"reference_acc_pct(s5,s6,s7)",min_server_use_pct_s5,min_server_use_pct_s6,min_server_use_pct_s7,mean_pct,minus_Bstar_pp,ci95,seeds_below_Bstar,per_seed_minus_Bstar_pp
+evaluation requests (probes not counted),B*,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,,,,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),single tau,T15,0,62.87 61.77 62.99,0.00,not reached,not reached,not reached in every seed,,,,+0.00 nan nan
+evaluation requests (probes not counted),single tau,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),single tau,T60,0,62.87 61.77 62.99,4.40,17.55,not reached,not reached in every seed,,,,+4.40 +17.55 nan
+evaluation requests (probes not counted),Q1,T15,0,62.87 61.77 62.99,0.00,27.50,17.57,15.02,+15.02,"[-19.57, +49.62]",0,+0.00 +27.50 +17.57
+evaluation requests (probes not counted),Q1,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),Q1,T60,0,62.87 61.77 62.99,1.76,4.84,12.54,6.38,+6.38,"[-7.42, +20.18]",0,+1.76 +4.84 +12.54
+evaluation requests (probes not counted),Q1,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),Q2,T15,0,62.87 61.77 62.99,0.00,38.25,21.53,19.93,+19.93,"[-27.71, +67.57]",0,+0.00 +38.25 +21.53
+evaluation requests (probes not counted),Q2,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),Q2,T60,0,62.87 61.77 62.99,1.76,5.38,21.63,9.59,+9.59,"[-16.70, +35.88]",0,+1.76 +5.38 +21.63
+evaluation requests (probes not counted),Q2,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),Q3,T15,0,62.87 61.77 62.99,0.00,34.90,21.99,18.96,+18.96,"[-24.87, +62.80]",0,+0.00 +34.90 +21.99
+evaluation requests (probes not counted),Q3,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+evaluation requests (probes not counted),Q3,T60,0,62.87 61.77 62.99,1.71,5.51,not reached,not reached in every seed,,,,+1.71 +5.51 nan
+evaluation requests (probes not counted),Q3,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+"actual requests N, probes counted as server use",B*,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,,,,+0.00 +0.00 +0.00
+"actual requests N, probes counted as server use",single tau,T15,0,62.87 61.77 62.99,0.00,not reached,not reached,not reached in every seed,,,,+0.00 nan nan
+"actual requests N, probes counted as server use",single tau,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+"actual requests N, probes counted as server use",single tau,T60,0,62.87 61.77 62.99,4.02,17.75,not reached,not reached in every seed,,,,+4.02 +17.75 nan
+"actual requests N, probes counted as server use",Q1,T15,0,62.87 61.77 62.99,0.00,21.44,13.39,11.61,+11.61,"[-15.30, +38.52]",0,+0.00 +21.44 +13.39
+"actual requests N, probes counted as server use",Q1,T40,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+"actual requests N, probes counted as server use",Q1,T60,0,62.87 61.77 62.99,1.18,3.78,9.33,4.76,+4.76,"[-5.58, +15.11]",0,+1.18 +3.78 +9.33
+"actual requests N, probes counted as server use",Q1,best,0,62.87 61.77 62.99,0.00,0.00,0.00,0.00,+0.00,"[+0.00, +0.00]",0,+0.00 +0.00 +0.00
+"actual requests N, probes counted as server use",Q2,T15,8,62.87 61.77 62.99,10.60,34.90,24.16,23.22,+23.22,"[-7.03, +53.46]",0,+10.60 +34.90 +24.16
+"actual requests N, probes counted as server use",Q2,T40,8,62.87 61.77 62.99,10.60,10.30,9.30,10.07,+10.07,"[+8.38, +11.76]",0,+10.60 +10.30 +9.30
+"actual requests N, probes counted as server use",Q2,T60,8,62.87 61.77 62.99,12.33,15.04,not reached,not reached in every seed,,,,+12.33 +15.04 nan
+"actual requests N, probes counted as server use",Q2,best,8,62.87 61.77 62.99,10.60,10.30,9.30,10.07,+10.07,"[+8.38, +11.76]",0,+10.60 +10.30 +9.30
+"actual requests N, probes counted as server use",Q3,T15,8,62.87 61.77 62.99,10.60,39.96,26.94,25.83,+25.83,"[-10.71, +62.38]",0,+10.60 +39.96 +26.94
+"actual requests N, probes counted as server use",Q3,T40,8,62.87 61.77 62.99,10.60,10.30,9.30,10.07,+10.07,"[+8.38, +11.76]",0,+10.60 +10.30 +9.30
+"actual requests N, probes counted as server use",Q3,T60,8,62.87 61.77 62.99,12.76,14.96,not reached,not reached in every seed,,,,+12.76 +14.96 nan
+"actual requests N, probes counted as server use",Q3,best,8,62.87 61.77 62.99,10.60,10.30,9.30,10.07,+10.07,"[+8.38, +11.76]",0,+10.60 +10.30 +9.30
+"actual requests N, probes counted as server use",Q2,T15,16,62.87 61.77 62.99,21.10,48.13,33.11,34.11,+34.11,"[+0.47, +67.76]",0,+21.10 +48.13 +33.11
+"actual requests N, probes counted as server use",Q2,T40,16,62.87 61.77 62.99,21.10,20.60,18.50,20.07,+20.07,"[+16.64, +23.49]",0,+21.10 +20.60 +18.50
+"actual requests N, probes counted as server use",Q2,T60,16,62.87 61.77 62.99,23.60,25.11,46.90,31.87,+31.87,"[-0.52, +64.26]",0,+23.60 +25.11 +46.90
+"actual requests N, probes counted as server use",Q2,best,16,62.87 61.77 62.99,21.10,20.60,18.50,20.07,+20.07,"[+16.64, +23.49]",0,+21.10 +20.60 +18.50
+"actual requests N, probes counted as server use",Q3,T15,16,62.87 61.77 62.99,21.10,50.83,34.68,35.54,+35.54,"[-1.44, +72.51]",0,+21.10 +50.83 +34.68
+"actual requests N, probes counted as server use",Q3,T40,16,62.87 61.77 62.99,21.10,20.60,18.50,20.07,+20.07,"[+16.64, +23.49]",0,+21.10 +20.60 +18.50
+"actual requests N, probes counted as server use",Q3,T60,16,62.87 61.77 62.99,24.76,25.37,not reached,not reached in every seed,,,,+24.76 +25.37 nan
+"actual requests N, probes counted as server use",Q3,best,16,62.87 61.77 62.99,21.10,20.60,18.50,20.07,+20.07,"[+16.64, +23.49]",0,+21.10 +20.60 +18.50
+"actual requests N, probes counted as server use",Q2,T15,64,62.87 61.77 62.99,not reached,not reached,75.42,not reached in every seed,,,,nan nan +75.42
+"actual requests N, probes counted as server use",Q2,T40,64,62.87 61.77 62.99,74.73,75.30,69.50,73.18,+73.18,"[+65.24, +81.11]",0,+74.73 +75.30 +69.50
+"actual requests N, probes counted as server use",Q2,T60,64,62.87 61.77 62.99,not reached,not reached,not reached,not reached in every seed,,,,nan nan nan
+"actual requests N, probes counted as server use",Q2,best,64,62.87 61.77 62.99,74.73,75.30,69.50,73.18,+73.18,"[+65.24, +81.11]",0,+74.73 +75.30 +69.50
+"actual requests N, probes counted as server use",Q3,T15,64,62.87 61.77 62.99,not reached,not reached,75.62,not reached in every seed,,,,nan nan +75.62
+"actual requests N, probes counted as server use",Q3,T40,64,62.87 61.77 62.99,74.75,75.30,69.50,73.18,+73.18,"[+65.23, +81.13]",0,+74.75 +75.30 +69.50
+"actual requests N, probes counted as server use",Q3,T60,64,62.87 61.77 62.99,not reached,not reached,not reached,not reached in every seed,,,,nan nan nan
+"actual requests N, probes counted as server use",Q3,best,64,62.87 61.77 62.99,74.75,75.30,69.50,73.18,+73.18,"[+65.23, +81.13]",0,+74.75 +75.30 +69.50

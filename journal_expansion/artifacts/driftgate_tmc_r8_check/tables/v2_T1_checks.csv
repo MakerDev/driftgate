@@ -1,0 +1,10 @@
+arm,seed,run_id,installed_integrated_pct(json),recomputed_tau0.8_pct,"counts_equal_installed(correct,n_off)",installed_block_mismatch(client-rounds),max|mean(probe_tv)-x_tv|,max|mean(probe_sr)-x_sr|,minus_round8_v1_same_arm_seed_pp,round7_F_integrated_pct,T40_minus_round7_F_pp
+T15,5,r6_fixed_20261003_005001_092d04,62.480097,62.480097,yes,0,6.9e-08,7.5e-08,-0.0058,,
+T15,6,r6_fixed_20261003_005001_0d502a,60.793928,60.793928,yes,0,6.7e-08,7.4e-08,+0.0056,,
+T15,7,r6_fixed_20261003_005001_554b95,62.873745,62.873745,yes,0,6.3e-08,6.4e-08,-0.0036,,
+T40,5,r6_fixed_20261003_005001_b4fbcf,62.866450,62.866450,yes,0,6.4e-08,7.4e-08,+0.0048,62.8505,+0.0160
+T40,6,r6_fixed_20261003_005001_43120a,61.770370,61.770370,yes,0,6.5e-08,7.4e-08,+0.0101,61.7568,+0.0135
+T40,7,r6_fixed_20261003_005001_adc3cb,62.988038,62.988038,yes,0,5.9e-08,6.7e-08,-0.0061,62.9591,+0.0289
+T60,5,r6_fixed_20261003_005001_7c39a1,62.024946,62.024946,yes,0,1.1e-07,6.8e-08,,,
+T60,6,r6_fixed_20261003_005001_8b926a,60.995213,60.995213,yes,0,6.7e-08,6.3e-08,,,
+T60,7,r6_fixed_20261003_005001_ec0cda,61.532022,61.532022,yes,0,6.8e-08,7.4e-08,,,

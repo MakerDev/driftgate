@@ -1,0 +1,32 @@
+control,arm,setting,G_control_pp,G_policy_pp,policy_minus_control_pp,ci95,seeds_policy_higher,per_seed
+one lambda_inf for every client,T15,lambda_inf 0.15,-0.8673,,,,,-0.56 -1.67 -0.37
+one lambda_inf for every client,T15,lambda_inf 0.3,+0.4621,,,,,+0.36 +0.12 +0.90
+one lambda_inf for every client,T15,lambda_inf 0.4,+0.7591,,,,,+0.56 +0.62 +1.09
+one lambda_inf for every client,T15,lambda_inf 0.55,+0.9174,,,,,+0.71 +0.97 +1.07
+one lambda_inf for every client,T15,lambda_inf 0.7,+0.7279,,,,,+0.60 +0.90 +0.69
+one lambda_inf for every client,T40,lambda_inf 0.15,-2.3432,,,,,-1.37 -3.59 -2.08
+one lambda_inf for every client,T40,lambda_inf 0.3,-0.4766,,,,,-0.25 -0.82 -0.36
+one lambda_inf for every client,T40,lambda_inf 0.4,-0.0108,,,,,+0.00 -0.03 +0.00
+one lambda_inf for every client,T40,lambda_inf 0.55,+0.2379,,,,,+0.15 +0.50 +0.06
+one lambda_inf for every client,T40,lambda_inf 0.7,+0.0718,,,,,+0.03 +0.52 -0.33
+one lambda_inf for every client,T60,lambda_inf 0.15,-4.5603,,,,,-2.66 -6.36 -4.66
+one lambda_inf for every client,T60,lambda_inf 0.3,-1.9993,,,,,-1.27 -2.59 -2.14
+one lambda_inf for every client,T60,lambda_inf 0.4,-1.2074,,,,,-0.90 -1.32 -1.41
+one lambda_inf for every client,T60,lambda_inf 0.55,-0.7192,,,,,-0.62 -0.51 -1.03
+one lambda_inf for every client,T60,lambda_inf 0.7,-0.7457,,,,,-0.61 -0.39 -1.24
+one lambda_inf for every client,T60,lambda_inf 0.6,-0.6706,,,,,-0.59 -0.39 -1.03
+P1 with placebo labels,T15,50 draws,+0.9760,+3.1325,+2.1565,"[+1.74, +2.57]",3,+2.06 +2.35 +2.06 | placebo max over draws +1.29 +1.04 +1.23
+P1 with placebo labels,T40,50 draws,+0.6082,+1.9307,+1.3225,"[+0.96, +1.69]",3,+1.35 +1.46 +1.17 | placebo max over draws +0.79 +1.01 +0.46
+P2 with placebo labels,T15,50 draws,+0.9527,+1.8122,+0.8595,"[+0.35, +1.37]",3,+0.96 +0.62 +1.00 | placebo max over draws +1.10 +0.91 +1.40
+P2 with placebo labels,T40,50 draws,+0.6355,+1.1588,+0.5233,"[+0.34, +0.70]",3,+0.56 +0.57 +0.44 | placebo max over draws +0.76 +1.03 +0.64
+P3 with placebo labels,T15,50 draws,+1.0523,+0.5785,-0.4737,"[-0.79, -0.16]",0,-0.61 -0.45 -0.36 | placebo max over draws +1.05 +1.10 +1.60
+P3 with placebo labels,T40,50 draws,+0.7062,+1.0762,+0.3700,"[+0.21, +0.53]",3,+0.43 +0.38 +0.30 | placebo max over draws +0.71 +1.15 +0.76
+Q1 with placebo labels,T15,50 draws,-0.1520,+0.8353,+0.9874,"[+0.46, +1.52]",3,+1.12 +0.74 +1.10 | placebo max over draws +0.00 -0.43 +0.27
+Q1 with placebo labels,T40,50 draws,+0.9272,+2.5208,+1.5935,"[+1.50, +1.69]",3,+1.55 +1.63 +1.60 | placebo max over draws +0.91 +1.26 +0.98
+Q1 with placebo labels,T60,50 draws,-0.0583,+1.1381,+1.1964,"[+1.08, +1.31]",3,+1.23 +1.21 +1.14 | placebo max over draws +0.14 +0.44 -0.34
+Q2 with placebo labels,T15,50 draws,+0.1819,+0.4625,+0.2806,"[+0.05, +0.51]",3,+0.37 +0.18 +0.29 | placebo max over draws +0.24 -0.18 +0.72
+Q2 with placebo labels,T40,50 draws,+1.0708,+1.6803,+0.6095,"[+0.39, +0.83]",3,+0.71 +0.56 +0.55 | placebo max over draws +1.02 +1.31 +1.37
+Q2 with placebo labels,T60,50 draws,-0.1989,+0.0410,+0.2399,"[-0.13, +0.61]",3,+0.41 +0.17 +0.14 | placebo max over draws +0.07 +0.12 -0.43
+Q3 with placebo labels,T15,50 draws,+0.2684,+0.2449,-0.0235,"[-0.27, +0.22]",2,+0.01 -0.13 +0.05 | placebo max over draws -0.39 +0.17 +1.27
+Q3 with placebo labels,T40,50 draws,+1.2070,+1.6308,+0.4238,"[+0.16, +0.68]",3,+0.33 +0.40 +0.54 | placebo max over draws +0.63 +1.69 +1.75
+Q3 with placebo labels,T60,50 draws,-0.3017,-0.2030,+0.0987,"[-0.04, +0.24]",3,+0.15 +0.04 +0.11 | placebo max over draws -0.08 +0.13 -0.58

@@ -1,0 +1,7 @@
+  [v2_S1_exit_accuracy_per_seed.csv] 96 rows
+  [v2_S1_exit_accuracy_home_away_by_kind_per_seed.csv] 96 rows
+  [v2_S1_exit_accuracy_mean.csv] 32 rows
+/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r8_check/scripts/r8v2_supplement.py:129: RuntimeWarning: All-NaN axis encountered
+  curves[(p, "best", s)] = np.nanmax([curves[(p, a, s)] for a in A.ARMS], axis=0)
+  [v2_S2_server_use_at_reference.csv] 48 rows
+  [v2_S3_controls.csv] 31 rows

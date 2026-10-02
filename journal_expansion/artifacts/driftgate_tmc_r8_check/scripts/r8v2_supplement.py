@@ -151,13 +151,123 @@ def table_server_use(R):
             "minus_Bstar_pp", "ci95", "seeds_below_Bstar", "per_seed_minus_Bstar_pp"], rows)
 
 
+def table_controls(R):
+    """S3 (added after the v2 results were seen, to read the decisions; not used by them):
+    (a) one lambda_inf for every client (single tau): how much of G(P) needs no home/away information;
+    (b) placebo labels: per evaluation round the same number of "home" clients as the policy's own labels
+        (at_home, x_SR or x_TV), chosen at random (50 draws, seed 20261003); G of the policy with these labels and the
+        same-seed difference policy - placebo (mean over draws)."""
+    OS = np.array(A.OPTS)
+    rng = np.random.default_rng(20261003)
+    NDRAW = 50
+
+    def G(D, H, bh, ba, two, s):
+        return float(np.mean(A.curve(D, H, bh, ba, two, ("std",), OS)[0] - Bstar[s]) * 100)
+
+    Bstar = {s: np.max([A.curve(R[(a, s)], np.ones_like(R[(a, s)]["home"]), R[(a, s)]["ib"], R[(a, s)]["ib"], False,
+                                ("std",), OS)[0] for a in A.ARMS], axis=0) for s in A.SEEDS}
+    rows = []
+    for a in A.ARMS:
+        for b, lam in enumerate(R[(a, A.SEEDS[0])]["blk"]):
+            g = [G(R[(a, s)], np.ones_like(R[(a, s)]["home"]), b, b, False, s) for s in A.SEEDS]
+            st = A.tstat(g)
+            rows.append(["one lambda_inf for every client", a, f"lambda_inf {lam:g}", f"{np.mean(g):+.4f}", "", "", "", "",
+                         " ".join(f"{x:+.2f}" for x in g)])
+    SPEC = [("P1", "oracle", "lambda_inf"), ("P2", ("sr", 64), "lambda_inf"), ("P3", ("tv", 64), "lambda_inf"),
+            ("Q1", "oracle", "tau"), ("Q2", ("sr", 64), "tau"), ("Q3", ("tv", 64), "tau")]
+    for p, key, what in SPEC:
+        for a in (["T15", "T40"] if what == "lambda_inf" else A.ARMS):
+            gp, gpl, gmax = [], [], []
+            for s in A.SEEDS:
+                D = R[(a, s)]
+                ib = D["ib"]
+                bh, two = (A.I70, False) if what == "lambda_inf" else (ib, True)
+                Hs = D["sit"][key]
+                gp.append(G(D, Hs, bh, ib, two, s))
+                draws = []
+                for _ in range(NDRAW):
+                    P = np.zeros_like(Hs)
+                    for e in range(Hs.shape[0]):
+                        P[e, rng.permutation(Hs.shape[1])[:int(Hs[e].sum())]] = True
+                    draws.append(G(D, P, bh, ib, two, s))
+                gpl.append(float(np.mean(draws)))
+                gmax.append(float(np.max(draws)))
+            d = A.tstat(np.array(gp) - np.array(gpl))
+            rows.append([f"{p} with placebo labels", a, f"{NDRAW} draws", f"{np.mean(gpl):+.4f}",
+                         f"{np.mean(gp):+.4f}"] + A.fmt(d)[:3] + [" ".join(f"{x:+.2f}" for x in np.array(gp) - np.array(gpl))
+                                                                 + " | placebo max over draws " + " ".join(f"{x:+.2f}" for x in gmax)])
+    A.wcsv("v2_S3_controls.csv", ["control", "arm", "setting", "G_control_pp", "G_policy_pp", "policy_minus_control_pp",
+                                  "ci95", "seeds_policy_higher", "per_seed"], rows)
+
+
+def per_round_acc(D, H, bh, ba, cfg):
+    """accuracy per evaluation round (mean over clients) at a curve point (two configurations mixed with weight w)."""
+    E, K = D["n"].shape
+    ee, kk = np.meshgrid(np.arange(E), np.arange(K), indexing="ij")
+    def at(jh, ja):
+        return D["A"][np.where(H, bh, ba), ee, kk, np.where(H, jh, ja)].mean(axis=1)
+    kind, fixed, j, w = cfg
+    if kind == "1d":
+        return w * at(j, j) + (1 - w) * at(j + 1, j + 1)
+    if kind == "fix_home":
+        return w * at(fixed, j) + (1 - w) * at(fixed, j + 1)
+    return w * at(j, fixed) + (1 - w) * at(j + 1, fixed)
+
+
+def table_slots(R):
+    """S4 (added after the v2 results were seen; not used by the decisions): G split over the Round 6 time slots.
+    At each comparison point the policy and B* are evaluated at their own best configuration; the per-round
+    difference is averaged over the three points; a slot's contribution = sum over its evaluation rounds / 31.
+    The contributions add up to G."""
+    OS = np.array(A.OPTS)
+    curves = {}
+    for a in A.ARMS:
+        for s in A.SEEDS:
+            D = R[(a, s)]
+            curves[("B", a, s)] = A.curve(D, np.ones_like(D["home"]), D["ib"], D["ib"], False, ("std",), OS)
+    er = R[("T40", A.SEEDS[0])]["er"]
+    SPEC = [("P1", "T15", "oracle", True), ("P2", "T15", ("sr", 64), True), ("P3", "T15", ("tv", 64), True),
+            ("P1", "T40", "oracle", True), ("P2", "T40", ("sr", 64), True),
+            ("Q1", "T40", "oracle", False), ("Q2", "T40", ("sr", 64), False), ("Q3", "T40", ("tv", 64), False)]
+    rows = []
+    for p, a, key, is_p in SPEC:
+        diffs = []
+        for s in A.SEEDS:
+            D = R[(a, s)]
+            ib = D["ib"]
+            H = D["sit"][key]
+            bh, two = (A.I70, False) if is_p else (ib, True)
+            _, cfgs = A.curve(D, H, bh, ib, two, ("std",), OS)
+            d = np.zeros(len(er))
+            for i in range(len(OS)):
+                best = max(A.ARMS, key=lambda b_: curves[("B", b_, s)][0][i])
+                Db = R[(best, s)]
+                rb = per_round_acc(Db, np.ones_like(Db["home"]), Db["ib"], Db["ib"], curves[("B", best, s)][1][i])
+                rp = per_round_acc(D, H, bh, ib, cfgs[i])
+                d += (rp - rb) / len(OS)
+            diffs.append(d * 100)
+        diffs = np.array(diffs)
+        for name, lo, hi in A.SLOTS:
+            m = (er >= lo) & (er <= hi)
+            cont = diffs[:, m].sum(axis=1) / len(er)
+            rows.append([p, a, name, int(m.sum()), f"{cont.mean():+.4f}", " ".join(f"{x:+.2f}" for x in cont)])
+        rows.append([p, a, "sum = G", len(er), f"{(diffs.sum(axis=1) / len(er)).mean():+.4f}",
+                     " ".join(f"{x:+.2f}" for x in diffs.sum(axis=1) / len(er))])
+    A.wcsv("v2_S4_G_by_time_slot.csv", ["policy", "arm", "slot", "eval_rounds", "contribution_to_G_pp", "per_seed_pp(5,6,7)"], rows)
+
+
 def main():
+    if sys.argv[1:] == ["slots"]:
+        table_slots({(a, s): A.load(a, s) for a in A.ARMS for s in A.SEEDS})
+        return
     if sys.argv[1:] == ["reduce"]:
         reduce_exits()
         return
     R = {(a, s): A.load(a, s) for a in A.ARMS for s in A.SEEDS}
     table_exits(R)
     table_server_use(R)
+    table_controls(R)
+    table_slots(R)
 
 
 if __name__ == "__main__":

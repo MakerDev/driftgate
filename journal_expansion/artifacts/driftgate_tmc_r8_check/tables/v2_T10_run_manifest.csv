@@ -1,0 +1,10 @@
+run_id,run_name,arm,lambda_t,seed,model_seed,env_file,complete,probe_eval_overlap,gpu_index,gpu,git_commit,wall_min,requests_npz_sha256,requests_npz_bytes
+r6_fixed_20261003_005001_092d04,r8v2_T15_s5,T15,0.15,5,105,runs/phaseT6_env/S1_seed5.npz,yes,0,0,NVIDIA GeForce RTX 4090,a81d3da,67.7,b29ffa63c2c0e4544125f3f7d6dc8dc5186bad90b0bfe343ad296dfe4db2231f,71907809
+r6_fixed_20261003_005001_0d502a,r8v2_T15_s6,T15,0.15,6,106,runs/phaseT6_env/S1_seed6.npz,yes,0,3,NVIDIA GeForce RTX 4090,a81d3da,48.7,5d0720571c83c2b13a22b5525bff26d17b719ce3d42ab2fff5756f9087157a17,74780499
+r6_fixed_20261003_005001_554b95,r8v2_T15_s7,T15,0.15,7,107,runs/phaseT6_env/S1_seed7.npz,yes,0,2,NVIDIA GeForce RTX 4090,a81d3da,46.5,d574e864eea76102f86246a78059de06b4868d59ed19b6c972add9b9ef968346,72228844
+r6_fixed_20261003_005001_b4fbcf,r8v2_T40_s5,T40,0.4,5,105,runs/phaseT6_env/S1_seed5.npz,yes,0,1,NVIDIA GeForce RTX 4090,a81d3da,48.9,7c8f1f01e4d08507b7377baf8b2bad2c3711b32cd16d4bc462b4b236418f11a9,71927531
+r6_fixed_20261003_005001_43120a,r8v2_T40_s6,T40,0.4,6,106,runs/phaseT6_env/S1_seed6.npz,yes,0,0,NVIDIA GeForce RTX 4090,a81d3da,67.7,7f596e2971569f743ddc3d4e42e1aae7d57abdf3ae6a5929aeda21b17821c1b3,74807225
+r6_fixed_20261003_005001_adc3cb,r8v2_T40_s7,T40,0.4,7,107,runs/phaseT6_env/S1_seed7.npz,yes,0,3,NVIDIA GeForce RTX 4090,a81d3da,46.7,a69c05f3a1f0962b1577aead15c7c35e85cf50ffaaba34522709214c8d194459,72208735
+r6_fixed_20261003_005001_7c39a1,r8v2_T60_s5,T60,0.6,5,105,runs/phaseT6_env/S1_seed5.npz,yes,0,2,NVIDIA GeForce RTX 4090,a81d3da,47.6,9c1dd954018fb9decd3b371a21e4d5b2af7e96a928f60cc8a5a53009efec3177,86187225
+r6_fixed_20261003_005001_8b926a,r8v2_T60_s6,T60,0.6,6,106,runs/phaseT6_env/S1_seed6.npz,yes,0,1,NVIDIA GeForce RTX 4090,a81d3da,49.6,07635dea06987a253ca172c44a8f84ce9cee9136fadb0f47bf0d9cbff8977501,89701281
+r6_fixed_20261003_005001_ec0cda,r8v2_T60_s7,T60,0.6,7,107,runs/phaseT6_env/S1_seed7.npz,yes,0,0,NVIDIA GeForce RTX 4090,a81d3da,66.4,795e5906dcbd08d1ed64d54c58d51579a3360083b8605f385158a027b1cb373e,86406415

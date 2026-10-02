@@ -14,3 +14,4 @@ journal_expansion/runs/queue*/STOP
 # mobility traces for Round 6 S2 (re-downloaded, not committed; see artifacts/driftgate_tmc_r6)
 /data/traces
 journal_expansion/runs/queue*/running_gpu*/
+journal_expansion/runs/phaseT8_check/*_requests.npz

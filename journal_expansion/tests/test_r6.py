@@ -326,3 +326,72 @@ def test_per_client_lambda_matches_cell_lambda():
         for z in a.edge_server_ids:
             for k, v in a.server_models[z].state_dict().items():
                 assert torch.equal(v, b.server_models[z].state_dict()[k]), k
+
+
+# ----------------------------------------------------------------------------- Round 8 check
+def test_capture_keeps_training_and_reproduces_installed_model():
+    """capture does not change training; mixing the captured (theta_local, cell average) with the client's
+    training lambda gives the installed client-side state bit for bit."""
+    import torch
+    from src.runner_r6 import r6_training_round, set_seed
+    from train.trainer import mix_state_dicts
+    lam = {0: 0.4, 1: 0.4, 2: 0.4}
+    Lam = {0: 0.5, 1: 0.5, 2: 0.5}
+    cA, esA, _ = _tiny_setup()
+    set_seed(4)
+    r6_training_round(cA, np.ones(len(cA), bool), esA, lam, Lam, "fixed", 0.5)
+    cB, esB, _ = _tiny_setup()
+    cap = {}
+    set_seed(4)
+    r6_training_round(cB, np.ones(len(cB), bool), esB, lam, Lam, "fixed", 0.5, capture=cap)
+    assert sorted(cap) == [c.cid for c in cB]
+    for a, b in zip(cA, cB):
+        sa, sb = a.client_model.state_dict(), b.client_model.state_dict()
+        for k in sa:
+            assert torch.equal(sa[k], sb[k]), k
+        local, avg = cap[b.cid]
+        lt = float(np.mean([lam[z] for z in b.edge_server_ids])) if len(b.edge_server_ids) > 1 else lam[b.edge_server_ids[0]]
+        mixed = mix_state_dicts(local, avg, lt)
+        for k in sb:
+            assert torch.equal(mixed[k].to(sb[k].dtype), sb[k]), k
+
+
+def test_inference_mix_eval_restores_installed_model_and_mainaware_keeps_counts():
+    import torch
+    from src.runner_r6 import eval_client, r6_training_round, set_seed
+    from train.trainer import mix_state_dicts
+    clients, ES, test_ds = _tiny_setup()
+    cap = {}
+    set_seed(2)
+    r6_training_round(clients, np.ones(len(clients), bool), ES, {0: 0.4, 1: 0.4, 2: 0.4},
+                      {0: 0.5, 1: 0.5, 2: 0.5}, "fixed", 0.5, capture=cap)
+    labels = np.array(test_ds.targets)
+    X = torch.stack([test_ds[i][0] for i in range(1500)])
+    Y = torch.as_tensor(labels[:1500])
+    idx = np.concatenate([np.flatnonzero(labels[:1500] == c)[:n] for c, n in ((0, 120), (1, 120), (2, 40), (7, 30))])
+    main = {0, 1}
+    for c in clients[:4]:
+        before = {k: v.clone() for k, v in c.client_model.state_dict().items()}
+        base = eval_client(c, X, Y, idx, main, {2}, {7})
+        ma = eval_client(c, X, Y, idx, main, {2}, {7}, mainaware=True)
+        assert {k: ma[k] for k in base} == base
+        # manual Main-aware rule
+        with torch.no_grad():
+            cl, rep = c.client_model(X[idx])
+            sl = sum(sm(rep)[0] for sm in c.server_models.values()) / len(c.server_models)
+        p = torch.softmax(cl, 1)
+        ent = -(p * torch.log(p + 1e-12)).sum(1)
+        sp, cp = sl.argmax(1), cl.argmax(1)
+        route = (ent > 0.8) | ~torch.isin(sp, torch.tensor(sorted(main)))
+        assert ma["ma_n_off"] == int(route.sum())
+        assert abs(ma["ma_correct"] - int((torch.where(route, sp, cp) == Y[idx]).sum())) <= 2   # entropy ties only
+        local, avg = cap[c.cid]
+        installed = c.get_client_state()
+        got = {}
+        for li in (0.15, 0.4, 0.7):
+            c.set_client_state(mix_state_dicts(local, avg, li))
+            got[li] = eval_client(c, X, Y, idx, main, {2}, {7})
+        c.set_client_state(installed)
+        assert got[0.4] == base
+        for k, v in c.client_model.state_dict().items():
+            assert torch.equal(v, before[k]), k

@@ -70,6 +70,12 @@ def main():
     ap.add_argument("--oracle_home_away", action="store_true",
                     help="lambda_k = 0.70 at home, 0.15 away from the environment (needs --mode fixed)")
     ap.add_argument("--fixed_Lambda", type=float, default=None, help="fix Lambda for every cell")
+    # Round 8 check (off by default -> Round 6/7 behaviour)
+    ap.add_argument("--eval_infer_lambdas", default=None,
+                    help="comma-separated lambda_inf values; every evaluation round also evaluates "
+                         "lambda_inf * theta_local + (1 - lambda_inf) * cell average (no effect on training)")
+    ap.add_argument("--eval_mainaware_route", action="store_true",
+                    help="also count the Main-aware routing rule on the installed model (reference only)")
     args = ap.parse_args()
 
     if not args.disjoint_pools:
@@ -107,7 +113,10 @@ def main():
            run_name=args.run_name, output_dir=args.output_dir, eval_every=args.eval_every,
            save_models=args.save_models, scenario=args.scenario, arm=args.arm,
            record_device_signals=args.record_device_signals, device_signal=args.device_signal,
-           oracle_home_away=args.oracle_home_away, fixed_Lambda=args.fixed_Lambda)
+           oracle_home_away=args.oracle_home_away, fixed_Lambda=args.fixed_Lambda,
+           eval_infer_lambdas=([float(v) for v in args.eval_infer_lambdas.split(",")]
+                               if args.eval_infer_lambdas else None),
+           eval_mainaware_route=args.eval_mainaware_route)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,11 @@
+# Round 8 check: end-to-end bit-identity check (CPU, S1 seed 0, model_seed 100, 2 rounds = evaluation rounds 1 and 2, --disjoint_pools)
+# old = git worktree at 394a000 (Round 7 code); new = working tree with the Round 8 changes
+# fixed = --mode fixed --lambda_val 0.4 --big_lambda_val 0.5; DriftGate = --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --no_neighbor_avg
+# R8 flags = --record_device_signals --eval_infer_lambdas 0.15,0.3,0.4,0.55,0.7 --eval_mainaware_route
+old_fx vs new_fx: mean_loss=same acc_total=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing none | only in new_fx: none
+old_dg vs new_dg: mean_loss=same acc_total=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing none | only in new_dg: none
+new_fx vs new_fx_r8: mean_loss=same acc_total=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing ['nprobe'] | only in new_fx_r8: ['at_home', 'cells', 'eval_ma_c_main', 'eval_ma_c_nonmain', 'eval_ma_correct', 'eval_ma_n_off', 'evinf_c_main', 'evinf_c_nonmain', 'evinf_correct', 'evinf_n_off', 'evinf_off_main', 'evinf_off_nonmain', 'infer_lambdas', 'q_k', 'x_sr', 'x_tv'] (nprobe: probes are drawn for --record_device_signals)
+new_fx_r8: evinf at lambda_inf = lambda_t (0.4) equals the installed-model counts: {'correct': True, 'n_off': True, 'c_main': True, 'c_nonmain': True, 'off_main': True, 'off_nonmain': True}; all clients evaluated: True; mainaware keys: ['eval_ma_correct', 'eval_ma_n_off', 'eval_ma_c_main', 'eval_ma_c_nonmain']
+   acc per lambda_inf, evaluation round 2: {'0.15': 0.36734368561505404, '0.3': 0.3775536418578184, '0.4': 0.38415396954653375, '0.55': 0.39499556050467993, '0.7': 0.4115028304848616}, installed 0.384154, main-aware 0.384154
+new_fx15_r8: evinf at lambda_inf = lambda_t (0.15) equals the installed-model counts: {'correct': True, 'n_off': True, 'c_main': True, 'c_nonmain': True, 'off_main': True, 'off_nonmain': True}; all clients evaluated: True; mainaware keys: ['eval_ma_correct', 'eval_ma_n_off', 'eval_ma_c_main', 'eval_ma_c_nonmain']
+   acc per lambda_inf, evaluation round 2: {'0.15': 0.3698226899907776, '0.3': 0.3785489963306712, '0.4': 0.3845840855130193, '0.55': 0.39324463336145826, '0.7': 0.40747125365461223}, installed 0.369823, main-aware 0.369823

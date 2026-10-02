@@ -101,10 +101,12 @@ def set_seed(seed):
 
 
 @torch.no_grad()
-def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128):
+def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False):
     """Same computation as eval.evaluator.evaluate_one_client (client exit if the
     client-exit entropy <= eth, else the mean of the client's server-exit logits),
-    on a cached normalized test tensor, plus offload counts per request kind."""
+    on a cached normalized test tensor, plus offload counts per request kind.
+    mainaware (Round 8, reference only): also count the rule "server exit if its prediction is outside
+    the client's Main classes, otherwise the entropy rule" (ma_* keys); the other keys are unchanged."""
     client.client_model.eval()
     for sm in client.server_models.values():
         sm.eval()
@@ -112,6 +114,8 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128):
                n_main=0, c_main=0, off_main=0,
                n_nonmain=0, c_nonmain=0, off_nonmain=0,
                n_oop=0, c_oop=0, n_oor=0, c_oor=0)
+    if mainaware:
+        out.update(ma_correct=0, ma_n_off=0, ma_c_main=0, ma_c_nonmain=0)
     if len(idx) == 0:
         return out
     idx_t = torch.as_tensor(np.asarray(idx), device=X.device, dtype=torch.long)
@@ -147,6 +151,13 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128):
         out["c_oop"] += int((ok & is_oop).sum())
         out["n_oor"] += int(is_oor.sum())
         out["c_oor"] += int((ok & is_oor).sum())
+        if mainaware:
+            ma_route = route | ~torch.isin(server_preds, main_t)
+            ma_ok = torch.where(ma_route, server_preds, client_preds) == y
+            out["ma_correct"] += int(ma_ok.sum())
+            out["ma_n_off"] += int(ma_route.sum())
+            out["ma_c_main"] += int((ma_ok & is_main).sum())
+            out["ma_c_nonmain"] += int((ma_ok & nonmain).sum())
     return out
 
 
@@ -154,10 +165,12 @@ def _ratio(a, b):
     return a / b if b > 0 else float("nan")
 
 
-def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None, client_lams=None):
+def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None, client_lams=None, capture=None):
     """Step 4. active: bool array over client ids. Returns (mean_loss, active_cells).
     client_lams (Round 7 gate): {client: lambda_k} -> each participating client mixes with its own lambda_k
-    instead of the mean of its cells' lambdas (same mixing and server-block update otherwise)."""
+    instead of the mean of its cells' lambdas (same mixing and server-block update otherwise).
+    capture (Round 8): a dict that receives {client: (theta_local, cell average used for mixing)} for every
+    participating client; theta_local is the client-side state right after local training (CPU copy)."""
     act = [c for c in clients if active[c.cid]]
     losses = [c.train_one_round(method="splitomcplus", gamma=gamma) for c in act]
     active_cells = []
@@ -175,6 +188,13 @@ def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None,
             Lam = Lams.get(z, 0.5)
             ES[z].clients_avg_weights = mix_state_dicts(ES[z].clients_avg_weights, global_c, Lam)
             ES[z].server_avg_weights = mix_state_dicts(ES[z].server_avg_weights, global_s, Lam)
+    if capture is not None:   # same average as train/trainer.update_client_models; nothing is modified
+        for c in act:
+            if len(c.edge_server_ids) == 1:
+                avg = ES[c.edge_server_ids[0]].clients_avg_weights
+            else:
+                avg = uniform_average([ES[e].clients_avg_weights for e in c.edge_server_ids])
+            capture[c.cid] = (c.get_client_state(), avg)
     if mode == "apfl":
         lams, eta, lo, hi = apfl["lams"], apfl["eta"], apfl["lam_min"], apfl["lam_max"]
         for c in act:   # same update as src/apfl_baseline.run_apfl_round
@@ -208,13 +228,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            apfl_eta=None, signal_delay=0, probe_n=64, controller_kwargs=None,
            run_name="run", output_dir=None, eval_every=5, save_models=False, verbose=True,
            scenario=None, arm=None, record_device_signals=False, device_signal=None,
-           oracle_home_away=False, fixed_Lambda=None):
+           oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False):
     """Round 7 gate options (all off by default -> Round 6 behaviour):
     record_device_signals: every participating client computes x_TV and x_SR on its probe in every arm
         (no grad; the probe uses the numpy probe RNG only, so training is unchanged);
     mode="device" + device_signal in {"tv", "sr"}: one lambda per client (DeviceDriftGate);
     mode="oracle" (oracle_home_away): lambda_k = 0.70 at home, 0.15 away (env at_home), every round;
-    fixed_Lambda: Lambda fixed for every cell (also overrides the cell controller's Lambda)."""
+    fixed_Lambda: Lambda fixed for every cell (also overrides the cell controller's Lambda).
+    Round 8 options (off by default):
+    eval_infer_lambdas: at every evaluation round each participating client is also evaluated with the
+        client-side model lambda_inf * theta_local + (1 - lambda_inf) * cell average, for every lambda_inf in
+        the list (same requests, server blocks, exits and routing); the installed model is restored after;
+    eval_mainaware_route: also count the Main-aware routing rule on the installed model (reference only)."""
     device = cfg["device"]
     seed, total_rounds = int(cfg["partition_seed"]), int(cfg["global_rounds"])
     ckw = controller_kwargs or {}
@@ -236,6 +261,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     if record_device_signals or mode in ("device", "oracle") or fixed_Lambda is not None:
         config.update(record_device_signals=record_device_signals, device_signal=device_signal,
                       oracle_home_away=oracle_home_away, fixed_Lambda=fixed_Lambda)
+    if eval_infer_lambdas or eval_mainaware_route:
+        config.update(eval_infer_lambdas=list(eval_infer_lambdas or []), eval_mainaware_route=eval_mainaware_route)
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
@@ -317,6 +344,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     EV = {k: np.zeros((E, K), np.int32) for k in
           ("n_total", "correct", "n_off", "n_main", "c_main", "off_main", "n_nonmain",
            "c_nonmain", "off_nonmain", "n_oop", "c_oop", "n_oor", "c_oor")}
+    if eval_mainaware_route:
+        EV.update({k: np.zeros((E, K), np.int32) for k in ("ma_correct", "ma_n_off", "ma_c_main", "ma_c_nonmain")})
+    EVI = None
+    if eval_infer_lambdas:   # -1 = client not participating in that evaluation round (not evaluated)
+        EVI = {k: np.full((E, len(eval_infer_lambdas), K), -1, np.int32) for k in
+               ("correct", "n_off", "c_main", "c_nonmain", "off_main", "off_nonmain")}
     hist = dict(round=[], mean_loss=[], lamdas=[], big_lamdas=[], q=[], s_temp=[], s_spat=[], m=[],
                 dbar=[], dbar_used=[], n_members=[], n_signals=[], rho_cell=[], n_active=[],
                 n_rewired=[], active_cells=[], probe_fallback=[], eval=[])
@@ -416,8 +449,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             cur_lam = {z: float(np.mean([client_lams[k] for k in range(K) if z in member[k, t]]))
                        if (member[:, t, :] == z).any() else float("nan") for z in range(L)}
         # 4. training
+        capture = {} if (EVI is not None and r in E_ROUNDS) else None
         mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
-                                                 client_lams=client_lams)
+                                                 client_lams=client_lams, capture=capture)
         if mode == "apfl":
             R["apfl_lam"][t] = [apfl["lams"][k] for k in range(K)]
             cur_lam = {z: float(np.mean([apfl["lams"][c.cid] for c in ES[z].clients]))
@@ -457,9 +491,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 idx, oop, oor, flag = eval_rb.build(mains[k], cells_of(k, t), float(env["rho"][k, t]))
                 efb[flag] += 1
                 eval_used.update(int(i) for i in idx)
-                res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth)
+                res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route)
                 for key in EV:
                     EV[key][e, k] = res[key]
+                if capture is not None and k in capture:   # Round 8: inference-only mixing ratios
+                    installed = c.get_client_state()
+                    local, avg = capture[k]
+                    for i, li in enumerate(eval_infer_lambdas):
+                        c.set_client_state(mix_state_dicts(local, avg, float(li)))
+                        ri = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth)
+                        for key in EVI:
+                            EVI[key][e, i, k] = ri[key]
+                    c.set_client_state(installed)
             acc = EV["correct"][e] / np.maximum(EV["n_total"][e], 1)
             acc_main = [_ratio(a, b) for a, b in zip(EV["c_main"][e], EV["n_main"][e])]
             acc_nm = [_ratio(a, b) for a, b in zip(EV["c_nonmain"][e], EV["n_nonmain"][e])]
@@ -468,6 +511,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                       offload_rate=float(EV["n_off"][e].sum() / max(EV["n_total"][e].sum(), 1)),
                       n_eval=int(EV["n_total"][e].sum()), fallback=efb,
                       per_client_acc={str(k): float(acc[k]) for k in range(K)})
+            if EVI is not None:
+                ok_k = EVI["correct"][e, 0] >= 0
+                ev["acc_infer"] = {str(li): float(np.mean(EVI["correct"][e, i][ok_k] / np.maximum(EV["n_total"][e][ok_k], 1)))
+                                   for i, li in enumerate(eval_infer_lambdas)}
+            if eval_mainaware_route:
+                ev["acc_mainaware"] = float(np.mean(EV["ma_correct"][e] / np.maximum(EV["n_total"][e], 1)))
             hist["eval"].append(ev)
             if verbose:
                 el = time.time() - t_start
@@ -490,7 +539,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         with open(out / f"{run_name}.json", "w") as f:
             json.dump(hist, f, default=lambda o: float(o) if isinstance(o, (np.floating, np.integer)) else str(o))
         np.savez_compressed(out / f"{run_name}_trace.npz", eval_rounds=np.array(E_ROUNDS),
-                            **R, **{f"eval_{k}": v for k, v in EV.items()})
+                            **R, **{f"eval_{k}": v for k, v in EV.items()},
+                            **({"infer_lambdas": np.array(eval_infer_lambdas, np.float64)} if EVI is not None else {}),
+                            **({f"evinf_{k}": v for k, v in EVI.items()} if EVI is not None else {}))
         if save_models:
             home = int(env["home_cell"][0])
             hub = int(np.flatnonzero(env["cell_is_hub"])[0]) if env["cell_is_hub"].any() else home

@@ -1,0 +1,13 @@
+# Round 8 check: GPU reproducibility (S1 seed 5, model_seed 105, 6 rounds, RTX 4090, run at the same time on GPUs 0-3)
+# g_plainA, g_plainB: the Round 7 F command (fixed lambda 0.4, Lambda 0.5, --record_device_signals), twice
+# g_r8: the same + --eval_infer_lambdas 0.15,0.3,0.4,0.55,0.7 --eval_mainaware_route (= T40); g_r8_15: lambda_t 0.15 (= T15)
+g_plainA                       mean_loss 0.8890208 0.5645187 0.4910010 0.4571393 0.4347232 0.4208816
+g_plainB                       mean_loss 0.8890247 0.5645304 0.4910238 0.4571017 0.4346975 0.4208350
+g_r8                           mean_loss 0.8890315 0.5645368 0.4910020 0.4571113 0.4347333 0.4208569
+Round 7 r7_F_s5, rounds 1-6    mean_loss 0.8890110 0.5645205 0.4909870 0.4571177 0.4347182 0.4208618
+g_plainA vs g_plainB (identical commands): max |loss diff| = 4.66e-05, eval acc_total diff (rounds 1, 5, 6) = [0.027, 0.041, -0.018]
+g_plainA vs g_r8: max |loss diff| = 2.80e-05
+=> GPU training is not bit-reproducible run to run (non-deterministic GPU kernels; cudnn.deterministic is not set in this code base).
+   The flags' effect on training is therefore checked bit for bit on the CPU (bit_identity_check.txt).
+g_r8 (lambda_t 0.4): evinf at lambda_inf = lambda_t equals the installed-model counts on the GPU: {'correct': True, 'n_off': True, 'c_main': True, 'c_nonmain': True, 'off_main': True, 'off_nonmain': True}
+g_r8_15 (lambda_t 0.15): evinf at lambda_inf = lambda_t equals the installed-model counts on the GPU: {'correct': True, 'n_off': True, 'c_main': True, 'c_nonmain': True, 'off_main': True, 'off_nonmain': True}

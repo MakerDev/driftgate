@@ -433,3 +433,44 @@ def test_compute_client_signals_per_request():
         assert len(per["tv"]) == 64 and per["sr"].dtype == bool
         assert abs(float(per["tv"].mean()) - a["tv_dist"]) < 1e-6
         assert float(per["sr"].mean()) == a["server_nonmain_hard"]
+
+
+# ----------------------------------------------------------------------------- Round 10
+def test_client_label_hist_matches_cached_loader_epochs():
+    """the label counts recorded per round equal the labels a client's CachedLoader yields over local_epochs epochs."""
+    import torch
+    from src.runner_r6 import CachedLoader, client_label_hist, set_seed
+    from data.partition import get_cifar10
+    train_ds, _ = get_cifar10("./data_cache")
+    labels = np.array(train_ds.targets)
+    idx = np.concatenate([np.flatnonzero(labels == c)[:n] for c, n in ((0, 37), (3, 21), (8, 5))]).tolist()
+    X = torch.zeros((len(labels), 1))
+    Y = torch.as_tensor(labels)
+    loader = CachedLoader(idx, X, Y, batch_size=16)
+    set_seed(1)
+    seen = np.zeros(10, np.int64)
+    for _ in range(3):
+        for _, yb in loader:
+            seen += np.bincount(yb.numpy(), minlength=10)
+    assert np.array_equal(seen, client_label_hist(idx, labels, 10, 3))
+
+
+def test_eval_client_record_probs_keeps_counts_and_matches_predictions():
+    import torch
+    from src.runner_r6 import eval_client
+    clients, ES, test_ds = _tiny_setup()
+    labels = np.array(test_ds.targets)
+    X = torch.stack([test_ds[i][0] for i in range(1500)])
+    Y = torch.as_tensor(labels[:1500])
+    idx = np.concatenate([np.flatnonzero(labels[:1500] == c)[:n] for c, n in ((0, 150), (1, 130), (2, 40), (7, 30))])
+    for c in clients[:4]:
+        base = eval_client(c, X, Y, idx, {0, 1}, {2}, {7})
+        rec = {}
+        got = eval_client(c, X, Y, idx, {0, 1}, {2}, {7}, record=rec, record_probs=True)
+        assert got == base
+        pc, ps = rec["pc"].astype(np.float64), rec["ps"].astype(np.float64)
+        assert rec["pc"].dtype == np.float16 and pc.shape == (len(idx), 10)
+        assert np.allclose(pc.sum(1), 1, atol=1e-2) and np.allclose(ps.sum(1), 1, atol=1e-2)
+        assert (pc.argmax(1) == rec["cp"]).mean() > 0.99 and (ps.argmax(1) == rec["sp"]).mean() > 0.99
+        ent = -(pc * np.log(np.clip(pc, 1e-12, 1))).sum(1)
+        assert np.abs(ent - rec["ent"]).max() < 5e-2

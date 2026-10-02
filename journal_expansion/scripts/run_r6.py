@@ -80,6 +80,11 @@ def main():
     ap.add_argument("--record_eval_requests", action="store_true",
                     help="per evaluated request and lambda_inf block: client-exit prediction and entropy, server-exit "
                          "prediction, label, kind, client, round, at_home -> {run}_requests.npz")
+    ap.add_argument("--record_eval_probs", action="store_true",
+                    help="Round 10: per evaluated request, softmax probabilities of both exits (float16) and the "
+                         "request items, with an arrival order -> {run}_evalprobs.npz")
+    ap.add_argument("--record_train_label_hist", action="store_true",
+                    help="Round 10: per training round, label counts trained by each cell's server block and by all clients")
     ap.add_argument("--record_probe_values", action="store_true",
                     help="per probe request TV and server-non-Main indicator (needs --record_device_signals)")
     args = ap.parse_args()
@@ -123,7 +128,8 @@ def main():
            eval_infer_lambdas=([float(v) for v in args.eval_infer_lambdas.split(",")]
                                if args.eval_infer_lambdas else None),
            eval_mainaware_route=args.eval_mainaware_route,
-           record_eval_requests=args.record_eval_requests, record_probe_values=args.record_probe_values)
+           record_eval_requests=args.record_eval_requests, record_probe_values=args.record_probe_values,
+           record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist)
 
 
 if __name__ == "__main__":

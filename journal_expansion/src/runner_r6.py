@@ -88,6 +88,13 @@ def use_cached_loaders(clients, indices, train_ds, device, batch_size):
     return X, Y
 
 
+def client_label_hist(indices, train_labels, num_classes, local_epochs):
+    """Round 10: label counts of the samples one client trains on in one round. CachedLoader passes over all of the
+    client's indices once per local epoch (shuffle, drop_last=False), and every batch trains the client block and the
+    server block of every cell the client belongs to."""
+    return local_epochs * np.bincount(np.asarray(train_labels)[np.asarray(indices, dtype=np.int64)], minlength=num_classes)
+
+
 def eval_rounds_for(total_rounds, every=5):
     return sorted({1} | set(range(every, total_rounds + 1, every)) | {total_rounds})
 
@@ -101,14 +108,17 @@ def set_seed(seed):
 
 
 @torch.no_grad()
-def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False, record=None):
+def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False, record=None,
+                record_probs=False):
     """Same computation as eval.evaluator.evaluate_one_client (client exit if the
     client-exit entropy <= eth, else the mean of the client's server-exit logits),
     on a cached normalized test tensor, plus offload counts per request kind.
     mainaware (Round 8, reference only): also count the rule "server exit if its prediction is outside
     the client's Main classes, otherwise the entropy rule" (ma_* keys); the other keys are unchanged.
     record (Round 8 v2): a dict that receives, for every request in idx order, the client-exit prediction "cp",
-    the client-exit entropy "ent" (float32, the value compared with eth) and the server-exit prediction "sp"."""
+    the client-exit entropy "ent" (float32, the value compared with eth) and the server-exit prediction "sp".
+    record_probs (Round 10, with record): also the softmax probabilities of the client exit "pc" and of the server exit
+    "ps" (after averaging the server logits of the client's cells), float16, in idx order."""
     client.client_model.eval()
     for sm in client.server_models.values():
         sm.eval()
@@ -126,6 +136,8 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
     oor_t = torch.as_tensor(sorted(oor), device=X.device, dtype=torch.long)
     sms = list(client.server_models.values())
     rec = {"cp": [], "ent": [], "sp": []} if record is not None else None
+    if rec is not None and record_probs:
+        rec.update(pc=[], ps=[])
     for s in range(0, len(idx_t), batch_size):
         b = idx_t[s:s + batch_size]
         x, y = X[b], Y[b]
@@ -139,6 +151,9 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
             rec["cp"].append(client_preds.cpu())
             rec["ent"].append(entropy.float().cpu())
             rec["sp"].append(server_preds.cpu())
+            if record_probs:
+                rec["pc"].append(torch.softmax(client_logits.float(), dim=1).half().cpu())
+                rec["ps"].append(torch.softmax(server_logits.float(), dim=1).half().cpu())
         final = torch.where(route, server_preds, client_preds)
         ok = final == y
         is_main = torch.isin(y, main_t)
@@ -238,7 +253,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            run_name="run", output_dir=None, eval_every=5, save_models=False, verbose=True,
            scenario=None, arm=None, record_device_signals=False, device_signal=None,
            oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False,
-           record_eval_requests=False, record_probe_values=False):
+           record_eval_requests=False, record_probe_values=False, record_eval_probs=False,
+           record_train_label_hist=False):
     """Round 7 gate options (all off by default -> Round 6 behaviour):
     record_device_signals: every participating client computes x_TV and x_SR on its probe in every arm
         (no grad; the probe uses the numpy probe RNG only, so training is unchanged);
@@ -256,7 +272,13 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         lambda_inf block, plus the installed model when lambda_t is not one of the lambda_inf values; with the
         request's client, evaluation round, label, kind (Main / OOP / OOR) and at_home -> {run}_requests.npz;
     record_probe_values (needs record_device_signals): per probe request TV and server-non-Main indicator
-        (probe_tv, probe_sr in the trace; in probe draw order)."""
+        (probe_tv, probe_sr in the trace; in probe draw order).
+    Round 10 options (off by default):
+    record_eval_probs: for every evaluated request of every client, the softmax probabilities of both exits (float16)
+        with the items of record_eval_requests for the installed model, the position in the evaluation order and a
+        random arrival order per client and evaluation round (own RNG, no effect on training) -> {run}_evalprobs.npz;
+    record_train_label_hist: per training round, the label counts of the samples each cell's server block trained on
+        and of the samples all participating clients trained on (train_hist_cell [T, L, C], train_hist_all [T, C])."""
     device = cfg["device"]
     seed, total_rounds = int(cfg["partition_seed"]), int(cfg["global_rounds"])
     ckw = controller_kwargs or {}
@@ -284,6 +306,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         assert not record_eval_requests or eval_infer_lambdas, "--record_eval_requests needs --eval_infer_lambdas"
         assert not record_probe_values or record_device_signals, "--record_probe_values needs --record_device_signals"
         config.update(record_eval_requests=record_eval_requests, record_probe_values=record_probe_values)
+    if record_eval_probs or record_train_label_hist:
+        config.update(record_eval_probs=record_eval_probs, record_train_label_hist=record_train_label_hist)
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
@@ -362,6 +386,13 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                  q_k=np.full((total_rounds, K), nan, np.float32),
                  at_home=env["at_home"][:, :total_rounds].T.copy(),
                  cells=np.transpose(member[:, :total_rounds, :], (1, 0, 2)).copy())
+    if record_train_label_hist:
+        C_ = cfg["num_classes"]
+        HK = {k: client_label_hist(indices[k], train_labels, C_, int(cfg["local_epochs"])) for k in range(K)}
+        R.update(train_hist_cell=np.zeros((total_rounds, L, C_), np.int32), train_hist_all=np.zeros((total_rounds, C_), np.int32))
+        if "cells" not in R:
+            R["cells"] = np.transpose(member[:, :total_rounds, :], (1, 0, 2)).copy()
+    PRB = [] if record_eval_probs else None
     EV = {k: np.zeros((E, K), np.int32) for k in
           ("n_total", "correct", "n_off", "n_main", "c_main", "off_main", "n_nonmain",
            "c_nonmain", "off_nonmain", "n_oop", "c_oop", "n_oor", "c_oor")}
@@ -484,6 +515,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             cur_lam = {z: float(np.mean([client_lams[k] for k in range(K) if z in member[k, t]]))
                        if (member[:, t, :] == z).any() else float("nan") for z in range(L)}
         # 4. training
+        if record_train_label_hist:   # membership used by this round's training and cell averages
+            for z in range(L):
+                for c in ES[z].clients:
+                    if active[c.cid]:
+                        R["train_hist_cell"][t, z] += HK[c.cid]
+            R["train_hist_all"][t] = sum(HK[k] for k in range(K) if active[k]) if active.any() else 0
         capture = {} if (EVI is not None and r in E_ROUNDS) else None
         mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
                                                  client_lams=client_lams, capture=capture)
@@ -527,9 +564,16 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 efb[flag] += 1
                 eval_used.update(int(i) for i in idx)
                 rq = REQ is not None and capture is not None and k in capture
-                rec_inst = {} if rq else None
+                rec_inst = {} if (rq or PRB is not None) else None
                 res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route,
-                                  record=rec_inst)
+                                  record=rec_inst, record_probs=PRB is not None)
+                if PRB is not None:   # Round 10: both exits' probabilities, with a random arrival order
+                    lab_p = np.asarray(Y_test[torch.as_tensor(np.asarray(idx), device=Y_test.device)].cpu().numpy())
+                    kind_p = np.where(np.isin(lab_p, sorted(mains[k])), 0, np.where(np.isin(lab_p, sorted(oop)), 1,
+                                      np.where(np.isin(lab_p, sorted(oor)), 2, 3)))
+                    arr = np.random.default_rng([int(seed), 10, int(r), int(k)]).permutation(len(idx))
+                    PRB.append(dict(e=e, k=k, n=len(idx), label=lab_p, kind=kind_p, home=bool(env["at_home"][k, t]),
+                                    arrival=arr, **{x: rec_inst[x] for x in ("cp", "ent", "sp", "pc", "ps")}))
                 for key in EV:
                     EV[key][e, k] = res[key]
                 if capture is not None and k in capture:   # Round 8: inference-only mixing ratios
@@ -595,6 +639,22 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                             **R, **{f"eval_{k}": v for k, v in EV.items()},
                             **({"infer_lambdas": np.array(eval_infer_lambdas, np.float64)} if EVI is not None else {}),
                             **({f"evinf_{k}": v for k, v in EVI.items()} if EVI is not None else {}))
+        if PRB is not None:
+            ns = [m["n"] for m in PRB]
+            np.savez_compressed(out / f"{run_name}_evalprobs.npz", eval_rounds=np.array(E_ROUNDS),
+                                req_eval_index=np.repeat([m["e"] for m in PRB], ns).astype(np.uint8),
+                                req_client=np.repeat([m["k"] for m in PRB], ns).astype(np.uint8),
+                                req_home=np.repeat([m["home"] for m in PRB], ns).astype(bool),
+                                req_label=np.concatenate([m["label"] for m in PRB]).astype(np.uint8),
+                                req_kind=np.concatenate([m["kind"] for m in PRB]).astype(np.int8),
+                                req_order=np.concatenate([np.arange(m["n"]) for m in PRB]).astype(np.int32),
+                                req_arrival=np.concatenate([m["arrival"] for m in PRB]).astype(np.int32),
+                                cp=np.concatenate([m["cp"] for m in PRB]).astype(np.uint8),
+                                ent=np.concatenate([m["ent"] for m in PRB]).astype(np.float32),
+                                sp=np.concatenate([m["sp"] for m in PRB]).astype(np.uint8),
+                                pc=np.concatenate([m["pc"] for m in PRB]).astype(np.float16),
+                                ps=np.concatenate([m["ps"] for m in PRB]).astype(np.float16),
+                                arrival_rng=np.array("numpy default_rng([partition_seed, 10, round, client]).permutation(n)"))
         if REQ is not None:
             ns = [m["n"] for m in REQ["meta"]]
             blk_lam = list(eval_infer_lambdas) + ([float(lambda_val) if mode == "fixed" else float("nan")]

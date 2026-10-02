@@ -1,0 +1,10 @@
+# Round 10: end-to-end check (CPU, S1 seed 0, model_seed 100, 2 rounds = evaluation rounds 1 and 2, --disjoint_pools)
+# old = git worktree at d1d053b (before Round 10); new = working tree with the Round 10 changes
+# fixed = --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --record_device_signals --record_probe_values (the T40 recording flags)
+# DriftGate = --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --no_neighbor_avg; R10 flags = --record_eval_probs --record_train_label_hist
+old_fx vs new_fx: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same json_keys=same | trace arrays compared 27, differing none | only in new_fx: none
+old_dg vs new_dg: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same json_keys=same | trace arrays compared 20, differing none | only in new_dg: none
+new_fx vs new_fx_r10: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same json_keys=same | trace arrays compared 27, differing none | only in new_fx_r10: ['train_hist_all', 'train_hist_cell']
+new_fx_r10 evalprobs: requests 180648 | entropy-routing recomputation equals eval_correct: True | argmax(pc fp16)=cp: 0.999801 argmax(ps fp16)=sp: 0.999518
+arrival order is a permutation within every client and round: True | evaluation position recorded 0..n-1: True
+train_hist_all per round (sum): [149907, 149907] | train_hist_cell per round (sum over cells): [160851, 160851] | cells with zero samples: 0

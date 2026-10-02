@@ -1,0 +1,20 @@
+  [T1_runs_and_means.csv] 24 rows
+  [T2_paired_differences.csv] 18 rows
+  [T3_lambda_home_away.csv] 35 rows
+  [T4_signal_auroc_away.csv] 8 rows
+  [T5_lambda_response.csv] 10 rows
+  [T7_slot_decomposition.csv] 24 rows
+  [T8_clients_away_by_slot.csv] 5 rows
+{
+ "O_minus_F_pp": 0.928151659610336,
+ "threshold_upper_pp": 1.0,
+ "room": "small",
+ "verdict": "O \u2212 F < 1.0 pp: little room for device-level control; no further decision",
+ "C_Lambda_minus_C_pp": 0.2816796530508185,
+ "auroc_away": {
+  "x_tv": 0.9049975446840833,
+  "x_sr": 0.9625054481492721
+ }
+}
+  [T6_run_manifest.csv] 18 rows
+  figures written

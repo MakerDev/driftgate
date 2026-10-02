@@ -1,0 +1,6 @@
+slot,mean_clients_away,min_clients_away
+pre-commute,0.9,0
+commute,24.9,3
+daytime,34.5,31
+return,21.2,1
+evening,0.8,0

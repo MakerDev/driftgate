@@ -1,0 +1,7 @@
+# Round 7 gate: end-to-end bit-identity check (CPU, S1 seed 0, model_seed 100, 2 rounds, --disjoint_pools)
+# old = git worktree at 85c3cf1 (Round 6 code); new = working tree with the Round 7 changes (committed as 1b77f6a)
+# DriftGate = --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --no_neighbor_avg; fixed = --lambda_val 0.4 --big_lambda_val 0.5
+old_dg vs new_dg: acc_total=same per_client_acc=same mean_loss=same lamdas=same big_lamdas=same | trace arrays compared 20, differing none
+old_fx vs new_fx: acc_total=same per_client_acc=same mean_loss=same lamdas=same big_lamdas=same | trace arrays compared 20, differing none
+new_fx vs new_fx_rec: acc_total=same per_client_acc=same mean_loss=same lamdas=same big_lamdas=same | trace arrays compared 20, differing ['nprobe'] (nprobe is now also stored when the probe is drawn only for recording)
+new_dg vs new_dg_rec: acc_total=same per_client_acc=same mean_loss=same lamdas=same big_lamdas=same | trace arrays compared 20, differing none

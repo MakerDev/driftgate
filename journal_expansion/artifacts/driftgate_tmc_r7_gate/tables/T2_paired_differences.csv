@@ -1,0 +1,19 @@
+comparison,accuracy,mean_pp,ci95,n_pos,n,"per_seed_pp(5,6,7)"
+O (oracle) − F (fixed 0.4),integrated,+0.9282,"[-0.67, +2.53]",3,3,+1.49 +1.07 +0.22
+O (oracle) − F (fixed 0.4),at home,+3.6961,"[+0.15, +7.24]",3,3,+3.29 +5.28 +2.51
+O (oracle) − F (fixed 0.4),away,-1.7464,"[-4.58, +1.08]",0,3,-0.43 -2.45 -2.35
+"D-TV (device, x_TV) − F (fixed 0.4)",integrated,-0.2802,"[-0.96, +0.40]",0,3,-0.04 -0.58 -0.22
+"D-TV (device, x_TV) − F (fixed 0.4)",at home,-0.7064,"[-3.19, +1.78]",1,3,+0.39 -1.57 -0.94
+"D-TV (device, x_TV) − F (fixed 0.4)",away,-0.2442,"[-1.35, +0.86]",1,3,-0.65 -0.31 +0.23
+"D-SR (device, x_SR) − F (fixed 0.4)",integrated,-0.1752,"[-0.78, +0.43]",1,3,+0.03 -0.11 -0.44
+"D-SR (device, x_SR) − F (fixed 0.4)",at home,+0.2025,"[-0.76, +1.16]",2,3,+0.48 +0.36 -0.24
+"D-SR (device, x_SR) − F (fixed 0.4)",away,-0.4692,"[-0.93, -0.01]",0,3,-0.31 -0.67 -0.43
+C (cell DriftGate) − F (fixed 0.4),integrated,-0.6256,"[-2.10, +0.85]",1,3,+0.06 -0.98 -0.95
+C (cell DriftGate) − F (fixed 0.4),at home,-1.5242,"[-5.40, +2.35]",1,3,+0.27 -2.58 -2.26
+C (cell DriftGate) − F (fixed 0.4),away,-0.1837,"[-1.34, +0.97]",1,3,-0.55 -0.35 +0.34
+"C-Λ (cell, Λ=0.5) − C (cell DriftGate)",integrated,+0.2817,"[-0.35, +0.91]",3,3,+0.03 +0.28 +0.53
+"C-Λ (cell, Λ=0.5) − C (cell DriftGate)",at home,+0.2237,"[-0.52, +0.97]",2,3,-0.04 +0.16 +0.55
+"C-Λ (cell, Λ=0.5) − C (cell DriftGate)",away,+0.4679,"[+0.15, +0.78]",3,3,+0.43 +0.37 +0.61
+"D-SR (device, x_SR) − D-TV (device, x_TV)",integrated,+0.1050,"[-0.75, +0.96]",2,3,+0.07 +0.47 -0.22
+"D-SR (device, x_SR) − D-TV (device, x_TV)",at home,+0.9089,"[-1.42, +3.24]",3,3,+0.09 +1.93 +0.71
+"D-SR (device, x_SR) − D-TV (device, x_TV)",away,-0.2250,"[-1.49, +1.04]",1,3,+0.34 -0.36 -0.66

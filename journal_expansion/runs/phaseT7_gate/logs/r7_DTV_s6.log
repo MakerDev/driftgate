@@ -1,0 +1,33 @@
+[r7_DTV_s6] scenario=S1 arm=DTV mode=device K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.872 acc=0.3806 off=1.000 active=50 elapsed=0.6m ETA=93m
+  R  5 loss=0.436 acc=0.5557 off=1.000 active=50 elapsed=2.8m ETA=82m
+  R 10 loss=0.382 acc=0.6060 off=0.996 active=50 elapsed=5.7m ETA=80m
+  R 15 loss=0.350 acc=0.6358 off=0.992 active=50 elapsed=8.4m ETA=76m
+  R 20 loss=0.324 acc=0.6633 off=0.983 active=50 elapsed=11.2m ETA=73m
+  R 25 loss=0.302 acc=0.6576 off=0.968 active=50 elapsed=14.0m ETA=70m
+  R 30 loss=0.278 acc=0.6034 off=0.921 active=50 elapsed=16.9m ETA=68m
+  R 35 loss=0.290 acc=0.5352 off=0.957 active=50 elapsed=19.9m ETA=65m
+  R 40 loss=0.294 acc=0.5241 off=0.963 active=50 elapsed=22.7m ETA=63m
+  R 45 loss=0.288 acc=0.5160 off=0.962 active=50 elapsed=25.5m ETA=60m
+  R 50 loss=0.277 acc=0.5332 off=0.964 active=50 elapsed=28.4m ETA=57m
+  R 55 loss=0.270 acc=0.5391 off=0.951 active=50 elapsed=31.2m ETA=54m
+  R 60 loss=0.256 acc=0.5493 off=0.926 active=50 elapsed=34.2m ETA=51m
+  R 65 loss=0.247 acc=0.5601 off=0.949 active=50 elapsed=37.0m ETA=48m
+  R 70 loss=0.241 acc=0.5620 off=0.959 active=50 elapsed=40.0m ETA=46m
+  R 75 loss=0.234 acc=0.5849 off=0.953 active=50 elapsed=42.8m ETA=43m
+  R 80 loss=0.225 acc=0.6095 off=0.954 active=50 elapsed=45.8m ETA=40m
+  R 85 loss=0.213 acc=0.6063 off=0.934 active=50 elapsed=48.7m ETA=37m
+  R 90 loss=0.207 acc=0.5868 off=0.927 active=50 elapsed=51.6m ETA=34m
+  R 95 loss=0.203 acc=0.5903 off=0.933 active=50 elapsed=54.5m ETA=32m
+  R100 loss=0.200 acc=0.5998 off=0.927 active=50 elapsed=57.4m ETA=29m
+  R105 loss=0.192 acc=0.5925 off=0.943 active=50 elapsed=60.3m ETA=26m
+  R110 loss=0.187 acc=0.6125 off=0.938 active=50 elapsed=63.2m ETA=23m
+  R115 loss=0.179 acc=0.6145 off=0.936 active=50 elapsed=66.2m ETA=20m
+  R120 loss=0.180 acc=0.6131 off=0.927 active=50 elapsed=69.1m ETA=17m
+  R125 loss=0.168 acc=0.6686 off=0.895 active=50 elapsed=72.0m ETA=14m
+  R130 loss=0.165 acc=0.7087 off=0.881 active=50 elapsed=74.9m ETA=12m
+  R135 loss=0.154 acc=0.7573 off=0.841 active=50 elapsed=77.8m ETA=9m
+  R140 loss=0.141 acc=0.7889 off=0.744 active=50 elapsed=80.7m ETA=6m
+  R145 loss=0.138 acc=0.7997 off=0.719 active=50 elapsed=82.4m ETA=3m
+  R150 loss=0.132 acc=0.8098 off=0.691 active=50 elapsed=83.9m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT7_gate/r7_DTV_s6.json  integrated=0.6118

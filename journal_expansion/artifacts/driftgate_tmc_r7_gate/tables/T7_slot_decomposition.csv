@@ -1,0 +1,25 @@
+comparison,slot,eval_rounds,mean_diff_in_slot_pp,contribution_to_integrated_pp,"per_seed_diff_in_slot_pp(5,6,7)"
+O (oracle) − F (fixed 0.4),pre-commute,6,+1.9132,+0.3703,+1.55 +2.68 +1.51
+O (oracle) − F (fixed 0.4),commute,4,+0.2703,+0.0349,+1.13 +0.40 -0.72
+O (oracle) − F (fixed 0.4),daytime,13,+0.6345,+0.2661,+1.49 +0.66 -0.25
+O (oracle) − F (fixed 0.4),return,6,+1.1044,+0.2137,+1.53 +0.93 +0.86
+O (oracle) − F (fixed 0.4),evening,2,+0.6690,+0.0432,+1.87 +0.71 -0.58
+O (oracle) − F (fixed 0.4),sum = integrated,31,,+0.9282,
+"D-TV (device, x_TV) − F (fixed 0.4)",pre-commute,6,+0.0537,+0.0104,+0.02 +0.12 +0.02
+"D-TV (device, x_TV) − F (fixed 0.4)",commute,4,-0.3196,-0.0412,-0.12 -0.43 -0.41
+"D-TV (device, x_TV) − F (fixed 0.4)",daytime,13,-0.3210,-0.1346,-0.15 -0.88 +0.07
+"D-TV (device, x_TV) − F (fixed 0.4)",return,6,-0.5631,-0.1090,-0.09 -0.79 -0.81
+"D-TV (device, x_TV) − F (fixed 0.4)",evening,2,-0.0894,-0.0058,+0.80 -0.38 -0.69
+"D-TV (device, x_TV) − F (fixed 0.4)",sum = integrated,31,,-0.2802,
+"D-SR (device, x_SR) − F (fixed 0.4)",pre-commute,6,+0.0530,+0.0103,+0.00 +0.12 +0.03
+"D-SR (device, x_SR) − F (fixed 0.4)",commute,4,-0.2823,-0.0364,+0.13 -0.16 -0.81
+"D-SR (device, x_SR) − F (fixed 0.4)",daytime,13,-0.1555,-0.0652,+0.26 -0.21 -0.52
+"D-SR (device, x_SR) − F (fixed 0.4)",return,6,-0.2129,-0.0412,-0.28 +0.06 -0.42
+"D-SR (device, x_SR) − F (fixed 0.4)",evening,2,-0.6612,-0.0427,-0.60 -0.65 -0.73
+"D-SR (device, x_SR) − F (fixed 0.4)",sum = integrated,31,,-0.1752,
+C (cell DriftGate) − F (fixed 0.4),pre-commute,6,-0.0189,-0.0037,+0.27 -0.11 -0.21
+C (cell DriftGate) − F (fixed 0.4),commute,4,-0.3228,-0.0416,-0.09 -0.37 -0.51
+C (cell DriftGate) − F (fixed 0.4),daytime,13,-0.9692,-0.4064,-0.22 -1.49 -1.19
+C (cell DriftGate) − F (fixed 0.4),return,6,-0.6860,-0.1328,+0.57 -1.45 -1.18
+C (cell DriftGate) − F (fixed 0.4),evening,2,-0.6363,-0.0411,+0.01 -0.07 -1.85
+C (cell DriftGate) − F (fixed 0.4),sum = integrated,31,,-0.6256,

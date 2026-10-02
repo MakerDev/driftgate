@@ -1,0 +1,36 @@
+arm,rounds,mean_lambda_home,mean_lambda_away,home_minus_away
+C (cell DriftGate),all rounds,0.3651,0.2835,+0.0816
+C (cell DriftGate),after warm-up (26-150),0.3384,0.2827,+0.0557
+C (cell DriftGate),pre-commute,0.4250,0.4250,+0.0000
+C (cell DriftGate),commute,0.4568,0.3738,+0.0831
+C (cell DriftGate),daytime,0.2696,0.2649,+0.0048
+C (cell DriftGate),return,0.3216,0.2694,+0.0521
+C (cell DriftGate),evening,0.3931,0.3901,+0.0030
+"C-Λ (cell, Λ=0.5)",all rounds,0.3635,0.2803,+0.0832
+"C-Λ (cell, Λ=0.5)",after warm-up (26-150),0.3360,0.2795,+0.0565
+"C-Λ (cell, Λ=0.5)",pre-commute,0.4250,0.4250,+0.0000
+"C-Λ (cell, Λ=0.5)",commute,0.4534,0.3681,+0.0853
+"C-Λ (cell, Λ=0.5)",daytime,0.2659,0.2616,+0.0043
+"C-Λ (cell, Λ=0.5)",return,0.3187,0.2687,+0.0500
+"C-Λ (cell, Λ=0.5)",evening,0.3954,0.3643,+0.0311
+"D-TV (device, x_TV)",all rounds,0.3996,0.2845,+0.1151
+"D-TV (device, x_TV)",after warm-up (26-150),0.3878,0.2837,+0.1041
+"D-TV (device, x_TV)",pre-commute,0.4250,0.4250,+0.0000
+"D-TV (device, x_TV)",commute,0.4954,0.3413,+0.1541
+"D-TV (device, x_TV)",daytime,0.3594,0.2757,+0.0838
+"D-TV (device, x_TV)",return,0.3494,0.2646,+0.0847
+"D-TV (device, x_TV)",evening,0.4054,0.4618,-0.0565
+"D-SR (device, x_SR)",all rounds,0.4579,0.2752,+0.1826
+"D-SR (device, x_SR)",after warm-up (26-150),0.4721,0.2743,+0.1978
+"D-SR (device, x_SR)",pre-commute,0.4250,0.4250,+0.0000
+"D-SR (device, x_SR)",commute,0.5004,0.2932,+0.2071
+"D-SR (device, x_SR)",daytime,0.4529,0.2752,+0.1777
+"D-SR (device, x_SR)",return,0.4695,0.2576,+0.2119
+"D-SR (device, x_SR)",evening,0.4862,0.1704,+0.3158
+O (oracle),all rounds,0.7000,0.1500,+0.5500
+O (oracle),after warm-up (26-150),0.7000,0.1500,+0.5500
+O (oracle),pre-commute,0.7000,0.1500,+0.5500
+O (oracle),commute,0.7000,0.1500,+0.5500
+O (oracle),daytime,0.7000,0.1500,+0.5500
+O (oracle),return,0.7000,0.1500,+0.5500
+O (oracle),evening,0.7000,0.1500,+0.5500

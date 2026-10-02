@@ -1,0 +1,19 @@
+run_id,run_name,arm,seed,model_seed,env_file,complete,rounds,probe_eval_overlap,overlap_ok,gpu_index,gpu,git_commit,wall_min
+r6_fixed_20261002_210947_5505f5,r7_F_s5,F (fixed 0.4),5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,0,NVIDIA GeForce RTX 4090,1b77f6a,82.4
+r6_fixed_20261002_210947_35067d,r7_F_s6,F (fixed 0.4),6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,2,NVIDIA GeForce RTX 4090,1b77f6a,68.4
+r6_fixed_20261002_210947_ddafea,r7_F_s7,F (fixed 0.4),7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,0,NVIDIA GeForce RTX 4090,1b77f6a,79.5
+r6_selfcal_20261002_210947_514b89,r7_C_s5,C (cell DriftGate),5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,1,NVIDIA GeForce RTX 4090,1b77f6a,83.9
+r6_selfcal_20261002_210947_d7f636,r7_C_s6,C (cell DriftGate),6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,3,NVIDIA GeForce RTX 4090,1b77f6a,70.2
+r6_selfcal_20261002_210947_68eca7,r7_C_s7,C (cell DriftGate),7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,1,NVIDIA GeForce RTX 4090,1b77f6a,81.0
+r6_selfcal_20261002_210947_1846a8,r7_CL_s5,"C-Λ (cell, Λ=0.5)",5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,2,NVIDIA GeForce RTX 4090,1b77f6a,68.5
+r6_selfcal_20261002_210947_5b31fa,r7_CL_s6,"C-Λ (cell, Λ=0.5)",6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,0,NVIDIA GeForce RTX 4090,1b77f6a,82.4
+r6_selfcal_20261002_210947_b2eb85,r7_CL_s7,"C-Λ (cell, Λ=0.5)",7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,2,NVIDIA GeForce RTX 4090,1b77f6a,65.2
+r6_device_20261002_210947_9e38b6,r7_DTV_s5,"D-TV (device, x_TV)",5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,3,NVIDIA GeForce RTX 4090,1b77f6a,70.2
+r6_device_20261002_210947_f8a8f9,r7_DTV_s6,"D-TV (device, x_TV)",6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,1,NVIDIA GeForce RTX 4090,1b77f6a,83.9
+r6_device_20261002_210947_082d58,r7_DTV_s7,"D-TV (device, x_TV)",7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,3,NVIDIA GeForce RTX 4090,1b77f6a,67.2
+r6_device_20261002_210947_683cbc,r7_DSR_s5,"D-SR (device, x_SR)",5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,0,NVIDIA GeForce RTX 4090,1b77f6a,82.5
+r6_device_20261002_210947_611f28,r7_DSR_s6,"D-SR (device, x_SR)",6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,2,NVIDIA GeForce RTX 4090,1b77f6a,68.4
+r6_device_20261002_210947_acc85d,r7_DSR_s7,"D-SR (device, x_SR)",7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,0,NVIDIA GeForce RTX 4090,1b77f6a,79.2
+r6_oracle_20261002_210947_fb8cdf,r7_O_s5,O (oracle),5,105,runs/phaseT6_env/S1_seed5.npz,yes,150,0,yes,1,NVIDIA GeForce RTX 4090,1b77f6a,83.8
+r6_oracle_20261002_210947_f52655,r7_O_s6,O (oracle),6,106,runs/phaseT6_env/S1_seed6.npz,yes,150,0,yes,3,NVIDIA GeForce RTX 4090,1b77f6a,70.1
+r6_oracle_20261002_210947_3df83b,r7_O_s7,O (oracle),7,107,runs/phaseT6_env/S1_seed7.npz,yes,150,0,yes,1,NVIDIA GeForce RTX 4090,1b77f6a,80.8

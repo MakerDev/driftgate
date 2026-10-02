@@ -1,0 +1,9 @@
+signal,seed,clients_with_both_states,clients,mean_auroc,sd_over_clients
+x_tv,5,39,50,0.9000,0.1068
+x_tv,6,41,50,0.9182,0.1044
+x_tv,7,38,50,0.8968,0.1005
+x_tv,mean of seeds,,,0.9050,
+x_sr,5,39,50,0.9516,0.0822
+x_sr,6,41,50,0.9732,0.0408
+x_sr,7,38,50,0.9627,0.0813
+x_sr,mean of seeds,,,0.9625,

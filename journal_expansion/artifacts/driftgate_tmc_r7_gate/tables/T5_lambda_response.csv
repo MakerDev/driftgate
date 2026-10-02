@@ -1,0 +1,11 @@
+arm,event,events,reached,censored,mean_min,median_min,already_past_before_move,events_not_already_past,reached_not_already_past,mean_min_not_already_past,median_min_not_already_past
+C (cell DriftGate),leave home -> lambda < 0.425,107,103,4,16.9,0.0,34,73,69,22.2,6.0
+C (cell DriftGate),return home -> lambda > 0.425,120,76,44,55.5,0.0,32,88,44,92.0,69.0
+"C-Λ (cell, Λ=0.5)",leave home -> lambda < 0.425,107,103,4,16.7,0.0,37,70,66,22.9,6.0
+"C-Λ (cell, Λ=0.5)",return home -> lambda > 0.425,120,65,55,40.2,0.0,32,88,33,74.5,48.0
+"D-TV (device, x_TV)",leave home -> lambda < 0.425,107,103,4,21.6,0.0,31,76,72,21.8,6.0
+"D-TV (device, x_TV)",return home -> lambda > 0.425,120,72,48,32.8,12.0,18,102,54,43.4,18.0
+"D-SR (device, x_SR)",leave home -> lambda < 0.425,107,101,6,32.0,0.0,29,78,72,44.8,6.0
+"D-SR (device, x_SR)",return home -> lambda > 0.425,120,102,18,32.4,18.0,22,98,81,40.8,24.0
+O (oracle),leave home -> lambda < 0.425,107,107,0,0.0,0.0,0,107,107,0.0,0.0
+O (oracle),return home -> lambda > 0.425,120,120,0,0.0,0.0,0,120,120,0.0,0.0

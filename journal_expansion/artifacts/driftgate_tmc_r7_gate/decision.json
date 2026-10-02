@@ -1,0 +1,11 @@
+{
+ "O_minus_F_pp": 0.928151659610336,
+ "threshold_upper_pp": 1.0,
+ "room": "small",
+ "verdict": "O \u2212 F < 1.0 pp: little room for device-level control; no further decision",
+ "C_Lambda_minus_C_pp": 0.2816796530508185,
+ "auroc_away": {
+  "x_tv": 0.9049975446840833,
+  "x_sr": 0.9625054481492721
+ }
+}

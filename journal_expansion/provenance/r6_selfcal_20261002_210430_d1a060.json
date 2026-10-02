@@ -1,0 +1,476 @@
+{
+ "run_id": "r6_selfcal_20261002_210430_d1a060",
+ "git_commit": "85c3cf13d5521c124a9324a1f93ccc12de5a9aa5",
+ "config": {
+  "scenario": "S1",
+  "arm": "CL",
+  "env_file": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_env/S1_seed5.npz",
+  "env_meta": {
+   "scenario": "S1",
+   "env_seed": 5,
+   "K": 50,
+   "L": 5,
+   "T": 150,
+   "grid": [
+    1,
+    1
+   ],
+   "layout": "base",
+   "speed_mps": [
+    1.0,
+    3.0
+   ],
+   "mu_range": [
+    32.0,
+    128.0
+   ],
+   "avail": 1.0,
+   "loss": 0.0,
+   "R_km": 1.0,
+   "pos_sigma_km": 0.35,
+   "rho_home": 0.1,
+   "rho_away": 0.8,
+   "partition": "district d: nd1_partition on the static 50-client topology, seed = env_seed if d == 0 else env_seed*1000 + d; cluster g basic members live in cell g"
+  },
+  "mode": "selfcal",
+  "signal": "tv_dist",
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "apfl_eta": null,
+  "signal_delay": 0,
+  "probe_n": 64,
+  "eval_every": 5,
+  "controller_kwargs": {
+   "burn_in": 10,
+   "z_guard": 0.5,
+   "spatial_norm": true,
+   "no_neighbor_avg": true
+  },
+  "partition_seed": 5,
+  "model_seed": 105,
+  "run_name": "sm_CL",
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 30,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 5,
+   "model_seed": 105,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "record_device_signals": true,
+  "device_signal": null,
+  "oracle_home_away": false,
+  "fixed_Lambda": 0.5
+ },
+ "config_sha256": "b8c16ffb6a5af96309ab2d4d8edf7df445f724ed3b21dcdf3c85df446ea5ec2b",
+ "command": "journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm CL --mode selfcal --signal tv_dist --burn_in 10 --z_guard 0.5 --spatial_norm --no_neighbor_avg --fixed_Lambda 0.5 --record_device_signals --disjoint_pools --seed 5 --model_seed 105 --rounds 30 --run_name sm_CL --output_dir /tmp/claude-1000/-home-honeynaps-data-driftgate/b09456f1-6be0-4dbd-ada3-4985b03863a4/scratchpad/r7smoke",
+ "start_time": "2026-10-02T21:04:30.482461",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "split_hash": "c21a288ca536f647",
+ "model_init_hash": "cb7c3b482a77ac79",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 5,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "cell_groups": {
+  "0": [
+   0,
+   1,
+   3,
+   5,
+   6,
+   8
+  ],
+  "1": [
+   1,
+   2,
+   3,
+   5
+  ],
+  "2": [
+   1,
+   4,
+   6,
+   7,
+   8
+  ],
+  "3": [
+   1,
+   3,
+   4,
+   6
+  ],
+  "4": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8,
+   9
+  ]
+ },
+ "client_main": {
+  "0": [
+   0,
+   1
+  ],
+  "1": [
+   0,
+   1
+  ],
+  "2": [
+   1,
+   8
+  ],
+  "3": [
+   1,
+   3
+  ],
+  "4": [
+   1,
+   3
+  ],
+  "5": [
+   1,
+   6
+  ],
+  "6": [
+   1,
+   8
+  ],
+  "7": [
+   3,
+   5
+  ],
+  "8": [
+   0,
+   3
+  ],
+  "9": [
+   1,
+   5
+  ],
+  "10": [
+   2,
+   5
+  ],
+  "11": [
+   1,
+   2
+  ],
+  "12": [
+   3,
+   5
+  ],
+  "13": [
+   1,
+   3
+  ],
+  "14": [
+   1,
+   3
+  ],
+  "15": [
+   2,
+   3
+  ],
+  "16": [
+   2,
+   3
+  ],
+  "17": [
+   1,
+   3
+  ],
+  "18": [
+   2,
+   5
+  ],
+  "19": [
+   1,
+   2
+  ],
+  "20": [
+   1,
+   6
+  ],
+  "21": [
+   6,
+   7
+  ],
+  "22": [
+   1,
+   7
+  ],
+  "23": [
+   6,
+   7
+  ],
+  "24": [
+   1,
+   8
+  ],
+  "25": [
+   1,
+   7
+  ],
+  "26": [
+   4,
+   8
+  ],
+  "27": [
+   1,
+   4
+  ],
+  "28": [
+   6,
+   7
+  ],
+  "29": [
+   6,
+   8
+  ],
+  "30": [
+   3,
+   4
+  ],
+  "31": [
+   1,
+   4
+  ],
+  "32": [
+   3,
+   4
+  ],
+  "33": [
+   1,
+   3
+  ],
+  "34": [
+   1,
+   6
+  ],
+  "35": [
+   4,
+   6
+  ],
+  "36": [
+   1,
+   4
+  ],
+  "37": [
+   3,
+   4
+  ],
+  "38": [
+   1,
+   3
+  ],
+  "39": [
+   3,
+   4
+  ],
+  "40": [
+   1,
+   2
+  ],
+  "41": [
+   2,
+   8
+  ],
+  "42": [
+   8,
+   9
+  ],
+  "43": [
+   3,
+   4
+  ],
+  "44": [
+   2,
+   8
+  ],
+  "45": [
+   1,
+   9
+  ],
+  "46": [
+   6,
+   9
+  ],
+  "47": [
+   1,
+   4
+  ],
+  "48": [
+   2,
+   8
+  ],
+  "49": [
+   3,
+   6
+  ]
+ },
+ "client_n_train": {
+  "0": 1858,
+  "1": 1858,
+  "2": 747,
+  "3": 469,
+  "4": 469,
+  "5": 692,
+  "6": 747,
+  "7": 1277,
+  "8": 1943,
+  "9": 1192,
+  "10": 1500,
+  "11": 692,
+  "12": 1277,
+  "13": 469,
+  "14": 469,
+  "15": 777,
+  "16": 777,
+  "17": 469,
+  "18": 1500,
+  "19": 692,
+  "20": 692,
+  "21": 1500,
+  "22": 1192,
+  "23": 1500,
+  "24": 747,
+  "25": 1192,
+  "26": 1009,
+  "27": 646,
+  "28": 1500,
+  "29": 1055,
+  "30": 731,
+  "31": 646,
+  "32": 731,
+  "33": 469,
+  "34": 692,
+  "35": 954,
+  "36": 646,
+  "37": 731,
+  "38": 469,
+  "39": 731,
+  "40": 692,
+  "41": 1055,
+  "42": 2221,
+  "43": 731,
+  "44": 1055,
+  "45": 1858,
+  "46": 2166,
+  "47": 646,
+  "48": 1055,
+  "49": 777
+ },
+ "end_time": "2026-10-02T21:09:18.701933",
+ "wall_time_sec": 287.88119316101074,
+ "final_metrics": {
+  "integrated_acc": 0.5851603038789682,
+  "acc_total_final": 0.6331113459702095,
+  "wall_min": 4.697050054868062,
+  "probe_eval_overlap": 0
+ }
+}

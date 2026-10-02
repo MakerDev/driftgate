@@ -101,12 +101,14 @@ def set_seed(seed):
 
 
 @torch.no_grad()
-def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False):
+def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False, record=None):
     """Same computation as eval.evaluator.evaluate_one_client (client exit if the
     client-exit entropy <= eth, else the mean of the client's server-exit logits),
     on a cached normalized test tensor, plus offload counts per request kind.
     mainaware (Round 8, reference only): also count the rule "server exit if its prediction is outside
-    the client's Main classes, otherwise the entropy rule" (ma_* keys); the other keys are unchanged."""
+    the client's Main classes, otherwise the entropy rule" (ma_* keys); the other keys are unchanged.
+    record (Round 8 v2): a dict that receives, for every request in idx order, the client-exit prediction "cp",
+    the client-exit entropy "ent" (float32, the value compared with eth) and the server-exit prediction "sp"."""
     client.client_model.eval()
     for sm in client.server_models.values():
         sm.eval()
@@ -123,6 +125,7 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
     oop_t = torch.as_tensor(sorted(oop), device=X.device, dtype=torch.long)
     oor_t = torch.as_tensor(sorted(oor), device=X.device, dtype=torch.long)
     sms = list(client.server_models.values())
+    rec = {"cp": [], "ent": [], "sp": []} if record is not None else None
     for s in range(0, len(idx_t), batch_size):
         b = idx_t[s:s + batch_size]
         x, y = X[b], Y[b]
@@ -132,6 +135,10 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
         server_logits = sum([sm(rep)[0] for sm in sms]) / len(sms)
         _, server_preds = server_logits.max(dim=1)
         route = entropy > eth
+        if rec is not None:
+            rec["cp"].append(client_preds.cpu())
+            rec["ent"].append(entropy.float().cpu())
+            rec["sp"].append(server_preds.cpu())
         final = torch.where(route, server_preds, client_preds)
         ok = final == y
         is_main = torch.isin(y, main_t)
@@ -158,6 +165,8 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
             out["ma_n_off"] += int(ma_route.sum())
             out["ma_c_main"] += int((ma_ok & is_main).sum())
             out["ma_c_nonmain"] += int((ma_ok & nonmain).sum())
+    if rec is not None:
+        record.update({k: torch.cat(v).numpy() for k, v in rec.items()})
     return out
 
 
@@ -228,7 +237,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            apfl_eta=None, signal_delay=0, probe_n=64, controller_kwargs=None,
            run_name="run", output_dir=None, eval_every=5, save_models=False, verbose=True,
            scenario=None, arm=None, record_device_signals=False, device_signal=None,
-           oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False):
+           oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False,
+           record_eval_requests=False, record_probe_values=False):
     """Round 7 gate options (all off by default -> Round 6 behaviour):
     record_device_signals: every participating client computes x_TV and x_SR on its probe in every arm
         (no grad; the probe uses the numpy probe RNG only, so training is unchanged);
@@ -239,7 +249,14 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     eval_infer_lambdas: at every evaluation round each participating client is also evaluated with the
         client-side model lambda_inf * theta_local + (1 - lambda_inf) * cell average, for every lambda_inf in
         the list (same requests, server blocks, exits and routing); the installed model is restored after;
-    eval_mainaware_route: also count the Main-aware routing rule on the installed model (reference only)."""
+    eval_mainaware_route: also count the Main-aware routing rule on the installed model (reference only).
+    Round 8 v2 options (off by default):
+    record_eval_requests (needs eval_infer_lambdas): for every evaluated request of every participating client and
+        evaluation round, keep the client-exit prediction and entropy and the server-exit prediction for every
+        lambda_inf block, plus the installed model when lambda_t is not one of the lambda_inf values; with the
+        request's client, evaluation round, label, kind (Main / OOP / OOR) and at_home -> {run}_requests.npz;
+    record_probe_values (needs record_device_signals): per probe request TV and server-non-Main indicator
+        (probe_tv, probe_sr in the trace; in probe draw order)."""
     device = cfg["device"]
     seed, total_rounds = int(cfg["partition_seed"]), int(cfg["global_rounds"])
     ckw = controller_kwargs or {}
@@ -263,6 +280,10 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                       oracle_home_away=oracle_home_away, fixed_Lambda=fixed_Lambda)
     if eval_infer_lambdas or eval_mainaware_route:
         config.update(eval_infer_lambdas=list(eval_infer_lambdas or []), eval_mainaware_route=eval_mainaware_route)
+    if record_eval_requests or record_probe_values:
+        assert not record_eval_requests or eval_infer_lambdas, "--record_eval_requests needs --eval_infer_lambdas"
+        assert not record_probe_values or record_device_signals, "--record_probe_values needs --record_device_signals"
+        config.update(record_eval_requests=record_eval_requests, record_probe_values=record_probe_values)
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
@@ -346,6 +367,15 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            "c_nonmain", "off_nonmain", "n_oop", "c_oop", "n_oor", "c_oor")}
     if eval_mainaware_route:
         EV.update({k: np.zeros((E, K), np.int32) for k in ("ma_correct", "ma_n_off", "ma_c_main", "ma_c_nonmain")})
+    REQ = None
+    if record_eval_requests:   # blocks: one per lambda_inf, plus the installed model if lambda_t is not among them
+        inst_block = (eval_infer_lambdas.index(float(lambda_val))
+                      if mode == "fixed" and float(lambda_val) in eval_infer_lambdas else len(eval_infer_lambdas))
+        n_blocks = max(len(eval_infer_lambdas), inst_block + 1)
+        REQ = dict(meta=[], blocks=[[] for _ in range(n_blocks)])
+    if record_probe_values:
+        R.update(probe_tv=np.full((total_rounds, K, probe_n), nan, np.float32),
+                 probe_sr=np.full((total_rounds, K, probe_n), -1, np.int8))
     EVI = None
     if eval_infer_lambdas:   # -1 = client not participating in that evaluation round (not evaluated)
         EVI = {k: np.full((E, len(eval_infer_lambdas), K), -1, np.int32) for k in
@@ -402,7 +432,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 want_sr = record_device_signals or device_signal == "sr"
                 sig = compute_client_signals(c.client_model, list(c.server_models.values()),
                                              X_test[torch.as_tensor(chosen, device=device)], device, None,
-                                             main_classes=set(mains[k]) if want_sr else None)
+                                             main_classes=set(mains[k]) if want_sr else None,
+                                             per_request=record_probe_values)
+                if record_probe_values:
+                    sig, per = sig
+                    R["probe_tv"][t, k, :n] = per["tv"]
+                    R["probe_sr"][t, k, :n] = per["sr"]
                 R["probe_us"][t, k] = (time.perf_counter_ns() - t0) / 1e3
                 if r7:
                     R["x_tv"][t, k] = float(sig["tv_dist"])
@@ -491,7 +526,10 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 idx, oop, oor, flag = eval_rb.build(mains[k], cells_of(k, t), float(env["rho"][k, t]))
                 efb[flag] += 1
                 eval_used.update(int(i) for i in idx)
-                res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route)
+                rq = REQ is not None and capture is not None and k in capture
+                rec_inst = {} if rq else None
+                res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route,
+                                  record=rec_inst)
                 for key in EV:
                     EV[key][e, k] = res[key]
                 if capture is not None and k in capture:   # Round 8: inference-only mixing ratios
@@ -499,10 +537,23 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                     local, avg = capture[k]
                     for i, li in enumerate(eval_infer_lambdas):
                         c.set_client_state(mix_state_dicts(local, avg, float(li)))
-                        ri = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth)
+                        rec_i = {} if rq else None
+                        ri = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, record=rec_i)
                         for key in EVI:
                             EVI[key][e, i, k] = ri[key]
+                        if rq:
+                            REQ["blocks"][i].append(rec_i)
                     c.set_client_state(installed)
+                if rq:
+                    if inst_block == len(eval_infer_lambdas):
+                        REQ["blocks"][inst_block].append(rec_inst)
+                    elif not all(np.array_equal(rec_inst[x], REQ["blocks"][inst_block][-1][x]) for x in ("cp", "ent", "sp")):
+                        REQ["installed_mismatch"] = REQ.get("installed_mismatch", 0) + 1
+                    lab = np.asarray(Y_test[torch.as_tensor(np.asarray(idx), device=Y_test.device)].cpu().numpy())
+                    kind = np.where(np.isin(lab, sorted(mains[k])), 0, np.where(np.isin(lab, sorted(oop)), 1,
+                                    np.where(np.isin(lab, sorted(oor)), 2, 3)))
+                    REQ["meta"].append(dict(e=e, k=k, n=len(idx), label=lab, kind=kind,
+                                            home=bool(env["at_home"][k, t])))
             acc = EV["correct"][e] / np.maximum(EV["n_total"][e], 1)
             acc_main = [_ratio(a, b) for a, b in zip(EV["c_main"][e], EV["n_main"][e])]
             acc_nm = [_ratio(a, b) for a, b in zip(EV["c_nonmain"][e], EV["n_nonmain"][e])]
@@ -530,6 +581,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 probe_used_count=len(probe_used), eval_used_count=len(eval_used),
                 eval_rounds=E_ROUNDS, K=K, L=L, env_meta=meta,
                 config={k: v for k, v in config.items() if k != "cfg"} | {"run_id": rec.run_id})
+    if REQ is not None:   # client-rounds whose installed-model requests differ from the lambda_inf = lambda_t block
+        hist["installed_block_mismatch"] = int(REQ.get("installed_mismatch", 0))
     assert overlap == 0, f"probe/eval sample overlap = {overlap} (must be 0)"
     integrated = float(np.mean([e["acc_total"] for e in hist["eval"]]))
     hist["integrated_acc"] = integrated
@@ -542,6 +595,20 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                             **R, **{f"eval_{k}": v for k, v in EV.items()},
                             **({"infer_lambdas": np.array(eval_infer_lambdas, np.float64)} if EVI is not None else {}),
                             **({f"evinf_{k}": v for k, v in EVI.items()} if EVI is not None else {}))
+        if REQ is not None:
+            ns = [m["n"] for m in REQ["meta"]]
+            blk_lam = list(eval_infer_lambdas) + ([float(lambda_val) if mode == "fixed" else float("nan")]
+                                                  if inst_block == len(eval_infer_lambdas) else [])
+            np.savez_compressed(out / f"{run_name}_requests.npz", eval_rounds=np.array(E_ROUNDS),
+                                block_lambda=np.array(blk_lam, np.float64), installed_block=np.int64(inst_block),
+                                req_eval_index=np.repeat([m["e"] for m in REQ["meta"]], ns).astype(np.uint8),
+                                req_client=np.repeat([m["k"] for m in REQ["meta"]], ns).astype(np.uint8),
+                                req_home=np.repeat([m["home"] for m in REQ["meta"]], ns).astype(bool),
+                                req_label=np.concatenate([m["label"] for m in REQ["meta"]]).astype(np.uint8),
+                                req_kind=np.concatenate([m["kind"] for m in REQ["meta"]]).astype(np.int8),
+                                cp=np.stack([np.concatenate([r["cp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8),
+                                ent=np.stack([np.concatenate([r["ent"] for r in b]) for b in REQ["blocks"]]).astype(np.float32),
+                                sp=np.stack([np.concatenate([r["sp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8))
         if save_models:
             home = int(env["home_cell"][0])
             hub = int(np.flatnonzero(env["cell_is_hub"])[0]) if env["cell_is_hub"].any() else home

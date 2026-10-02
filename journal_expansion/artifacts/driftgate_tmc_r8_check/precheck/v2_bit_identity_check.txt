@@ -1,0 +1,20 @@
+# Round 8 check v2: end-to-end check (CPU, S1 seed 0, model_seed 100, 2 rounds = evaluation rounds 1 and 2, --disjoint_pools)
+# old = git worktree at db05747 (Round 8 v1 code); new = working tree with the v2 changes
+# v2 flags = --record_device_signals --record_probe_values --eval_infer_lambdas 0.15,0.3,0.4,0.55,0.7 --record_eval_requests
+old_fx vs new_fx: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing none | only in new_fx: none
+old_dg vs new_dg: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing none | only in new_dg: none
+new_fx vs new_fx_v2: mean_loss=same per_client_acc=same lamdas=same big_lamdas=same | common trace arrays 20, differing ['nprobe'] | only in new_fx_v2: ['at_home', 'cells', 'evinf_c_main', 'evinf_c_nonmain', 'evinf_correct', 'evinf_n_off', 'evinf_off_main', 'evinf_off_nonmain', 'infer_lambdas', 'probe_sr', 'probe_tv', 'q_k', 'x_sr', 'x_tv']
+  new_fx_v2: 180648 requests, 5 blocks -> reduced/new_fx_v2_reduced.npz
+new_fx_v2: blocks [np.float64(0.15), np.float64(0.3), np.float64(0.4), np.float64(0.55), np.float64(0.7)], installed block 2 (lambda 0.4), requests 180648, installed_block_mismatch 0
+   per-request recomputation at tau 0.8 equals eval_correct: True, eval_n_off: True; accuracy [0.32712873 0.38415397] vs JSON [0.3271287257422052, 0.38415396954653375]
+   reduced counts at tau 0.8 equal eval_correct / eval_n_off: True / True; evinf blocks equal reduced (all lambda_inf): True
+   tau = inf: no server use True; corr at inf = client-exit correct True
+   probe means: max|mean(probe_tv) - x_tv| = 2.14e-08, max|mean(probe_sr) - x_sr| = 2.36e-08, probes per client-round = nprobe: True
+   request kinds Main/OOP/OOR/other = [160000, 15950, 4698, 0]; home flags equal trace at_home: True
+  new_fx60_v2: 180648 requests, 6 blocks -> reduced/new_fx60_v2_reduced.npz
+new_fx60_v2: blocks [np.float64(0.15), np.float64(0.3), np.float64(0.4), np.float64(0.55), np.float64(0.7), np.float64(0.6)], installed block 5 (lambda 0.6), requests 180648, installed_block_mismatch 0
+   per-request recomputation at tau 0.8 equals eval_correct: True, eval_n_off: True; accuracy [0.3366422  0.39970339] vs JSON [0.33664219629927594, 0.39970338775189845]
+   reduced counts at tau 0.8 equal eval_correct / eval_n_off: True / True; evinf blocks equal reduced (all lambda_inf): True
+   tau = inf: no server use True; corr at inf = client-exit correct True
+   probe means: max|mean(probe_tv) - x_tv| = 4.44e-08, max|mean(probe_sr) - x_sr| = 2.38e-08, probes per client-round = nprobe: True
+   request kinds Main/OOP/OOR/other = [160000, 15950, 4698, 0]; home flags equal trace at_home: True

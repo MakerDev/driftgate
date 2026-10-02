@@ -395,3 +395,41 @@ def test_inference_mix_eval_restores_installed_model_and_mainaware_keeps_counts(
         assert got[0.4] == base
         for k, v in c.client_model.state_dict().items():
             assert torch.equal(v, before[k]), k
+
+
+# ----------------------------------------------------------------------------- Round 8 v2
+def test_eval_client_record_reproduces_counts():
+    import torch
+    from src.runner_r6 import eval_client
+    clients, ES, test_ds = _tiny_setup()
+    labels = np.array(test_ds.targets)
+    X = torch.stack([test_ds[i][0] for i in range(1500)])
+    Y = torch.as_tensor(labels[:1500])
+    idx = np.concatenate([np.flatnonzero(labels[:1500] == c)[:n] for c, n in ((0, 150), (1, 130), (2, 40), (7, 30))])
+    for c in clients[:4]:
+        base = eval_client(c, X, Y, idx, {0, 1}, {2}, {7})
+        rec = {}
+        got = eval_client(c, X, Y, idx, {0, 1}, {2}, {7}, record=rec)
+        assert got == base
+        y = labels[idx]
+        assert rec["ent"].dtype == np.float32 and len(rec["cp"]) == len(idx)
+        route = rec["ent"] > np.float32(0.8)
+        final = np.where(route, rec["sp"], rec["cp"])
+        assert int((final == y).sum()) == base["correct"] and int(route.sum()) == base["n_off"]
+        main = np.isin(y, [0, 1])
+        assert int(((final == y) & main).sum()) == base["c_main"]
+
+
+def test_compute_client_signals_per_request():
+    import torch
+    from src.signals.library import compute_client_signals
+    clients, ES, test_ds = _tiny_setup()
+    X = torch.stack([test_ds[i][0] for i in range(64)])
+    for c in clients[:3]:
+        sms = list(c.server_models.values())
+        a = compute_client_signals(c.client_model, sms, X, "cpu", None, main_classes={0, 1})
+        b, per = compute_client_signals(c.client_model, sms, X, "cpu", None, main_classes={0, 1}, per_request=True)
+        assert a == b
+        assert len(per["tv"]) == 64 and per["sr"].dtype == bool
+        assert abs(float(per["tv"].mean()) - a["tv_dist"]) < 1e-6
+        assert float(per["sr"].mean()) == a["server_nonmain_hard"]

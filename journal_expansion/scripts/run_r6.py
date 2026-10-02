@@ -76,6 +76,12 @@ def main():
                          "lambda_inf * theta_local + (1 - lambda_inf) * cell average (no effect on training)")
     ap.add_argument("--eval_mainaware_route", action="store_true",
                     help="also count the Main-aware routing rule on the installed model (reference only)")
+    # Round 8 v2 (off by default)
+    ap.add_argument("--record_eval_requests", action="store_true",
+                    help="per evaluated request and lambda_inf block: client-exit prediction and entropy, server-exit "
+                         "prediction, label, kind, client, round, at_home -> {run}_requests.npz")
+    ap.add_argument("--record_probe_values", action="store_true",
+                    help="per probe request TV and server-non-Main indicator (needs --record_device_signals)")
     args = ap.parse_args()
 
     if not args.disjoint_pools:
@@ -116,7 +122,8 @@ def main():
            oracle_home_away=args.oracle_home_away, fixed_Lambda=args.fixed_Lambda,
            eval_infer_lambdas=([float(v) for v in args.eval_infer_lambdas.split(",")]
                                if args.eval_infer_lambdas else None),
-           eval_mainaware_route=args.eval_mainaware_route)
+           eval_mainaware_route=args.eval_mainaware_route,
+           record_eval_requests=args.record_eval_requests, record_probe_values=args.record_probe_values)
 
 
 if __name__ == "__main__":

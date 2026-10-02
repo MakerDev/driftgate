@@ -192,10 +192,13 @@ def server_nonmain_signals(server_logits, main_classes):
 
 
 def compute_client_signals(client_model, server_models, probe_x, device, rep_ref=None,
-                           return_rep=False, main_classes=None):
+                           return_rep=False, main_classes=None, per_request=False):
     """Full pipeline for one client. Returns dict of RAW_SIGNAL_NAMES values
     (and the mean pooled representation vector if return_rep). If main_classes is
-    given, also adds SERVER_NONMAIN_NAMES (Task 2)."""
+    given, also adds SERVER_NONMAIN_NAMES (Task 2).
+    per_request (Round 8, needs main_classes, not with return_rep): returns (sig, per) where per holds, for every
+    probe request in input order, "tv" (the per-request TV whose mean is tv_dist) and "sr" (server-exit argmax
+    outside main_classes; its mean is server_nonmain_hard), from the same forward pass."""
     if probe_x is None or probe_x.shape[0] == 0:
         empty = {k: 0.0 for k in RAW_SIGNAL_NAMES}
         if main_classes is not None:
@@ -209,6 +212,12 @@ def compute_client_signals(client_model, server_models, probe_x, device, rep_ref
         sig.update(server_nonmain_signals(sl, main_classes))
     if return_rep:
         return sig, rp.mean(dim=0).cpu().numpy()
+    if per_request:
+        with torch.no_grad():
+            tv = 0.5 * (F.softmax(cl, dim=1) - F.softmax(sl, dim=1)).abs().sum(dim=1)
+            idx = torch.tensor(sorted(int(c) for c in main_classes), device=sl.device, dtype=torch.long)
+            sr = ~(sl.argmax(dim=1).unsqueeze(1) == idx.unsqueeze(0)).any(dim=1)
+        return sig, dict(tv=tv.float().cpu().numpy(), sr=sr.cpu().numpy())
     return sig
 
 

@@ -1,0 +1,19 @@
+  seed 5: 3734808 requests, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'argmax_ps_equals_sp': 0.9998971834696724, 'argmax_pc_equals_cp': 0.999917532574633, 'source_sha256': '8f2171d8fea95a108f0b7e8c5bd37572a323f634085eb68b1cf752aeb534e0d5', 'source_bytes': 156277055, 'run_id': 'r6_fixed_20261003_035418_d0f8a5', 'cells_with_no_training_samples': 0, 'B0_counts_equal_eval_correct': True}
+  seed 6: 3884510 requests, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'argmax_ps_equals_sp': 0.9998921356876415, 'argmax_pc_equals_cp': 0.9999225127493557, 'source_sha256': '4795a512ef1324bca26d87d6d168e29db31b6081d97607808c7e6c2381e339e8', 'source_bytes': 162834103, 'run_id': 'r6_fixed_20261003_035418_dd9e2f', 'cells_with_no_training_samples': 0, 'B0_counts_equal_eval_correct': True}
+  seed 7: 3737699 requests, checks {'mains_equal_provenance': True, 'label_in_Mk_equals_kind_Main': True, 'argmax_ps_equals_sp': 0.9999010086151935, 'argmax_pc_equals_cp': 0.9999058244122921, 'source_sha256': '7992cb32a976f81f4fb8caf8b31219be747b0e58d51c5eada22e85aec9861542', 'source_bytes': 157498525, 'run_id': 'r6_fixed_20261003_035418_00b6c3', 'cells_with_no_training_samples': 0, 'B0_counts_equal_eval_correct': True}
+  [R10_T0_checks_and_manifest.csv] 6 rows
+  [R10_T1_rules.csv] 14 rows
+  [R10_T2_per_seed.csv] 18 rows
+  [R10_T3_r_estimation.csv] 8 rows
+{
+ "window": "late (evaluation rounds 30-150)",
+ "verdict": "close",
+ "delta_pp": -1.7609367463528702,
+ "method": "M1",
+ "best_baseline_late": "B3",
+ "delta_oracle_r_pp": 1.6660647812342666,
+ "oracle_method": "M1 oracle r",
+ "method_beats_best_baseline_full": false,
+ "best_baseline_full": "B3"
+}
+  figures written

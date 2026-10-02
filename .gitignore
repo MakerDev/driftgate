@@ -15,3 +15,4 @@ journal_expansion/runs/queue*/STOP
 /data/traces
 journal_expansion/runs/queue*/running_gpu*/
 journal_expansion/runs/phaseT8_check/*_requests.npz
+journal_expansion/runs/phaseT10_prior/*_evalprobs.npz

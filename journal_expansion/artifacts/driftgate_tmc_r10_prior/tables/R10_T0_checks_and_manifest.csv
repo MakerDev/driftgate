@@ -1,0 +1,7 @@
+seed,run_id,Mk_rebuilt_equals_provenance,label_in_Mk_equals_kind_Main,B0_counts_equal_installed_eval,argmax_ps_fp16_equals_recorded_sp,argmax_pc_fp16_equals_recorded_cp,cells_with_no_training_samples,B0_full_pct,B1_full_pct,B2_full_pct,evalprobs_sha256,evalprobs_bytes,wall_min
+5,r6_fixed_20261003_035418_d0f8a5,True,True,True,0.999897,0.999918,0,62.8675,64.7429,62.8942,8f2171d8fea95a108f0b7e8c5bd37572a323f634085eb68b1cf752aeb534e0d5,156277055,25.8
+6,r6_fixed_20261003_035418_dd9e2f,True,True,True,0.999892,0.999923,0,61.7843,62.7120,61.8326,4795a512ef1324bca26d87d6d168e29db31b6081d97607808c7e6c2381e339e8,162834103,25.7
+7,r6_fixed_20261003_035418_00b6c3,True,True,True,0.999901,0.999906,0,62.9591,63.5279,63.0281,7992cb32a976f81f4fb8caf8b31219be747b0e58d51c5eada22e85aec9861542,157498525,23.1
+mean,,,,,,,,62.5369,63.6609,62.5850,,,
+Round 8 report,,,,,,,,62.54,63.67,62.59,,,
+difference,,,,,,,,-0.0031,-0.0091,-0.0050,,,

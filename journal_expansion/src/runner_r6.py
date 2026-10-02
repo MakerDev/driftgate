@@ -41,7 +41,7 @@ from train.trainer import (build_clients_and_es, mix_state_dicts, synchronize_in
 from src.apfl_baseline import _grad_wrt_lambda
 from src.disjoint_pools import make_pool_masks
 from src.provenance import RunRecord, model_hash, split_hash
-from src.r6_controller import EdgeDriftGate
+from src.r6_controller import DeviceDriftGate, EdgeDriftGate
 from src.r6_env import load_env
 from src.r6_requests import RequestBuilder, build_partition
 from src.signals.library import compute_client_signals
@@ -154,8 +154,10 @@ def _ratio(a, b):
     return a / b if b > 0 else float("nan")
 
 
-def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None):
-    """Step 4. active: bool array over client ids. Returns (mean_loss, active_cells)."""
+def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None, client_lams=None):
+    """Step 4. active: bool array over client ids. Returns (mean_loss, active_cells).
+    client_lams (Round 7 gate): {client: lambda_k} -> each participating client mixes with its own lambda_k
+    instead of the mean of its cells' lambdas (same mixing and server-block update otherwise)."""
     act = [c for c in clients if active[c.cid]]
     losses = [c.train_one_round(method="splitomcplus", gamma=gamma) for c in act]
     active_cells = []
@@ -188,6 +190,15 @@ def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None)
             c.set_client_state(mix_state_dicts(local, avg, lam_new))
             for e in c.edge_server_ids:
                 c.set_server_state(e, ES[e].server_avg_weights)
+    elif client_lams is not None:
+        for c in act:   # same as train/trainer.update_client_models, lambda = the client's own lambda_k
+            if len(c.edge_server_ids) == 1:
+                avg = ES[c.edge_server_ids[0]].clients_avg_weights
+            else:
+                avg = uniform_average([ES[e].clients_avg_weights for e in c.edge_server_ids])
+            c.set_client_state(mix_state_dicts(c.get_client_state(), avg, float(client_lams[c.cid])))
+            for e in c.edge_server_ids:
+                c.set_server_state(e, ES[e].server_avg_weights)
     else:
         update_client_models(act, ES, lamdas, method="splitomcplus")
     return (float(np.mean(losses)) if losses else float("nan")), active_cells
@@ -196,7 +207,14 @@ def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None)
 def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val=0.5,
            apfl_eta=None, signal_delay=0, probe_n=64, controller_kwargs=None,
            run_name="run", output_dir=None, eval_every=5, save_models=False, verbose=True,
-           scenario=None, arm=None):
+           scenario=None, arm=None, record_device_signals=False, device_signal=None,
+           oracle_home_away=False, fixed_Lambda=None):
+    """Round 7 gate options (all off by default -> Round 6 behaviour):
+    record_device_signals: every participating client computes x_TV and x_SR on its probe in every arm
+        (no grad; the probe uses the numpy probe RNG only, so training is unchanged);
+    mode="device" + device_signal in {"tv", "sr"}: one lambda per client (DeviceDriftGate);
+    mode="oracle" (oracle_home_away): lambda_k = 0.70 at home, 0.15 away (env at_home), every round;
+    fixed_Lambda: Lambda fixed for every cell (also overrides the cell controller's Lambda)."""
     device = cfg["device"]
     seed, total_rounds = int(cfg["partition_seed"]), int(cfg["global_rounds"])
     ckw = controller_kwargs or {}
@@ -215,6 +233,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                   probe_n=probe_n, eval_every=eval_every, controller_kwargs=ckw,
                   partition_seed=seed, model_seed=cfg["model_seed"], run_name=run_name,
                   cfg=cfg)
+    if record_device_signals or mode in ("device", "oracle") or fixed_Lambda is not None:
+        config.update(record_device_signals=record_device_signals, device_signal=device_signal,
+                      oracle_home_away=oracle_home_away, fixed_Lambda=fixed_Lambda)
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
@@ -266,6 +287,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         apfl = dict(lams={c.cid: 0.5 * (lam_min + lam_max) for c in clients},
                     eta=float(apfl_eta if apfl_eta is not None else cfg["learning_rate"]),
                     lam_min=lam_min, lam_max=lam_max)
+    elif mode == "device":
+        assert device_signal in ("tv", "sr"), device_signal
+        dctrl = DeviceDriftGate(K, lam_min, lam_max, warmup=ckw.get("warmup", 15), burn_in=ckw["burn_in"],
+                                z_guard=ckw["z_guard"], spatial_norm=ckw["spatial_norm"])
+    elif mode == "oracle":
+        assert oracle_home_away
     elif mode != "fixed":
         raise ValueError(mode)
     fixed_lam = {z: float(lambda_val) for z in range(L)}
@@ -281,6 +308,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
              apfl_lam=np.full((total_rounds, K), nan, np.float32),
              client_lam=np.full((total_rounds, K), nan, np.float32),
              ctrl_ns=np.zeros((total_rounds, L), np.int64))
+    r7 = record_device_signals or mode in ("device", "oracle")
+    if r7:
+        R.update(x_tv=np.full((total_rounds, K), nan, np.float32), x_sr=np.full((total_rounds, K), nan, np.float32),
+                 q_k=np.full((total_rounds, K), nan, np.float32),
+                 at_home=env["at_home"][:, :total_rounds].T.copy(),
+                 cells=np.transpose(member[:, :total_rounds, :], (1, 0, 2)).copy())
     EV = {k: np.zeros((E, K), np.int32) for k in
           ("n_total", "correct", "n_off", "n_main", "c_main", "off_main", "n_nonmain",
            "c_nonmain", "off_nonmain", "n_oop", "c_oop", "n_oor", "c_oor")}
@@ -294,6 +327,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         cur_lam = {z: 0.5 * (lam_min + lam_max) for z in range(L)}
         cur_Lam = ({z: 0.5 * (Lam_min + Lam_max) for z in range(L)} if mode == "selfcal"
                    else dict(fixed_Lam))
+    if fixed_Lambda is not None:
+        cur_Lam = {z: float(fixed_Lambda) for z in range(L)}
+    client_lams = None
     if verbose:
         print(f"[{run_name}] scenario={scenario} arm={arm} mode={mode} K={K} L={L} rounds={total_rounds} "
               f"delay={signal_delay} device={device}", flush=True)
@@ -312,7 +348,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         # 2. signals
         dbar_now, n_sig = {}, {z: 0 for z in range(L)}
         fb = {"": 0, "oor_empty": 0, "oop_empty": 0, "both_empty": 0}
-        if mode == "selfcal":
+        xdev = {}
+        if mode == "selfcal" or mode == "device" or record_device_signals:
             vals = {z: [] for z in range(L)}
             for c in clients:
                 k = c.cid
@@ -329,11 +366,23 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 chosen = probe_rng.choice(pool, size=n, replace=False)
                 probe_used.update(int(i) for i in chosen)
                 t0 = time.perf_counter_ns()
+                want_sr = record_device_signals or device_signal == "sr"
                 sig = compute_client_signals(c.client_model, list(c.server_models.values()),
-                                             X_test[torch.as_tensor(chosen, device=device)], device, None)
+                                             X_test[torch.as_tensor(chosen, device=device)], device, None,
+                                             main_classes=set(mains[k]) if want_sr else None)
                 R["probe_us"][t, k] = (time.perf_counter_ns() - t0) / 1e3
+                if r7:
+                    R["x_tv"][t, k] = float(sig["tv_dist"])
+                    if want_sr:
+                        R["x_sr"][t, k] = float(sig["server_nonmain_hard"])
+                R["nprobe"][t, k] = n
+                if mode == "device":
+                    xdev[k] = float(sig["tv_dist"] if device_signal == "tv" else sig["server_nonmain_hard"])
+                    R["dk"][t, k] = xdev[k]
+                if mode != "selfcal":
+                    continue
                 d = float(sig[signal])
-                R["dk"][t, k], R["nprobe"][t, k] = d, n
+                R["dk"][t, k] = d
                 for j, z in enumerate(slots_of(k, t)):
                     if z < 0:
                         continue
@@ -353,8 +402,22 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                                          lost_dbar=env["lost_dbar"][t] if lossy else None,
                                          lost_nbr=env["lost_nbr"][t] if (lossy and ctrl.neighbor_avg) else None)
             R["ctrl_ns"][t] = [ctrl.last["t_ns"][z] for z in range(L)]
+            if fixed_Lambda is not None:
+                cur_Lam = {z: float(fixed_Lambda) for z in range(L)}
+        elif mode == "device":
+            mt_ = member[:, t, :]
+            mem_t = {z: set(np.flatnonzero((mt_ == z).any(axis=1)).tolist()) for z in range(L)}
+            reference = {k: sorted(set().union(*[mem_t[z] for z in cells_of(k, t)])) for k in xdev}
+            client_lams = dctrl.step(xdev, reference)
+            R["q_k"][t] = [dctrl.q[k] for k in range(K)]
+        elif mode == "oracle":
+            client_lams = {k: (0.70 if env["at_home"][k, t] else 0.15) for k in range(K)}
+        if client_lams is not None:
+            cur_lam = {z: float(np.mean([client_lams[k] for k in range(K) if z in member[k, t]]))
+                       if (member[:, t, :] == z).any() else float("nan") for z in range(L)}
         # 4. training
-        mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl)
+        mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
+                                                 client_lams=client_lams)
         if mode == "apfl":
             R["apfl_lam"][t] = [apfl["lams"][k] for k in range(K)]
             cur_lam = {z: float(np.mean([apfl["lams"][c.cid] for c in ES[z].clients]))
@@ -362,6 +425,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         for k in range(K):
             zs = by_id[k].edge_server_ids
             R["client_lam"][t, k] = (apfl["lams"][k] if mode == "apfl"
+                                     else client_lams[k] if client_lams is not None
                                      else float(np.mean([cur_lam[z] for z in zs])))
         mt = member[:, t, :]
         members = {z: np.flatnonzero((mt == z).any(axis=1)).tolist() for z in range(L)}

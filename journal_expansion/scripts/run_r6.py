@@ -61,12 +61,30 @@ def main():
     ap.add_argument("--run_name", required=True)
     ap.add_argument("--output_dir", required=True)
     ap.add_argument("--save_models", action="store_true")
+    # Round 7 gate (all off by default -> Round 6 behaviour)
+    ap.add_argument("--record_device_signals", action="store_true",
+                    help="every client computes x_TV and x_SR on its probe in every arm (no grad)")
+    ap.add_argument("--device_lambda", action="store_true",
+                    help="one lambda per client from its own signal (needs --mode selfcal and the relonly flags)")
+    ap.add_argument("--device_signal", default=None, choices=["tv", "sr"])
+    ap.add_argument("--oracle_home_away", action="store_true",
+                    help="lambda_k = 0.70 at home, 0.15 away from the environment (needs --mode fixed)")
+    ap.add_argument("--fixed_Lambda", type=float, default=None, help="fix Lambda for every cell")
     args = ap.parse_args()
 
     if not args.disjoint_pools:
         raise SystemExit("Round 6 runs must use --disjoint_pools")
     if args.mode == "selfcal" and not (args.burn_in == 10 and args.z_guard == 0.5 and args.spatial_norm):
         raise SystemExit("DriftGate/entropy arms must use --burn_in 10 --z_guard 0.5 --spatial_norm")
+    mode = args.mode
+    if args.device_lambda:
+        if args.mode != "selfcal" or args.device_signal is None:
+            raise SystemExit("--device_lambda needs --mode selfcal (relonly flags) and --device_signal")
+        mode = "device"
+    if args.oracle_home_away:
+        if args.mode != "fixed":
+            raise SystemExit("--oracle_home_away needs --mode fixed")
+        mode = "oracle"
     out_json = Path(args.output_dir) / f"{args.run_name}.json"
     if out_json.exists():
         print(f"{out_json} exists; not re-running (results are never overwritten)")
@@ -83,11 +101,13 @@ def main():
     if args.mode == "selfcal":
         ckw = dict(burn_in=args.burn_in, z_guard=args.z_guard, spatial_norm=args.spatial_norm,
                    no_neighbor_avg=args.no_neighbor_avg)
-    run_r6(cfg, env_path, args.mode, signal=args.signal, lambda_val=args.lambda_val,
+    run_r6(cfg, env_path, mode, signal=args.signal, lambda_val=args.lambda_val,
            big_lambda_val=args.big_lambda_val, apfl_eta=args.apfl_eta,
            signal_delay=args.signal_delay, probe_n=args.probe_n, controller_kwargs=ckw,
            run_name=args.run_name, output_dir=args.output_dir, eval_every=args.eval_every,
-           save_models=args.save_models, scenario=args.scenario, arm=args.arm)
+           save_models=args.save_models, scenario=args.scenario, arm=args.arm,
+           record_device_signals=args.record_device_signals, device_signal=args.device_signal,
+           oracle_home_away=args.oracle_home_away, fixed_Lambda=args.fixed_Lambda)
 
 
 if __name__ == "__main__":

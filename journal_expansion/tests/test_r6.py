@@ -279,3 +279,50 @@ def test_absonly_no_neighbor_avg_uses_own_signal():
             ema[z] = v if ema[z] is None else 0.7 * ema[z] + 0.3 * v
     for z in range(3):
         assert lam[z] == pytest.approx(0.7 - 0.55 * ema[z])
+
+
+# ----------------------------------------------------------------------------- Round 7 gate
+def test_device_controller_warmup_hold_and_spatial():
+    from src.r6_controller import DeviceDriftGate
+    from src.controllers.self_calibrating import spatial_z
+    dc = DeviceDriftGate(4)
+    ref = {k: [0, 1, 2, 3] for k in range(4)}
+    rng = np.random.default_rng(0)
+    for t in range(25):
+        lam = dc.step({k: 0.3 + 0.01 * rng.standard_normal() for k in range(4)}, ref)
+        assert all(v == pytest.approx(0.425) for v in lam.values())
+    # client 3 sends nothing for a round -> its whole state is kept
+    before = (dc.lam[3], dc.q[3], dc._n_obs[3], dc._z_smooth[3], dc._zsp_smooth[3])
+    dc.step({k: 0.3 for k in range(3)}, {k: [0, 1, 2] for k in range(3)})
+    assert (dc.lam[3], dc.q[3], dc._n_obs[3], dc._z_smooth[3], dc._zsp_smooth[3]) == before
+    # spatial score = spatial_z over the reference set, EMA 0.3
+    x = {0: 0.30, 1: 0.31, 2: 0.29, 3: 0.60}
+    prev = dc._zsp_smooth[3]
+    dc.step(x, ref)
+    assert dc._zsp_smooth[3] == pytest.approx(0.7 * prev + 0.3 * spatial_z(x)[3])
+    # fewer than 3 reference values -> temporal score only (spatial state untouched)
+    prev = dict(dc._zsp_smooth)
+    dc.step({0: 0.3, 1: 0.3}, {0: [0, 1], 1: [0, 1]})
+    assert dc._zsp_smooth[0] == prev[0] and dc._zsp_smooth[1] == prev[1]
+
+
+def test_per_client_lambda_matches_cell_lambda():
+    """client_lams equal to the mean of the client's cell lambdas reproduce update_client_models exactly."""
+    import torch
+    from src.runner_r6 import r6_training_round, set_seed
+    lam = {0: 0.3, 1: 0.5, 2: 0.6}
+    Lam = {0: 0.5, 1: 0.5, 2: 0.5}
+    cA, esA, _ = _tiny_setup()
+    set_seed(3)
+    r6_training_round(cA, np.ones(len(cA), bool), esA, lam, Lam, "fixed", 0.5)
+    cB, esB, _ = _tiny_setup()
+    per = {c.cid: (lam[c.edge_server_ids[0]] if len(c.edge_server_ids) == 1
+                   else float(np.mean([lam[z] for z in c.edge_server_ids]))) for c in cB}
+    set_seed(3)
+    r6_training_round(cB, np.ones(len(cB), bool), esB, lam, Lam, "device", 0.5, client_lams=per)
+    for a, b in zip(cA, cB):
+        for k, v in a.client_model.state_dict().items():
+            assert torch.equal(v, b.client_model.state_dict()[k]), k
+        for z in a.edge_server_ids:
+            for k, v in a.server_models[z].state_dict().items():
+                assert torch.equal(v, b.server_models[z].state_dict()[k]), k

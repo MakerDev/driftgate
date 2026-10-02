@@ -93,3 +93,63 @@ class EdgeDriftGate:
                          m={z: self._norms[z].mu for z in range(self.L)},
                          present=present, t_ns=t_ns)
         return dict(self.lam), dict(self.Lam)
+
+
+class DeviceDriftGate:
+    """Round 7 gate (--device_lambda): one lambda per client, from the client's own signal x_k.
+
+    Same constants and normalization as the cell controller, kept per client:
+      temporal: GuardedRobustNormalizer on x_k (warm-up 15, burn-in 10, guard 0.5, clip [-2, 6]);
+      spatial : the edge returns the median and MAD of x over the member clients that sent x this
+                round (a client in two cells uses the members of both cells); the client computes
+                clip((x_k - median) / sigma, -2, 6) with the same sigma floor as spatial_z;
+                fewer than 3 values -> temporal score only;
+      q_k     : max of the two EMA(0.3)-smoothed scores;
+      lambda_k: 0.70 - 0.55 * sigmoid((q_k - 1.5) / 0.75); 0.425 while the client has <= 25 observations.
+    A client without a signal this round (no request, not participating) keeps its whole state.
+    """
+
+    def __init__(self, K, lam_min=0.15, lam_max=0.70, warmup=15, burn_in=10, z_guard=0.5,
+                 spatial_norm=True, normalizer="guarded"):
+        self.K = K
+        self.lam_min, self.lam_max = lam_min, lam_max
+        self.warmup_total = warmup + burn_in
+        self.spatial_norm = spatial_norm
+        kw = {"warmup": warmup, "burn_in": burn_in}
+        if z_guard is not None:
+            kw["z_guard_hi"] = z_guard
+        self._norms = {k: NORMALIZERS[normalizer](**kw) for k in range(K)}
+        self._z_smooth = {k: 0.0 for k in range(K)}
+        self._zsp_smooth = {k: 0.0 for k in range(K)}
+        self._n_obs = {k: 0 for k in range(K)}
+        self.lam = {k: 0.5 * (lam_min + lam_max) for k in range(K)}
+        self.q = {k: 0.0 for k in range(K)}
+        self.last = {}
+
+    def step(self, x, reference):
+        """x: {client: signal} for clients with a signal this round.
+        reference: {client: [clients whose x the client's edge(s) summarize]} (members of its cells)."""
+        s_temp, s_spat = {}, {}
+        for k in sorted(x):
+            z_raw = self._norms[k].update(x[k])
+            self._n_obs[k] += 1
+            zt = (1 - EWMA_ALPHA) * self._z_smooth[k] + EWMA_ALPHA * z_raw
+            self._z_smooth[k] = zt
+            s_temp[k] = z_raw
+            zh = zt
+            if self.spatial_norm:
+                ref = {j: x[j] for j in reference.get(k, []) if j in x}
+                if len(ref) >= 3:
+                    sp = spatial_z(ref)[k]
+                    s_spat[k] = sp
+                    sm = (1 - EWMA_ALPHA) * self._zsp_smooth[k] + EWMA_ALPHA * sp
+                    self._zsp_smooth[k] = sm
+                    zh = max(zt, sm)
+            self.q[k] = zh
+            if self._n_obs[k] <= self.warmup_total:
+                self.lam[k] = 0.5 * (self.lam_min + self.lam_max)
+            else:
+                g = _sigmoid((zh - Z0) / TAU_Z)
+                self.lam[k] = self.lam_max - (self.lam_max - self.lam_min) * g
+        self.last = dict(s_temp=s_temp, s_spat=s_spat)
+        return dict(self.lam)

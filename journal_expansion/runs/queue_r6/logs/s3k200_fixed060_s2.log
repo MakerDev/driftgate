@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py", line 94, in <module>
+    main()
+  File "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py", line 86, in main
+    run_r6(cfg, env_path, args.mode, signal=args.signal, lambda_val=args.lambda_val,
+  File "/home/honeynaps/data/driftgate/journal_expansion/src/runner_r6.py", line 244, in run_r6
+    use_cached_loaders(clients, indices, train_ds, device, cfg["batch_size"])
+  File "/home/honeynaps/data/driftgate/journal_expansion/src/runner_r6.py", line 84, in use_cached_loaders
+    X = torch.stack([train_ds[i][0] for i in range(len(train_ds))]).to(device)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 586.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 137.75 MiB is free. Process 1027448 has 8.71 GiB memory in use. Process 1039338 has 8.71 GiB memory in use. Process 1696734 has 4.06 GiB memory in use. Including non-PyTorch memory, this process has 1.87 GiB memory in use. Of the allocated memory 1.48 GiB is allocated by PyTorch, and 16.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[s3k200_fixed060_s2] scenario=S3_K200 arm=fixed060 mode=fixed K=200 L=20 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.909 acc=0.3868 off=1.000 active=200 elapsed=2.4m ETA=355m
+  R  5 loss=0.405 acc=0.5503 off=0.986 active=200 elapsed=9.6m ETA=277m
+  R 10 loss=0.349 acc=0.5994 off=0.965 active=200 elapsed=18.5m ETA=259m
+  R 15 loss=0.319 acc=0.6334 off=0.944 active=200 elapsed=27.5m ETA=248m
+  R 20 loss=0.292 acc=0.6580 off=0.926 active=200 elapsed=36.4m ETA=237m
+  R 25 loss=0.276 acc=0.6558 off=0.926 active=200 elapsed=45.4m ETA=227m
+  R 30 loss=0.261 acc=0.6210 off=0.932 active=200 elapsed=54.6m ETA=218m
+  R 35 loss=0.250 acc=0.5843 off=0.941 active=200 elapsed=63.7m ETA=209m
+  R 40 loss=0.238 acc=0.5551 off=0.915 active=200 elapsed=73.1m ETA=201m
+  R 45 loss=0.226 acc=0.5588 off=0.901 active=200 elapsed=82.4m ETA=192m
+  R 50 loss=0.214 acc=0.5671 off=0.880 active=200 elapsed=91.6m ETA=183m
+  R 55 loss=0.204 acc=0.5727 off=0.872 active=200 elapsed=101.0m ETA=174m
+  R 60 loss=0.195 acc=0.5765 off=0.866 active=200 elapsed=110.4m ETA=166m
+  R 65 loss=0.183 acc=0.5862 off=0.849 active=200 elapsed=119.7m ETA=157m
+  R 70 loss=0.177 acc=0.5842 off=0.842 active=200 elapsed=129.1m ETA=148m
+  R 75 loss=0.171 acc=0.5830 off=0.823 active=200 elapsed=138.7m ETA=139m
+  R 80 loss=0.166 acc=0.5873 off=0.802 active=200 elapsed=148.1m ETA=130m
+  R 85 loss=0.159 acc=0.5959 off=0.789 active=200 elapsed=157.6m ETA=121m
+  R 90 loss=0.153 acc=0.5960 off=0.775 active=200 elapsed=167.0m ETA=111m
+  R 95 loss=0.149 acc=0.5979 off=0.756 active=200 elapsed=174.3m ETA=101m
+  R100 loss=0.144 acc=0.5981 off=0.755 active=200 elapsed=181.8m ETA=91m
+  R105 loss=0.140 acc=0.6034 off=0.740 active=200 elapsed=187.2m ETA=80m
+  R110 loss=0.137 acc=0.5970 off=0.730 active=200 elapsed=192.9m ETA=70m
+  R115 loss=0.132 acc=0.5925 off=0.720 active=200 elapsed=198.4m ETA=60m
+  R120 loss=0.128 acc=0.6129 off=0.692 active=200 elapsed=203.9m ETA=51m
+  R125 loss=0.122 acc=0.6374 off=0.690 active=200 elapsed=209.5m ETA=42m
+  R130 loss=0.118 acc=0.6884 off=0.662 active=200 elapsed=214.6m ETA=33m
+  R135 loss=0.117 acc=0.7380 off=0.613 active=200 elapsed=219.8m ETA=24m
+  R140 loss=0.106 acc=0.7816 off=0.581 active=200 elapsed=225.0m ETA=16m
+  R145 loss=0.105 acc=0.7960 off=0.527 active=200 elapsed=230.2m ETA=8m
+  R150 loss=0.103 acc=0.8131 off=0.507 active=200 elapsed=233.5m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S3/s3k200_fixed060_s2.json  integrated=0.6164

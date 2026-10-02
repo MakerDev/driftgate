@@ -1,0 +1,7 @@
+[wg0t3 cuda:0/GPU0] START s4part07_driftgate_own_s1 (K50) 2026-10-02 16:10:59
+[wg0t3 cuda:0/GPU0] END s4part07_driftgate_own_s1 exit=0 2026-10-02 17:00:12
+[wg0t3 cuda:0/GPU0] START s4part05_driftgate_own_s1 (K50) 2026-10-02 17:00:12
+[wg0t3 cuda:0/GPU0] END s4part05_driftgate_own_s1 exit=0 2026-10-02 17:36:11
+[wg0t3 cuda:0/GPU0] START s1fast_fixed060_s0 (K50) 2026-10-02 17:36:11
+[wg0t3 cuda:0/GPU0] END s1fast_fixed060_s0 exit=0 2026-10-02 18:43:27
+[wg0t3 cuda:0/GPU0] STOP file found, exiting 2026-10-02 19:48:28

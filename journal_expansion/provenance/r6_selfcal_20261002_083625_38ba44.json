@@ -107,7 +107,7 @@
   "cuda": "12.6",
   "gpu": "NVIDIA GeForce RTX 4090"
  },
- "status": "running",
+ "status": "completed",
  "split_hash": "ce8abc8ae1543d1c",
  "model_init_hash": "817b02b42cf1cfb3",
  "disjoint_pools": {
@@ -460,5 +460,13 @@
   "47": 1454,
   "48": 766,
   "49": 812
+ },
+ "end_time": "2026-10-02T09:42:22.812521",
+ "wall_time_sec": 3957.369802713394,
+ "final_metrics": {
+  "integrated_acc": 0.6522417168595224,
+  "acc_total_final": 0.7964764350716885,
+  "wall_min": 65.7870423078537,
+  "probe_eval_overlap": 0
  }
 }

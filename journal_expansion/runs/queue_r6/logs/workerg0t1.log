@@ -1,0 +1,13 @@
+[wg0t1 cuda:0/GPU0] START s4loss03_driftgate_own_s1 (K50) 2026-10-02 12:56:56
+[wg0t1 cuda:0/GPU0] END s4loss03_driftgate_own_s1 exit=0 2026-10-02 14:05:48
+[wg0t1 cuda:0/GPU0] START s4delay1_driftgate_own_s2 (K50) 2026-10-02 14:05:48
+[wg0t1 cuda:0/GPU0] END s4delay1_driftgate_own_s2 exit=0 2026-10-02 15:11:10
+[wg0t1 cuda:0/GPU0] START s4lowreq_driftgate_own_s0 (K50) 2026-10-02 15:11:10
+[wg0t1 cuda:0/GPU0] END s4lowreq_driftgate_own_s0 exit=0 2026-10-02 16:19:51
+[wg0t1 cuda:0/GPU0] START s4part07_fixed060_s1 (K50) 2026-10-02 16:19:51
+[wg0t1 cuda:0/GPU0] END s4part07_fixed060_s1 exit=0 2026-10-02 17:08:10
+[wg0t1 cuda:0/GPU0] START s4part05_fixed060_s1 (K50) 2026-10-02 17:08:10
+[wg0t1 cuda:0/GPU0] END s4part05_fixed060_s1 exit=0 2026-10-02 17:44:08
+[wg0t1 cuda:0/GPU0] START s1fast_fixed040_s1 (K50) 2026-10-02 17:44:08
+[wg0t1 cuda:0/GPU0] END s1fast_fixed040_s1 exit=0 2026-10-02 18:47:43
+[wg0t1 cuda:0/GPU0] STOP file found, exiting 2026-10-02 19:48:44

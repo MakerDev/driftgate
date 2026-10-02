@@ -1,1 +1,15 @@
 setting,method,cell_type,cells_with_change,reaction_not_reached,reaction_mean_rounds,reaction_mean_min,reaction_median_rounds,cells_with_recovery,recovery_mean_rounds,recovery_mean_min
+GeoLife trace,DriftGate,cell 0,0,0,,,,0,,
+GeoLife trace,DriftGate,cell 1,3,0,26.33,158.0,28.0,2,0.00,0.0
+GeoLife trace,DriftGate,cell 2,3,0,6.00,36.0,3.0,0,,
+GeoLife trace,DriftGate,cell 3,3,0,18.33,110.0,6.0,3,2.67,16.0
+GeoLife trace,DriftGate,cell 4,3,0,0.00,0.0,0.0,0,,
+GeoLife trace,entropy controller,cell 0,0,0,,,,0,,
+GeoLife trace,entropy controller,cell 1,3,0,44.67,268.0,53.0,2,0.00,0.0
+GeoLife trace,entropy controller,cell 2,3,0,40.00,240.0,39.0,0,,
+GeoLife trace,entropy controller,cell 3,3,2,75.00,450.0,75.0,3,2.33,14.0
+GeoLife trace,entropy controller,cell 4,3,0,0.00,0.0,0.0,0,,
+commute mobility,DriftGate,hub,5,0,14.00,84.0,4.0,3,0.00,0.0
+commute mobility,DriftGate,residential,20,1,13.89,83.4,2.0,15,4.67,28.0
+commute mobility,entropy controller,hub,5,0,18.40,110.4,10.0,3,0.00,0.0
+commute mobility,entropy controller,residential,20,12,36.75,220.5,21.0,18,0.56,3.3

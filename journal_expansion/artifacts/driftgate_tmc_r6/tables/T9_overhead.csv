@@ -1,0 +1,5 @@
+placement,bandwidth_mbps,probe_bytes_uploaded,overhead_ms,share_of_local_training,share_of_6min_round,signal_bytes_per_client,timing
+(a) server-block replica on the device,,0,9.821,0.00730,0.000027,4,host AMD Ryzen Threadripper PRO 7965WX 24-Cores / cpu (host placeholder)
+(b) server block on the edge,10,2099712,1679.881,1.24908,0.004666,4,upload at B; edge NVIDIA GeForce RTX 4090 (CUDA 12.6); training round: host AMD Ryzen Threadripper PRO 7965WX 24-Cores / cpu (host placeholder)
+(b) server block on the edge,50,2099712,336.066,0.24988,0.000934,4,upload at B; edge NVIDIA GeForce RTX 4090 (CUDA 12.6); training round: host AMD Ryzen Threadripper PRO 7965WX 24-Cores / cpu (host placeholder)
+(b) server block on the edge,100,2099712,168.089,0.12498,0.000467,4,upload at B; edge NVIDIA GeForce RTX 4090 (CUDA 12.6); training round: host AMD Ryzen Threadripper PRO 7965WX 24-Cores / cpu (host placeholder)

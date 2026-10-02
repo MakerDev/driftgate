@@ -136,3 +136,9 @@
 - 워커 교체(g*u*): job 종류별 GPU 메모리(nvidia-smi 측정값: K=500 9.0 GB, K=200 4.4 GB, K=50 2.1 GB)를 더해서 GPU당 23 GB를 넘으면 그 job을 시작하지 않는다. 돌고 있던 job 15개는 그대로 계속 돈다.
 - 시점까지 진행: 149/218 완료(R0 67개 모두 완료, S1 46개 모두 완료).
 - 같은 시각에 옛 워커 `g2v4`가 2분 사이에 K=200 job 5개(`s3k200_fixed040_s1`, `fixed060_s1`, `fixed020_s2`, `fixed040_s2`, `fixed060_s2`)를 연달아 꺼냈고, 모두 시작 직후 OOM으로 실패했다. 5개 모두 큐 맨 앞에 다시 넣었다. 워커를 다시 교체했다(g*t*): job이 5분 안에 실패하면 10분 쉬고 다음 job을 꺼낸다.
+
+## 2026-10-02 19:47 전체 완료
+
+- 218개 run 모두 완료(overlap 0, `tables/T10_run_manifest.csv`). STOP 파일을 두어 워커를 내렸고, 이 작업을 위해 넣었던 cron 줄(`supervisor_r6.sh`)을 crontab에서 지웠다.
+- 6.1 서버 측정(`tables/T9a_server_timing.csv`)은 모든 GPU가 빈 뒤 GPU 0에서 했다. 지연 시간과 비용은 `latency_calc.py`로 계산했다(host CPU 임시값).
+- 표, R0 표, 그림, caption을 다시 만들었고 보고서 `DriftGate_R6_report_ko.md`를 썼다.

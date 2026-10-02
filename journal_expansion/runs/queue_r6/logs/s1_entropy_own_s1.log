@@ -19,3 +19,15 @@
   R 85 loss=0.163 acc=0.6415 off=0.868 active=50 elapsed=37.1m ETA=28m
   R 90 loss=0.146 acc=0.6260 off=0.738 active=50 elapsed=39.3m ETA=26m
   R 95 loss=0.118 acc=0.6200 off=0.649 active=50 elapsed=41.6m ETA=24m
+  R100 loss=0.118 acc=0.6161 off=0.662 active=50 elapsed=43.9m ETA=22m
+  R105 loss=0.117 acc=0.6084 off=0.651 active=50 elapsed=46.2m ETA=20m
+  R110 loss=0.106 acc=0.6104 off=0.630 active=50 elapsed=48.5m ETA=18m
+  R115 loss=0.104 acc=0.6192 off=0.652 active=50 elapsed=50.8m ETA=15m
+  R120 loss=0.109 acc=0.6468 off=0.620 active=50 elapsed=53.0m ETA=13m
+  R125 loss=0.104 acc=0.6699 off=0.574 active=50 elapsed=55.2m ETA=11m
+  R130 loss=0.096 acc=0.7412 off=0.536 active=50 elapsed=57.5m ETA=9m
+  R135 loss=0.097 acc=0.7575 off=0.563 active=50 elapsed=59.6m ETA=7m
+  R140 loss=0.107 acc=0.7922 off=0.599 active=50 elapsed=61.8m ETA=4m
+  R145 loss=0.115 acc=0.7830 off=0.595 active=50 elapsed=64.0m ETA=2m
+  R150 loss=0.117 acc=0.7721 off=0.595 active=50 elapsed=66.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1/s1_entropy_own_s1.json  integrated=0.6234

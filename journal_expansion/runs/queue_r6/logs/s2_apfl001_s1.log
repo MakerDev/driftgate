@@ -1,0 +1,33 @@
+[s2_apfl001_s1] scenario=S2 arm=apfl001 mode=apfl K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.968 acc=0.2219 off=1.000 active=50 elapsed=0.6m ETA=94m
+  R  5 loss=0.505 acc=0.5221 off=0.992 active=50 elapsed=2.6m ETA=75m
+  R 10 loss=0.422 acc=0.5551 off=0.975 active=50 elapsed=5.1m ETA=71m
+  R 15 loss=0.363 acc=0.5799 off=0.950 active=50 elapsed=7.5m ETA=68m
+  R 20 loss=0.320 acc=0.6413 off=0.932 active=50 elapsed=10.0m ETA=65m
+  R 25 loss=0.282 acc=0.6749 off=0.866 active=50 elapsed=12.4m ETA=62m
+  R 30 loss=0.252 acc=0.6961 off=0.799 active=50 elapsed=14.8m ETA=59m
+  R 35 loss=0.235 acc=0.6971 off=0.781 active=50 elapsed=17.3m ETA=57m
+  R 40 loss=0.211 acc=0.6877 off=0.742 active=50 elapsed=19.8m ETA=54m
+  R 45 loss=0.199 acc=0.6723 off=0.718 active=50 elapsed=22.2m ETA=52m
+  R 50 loss=0.191 acc=0.6834 off=0.680 active=50 elapsed=24.7m ETA=49m
+  R 55 loss=0.174 acc=0.6708 off=0.686 active=50 elapsed=27.1m ETA=47m
+  R 60 loss=0.175 acc=0.6524 off=0.645 active=50 elapsed=29.6m ETA=44m
+  R 65 loss=0.158 acc=0.6407 off=0.633 active=50 elapsed=32.0m ETA=42m
+  R 70 loss=0.148 acc=0.6533 off=0.638 active=50 elapsed=34.5m ETA=39m
+  R 75 loss=0.138 acc=0.6694 off=0.664 active=50 elapsed=37.0m ETA=37m
+  R 80 loss=0.139 acc=0.6642 off=0.632 active=50 elapsed=39.5m ETA=35m
+  R 85 loss=0.139 acc=0.6595 off=0.611 active=50 elapsed=42.1m ETA=32m
+  R 90 loss=0.137 acc=0.6632 off=0.618 active=50 elapsed=44.6m ETA=30m
+  R 95 loss=0.130 acc=0.6643 off=0.620 active=50 elapsed=47.3m ETA=27m
+  R100 loss=0.123 acc=0.6557 off=0.613 active=50 elapsed=49.8m ETA=25m
+  R105 loss=0.127 acc=0.6854 off=0.572 active=50 elapsed=52.3m ETA=22m
+  R110 loss=0.128 acc=0.7019 off=0.597 active=50 elapsed=54.9m ETA=20m
+  R115 loss=0.122 acc=0.7038 off=0.580 active=50 elapsed=57.4m ETA=17m
+  R120 loss=0.120 acc=0.7036 off=0.537 active=50 elapsed=59.8m ETA=15m
+  R125 loss=0.127 acc=0.7412 off=0.610 active=50 elapsed=62.3m ETA=12m
+  R130 loss=0.131 acc=0.7228 off=0.582 active=50 elapsed=64.9m ETA=10m
+  R135 loss=0.122 acc=0.7274 off=0.586 active=50 elapsed=67.4m ETA=7m
+  R140 loss=0.110 acc=0.7333 off=0.577 active=50 elapsed=69.9m ETA=5m
+  R145 loss=0.110 acc=0.7192 off=0.536 active=50 elapsed=72.3m ETA=2m
+  R150 loss=0.115 acc=0.7546 off=0.534 active=50 elapsed=74.8m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S2/s2_apfl001_s1.json  integrated=0.6587

@@ -1,0 +1,4 @@
+[t_resA] method=splitomcplus controller=selfcal signal=tv_dist schedule=A rounds=3 device=cuda:0
+  R  1 loss=0.403 acc=0.473 worst=0.326 elapsed=0.7m ETA=1m
+  R  3 loss=0.240 acc=0.364 worst=0.283 elapsed=2.1m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/prestart/t_resA.json

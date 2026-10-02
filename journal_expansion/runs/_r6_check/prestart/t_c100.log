@@ -1,0 +1,4 @@
+[t_c100] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=3 device=cuda:0
+  R  1 loss=4.008 acc=0.025 worst=0.019 elapsed=0.6m ETA=1m
+  R  3 loss=3.304 acc=0.048 worst=0.038 elapsed=1.7m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/prestart/t_c100.json

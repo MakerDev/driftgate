@@ -3,3 +3,7 @@
 [wg3v4 cuda:0/GPU3] START s1_entropy_own_s0 (K50) 2026-10-02 07:50:38
 [wg3v4 cuda:0/GPU3] END s1_entropy_own_s0 exit=0 2026-10-02 08:55:25
 [wg3v4 cuda:0/GPU3] START s2_entropy_own_s0 (K50) 2026-10-02 08:55:25
+[wg3v4 cuda:0/GPU3] END s2_entropy_own_s0 exit=0 2026-10-02 09:58:15
+[wg3v4 cuda:0/GPU3] START s2_apfl010_s1 (K50) 2026-10-02 09:58:15
+[wg3v4 cuda:0/GPU3] END s2_apfl010_s1 exit=0 2026-10-02 11:13:24
+[wg3v4 cuda:0/GPU3] START s3k200_fixed020_s0 (K200) 2026-10-02 11:13:24

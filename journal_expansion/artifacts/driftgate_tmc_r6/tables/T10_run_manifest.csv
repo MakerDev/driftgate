@@ -1,219 +1,219 @@
 run_id,run_name,scenario,arm,seed,model_seed,env_file,size,complete,rounds,eval_rounds,probe_eval_overlap,overlap_ok,device,worker_exit_code,start,end,wall_min
-,s3k500_driftgate_own_s0,S3_K500,driftgate_own,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed020_s0,S3_K500,fixed020,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed040_s0,S3_K500,fixed040,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed060_s0,S3_K500,fixed060,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_driftgate_own_s1,S3_K500,driftgate_own,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed020_s1,S3_K500,fixed020,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed040_s1,S3_K500,fixed040,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed060_s1,S3_K500,fixed060,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_driftgate_own_s2,S3_K500,driftgate_own,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed020_s2,S3_K500,fixed020,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed040_s2,S3_K500,fixed040,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,no (queued or running),,,,,,,,,
-,s3k500_fixed060_s2,S3_K500,fixed060,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,no (queued or running),,,,,,,,,
-,r0_e1_relonly_tiny_s0,R0 (Round-5 setting),e1_relonly_tiny,0,100,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e1_relonly_tiny_s1,R0 (Round-5 setting),e1_relonly_tiny,1,101,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e1_relonly_tiny_s2,R0 (Round-5 setting),e1_relonly_tiny,2,102,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e2_res_relonly_A_s0,R0 (Round-5 setting),e2_res_relonly_A,0,100,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e2_res_relonly_A_s1,R0 (Round-5 setting),e2_res_relonly_A,1,101,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e2_res_relonly_A_s2,R0 (Round-5 setting),e2_res_relonly_A,2,102,none (Round-5 schedule),R0H,no (queued or running),,,,,,,,,
-,r0_e1_relonly_svhn_s0,R0 (Round-5 setting),e1_relonly_svhn,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_svhn_s1,R0 (Round-5 setting),e1_relonly_svhn,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_svhn_s2,R0 (Round-5 setting),e1_relonly_svhn,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_svhn_s3,R0 (Round-5 setting),e1_relonly_svhn,3,103,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_svhn_s4,R0 (Round-5 setting),e1_relonly_svhn,4,104,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t2_svhn_ent_s0,R0 (Round-5 setting),t2_svhn_ent,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t2_svhn_ent_s1,R0 (Round-5 setting),t2_svhn_ent,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t2_svhn_ent_s2,R0 (Round-5 setting),t2_svhn_ent,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t2_svhn_ent_s3,R0 (Round-5 setting),t2_svhn_ent,3,103,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t2_svhn_ent_s4,R0 (Round-5 setting),t2_svhn_ent,4,104,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_c10gsig_s0,R0 (Round-5 setting),e1_relonly_c10gsig,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_c10gsig_s1,R0 (Round-5 setting),e1_relonly_c10gsig,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e1_relonly_c10gsig_s2,R0 (Round-5 setting),e1_relonly_c10gsig,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_c100gsig_s0,R0 (Round-5 setting),b1_relonly_c100gsig,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_c100gsig_s1,R0 (Round-5 setting),b1_relonly_c100gsig,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_c100gsig_s2,R0 (Round-5 setting),b1_relonly_c100gsig,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_c100gsig_s0,R0 (Round-5 setting),b1_absonly_c100gsig,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_c100gsig_s1,R0 (Round-5 setting),b1_absonly_c100gsig,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_c100gsig_s2,R0 (Round-5 setting),b1_absonly_c100gsig,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_A_s0,R0 (Round-5 setting),b1_relonly_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_A_s1,R0 (Round-5 setting),b1_relonly_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_A_s2,R0 (Round-5 setting),b1_relonly_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_A_s3,R0 (Round-5 setting),b1_relonly_A,3,103,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_A_s4,R0 (Round-5 setting),b1_relonly_A,4,104,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_A_ent_s0,R0 (Round-5 setting),t1_A_ent,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_A_ent_s1,R0 (Round-5 setting),t1_A_ent,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_A_ent_s2,R0 (Round-5 setting),t1_A_ent,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_A_ent_s3,R0 (Round-5 setting),t1_A_ent,3,103,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_A_ent_s4,R0 (Round-5 setting),t1_A_ent,4,104,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_A_s0,R0 (Round-5 setting),b1_absonly_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_A_s1,R0 (Round-5 setting),b1_absonly_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_A_s2,R0 (Round-5 setting),b1_absonly_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_A_s3,R0 (Round-5 setting),b1_absonly_A,3,103,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_A_s4,R0 (Round-5 setting),b1_absonly_A,4,104,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard025_A_s0,R0 (Round-5 setting),e3_guard025_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard025_A_s1,R0 (Round-5 setting),e3_guard025_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard025_A_s2,R0 (Round-5 setting),e3_guard025_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard100_A_s0,R0 (Round-5 setting),e3_guard100_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard100_A_s1,R0 (Round-5 setting),e3_guard100_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_guard100_A_s2,R0 (Round-5 setting),e3_guard100_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_A_s0,R0 (Round-5 setting),e3_lmax060_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_A_s1,R0 (Round-5 setting),e3_lmax060_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_A_s2,R0 (Round-5 setting),e3_lmax060_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_A_s0,R0 (Round-5 setting),e3_lmax080_A,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_A_s1,R0 (Round-5 setting),e3_lmax080_A,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_A_s2,R0 (Round-5 setting),e3_lmax080_A,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_mob_s0,R0 (Round-5 setting),b1_relonly_mob,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_mob_s1,R0 (Round-5 setting),b1_relonly_mob,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_relonly_mob_s2,R0 (Round-5 setting),b1_relonly_mob,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_mob_ent_s0,R0 (Round-5 setting),t1_mob_ent,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_mob_ent_s1,R0 (Round-5 setting),t1_mob_ent,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_t1_mob_ent_s2,R0 (Round-5 setting),t1_mob_ent,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_mob_s0,R0 (Round-5 setting),b1_absonly_mob,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_mob_s1,R0 (Round-5 setting),b1_absonly_mob,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_b1_absonly_mob_s2,R0 (Round-5 setting),b1_absonly_mob,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_mob_s0,R0 (Round-5 setting),e3_lmax060_mob,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_mob_s1,R0 (Round-5 setting),e3_lmax060_mob,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax060_mob_s2,R0 (Round-5 setting),e3_lmax060_mob,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_mob_s0,R0 (Round-5 setting),e3_lmax080_mob,0,100,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_mob_s1,R0 (Round-5 setting),e3_lmax080_mob,1,101,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,r0_e3_lmax080_mob_s2,R0 (Round-5 setting),e3_lmax080_mob,2,102,none (Round-5 schedule),R0,no (queued or running),,,,,,,,,
-,s1_driftgate_own_s0,S1,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,,,,,
+r6_selfcal_20261001_185832_a12fc5,s3k500_driftgate_own_s0,S3_K500,driftgate_own,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-01 18:58:30,,656.9
+r6_fixed_20261002_052142_09212d,s3k500_fixed020_s0,S3_K500,fixed020,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-01 18:58:43,,593.5
+r6_fixed_20261001_185859_f9ad5c,s3k500_fixed040_s0,S3_K500,fixed040,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",,2026-10-01 18:58:57,,621.4
+r6_fixed_20261002_052843_12d1b9,s3k500_fixed060_s0,S3_K500,fixed060,0,100,runs/phaseT6_env/S3_K500_seed0.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",143,2026-10-02 05:28:41,2026-10-01 19:00:44,594.4
+r6_selfcal_20261001_185859_87f7a4,s3k500_driftgate_own_s1,S3_K500,driftgate_own,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-01 18:58:57,,718.1
+r6_fixed_20261001_185858_887657,s3k500_fixed020_s1,S3_K500,fixed020,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",,2026-10-01 18:58:57,,629.2
+r6_fixed_20261001_185858_30cbf6,s3k500_fixed040_s1,S3_K500,fixed040,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-01 18:58:57,,639.6
+r6_fixed_20261002_053843_129f8e,s3k500_fixed060_s1,S3_K500,fixed060,1,101,runs/phaseT6_env/S3_K500_seed1.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",143,2026-10-01 18:58:57,2026-10-01 19:00:45,661.8
+r6_selfcal_20261001_185859_d76bd0,s3k500_driftgate_own_s2,S3_K500,driftgate_own,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-01 18:58:57,,658.5
+r6_fixed_20261001_185859_c13ac9,s3k500_fixed020_s2,S3_K500,fixed020,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-01 18:58:57,,700.9
+r6_fixed_20261001_185859_a08103,s3k500_fixed040_s2,S3_K500,fixed040,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-01 18:58:57,,638.8
+r6_fixed_20261002_053943_2bb12b,s3k500_fixed060_s2,S3_K500,fixed060,2,102,runs/phaseT6_env/S3_K500_seed2.npz,K500,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",143,2026-10-01 18:58:57,2026-10-01 19:00:44,657.8
+selfcal_20261001_185900_7b4157,r0_e1_relonly_tiny_s0,R0 (Round-5 setting),e1_relonly_tiny,0,100,none (Round-5 schedule),R0H,yes,100,11,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-01 18:58:57,,244.0
+selfcal_20261001_185859_25090a,r0_e1_relonly_tiny_s1,R0 (Round-5 setting),e1_relonly_tiny,1,101,none (Round-5 schedule),R0H,yes,100,11,0,yes,"honeynaps, RTX 4090, GPU2",,2026-10-01 18:58:57,,249.2
+selfcal_20261001_185900_8685bd,r0_e1_relonly_tiny_s2,R0 (Round-5 setting),e1_relonly_tiny,2,102,none (Round-5 schedule),R0H,yes,100,11,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-01 18:58:57,,248.9
+selfcal_20261001_185900_4346d0,r0_e2_res_relonly_A_s0,R0 (Round-5 setting),e2_res_relonly_A,0,100,none (Round-5 schedule),R0H,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-01 18:58:57,,154.8
+selfcal_20261001_213437_af4793,r0_e2_res_relonly_A_s1,R0 (Round-5 setting),e2_res_relonly_A,1,101,none (Round-5 schedule),R0H,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 21:34:34,2026-10-02 00:15:28,160.7
+selfcal_20261001_230339_a4f9fa,r0_e2_res_relonly_A_s2,R0 (Round-5 setting),e2_res_relonly_A,2,102,none (Round-5 schedule),R0H,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 23:03:36,2026-10-02 01:04:33,120.8
+selfcal_20261001_185900_36bbf3,r0_e1_relonly_svhn_s0,R0 (Round-5 setting),e1_relonly_svhn,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-01 18:58:57,,155.2
+selfcal_20261001_190046_d2f668,r0_e1_relonly_svhn_s1,R0 (Round-5 setting),e1_relonly_svhn,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-01 19:00:44,,156.0
+selfcal_20261001_190046_c611d3,r0_e1_relonly_svhn_s2,R0 (Round-5 setting),e1_relonly_svhn,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",,2026-10-01 19:00:44,,143.2
+selfcal_20261001_190046_411419,r0_e1_relonly_svhn_s3,R0 (Round-5 setting),e1_relonly_svhn,3,103,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-01 19:00:45,,170.5
+selfcal_20261001_212437_ea00d8,r0_e1_relonly_svhn_s4,R0 (Round-5 setting),e1_relonly_svhn,4,104,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 21:24:34,2026-10-02 00:03:48,159.0
+selfcal_20261001_213437_313a35,r0_t2_svhn_ent_s0,R0 (Round-5 setting),t2_svhn_ent,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 21:34:34,2026-10-02 00:25:01,170.3
+selfcal_20261001_213737_010c09,r0_t2_svhn_ent_s1,R0 (Round-5 setting),t2_svhn_ent,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 21:37:34,2026-10-02 00:21:05,163.3
+selfcal_20261001_215137_2323dc,r0_t2_svhn_ent_s2,R0 (Round-5 setting),t2_svhn_ent,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 21:51:34,2026-10-02 00:32:14,160.5
+selfcal_20261001_230838_0b169c,r0_t2_svhn_ent_s3,R0 (Round-5 setting),t2_svhn_ent,3,103,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 23:08:36,2026-10-02 01:32:33,143.8
+selfcal_20261001_230838_ebc72e,r0_t2_svhn_ent_s4,R0 (Round-5 setting),t2_svhn_ent,4,104,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 23:08:36,2026-10-02 01:26:04,137.3
+selfcal_20261002_000351_04ca5b,r0_e1_relonly_c10gsig_s0,R0 (Round-5 setting),e1_relonly_c10gsig,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 00:03:48,2026-10-02 01:36:45,92.8
+selfcal_20261002_001530_917d48,r0_e1_relonly_c10gsig_s1,R0 (Round-5 setting),e1_relonly_c10gsig,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 00:15:28,2026-10-02 01:48:35,93.0
+selfcal_20261002_002107_001ee6,r0_e1_relonly_c10gsig_s2,R0 (Round-5 setting),e1_relonly_c10gsig,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 00:21:05,2026-10-02 01:45:25,84.2
+selfcal_20261002_002503_abda88,r0_b1_relonly_c100gsig_s0,R0 (Round-5 setting),b1_relonly_c100gsig,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 00:25:01,2026-10-02 01:59:17,94.1
+selfcal_20261002_003216_162adf,r0_b1_relonly_c100gsig_s1,R0 (Round-5 setting),b1_relonly_c100gsig,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 00:32:14,2026-10-02 02:04:28,92.1
+selfcal_20261002_010434_b3414f,r0_b1_relonly_c100gsig_s2,R0 (Round-5 setting),b1_relonly_c100gsig,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 01:04:33,2026-10-02 02:35:55,91.2
+selfcal_20261002_012606_81c8bf,r0_b1_absonly_c100gsig_s0,R0 (Round-5 setting),b1_absonly_c100gsig,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 01:26:04,2026-10-02 02:54:45,88.6
+selfcal_20261002_013235_638c84,r0_b1_absonly_c100gsig_s1,R0 (Round-5 setting),b1_absonly_c100gsig,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 01:32:33,2026-10-02 03:03:07,90.4
+selfcal_20261002_013647_00d10c,r0_b1_absonly_c100gsig_s2,R0 (Round-5 setting),b1_absonly_c100gsig,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 01:36:45,2026-10-02 03:07:35,90.7
+selfcal_20261002_014526_700f0d,r0_b1_relonly_A_s0,R0 (Round-5 setting),b1_relonly_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 01:45:25,2026-10-02 03:16:26,90.9
+selfcal_20261002_014837_47159e,r0_b1_relonly_A_s1,R0 (Round-5 setting),b1_relonly_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 01:48:35,2026-10-02 03:20:35,91.8
+selfcal_20261002_015919_e484dc,r0_b1_relonly_A_s2,R0 (Round-5 setting),b1_relonly_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 01:59:17,2026-10-02 03:21:16,81.9
+selfcal_20261002_020430_40c114,r0_b1_relonly_A_s3,R0 (Round-5 setting),b1_relonly_A,3,103,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 02:04:28,2026-10-02 03:35:20,90.7
+selfcal_20261002_023557_d09324,r0_b1_relonly_A_s4,R0 (Round-5 setting),b1_relonly_A,4,104,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 02:35:55,2026-10-02 03:57:09,81.1
+selfcal_20261002_025447_4681e1,r0_t1_A_ent_s0,R0 (Round-5 setting),t1_A_ent,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 02:54:45,2026-10-02 04:20:39,85.8
+selfcal_20261002_030309_656897,r0_t1_A_ent_s1,R0 (Round-5 setting),t1_A_ent,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 03:03:07,2026-10-02 04:29:52,86.6
+selfcal_20261002_030737_c6c51c,r0_t1_A_ent_s2,R0 (Round-5 setting),t1_A_ent,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 03:07:35,2026-10-02 04:26:26,78.7
+selfcal_20261002_031628_34e04e,r0_t1_A_ent_s3,R0 (Round-5 setting),t1_A_ent,3,103,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 03:16:26,2026-10-02 04:43:10,86.6
+selfcal_20261002_032036_e258da,r0_t1_A_ent_s4,R0 (Round-5 setting),t1_A_ent,4,104,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 03:20:35,2026-10-02 04:41:32,80.8
+selfcal_20261002_032118_760efc,r0_b1_absonly_A_s0,R0 (Round-5 setting),b1_absonly_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 03:21:16,2026-10-02 04:47:45,86.3
+selfcal_20261002_033521_05c037,r0_b1_absonly_A_s1,R0 (Round-5 setting),b1_absonly_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 03:35:20,2026-10-02 05:01:52,86.5
+selfcal_20261002_035711_3ac4e1,r0_b1_absonly_A_s2,R0 (Round-5 setting),b1_absonly_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 03:57:09,2026-10-02 05:16:16,79.0
+selfcal_20261002_042040_53e360,r0_b1_absonly_A_s3,R0 (Round-5 setting),b1_absonly_A,3,103,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 04:20:39,2026-10-02 05:47:01,86.2
+selfcal_20261002_042627_08e124,r0_b1_absonly_A_s4,R0 (Round-5 setting),b1_absonly_A,4,104,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 04:26:26,2026-10-02 05:46:36,80.0
+selfcal_20261002_042954_6fd6ab,r0_e3_guard025_A_s0,R0 (Round-5 setting),e3_guard025_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 04:29:52,2026-10-02 05:56:25,86.4
+selfcal_20261002_044133_56b0c5,r0_e3_guard025_A_s1,R0 (Round-5 setting),e3_guard025_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 04:41:32,2026-10-02 06:09:59,88.3
+selfcal_20261002_044312_3e4572,r0_e3_guard025_A_s2,R0 (Round-5 setting),e3_guard025_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 04:43:10,2026-10-02 06:02:29,79.2
+selfcal_20261002_044746_87c817,r0_e3_guard100_A_s0,R0 (Round-5 setting),e3_guard100_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 04:47:45,2026-10-02 06:11:09,83.3
+selfcal_20261002_050154_a8ea8f,r0_e3_guard100_A_s1,R0 (Round-5 setting),e3_guard100_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 05:01:52,2026-10-02 06:29:45,87.7
+selfcal_20261002_051618_247da3,r0_e3_guard100_A_s2,R0 (Round-5 setting),e3_guard100_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 05:16:16,2026-10-02 06:30:52,74.5
+selfcal_20261002_054638_4ffc47,r0_e3_lmax060_A_s0,R0 (Round-5 setting),e3_lmax060_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 05:46:36,2026-10-02 07:14:26,87.7
+selfcal_20261002_054703_4482ad,r0_e3_lmax060_A_s1,R0 (Round-5 setting),e3_lmax060_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 05:47:01,2026-10-02 07:15:09,88.0
+selfcal_20261002_055543_02d874,r0_e3_lmax060_A_s2,R0 (Round-5 setting),e3_lmax060_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 05:55:41,2026-10-02 07:04:38,68.8
+selfcal_20261002_055627_51d1c6,r0_e3_lmax080_A_s0,R0 (Round-5 setting),e3_lmax080_A,0,100,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 05:56:25,2026-10-02 07:23:34,87.0
+selfcal_20261002_055843_d475f0,r0_e3_lmax080_A_s1,R0 (Round-5 setting),e3_lmax080_A,1,101,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 05:58:41,2026-10-02 07:15:06,76.3
+selfcal_20261002_060231_9d3506,r0_e3_lmax080_A_s2,R0 (Round-5 setting),e3_lmax080_A,2,102,none (Round-5 schedule),R0,yes,150,16,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 06:02:29,2026-10-02 07:22:57,80.3
+selfcal_20261002_061000_45ac18,r0_b1_relonly_mob_s0,R0 (Round-5 setting),b1_relonly_mob,0,100,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 06:09:59,2026-10-02 07:24:02,73.9
+selfcal_20261002_061111_8f09d1,r0_b1_relonly_mob_s1,R0 (Round-5 setting),b1_relonly_mob,1,101,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 06:11:09,2026-10-02 07:17:04,65.8
+selfcal_20261002_062946_001bcd,r0_b1_relonly_mob_s2,R0 (Round-5 setting),b1_relonly_mob,2,102,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 06:29:45,2026-10-02 07:35:09,65.3
+selfcal_20261002_063053_3b1caf,r0_t1_mob_ent_s0,R0 (Round-5 setting),t1_mob_ent,0,100,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 06:30:52,2026-10-02 07:36:56,66.0
+selfcal_20261002_064044_c9d3ab,r0_t1_mob_ent_s1,R0 (Round-5 setting),t1_mob_ent,1,101,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 06:40:42,2026-10-02 07:50:38,69.8
+selfcal_20261002_065744_6c8966,r0_t1_mob_ent_s2,R0 (Round-5 setting),t1_mob_ent,2,102,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 06:57:42,2026-10-02 08:01:43,63.9
+selfcal_20261002_070439_d84211,r0_b1_absonly_mob_s0,R0 (Round-5 setting),b1_absonly_mob,0,100,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 07:04:38,2026-10-02 08:14:00,69.3
+selfcal_20261002_071428_e7cf9f,r0_b1_absonly_mob_s1,R0 (Round-5 setting),b1_absonly_mob,1,101,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 07:14:26,2026-10-02 08:30:46,76.2
+selfcal_20261002_071508_1f9f5d,r0_b1_absonly_mob_s2,R0 (Round-5 setting),b1_absonly_mob,2,102,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 07:15:06,2026-10-02 08:20:23,65.2
+selfcal_20261002_071511_866852,r0_e3_lmax060_mob_s0,R0 (Round-5 setting),e3_lmax060_mob,0,100,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 07:15:09,2026-10-02 08:31:24,76.1
+selfcal_20261002_071706_1096e5,r0_e3_lmax060_mob_s1,R0 (Round-5 setting),e3_lmax060_mob,1,101,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 07:17:04,2026-10-02 08:27:31,70.4
+selfcal_20261002_072259_e4eb63,r0_e3_lmax060_mob_s2,R0 (Round-5 setting),e3_lmax060_mob,2,102,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 07:22:57,2026-10-02 08:36:23,73.3
+selfcal_20261002_072336_8e3098,r0_e3_lmax080_mob_s0,R0 (Round-5 setting),e3_lmax080_mob,0,100,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 07:23:34,2026-10-02 08:41:55,78.2
+selfcal_20261002_072404_2817ae,r0_e3_lmax080_mob_s1,R0 (Round-5 setting),e3_lmax080_mob,1,101,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 07:24:02,2026-10-02 08:36:41,72.6
+selfcal_20261002_073511_db3108,r0_e3_lmax080_mob_s2,R0 (Round-5 setting),e3_lmax080_mob,2,102,none (Round-5 schedule),R0,yes,120,13,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 07:35:09,2026-10-02 08:44:24,69.2
+r6_selfcal_20261002_073658_903cd3,s1_driftgate_own_s0,S1,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 07:36:56,2026-10-02 08:37:32,60.4
 r6_fixed_20260930_221952_06f426,s1_fixed015_s0,S1,fixed015,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 22:19:50,2026-09-30 23:28:30,68.5
 r6_fixed_20260930_221952_9fe9c5,s1_fixed020_s0,S1,fixed020,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 22:19:50,2026-09-30 23:28:10,68.1
 r6_fixed_20260930_221952_ee7a89,s1_fixed030_s0,S1,fixed030,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 22:19:50,2026-09-30 23:28:03,68.1
 r6_fixed_20260930_221952_696c60,s1_fixed040_s0,S1,fixed040,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-09-30 22:19:50,2026-09-30 23:30:11,70.2
 r6_fixed_20260930_221952_3c37ea,s1_fixed050_s0,S1,fixed050,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-09-30 22:19:50,2026-09-30 23:29:14,69.2
 r6_fixed_20260930_221952_240c72,s1_fixed060_s0,S1,fixed060,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-09-30 22:19:50,2026-09-30 23:29:13,69.2
-,s1_entropy_own_s0,S1,entropy_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s1_driftgate_own_s1,S1,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,,,,,
+r6_selfcal_20261002_075039_711a30,s1_entropy_own_s0,S1,entropy_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 07:50:38,2026-10-02 08:55:25,64.6
+r6_selfcal_20261002_080144_06eac2,s1_driftgate_own_s1,S1,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 08:01:43,2026-10-02 09:07:56,66.0
 r6_fixed_20260930_221952_219790,s1_fixed015_s1,S1,fixed015,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 22:19:50,2026-09-30 23:28:01,68.0
 r6_fixed_20260930_221952_fc6e02,s1_fixed020_s1,S1,fixed020,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 22:19:50,2026-09-30 23:27:47,67.8
 r6_fixed_20260930_221952_ef4574,s1_fixed030_s1,S1,fixed030,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 22:19:50,2026-09-30 23:29:09,69.1
 r6_fixed_20260930_221952_cb4d05,s1_fixed040_s1,S1,fixed040,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 22:19:50,2026-09-30 23:29:16,69.3
 r6_fixed_20260930_221952_1c2b82,s1_fixed050_s1,S1,fixed050,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 22:19:50,2026-09-30 23:27:35,67.6
 r6_fixed_20260930_221952_e89875,s1_fixed060_s1,S1,fixed060,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 22:19:50,2026-09-30 23:29:18,69.3
-,s1_entropy_own_s1,S1,entropy_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s1_driftgate_own_s2,S1,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,,,,,
+r6_selfcal_20261002_081402_f578c0,s1_entropy_own_s1,S1,entropy_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 08:14:00,2026-10-02 09:20:26,66.3
+r6_selfcal_20261002_082025_818993,s1_driftgate_own_s2,S1,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 08:20:23,2026-10-02 09:22:52,62.3
 r6_fixed_20260930_232749_614a03,s1_fixed015_s2,S1,fixed015,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 23:27:47,2026-10-01 00:30:19,62.3
 r6_fixed_20260930_232803_596353,s1_fixed020_s2,S1,fixed020,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 23:28:01,2026-10-01 00:30:26,62.2
 r6_fixed_20260930_232804_b4ba1a,s1_fixed030_s2,S1,fixed030,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 23:28:03,2026-10-01 00:30:08,61.9
 r6_fixed_20260930_232811_c4d9e3,s1_fixed040_s2,S1,fixed040,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 23:28:10,2026-10-01 00:29:55,61.6
 r6_fixed_20260930_232832_b6f838,s1_fixed050_s2,S1,fixed050,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 23:28:30,2026-10-01 00:31:31,62.8
 r6_fixed_20260930_232910_06baf3,s1_fixed060_s2,S1,fixed060,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 23:29:09,2026-10-01 00:35:38,66.3
-,s1_entropy_own_s2,S1,entropy_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s1_driftgate_own_s3,S1,driftgate_own,3,103,runs/phaseT6_env/S1_seed3.npz,K50,no (queued or running),,,,,,,,,
+r6_selfcal_20261002_082733_f9dd21,s1_entropy_own_s2,S1,entropy_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 08:27:31,2026-10-02 09:30:32,62.8
+r6_selfcal_20261002_083047_88caf4,s1_driftgate_own_s3,S1,driftgate_own,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 08:30:46,2026-10-02 09:41:42,70.7
 r6_fixed_20260930_232918_8bf70e,s1_fixed015_s3,S1,fixed015,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 23:29:16,2026-10-01 00:40:38,71.2
 r6_fixed_20260930_232919_fd9b45,s1_fixed020_s3,S1,fixed020,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-09-30 23:29:18,2026-10-01 00:40:35,71.1
 r6_fixed_20260930_232958_33b271,s1_fixed030_s3,S1,fixed030,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-09-30 23:29:56,2026-10-01 00:39:06,69.0
 r6_fixed_20260930_233013_a44023,s1_fixed040_s3,S1,fixed040,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-09-30 23:30:11,2026-10-01 00:41:39,71.3
 r6_fixed_20260930_233017_f17ddd,s1_fixed050_s3,S1,fixed050,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-09-30 23:30:15,2026-10-01 00:40:44,70.3
 r6_fixed_20260930_233043_30cff3,s1_fixed060_s3,S1,fixed060,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-09-30 23:30:41,2026-10-01 00:42:14,71.4
-,s1_entropy_own_s3,S1,entropy_own,3,103,runs/phaseT6_env/S1_seed3.npz,K50,no (queued or running),,,,,,,,,
-,s1_driftgate_own_s4,S1,driftgate_own,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,,,,,
-,s1_fixed015_s4,S1,fixed015,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU0,,2026-10-01 00:30:08,,
-,s1_fixed020_s4,S1,fixed020,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU2,,2026-10-01 00:30:19,,
-,s1_fixed030_s4,S1,fixed030,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU2,,2026-10-01 00:30:26,,
-,s1_fixed040_s4,S1,fixed040,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU0,,2026-10-01 00:31:31,,
-,s1_fixed050_s4,S1,fixed050,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU2,,2026-10-01 00:32:17,,
-,s1_fixed060_s4,S1,fixed060,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,cuda:0/GPU1,,2026-10-01 00:35:17,,
-,s1_entropy_own_s4,S1,entropy_own,4,104,runs/phaseT6_env/S1_seed4.npz,K50,no (queued or running),,,,,,,,,
-,s1_apfl001_s0,S1,apfl001,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU0,,2026-10-01 00:39:06,,
-,s1_apfl010_s0,S1,apfl010,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU0,,2026-10-01 00:40:21,,
-,s1_apfl001_s1,S1,apfl001,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,cuda:0/GPU3,,2026-10-01 00:40:21,,
-,s1_apfl010_s1,S1,apfl010,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,cuda:0/GPU3,,2026-10-01 00:40:35,,
-,s1_apfl001_s2,S1,apfl001,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,cuda:0/GPU3,,2026-10-01 00:40:38,,
-,s1_apfl010_s2,S1,apfl010,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,cuda:0/GPU2,,2026-10-01 00:40:44,,
-,s2_driftgate_own_s0,S2,driftgate_own,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed015_s0,S2,fixed015,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU1,,2026-10-01 00:41:39,,
-,s2_fixed020_s0,S2,fixed020,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU1,,2026-10-01 00:41:41,,
-,s2_fixed030_s0,S2,fixed030,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU1,,2026-10-01 00:42:14,,
-,s2_fixed040_s0,S2,fixed040,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,cuda:0/GPU3,,2026-10-01 00:46:07,,
-,s2_fixed050_s0,S2,fixed050,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed060_s0,S2,fixed060,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_entropy_own_s0,S2,entropy_own,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl001_s0,S2,apfl001,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl010_s0,S2,apfl010,0,100,runs/phaseT6_env/S2_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s2_driftgate_own_s1,S2,driftgate_own,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed015_s1,S2,fixed015,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed020_s1,S2,fixed020,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed030_s1,S2,fixed030,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed040_s1,S2,fixed040,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed050_s1,S2,fixed050,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed060_s1,S2,fixed060,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_entropy_own_s1,S2,entropy_own,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl001_s1,S2,apfl001,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl010_s1,S2,apfl010,1,101,runs/phaseT6_env/S2_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s2_driftgate_own_s2,S2,driftgate_own,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed015_s2,S2,fixed015,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed020_s2,S2,fixed020,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed030_s2,S2,fixed030,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed040_s2,S2,fixed040,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed050_s2,S2,fixed050,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_fixed060_s2,S2,fixed060,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_entropy_own_s2,S2,entropy_own,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl001_s2,S2,apfl001,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s2_apfl010_s2,S2,apfl010,2,102,runs/phaseT6_env/S2_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s3k200_driftgate_own_s0,S3_K200,driftgate_own,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed020_s0,S3_K200,fixed020,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed040_s0,S3_K200,fixed040,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed060_s0,S3_K200,fixed060,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_driftgate_own_s1,S3_K200,driftgate_own,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed020_s1,S3_K200,fixed020,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed040_s1,S3_K200,fixed040,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed060_s1,S3_K200,fixed060,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_driftgate_own_s2,S3_K200,driftgate_own,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed020_s2,S3_K200,fixed020,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed040_s2,S3_K200,fixed040,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,no (queued or running),,,,,,,,,
-,s3k200_fixed060_s2,S3_K200,fixed060,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,no (queued or running),,,,,,,,,
-,s4loss01_driftgate_own_s0,S4_loss01,driftgate_own,0,100,runs/phaseT6_env/S4_loss01_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4loss01_driftgate_own_s1,S4_loss01,driftgate_own,1,101,runs/phaseT6_env/S4_loss01_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4loss01_driftgate_own_s2,S4_loss01,driftgate_own,2,102,runs/phaseT6_env/S4_loss01_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4loss03_driftgate_own_s0,S4_loss03,driftgate_own,0,100,runs/phaseT6_env/S4_loss03_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4loss03_driftgate_own_s1,S4_loss03,driftgate_own,1,101,runs/phaseT6_env/S4_loss03_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4loss03_driftgate_own_s2,S4_loss03,driftgate_own,2,102,runs/phaseT6_env/S4_loss03_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4delay1_driftgate_own_s0,S4_delay1,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4delay1_driftgate_own_s1,S4_delay1,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4delay1_driftgate_own_s2,S4_delay1,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4delay3_driftgate_own_s0,S4_delay3,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4delay3_driftgate_own_s1,S4_delay3,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4delay3_driftgate_own_s2,S4_delay3,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4lowreq_driftgate_own_s0,S4_lowreq,driftgate_own,0,100,runs/phaseT6_env/S4_lowreq_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4lowreq_driftgate_own_s1,S4_lowreq,driftgate_own,1,101,runs/phaseT6_env/S4_lowreq_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4lowreq_driftgate_own_s2,S4_lowreq,driftgate_own,2,102,runs/phaseT6_env/S4_lowreq_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_driftgate_own_s0,S4_part07,driftgate_own,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed020_s0,S4_part07,fixed020,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed040_s0,S4_part07,fixed040,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed060_s0,S4_part07,fixed060,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_driftgate_own_s1,S4_part07,driftgate_own,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed020_s1,S4_part07,fixed020,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed040_s1,S4_part07,fixed040,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed060_s1,S4_part07,fixed060,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_driftgate_own_s2,S4_part07,driftgate_own,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed020_s2,S4_part07,fixed020,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed040_s2,S4_part07,fixed040,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part07_fixed060_s2,S4_part07,fixed060,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_driftgate_own_s0,S4_part05,driftgate_own,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed020_s0,S4_part05,fixed020,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed040_s0,S4_part05,fixed040,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed060_s0,S4_part05,fixed060,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_driftgate_own_s1,S4_part05,driftgate_own,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed020_s1,S4_part05,fixed020,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed040_s1,S4_part05,fixed040,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed060_s1,S4_part05,fixed060,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_driftgate_own_s2,S4_part05,driftgate_own,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed020_s2,S4_part05,fixed020,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed040_s2,S4_part05,fixed040,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s4part05_fixed060_s2,S4_part05,fixed060,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_driftgate_own_s0,S1fast,driftgate_own,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed020_s0,S1fast,fixed020,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed040_s0,S1fast,fixed040,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed060_s0,S1fast,fixed060,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_driftgate_own_s1,S1fast,driftgate_own,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed020_s1,S1fast,fixed020,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed040_s1,S1fast,fixed040,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed060_s1,S1fast,fixed060,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_driftgate_own_s2,S1fast,driftgate_own,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed020_s2,S1fast,fixed020,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed040_s2,S1fast,fixed040,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,no (queued or running),,,,,,,,,
-,s1fast_fixed060_s2,S1fast,fixed060,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,no (queued or running),,,,,,,,,
+r6_selfcal_20261002_083125_fd0e4c,s1_entropy_own_s3,S1,entropy_own,3,103,runs/phaseT6_env/S1_seed3.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 08:31:24,2026-10-02 09:42:20,70.7
+r6_selfcal_20261002_083625_38ba44,s1_driftgate_own_s4,S1,driftgate_own,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 08:36:23,2026-10-02 09:42:23,65.8
+r6_fixed_20261001_003010_7ce32d,s1_fixed015_s4,S1,fixed015,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 00:30:08,2026-10-01 01:38:22,68.0
+r6_fixed_20261001_003020_c258d2,s1_fixed020_s4,S1,fixed020,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 00:30:19,2026-10-01 01:40:25,69.9
+r6_fixed_20261001_003028_8e136e,s1_fixed030_s4,S1,fixed030,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 00:30:26,2026-10-01 01:40:26,69.8
+r6_fixed_20261001_003132_90b435,s1_fixed040_s4,S1,fixed040,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 00:31:31,2026-10-01 01:39:26,67.7
+r6_fixed_20261001_003218_ddafcd,s1_fixed050_s4,S1,fixed050,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 00:32:17,2026-10-01 01:41:25,68.9
+r6_fixed_20261001_003519_a8d1df,s1_fixed060_s4,S1,fixed060,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 00:35:17,2026-10-01 01:47:01,71.5
+r6_selfcal_20261002_083643_143a68,s1_entropy_own_s4,S1,entropy_own,4,104,runs/phaseT6_env/S1_seed4.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 08:36:41,2026-10-02 09:41:07,64.2
+r6_apfl_20261001_003908_e14d5f,s1_apfl001_s0,S1,apfl001,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 00:39:06,2026-10-01 01:50:31,71.2
+r6_apfl_20261001_004023_fa5edb,s1_apfl010_s0,S1,apfl010,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-01 00:40:21,2026-10-01 01:50:44,70.2
+r6_apfl_20261001_004023_eb020f,s1_apfl001_s1,S1,apfl001,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 00:40:21,2026-10-01 01:55:11,74.6
+r6_apfl_20261001_004037_60979b,s1_apfl010_s1,S1,apfl010,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 00:40:35,2026-10-01 01:55:29,74.7
+r6_apfl_20261001_004040_2e6c4c,s1_apfl001_s2,S1,apfl001,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 00:40:38,2026-10-01 01:52:37,71.8
+r6_apfl_20261001_004046_b1afc7,s1_apfl010_s2,S1,apfl010,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-01 00:40:44,2026-10-01 01:46:13,65.2
+r6_selfcal_20261002_083733_ed28eb,s2_driftgate_own_s0,S2,driftgate_own,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 08:37:32,2026-10-02 09:39:09,61.4
+r6_fixed_20261001_004140_9e52a1,s2_fixed015_s0,S2,fixed015,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 00:41:39,2026-10-01 01:49:16,67.4
+r6_fixed_20261001_004143_6493b7,s2_fixed020_s0,S2,fixed020,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 00:41:41,2026-10-01 01:49:16,67.3
+r6_fixed_20261001_004216_2cc968,s2_fixed030_s0,S2,fixed030,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-01 00:42:14,2026-10-01 01:49:21,66.9
+r6_fixed_20261001_004609_e9d3aa,s2_fixed040_s0,S2,fixed040,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-01 00:46:07,2026-10-01 01:48:44,62.3
+r6_fixed_20261002_084156_597440,s2_fixed050_s0,S2,fixed050,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 08:41:55,2026-10-02 09:45:04,62.9
+r6_fixed_20261002_084425_46b08c,s2_fixed060_s0,S2,fixed060,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 08:44:24,2026-10-02 09:47:18,62.7
+r6_selfcal_20261002_085527_9048fe,s2_entropy_own_s0,S2,entropy_own,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 08:55:25,2026-10-02 09:58:15,62.6
+r6_apfl_20261002_090758_5d1965,s2_apfl001_s0,S2,apfl001,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 09:07:56,2026-10-02 10:18:24,70.2
+r6_apfl_20261002_092028_b8f589,s2_apfl010_s0,S2,apfl010,0,100,runs/phaseT6_env/S2_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 09:20:26,2026-10-02 10:29:49,69.2
+r6_selfcal_20261002_092253_c1b903,s2_driftgate_own_s1,S2,driftgate_own,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 09:22:52,2026-10-02 10:29:47,66.7
+r6_fixed_20261002_093034_a120ac,s2_fixed015_s1,S2,fixed015,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 09:30:32,2026-10-02 10:36:01,65.3
+r6_fixed_20261002_093911_dba1c2,s2_fixed020_s1,S2,fixed020,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 09:39:09,2026-10-02 10:45:05,65.7
+r6_fixed_20261002_094109_470986,s2_fixed030_s1,S2,fixed030,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 09:41:07,2026-10-02 10:47:12,65.9
+r6_fixed_20261002_094144_9f0304,s2_fixed040_s1,S2,fixed040,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 09:41:42,2026-10-02 10:49:36,67.7
+r6_fixed_20261002_094221_d839ef,s2_fixed050_s1,S2,fixed050,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 09:42:20,2026-10-02 10:50:07,67.6
+r6_fixed_20261002_094224_1c835c,s2_fixed060_s1,S2,fixed060,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 09:42:23,2026-10-02 10:50:09,67.6
+r6_selfcal_20261002_094506_410f52,s2_entropy_own_s1,S2,entropy_own,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 09:45:04,2026-10-02 10:54:44,69.4
+r6_apfl_20261002_094720_94cb6f,s2_apfl001_s1,S2,apfl001,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 09:47:18,2026-10-02 11:02:21,74.8
+r6_apfl_20261002_095816_01166c,s2_apfl010_s1,S2,apfl010,1,101,runs/phaseT6_env/S2_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 09:58:15,2026-10-02 11:13:24,74.9
+r6_selfcal_20261002_101825_ffebe9,s2_driftgate_own_s2,S2,driftgate_own,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 10:18:24,2026-10-02 11:22:14,63.6
+r6_fixed_20261002_102948_4f5941,s2_fixed015_s2,S2,fixed015,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 10:29:47,2026-10-02 11:31:06,61.1
+r6_fixed_20261002_102951_1e7fce,s2_fixed020_s2,S2,fixed020,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 10:29:49,2026-10-02 11:31:10,61.1
+r6_fixed_20261002_103602_09e943,s2_fixed030_s2,S2,fixed030,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 10:36:01,2026-10-02 11:37:14,61.0
+r6_fixed_20261002_104506_ea8f70,s2_fixed040_s2,S2,fixed040,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 10:45:05,2026-10-02 11:46:55,61.6
+r6_fixed_20261002_104714_fdd55a,s2_fixed050_s2,S2,fixed050,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 10:47:12,2026-10-02 11:50:43,63.3
+r6_fixed_20261002_104938_982acc,s2_fixed060_s2,S2,fixed060,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 10:49:36,2026-10-02 11:51:18,61.5
+r6_selfcal_20261002_105009_33013d,s2_entropy_own_s2,S2,entropy_own,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 10:50:07,2026-10-02 11:53:17,63.0
+r6_apfl_20261002_105010_8b98a0,s2_apfl001_s2,S2,apfl001,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-02 10:50:09,,69.5
+r6_apfl_20261002_105446_c751c4,s2_apfl010_s2,S2,apfl010,2,102,runs/phaseT6_env/S2_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",,2026-10-02 10:54:44,,69.1
+r6_selfcal_20261002_110223_0582f0,s3k200_driftgate_own_s0,S3_K200,driftgate_own,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-02 11:02:21,,282.5
+r6_fixed_20261002_111326_5d128a,s3k200_fixed020_s0,S3_K200,fixed020,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-02 11:13:24,,277.2
+r6_fixed_20261002_112215_a7cc28,s3k200_fixed040_s0,S3_K200,fixed040,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-02 11:22:14,,276.9
+r6_fixed_20261002_113108_f1c14e,s3k200_fixed060_s0,S3_K200,fixed060,0,100,runs/phaseT6_env/S3_K200_seed0.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-02 11:31:06,,268.0
+r6_selfcal_20261002_113111_3abd4e,s3k200_driftgate_own_s1,S3_K200,driftgate_own,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-02 11:31:10,,278.7
+r6_fixed_20261002_113716_d1ddfc,s3k200_fixed020_s1,S3_K200,fixed020,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-02 11:37:14,,272.6
+r6_fixed_20261002_151600_71c9e1,s3k200_fixed040_s1,S3_K200,fixed040,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",1,2026-10-02 11:51:18,2026-10-02 11:53:13,263.8
+r6_fixed_20261002_151600_38415e,s3k200_fixed060_s1,S3_K200,fixed060,1,101,runs/phaseT6_env/S3_K200_seed1.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",1,2026-10-02 11:53:13,2026-10-02 11:53:56,264.2
+r6_selfcal_20261002_115319_03691d,s3k200_driftgate_own_s2,S3_K200,driftgate_own,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",,2026-10-02 11:53:17,,218.2
+r6_fixed_20261002_153201_894366,s3k200_fixed020_s2,S3_K200,fixed020,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",1,2026-10-02 11:53:56,2026-10-02 11:54:19,251.6
+r6_fixed_20261002_154601_8eeb6e,s3k200_fixed040_s2,S3_K200,fixed040,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",1,2026-10-02 11:54:19,2026-10-02 11:54:35,236.5
+r6_fixed_20261002_155201_26649d,s3k200_fixed060_s2,S3_K200,fixed060,2,102,runs/phaseT6_env/S3_K200_seed2.npz,K200,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 15:51:59,2026-10-02 19:45:57,233.5
+r6_selfcal_20261002_114657_b752a2,s4loss01_driftgate_own_s0,S4_loss01,driftgate_own,0,100,runs/phaseT6_env/S4_loss01_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",,2026-10-02 11:46:55,,69.2
+r6_selfcal_20261002_115045_ba4425,s4loss01_driftgate_own_s1,S4_loss01,driftgate_own,1,101,runs/phaseT6_env/S4_loss01_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",,2026-10-02 11:50:43,,71.6
+r6_selfcal_20261002_115957_fa731f,s4loss01_driftgate_own_s2,S4_loss01,driftgate_own,2,102,runs/phaseT6_env/S4_loss01_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 11:59:56,2026-10-02 13:04:38,64.5
+r6_selfcal_20261002_120457_96dd6e,s4loss03_driftgate_own_s0,S4_loss03,driftgate_own,0,100,runs/phaseT6_env/S4_loss03_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 12:04:56,2026-10-02 13:15:22,70.2
+r6_selfcal_20261002_125658_f36c4f,s4loss03_driftgate_own_s1,S4_loss03,driftgate_own,1,101,runs/phaseT6_env/S4_loss03_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 12:56:56,2026-10-02 14:05:48,68.7
+r6_selfcal_20261002_130258_c831b5,s4loss03_driftgate_own_s2,S4_loss03,driftgate_own,2,102,runs/phaseT6_env/S4_loss03_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 13:02:57,2026-10-02 14:08:45,65.6
+r6_selfcal_20261002_130440_74cd18,s4delay1_driftgate_own_s0,S4_delay1,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 13:04:38,2026-10-02 14:15:03,70.2
+r6_selfcal_20261002_131523_f3aaaa,s4delay1_driftgate_own_s1,S4_delay1,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 13:15:22,2026-10-02 14:25:03,69.5
+r6_selfcal_20261002_140549_777044,s4delay1_driftgate_own_s2,S4_delay1,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 14:05:48,2026-10-02 15:11:10,65.2
+r6_selfcal_20261002_140847_c4e588,s4delay3_driftgate_own_s0,S4_delay3,driftgate_own,0,100,runs/phaseT6_env/S1_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 14:08:45,2026-10-02 15:20:40,71.7
+r6_selfcal_20261002_141504_bff891,s4delay3_driftgate_own_s1,S4_delay3,driftgate_own,1,101,runs/phaseT6_env/S1_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 14:15:03,2026-10-02 15:24:32,69.3
+r6_selfcal_20261002_142505_3a4a98,s4delay3_driftgate_own_s2,S4_delay3,driftgate_own,2,102,runs/phaseT6_env/S1_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 14:25:03,2026-10-02 15:30:24,65.1
+r6_selfcal_20261002_151111_d73866,s4lowreq_driftgate_own_s0,S4_lowreq,driftgate_own,0,100,runs/phaseT6_env/S4_lowreq_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 15:11:10,2026-10-02 16:19:51,68.5
+r6_selfcal_20261002_152042_2c5b16,s4lowreq_driftgate_own_s1,S4_lowreq,driftgate_own,1,101,runs/phaseT6_env/S4_lowreq_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 15:20:40,2026-10-02 16:30:54,70.0
+r6_selfcal_20261002_152400_5d772c,s4lowreq_driftgate_own_s2,S4_lowreq,driftgate_own,2,102,runs/phaseT6_env/S4_lowreq_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 15:23:59,2026-10-02 16:29:12,65.0
+r6_selfcal_20261002_152434_7fec5b,s4part07_driftgate_own_s0,S4_part07,driftgate_own,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 15:24:32,2026-10-02 16:15:33,50.8
+r6_fixed_20261002_153025_161bda,s4part07_fixed020_s0,S4_part07,fixed020,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 15:30:24,2026-10-02 16:20:27,49.9
+r6_fixed_20261002_160001_98bc0a,s4part07_fixed040_s0,S4_part07,fixed040,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 15:59:59,2026-10-02 16:48:03,47.8
+r6_fixed_20261002_160001_57c402,s4part07_fixed060_s0,S4_part07,fixed060,0,100,runs/phaseT6_env/S4_part07_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 15:59:59,2026-10-02 16:51:24,51.2
+r6_selfcal_20261002_161101_3e676d,s4part07_driftgate_own_s1,S4_part07,driftgate_own,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 16:10:59,2026-10-02 17:00:12,49.0
+r6_fixed_20261002_161101_38d309,s4part07_fixed020_s1,S4_part07,fixed020,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 16:10:59,2026-10-02 16:59:13,48.0
+r6_fixed_20261002_161535_e8228a,s4part07_fixed040_s1,S4_part07,fixed040,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 16:15:33,2026-10-02 17:03:51,48.1
+r6_fixed_20261002_161953_6f5dd5,s4part07_fixed060_s1,S4_part07,fixed060,1,101,runs/phaseT6_env/S4_part07_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 16:19:51,2026-10-02 17:08:10,48.1
+r6_selfcal_20261002_162029_9ba6a0,s4part07_driftgate_own_s2,S4_part07,driftgate_own,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 16:20:27,2026-10-02 17:07:20,46.7
+r6_fixed_20261002_162913_bbeb80,s4part07_fixed020_s2,S4_part07,fixed020,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 16:29:12,2026-10-02 17:15:43,46.3
+r6_fixed_20261002_163056_c93fc0,s4part07_fixed040_s2,S4_part07,fixed040,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 16:30:54,2026-10-02 17:18:47,47.7
+r6_fixed_20261002_163901_69f6cc,s4part07_fixed060_s2,S4_part07,fixed060,2,102,runs/phaseT6_env/S4_part07_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 16:39:00,2026-10-02 17:24:17,45.1
+r6_selfcal_20261002_164102_6f3f6f,s4part05_driftgate_own_s0,S4_part05,driftgate_own,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 16:41:00,2026-10-02 17:18:09,36.9
+r6_fixed_20261002_164804_cdb824,s4part05_fixed020_s0,S4_part05,fixed020,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 16:48:03,2026-10-02 17:23:56,35.7
+r6_fixed_20261002_165126_c5e0e5,s4part05_fixed040_s0,S4_part05,fixed040,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 16:51:24,2026-10-02 17:29:11,37.6
+r6_fixed_20261002_165915_de09e9,s4part05_fixed060_s0,S4_part05,fixed060,0,100,runs/phaseT6_env/S4_part05_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 16:59:13,2026-10-02 17:34:37,35.2
+r6_selfcal_20261002_170014_b257b3,s4part05_driftgate_own_s1,S4_part05,driftgate_own,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:00:12,2026-10-02 17:36:11,35.8
+r6_fixed_20261002_170352_fff704,s4part05_fixed020_s1,S4_part05,fixed020,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:03:51,2026-10-02 17:39:58,35.9
+r6_fixed_20261002_170722_141af2,s4part05_fixed040_s1,S4_part05,fixed040,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:07:20,2026-10-02 17:43:42,36.2
+r6_fixed_20261002_170812_1d700e,s4part05_fixed060_s1,S4_part05,fixed060,1,101,runs/phaseT6_env/S4_part05_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:08:10,2026-10-02 17:44:08,35.8
+r6_selfcal_20261002_171544_4475da,s4part05_driftgate_own_s2,S4_part05,driftgate_own,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 17:15:43,2026-10-02 17:51:14,35.3
+r6_fixed_20261002_171811_5e7bc7,s4part05_fixed020_s2,S4_part05,fixed020,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:18:09,2026-10-02 17:52:19,34.0
+r6_fixed_20261002_171848_957c94,s4part05_fixed040_s2,S4_part05,fixed040,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 17:18:47,2026-10-02 17:54:13,35.3
+r6_fixed_20261002_172357_171369,s4part05_fixed060_s2,S4_part05,fixed060,2,102,runs/phaseT6_env/S4_part05_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:23:56,2026-10-02 17:57:29,33.4
+r6_selfcal_20261002_172419_a8ada2,s1fast_driftgate_own_s0,S1fast,driftgate_own,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:24:17,2026-10-02 18:33:57,69.5
+r6_fixed_20261002_172913_3ceb75,s1fast_fixed020_s0,S1fast,fixed020,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 17:29:11,2026-10-02 18:39:16,69.8
+r6_fixed_20261002_173439_2b0a0f,s1fast_fixed040_s0,S1fast,fixed040,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:34:37,2026-10-02 18:42:15,67.4
+r6_fixed_20261002_173612_7a34c3,s1fast_fixed060_s0,S1fast,fixed060,0,100,runs/phaseT6_env/S1fast_seed0.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:36:11,2026-10-02 18:43:27,67.1
+r6_selfcal_20261002_174000_90d4bf,s1fast_driftgate_own_s1,S1fast,driftgate_own,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:39:58,2026-10-02 18:49:25,69.3
+r6_fixed_20261002_174343_259fb7,s1fast_fixed020_s1,S1fast,fixed020,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:43:42,2026-10-02 18:51:15,67.3
+r6_fixed_20261002_174409_56104c,s1fast_fixed040_s1,S1fast,fixed040,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:44:08,2026-10-02 18:47:43,63.4
+r6_fixed_20261002_175116_5cc9a4,s1fast_fixed060_s1,S1fast,fixed060,1,101,runs/phaseT6_env/S1fast_seed1.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU2",0,2026-10-02 17:51:14,2026-10-02 18:59:14,67.8
+r6_selfcal_20261002_175221_e74575,s1fast_driftgate_own_s2,S1fast,driftgate_own,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 17:52:19,2026-10-02 18:54:26,61.9
+r6_fixed_20261002_175415_29a8f3,s1fast_fixed020_s2,S1fast,fixed020,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU3",0,2026-10-02 17:54:13,2026-10-02 18:55:02,60.6
+r6_fixed_20261002_175731_1f5d8a,s1fast_fixed040_s2,S1fast,fixed040,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU0",0,2026-10-02 17:57:29,2026-10-02 18:51:10,53.5
+r6_fixed_20261002_183359_2a3256,s1fast_fixed060_s2,S1fast,fixed060,2,102,runs/phaseT6_env/S1fast_seed2.npz,K50,yes,150,31,0,yes,"honeynaps, RTX 4090, GPU1",0,2026-10-02 18:33:57,2026-10-02 19:09:28,35.3

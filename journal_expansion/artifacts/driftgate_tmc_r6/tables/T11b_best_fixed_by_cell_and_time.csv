@@ -1,11 +1,36 @@
 setting,cell_group,slot,clock,best_fixed,best_acc_pct,runner_up,margin_to_runner_up_pp,worst_fixed,margin_to_worst_pp
-commute mobility,hub,pre-commute,05:00-07:30,fixed 0.6,52.0914,fixed 0.5,1.1235,fixed 0.15,2.9815
-commute mobility,hub,commute,07:30-09:30,fixed 0.4,56.3096,fixed 0.3,0.0908,fixed 0.15,0.7607
-commute mobility,hub,daytime,09:30-16:00,fixed 0.3,61.4764,fixed 0.2,0.1339,fixed 0.6,2.5079
-commute mobility,hub,return,16:00-19:00,fixed 0.4,68.3714,fixed 0.3,0.2636,fixed 0.15,1.5427
-commute mobility,hub,evening,19:00-20:00,fixed 0.6,79.5637,fixed 0.5,0.3013,fixed 0.15,4.3524
-commute mobility,residential,pre-commute,05:00-07:30,fixed 0.6,56.9831,fixed 0.5,0.7253,fixed 0.15,1.7686
-commute mobility,residential,commute,07:30-09:30,fixed 0.4,59.9185,fixed 0.5,0.0228,fixed 0.15,0.6954
-commute mobility,residential,daytime,09:30-16:00,fixed 0.3,61.9442,fixed 0.2,0.1306,fixed 0.6,1.6224
-commute mobility,residential,return,16:00-19:00,fixed 0.5,71.8371,fixed 0.4,0.0920,fixed 0.15,1.7882
-commute mobility,residential,evening,19:00-20:00,fixed 0.6,79.4630,fixed 0.5,0.1480,fixed 0.15,3.7351
+commute mobility,hub,pre-commute,05:00-07:30,fixed 0.6,52.9058,fixed 0.5,1.2790,fixed 0.15,3.6977
+commute mobility,hub,commute,07:30-09:30,fixed 0.4,57.5254,fixed 0.5,0.1127,fixed 0.15,1.1529
+commute mobility,hub,daytime,09:30-16:00,fixed 0.3,62.4827,fixed 0.2,0.2160,fixed 0.6,2.3465
+commute mobility,hub,return,16:00-19:00,fixed 0.4,69.1131,fixed 0.3,0.2116,fixed 0.15,1.4875
+commute mobility,hub,evening,19:00-20:00,fixed 0.6,80.4492,fixed 0.5,0.4569,fixed 0.15,4.7663
+commute mobility,residential,pre-commute,05:00-07:30,fixed 0.6,57.1577,fixed 0.5,0.7602,fixed 0.15,1.9415
+commute mobility,residential,commute,07:30-09:30,fixed 0.6,60.9682,fixed 0.5,0.0366,fixed 0.15,1.3288
+commute mobility,residential,daytime,09:30-16:00,fixed 0.3,62.6290,fixed 0.4,0.1722,fixed 0.6,1.6188
+commute mobility,residential,return,16:00-19:00,fixed 0.5,72.2351,fixed 0.4,0.0593,fixed 0.15,1.7563
+commute mobility,residential,evening,19:00-20:00,fixed 0.6,80.1386,fixed 0.5,0.1835,fixed 0.15,3.8111
+GeoLife trace,cell 0,pre-commute,05:00-07:30,fixed 0.4,52.4039,fixed 0.3,0.0046,fixed 0.15,0.1818
+GeoLife trace,cell 0,commute,07:30-09:30,fixed 0.5,70.2699,fixed 0.4,0.0593,fixed 0.15,1.0625
+GeoLife trace,cell 0,daytime,09:30-16:00,fixed 0.5,72.9987,fixed 0.6,0.0793,fixed 0.15,1.4011
+GeoLife trace,cell 0,return,16:00-19:00,fixed 0.5,77.8534,fixed 0.6,0.1365,fixed 0.15,2.3278
+GeoLife trace,cell 0,evening,19:00-20:00,fixed 0.5,78.1006,fixed 0.4,0.3357,fixed 0.15,2.0047
+GeoLife trace,cell 1,pre-commute,05:00-07:30,fixed 0.6,57.3741,fixed 0.5,1.8254,fixed 0.15,2.4904
+GeoLife trace,cell 1,commute,07:30-09:30,fixed 0.6,69.4022,fixed 0.5,2.5139,fixed 0.15,3.7861
+GeoLife trace,cell 1,daytime,09:30-16:00,fixed 0.15,57.0091,fixed 0.2,0.0161,fixed 0.5,1.1391
+GeoLife trace,cell 1,return,16:00-19:00,fixed 0.2,66.2635,fixed 0.3,0.0238,fixed 0.5,0.8615
+GeoLife trace,cell 1,evening,19:00-20:00,fixed 0.3,79.7865,fixed 0.4,0.0378,fixed 0.6,2.0440
+GeoLife trace,cell 2,pre-commute,05:00-07:30,fixed 0.6,55.6989,fixed 0.5,0.7409,fixed 0.15,2.8753
+GeoLife trace,cell 2,commute,07:30-09:30,fixed 0.6,59.2959,fixed 0.5,0.8887,fixed 0.15,3.0840
+GeoLife trace,cell 2,daytime,09:30-16:00,fixed 0.6,55.3675,fixed 0.5,0.2171,fixed 0.15,1.2340
+GeoLife trace,cell 2,return,16:00-19:00,fixed 0.6,61.0039,fixed 0.5,0.6625,fixed 0.15,2.2361
+GeoLife trace,cell 2,evening,19:00-20:00,fixed 0.6,66.0933,fixed 0.5,0.4276,fixed 0.15,2.7756
+GeoLife trace,cell 3,pre-commute,05:00-07:30,fixed 0.6,68.2579,fixed 0.5,0.7537,fixed 0.15,3.7134
+GeoLife trace,cell 3,commute,07:30-09:30,fixed 0.6,62.2927,fixed 0.5,0.3069,fixed 0.15,1.8513
+GeoLife trace,cell 3,daytime,09:30-16:00,fixed 0.6,63.5290,fixed 0.5,0.6121,fixed 0.15,1.2315
+GeoLife trace,cell 3,return,16:00-19:00,fixed 0.6,68.3760,fixed 0.5,0.6761,fixed 0.15,2.2204
+GeoLife trace,cell 3,evening,19:00-20:00,fixed 0.15,69.3863,fixed 0.2,0.2062,fixed 0.6,5.1310
+GeoLife trace,cell 4,pre-commute,05:00-07:30,fixed 0.6,71.0559,fixed 0.5,0.0187,fixed 0.15,0.4671
+GeoLife trace,cell 4,commute,07:30-09:30,fixed 0.15,51.2413,fixed 0.2,0.2097,fixed 0.6,5.4147
+GeoLife trace,cell 4,daytime,09:30-16:00,fixed 0.15,60.7391,fixed 0.2,0.1192,fixed 0.6,2.5752
+GeoLife trace,cell 4,return,16:00-19:00,fixed 0.15,71.3636,fixed 0.2,0.0888,fixed 0.6,3.7186
+GeoLife trace,cell 4,evening,19:00-20:00,fixed 0.15,78.4651,fixed 0.2,0.1245,fixed 0.6,3.8885

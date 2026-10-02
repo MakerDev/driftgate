@@ -13,3 +13,7 @@
 [wg1v4 cuda:0/GPU1] START r0_e3_lmax060_mob_s2 (R0) 2026-10-02 07:22:57
 [wg1v4 cuda:0/GPU1] END r0_e3_lmax060_mob_s2 exit=0 2026-10-02 08:36:23
 [wg1v4 cuda:0/GPU1] START s1_driftgate_own_s4 (K50) 2026-10-02 08:36:23
+[wg1v4 cuda:0/GPU1] END s1_driftgate_own_s4 exit=0 2026-10-02 09:42:23
+[wg1v4 cuda:0/GPU1] START s2_fixed060_s1 (K50) 2026-10-02 09:42:23
+[wg1v4 cuda:0/GPU1] END s2_fixed060_s1 exit=0 2026-10-02 10:50:09
+[wg1v4 cuda:0/GPU1] START s2_apfl001_s2 (K50) 2026-10-02 10:50:09

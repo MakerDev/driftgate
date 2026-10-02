@@ -13,3 +13,9 @@
 [wg3v3 cuda:0/GPU3] START r0_e3_lmax080_mob_s1 (R0) 2026-10-02 07:24:02
 [wg3v3 cuda:0/GPU3] END r0_e3_lmax080_mob_s1 exit=0 2026-10-02 08:36:41
 [wg3v3 cuda:0/GPU3] START s1_entropy_own_s4 (K50) 2026-10-02 08:36:41
+[wg3v3 cuda:0/GPU3] END s1_entropy_own_s4 exit=0 2026-10-02 09:41:07
+[wg3v3 cuda:0/GPU3] START s2_fixed030_s1 (K50) 2026-10-02 09:41:07
+[wg3v3 cuda:0/GPU3] END s2_fixed030_s1 exit=0 2026-10-02 10:47:12
+[wg3v3 cuda:0/GPU3] START s2_fixed050_s2 (K50) 2026-10-02 10:47:12
+[wg3v3 cuda:0/GPU3] END s2_fixed050_s2 exit=0 2026-10-02 11:50:43
+[wg3v3 cuda:0/GPU3] START s4loss01_driftgate_own_s1 (K50) 2026-10-02 11:50:43

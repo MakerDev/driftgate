@@ -1,0 +1,9 @@
+[wg0t4 cuda:0/GPU0] START s4part07_fixed040_s0 (K50) 2026-10-02 15:59:59
+[wg0t4 cuda:0/GPU0] END s4part07_fixed040_s0 exit=0 2026-10-02 16:48:03
+[wg0t4 cuda:0/GPU0] START s4part05_fixed020_s0 (K50) 2026-10-02 16:48:03
+[wg0t4 cuda:0/GPU0] END s4part05_fixed020_s0 exit=0 2026-10-02 17:23:56
+[wg0t4 cuda:0/GPU0] START s4part05_fixed060_s2 (K50) 2026-10-02 17:23:56
+[wg0t4 cuda:0/GPU0] END s4part05_fixed060_s2 exit=0 2026-10-02 17:57:29
+[wg0t4 cuda:0/GPU0] START s1fast_fixed040_s2 (K50) 2026-10-02 17:57:29
+[wg0t4 cuda:0/GPU0] END s1fast_fixed040_s2 exit=0 2026-10-02 18:51:10
+[wg0t4 cuda:0/GPU0] STOP file found, exiting 2026-10-02 19:49:11

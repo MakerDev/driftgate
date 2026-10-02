@@ -1,1 +1,54 @@
 item,value,ci95,n_seeds,source_runs
+commute mobility: DriftGate − fixed 0.15,+0.219 pp,"[-1.09, +1.53]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed015_s{0,1,2,3,4}"
+commute mobility: DriftGate − fixed 0.2,-0.087 pp,"[-1.16, +0.98]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed020_s{0,1,2,3,4}"
+commute mobility: DriftGate − fixed 0.3,-0.499 pp,"[-1.14, +0.14]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed030_s{0,1,2,3,4}"
+commute mobility: DriftGate − fixed 0.4 (best fixed),-0.594 pp,"[-0.93, -0.25]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed040_s{0,1,2,3,4}"
+commute mobility: DriftGate − fixed 0.5,-0.336 pp,"[-0.59, -0.09]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed050_s{0,1,2,3,4}"
+commute mobility: DriftGate − fixed 0.6,+0.156 pp,"[-0.11, +0.42]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed060_s{0,1,2,3,4}"
+commute mobility: DriftGate − entropy controller,+0.542 pp,"[-0.04, +1.13]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_entropy_own_s{0,1,2,3,4}"
+commute mobility: DriftGate − APFL η=0.01,+0.473 pp,"[+0.07, +0.88]",3,"s1_driftgate_own_s{0,1,2}; s1_apfl001_s{0,1,2}"
+commute mobility: DriftGate − APFL η=0.1,-0.092 pp,"[-0.34, +0.16]",3,"s1_driftgate_own_s{0,1,2}; s1_apfl010_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.15,+0.630 pp,"[-0.95, +2.21]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed015_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.2,+0.372 pp,"[-1.19, +1.93]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed020_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.3,-0.035 pp,"[-1.84, +1.77]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed030_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.4,-0.259 pp,"[-2.57, +2.05]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed040_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.5,-0.321 pp,"[-3.35, +2.70]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed050_s{0,1,2}"
+GeoLife trace: DriftGate − fixed 0.6 (best fixed),-0.380 pp,"[-3.76, +3.00]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed060_s{0,1,2}"
+GeoLife trace: DriftGate − entropy controller,-0.211 pp,"[-2.32, +1.89]",3,"s2_driftgate_own_s{0,1,2}; s2_entropy_own_s{0,1,2}"
+GeoLife trace: DriftGate − APFL η=0.01,-0.938 pp,"[-3.31, +1.44]",3,"s2_driftgate_own_s{0,1,2}; s2_apfl001_s{0,1,2}"
+GeoLife trace: DriftGate − APFL η=0.1,-1.332 pp,"[-3.88, +1.21]",3,"s2_driftgate_own_s{0,1,2}; s2_apfl010_s{0,1,2}"
+"commute mobility: bottom-10% client accuracy, DriftGate − fixed 0.4 (best fixed)",-0.951 pp,"[-1.72, -0.18]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed040_s{0,1,2,3,4}"
+"commute mobility: accuracy at home, DriftGate − fixed 0.4 (best fixed)",-0.753 pp,"[-2.36, +0.85]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed040_s{0,1,2,3,4}"
+"commute mobility: accuracy away from home, DriftGate − fixed 0.4 (best fixed)",-0.763 pp,"[-1.82, +0.29]",5,"s1_driftgate_own_s{0,1,2,3,4}; s1_fixed040_s{0,1,2,3,4}"
+"GeoLife trace: bottom-10% client accuracy, DriftGate − fixed 0.6 (best fixed)",+0.261 pp,"[-0.56, +1.09]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed060_s{0,1,2}"
+"GeoLife trace: accuracy at home, DriftGate − fixed 0.6 (best fixed)",-1.142 pp,"[-6.59, +4.31]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed060_s{0,1,2}"
+"GeoLife trace: accuracy away from home, DriftGate − fixed 0.6 (best fixed)",+1.491 pp,"[-0.50, +3.48]",3,"s2_driftgate_own_s{0,1,2}; s2_fixed060_s{0,1,2}"
+"GeoLife trace: DriftGate reaction time, cell 1 cells",158.0 min,,3,s2_driftgate_own (all seeds)
+"GeoLife trace: DriftGate recovery time, cell 1 cells",0.0 min,,2,same runs
+"GeoLife trace: DriftGate reaction time, cell 2 cells",36.0 min,,3,s2_driftgate_own (all seeds)
+"GeoLife trace: DriftGate reaction time, cell 3 cells",110.0 min,,3,s2_driftgate_own (all seeds)
+"GeoLife trace: DriftGate recovery time, cell 3 cells",16.0 min,,3,same runs
+"GeoLife trace: DriftGate reaction time, cell 4 cells",0.0 min,,3,s2_driftgate_own (all seeds)
+"commute mobility: DriftGate reaction time, hub cells",84.0 min,,5,s1_driftgate_own (all seeds)
+"commute mobility: DriftGate recovery time, hub cells",0.0 min,,3,same runs
+"commute mobility: DriftGate reaction time, residential cells",83.4 min,,20,s1_driftgate_own (all seeds)
+"commute mobility: DriftGate recovery time, residential cells",28.0 min,,15,same runs
+commute mobility: DriftGate − best of fixed 0.2/0.4/0.6,-0.443 pp,"[-1.04, +0.15]",3,"s1_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+commute mobility (vehicle speed): DriftGate − best of fixed 0.2/0.4/0.6,-0.424 pp,"[-0.87, +0.02]",3,"s1fast_driftgate_own_s{0,1,2}; s1fast_fixed040_s{0,1,2}"
+K=50: DriftGate − best of fixed 0.2/0.4/0.6,-0.443 pp,"[-1.04, +0.15]",3,"s1_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+K=200: DriftGate − best of fixed 0.2/0.4/0.6,-0.569 pp,"[-1.73, +0.59]",3,"s3k200_driftgate_own_s{0,1,2}; s3k200_fixed020_s{0,1,2}"
+K=500: DriftGate − best of fixed 0.2/0.4/0.6,-0.236 pp,"[-0.57, +0.10]",3,"s3k500_driftgate_own_s{0,1,2}; s3k500_fixed020_s{0,1,2}"
+"signal loss p=0.1: DriftGate − best fixed (S1 fixed runs (seeds 0-2), best of 0.15-0.6)",-0.428 pp,"[-0.98, +0.12]",3,"s4loss01_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+signal loss p=0.1: DriftGate change vs S1 DriftGate,+0.014 pp,"[-0.04, +0.07]",3,"s4loss01_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"signal loss p=0.3: DriftGate − best fixed (S1 fixed runs (seeds 0-2), best of 0.15-0.6)",-0.379 pp,"[-0.82, +0.06]",3,"s4loss03_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+signal loss p=0.3: DriftGate change vs S1 DriftGate,+0.064 pp,"[-0.09, +0.22]",3,"s4loss03_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"signal delay 1 round: DriftGate − best fixed (S1 fixed runs (seeds 0-2), best of 0.15-0.6)",-0.418 pp,"[-0.96, +0.12]",3,"s4delay1_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+signal delay 1 round: DriftGate change vs S1 DriftGate,+0.024 pp,"[-0.03, +0.08]",3,"s4delay1_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"signal delay 3 rounds: DriftGate − best fixed (S1 fixed runs (seeds 0-2), best of 0.15-0.6)",-0.432 pp,"[-0.96, +0.09]",3,"s4delay3_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+signal delay 3 rounds: DriftGate change vs S1 DriftGate,+0.010 pp,"[-0.06, +0.08]",3,"s4delay3_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"low request rate: DriftGate − best fixed (S1 fixed runs (seeds 0-2), best of 0.15-0.6)",-0.493 pp,"[-1.15, +0.16]",3,"s4lowreq_driftgate_own_s{0,1,2}; s1_fixed040_s{0,1,2}"
+low request rate: DriftGate change vs S1 DriftGate,-0.050 pp,"[-0.17, +0.07]",3,"s4lowreq_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"participation 0.7: DriftGate − best fixed (same participation, best of fixed 0.2/0.4/0.6)",-0.332 pp,"[-0.86, +0.19]",3,"s4part07_driftgate_own_s{0,1,2}; s4part07_fixed040_s{0,1,2}"
+participation 0.7: DriftGate change vs S1 DriftGate,-3.344 pp,"[-5.13, -1.56]",3,"s4part07_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"
+"participation 0.5: DriftGate − best fixed (same participation, best of fixed 0.2/0.4/0.6)",-0.397 pp,"[-1.59, +0.80]",3,"s4part05_driftgate_own_s{0,1,2}; s4part05_fixed060_s{0,1,2}"
+participation 0.5: DriftGate change vs S1 DriftGate,-6.535 pp,"[-7.29, -5.78]",3,"s4part05_driftgate_own_s{0,1,2}; s1_driftgate_own_s{0,1,2}"

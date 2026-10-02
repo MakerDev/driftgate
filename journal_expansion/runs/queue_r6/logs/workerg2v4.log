@@ -13,3 +13,17 @@
 [wg2v4 cuda:0/GPU2] START r0_b1_absonly_mob_s1 (R0) 2026-10-02 07:14:26
 [wg2v4 cuda:0/GPU2] END r0_b1_absonly_mob_s1 exit=0 2026-10-02 08:30:46
 [wg2v4 cuda:0/GPU2] START s1_driftgate_own_s3 (K50) 2026-10-02 08:30:46
+[wg2v4 cuda:0/GPU2] END s1_driftgate_own_s3 exit=0 2026-10-02 09:41:42
+[wg2v4 cuda:0/GPU2] START s2_fixed040_s1 (K50) 2026-10-02 09:41:42
+[wg2v4 cuda:0/GPU2] END s2_fixed040_s1 exit=0 2026-10-02 10:49:36
+[wg2v4 cuda:0/GPU2] START s2_fixed060_s2 (K50) 2026-10-02 10:49:36
+[wg2v4 cuda:0/GPU2] END s2_fixed060_s2 exit=0 2026-10-02 11:51:18
+[wg2v4 cuda:0/GPU2] START s3k200_fixed040_s1 (K200) 2026-10-02 11:51:18
+[wg2v4 cuda:0/GPU2] END s3k200_fixed040_s1 exit=1 2026-10-02 11:53:13
+[wg2v4 cuda:0/GPU2] START s3k200_fixed060_s1 (K200) 2026-10-02 11:53:13
+[wg2v4 cuda:0/GPU2] END s3k200_fixed060_s1 exit=1 2026-10-02 11:53:56
+[wg2v4 cuda:0/GPU2] START s3k200_fixed020_s2 (K200) 2026-10-02 11:53:56
+[wg2v4 cuda:0/GPU2] END s3k200_fixed020_s2 exit=1 2026-10-02 11:54:19
+[wg2v4 cuda:0/GPU2] START s3k200_fixed040_s2 (K200) 2026-10-02 11:54:19
+[wg2v4 cuda:0/GPU2] END s3k200_fixed040_s2 exit=1 2026-10-02 11:54:35
+[wg2v4 cuda:0/GPU2] START s3k200_fixed060_s2 (K200) 2026-10-02 11:54:35

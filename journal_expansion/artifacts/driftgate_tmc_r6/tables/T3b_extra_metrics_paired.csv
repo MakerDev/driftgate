@@ -1,37 +1,109 @@
 setting,method,best_fixed,metric,DriftGate_minus_method_pp,ci95,n_pos,n
-commute mobility,fixed 0.15,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.15,,accuracy at home,,,,
-commute mobility,fixed 0.15,,accuracy away from home,,,,
-commute mobility,fixed 0.15,,Main-request accuracy,,,,
-commute mobility,fixed 0.15,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.15,,offload rate,,,,
-commute mobility,fixed 0.2,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.2,,accuracy at home,,,,
-commute mobility,fixed 0.2,,accuracy away from home,,,,
-commute mobility,fixed 0.2,,Main-request accuracy,,,,
-commute mobility,fixed 0.2,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.2,,offload rate,,,,
-commute mobility,fixed 0.3,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.3,,accuracy at home,,,,
-commute mobility,fixed 0.3,,accuracy away from home,,,,
-commute mobility,fixed 0.3,,Main-request accuracy,,,,
-commute mobility,fixed 0.3,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.3,,offload rate,,,,
-commute mobility,fixed 0.4,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.4,,accuracy at home,,,,
-commute mobility,fixed 0.4,,accuracy away from home,,,,
-commute mobility,fixed 0.4,,Main-request accuracy,,,,
-commute mobility,fixed 0.4,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.4,,offload rate,,,,
-commute mobility,fixed 0.5,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.5,,accuracy at home,,,,
-commute mobility,fixed 0.5,,accuracy away from home,,,,
-commute mobility,fixed 0.5,,Main-request accuracy,,,,
-commute mobility,fixed 0.5,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.5,,offload rate,,,,
-commute mobility,fixed 0.6,,bottom-10% client accuracy,,,,
-commute mobility,fixed 0.6,,accuracy at home,,,,
-commute mobility,fixed 0.6,,accuracy away from home,,,,
-commute mobility,fixed 0.6,,Main-request accuracy,,,,
-commute mobility,fixed 0.6,,non-Main-request accuracy,,,,
-commute mobility,fixed 0.6,,offload rate,,,,
+commute mobility,fixed 0.15,,bottom-10% client accuracy,-0.5245,"[-2.24, +1.19]",2,5
+commute mobility,fixed 0.15,,accuracy at home,+2.3026,"[+0.16, +4.44]",4,5
+commute mobility,fixed 0.15,,accuracy away from home,-2.3994,"[-4.00, -0.80]",0,5
+commute mobility,fixed 0.15,,Main-request accuracy,+3.5775,"[+0.81, +6.35]",5,5
+commute mobility,fixed 0.15,,non-Main-request accuracy,-8.6607,"[-12.82, -4.50]",0,5
+commute mobility,fixed 0.15,,offload rate,-8.2751,"[-14.70, -1.85]",0,5
+commute mobility,fixed 0.2,,bottom-10% client accuracy,-0.7845,"[-2.11, +0.54]",2,5
+commute mobility,fixed 0.2,,accuracy at home,+1.6097,"[-0.39, +3.61]",4,5
+commute mobility,fixed 0.2,,accuracy away from home,-2.3254,"[-3.72, -0.93]",0,5
+commute mobility,fixed 0.2,,Main-request accuracy,+2.6422,"[-0.02, +5.30]",5,5
+commute mobility,fixed 0.2,,non-Main-request accuracy,-7.4671,"[-11.86, -3.08]",0,5
+commute mobility,fixed 0.2,,offload rate,-7.6844,"[-14.08, -1.28]",0,5
+commute mobility,fixed 0.3,,bottom-10% client accuracy,-1.1111,"[-1.96, -0.26]",0,5
+commute mobility,fixed 0.3,,accuracy at home,+0.3373,"[-1.45, +2.13]",3,5
+commute mobility,fixed 0.3,,accuracy away from home,-1.8162,"[-2.91, -0.72]",0,5
+commute mobility,fixed 0.3,,Main-request accuracy,+0.7469,"[-1.82, +3.31]",3,5
+commute mobility,fixed 0.3,,non-Main-request accuracy,-4.3626,"[-9.21, +0.48]",1,5
+commute mobility,fixed 0.3,,offload rate,-5.5610,"[-11.93, +0.81]",1,5
+commute mobility,fixed 0.4,yes,bottom-10% client accuracy,-0.9510,"[-1.72, -0.18]",0,5
+commute mobility,fixed 0.4,yes,accuracy at home,-0.7525,"[-2.36, +0.85]",2,5
+commute mobility,fixed 0.4,yes,accuracy away from home,-0.7633,"[-1.82, +0.29]",1,5
+commute mobility,fixed 0.4,yes,Main-request accuracy,-1.1440,"[-3.71, +1.42]",2,5
+commute mobility,fixed 0.4,yes,non-Main-request accuracy,-0.1805,"[-5.39, +5.03]",3,5
+commute mobility,fixed 0.4,yes,offload rate,-1.4856,"[-7.97, +5.00]",2,5
+commute mobility,fixed 0.5,,bottom-10% client accuracy,+0.0393,"[-0.91, +0.99]",2,5
+commute mobility,fixed 0.5,,accuracy at home,-1.6916,"[-3.15, -0.24]",0,5
+commute mobility,fixed 0.5,,accuracy away from home,+0.9545,"[-0.21, +2.12]",4,5
+commute mobility,fixed 0.5,,Main-request accuracy,-3.0311,"[-5.58, -0.49]",0,5
+commute mobility,fixed 0.5,,non-Main-request accuracy,+5.0968,"[-0.38, +10.57]",5,5
+commute mobility,fixed 0.5,,offload rate,+5.2443,"[-1.34, +11.83]",4,5
+commute mobility,fixed 0.6,,bottom-10% client accuracy,+1.2528,"[+0.47, +2.03]",5,5
+commute mobility,fixed 0.6,,accuracy at home,-2.6223,"[-3.89, -1.36]",0,5
+commute mobility,fixed 0.6,,accuracy away from home,+3.2065,"[+1.90, +4.52]",5,5
+commute mobility,fixed 0.6,,Main-request accuracy,-5.0900,"[-7.62, -2.56]",0,5
+commute mobility,fixed 0.6,,non-Main-request accuracy,+11.4734,"[+5.96, +16.99]",5,5
+commute mobility,fixed 0.6,,offload rate,+15.2989,"[+8.45, +22.15]",5,5
+commute mobility,entropy controller,,bottom-10% client accuracy,+1.7944,"[+0.89, +2.70]",5,5
+commute mobility,entropy controller,,accuracy at home,-0.7405,"[-2.84, +1.36]",2,5
+commute mobility,entropy controller,,accuracy away from home,+1.7639,"[+0.36, +3.17]",5,5
+commute mobility,entropy controller,,Main-request accuracy,-2.0401,"[-5.41, +1.33]",1,5
+commute mobility,entropy controller,,non-Main-request accuracy,+5.9141,"[+0.05, +11.78]",4,5
+commute mobility,entropy controller,,offload rate,+8.6718,"[+1.27, +16.07]",5,5
+commute mobility,APFL η=0.01,,bottom-10% client accuracy,+1.3058,"[-1.08, +3.70]",3,3
+commute mobility,APFL η=0.01,,accuracy at home,-2.5467,"[-3.84, -1.25]",0,3
+commute mobility,APFL η=0.01,,accuracy away from home,+3.1612,"[+0.94, +5.38]",3,3
+commute mobility,APFL η=0.01,,Main-request accuracy,-4.8441,"[-8.12, -1.57]",0,3
+commute mobility,APFL η=0.01,,non-Main-request accuracy,+10.4497,"[+3.69, +17.21]",3,3
+commute mobility,APFL η=0.01,,offload rate,+17.1432,"[+5.35, +28.94]",3,3
+commute mobility,APFL η=0.1,,bottom-10% client accuracy,+0.0760,"[-1.22, +1.37]",1,3
+commute mobility,APFL η=0.1,,accuracy at home,-3.2508,"[-4.95, -1.55]",0,3
+commute mobility,APFL η=0.1,,accuracy away from home,+3.0906,"[+0.85, +5.33]",3,3
+commute mobility,APFL η=0.1,,Main-request accuracy,-5.6648,"[-9.25, -2.08]",0,3
+commute mobility,APFL η=0.1,,non-Main-request accuracy,+11.1705,"[+4.41, +17.93]",3,3
+commute mobility,APFL η=0.1,,offload rate,+16.4175,"[+4.66, +28.18]",3,3
+GeoLife trace,fixed 0.15,,bottom-10% client accuracy,-1.1262,"[-3.68, +1.43]",1,3
+GeoLife trace,fixed 0.15,,accuracy at home,+1.9394,"[-0.34, +4.22]",3,3
+GeoLife trace,fixed 0.15,,accuracy away from home,-2.8155,"[-5.86, +0.23]",0,3
+GeoLife trace,fixed 0.15,,Main-request accuracy,+3.7410,"[-0.53, +8.01]",3,3
+GeoLife trace,fixed 0.15,,non-Main-request accuracy,-11.8552,"[-25.67, +1.96]",0,3
+GeoLife trace,fixed 0.15,,offload rate,-18.1554,"[-47.57, +11.26]",0,3
+GeoLife trace,fixed 0.2,,bottom-10% client accuracy,-1.1575,"[-3.29, +0.98]",0,3
+GeoLife trace,fixed 0.2,,accuracy at home,+1.4809,"[-0.92, +3.89]",3,3
+GeoLife trace,fixed 0.2,,accuracy away from home,-2.5811,"[-5.14, -0.02]",0,3
+GeoLife trace,fixed 0.2,,Main-request accuracy,+3.1219,"[-1.29, +7.54]",3,3
+GeoLife trace,fixed 0.2,,non-Main-request accuracy,-10.8336,"[-24.33, +2.66]",0,3
+GeoLife trace,fixed 0.2,,offload rate,-16.7886,"[-44.00, +10.43]",0,3
+GeoLife trace,fixed 0.3,,bottom-10% client accuracy,-1.0435,"[-2.53, +0.44]",0,3
+GeoLife trace,fixed 0.3,,accuracy at home,+0.6572,"[-2.22, +3.53]",2,3
+GeoLife trace,fixed 0.3,,accuracy away from home,-1.9457,"[-3.70, -0.20]",0,3
+GeoLife trace,fixed 0.3,,Main-request accuracy,+1.9199,"[-3.04, +6.88]",2,3
+GeoLife trace,fixed 0.3,,non-Main-request accuracy,-8.4292,"[-21.49, +4.63]",0,3
+GeoLife trace,fixed 0.3,,offload rate,-13.1078,"[-36.39, +10.18]",0,3
+GeoLife trace,fixed 0.4,,bottom-10% client accuracy,-0.6836,"[-1.78, +0.41]",0,3
+GeoLife trace,fixed 0.4,,accuracy at home,+0.0027,"[-3.65, +3.66]",2,3
+GeoLife trace,fixed 0.4,,accuracy away from home,-1.0691,"[-2.52, +0.38]",0,3
+GeoLife trace,fixed 0.4,,Main-request accuracy,+0.7597,"[-5.07, +6.59]",2,3
+GeoLife trace,fixed 0.4,,non-Main-request accuracy,-5.2715,"[-18.45, +7.91]",1,3
+GeoLife trace,fixed 0.4,,offload rate,-8.3235,"[-29.74, +13.09]",1,3
+GeoLife trace,fixed 0.5,,bottom-10% client accuracy,-0.1204,"[-0.35, +0.11]",0,3
+GeoLife trace,fixed 0.5,,accuracy at home,-0.5301,"[-5.31, +4.25]",2,3
+GeoLife trace,fixed 0.5,,accuracy away from home,+0.0992,"[-1.57, +1.77]",2,3
+GeoLife trace,fixed 0.5,,Main-request accuracy,-0.4896,"[-7.57, +6.59]",2,3
+GeoLife trace,fixed 0.5,,non-Main-request accuracy,-1.0124,"[-14.71, +12.68]",1,3
+GeoLife trace,fixed 0.5,,offload rate,-2.0996,"[-23.43, +19.23]",1,3
+GeoLife trace,fixed 0.6,yes,bottom-10% client accuracy,+0.2613,"[-0.56, +1.09]",2,3
+GeoLife trace,fixed 0.6,yes,accuracy at home,-1.1420,"[-6.59, +4.31]",1,3
+GeoLife trace,fixed 0.6,yes,accuracy away from home,+1.4911,"[-0.50, +3.48]",3,3
+GeoLife trace,fixed 0.6,yes,Main-request accuracy,-2.0452,"[-10.26, +6.17]",1,3
+GeoLife trace,fixed 0.6,yes,non-Main-request accuracy,+4.5420,"[-10.15, +19.24]",2,3
+GeoLife trace,fixed 0.6,yes,offload rate,+5.9214,"[-16.52, +28.36]",2,3
+GeoLife trace,entropy controller,,bottom-10% client accuracy,-0.1999,"[-1.21, +0.81]",1,3
+GeoLife trace,entropy controller,,accuracy at home,-0.5475,"[-4.36, +3.27]",1,3
+GeoLife trace,entropy controller,,accuracy away from home,+0.6465,"[-2.09, +3.39]",2,3
+GeoLife trace,entropy controller,,Main-request accuracy,-0.6920,"[-7.03, +5.64]",2,3
+GeoLife trace,entropy controller,,non-Main-request accuracy,+0.9944,"[-11.87, +13.86]",1,3
+GeoLife trace,entropy controller,,offload rate,+1.8272,"[-21.16, +24.82]",1,3
+GeoLife trace,APFL η=0.01,,bottom-10% client accuracy,-0.1184,"[-2.31, +2.07]",1,3
+GeoLife trace,APFL η=0.01,,accuracy at home,-1.9086,"[-5.74, +1.93]",0,3
+GeoLife trace,APFL η=0.01,,accuracy away from home,+1.1556,"[-3.77, +6.08]",2,3
+GeoLife trace,APFL η=0.01,,Main-request accuracy,-3.0714,"[-10.73, +4.59]",0,3
+GeoLife trace,APFL η=0.01,,non-Main-request accuracy,+5.0409,"[-12.53, +22.61]",2,3
+GeoLife trace,APFL η=0.01,,offload rate,+7.7517,"[-23.54, +39.05]",2,3
+GeoLife trace,APFL η=0.1,,bottom-10% client accuracy,-0.4118,"[-2.54, +1.72]",1,3
+GeoLife trace,APFL η=0.1,,accuracy at home,-2.2618,"[-6.14, +1.62]",0,3
+GeoLife trace,APFL η=0.1,,accuracy away from home,+0.9078,"[-3.83, +5.65]",2,3
+GeoLife trace,APFL η=0.1,,Main-request accuracy,-3.6353,"[-11.27, +4.00]",0,3
+GeoLife trace,APFL η=0.1,,non-Main-request accuracy,+5.5862,"[-12.21, +23.39]",2,3
+GeoLife trace,APFL η=0.1,,offload rate,+6.4363,"[-23.82, +36.69]",2,3

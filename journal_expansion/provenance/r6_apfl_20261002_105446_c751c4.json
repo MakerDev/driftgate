@@ -1,0 +1,515 @@
+{
+ "run_id": "r6_apfl_20261002_105446_c751c4",
+ "git_commit": "dbbc9b0efac0421508eeabfe89feaff6ef877dd4",
+ "config": {
+  "scenario": "S2",
+  "arm": "apfl010",
+  "env_file": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_env/S2_seed2.npz",
+  "env_meta": {
+   "scenario": "S2",
+   "dataset": "GeoLife Trajectories 1.3",
+   "env_seed": 2,
+   "K": 50,
+   "L": 5,
+   "T": 150,
+   "layout": "trace",
+   "mu_range": [
+    32.0,
+    128.0
+   ],
+   "avail": 1.0,
+   "loss": 0.0,
+   "n_points": 24876978,
+   "n_points_kept": 18487422,
+   "n_candidates": 135,
+   "n_selected": 50,
+   "lat0": 39.961071867384405,
+   "lon0": 116.36989836482961,
+   "edge_xy_km": [
+    [
+     -2.5074,
+     3.1187
+    ],
+    [
+     -7.363,
+     -16.3305
+    ],
+    [
+     8.5827,
+     -7.5398
+    ],
+    [
+     19.3092,
+     8.5383
+    ],
+    [
+     -21.0499,
+     10.8738
+    ]
+   ],
+   "edge_latlon": [
+    [
+     39.98911872423124,
+     116.34047914527412
+    ],
+    [
+     39.81420851354232,
+     116.28350713525387
+    ],
+    [
+     39.89326502983652,
+     116.47059998267567
+    ],
+    [
+     40.0378581294333,
+     116.59645475764678
+    ],
+    [
+     40.0588617858352,
+     116.12291733918426
+    ]
+   ],
+   "residents_per_cell": [
+    38,
+    4,
+    5,
+    2,
+    1
+   ],
+   "class_group_of_cell": {
+    "0": 0,
+    "2": 1,
+    "1": 2,
+    "3": 3,
+    "4": 4
+   },
+   "rho_home": 0.1,
+   "rho_away": 0.8,
+   "partition": "one nd1_partition over the 50 clients, client_to_es = class group of the home cell, seed = run seed"
+  },
+  "mode": "apfl",
+  "signal": null,
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "apfl_eta": 0.1,
+  "signal_delay": 0,
+  "probe_n": 64,
+  "eval_every": 5,
+  "controller_kwargs": {},
+  "partition_seed": 2,
+  "model_seed": 102,
+  "run_name": "s2_apfl010_s2",
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 150,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 2,
+   "model_seed": 102,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  }
+ },
+ "config_sha256": "08bcdff286676b43561fa701b7a586c8f55c564f3d116e78629ffcc4f65e3f83",
+ "command": "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S2 --env S2 --arm apfl010 --mode apfl --apfl_eta 0.1 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name s2_apfl010_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S2 --device cuda:0",
+ "start_time": "2026-10-02T10:54:46.202377",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "split_hash": "27c7514a92d00ba9",
+ "model_init_hash": "4171f44fdde25fa1",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 2,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "cell_groups": {
+  "0": [
+   1,
+   5,
+   6,
+   9
+  ],
+  "1": [
+   3,
+   4,
+   5,
+   6,
+   9
+  ],
+  "2": [
+   0,
+   4,
+   8,
+   9
+  ],
+  "3": [
+   0,
+   2,
+   5,
+   9
+  ],
+  "4": [
+   0,
+   9
+  ]
+ },
+ "client_main": {
+  "0": [
+   1,
+   9
+  ],
+  "1": [
+   5,
+   9
+  ],
+  "2": [
+   6,
+   9
+  ],
+  "3": [
+   5,
+   6
+  ],
+  "4": [
+   6,
+   9
+  ],
+  "5": [
+   6,
+   9
+  ],
+  "6": [
+   5,
+   9
+  ],
+  "7": [
+   1,
+   6
+  ],
+  "8": [
+   6,
+   9
+  ],
+  "9": [
+   4,
+   6
+  ],
+  "10": [
+   5,
+   6
+  ],
+  "11": [
+   6,
+   9
+  ],
+  "12": [
+   6,
+   9
+  ],
+  "13": [
+   8,
+   9
+  ],
+  "14": [
+   5,
+   6
+  ],
+  "15": [
+   2,
+   5
+  ],
+  "16": [
+   6,
+   9
+  ],
+  "17": [
+   5,
+   9
+  ],
+  "18": [
+   5,
+   9
+  ],
+  "19": [
+   4,
+   9
+  ],
+  "20": [
+   5,
+   6
+  ],
+  "21": [
+   5,
+   6
+  ],
+  "22": [
+   6,
+   9
+  ],
+  "23": [
+   0,
+   9
+  ],
+  "24": [
+   6,
+   9
+  ],
+  "25": [
+   1,
+   6
+  ],
+  "26": [
+   0,
+   9
+  ],
+  "27": [
+   1,
+   9
+  ],
+  "28": [
+   0,
+   4
+  ],
+  "29": [
+   5,
+   9
+  ],
+  "30": [
+   1,
+   9
+  ],
+  "31": [
+   5,
+   6
+  ],
+  "32": [
+   1,
+   5
+  ],
+  "33": [
+   0,
+   8
+  ],
+  "34": [
+   1,
+   6
+  ],
+  "35": [
+   5,
+   9
+  ],
+  "36": [
+   1,
+   5
+  ],
+  "37": [
+   1,
+   6
+  ],
+  "38": [
+   1,
+   6
+  ],
+  "39": [
+   1,
+   6
+  ],
+  "40": [
+   1,
+   5
+  ],
+  "41": [
+   1,
+   9
+  ],
+  "42": [
+   5,
+   9
+  ],
+  "43": [
+   5,
+   9
+  ],
+  "44": [
+   1,
+   5
+  ],
+  "45": [
+   3,
+   9
+  ],
+  "46": [
+   1,
+   5
+  ],
+  "47": [
+   0,
+   9
+  ],
+  "48": [
+   6,
+   9
+  ],
+  "49": [
+   1,
+   5
+  ]
+ },
+ "client_n_train": {
+  "0": 490,
+  "1": 416,
+  "2": 395,
+  "3": 455,
+  "4": 395,
+  "5": 395,
+  "6": 416,
+  "7": 529,
+  "8": 395,
+  "9": 1883,
+  "10": 455,
+  "11": 395,
+  "12": 395,
+  "13": 2678,
+  "14": 455,
+  "15": 5238,
+  "16": 395,
+  "17": 416,
+  "18": 416,
+  "19": 1844,
+  "20": 455,
+  "21": 455,
+  "22": 395,
+  "23": 1178,
+  "24": 395,
+  "25": 529,
+  "26": 1178,
+  "27": 490,
+  "28": 2666,
+  "29": 416,
+  "30": 490,
+  "31": 455,
+  "32": 550,
+  "33": 3500,
+  "34": 529,
+  "35": 416,
+  "36": 550,
+  "37": 529,
+  "38": 529,
+  "39": 529,
+  "40": 550,
+  "41": 490,
+  "42": 416,
+  "43": 416,
+  "44": 550,
+  "45": 5178,
+  "46": 550,
+  "47": 1178,
+  "48": 395,
+  "49": 550
+ },
+ "end_time": "2026-10-02T12:04:01.876583",
+ "wall_time_sec": 4155.565624713898,
+ "final_metrics": {
+  "integrated_acc": 0.705335223563383,
+  "acc_total_final": 0.8042806639987563,
+  "wall_min": 69.06183831691742,
+  "probe_eval_overlap": 0
+ }
+}

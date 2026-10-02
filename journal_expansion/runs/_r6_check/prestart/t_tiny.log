@@ -1,0 +1,4 @@
+[t_tiny] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=3 device=cuda:0
+  R  1 loss=4.481 acc=0.008 worst=0.003 elapsed=2.4m ETA=5m
+  R  3 loss=3.897 acc=0.033 worst=0.021 elapsed=6.5m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/prestart/t_tiny.json

@@ -1,0 +1,519 @@
+{
+ "run_id": "r6_fixed_20261002_093034_a120ac",
+ "git_commit": "dbbc9b0efac0421508eeabfe89feaff6ef877dd4",
+ "config": {
+  "scenario": "S2",
+  "arm": "fixed015",
+  "env_file": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_env/S2_seed1.npz",
+  "env_meta": {
+   "scenario": "S2",
+   "dataset": "GeoLife Trajectories 1.3",
+   "env_seed": 1,
+   "K": 50,
+   "L": 5,
+   "T": 150,
+   "layout": "trace",
+   "mu_range": [
+    32.0,
+    128.0
+   ],
+   "avail": 1.0,
+   "loss": 0.0,
+   "n_points": 24876978,
+   "n_points_kept": 18487422,
+   "n_candidates": 135,
+   "n_selected": 50,
+   "lat0": 39.961071867384405,
+   "lon0": 116.36989836482961,
+   "edge_xy_km": [
+    [
+     -2.5074,
+     3.1187
+    ],
+    [
+     -7.363,
+     -16.3305
+    ],
+    [
+     8.5827,
+     -7.5398
+    ],
+    [
+     19.3092,
+     8.5383
+    ],
+    [
+     -21.0499,
+     10.8738
+    ]
+   ],
+   "edge_latlon": [
+    [
+     39.98911872423124,
+     116.34047914527412
+    ],
+    [
+     39.81420851354232,
+     116.28350713525387
+    ],
+    [
+     39.89326502983652,
+     116.47059998267567
+    ],
+    [
+     40.0378581294333,
+     116.59645475764678
+    ],
+    [
+     40.0588617858352,
+     116.12291733918426
+    ]
+   ],
+   "residents_per_cell": [
+    38,
+    4,
+    5,
+    2,
+    1
+   ],
+   "class_group_of_cell": {
+    "0": 0,
+    "2": 1,
+    "1": 2,
+    "3": 3,
+    "4": 4
+   },
+   "rho_home": 0.1,
+   "rho_away": 0.8,
+   "partition": "one nd1_partition over the 50 clients, client_to_es = class group of the home cell, seed = run seed"
+  },
+  "mode": "fixed",
+  "signal": null,
+  "lambda_val": 0.15,
+  "big_lambda_val": 0.5,
+  "apfl_eta": null,
+  "signal_delay": 0,
+  "probe_n": 64,
+  "eval_every": 5,
+  "controller_kwargs": {},
+  "partition_seed": 1,
+  "model_seed": 101,
+  "run_name": "s2_fixed015_s1",
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 150,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 1,
+   "model_seed": 101,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  }
+ },
+ "config_sha256": "39db0b62472064f8fc55e30f78ad817b45531ae5f3b14eb6419205bcd4d50475",
+ "command": "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S2 --env S2 --arm fixed015 --mode fixed --lambda_val 0.15 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name s2_fixed015_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S2 --device cuda:0",
+ "start_time": "2026-10-02T09:30:34.404530",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "split_hash": "4861c747b87e0bcb",
+ "model_init_hash": "94e1a02e7298cd5e",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 1,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "cell_groups": {
+  "0": [
+   0,
+   1,
+   3,
+   4,
+   9
+  ],
+  "1": [
+   1,
+   2,
+   5,
+   7,
+   8,
+   9
+  ],
+  "2": [
+   0,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "3": [
+   4,
+   7,
+   8
+  ],
+  "4": [
+   0,
+   9
+  ]
+ },
+ "client_main": {
+  "0": [
+   1,
+   9
+  ],
+  "1": [
+   1,
+   3
+  ],
+  "2": [
+   1,
+   4
+  ],
+  "3": [
+   0,
+   3
+  ],
+  "4": [
+   0,
+   4
+  ],
+  "5": [
+   1,
+   3
+  ],
+  "6": [
+   0,
+   3
+  ],
+  "7": [
+   4,
+   9
+  ],
+  "8": [
+   1,
+   9
+  ],
+  "9": [
+   2,
+   9
+  ],
+  "10": [
+   5,
+   7
+  ],
+  "11": [
+   4,
+   9
+  ],
+  "12": [
+   0,
+   9
+  ],
+  "13": [
+   3,
+   6
+  ],
+  "14": [
+   5,
+   8
+  ],
+  "15": [
+   4,
+   7
+  ],
+  "16": [
+   3,
+   9
+  ],
+  "17": [
+   0,
+   4
+  ],
+  "18": [
+   0,
+   9
+  ],
+  "19": [
+   3,
+   9
+  ],
+  "20": [
+   4,
+   9
+  ],
+  "21": [
+   3,
+   4
+  ],
+  "22": [
+   0,
+   4
+  ],
+  "23": [
+   0,
+   5
+  ],
+  "24": [
+   4,
+   9
+  ],
+  "25": [
+   1,
+   9
+  ],
+  "26": [
+   4,
+   8
+  ],
+  "27": [
+   0,
+   1
+  ],
+  "28": [
+   7,
+   9
+  ],
+  "29": [
+   1,
+   4
+  ],
+  "30": [
+   3,
+   9
+  ],
+  "31": [
+   3,
+   9
+  ],
+  "32": [
+   3,
+   4
+  ],
+  "33": [
+   7,
+   8
+  ],
+  "34": [
+   0,
+   9
+  ],
+  "35": [
+   1,
+   4
+  ],
+  "36": [
+   1,
+   9
+  ],
+  "37": [
+   0,
+   4
+  ],
+  "38": [
+   3,
+   4
+  ],
+  "39": [
+   1,
+   9
+  ],
+  "40": [
+   4,
+   9
+  ],
+  "41": [
+   3,
+   4
+  ],
+  "42": [
+   3,
+   4
+  ],
+  "43": [
+   0,
+   3
+  ],
+  "44": [
+   0,
+   4
+  ],
+  "45": [
+   1,
+   9
+  ],
+  "46": [
+   1,
+   9
+  ],
+  "47": [
+   0,
+   9
+  ],
+  "48": [
+   3,
+   9
+  ],
+  "49": [
+   0,
+   9
+  ]
+ },
+ "client_n_train": {
+  "0": 592,
+  "1": 696,
+  "2": 634,
+  "3": 645,
+  "4": 583,
+  "5": 696,
+  "6": 645,
+  "7": 458,
+  "8": 592,
+  "9": 5208,
+  "10": 2916,
+  "11": 458,
+  "12": 541,
+  "13": 5312,
+  "14": 3332,
+  "15": 1500,
+  "16": 520,
+  "17": 583,
+  "18": 541,
+  "19": 520,
+  "20": 458,
+  "21": 562,
+  "22": 583,
+  "23": 1999,
+  "24": 458,
+  "25": 592,
+  "26": 1916,
+  "27": 717,
+  "28": 1458,
+  "29": 634,
+  "30": 520,
+  "31": 520,
+  "32": 562,
+  "33": 2916,
+  "34": 541,
+  "35": 634,
+  "36": 592,
+  "37": 583,
+  "38": 562,
+  "39": 592,
+  "40": 458,
+  "41": 562,
+  "42": 562,
+  "43": 645,
+  "44": 583,
+  "45": 592,
+  "46": 592,
+  "47": 541,
+  "48": 520,
+  "49": 541
+ },
+ "end_time": "2026-10-02T10:36:00.584458",
+ "wall_time_sec": 3926.069266319275,
+ "final_metrics": {
+  "integrated_acc": 0.6465450456973217,
+  "acc_total_final": 0.7540708818090889,
+  "wall_min": 65.2725586771965,
+  "probe_eval_overlap": 0
+ }
+}

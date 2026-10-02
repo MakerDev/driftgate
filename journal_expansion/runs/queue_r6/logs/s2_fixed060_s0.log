@@ -6,3 +6,28 @@
   R 20 loss=0.364 acc=0.5696 off=0.949 active=50 elapsed=8.6m ETA=56m
   R 25 loss=0.333 acc=0.5982 off=0.935 active=50 elapsed=10.7m ETA=53m
   R 30 loss=0.322 acc=0.6115 off=0.909 active=50 elapsed=12.6m ETA=51m
+  R 35 loss=0.297 acc=0.6186 off=0.909 active=50 elapsed=14.7m ETA=48m
+  R 40 loss=0.280 acc=0.6219 off=0.873 active=50 elapsed=16.8m ETA=46m
+  R 45 loss=0.265 acc=0.5988 off=0.873 active=50 elapsed=18.9m ETA=44m
+  R 50 loss=0.246 acc=0.6239 off=0.876 active=50 elapsed=20.9m ETA=42m
+  R 55 loss=0.236 acc=0.5990 off=0.767 active=50 elapsed=23.2m ETA=40m
+  R 60 loss=0.225 acc=0.6132 off=0.770 active=50 elapsed=25.2m ETA=38m
+  R 65 loss=0.215 acc=0.6174 off=0.785 active=50 elapsed=27.3m ETA=36m
+  R 70 loss=0.205 acc=0.6198 off=0.770 active=50 elapsed=29.3m ETA=33m
+  R 75 loss=0.189 acc=0.6074 off=0.748 active=50 elapsed=31.3m ETA=31m
+  R 80 loss=0.183 acc=0.6258 off=0.748 active=50 elapsed=33.4m ETA=29m
+  R 85 loss=0.174 acc=0.6295 off=0.764 active=50 elapsed=35.5m ETA=27m
+  R 90 loss=0.168 acc=0.6351 off=0.715 active=50 elapsed=37.6m ETA=25m
+  R 95 loss=0.159 acc=0.6465 off=0.730 active=50 elapsed=39.6m ETA=23m
+  R100 loss=0.158 acc=0.6514 off=0.746 active=50 elapsed=41.7m ETA=21m
+  R105 loss=0.158 acc=0.6495 off=0.695 active=50 elapsed=43.8m ETA=19m
+  R110 loss=0.150 acc=0.6659 off=0.702 active=50 elapsed=45.9m ETA=17m
+  R115 loss=0.144 acc=0.6801 off=0.668 active=50 elapsed=48.0m ETA=15m
+  R120 loss=0.140 acc=0.6891 off=0.674 active=50 elapsed=50.1m ETA=13m
+  R125 loss=0.142 acc=0.7060 off=0.688 active=50 elapsed=52.2m ETA=10m
+  R130 loss=0.130 acc=0.6904 off=0.617 active=50 elapsed=54.3m ETA=8m
+  R135 loss=0.136 acc=0.6922 off=0.649 active=50 elapsed=56.5m ETA=6m
+  R140 loss=0.132 acc=0.7102 off=0.672 active=50 elapsed=58.4m ETA=4m
+  R145 loss=0.122 acc=0.7068 off=0.623 active=50 elapsed=60.6m ETA=2m
+  R150 loss=0.118 acc=0.7233 off=0.593 active=50 elapsed=62.7m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S2/s2_fixed060_s0.json  integrated=0.6181

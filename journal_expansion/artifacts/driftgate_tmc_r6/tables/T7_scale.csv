@@ -1,4 +1,4 @@
 K,L,setting,n_seeds,DriftGate_pct,fixed_0.2_pct,fixed_0.4_pct,fixed_0.6_pct,best_fixed,DriftGate_minus_best_pp,ci95,n_pos,n,signal_bytes_client_TV,signal_bytes_dbar_sharing,signal_bytes_total_per_round,signal_bytes_per_edge,controller_us_per_edge_round_median,controller_us_per_edge_round_p95
-50,5,commute mobility,0,,62.4385,63.2150,62.4889,,,,,,228,80,308,61.5,,
-200,20,"commute mobility, K=200",0,,,,,,,,,,921,1520,2441,122.0,,
-500,50,"commute mobility, K=500",0,,,,,,,,,,2344,9800,12144,242.9,,
+50,5,commute mobility,3,62.7723,62.4385,63.2150,62.4889,fixed 0.4,-0.4426,"[-1.04, +0.15]",0,3,228,80,308,61.5,35.5,108.8
+200,20,"commute mobility, K=200",3,64.8353,65.4043,65.2542,62.8088,fixed 0.2,-0.5691,"[-1.73, +0.59]",0,3,921,1520,2441,122.0,62.0,138.5
+500,50,"commute mobility, K=500",3,66.8251,67.0606,67.0368,64.3467,fixed 0.2,-0.2355,"[-0.57, +0.10]",0,3,2344,9800,12144,242.9,125.9,254.2

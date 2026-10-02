@@ -1,2 +1,33 @@
 [s2_entropy_own_s0] scenario=S2 arm=entropy_own mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
   R  1 loss=0.975 acc=0.2550 off=1.000 active=50 elapsed=0.6m ETA=83m
+  R  5 loss=0.552 acc=0.4229 off=0.998 active=50 elapsed=2.3m ETA=66m
+  R 10 loss=0.494 acc=0.5270 off=0.992 active=50 elapsed=4.3m ETA=60m
+  R 15 loss=0.459 acc=0.5352 off=0.995 active=50 elapsed=6.4m ETA=58m
+  R 20 loss=0.430 acc=0.5619 off=0.991 active=50 elapsed=8.5m ETA=56m
+  R 25 loss=0.399 acc=0.5882 off=0.986 active=50 elapsed=10.6m ETA=53m
+  R 30 loss=0.341 acc=0.6111 off=0.899 active=50 elapsed=12.7m ETA=51m
+  R 35 loss=0.318 acc=0.6171 off=0.901 active=50 elapsed=14.7m ETA=48m
+  R 40 loss=0.289 acc=0.6288 off=0.855 active=50 elapsed=16.8m ETA=46m
+  R 45 loss=0.338 acc=0.5857 off=0.928 active=50 elapsed=19.0m ETA=44m
+  R 50 loss=0.285 acc=0.6146 off=0.918 active=50 elapsed=21.0m ETA=42m
+  R 55 loss=0.275 acc=0.5933 off=0.811 active=50 elapsed=23.1m ETA=40m
+  R 60 loss=0.259 acc=0.6071 off=0.821 active=50 elapsed=25.1m ETA=38m
+  R 65 loss=0.234 acc=0.6162 off=0.807 active=50 elapsed=27.2m ETA=36m
+  R 70 loss=0.266 acc=0.6034 off=0.861 active=50 elapsed=29.3m ETA=33m
+  R 75 loss=0.292 acc=0.5855 off=0.849 active=50 elapsed=31.3m ETA=31m
+  R 80 loss=0.305 acc=0.5982 off=0.867 active=50 elapsed=33.4m ETA=29m
+  R 85 loss=0.305 acc=0.5937 off=0.869 active=50 elapsed=35.5m ETA=27m
+  R 90 loss=0.309 acc=0.6055 off=0.886 active=50 elapsed=37.6m ETA=25m
+  R 95 loss=0.274 acc=0.6187 off=0.907 active=50 elapsed=39.7m ETA=23m
+  R100 loss=0.239 acc=0.6380 off=0.855 active=50 elapsed=41.8m ETA=21m
+  R105 loss=0.165 acc=0.6480 off=0.730 active=50 elapsed=43.8m ETA=19m
+  R110 loss=0.151 acc=0.6670 off=0.716 active=50 elapsed=45.9m ETA=17m
+  R115 loss=0.137 acc=0.6794 off=0.631 active=50 elapsed=48.0m ETA=15m
+  R120 loss=0.130 acc=0.6888 off=0.634 active=50 elapsed=50.2m ETA=13m
+  R125 loss=0.145 acc=0.7045 off=0.673 active=50 elapsed=52.2m ETA=10m
+  R130 loss=0.124 acc=0.6946 off=0.629 active=50 elapsed=54.3m ETA=8m
+  R135 loss=0.122 acc=0.6937 off=0.614 active=50 elapsed=56.3m ETA=6m
+  R140 loss=0.124 acc=0.7074 off=0.605 active=50 elapsed=58.4m ETA=4m
+  R145 loss=0.108 acc=0.7152 off=0.575 active=50 elapsed=60.5m ETA=2m
+  R150 loss=0.112 acc=0.7181 off=0.562 active=50 elapsed=62.6m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S2/s2_entropy_own_s0.json  integrated=0.6104

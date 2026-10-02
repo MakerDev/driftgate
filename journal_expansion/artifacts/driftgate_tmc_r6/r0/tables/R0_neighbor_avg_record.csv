@@ -18,5 +18,5 @@ SVHN temporal / entropy controller,76.9699,77.1471,+0.1772,"[-0.33, +0.68]",3,5,
 stepwise / absonly,64.9176,64.9264,+0.0089,"[-0.06, +0.07]",3,5,with = Round 4/5 run; without = R0 re-run,"{0,1,2,3,4}",+0.08 +0.01 +0.03 -0.02 -0.06
 client mobility / absonly,57.9330,57.9334,+0.0004,"[-0.04, +0.04]",2,3,with = Round 4/5 run; without = R0 re-run,"{0,1,2}",-0.02 +0.01 +0.01
 CIFAR-100 gradual / absonly,34.8870,34.8937,+0.0067,"[-0.03, +0.04]",2,3,with = Round 4/5 run; without = R0 re-run,"{0,1,2}",+0.01 -0.01 +0.02
-Round 6 commute mobility / DriftGate,63.2663,62.9889,-0.2773,,0,1,both on honeynaps; the with-average runs were made before the 2026-10-01 decision,{0},-0.28
-Round 6 commute mobility / entropy controller,62.3886,62.1420,-0.2466,,0,1,both on honeynaps; the with-average runs were made before the 2026-10-01 decision,{0},-0.25
+Round 6 commute mobility / DriftGate,61.8076,61.5215,-0.2861,"[-0.72, +0.14]",1,4,both on honeynaps; the with-average runs were made before the 2026-10-01 decision,"{0,1,2,3}",-0.28 -0.59 -0.35 +0.07
+Round 6 commute mobility / entropy controller,61.3813,60.9972,-0.3841,"[-1.02, +0.25]",1,4,both on honeynaps; the with-average runs were made before the 2026-10-01 decision,"{0,1,2,3}",-0.25 +0.03 -0.92 -0.40

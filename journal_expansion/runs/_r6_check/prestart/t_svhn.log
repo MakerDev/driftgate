@@ -1,0 +1,4 @@
+[t_svhn] method=splitomcplus controller=selfcal signal=tv_dist schedule=gradual_sigmoid rounds=3 device=cuda:0
+  R  1 loss=0.922 acc=0.229 worst=0.104 elapsed=0.9m ETA=2m
+  R  3 loss=0.572 acc=0.318 worst=0.260 elapsed=2.9m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/prestart/t_svhn.json

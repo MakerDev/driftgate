@@ -13,3 +13,9 @@
 [wg0v3 cuda:0/GPU0] START r0_e3_lmax060_mob_s1 (R0) 2026-10-02 07:17:04
 [wg0v3 cuda:0/GPU0] END r0_e3_lmax060_mob_s1 exit=0 2026-10-02 08:27:31
 [wg0v3 cuda:0/GPU0] START s1_entropy_own_s2 (K50) 2026-10-02 08:27:31
+[wg0v3 cuda:0/GPU0] END s1_entropy_own_s2 exit=0 2026-10-02 09:30:32
+[wg0v3 cuda:0/GPU0] START s2_fixed015_s1 (K50) 2026-10-02 09:30:32
+[wg0v3 cuda:0/GPU0] END s2_fixed015_s1 exit=0 2026-10-02 10:36:01
+[wg0v3 cuda:0/GPU0] START s2_fixed030_s2 (K50) 2026-10-02 10:36:01
+[wg0v3 cuda:0/GPU0] END s2_fixed030_s2 exit=0 2026-10-02 11:37:14
+[wg0v3 cuda:0/GPU0] START s3k200_fixed020_s1 (K200) 2026-10-02 11:37:14

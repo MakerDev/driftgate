@@ -3,3 +3,5 @@ Thu Oct  1 06:59:05 PM KST 2026 manual start of 15 workers after supervisor cut 
 Thu Oct  1 06:59:39 PM KST 2026 requeued s3k500_fixed020_s0 (popped by a 5-s test worker that was killed before the job ran)
 Thu Oct  1 07:00:57 PM KST 2026 OOM risk: 3 K=500 per GPU need ~23.7 GB; killed s3k500_fixed060_s0/s1/s2 (GPU1-3) and held 4 K500 lines (held_k500.txt)
 Thu Oct  1 07:01:35 PM KST 2026 worker pool replaced (g*v*): K500 cap 2/GPU, 4 live jobs/GPU; old-pool jobs keep running; 4 held K500 lines re-added at the head
+Fri Oct  2 11:54:54 AM KST 2026 OOM: s3k200_fixed040_s1/fixed060_s1 (GPU2, next to 2 K500); worker pool replaced (g*u*) with a GPU memory budget of 23 GB (K500 9.0, K200 4.4, K50 2.1 GB); 2 runs re-queued
+Fri Oct  2 11:55:59 AM KST 2026 3 more K200 OOM failures by worker g2v4 before the pool change (fixed020_s2, fixed040_s2, fixed060_s2) re-queued; pool replaced (g*t*) with a 10-min back-off after a fast failure

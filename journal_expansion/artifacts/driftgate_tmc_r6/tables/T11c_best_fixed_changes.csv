@@ -1,8 +1,18 @@
 setting,comparison,where,best fixed,verdict
 commute mobility,"same time, across cells",pre-commute 05:00-07:30,fixed 0.6,same
-commute mobility,"same time, across cells",commute 07:30-09:30,fixed 0.4,same
+commute mobility,"same time, across cells",commute 07:30-09:30,fixed 0.4 / fixed 0.6,differs
 commute mobility,"same time, across cells",daytime 09:30-16:00,fixed 0.3,same
 commute mobility,"same time, across cells",return 16:00-19:00,fixed 0.4 / fixed 0.5,differs
 commute mobility,"same time, across cells",evening 19:00-20:00,fixed 0.6,same
 commute mobility,"same cell, across time",hub,fixed 0.6 -> fixed 0.4 -> fixed 0.3 -> fixed 0.4 -> fixed 0.6,differs
-commute mobility,"same cell, across time",residential,fixed 0.6 -> fixed 0.4 -> fixed 0.3 -> fixed 0.5 -> fixed 0.6,differs
+commute mobility,"same cell, across time",residential,fixed 0.6 -> fixed 0.6 -> fixed 0.3 -> fixed 0.5 -> fixed 0.6,differs
+GeoLife trace,"same time, across cells",pre-commute 05:00-07:30,fixed 0.4 / fixed 0.6,differs
+GeoLife trace,"same time, across cells",commute 07:30-09:30,fixed 0.15 / fixed 0.5 / fixed 0.6,differs
+GeoLife trace,"same time, across cells",daytime 09:30-16:00,fixed 0.15 / fixed 0.5 / fixed 0.6,differs
+GeoLife trace,"same time, across cells",return 16:00-19:00,fixed 0.15 / fixed 0.2 / fixed 0.5 / fixed 0.6,differs
+GeoLife trace,"same time, across cells",evening 19:00-20:00,fixed 0.15 / fixed 0.3 / fixed 0.5 / fixed 0.6,differs
+GeoLife trace,"same cell, across time",cell 0,fixed 0.4 -> fixed 0.5 -> fixed 0.5 -> fixed 0.5 -> fixed 0.5,differs
+GeoLife trace,"same cell, across time",cell 1,fixed 0.6 -> fixed 0.6 -> fixed 0.15 -> fixed 0.2 -> fixed 0.3,differs
+GeoLife trace,"same cell, across time",cell 2,fixed 0.6 -> fixed 0.6 -> fixed 0.6 -> fixed 0.6 -> fixed 0.6,same
+GeoLife trace,"same cell, across time",cell 3,fixed 0.6 -> fixed 0.6 -> fixed 0.6 -> fixed 0.6 -> fixed 0.15,differs
+GeoLife trace,"same cell, across time",cell 4,fixed 0.6 -> fixed 0.15 -> fixed 0.15 -> fixed 0.15 -> fixed 0.15,differs

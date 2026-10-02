@@ -13,3 +13,9 @@
 [wg0v2 cuda:0/GPU0] START s1_driftgate_own_s0 (K50) 2026-10-02 07:36:56
 [wg0v2 cuda:0/GPU0] END s1_driftgate_own_s0 exit=0 2026-10-02 08:37:32
 [wg0v2 cuda:0/GPU0] START s2_driftgate_own_s0 (K50) 2026-10-02 08:37:32
+[wg0v2 cuda:0/GPU0] END s2_driftgate_own_s0 exit=0 2026-10-02 09:39:09
+[wg0v2 cuda:0/GPU0] START s2_fixed020_s1 (K50) 2026-10-02 09:39:09
+[wg0v2 cuda:0/GPU0] END s2_fixed020_s1 exit=0 2026-10-02 10:45:05
+[wg0v2 cuda:0/GPU0] START s2_fixed040_s2 (K50) 2026-10-02 10:45:05
+[wg0v2 cuda:0/GPU0] END s2_fixed040_s2 exit=0 2026-10-02 11:46:55
+[wg0v2 cuda:0/GPU0] START s4loss01_driftgate_own_s0 (K50) 2026-10-02 11:46:55

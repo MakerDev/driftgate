@@ -1,0 +1,4 @@
+[t_mob] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=3 device=cuda:0
+  R  1 loss=0.884 acc=0.279 worst=0.186 elapsed=0.6m ETA=1m
+  R  3 loss=0.503 acc=0.350 worst=0.315 elapsed=1.7m ETA=0m
+  Saved: journal_expansion/runs/_r6_check/prestart/t_mob.json

@@ -1,0 +1,33 @@
+[s4loss03_driftgate_own_s0] scenario=S4_loss03 arm=driftgate_own mode=selfcal K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.854 acc=0.3277 off=1.000 active=50 elapsed=0.5m ETA=74m
+  R  5 loss=0.437 acc=0.5033 off=1.000 active=50 elapsed=2.4m ETA=70m
+  R 10 loss=0.381 acc=0.5713 off=0.999 active=50 elapsed=4.7m ETA=66m
+  R 15 loss=0.349 acc=0.6132 off=0.996 active=50 elapsed=7.0m ETA=63m
+  R 20 loss=0.320 acc=0.6357 off=0.990 active=50 elapsed=9.3m ETA=60m
+  R 25 loss=0.301 acc=0.6279 off=0.984 active=50 elapsed=11.5m ETA=57m
+  R 30 loss=0.249 acc=0.6141 off=0.921 active=50 elapsed=13.9m ETA=56m
+  R 35 loss=0.254 acc=0.5811 off=0.977 active=50 elapsed=16.4m ETA=54m
+  R 40 loss=0.256 acc=0.5913 off=0.975 active=50 elapsed=18.9m ETA=52m
+  R 45 loss=0.246 acc=0.5857 off=0.955 active=50 elapsed=21.1m ETA=49m
+  R 50 loss=0.242 acc=0.5919 off=0.960 active=50 elapsed=23.1m ETA=46m
+  R 55 loss=0.231 acc=0.5975 off=0.947 active=50 elapsed=25.5m ETA=44m
+  R 60 loss=0.222 acc=0.6132 off=0.957 active=50 elapsed=28.0m ETA=42m
+  R 65 loss=0.217 acc=0.6124 off=0.948 active=50 elapsed=30.2m ETA=40m
+  R 70 loss=0.214 acc=0.6035 off=0.947 active=50 elapsed=32.7m ETA=37m
+  R 75 loss=0.215 acc=0.6252 off=0.965 active=50 elapsed=35.3m ETA=35m
+  R 80 loss=0.196 acc=0.6038 off=0.919 active=50 elapsed=37.8m ETA=33m
+  R 85 loss=0.190 acc=0.6198 off=0.932 active=50 elapsed=40.3m ETA=31m
+  R 90 loss=0.189 acc=0.6261 off=0.944 active=50 elapsed=42.6m ETA=28m
+  R 95 loss=0.182 acc=0.6334 off=0.918 active=50 elapsed=44.7m ETA=26m
+  R100 loss=0.181 acc=0.6306 off=0.916 active=50 elapsed=46.8m ETA=23m
+  R105 loss=0.176 acc=0.6281 off=0.884 active=50 elapsed=49.2m ETA=21m
+  R110 loss=0.166 acc=0.6413 off=0.867 active=50 elapsed=51.7m ETA=19m
+  R115 loss=0.165 acc=0.6608 off=0.898 active=50 elapsed=54.2m ETA=16m
+  R120 loss=0.143 acc=0.6691 off=0.849 active=50 elapsed=56.6m ETA=14m
+  R125 loss=0.140 acc=0.6883 off=0.853 active=50 elapsed=59.2m ETA=12m
+  R130 loss=0.128 acc=0.7142 off=0.725 active=50 elapsed=61.4m ETA=9m
+  R135 loss=0.105 acc=0.7698 off=0.601 active=50 elapsed=63.8m ETA=7m
+  R140 loss=0.106 acc=0.7857 off=0.552 active=50 elapsed=66.1m ETA=5m
+  R145 loss=0.103 acc=0.7793 off=0.561 active=50 elapsed=68.0m ETA=2m
+  R150 loss=0.098 acc=0.7861 off=0.495 active=50 elapsed=70.2m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S4/s4loss03_driftgate_own_s0.json  integrated=0.6300

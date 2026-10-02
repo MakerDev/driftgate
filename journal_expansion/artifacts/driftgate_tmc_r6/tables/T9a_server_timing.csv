@@ -1,0 +1,10 @@
+# measured 2026-10-02 19:48:23 KST on honeynaps; load average before (0.283203125, 1.9375, 3.9619140625); GPUs before: 0, 0 %, 1 MiB | 1, 0 %, 1 MiB | 2, 0 %, 1 MiB | 3, 0 %, 1 MiB
+quantity,batch,median_ms,p95_ms,value,hardware,role
+A_feature_bytes,1,,,32768,"shape (1, 128, 8, 8) torch.float32",measured
+t_s_edge_gpu_b1,1,0.1085,0.1136,,NVIDIA GeForce RTX 4090 (CUDA 12.6),measured (edge)
+t_s_edge_gpu_b64,64,0.1118,0.1165,,NVIDIA GeForce RTX 4090 (CUDA 12.6),measured (edge)
+t_c_b1_host_cpu,1,0.8767,0.9383,,"AMD Ryzen Threadripper PRO 7965WX 24-Cores, 24 threads",host placeholder for the device
+t_s_b1_host_cpu,1,0.2350,0.2466,,"AMD Ryzen Threadripper PRO 7965WX 24-Cores, 24 threads",host placeholder for the device
+t_c_b64_host_cpu,64,8.3972,10.8475,,"AMD Ryzen Threadripper PRO 7965WX 24-Cores, 24 threads",host placeholder for the device
+t_s_b64_host_cpu,64,1.4239,1.5117,,"AMD Ryzen Threadripper PRO 7965WX 24-Cores, 24 threads",host placeholder for the device
+t_train_round_host_cpu,32,1344.9,,908 samples x 3 epochs,"AMD Ryzen Threadripper PRO 7965WX 24-Cores, 24 threads",host placeholder for the device

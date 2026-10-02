@@ -3,3 +3,9 @@
 [wg0v1 cuda:0/GPU0] START r0_b1_absonly_mob_s2 (R0) 2026-10-02 07:15:06
 [wg0v1 cuda:0/GPU0] END r0_b1_absonly_mob_s2 exit=0 2026-10-02 08:20:23
 [wg0v1 cuda:0/GPU0] START s1_driftgate_own_s2 (K50) 2026-10-02 08:20:23
+[wg0v1 cuda:0/GPU0] END s1_driftgate_own_s2 exit=0 2026-10-02 09:22:52
+[wg0v1 cuda:0/GPU0] START s2_driftgate_own_s1 (K50) 2026-10-02 09:22:52
+[wg0v1 cuda:0/GPU0] END s2_driftgate_own_s1 exit=0 2026-10-02 10:29:47
+[wg0v1 cuda:0/GPU0] START s2_fixed015_s2 (K50) 2026-10-02 10:29:47
+[wg0v1 cuda:0/GPU0] END s2_fixed015_s2 exit=0 2026-10-02 11:31:06
+[wg0v1 cuda:0/GPU0] START s3k200_fixed060_s0 (K200) 2026-10-02 11:31:06

@@ -1,0 +1,2 @@
+device,backend,t_c_b1_ms,t_c_b64_ms,t_s_b1_ms,t_s_b64_ms,t_train_round_s,source
+host AMD Ryzen Threadripper PRO 7965WX 24-Cores,cpu,0.8767,8.3972,0.2350,1.4239,1.3449,host placeholder

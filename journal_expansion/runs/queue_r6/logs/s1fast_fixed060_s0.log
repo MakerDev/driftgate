@@ -1,0 +1,33 @@
+[s1fast_fixed060_s0] scenario=S1fast arm=fixed060 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.853 acc=0.3364 off=0.999 active=50 elapsed=0.5m ETA=76m
+  R  5 loss=0.385 acc=0.5219 off=0.989 active=50 elapsed=2.3m ETA=66m
+  R 10 loss=0.328 acc=0.5895 off=0.979 active=50 elapsed=4.4m ETA=62m
+  R 15 loss=0.296 acc=0.6258 off=0.954 active=50 elapsed=6.6m ETA=59m
+  R 20 loss=0.269 acc=0.6452 off=0.922 active=50 elapsed=8.7m ETA=57m
+  R 25 loss=0.249 acc=0.6356 off=0.922 active=50 elapsed=11.0m ETA=55m
+  R 30 loss=0.231 acc=0.6113 off=0.921 active=50 elapsed=13.2m ETA=53m
+  R 35 loss=0.220 acc=0.5739 off=0.911 active=50 elapsed=15.4m ETA=51m
+  R 40 loss=0.208 acc=0.5714 off=0.891 active=50 elapsed=17.8m ETA=49m
+  R 45 loss=0.192 acc=0.5671 off=0.854 active=50 elapsed=20.1m ETA=47m
+  R 50 loss=0.188 acc=0.5882 off=0.857 active=50 elapsed=22.2m ETA=44m
+  R 55 loss=0.180 acc=0.5974 off=0.824 active=50 elapsed=24.6m ETA=42m
+  R 60 loss=0.167 acc=0.6015 off=0.808 active=50 elapsed=26.9m ETA=40m
+  R 65 loss=0.159 acc=0.5967 off=0.795 active=50 elapsed=29.2m ETA=38m
+  R 70 loss=0.155 acc=0.5918 off=0.762 active=50 elapsed=31.5m ETA=36m
+  R 75 loss=0.145 acc=0.5986 off=0.760 active=50 elapsed=33.8m ETA=34m
+  R 80 loss=0.140 acc=0.6124 off=0.766 active=50 elapsed=36.0m ETA=32m
+  R 85 loss=0.131 acc=0.6041 off=0.719 active=50 elapsed=38.3m ETA=29m
+  R 90 loss=0.129 acc=0.6071 off=0.717 active=50 elapsed=40.5m ETA=27m
+  R 95 loss=0.122 acc=0.6110 off=0.679 active=50 elapsed=42.8m ETA=25m
+  R100 loss=0.118 acc=0.6149 off=0.672 active=50 elapsed=45.0m ETA=23m
+  R105 loss=0.120 acc=0.6138 off=0.662 active=50 elapsed=47.3m ETA=20m
+  R110 loss=0.113 acc=0.6484 off=0.695 active=50 elapsed=49.5m ETA=18m
+  R115 loss=0.109 acc=0.6120 off=0.615 active=50 elapsed=51.9m ETA=16m
+  R120 loss=0.106 acc=0.6641 off=0.660 active=50 elapsed=54.2m ETA=14m
+  R125 loss=0.096 acc=0.7077 off=0.650 active=50 elapsed=56.5m ETA=11m
+  R130 loss=0.106 acc=0.7239 off=0.553 active=50 elapsed=58.7m ETA=9m
+  R135 loss=0.088 acc=0.7655 off=0.552 active=50 elapsed=60.9m ETA=7m
+  R140 loss=0.094 acc=0.7874 off=0.517 active=50 elapsed=63.1m ETA=5m
+  R145 loss=0.082 acc=0.8225 off=0.481 active=50 elapsed=65.3m ETA=2m
+  R150 loss=0.081 acc=0.8123 off=0.484 active=50 elapsed=67.1m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_S1fast/s1fast_fixed060_s0.json  integrated=0.6277

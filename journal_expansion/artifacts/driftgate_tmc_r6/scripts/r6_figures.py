@@ -204,7 +204,8 @@ def fig2():
         for z in range(L):
             axes[0, 1].plot(x, rho[:, z], color=CELL_COLORS[z], lw=1.2,
                             label=f"cell {z} ({meta['residents_per_cell'][z]})")
-        axes[0, 1].legend(loc="upper right", ncol=2, fontsize=6.5, title="cell (residents)", title_fontsize=6.5)
+        axes[0, 1].legend(loc="upper left", bbox_to_anchor=(1.01, 1.0), fontsize=6.5,
+                          title="cell (residents)\nsame colours below", title_fontsize=6.5)
         for row, (arm, nm) in ((1, (T.DG, "DriftGate")), (2, (T.ENT, "entropy controller"))):
             ax = axes[row, 1]
             if runs2[arm]:
@@ -223,7 +224,8 @@ def fig2():
         clock_axis(a)
     from matplotlib.lines import Line2D
     fig.legend([Line2D([], [], color=C_DG), Line2D([], [], color=C_ENT), Line2D([], [], color=MUTED, ls="--", lw=0.9)],
-               ["DriftGate", "entropy controller", "fixed lambda (reference)"], loc="outside lower center", ncol=3)
+               ["DriftGate (left column)", "entropy controller (left column)", "fixed lambda (reference)"],
+               loc="outside lower center", ncol=3)
     save(fig, "fig2_lambda_trajectories")
     return info
 

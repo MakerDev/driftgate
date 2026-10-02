@@ -25,6 +25,10 @@ CAPS = {"K500": int(os.environ.get("R6_MAX_K500", "2")), "K200": int(os.environ.
         "R0H": int(os.environ.get("R6_MAX_R0H", "1"))}   # R0H = Round-5 Tiny-ImageNet / ResNet-18 re-runs (R0)
 # 2026-10-01: three K=500 runs on one 24 GB GPU ran out of memory (~7.9 GB each) -> at most 2 per GPU.
 MAX_JOBS = int(os.environ.get("R6_MAX_JOBS_PER_GPU", "4"))   # all jobs on this GPU, whoever started them
+# 2026-10-02: two K=200 runs ran out of memory next to two K=500 runs -> admit a job only if the GPU memory
+# of the live jobs plus the new one stays within R6_GPU_BUDGET_GB (nvidia-smi per-process memory, measured).
+COST_GB = {"K500": 9.0, "K200": 4.4, "K50": 2.1, "R0": 2.2, "R0H": 4.5}
+BUDGET_GB = float(os.environ.get("R6_GPU_BUDGET_GB", "23.0"))
 LOCK, LOGDIR, RUND = f"{QDIR}/queue.lock", f"{QDIR}/logs", f"{QDIR}/running_gpu{GPU}"
 ENV = dict(os.environ, CUDA_DEVICE_ORDER="PCI_BUS_ID", CUDA_VISIBLE_DEVICES=GPU,
            JX_THREADS=os.environ.get("JX_THREADS", "2"),
@@ -80,9 +84,12 @@ def pop():
             running = running_on_gpu()
             if len(running) >= MAX_JOBS:
                 return None, None, None
+            used = sum(COST_GB.get(c, 2.1) for c in running)
             for i, line in enumerate(lines):
                 cls, cmd = line.split(" ", 1)
                 if cls in CAPS and running.count(cls) >= CAPS[cls]:
+                    continue
+                if used + COST_GB.get(cls, 2.1) > BUDGET_GB:
                     continue
                 with open(path, "w") as f:
                     f.write("".join(l + "\n" for l in lines[:i] + lines[i + 1:]))

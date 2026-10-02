@@ -108,6 +108,7 @@ while not os.path.exists(f"{QDIR}/STOP"):
         time.sleep(60)
         continue
     log(f"START {tag} ({cls})")
+    t_start = time.time()
     with open(f"{LOGDIR}/{tag}.log", "a") as out:
         rc = subprocess.call(cmd.replace("{DEV}", "cuda:0"), shell=True, stdout=out,
                              stderr=subprocess.STDOUT, env=ENV)
@@ -116,4 +117,8 @@ while not os.path.exists(f"{QDIR}/STOP"):
     except FileNotFoundError:
         pass
     log(f"END {tag} exit={rc}")
+    if rc != 0 and time.time() - t_start < 300:
+        # 2026-10-02: one worker failed five K=200 jobs in two minutes (OOM at start-up) -> back off
+        log("fast failure, pausing 10 min before the next job")
+        time.sleep(600)
 log("STOP file found, exiting")

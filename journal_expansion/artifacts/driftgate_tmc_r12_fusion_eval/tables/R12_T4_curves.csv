@@ -1,0 +1,57 @@
+scenario,training,curve,window,acc_at_server_use_0.3,acc_at_server_use_0.5,acc_at_server_use_0.7,acc_at_server_use_0.9,acc_at_server_use_1.0
+S1,fixed 0.4,E,late,63.95,64.31,64.46,64.67,64.73
+S1,fixed 0.4,E,full,63.18,62.87,62.71,62.85,62.91
+S1,fixed 0.4,SF,late,65.15,66.50,67.28,67.60,67.64
+S1,fixed 0.4,SF,full,66.00,67.09,67.79,68.12,68.16
+S1,DriftGate,E,late,63.03,63.50,63.84,64.01,64.02
+S1,DriftGate,E,full,62.91,62.51,62.33,62.35,62.35
+S1,DriftGate,SF,late,64.45,65.97,67.04,67.50,67.54
+S1,DriftGate,SF,full,65.62,66.75,67.61,68.03,68.07
+Schedule A,fixed 0.4,E,late,67.44,67.65,67.81,67.96,67.99
+Schedule A,fixed 0.4,E,full,65.54,65.12,65.05,65.17,65.20
+Schedule A,fixed 0.4,SF,late,68.65,69.70,70.32,70.56,70.58
+Schedule A,fixed 0.4,SF,full,70.00,70.90,71.49,71.75,71.78
+Schedule A,DriftGate,E,late,68.65,69.00,68.99,68.62,68.48
+Schedule A,DriftGate,E,full,67.40,66.73,66.30,65.86,65.72
+Schedule A,DriftGate,SF,late,69.51,70.70,71.48,71.68,71.67
+Schedule A,DriftGate,SF,full,70.97,71.83,72.50,72.70,72.69
+client mobility,fixed 0.4,E,late,62.29,61.57,61.42,61.90,62.03
+client mobility,fixed 0.4,E,full,60.88,58.93,58.18,58.48,58.61
+client mobility,fixed 0.4,SF,late,65.75,66.88,67.59,67.94,67.98
+client mobility,fixed 0.4,SF,full,68.56,69.44,70.11,70.47,70.51
+client mobility,DriftGate,E,late,65.10,64.65,63.62,62.61,62.48
+client mobility,DriftGate,E,full,63.11,61.55,60.29,59.26,59.12
+client mobility,DriftGate,SF,late,66.21,67.30,67.78,67.85,67.85
+client mobility,DriftGate,SF,full,68.94,69.85,70.35,70.46,70.46
+K=500,fixed 0.4,E,late,65.93,67.74,68.80,69.34,69.45
+K=500,fixed 0.4,E,full,64.83,65.77,66.48,66.96,67.07
+K=500,fixed 0.4,SF,late,66.19,68.37,69.64,70.16,70.22
+K=500,fixed 0.4,SF,full,66.86,68.71,69.92,70.46,70.53
+K=200,fixed 0.4,E,late,64.49,66.01,66.97,67.46,67.55
+K=200,fixed 0.4,E,full,63.49,64.16,64.77,65.20,65.30
+K=200,fixed 0.4,SF,late,65.06,67.07,68.27,68.74,68.79
+K=200,fixed 0.4,SF,full,65.86,67.54,68.68,69.17,69.23
+ResNet-18,fixed 0.4,E,late,61.51,59.01,57.49,56.97,56.92
+ResNet-18,fixed 0.4,E,full,62.18,59.37,57.66,57.08,57.04
+ResNet-18,fixed 0.4,SF,late,63.14,62.57,62.45,62.44,62.44
+ResNet-18,fixed 0.4,SF,full,64.96,64.23,64.05,64.03,64.02
+ResNet-18,DriftGate,E,late,61.95,59.95,58.47,58.08,57.95
+ResNet-18,DriftGate,E,full,61.85,60.03,58.44,57.99,57.87
+ResNet-18,DriftGate,SF,late,63.42,63.01,62.77,62.71,62.67
+ResNet-18,DriftGate,SF,full,64.97,64.65,64.38,64.31,64.28
+CIFAR-100 gradual,fixed 0.4,E,late,36.83,37.77,38.72,39.66,39.95
+CIFAR-100 gradual,fixed 0.4,E,full,33.57,33.98,34.40,34.81,35.00
+CIFAR-100 gradual,fixed 0.4,SF,late,38.13,39.94,41.74,43.55,44.02
+CIFAR-100 gradual,fixed 0.4,SF,full,35.04,36.44,37.83,39.22,39.65
+S2,fixed 0.4,E,late,68.83,68.27,68.03,68.03,68.06
+S2,fixed 0.4,E,full,66.39,65.67,65.24,65.21,65.24
+S2,fixed 0.4,SF,late,70.59,71.23,71.66,71.83,71.85
+S2,fixed 0.4,SF,full,69.76,70.40,70.81,71.01,71.03
+S1-fast,fixed 0.4,E,late,64.45,64.85,65.02,65.23,65.29
+S1-fast,fixed 0.4,E,full,63.70,63.36,63.19,63.32,63.38
+S1-fast,fixed 0.4,SF,late,65.64,67.07,67.88,68.22,68.27
+S1-fast,fixed 0.4,SF,full,66.64,67.79,68.53,68.89,68.93
+participation 0.5,fixed 0.4,E,late,60.76,59.81,58.76,58.26,58.24
+participation 0.5,fixed 0.4,E,full,60.08,58.47,57.11,56.47,56.44
+participation 0.5,fixed 0.4,SF,late,62.63,63.36,63.80,63.99,64.00
+participation 0.5,fixed 0.4,SF,full,63.37,63.75,64.04,64.21,64.22

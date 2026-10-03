@@ -1,0 +1,41 @@
+{
+ "window": "late (evaluation rounds from training round 30), seed means",
+ "decision_1_fusion_central": {
+  "answer": "yes",
+  "S1_F_minus_B0_pp": 2.9668052897649844,
+  "others_F_minus_B0_pp": {
+   "S2": 3.8573025310859377,
+   "S1-fast": 3.0300956222134356,
+   "K=200": 1.2890145993073587,
+   "K=500": 0.8142704467420936,
+   "participation 0.5": 5.756207862231899
+  },
+  "runs": "fixed lambda 0.4"
+ },
+ "decision_2_keep_lambda_adjustment": {
+  "answer": "no",
+  "with_F_DriftGate_minus_fixed_pp": {
+   "schedule_A": 1.0904335500289242,
+   "client_mobility": -0.13431620505442998,
+   "S1": -0.09501184253655204
+  }
+ },
+ "F_minus_B0_late_pp": {
+  "S1 / fixed 0.4": 2.9668052897649844,
+  "S1 / DriftGate": 3.5709470956831746,
+  "Schedule A / fixed 0.4": 2.6236584324431766,
+  "Schedule A / DriftGate": 3.070073814892227,
+  "client mobility / fixed 0.4": 6.013397602657278,
+  "client mobility / DriftGate": 5.28611829241441,
+  "K=500 / fixed 0.4": 0.8142704467420936,
+  "K=200 / fixed 0.4": 1.2890145993073587,
+  "ResNet-18 / fixed 0.4": 3.191849742904118,
+  "ResNet-18 / DriftGate": 0.40335855206957705,
+  "CIFAR-100 gradual / fixed 0.4": 4.07322551720985,
+  "S2 / fixed 0.4": 3.8573025310859377,
+  "S1-fast / fixed 0.4": 3.0300956222134356,
+  "participation 0.5 / fixed 0.4": 5.756207862231899
+ },
+ "runs_analysed": 50,
+ "runs_planned": 50
+}

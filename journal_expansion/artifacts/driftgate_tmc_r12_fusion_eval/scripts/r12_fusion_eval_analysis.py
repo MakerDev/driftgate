@@ -100,6 +100,17 @@ def analyse_run(job):
         cells_e = z["eval_cells"]                         # [E, clients, 2] in client order
     e_i = q["req_eval_index"].astype(np.int64)
     k_i = q["req_client"].astype(np.int64)
+    ids_rebuilt = None
+    if r6:
+        # The Round 6 runner stores req_client as uint8, so client ids >= 256 (K = 500) wrap. Requests are stored per
+        # evaluation round in client order with eval_n_total[e, k] requests each, so the ids are rebuilt from that order
+        # (checked: the rebuilt id modulo 256 equals the stored id, and the round index matches).
+        nt = z["eval_n_total"].astype(np.int64)
+        k_reb = np.concatenate([np.repeat(np.arange(nt.shape[1]), nt[e]) for e in range(nt.shape[0])])
+        e_reb = np.repeat(np.arange(nt.shape[0]), nt.sum(1))
+        assert len(k_reb) == len(k_i) and np.array_equal(k_reb % 256, k_i % 256) and np.array_equal(e_reb, e_i), name
+        ids_rebuilt = bool(not np.array_equal(k_reb, k_i))
+        k_i = k_reb
     y = q["req_label"].astype(np.int64)
     kind = q["req_kind"].astype(np.int64)
     C = q["pc"].shape[1]
@@ -203,6 +214,7 @@ def analyse_run(job):
         curves[cname] = out
     tm = h.get("r12_timing_sec", {})
     return dict(job=job, res=res, curves=curves, has_home=has_home, mk_consistent=mk_consistent, mk_prov=mk_prov,
+                ids_rebuilt=ids_rebuilt,
                 sha=sha256(src), bytes=src.stat().st_size, run_id=h["config"]["run_id"], n_req=len(y), C=C, K=K,
                 er=er, timing=tm, total_min=h["total_time_sec"] / 60,
                 json_integrated=float(np.mean([e_["acc_total"] for e_ in h["eval"]])),
@@ -261,13 +273,13 @@ def main():
         flag = " (>0.3 pp)" if abs(b0 - base_int) * 100 > 0.3 else ""
         rows.append([j["name"], j["scenario"], j["training"], j["seed"], a["run_id"], j["base"], f"{base_int * 100:.4f}",
                      f"{b0 * 100:.4f}", f"{(b0 - base_int) * 100:+.4f}{flag}", f"{a['json_integrated'] * 100:.4f}",
-                     a["mk_consistent"], a["mk_prov"], a["mismatch"], a["n_req"], a["sha"], a["bytes"],
+                     a["mk_consistent"], a["mk_prov"], a["mismatch"], a["ids_rebuilt"], a["n_req"], a["sha"], a["bytes"],
                      f"{a['timing'].get('train', float('nan')) / 60:.1f}", f"{a['timing'].get('eval', float('nan')) / 60:.2f}",
                      f"{a['timing'].get('record', 0.0) / 60:.2f}", f"{a['total_min']:.1f}"])
     wcsv("R12_T0_checks_manifest.csv", ["run", "scenario", "training", "seed", "run_id", "base_run", "base_acc_full_pct",
                                         "B0_full_pct", "B0_minus_base_pp", "this_run_json_integrated_pct",
                                         "Mk_consistent_all_rounds", "Mk_equals_provenance", "record_vs_evaluator_mismatch",
-                                        "requests", "evalprobs_sha256", "evalprobs_bytes", "train_min", "eval_min",
+                                        "client_ids_rebuilt_from_order(uint8_wrap)", "requests", "evalprobs_sha256", "evalprobs_bytes", "train_min", "eval_min",
                                         "record_min", "total_min"], rows)
     # ---------- table 1 (+ per-seed csv)
     rows, rows_s = [], []
@@ -354,7 +366,7 @@ def figures(groups, order):
     mean = lambda L, rl, key: float(np.mean([a["res"][rl][key] for a in L])) * 100
     S1 = groups.get(("S1", "fixed 0.4"))
     if S1:
-        fig, ax = plt.subplots(figsize=(3.6, 3.2), layout="constrained")
+        fig, ax = plt.subplots(figsize=(5.4, 3.2), layout="constrained")
         lab = {"B0": "entropy routing (tau 0.8)", "B1": "client exit only", "B2": "server exit only",
                "B3": "mean of both exits", "F": "fusion F", "kind oracle": "request-kind oracle"}
         col = {"B0": INK, "B1": MUTED, "B2": INK2, "B3": GREEN, "F": BLUE, "kind oracle": PURPLE}
@@ -364,7 +376,7 @@ def figures(groups, order):
                     color=col[rl], label=lab[rl])
         ax.set_xlabel("accuracy of clients at home (%)")
         ax.set_ylabel("accuracy of clients away (%)")
-        ax.legend(fontsize=6.5, loc="lower right")
+        ax.legend(fontsize=6.5, loc="center left", bbox_to_anchor=(1.02, 0.5))
         fig.savefig(FIG / "R12_fig1_S1_home_away.pdf")
         fig.savefig(FIG / "R12_fig1_S1_home_away.png", dpi=300)
         plt.close(fig)
@@ -383,14 +395,15 @@ def figures(groups, order):
         fig.savefig(FIG / "R12_fig2_S1_curves.png", dpi=300)
         plt.close(fig)
     ks = [k for k in order]
-    fig, ax = plt.subplots(figsize=(6.6, 2.8), layout="constrained")
+    fig, ax = plt.subplots(figsize=(7.2, 3.4), layout="constrained")
     x = np.arange(len(ks))
     for off, w_, colr, lab_ in ((-0.2, "late", BLUE, "rounds from 30 on"), (0.2, "full", ORANGE, "all rounds")):
         vals = [mean(groups[k], "F", w_) - mean(groups[k], "B0", w_) for k in ks]
         ax.bar(x + off, vals, width=0.38, color=colr, label=lab_, zorder=2)
     ax.axhline(0, color=INK2, lw=0.8)
     ax.set_xticks(x)
-    ax.set_xticklabels([f"{k[0]}\n{'DG' if k[1] == 'DriftGate' else 'fixed 0.4'}" for k in ks], fontsize=6.5)
+    ax.set_xticklabels([f"{k[0]} ({'DriftGate' if k[1] == 'DriftGate' else 'fixed 0.4'})" for k in ks], fontsize=6.5,
+                       rotation=35, ha="right", rotation_mode="anchor")
     ax.set_ylabel("F - entropy routing (pp)")
     ax.legend(fontsize=7, loc="upper right")
     fig.savefig(FIG / "R12_fig3_F_minus_B0.pdf")

@@ -16,3 +16,6 @@ journal_expansion/runs/queue*/STOP
 journal_expansion/runs/queue*/running_gpu*/
 journal_expansion/runs/phaseT8_check/*_requests.npz
 journal_expansion/runs/phaseT10_prior/*_evalprobs.npz
+# Round 12 per-request records (~13 GB, kept on the server; sha256 in artifacts/driftgate_tmc_r12_fusion_eval) and saved models
+journal_expansion/runs/phaseT12_fusion/*_evalprobs.npz
+journal_expansion/runs/phaseT12_fusion/*_final_models.pt

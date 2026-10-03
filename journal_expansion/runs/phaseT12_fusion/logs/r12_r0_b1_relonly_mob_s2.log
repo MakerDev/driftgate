@@ -1,0 +1,17 @@
+
+=== attempt 1 on GPU 2 at 2026-10-03 20:34:34
+[r12_r0_b1_relonly_mob_s2] method=splitomcplus controller=selfcal signal=tv_dist schedule=abrupt rounds=120 device=cuda:0
+  R  1 loss=0.938 acc=0.400 worst=0.205 elapsed=0.9m ETA=107m
+  R 10 loss=0.420 acc=0.551 worst=0.517 elapsed=6.2m ETA=69m
+  R 20 loss=0.355 acc=0.610 worst=0.582 elapsed=12.3m ETA=62m
+  R 30 loss=0.288 acc=0.664 worst=0.631 elapsed=18.7m ETA=56m
+  R 40 loss=0.251 acc=0.676 worst=0.616 elapsed=25.1m ETA=50m
+  R 50 loss=0.216 acc=0.713 worst=0.605 elapsed=31.9m ETA=45m
+  R 60 loss=0.192 acc=0.737 worst=0.616 elapsed=38.3m ETA=38m
+  R 70 loss=0.219 acc=0.535 worst=0.524 elapsed=45.4m ETA=32m
+  R 80 loss=0.209 acc=0.544 worst=0.472 elapsed=52.6m ETA=26m
+  R 90 loss=0.193 acc=0.552 worst=0.505 elapsed=59.9m ETA=20m
+  R100 loss=0.181 acc=0.552 worst=0.549 elapsed=66.8m ETA=13m
+  R110 loss=0.169 acc=0.568 worst=0.558 elapsed=74.1m ETA=7m
+  R120 loss=0.157 acc=0.585 worst=0.571 elapsed=81.3m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT12_fusion/r12_r0_b1_relonly_mob_s2.json

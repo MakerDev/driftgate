@@ -1,0 +1,3 @@
+classes,per_request_single_call_us,per_request_batched_ns
+10,3.22,39.3
+100,3.33,144.1

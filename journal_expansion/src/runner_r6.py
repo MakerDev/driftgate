@@ -652,7 +652,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             ns = [m["n"] for m in PRB]
             np.savez_compressed(out / f"{run_name}_evalprobs.npz", eval_rounds=np.array(E_ROUNDS),
                                 req_eval_index=np.repeat([m["e"] for m in PRB], ns).astype(np.uint8),
-                                req_client=np.repeat([m["k"] for m in PRB], ns).astype(np.uint8),
+                                req_client=np.repeat([m["k"] for m in PRB], ns).astype(np.int16),   # uint8 wrapped K > 255
                                 req_home=np.repeat([m["home"] for m in PRB], ns).astype(bool),
                                 req_label=np.concatenate([m["label"] for m in PRB]).astype(np.uint8),
                                 req_kind=np.concatenate([m["kind"] for m in PRB]).astype(np.int8),
@@ -671,7 +671,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             np.savez_compressed(out / f"{run_name}_requests.npz", eval_rounds=np.array(E_ROUNDS),
                                 block_lambda=np.array(blk_lam, np.float64), installed_block=np.int64(inst_block),
                                 req_eval_index=np.repeat([m["e"] for m in REQ["meta"]], ns).astype(np.uint8),
-                                req_client=np.repeat([m["k"] for m in REQ["meta"]], ns).astype(np.uint8),
+                                req_client=np.repeat([m["k"] for m in REQ["meta"]], ns).astype(np.int16),   # uint8 wrapped K > 255
                                 req_home=np.repeat([m["home"] for m in REQ["meta"]], ns).astype(bool),
                                 req_label=np.concatenate([m["label"] for m in REQ["meta"]]).astype(np.uint8),
                                 req_kind=np.concatenate([m["kind"] for m in REQ["meta"]]).astype(np.int8),

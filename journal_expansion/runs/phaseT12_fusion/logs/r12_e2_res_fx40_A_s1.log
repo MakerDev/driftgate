@@ -1,0 +1,20 @@
+
+=== attempt 1 on GPU 1 at 2026-10-03 21:58:01
+[r12_e2_res_fx40_A_s1] method=splitomcplus controller=fixed signal=delta_hard schedule=A rounds=150 device=cuda:0
+  R  1 loss=0.392 acc=0.475 worst=0.339 elapsed=1.4m ETA=213m
+  R 10 loss=0.146 acc=0.601 worst=0.516 elapsed=12.5m ETA=175m
+  R 20 loss=0.105 acc=0.622 worst=0.579 elapsed=27.7m ETA=180m
+  R 30 loss=0.086 acc=0.535 worst=0.428 elapsed=43.7m ETA=175m
+  R 40 loss=0.070 acc=0.492 worst=0.402 elapsed=59.6m ETA=164m
+  R 50 loss=0.075 acc=0.470 worst=0.351 elapsed=75.4m ETA=151m
+  R 60 loss=0.045 acc=0.543 worst=0.433 elapsed=91.8m ETA=138m
+  R 70 loss=0.053 acc=0.435 worst=0.330 elapsed=108.3m ETA=124m
+  R 80 loss=0.063 acc=0.442 worst=0.363 elapsed=124.4m ETA=109m
+  R 90 loss=0.054 acc=0.425 worst=0.408 elapsed=140.6m ETA=94m
+  R100 loss=0.034 acc=0.521 worst=0.461 elapsed=155.1m ETA=78m
+  R110 loss=0.031 acc=0.519 worst=0.443 elapsed=167.6m ETA=61m
+  R120 loss=0.025 acc=0.567 worst=0.478 elapsed=179.9m ETA=45m
+  R130 loss=0.036 acc=0.812 worst=0.696 elapsed=192.5m ETA=30m
+  R140 loss=0.040 acc=0.723 worst=0.521 elapsed=203.6m ETA=15m
+  R150 loss=0.040 acc=0.785 worst=0.680 elapsed=212.9m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT12_fusion/r12_e2_res_fx40_A_s1.json

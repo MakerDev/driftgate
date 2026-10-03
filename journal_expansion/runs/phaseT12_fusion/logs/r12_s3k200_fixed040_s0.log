@@ -1,0 +1,35 @@
+
+=== attempt 1 on GPU 3 at 2026-10-03 20:42:50
+[r12_s3k200_fixed040_s0] scenario=S3_K200 arm=fixed040 mode=fixed K=200 L=20 rounds=150 delay=0 device=cuda:0
+  R  1 loss=0.884 acc=0.3782 off=1.000 active=200 elapsed=2.7m ETA=405m
+  R  5 loss=0.464 acc=0.5099 off=1.000 active=200 elapsed=11.0m ETA=320m
+  R 10 loss=0.412 acc=0.5668 off=0.999 active=200 elapsed=21.5m ETA=300m
+  R 15 loss=0.379 acc=0.6204 off=0.997 active=200 elapsed=32.6m ETA=294m
+  R 20 loss=0.353 acc=0.6482 off=0.996 active=200 elapsed=43.3m ETA=282m
+  R 25 loss=0.333 acc=0.6538 off=0.996 active=200 elapsed=54.4m ETA=272m
+  R 30 loss=0.319 acc=0.6311 off=0.997 active=200 elapsed=65.0m ETA=260m
+  R 35 loss=0.305 acc=0.6048 off=0.995 active=200 elapsed=75.8m ETA=249m
+  R 40 loss=0.289 acc=0.6178 off=0.997 active=200 elapsed=87.2m ETA=240m
+  R 45 loss=0.274 acc=0.6161 off=0.991 active=200 elapsed=98.3m ETA=229m
+  R 50 loss=0.264 acc=0.6192 off=0.989 active=200 elapsed=109.7m ETA=219m
+  R 55 loss=0.253 acc=0.6205 off=0.981 active=200 elapsed=120.6m ETA=208m
+  R 60 loss=0.242 acc=0.6343 off=0.982 active=200 elapsed=130.2m ETA=195m
+  R 65 loss=0.232 acc=0.6464 off=0.976 active=200 elapsed=139.7m ETA=183m
+  R 70 loss=0.223 acc=0.6532 off=0.974 active=200 elapsed=149.3m ETA=171m
+  R 75 loss=0.216 acc=0.6585 off=0.960 active=200 elapsed=158.8m ETA=159m
+  R 80 loss=0.209 acc=0.6579 off=0.958 active=200 elapsed=168.3m ETA=147m
+  R 85 loss=0.203 acc=0.6674 off=0.959 active=200 elapsed=177.8m ETA=136m
+  R 90 loss=0.196 acc=0.6657 off=0.949 active=200 elapsed=187.4m ETA=125m
+  R 95 loss=0.191 acc=0.6771 off=0.952 active=200 elapsed=196.8m ETA=114m
+  R100 loss=0.185 acc=0.6671 off=0.932 active=200 elapsed=206.4m ETA=103m
+  R105 loss=0.183 acc=0.6718 off=0.923 active=200 elapsed=215.9m ETA=93m
+  R110 loss=0.176 acc=0.6817 off=0.926 active=200 elapsed=225.4m ETA=82m
+  R115 loss=0.172 acc=0.6935 off=0.921 active=200 elapsed=235.2m ETA=72m
+  R120 loss=0.165 acc=0.7068 off=0.913 active=200 elapsed=243.0m ETA=61m
+  R125 loss=0.163 acc=0.7142 off=0.887 active=200 elapsed=250.2m ETA=50m
+  R130 loss=0.158 acc=0.7543 off=0.874 active=200 elapsed=257.6m ETA=40m
+  R135 loss=0.150 acc=0.7910 off=0.840 active=200 elapsed=264.9m ETA=29m
+  R140 loss=0.145 acc=0.8114 off=0.828 active=200 elapsed=272.2m ETA=19m
+  R145 loss=0.142 acc=0.8133 off=0.786 active=200 elapsed=279.0m ETA=10m
+  R150 loss=0.138 acc=0.8195 off=0.776 active=200 elapsed=286.6m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT12_fusion/r12_s3k200_fixed040_s0.json  integrated=0.6604

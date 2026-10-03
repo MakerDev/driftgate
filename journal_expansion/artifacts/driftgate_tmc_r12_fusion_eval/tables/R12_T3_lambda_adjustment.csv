@@ -1,0 +1,9 @@
+scenario,rule,DriftGate_minus_fixed_late_pp,DriftGate_minus_fixed_full_pp,per_seed_late_pp
+Schedule A,B0,+0.64,+0.64,+0.60 +0.89 +0.70 +0.69 +0.35
+Schedule A,F,+1.09,+0.91,+1.39 +0.69 +0.20 +1.13 +2.04
+client mobility,B0,+0.59,+0.62,+0.64 +0.56 +0.57
+client mobility,F,-0.13,-0.05,+0.26 -0.42 -0.25
+ResNet-18,B0,+3.03,+2.53,+0.84 +4.35 +3.89
+ResNet-18,F,+0.24,+0.26,-0.96 +0.53 +1.14
+S1,B0,-0.70,-0.56,-0.42 -0.83 -0.34 -0.99 -0.92
+S1,F,-0.10,-0.09,-0.96 +0.30 -0.89 -0.32 +1.39

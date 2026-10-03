@@ -393,6 +393,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         if "cells" not in R:
             R["cells"] = np.transpose(member[:, :total_rounds, :], (1, 0, 2)).copy()
     PRB = [] if record_eval_probs else None
+    TM = dict(train=0.0, eval=0.0) if (record_eval_probs or record_train_label_hist) else None   # Round 12 timing
     EV = {k: np.zeros((E, K), np.int32) for k in
           ("n_total", "correct", "n_off", "n_main", "c_main", "off_main", "n_nonmain",
            "c_nonmain", "off_nonmain", "n_oop", "c_oop", "n_oor", "c_oor")}
@@ -522,8 +523,11 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                         R["train_hist_cell"][t, z] += HK[c.cid]
             R["train_hist_all"][t] = sum(HK[k] for k in range(K) if active[k]) if active.any() else 0
         capture = {} if (EVI is not None and r in E_ROUNDS) else None
+        _tt0 = time.perf_counter()
         mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
                                                  client_lams=client_lams, capture=capture)
+        if TM is not None:
+            TM["train"] += time.perf_counter() - _tt0
         if mode == "apfl":
             R["apfl_lam"][t] = [apfl["lams"][k] for k in range(K)]
             cur_lam = {z: float(np.mean([apfl["lams"][c.cid] for c in ES[z].clients]))
@@ -556,6 +560,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         hist["probe_fallback"].append(fb)
         # 5. evaluation
         if r in E_ROUNDS:
+            _te0 = time.perf_counter()
             e = E_ROUNDS.index(r)
             efb = {"": 0, "oor_empty": 0, "oop_empty": 0, "both_empty": 0}
             for c in clients:
@@ -612,6 +617,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                                    for i, li in enumerate(eval_infer_lambdas)}
             if eval_mainaware_route:
                 ev["acc_mainaware"] = float(np.mean(EV["ma_correct"][e] / np.maximum(EV["n_total"][e], 1)))
+            if TM is not None:
+                TM["eval"] += time.perf_counter() - _te0
             hist["eval"].append(ev)
             if verbose:
                 el = time.time() - t_start
@@ -620,6 +627,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                       flush=True)
 
     hist["total_time_sec"] = time.time() - t_start
+    if TM is not None:   # Round 12: training calls and evaluation (incl. the per-request recording) in seconds
+        hist["r12_timing_sec"] = dict(TM)
     overlap = len(probe_used & eval_used)
     hist.update(pool_manifest=pool_manifest, probe_eval_overlap=overlap,
                 probe_used_count=len(probe_used), eval_used_count=len(eval_used),

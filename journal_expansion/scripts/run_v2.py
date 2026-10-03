@@ -124,6 +124,12 @@ def main():
     ap.add_argument("--controller_pool_frac", type=float, default=0.2)
     ap.add_argument("--abs_only", action="store_true",
                     help="R4/B1: lambda=lambda_abs, Lambda=Lambda_abs (absolute view only)")
+    ap.add_argument("--record_eval_probs", action="store_true",
+                    help="Round 12: per evaluated request both exits' probabilities etc. -> {run}_evalprobs.npz")
+    ap.add_argument("--record_train_label_hist", action="store_true",
+                    help="Round 12: per round, label counts trained by each cell's server block and by all clients")
+    ap.add_argument("--record_device_signals", action="store_true",
+                    help="Round 12 (this code path): the clients' cells at every evaluation round")
     ap.add_argument("--no_neighbor_avg", action="store_true",
                     help="R6 P0: q from the edge's own score only (no one-step neighbour average)")
     ap.add_argument("--apfl_eta", type=float, default=None,
@@ -209,7 +215,9 @@ def main():
                       if args.mobility else None),
         role_mode=args.role_mode, fixed_Lambda=args.fixed_Lambda,
         disjoint_pools=args.disjoint_pools,
-        controller_pool_frac=args.controller_pool_frac)
+        controller_pool_frac=args.controller_pool_frac,
+        record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist,
+        record_device_signals=args.record_device_signals)
 
 
 if __name__ == "__main__":

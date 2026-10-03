@@ -62,6 +62,31 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 
+def record_eval_requests_r5(clients, X, Y, test_idx, main_classes, oop_c, oor_c, eth, seed, r, e, c2es_now):
+    """Round 12 (--record_eval_probs): per evaluated request, both exits' softmax probabilities (float16), the
+    client-exit prediction and entropy, the server-exit prediction, label, kind (0 Main, 1 OOP, 2 OOR), client,
+    evaluation index, cells, and a random arrival order per client and round from its own RNG. Uses the cached test
+    tensor X (no DataLoader, so no global RNG is consumed) and the same computation as the evaluator; returns the
+    records and the per-client correct counts for the consistency check."""
+    from src.runner_r6 import eval_client
+    out = []
+    for c in clients:
+        idx = list(test_idx.get(c.cid, []))
+        if len(idx) == 0:
+            continue
+        rec = {}
+        res = eval_client(c, X, Y, idx, main_classes[c.cid], oop_c[c.cid], oor_c[c.cid], eth=eth, record=rec,
+                          record_probs=True)
+        lab = Y[torch.as_tensor(np.asarray(idx), device=Y.device)].cpu().numpy()
+        kind = np.where(np.isin(lab, sorted(main_classes[c.cid])), 0,
+                        np.where(np.isin(lab, sorted(oop_c[c.cid])), 1, np.where(np.isin(lab, sorted(oor_c[c.cid])), 2, 3)))
+        arr = np.random.default_rng([int(seed), 10, int(r), int(c.cid)]).permutation(len(idx))
+        cells = list(c2es_now[c.cid])[:2] + [-1] * (2 - len(list(c2es_now[c.cid])[:2]))
+        out.append(dict(e=e, k=c.cid, n=len(idx), label=lab, kind=kind, arrival=arr, cells=cells,
+                        correct=res["correct"], **{x: rec[x] for x in ("cp", "ent", "sp", "pc", "ps")}))
+    return out
+
+
 def _rho_key(rho):
     if isinstance(rho, dict):
         return tuple(sorted(rho.items()))
@@ -93,7 +118,10 @@ def run_experiment_v2(cfg,
                       role_mode="separated",     # separated|same_role|same_role_indep|weak_server (§7)
                       fixed_Lambda=None,         # Task A1 diagnostic: freeze Lambda while lambda stays adaptive
                       disjoint_pools=False,      # Task 1: probe pool and eval pool share no sample ID
-                      controller_pool_frac=0.2):
+                      controller_pool_frac=0.2,
+                      record_eval_probs=False,   # Round 12: per-request exit probabilities -> {run}_evalprobs.npz
+                      record_train_label_hist=False,   # Round 12: per-round training label counts per cell
+                      record_device_signals=False):    # Round 12 (this path): clients' cells at evaluation rounds
     device = cfg.get("device", "cuda:0" if torch.cuda.is_available() else "cpu")
     total_rounds = cfg["global_rounds"]
     num_es = cfg["num_edge_servers"]
@@ -194,6 +222,21 @@ def run_experiment_v2(cfg,
         rec.set(role_mode=role_mode)
 
     rec.set(split_hash=split_hash(indices), model_init_hash=model_hash(clients[0].client_model))
+
+    # ---------- Round 12 records (all off by default) ----------
+    r12 = dict(probs=[], cells=[], eval_rounds=[], mismatch=0) if (record_eval_probs or record_device_signals) else None
+    X_eval = Y_eval = None
+    if record_eval_probs:   # cached test tensor: test_ds[i] is deterministic (no augmentation) and uses no RNG
+        X_eval = torch.stack([test_ds[i][0] for i in range(len(test_ds))]).to(device)
+        Y_eval = torch.as_tensor(test_labels, device=device)
+    TM = dict(train=0.0, eval=0.0, record=0.0) if (record_eval_probs or record_train_label_hist
+                                                  or record_device_signals) else None   # Round 12 timing
+    HK = None
+    if record_train_label_hist:
+        HK = {c.cid: int(cfg["local_epochs"]) * np.bincount(train_labels[np.asarray(indices[c.cid], dtype=np.int64)],
+                                                            minlength=cfg["num_classes"]) for c in clients}
+        hist_cell = np.zeros((total_rounds, num_es, cfg["num_classes"]), np.int32)
+        hist_all = np.zeros((total_rounds, cfg["num_classes"]), np.int32)
 
     # ---------- mobility (Phase H): composition-coupled ----------
     # As a client moves and its PRIMARY es changes, its Main stays (its trained
@@ -473,6 +516,7 @@ def run_experiment_v2(cfg,
             history["controller_z"].append({})
 
         # -- 4. one global round
+        _tt0 = time.perf_counter()
         active_clients = clients
         _saved_attach = None
         if participation is not None:
@@ -482,6 +526,14 @@ def run_experiment_v2(cfg,
             for z in edge_servers:
                 edge_servers[z].clients = [c for c in _saved_attach[z]
                                            if c.cid in active_set] or _saved_attach[z]
+        if HK is not None:   # Round 12: labels the server block of each cell trains on in this round
+            act_ids = {c.cid for c in active_clients}
+            for z in edge_servers:
+                for c in edge_servers[z].clients:
+                    if c.cid in act_ids:
+                        hist_cell[r - 1, z] += HK[c.cid]
+            for c in active_clients:
+                hist_all[r - 1] += HK[c.cid]
         if fairness_mode is not None:
             # same sequence as run_one_global_round, but inter-ES mixing is the
             # donor-selected, risk-directed aggregation (F1/F2)
@@ -539,6 +591,8 @@ def run_experiment_v2(cfg,
             for z in edge_servers:
                 edge_servers[z].clients = _saved_attach[z]
 
+        if TM is not None:
+            TM["train"] += time.perf_counter() - _tt0
         history["round"].append(r)
         history["mean_loss"].append(float(mean_loss))
         history["lamdas"].append(dict(cur_lams))
@@ -563,6 +617,7 @@ def run_experiment_v2(cfg,
 
         # -- 5. eval
         if r == 1 or r % eval_every == 0 or r == total_rounds or oracle_eval_every_round:
+            _te0 = time.perf_counter()
             test_idx, oop_c, oor_c = build_per_client_test_sets(
                 eval_labels, cfg["num_clients"], main_classes, c2es_now, scope,
                 oop_ratio=rho_scalar,
@@ -584,6 +639,21 @@ def run_experiment_v2(cfg,
                 agg["routing"] = evaluate_routing(clients, test_ds, test_idx,
                                                   eth=cfg.get("eth_default", 0.8))
             history["eval"].append(agg)
+            if TM is not None:
+                TM["eval"] += time.perf_counter() - _te0
+            if r12 is not None:
+                e_idx = len(r12["eval_rounds"])
+                r12["eval_rounds"].append(r)
+                r12["cells"].append([list(c2es_now[c.cid])[:2] + [-1] * (2 - len(list(c2es_now[c.cid])[:2]))
+                                     for c in clients])
+                if record_eval_probs:
+                    _tr0 = time.perf_counter()
+                    recs = record_eval_requests_r5(clients, X_eval, Y_eval, test_idx, main_classes, oop_c, oor_c,
+                                                   cfg.get("eth_default", 0.8), cfg.get("partition_seed", 0), r, e_idx, c2es_now)
+                    acc_ev = {p["cid"]: p["acc_total"] for p in per_client_res}
+                    r12["mismatch"] += sum(1 for m in recs if abs(m["correct"] / m["n"] - acc_ev.get(m["k"], -1)) > 1e-12)
+                    r12["probs"].extend(recs)
+                    TM["record"] += time.perf_counter() - _tr0
             if isinstance(bandit, GreedyLabeledOracle):
                 bandit.observe({int(k): v for k, v in agg["cell_means"].items()})
             if verbose:
@@ -593,6 +663,8 @@ def run_experiment_v2(cfg,
                       f"elapsed={el/60:.1f}m ETA={(total_rounds-r)*el/r/60:.0f}m", flush=True)
 
     history["total_time_sec"] = time.time() - t0
+    if TM is not None:   # Round 12: training, evaluation and per-request recording in seconds
+        history["r12_timing_sec"] = dict(TM)
     history["client_ids"] = client_ids
     if disjoint_pools:
         overlap = len(_probe_used & _eval_used)
@@ -611,6 +683,11 @@ def run_experiment_v2(cfg,
     }
     if ckw.get("no_neighbor_avg"):
         history["config"]["no_neighbor_avg"] = True
+    if record_eval_probs or record_train_label_hist or record_device_signals:
+        history["config"].update(record_eval_probs=record_eval_probs, record_train_label_hist=record_train_label_hist,
+                                 record_device_signals=record_device_signals)
+    if record_eval_probs:   # client-rounds whose recorded accuracy differs from the evaluator's
+        history["r12_eval_record_mismatch"] = int(r12["mismatch"])
 
     # ---------- save ----------
     if output_dir is not None:
@@ -626,6 +703,31 @@ def run_experiment_v2(cfg,
                 signal_names=np.array(RAW_SIGNAL_NAMES),
                 client_ids=np.array(client_ids),
                 primary_es=np.array([c.edge_server_ids[0] for c in clients]))
+        if record_eval_probs and r12["probs"]:
+            P = r12["probs"]
+            ns = [m["n"] for m in P]
+            np.savez_compressed(out / f"{run_name}_evalprobs.npz", eval_rounds=np.array(r12["eval_rounds"]),
+                                req_eval_index=np.repeat([m["e"] for m in P], ns).astype(np.uint8),
+                                req_client=np.repeat([m["k"] for m in P], ns).astype(np.int16),
+                                req_home=np.full(sum(ns), -1, np.int8),   # no home in this scenario family
+                                req_label=np.concatenate([m["label"] for m in P]).astype(np.int16),
+                                req_kind=np.concatenate([m["kind"] for m in P]).astype(np.int8),
+                                req_order=np.concatenate([np.arange(m["n"]) for m in P]).astype(np.int32),
+                                req_arrival=np.concatenate([m["arrival"] for m in P]).astype(np.int32),
+                                cp=np.concatenate([m["cp"] for m in P]).astype(np.int16),
+                                ent=np.concatenate([m["ent"] for m in P]).astype(np.float32),
+                                sp=np.concatenate([m["sp"] for m in P]).astype(np.int16),
+                                pc=np.concatenate([m["pc"] for m in P]).astype(np.float16),
+                                ps=np.concatenate([m["ps"] for m in P]).astype(np.float16),
+                                arrival_rng=np.array("numpy default_rng([partition_seed, 10, round, client]).permutation(n)"))
+        if r12 is not None or HK is not None:
+            extra = {}
+            if r12 is not None:
+                extra.update(eval_rounds=np.array(r12["eval_rounds"]), eval_cells=np.array(r12["cells"], np.int16),
+                             client_ids=np.array(client_ids))
+            if HK is not None:
+                extra.update(train_hist_cell=hist_cell, train_hist_all=hist_all)
+            np.savez_compressed(out / f"{run_name}_rec.npz", **extra)
         if verbose:
             print(f"  Saved: {jpath}")
 

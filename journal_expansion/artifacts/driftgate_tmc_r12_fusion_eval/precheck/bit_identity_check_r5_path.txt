@@ -1,0 +1,19 @@
+# Round 12: end-to-end check of the Round-5 code path (run_v2.py / src/runner.py), CPU, --disjoint_pools, seed 0, model_seed 100
+# old = git worktree at a2c90b2 (before Round 12); new = working tree with the Round 12 changes
+# runs: Schedule A fixed 0.4 (10 clients, 2 rounds); client mobility DriftGate (10 clients, 5 rounds, rewiring at round 5);
+#       CIFAR-100 gradual fixed 0.4 (10 clients, 2 rounds); ResNet-18 middle split fixed 0.4 (6 clients, 2 rounds)
+# REC = --record_eval_probs --record_train_label_hist --record_device_signals
+old_A vs new_A (flags off): JSON identical apart from run_id/time/new keys: True; keys only in new_A: none
+new_A vs new_A_rec (flags on vs off): JSON identical apart from run_id/time/new keys: True; keys only in new_A_rec: ['r12_eval_record_mismatch', 'r12_timing_sec']
+old_mob vs new_mob (flags off): JSON identical apart from run_id/time/new keys: True; keys only in new_mob: none | signals npz identical: True
+new_mob vs new_mob_rec (flags on vs off): JSON identical apart from run_id/time/new keys: True; keys only in new_mob_rec: ['r12_eval_record_mismatch', 'r12_timing_sec'] | signals npz identical: True
+old_c100 vs new_c100_rec (old code vs new code with flags on): JSON identical apart from run_id/time/new keys: True; keys only in new_c100_rec: ['r12_eval_record_mismatch', 'r12_timing_sec']
+old_res vs new_res_rec (old code vs new code with flags on): JSON identical apart from run_id/time/new keys: True; keys only in new_res_rec: ['r12_eval_record_mismatch', 'r12_timing_sec']
+new_A_rec: requests 48628, classes 10, evaluator mismatch counted in run: 0, entropy routing from the records equals the evaluator per client and round: True (20 client-rounds), kinds [32000, 12788, 3840], at_home recorded: False
+   train_hist_cell (2, 5, 10) (sum per round [196242, 196242]), train_hist_all sum [134994, 134994], eval_cells (2, 10, 2), eval_rounds [1, 2], timing {'train': 1453.004173676949, 'eval': 215.5150236201007, 'record': 100.04196910187602}
+new_mob_rec: requests 48636, classes 10, evaluator mismatch counted in run: 0, entropy routing from the records equals the evaluator per client and round: True (20 client-rounds), kinds [32000, 12796, 3840], at_home recorded: False
+   train_hist_cell (5, 5, 10) (sum per round [196242, 196242, 196242, 196242, 269988]), train_hist_all sum [134994, 134994, 134994, 134994, 134994], eval_cells (2, 10, 2), eval_rounds [1, 5], timing {'train': 3040.590214316966, 'eval': 90.60709571605548, 'record': 47.444078291999176}
+new_c100_rec: requests 40608, classes 100, evaluator mismatch counted in run: 0, entropy routing from the records equals the evaluator per client and round: True (20 client-rounds), kinds [32000, 6482, 2126], at_home recorded: False
+   train_hist_cell (2, 5, 100) (sum per round [169425, 169425]), train_hist_all sum [121392, 121392], eval_cells (2, 10, 2), eval_rounds [1, 2], timing {'train': 1048.1808725809678, 'eval': 208.6927552339621, 'record': 103.42454095906578}
+new_res_rec: requests 29180, classes 10, evaluator mismatch counted in run: 0, entropy routing from the records equals the evaluator per client and round: True (12 client-rounds), kinds [19200, 7676, 2304], at_home recorded: False
+   train_hist_cell (2, 5, 10) (sum per round [119994, 119994]), train_hist_all sum [119994, 119994], eval_cells (2, 6, 2), eval_rounds [1, 2], timing {'train': 3727.140241987072, 'eval': 217.9065541748423, 'record': 107.89233688614331}

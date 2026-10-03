@@ -474,3 +474,31 @@ def test_eval_client_record_probs_keeps_counts_and_matches_predictions():
         assert (pc.argmax(1) == rec["cp"]).mean() > 0.99 and (ps.argmax(1) == rec["sp"]).mean() > 0.99
         ent = -(pc * np.log(np.clip(pc, 1e-12, 1))).sum(1)
         assert np.abs(ent - rec["ent"]).max() < 5e-2
+
+
+# ----------------------------------------------------------------------------- Round 12
+def test_r5_eval_record_uses_no_rng_and_matches_evaluator():
+    """the Round 12 recording pass of the Round-5 runner leaves torch / numpy / random RNG states untouched and its
+    per-client accuracy equals eval.evaluator.evaluate_one_client."""
+    import random
+    import torch
+    from eval.evaluator import evaluate_one_client
+    from src.runner import record_eval_requests_r5
+    clients, ES, test_ds = _tiny_setup()
+    labels = np.array(test_ds.targets)
+    X = torch.stack([test_ds[i][0] for i in range(len(test_ds))])
+    Y = torch.as_tensor(labels)
+    sel = {c.cid: np.concatenate([np.flatnonzero(labels == q)[:n] for q, n in ((c.cid % 10, 60), ((c.cid + 1) % 10, 20), ((c.cid + 5) % 10, 10))]).tolist()
+           for c in clients}
+    mains = {c.cid: {c.cid % 10} for c in clients}
+    oop = {c.cid: {(c.cid + 1) % 10} for c in clients}
+    oor = {c.cid: {(c.cid + 5) % 10} for c in clients}
+    c2es = {c.cid: list(c.edge_server_ids) for c in clients}
+    st = (torch.get_rng_state().clone(), np.random.get_state()[1].copy(), random.getstate())
+    recs = record_eval_requests_r5(clients, X, Y, sel, mains, oop, oor, 0.8, 3, 5, 0, c2es)
+    assert torch.equal(st[0], torch.get_rng_state()) and np.array_equal(st[1], np.random.get_state()[1]) and st[2] == random.getstate()
+    for m, c in zip(recs, clients):
+        ref = evaluate_one_client(c, test_ds, sel[c.cid], mains[c.cid], oop[c.cid], oor[c.cid], eth=0.8)
+        assert m["correct"] / m["n"] == pytest.approx(ref["acc_total"], abs=1e-12)
+        assert sorted(m["arrival"]) == list(range(m["n"])) and m["pc"].shape == (m["n"], 10)
+        assert set(np.unique(m["kind"])) <= {0, 1, 2}

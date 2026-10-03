@@ -1,0 +1,8 @@
+rule_or_seed,late_pct_or_run_id,round10_pct_or_sha256,difference_pp_or_bytes,within_0.05_or_notes
+B0,63.6945,63.69,+0.0045,yes
+B1,61.5153,61.52,-0.0047,yes
+B2,63.7540,63.75,+0.0040,yes
+B3,65.8586,65.86,-0.0014,yes
+seed 5,r6_fixed_20261003_035418_d0f8a5,8f2171d8fea95a108f0b7e8c5bd37572a323f634085eb68b1cf752aeb534e0d5,156277055,"Mk=provenance True; F(0.5,none)=B3 on 1.000000"
+seed 6,r6_fixed_20261003_035418_dd9e2f,4795a512ef1324bca26d87d6d168e29db31b6081d97607808c7e6c2381e339e8,162834103,"Mk=provenance True; F(0.5,none)=B3 on 1.000000"
+seed 7,r6_fixed_20261003_035418_00b6c3,7992cb32a976f81f4fb8caf8b31219be747b0e58d51c5eada22e85aec9861542,157498525,"Mk=provenance True; F(0.5,none)=B3 on 1.000000"

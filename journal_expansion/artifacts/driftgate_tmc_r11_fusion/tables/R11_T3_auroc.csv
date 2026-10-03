@@ -1,0 +1,21 @@
+devices,feature,direction_flipped,auroc_s5,auroc_s6,auroc_s7,auroc_mean
+all devices,client max prob,yes,0.7204,0.7031,0.7128,0.7121
+all devices,client entropy,no,0.7058,0.6894,0.6999,0.6984
+all devices,server max prob,yes,0.6630,0.6598,0.6843,0.6690
+all devices,server entropy,no,0.6604,0.6602,0.6872,0.6693
+all devices,p_s(M_k),yes,0.8321,0.8212,0.8499,0.8344
+all devices,p_c(M_k),yes,0.7791,0.7373,0.7548,0.7571
+all devices,"TV(p_c, p_s)",no,0.7248,0.7314,0.7302,0.7288
+all devices,exits agree,yes,0.6733,0.6863,0.6861,0.6819
+all devices,device x_SR,no,0.6422,0.6166,0.6413,0.6334
+all devices,R-LR (1 - P(Main)),no,0.8284,0.8212,0.8489,0.8328
+away devices,client max prob,yes,0.7049,0.6901,0.6995,0.6981
+away devices,client entropy,no,0.6884,0.6721,0.6823,0.6809
+away devices,server max prob,yes,0.6439,0.6346,0.6640,0.6475
+away devices,server entropy,no,0.6417,0.6339,0.6664,0.6473
+away devices,p_s(M_k),yes,0.8214,0.8076,0.8377,0.8222
+away devices,p_c(M_k),yes,0.7651,0.7182,0.7328,0.7387
+away devices,"TV(p_c, p_s)",no,0.7124,0.7309,0.7252,0.7228
+away devices,exits agree,yes,0.6637,0.6823,0.6807,0.6756
+away devices,device x_SR,yes,0.5005,0.5003,0.5004,0.5004
+away devices,R-LR (1 - P(Main)),no,0.8271,0.8113,0.8396,0.8260

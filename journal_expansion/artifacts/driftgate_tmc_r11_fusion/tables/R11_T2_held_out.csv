@@ -1,0 +1,21 @@
+rule,held_out_seed,acc_late_pct,acc_full_pct,chosen_setting
+G,5,67.13,67.40,"w=0.1, r=0.5"
+G,6,65.58,66.43,"w=0.2, r=0.5"
+G,7,66.80,67.52,"w=0.3, r=0.5"
+G,mean,66.50,67.12,
+D-oracle,5,68.66,69.34,"home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)"
+D-oracle,6,66.95,68.04,"home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)"
+D-oracle,7,68.11,68.84,"home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)"
+D-oracle,mean,67.91,68.74,
+D-SR,5,67.27,67.68,"theta = 70th percentile (0.4903); home w=0.0, r=0.5; away w=0.4, r=0.5"
+D-SR,6,65.69,66.75,"theta = 70th percentile (0.4698); home w=0.1, r=0.5; away w=0.4, r=0.5"
+D-SR,7,66.90,67.59,"theta = 70th percentile (0.4777); home w=0.1, r=0.5; away w=0.4, r=0.5"
+D-SR,mean,66.62,67.34,
+D-TV,5,67.19,67.41,"theta = 70th percentile (0.3465); home w=0.0, r=0.5; away w=0.3, r=0.5"
+D-TV,6,65.61,66.33,"theta = 70th percentile (0.3386); home w=0.1, r=0.5; away w=0.3, r=0.5"
+D-TV,7,66.84,67.37,"theta = 70th percentile (0.3415); home w=0.2, r=0.5; away w=0.4, r=0.5"
+D-TV,mean,66.54,67.04,
+R-fusion,5,65.90,66.26,"no setting; logistic regression trained on seeds [6, 7] (n_iter 24)"
+R-fusion,6,64.13,65.22,"no setting; logistic regression trained on seeds [5, 7] (n_iter 23)"
+R-fusion,7,65.45,66.18,"no setting; logistic regression trained on seeds [5, 6] (n_iter 24)"
+R-fusion,mean,65.16,65.89,

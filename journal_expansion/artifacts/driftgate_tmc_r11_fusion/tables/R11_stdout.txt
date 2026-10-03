@@ -1,0 +1,32 @@
+  seed 5: 3734808 requests, sha256 ok, F(0.5, none) = B3 on 1.000000 of requests
+  seed 6: 3884510 requests, sha256 ok, F(0.5, none) = B3 on 1.000000 of requests
+  seed 7: 3737699 requests, sha256 ok, F(0.5, none) = B3 on 1.000000 of requests
+  [R11_T0_precheck.csv] 7 rows
+  [R11_T3_auroc.csv] 20 rows
+  [R11_T1_rules.csv] 10 rows
+  [R11_T2_held_out.csv] 20 rows
+  [R11_T4_state_accuracy.csv] 8 rows
+{
+ "verdict": "close",
+ "B3_late": 65.8585782886553,
+ "G_late": 66.50307094863275,
+ "device_level": {
+  "D-SR": {
+   "late": 66.62074129703437,
+   "full": 67.33910388982426,
+   "passes": false
+  },
+  "D-TV": {
+   "late": 66.54493610202064,
+   "full": 67.03623308431082,
+   "passes": false
+  }
+ },
+ "request_level": {
+  "late": 65.16034336324884,
+  "full": 65.88578623436776,
+  "passes": false
+ },
+ "D_oracle_minus_B3_pp": 2.04992334646748
+}
+  figure written

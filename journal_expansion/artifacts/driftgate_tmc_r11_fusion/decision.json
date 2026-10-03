@@ -1,0 +1,114 @@
+{
+ "window": "late (evaluation rounds 30-150), mean of the three held-out seeds",
+ "verdict": "close",
+ "B3_late": 65.8585782886553,
+ "B3_full": 66.66167050077327,
+ "G_late": 66.50307094863275,
+ "device_level": {
+  "D-SR": {
+   "late": 66.62074129703437,
+   "full": 67.33910388982426,
+   "passes": false
+  },
+  "D-TV": {
+   "late": 66.54493610202064,
+   "full": 67.03623308431082,
+   "passes": false
+  }
+ },
+ "request_level": {
+  "late": 65.16034336324884,
+  "full": 65.88578623436776,
+  "passes": false
+ },
+ "D_oracle_minus_B3_pp": 2.04992334646748,
+ "device_level_small_from_upper_bound": false,
+ "chosen": {
+  "G held-out 5": "w=0.1, r=0.5",
+  "G held-out 6": "w=0.2, r=0.5",
+  "G held-out 7": "w=0.3, r=0.5",
+  "D-oracle held-out 5": "home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)",
+  "D-oracle held-out 6": "home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)",
+  "D-oracle held-out 7": "home w=0.4, r=0.2; away w=0.3, r=none (all three seeds)",
+  "D-SR held-out 5": "theta = 70th percentile (0.4903); home w=0.0, r=0.5; away w=0.4, r=0.5",
+  "D-SR held-out 6": "theta = 70th percentile (0.4698); home w=0.1, r=0.5; away w=0.4, r=0.5",
+  "D-SR held-out 7": "theta = 70th percentile (0.4777); home w=0.1, r=0.5; away w=0.4, r=0.5",
+  "D-TV held-out 5": "theta = 70th percentile (0.3465); home w=0.0, r=0.5; away w=0.3, r=0.5",
+  "D-TV held-out 6": "theta = 70th percentile (0.3386); home w=0.1, r=0.5; away w=0.3, r=0.5",
+  "D-TV held-out 7": "theta = 70th percentile (0.3415); home w=0.2, r=0.5; away w=0.4, r=0.5",
+  "R-fusion held-out 5": "no setting; logistic regression trained on seeds [6, 7] (n_iter 24)",
+  "R-fusion held-out 6": "no setting; logistic regression trained on seeds [5, 7] (n_iter 23)",
+  "R-fusion held-out 7": "no setting; logistic regression trained on seeds [5, 6] (n_iter 24)"
+ },
+ "logistic_regression": {
+  "5": {
+   "coef": [
+    0.18243193104589475,
+    0.7332952680012726,
+    -0.41416022023439214,
+    -0.48868749056611227,
+    1.533941278116755,
+    0.3407051536775572,
+    -0.2101916329106976,
+    -0.15504134452699372,
+    0.13899413162914462
+   ],
+   "intercept": 0.644216984016944,
+   "n_iter": 24
+  },
+  "6": {
+   "coef": [
+    0.2003298647877887,
+    0.7224202375307266,
+    -0.1836264347513508,
+    -0.18837006492911684,
+    1.4378935245426017,
+    0.4849474632116621,
+    -0.2470068789479278,
+    -0.15305281816378005,
+    0.07578294103236298
+   ],
+   "intercept": 0.7293262948053812,
+   "n_iter": 23
+  },
+  "7": {
+   "coef": [
+    0.2945042436067177,
+    0.7397228611583626,
+    -0.21256357650678878,
+    -0.1262878254607854,
+    1.3826129088584038,
+    0.42752894855365703,
+    -0.23260088437642354,
+    -0.14620817216039675,
+    0.07259876221437546
+   ],
+   "intercept": 0.6155005003850981,
+   "n_iter": 24
+  }
+ },
+ "means_late_pct": {
+  "B0": 63.69446754346663,
+  "B1": 61.515256657019016,
+  "B2": 63.75403292958769,
+  "B3": 65.8585782886553,
+  "G": 66.50307094863275,
+  "D-oracle": 67.90850163512278,
+  "D-SR": 66.62074129703437,
+  "D-TV": 66.54493610202064,
+  "R-fusion": 65.16034336324884,
+  "kind oracle": 71.54542756316769
+ },
+ "means_full_pct": {
+  "B0": 62.536943089935484,
+  "B1": 63.660918663774915,
+  "B2": 62.58497974439353,
+  "B3": 66.66167050077327,
+  "G": 67.11651219140788,
+  "D-oracle": 68.74032836173507,
+  "D-SR": 67.33910388982426,
+  "D-TV": 67.03623308431082,
+  "R-fusion": 65.88578623436776,
+  "kind oracle": 72.34765293807382
+ }
+}

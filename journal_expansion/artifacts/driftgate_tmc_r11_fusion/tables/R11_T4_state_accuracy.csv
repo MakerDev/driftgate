@@ -1,0 +1,9 @@
+rule,held_out_seed,away_judged_away_pct,home_judged_home_pct,requests_in_away_state_pct
+D-SR,5,35.34,91.58,25.92
+D-SR,6,46.06,88.46,36.41
+D-SR,7,45.64,92.62,32.45
+D-SR,mean,42.35,90.89,31.60
+D-TV,5,33.13,91.12,24.64
+D-TV,6,51.89,86.63,41.12
+D-TV,7,47.91,84.91,36.60
+D-TV,mean,44.31,87.55,34.12

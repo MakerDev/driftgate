@@ -22,3 +22,5 @@ journal_expansion/runs/phaseT12_fusion/*_final_models.pt
 # Round 13b per-request records (kept on the server; sha256 in artifacts/driftgate_tmc_r13b_baselines) and analysis cache
 journal_expansion/runs/phaseT13b_arch/*_evalprobs.npz
 journal_expansion/artifacts/driftgate_tmc_r13b_baselines/cache/
+# Round 14 per-run analysis cache
+journal_expansion/artifacts/driftgate_tmc_r14_paper/cache/

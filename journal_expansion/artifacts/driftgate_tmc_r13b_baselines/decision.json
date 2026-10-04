@@ -1,0 +1,298 @@
+{
+ "F_gate_t_chosen_on_development": 0.05,
+ "runs_analysed": 65,
+ "part_B_runs_analysed": 15,
+ "part_B_runs_planned": 15,
+ "condition_2": "not run: Main classes per client = max(1, int(10 * 0.2)) = 2; one fewer is 1, below the floor of 2, so the value stays 2 (S1 default); the partition has no Dirichlet coefficient",
+ "decision_1_baselines": {
+  "answer": [
+   "R-PoE-bal (S2)"
+  ],
+  "rule_minus_F_late_pp": {
+   "S1": {
+    "R-PoE": -0.88,
+    "R-PoE-bal": -1.025,
+    "R-THE": -2.533,
+    "R-EM": -2.562,
+    "R-LR": -1.271
+   },
+   "S2": {
+    "R-PoE": -0.889,
+    "R-PoE-bal": 0.17,
+    "R-THE": -3.13,
+    "R-EM": -1.374,
+    "R-LR": -2.475
+   }
+  },
+  "part_B_answer": [
+   "R-PoE (ResNet-20, shallow split)",
+   "R-PoE-bal (ResNet-20, shallow split)",
+   "R-THE (ResNet-20, shallow split)",
+   "R-PoE (ResNet-20, middle split)",
+   "R-PoE-bal (ResNet-20, middle split)",
+   "R-THE (ResNet-20, middle split)",
+   "R-PoE (VGG-11, shallow split)",
+   "R-PoE (VGG-11, middle split)",
+   "R-THE (VGG-11, middle split)",
+   "R-LR (VGG-11, middle split)",
+   "R-PoE-bal (CIFAR-100)"
+  ],
+  "part_B_rule_minus_F_late_pp": {
+   "ResNet-20, shallow split": {
+    "R-PoE": 0.899,
+    "R-PoE-bal": 3.229,
+    "R-THE": 1.612,
+    "R-EM": -15.45,
+    "R-LR": -1.457
+   },
+   "ResNet-20, middle split": {
+    "R-PoE": 0.11,
+    "R-PoE-bal": 0.364,
+    "R-THE": 0.267,
+    "R-EM": -1.433,
+    "R-LR": -0.235
+   },
+   "VGG-11, shallow split": {
+    "R-PoE": 0.739,
+    "R-PoE-bal": -0.281,
+    "R-THE": -2.709,
+    "R-EM": -1.174,
+    "R-LR": -2.466
+   },
+   "VGG-11, middle split": {
+    "R-PoE": 1.393,
+    "R-PoE-bal": -0.282,
+    "R-THE": 0.372,
+    "R-EM": -3.443,
+    "R-LR": 0.393
+   },
+   "CIFAR-100": {
+    "R-PoE": -1.243,
+    "R-PoE-bal": 0.452,
+    "R-THE": -4.883,
+    "R-EM": -0.323,
+    "R-LR": -4.199
+   }
+  }
+ },
+ "decision_2_F_auto": {
+  "answer": "no",
+  "groups_F_below_max_B1_B3": [
+   {
+    "group": "client mobility / DriftGate",
+    "F": 67.85,
+    "max_B1_B3": 68.108,
+    "F_auto": 67.674,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   },
+   {
+    "group": "K=500 / fixed 0.4",
+    "F": 70.222,
+    "max_B1_B3": 70.284,
+    "F_auto": 69.328,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   },
+   {
+    "group": "ResNet-18 / fixed 0.4",
+    "F": 62.436,
+    "max_B1_B3": 64.0,
+    "F_auto": 64.023,
+    "F_below_max_B1_B3": true,
+    "ok": true
+   },
+   {
+    "group": "ResNet-18 / DriftGate",
+    "F": 62.675,
+    "max_B1_B3": 63.659,
+    "F_auto": 63.318,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   },
+   {
+    "group": "ResNet-20, shallow split / fixed 0.4 (part B)",
+    "F": 54.124,
+    "max_B1_B3": 58.073,
+    "F_auto": 57.568,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   },
+   {
+    "group": "ResNet-20, middle split / fixed 0.4 (part B)",
+    "F": 57.289,
+    "max_B1_B3": 57.836,
+    "F_auto": 57.671,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   },
+   {
+    "group": "VGG-11, middle split / fixed 0.4 (part B)",
+    "F": 67.526,
+    "max_B1_B3": 68.61,
+    "F_auto": 67.217,
+    "F_below_max_B1_B3": true,
+    "ok": false
+   }
+  ],
+  "other_groups": [
+   {
+    "group": "S1 / fixed 0.4",
+    "F": 67.639,
+    "max_B1_B3": 66.806,
+    "F_auto": 67.22,
+    "F_below_max_B1_B3": false,
+    "ok": false
+   },
+   {
+    "group": "S1 / DriftGate",
+    "F": 67.544,
+    "max_B1_B3": 65.926,
+    "F_auto": 67.162,
+    "F_below_max_B1_B3": false,
+    "ok": false
+   },
+   {
+    "group": "Schedule A / fixed 0.4",
+    "F": 70.579,
+    "max_B1_B3": 69.971,
+    "F_auto": 70.325,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "Schedule A / DriftGate",
+    "F": 71.67,
+    "max_B1_B3": 70.877,
+    "F_auto": 71.68,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "client mobility / fixed 0.4",
+    "F": 67.984,
+    "max_B1_B3": 66.963,
+    "F_auto": 67.639,
+    "F_below_max_B1_B3": false,
+    "ok": false
+   },
+   {
+    "group": "K=200 / fixed 0.4",
+    "F": 68.795,
+    "max_B1_B3": 68.597,
+    "F_auto": 68.067,
+    "F_below_max_B1_B3": false,
+    "ok": false
+   },
+   {
+    "group": "CIFAR-100 gradual / fixed 0.4",
+    "F": 44.019,
+    "max_B1_B3": 41.628,
+    "F_auto": 44.154,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "S2 / fixed 0.4",
+    "F": 71.85,
+    "max_B1_B3": 70.847,
+    "F_auto": 72.132,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "S1-fast / fixed 0.4",
+    "F": 68.266,
+    "max_B1_B3": 67.528,
+    "F_auto": 67.765,
+    "F_below_max_B1_B3": false,
+    "ok": false
+   },
+   {
+    "group": "participation 0.5 / fixed 0.4",
+    "F": 64.0,
+    "max_B1_B3": 62.864,
+    "F_auto": 64.052,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "VGG-11, shallow split / fixed 0.4 (part B)",
+    "F": 68.626,
+    "max_B1_B3": 68.611,
+    "F_auto": 68.728,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   },
+   {
+    "group": "CIFAR-100 / fixed 0.4 (part B)",
+    "F": 44.738,
+    "max_B1_B3": 41.916,
+    "F_auto": 44.931,
+    "F_below_max_B1_B3": false,
+    "ok": true
+   }
+  ],
+  "for_information_parenthesis_reading": {
+   "answer": "no",
+   "groups_with_condition_i": [
+    "ResNet-18 / fixed 0.4",
+    "ResNet-18 / DriftGate",
+    "ResNet-20, shallow split / fixed 0.4 (part B)",
+    "ResNet-20, middle split / fixed 0.4 (part B)",
+    "VGG-11, middle split / fixed 0.4 (part B)"
+   ],
+   "failing_groups": [
+    "S1 / fixed 0.4",
+    "S1 / DriftGate",
+    "client mobility / fixed 0.4",
+    "K=500 / fixed 0.4",
+    "K=200 / fixed 0.4",
+    "ResNet-18 / DriftGate",
+    "S1-fast / fixed 0.4",
+    "ResNet-20, shallow split / fixed 0.4 (part B)",
+    "ResNet-20, middle split / fixed 0.4 (part B)",
+    "VGG-11, middle split / fixed 0.4 (part B)"
+   ]
+  }
+ },
+ "decision_3_F_gate": {
+  "answer": "no",
+  "t": 0.05,
+  "values": {
+   "S1": {
+    "away_F_gate_minus_F_pp": 0.027,
+    "late_F_gate_minus_F_pp": 0.017,
+    "ok": false
+   },
+   "S2": {
+    "away_F_gate_minus_F_pp": 0.017,
+    "late_F_gate_minus_F_pp": 0.009,
+    "ok": false
+   }
+  }
+ },
+ "item_4_structures": {
+  "ResNet-20, shallow split": {
+   "F_minus_B0_pp": 19.565,
+   "F_minus_B3_pp": -2.086
+  },
+  "ResNet-20, middle split": {
+   "F_minus_B0_pp": 5.42,
+   "F_minus_B3_pp": -0.3
+  },
+  "VGG-11, shallow split": {
+   "F_minus_B0_pp": 5.492,
+   "F_minus_B3_pp": 0.015
+  },
+  "VGG-11, middle split": {
+   "F_minus_B0_pp": 1.297,
+   "F_minus_B3_pp": -1.084
+  }
+ },
+ "item_5_conditions": {
+  "S1 default (Round 12, seeds 0-4) F_minus_B3_pp": 0.833,
+  "condition 1 CIFAR-100 F_minus_B3_pp": 2.822,
+  "condition 2": "not run (see condition_2)"
+ }
+}

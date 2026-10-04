@@ -1,0 +1,113 @@
+scenario,training,rule,home_pct,away_pct,Main_pct,OOP_pct,OOR_pct
+S1,fixed 0.4,B0,73.27,55.80,75.49,41.81,27.08
+S1,fixed 0.4,B1,78.34,46.42,87.10,8.48,4.07
+S1,fixed 0.4,B2,73.27,55.95,75.43,42.28,27.26
+S1,fixed 0.4,B3,78.59,55.33,83.76,31.12,18.86
+S1,fixed 0.4,F,81.02,54.97,87.42,26.73,15.25
+S1,fixed 0.4,R-PoE,78.96,54.96,84.41,29.47,18.02
+S1,fixed 0.4,R-PoE-bal,81.25,52.81,88.65,20.51,11.13
+S1,fixed 0.4,R-THE,74.50,55.53,77.61,38.79,24.33
+S1,fixed 0.4,R-ZTW,78.96,54.95,84.41,29.43,18.01
+S1,fixed 0.4,R-EM,80.88,50.13,88.71,10.43,6.08
+S1,fixed 0.4,R-LR,77.00,56.05,81.39,35.18,21.91
+S1,fixed 0.4,F-nodebias,75.37,56.29,78.43,39.41,25.15
+S1,fixed 0.4,F-eq,81.32,53.36,88.53,21.88,11.90
+S1,fixed 0.4,F-auto,81.33,53.88,88.25,23.62,13.07
+S1,fixed 0.4,F-gate,81.03,55.00,87.42,26.79,15.27
+S1,fixed 0.4,kind oracle,81.80,63.07,87.10,42.28,27.26
+S2,fixed 0.4,B0,74.15,53.80,77.49,47.85,10.09
+S2,fixed 0.4,B1,77.48,47.68,85.69,16.81,1.94
+S2,fixed 0.4,B2,74.17,53.98,77.45,48.51,10.21
+S2,fixed 0.4,B3,78.12,53.89,82.95,40.40,7.20
+S2,fixed 0.4,F,79.79,53.29,85.45,35.38,6.47
+S2,fixed 0.4,R-PoE,78.37,53.67,83.42,38.97,6.78
+S2,fixed 0.4,R-PoE-bal,80.35,52.48,86.92,30.19,4.87
+S2,fixed 0.4,R-THE,75.18,53.77,78.83,46.24,9.15
+S2,fixed 0.4,R-ZTW,78.36,53.65,83.41,38.92,6.78
+S2,fixed 0.4,R-EM,79.63,49.09,87.08,12.38,2.96
+S2,fixed 0.4,R-LR,76.17,53.55,80.36,43.21,8.32
+S2,fixed 0.4,F-nodebias,75.56,54.09,79.22,46.55,9.38
+S2,fixed 0.4,F-eq,80.44,52.76,86.85,31.26,5.17
+S2,fixed 0.4,F-auto,80.28,53.04,86.35,33.26,5.73
+S2,fixed 0.4,F-gate,79.79,53.30,85.45,35.42,6.52
+S2,fixed 0.4,kind oracle,80.69,58.97,85.69,48.51,10.21
+"ResNet-20, shallow split",fixed 0.4,B0,41.62,26.95,41.57,16.76,13.55
+"ResNet-20, shallow split",fixed 0.4,B1,75.88,42.11,84.64,1.49,0.53
+"ResNet-20, shallow split",fixed 0.4,B2,40.37,26.37,40.19,16.94,13.63
+"ResNet-20, shallow split",fixed 0.4,B3,72.63,41.25,79.46,5.77,4.24
+"ResNet-20, shallow split",fixed 0.4,F,70.43,39.35,77.58,4.02,2.32
+"ResNet-20, shallow split",fixed 0.4,R-PoE,70.56,40.71,76.83,7.25,5.78
+"ResNet-20, shallow split",fixed 0.4,R-PoE-bal,74.86,41.90,83.20,2.28,1.14
+"ResNet-20, shallow split",fixed 0.4,R-THE,72.42,40.48,78.99,5.09,3.26
+"ResNet-20, shallow split",fixed 0.4,R-ZTW,70.56,40.71,76.83,7.25,5.78
+"ResNet-20, shallow split",fixed 0.4,R-EM,50.88,26.71,50.28,9.15,7.00
+"ResNet-20, shallow split",fixed 0.4,R-LR,67.39,38.91,72.72,8.63,6.50
+"ResNet-20, shallow split",fixed 0.4,F-nodebias,56.62,34.05,59.03,12.99,10.57
+"ResNet-20, shallow split",fixed 0.4,F-eq,74.94,41.80,83.29,2.21,1.09
+"ResNet-20, shallow split",fixed 0.4,F-auto,75.21,41.89,83.58,2.05,1.01
+"ResNet-20, shallow split",fixed 0.4,F-gate,70.42,39.33,77.57,4.01,2.33
+"ResNet-20, shallow split",fixed 0.4,kind oracle,77.41,50.35,84.64,16.94,13.63
+"ResNet-20, middle split",fixed 0.4,B0,67.18,37.40,71.34,7.69,4.42
+"ResNet-20, middle split",fixed 0.4,B1,75.83,41.75,84.29,1.27,0.72
+"ResNet-20, middle split",fixed 0.4,B2,67.15,37.37,71.28,7.72,4.43
+"ResNet-20, middle split",fixed 0.4,B3,75.30,41.75,83.22,2.51,1.33
+"ResNet-20, middle split",fixed 0.4,F,75.13,41.36,83.48,1.17,0.45
+"ResNet-20, middle split",fixed 0.4,R-PoE,74.94,41.69,82.76,2.84,1.62
+"ResNet-20, middle split",fixed 0.4,R-PoE-bal,75.61,41.61,84.19,0.94,0.43
+"ResNet-20, middle split",fixed 0.4,R-THE,75.42,41.58,83.33,2.17,1.03
+"ResNet-20, middle split",fixed 0.4,R-ZTW,74.94,41.69,82.76,2.84,1.62
+"ResNet-20, middle split",fixed 0.4,R-EM,73.82,39.37,80.84,1.34,0.56
+"ResNet-20, middle split",fixed 0.4,R-LR,74.49,41.27,81.93,3.31,1.80
+"ResNet-20, middle split",fixed 0.4,F-nodebias,71.63,39.78,77.73,5.27,2.93
+"ResNet-20, middle split",fixed 0.4,F-eq,75.61,41.60,84.16,0.95,0.42
+"ResNet-20, middle split",fixed 0.4,F-auto,75.66,41.61,84.19,0.96,0.42
+"ResNet-20, middle split",fixed 0.4,F-gate,75.13,41.36,83.48,1.17,0.45
+"ResNet-20, middle split",fixed 0.4,kind oracle,76.34,45.64,84.29,7.72,4.43
+"VGG-11, shallow split",fixed 0.4,B0,69.76,56.62,70.67,48.57,31.83
+"VGG-11, shallow split",fixed 0.4,B1,76.83,44.08,85.42,4.99,1.50
+"VGG-11, shallow split",fixed 0.4,B2,69.21,56.56,69.99,49.29,32.39
+"VGG-11, shallow split",fixed 0.4,B3,79.93,58.45,84.72,36.57,21.10
+"VGG-11, shallow split",fixed 0.4,F,80.30,58.29,85.56,35.76,20.78
+"VGG-11, shallow split",fixed 0.4,R-PoE,81.17,58.86,86.32,35.55,20.27
+"VGG-11, shallow split",fixed 0.4,R-PoE-bal,82.73,55.67,89.90,25.35,12.18
+"VGG-11, shallow split",fixed 0.4,R-THE,75.25,57.25,78.37,41.36,25.31
+"VGG-11, shallow split",fixed 0.4,R-ZTW,81.16,58.82,86.33,35.42,20.20
+"VGG-11, shallow split",fixed 0.4,R-EM,80.86,55.45,86.69,21.38,12.25
+"VGG-11, shallow split",fixed 0.4,R-LR,75.14,58.11,78.28,42.88,26.66
+"VGG-11, shallow split",fixed 0.4,F-nodebias,73.18,58.05,74.98,46.91,30.18
+"VGG-11, shallow split",fixed 0.4,F-eq,82.29,56.30,89.07,27.55,14.06
+"VGG-11, shallow split",fixed 0.4,F-auto,82.09,56.96,88.47,29.86,15.79
+"VGG-11, shallow split",fixed 0.4,F-gate,80.29,58.27,85.55,35.75,20.77
+"VGG-11, shallow split",fixed 0.4,kind oracle,81.46,65.35,85.42,49.29,32.39
+"VGG-11, middle split",fixed 0.4,B0,76.89,56.34,80.44,36.72,22.79
+"VGG-11, middle split",fixed 0.4,B1,81.42,49.01,90.17,11.06,3.74
+"VGG-11, middle split",fixed 0.4,B2,76.15,56.29,79.38,37.96,23.53
+"VGG-11, middle split",fixed 0.4,B3,82.56,56.16,89.35,26.54,14.18
+"VGG-11, middle split",fixed 0.4,F,82.21,54.40,89.32,23.27,12.59
+"VGG-11, middle split",fixed 0.4,R-PoE,82.80,56.54,89.55,26.95,14.76
+"VGG-11, middle split",fixed 0.4,R-PoE-bal,83.14,53.11,91.24,18.43,8.66
+"VGG-11, middle split",fixed 0.4,R-THE,81.19,55.97,87.34,28.49,15.86
+"VGG-11, middle split",fixed 0.4,R-ZTW,82.80,56.52,89.56,26.88,14.73
+"VGG-11, middle split",fixed 0.4,R-EM,81.64,48.43,90.41,6.23,3.17
+"VGG-11, middle split",fixed 0.4,R-LR,80.28,56.78,85.86,31.62,18.21
+"VGG-11, middle split",fixed 0.4,F-nodebias,79.00,57.09,83.40,35.15,21.10
+"VGG-11, middle split",fixed 0.4,F-eq,83.06,53.18,91.09,18.75,8.87
+"VGG-11, middle split",fixed 0.4,F-auto,83.01,53.19,91.00,18.83,8.91
+"VGG-11, middle split",fixed 0.4,F-gate,82.21,54.37,89.31,23.23,12.57
+"VGG-11, middle split",fixed 0.4,kind oracle,84.16,62.59,90.17,37.96,23.53
+CIFAR-100,fixed 0.4,B0,43.08,36.22,44.55,31.54,20.77
+CIFAR-100,fixed 0.4,B1,44.98,28.49,49.38,8.95,5.21
+CIFAR-100,fixed 0.4,B2,43.08,36.22,44.54,31.55,20.78
+CIFAR-100,fixed 0.4,B3,46.32,37.28,48.35,29.70,19.12
+CIFAR-100,fixed 0.4,F,51.93,38.02,55.95,22.59,14.57
+CIFAR-100,fixed 0.4,R-PoE,49.23,37.80,51.99,26.75,16.60
+CIFAR-100,fixed 0.4,R-PoE-bal,53.33,37.59,57.78,19.65,12.13
+CIFAR-100,fixed 0.4,R-THE,43.12,36.23,44.59,31.49,20.72
+CIFAR-100,fixed 0.4,R-ZTW,49.23,37.80,51.99,26.75,16.60
+CIFAR-100,fixed 0.4,R-EM,54.09,35.52,59.54,9.04,5.85
+CIFAR-100,fixed 0.4,R-LR,46.01,35.35,48.77,24.52,15.52
+CIFAR-100,fixed 0.4,F-nodebias,44.06,36.59,45.68,31.15,20.38
+CIFAR-100,fixed 0.4,F-eq,52.66,38.03,56.86,21.60,13.79
+CIFAR-100,fixed 0.4,F-auto,52.29,38.05,56.39,22.20,14.25
+CIFAR-100,fixed 0.4,F-gate,51.93,38.02,55.95,22.58,14.58
+CIFAR-100,fixed 0.4,kind oracle,47.10,39.10,49.38,31.55,20.78

@@ -1,0 +1,152 @@
+[
+ {
+  "name": "r13b_res20_shallow_s0",
+  "base": "r12_s1_fixed040_s0",
+  "base_run_id": "r6_fixed_20261003_191410_963a63",
+  "group": "structure 1",
+  "label": "ResNet-20, shallow split",
+  "seed": 0,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 0 --model_seed 100 --run_name r13b_res20_shallow_s0 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point shallow"
+ },
+ {
+  "name": "r13b_res20_shallow_s1",
+  "base": "r12_s1_fixed040_s1",
+  "base_run_id": "r6_fixed_20261003_191410_da8d41",
+  "group": "structure 1",
+  "label": "ResNet-20, shallow split",
+  "seed": 1,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name r13b_res20_shallow_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point shallow"
+ },
+ {
+  "name": "r13b_res20_shallow_s2",
+  "base": "r12_s1_fixed040_s2",
+  "base_run_id": "r6_fixed_20261003_191410_056fdf",
+  "group": "structure 1",
+  "label": "ResNet-20, shallow split",
+  "seed": 2,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name r13b_res20_shallow_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point shallow"
+ },
+ {
+  "name": "r13b_res20_middle_s0",
+  "base": "r12_s1_fixed040_s0",
+  "base_run_id": "r6_fixed_20261003_191410_963a63",
+  "group": "structure 2",
+  "label": "ResNet-20, middle split",
+  "seed": 0,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 0 --model_seed 100 --run_name r13b_res20_middle_s0 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point middle"
+ },
+ {
+  "name": "r13b_res20_middle_s1",
+  "base": "r12_s1_fixed040_s1",
+  "base_run_id": "r6_fixed_20261003_191410_da8d41",
+  "group": "structure 2",
+  "label": "ResNet-20, middle split",
+  "seed": 1,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name r13b_res20_middle_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point middle"
+ },
+ {
+  "name": "r13b_res20_middle_s2",
+  "base": "r12_s1_fixed040_s2",
+  "base_run_id": "r6_fixed_20261003_191410_056fdf",
+  "group": "structure 2",
+  "label": "ResNet-20, middle split",
+  "seed": 2,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name r13b_res20_middle_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family resnet20 --split_point middle"
+ },
+ {
+  "name": "r13b_vgg11_shallow_s0",
+  "base": "r12_s1_fixed040_s0",
+  "base_run_id": "r6_fixed_20261003_191410_963a63",
+  "group": "structure 3",
+  "label": "VGG-11, shallow split",
+  "seed": 0,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 0 --model_seed 100 --run_name r13b_vgg11_shallow_s0 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point shallow"
+ },
+ {
+  "name": "r13b_vgg11_shallow_s1",
+  "base": "r12_s1_fixed040_s1",
+  "base_run_id": "r6_fixed_20261003_191410_da8d41",
+  "group": "structure 3",
+  "label": "VGG-11, shallow split",
+  "seed": 1,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name r13b_vgg11_shallow_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point shallow"
+ },
+ {
+  "name": "r13b_vgg11_shallow_s2",
+  "base": "r12_s1_fixed040_s2",
+  "base_run_id": "r6_fixed_20261003_191410_056fdf",
+  "group": "structure 3",
+  "label": "VGG-11, shallow split",
+  "seed": 2,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name r13b_vgg11_shallow_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point shallow"
+ },
+ {
+  "name": "r13b_vgg11_middle_s0",
+  "base": "r12_s1_fixed040_s0",
+  "base_run_id": "r6_fixed_20261003_191410_963a63",
+  "group": "structure 4",
+  "label": "VGG-11, middle split",
+  "seed": 0,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 0 --model_seed 100 --run_name r13b_vgg11_middle_s0 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point middle"
+ },
+ {
+  "name": "r13b_vgg11_middle_s1",
+  "base": "r12_s1_fixed040_s1",
+  "base_run_id": "r6_fixed_20261003_191410_da8d41",
+  "group": "structure 4",
+  "label": "VGG-11, middle split",
+  "seed": 1,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name r13b_vgg11_middle_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point middle"
+ },
+ {
+  "name": "r13b_vgg11_middle_s2",
+  "base": "r12_s1_fixed040_s2",
+  "base_run_id": "r6_fixed_20261003_191410_056fdf",
+  "group": "structure 4",
+  "label": "VGG-11, middle split",
+  "seed": 2,
+  "cost": 5.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name r13b_vgg11_middle_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --model_family vgg11 --split_point middle"
+ },
+ {
+  "name": "r13b_c100_s0",
+  "base": "r12_s1_fixed040_s0",
+  "base_run_id": "r6_fixed_20261003_191410_963a63",
+  "group": "condition 1",
+  "label": "CIFAR-100",
+  "seed": 0,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 0 --model_seed 100 --run_name r13b_c100_s0 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --dataset cifar100"
+ },
+ {
+  "name": "r13b_c100_s1",
+  "base": "r12_s1_fixed040_s1",
+  "base_run_id": "r6_fixed_20261003_191410_da8d41",
+  "group": "condition 1",
+  "label": "CIFAR-100",
+  "seed": 1,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 101 --run_name r13b_c100_s1 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --dataset cifar100"
+ },
+ {
+  "name": "r13b_c100_s2",
+  "base": "r12_s1_fixed040_s2",
+  "base_run_id": "r6_fixed_20261003_191410_056fdf",
+  "group": "condition 1",
+  "label": "CIFAR-100",
+  "seed": 2,
+  "cost": 3.0,
+  "cmd": "python -u /home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S1 --env S1 --arm fixed040 --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 2 --model_seed 102 --run_name r13b_c100_s2 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT13b_arch --device cuda:0 --record_device_signals --record_eval_probs --record_train_label_hist --dataset cifar100"
+ }
+]

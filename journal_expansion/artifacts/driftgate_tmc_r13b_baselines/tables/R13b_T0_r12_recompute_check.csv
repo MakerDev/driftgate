@@ -1,0 +1,43 @@
+scenario,training,rule,R12_table1_late_pct,recomputed_late_pct,difference_pp,within_0.05pp
+S1,fixed 0.4,B0,64.67,64.6727,+0.0027,True
+S1,fixed 0.4,B3,66.81,66.8060,-0.0040,True
+S1,fixed 0.4,F,67.64,67.6395,-0.0005,True
+S1,DriftGate,B0,63.97,63.9735,+0.0035,True
+S1,DriftGate,B3,65.93,65.9265,-0.0035,True
+S1,DriftGate,F,67.54,67.5445,+0.0045,True
+Schedule A,fixed 0.4,B0,67.96,67.9556,-0.0044,True
+Schedule A,fixed 0.4,B3,69.97,69.9707,+0.0007,True
+Schedule A,fixed 0.4,F,70.58,70.5793,-0.0007,True
+Schedule A,DriftGate,B0,68.60,68.5997,-0.0003,True
+Schedule A,DriftGate,B3,70.88,70.8772,-0.0028,True
+Schedule A,DriftGate,F,71.67,71.6697,-0.0003,True
+client mobility,fixed 0.4,B0,61.97,61.9710,+0.0010,True
+client mobility,fixed 0.4,B3,66.96,66.9626,+0.0026,True
+client mobility,fixed 0.4,F,67.98,67.9844,+0.0044,True
+client mobility,DriftGate,B0,62.56,62.5640,+0.0040,True
+client mobility,DriftGate,B3,68.11,68.1082,-0.0018,True
+client mobility,DriftGate,F,67.85,67.8501,+0.0001,True
+K=500,fixed 0.4,B0,69.41,69.4082,-0.0018,True
+K=500,fixed 0.4,B3,70.28,70.2837,+0.0037,True
+K=500,fixed 0.4,F,70.22,70.2225,+0.0025,True
+K=200,fixed 0.4,B0,67.51,67.5056,-0.0044,True
+K=200,fixed 0.4,B3,68.60,68.5971,-0.0029,True
+K=200,fixed 0.4,F,68.79,68.7947,+0.0047,True
+ResNet-18,fixed 0.4,B0,59.24,59.2446,+0.0046,True
+ResNet-18,fixed 0.4,B3,64.00,63.9998,-0.0002,True
+ResNet-18,fixed 0.4,F,62.44,62.4365,-0.0035,True
+ResNet-18,DriftGate,B0,62.27,62.2715,+0.0015,True
+ResNet-18,DriftGate,B3,63.66,63.6592,-0.0008,True
+ResNet-18,DriftGate,F,62.67,62.6749,+0.0049,True
+CIFAR-100 gradual,fixed 0.4,B0,39.95,39.9454,-0.0046,True
+CIFAR-100 gradual,fixed 0.4,B3,41.63,41.6277,-0.0023,True
+CIFAR-100 gradual,fixed 0.4,F,44.02,44.0186,-0.0014,True
+S2,fixed 0.4,B0,67.99,67.9923,+0.0023,True
+S2,fixed 0.4,B3,70.85,70.8465,-0.0035,True
+S2,fixed 0.4,F,71.85,71.8496,-0.0004,True
+S1-fast,fixed 0.4,B0,65.24,65.2360,-0.0040,True
+S1-fast,fixed 0.4,B3,67.53,67.5276,-0.0024,True
+S1-fast,fixed 0.4,F,68.27,68.2661,-0.0039,True
+participation 0.5,fixed 0.4,B0,58.24,58.2438,+0.0038,True
+participation 0.5,fixed 0.4,B3,62.86,62.8636,+0.0036,True
+participation 0.5,fixed 0.4,F,64.00,64.0000,+0.0000,True

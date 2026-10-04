@@ -1,0 +1,17 @@
+2026-10-04 16:29:33 dispatcher start (pid 431671), 15 jobs
+2026-10-04 16:29:34 launch r13b_res20_shallow_s0 on GPU 0 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_res20_shallow_s1 on GPU 1 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_res20_shallow_s2 on GPU 2 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_res20_middle_s0 on GPU 3 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_res20_middle_s1 on GPU 0 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_res20_middle_s2 on GPU 1 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_vgg11_shallow_s0 on GPU 2 (attempt 1, free 20.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_vgg11_shallow_s1 on GPU 3 (attempt 1, free 20.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_vgg11_shallow_s2 on GPU 0 (attempt 1, free 17.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_vgg11_middle_s0 on GPU 1 (attempt 1, free 17.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_vgg11_middle_s1 on GPU 2 (attempt 1, free 15.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_vgg11_middle_s2 on GPU 3 (attempt 1, free 15.5 GB, cost 5.0)
+2026-10-04 16:29:34 launch r13b_c100_s0 on GPU 0 (attempt 1, free 12.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_c100_s1 on GPU 1 (attempt 1, free 12.5 GB, cost 3.0)
+2026-10-04 16:29:34 launch r13b_c100_s2 on GPU 2 (attempt 1, free 10.5 GB, cost 3.0)
+2026-10-04 19:14:58 all jobs done

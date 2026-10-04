@@ -1,0 +1,77 @@
+{
+ "r13b_res20_shallow_s0": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 0
+ },
+ "r13b_res20_shallow_s1": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 1
+ },
+ "r13b_res20_shallow_s2": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 2
+ },
+ "r13b_res20_middle_s0": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 3
+ },
+ "r13b_res20_middle_s1": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 0
+ },
+ "r13b_res20_middle_s2": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 1
+ },
+ "r13b_vgg11_shallow_s0": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 2
+ },
+ "r13b_vgg11_shallow_s1": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 3
+ },
+ "r13b_vgg11_shallow_s2": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 0
+ },
+ "r13b_vgg11_middle_s0": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 1
+ },
+ "r13b_vgg11_middle_s1": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 2
+ },
+ "r13b_vgg11_middle_s2": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 3
+ },
+ "r13b_c100_s0": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 0
+ },
+ "r13b_c100_s1": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 1
+ },
+ "r13b_c100_s2": {
+  "attempts": 1,
+  "last": 1791098973.9424372,
+  "gpu": 2
+ }
+}

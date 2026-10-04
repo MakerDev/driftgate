@@ -1,0 +1,132 @@
+  [R13b_dev_LR.csv] 13 rows
+  [R13b_dev_Fgate_t.csv] 6 rows
+  F-gate threshold chosen on the development runs: t = 0.05
+  [R13b_dev_rules.csv] 16 rows
+  analysed r13b_res20_middle_s1
+  analysed r13b_res20_shallow_s0
+  analysed 65 test runs (15 of part B, 15 planned)
+  [R13b_T0_r12_recompute_check.csv] 42 rows
+  [R13b_T0_checks_manifest.csv] 65 rows
+  [R13b_T1_rules.csv] 19 rows
+  [R13b_T1_rules_per_seed.csv] 65 rows
+  [R13b_T1_server_use.csv] 19 rows
+  [R13b_T2_splits.csv] 112 rows
+  [R13b_T3_curves.csv] 152 rows
+  [R13b_T3_SF_ratios.csv] 30 rows
+  [R13b_T4_structures.csv] 6 rows
+  [R13b_Fauto_w.csv] 65 rows
+{
+ "decision_1_baselines": {
+  "answer": [
+   "R-PoE-bal (S2)"
+  ],
+  "rule_minus_F_late_pp": {
+   "S1": {
+    "R-PoE": -0.88,
+    "R-PoE-bal": -1.025,
+    "R-THE": -2.533,
+    "R-EM": -2.562,
+    "R-LR": -1.271
+   },
+   "S2": {
+    "R-PoE": -0.889,
+    "R-PoE-bal": 0.17,
+    "R-THE": -3.13,
+    "R-EM": -1.374,
+    "R-LR": -2.475
+   }
+  },
+  "part_B_answer": [
+   "R-PoE (ResNet-20, shallow split)",
+   "R-PoE-bal (ResNet-20, shallow split)",
+   "R-THE (ResNet-20, shallow split)",
+   "R-PoE (ResNet-20, middle split)",
+   "R-PoE-bal (ResNet-20, middle split)",
+   "R-THE (ResNet-20, middle split)",
+   "R-PoE (VGG-11, shallow split)",
+   "R-PoE (VGG-11, middle split)",
+   "R-THE (VGG-11, middle split)",
+   "R-LR (VGG-11, middle split)",
+   "R-PoE-bal (CIFAR-100)"
+  ],
+  "part_B_rule_minus_F_late_pp": {
+   "ResNet-20, shallow split": {
+    "R-PoE": 0.899,
+    "R-PoE-bal": 3.229,
+    "R-THE": 1.612,
+    "R-EM": -15.45,
+    "R-LR": -1.457
+   },
+   "ResNet-20, middle split": {
+    "R-PoE": 0.11,
+    "R-PoE-bal": 0.364,
+    "R-THE": 0.267,
+    "R-EM": -1.433,
+    "R-LR": -0.235
+   },
+   "VGG-11, shallow split": {
+    "R-PoE": 0.739,
+    "R-PoE-bal": -0.281,
+    "R-THE": -2.709,
+    "R-EM": -1.174,
+    "R-LR": -2.466
+   },
+   "VGG-11, middle split": {
+    "R-PoE": 1.393,
+    "R-PoE-bal": -0.282,
+    "R-THE": 0.372,
+    "R-EM": -3.443,
+    "R-LR": 0.393
+   },
+   "CIFAR-100": {
+    "R-PoE": -1.243,
+    "R-PoE-bal": 0.452,
+    "R-THE": -4.883,
+    "R-EM": -0.323,
+    "R-LR": -4.199
+   }
+  }
+ },
+ "decision_3_F_gate": {
+  "answer": "no",
+  "t": 0.05,
+  "values": {
+   "S1": {
+    "away_F_gate_minus_F_pp": 0.027,
+    "late_F_gate_minus_F_pp": 0.017,
+    "ok": false
+   },
+   "S2": {
+    "away_F_gate_minus_F_pp": 0.017,
+    "late_F_gate_minus_F_pp": 0.009,
+    "ok": false
+   }
+  }
+ }
+}
+  decision 2: no
+  figures written
+	Command being timed: "python -u journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py"
+	User time (seconds): 115.31
+	System time (seconds): 3.52
+	Percent of CPU this job got: 183%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:04.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2784968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 580
+	Minor (reclaiming a frame) page faults: 671019
+	Voluntary context switches: 3754
+	Involuntary context switches: 360
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1736
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

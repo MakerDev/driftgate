@@ -1,0 +1,14 @@
+feature,mean,scale,coefficient
+client max prob,0.521695,0.211902,0.220449
+client entropy,1.51499,0.504989,0.719677
+server max prob,0.647546,0.240643,-0.270129
+server entropy,1.04295,0.605271,-0.263302
+p_s(M_k),0.528442,0.341081,1.45202
+p_c(M_k),0.577721,0.195243,0.409702
+"TV(p_c, p_s)",0.313728,0.168308,-0.231093
+exits agree,0.626992,0.483604,-0.151522
+device x_SR,0.379726,0.186643,0.0952977
+intercept,,,0.660842
+training requests,,,9700604
+share of Main requests,,,0.6185
+lbfgs iterations,,,22

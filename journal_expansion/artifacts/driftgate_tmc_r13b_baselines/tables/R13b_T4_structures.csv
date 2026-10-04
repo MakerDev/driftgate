@@ -1,0 +1,7 @@
+group,runs,client_block_params,client_exit_params,server_block_and_exit_params,client_block_flops_per_image,client_exit_flops_per_image,server_block_and_exit_flops_per_image,smashed_shape,smashed_bytes_float32,train_min_mean,eval_min_mean,total_min_mean,Main_classes_per_client_mean,a_mean,learning_rate
+"ResNet-20, shallow split",3,14480,170,257994,29196288,320,52430080,16x32x32,65536,122.3,7.32,131.7,2.00,0.253,config
+"ResNet-20, middle split",3,66128,330,206346,55410688,640,26215680,32x16x16,32768,119.0,6.53,127.3,2.00,0.253,config
+"VGG-11, shallow split",3,76032,1290,9155082,41287680,2560,264251392,128x8x8,32768,100.6,8.17,111.0,2.00,0.253,config
+"VGG-11, middle split",3,962304,2570,8268810,154533888,5120,151005184,256x4x4,16384,91.5,5.87,99.1,2.00,0.253,config
+CIFAR-100,3,130752,160740,1390308,96141312,18899968,39937024,128x8x8,32768,94.4,14.01,110.7,20.00,0.246,config
+S1 default (Round 12),5,130752,149130,1378698,96141312,18876928,39913984,128x8x8,32768,69.8,7.43,79.0,2.00,0.255,config

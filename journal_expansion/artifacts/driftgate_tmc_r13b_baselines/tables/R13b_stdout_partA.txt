@@ -1,0 +1,106 @@
+  [R13b_dev_LR.csv] 13 rows
+  [R13b_dev_Fgate_t.csv] 6 rows
+  F-gate threshold chosen on the development runs: t = 0.05
+  [R13b_dev_rules.csv] 16 rows
+  analysed r12_s3k200_fixed040_s0
+  analysed r12_s3k200_fixed040_s1
+  analysed r12_e2_res_fx40_A_s0
+  analysed r12_e2_res_fx40_A_s1
+  analysed r12_e2_res_fx40_A_s2
+  analysed r12_r0_e2_res_relonly_A_s0
+  analysed r12_r0_e2_res_relonly_A_s1
+  analysed r12_r0_e2_res_relonly_A_s2
+  analysed r12_t3_c100gsig_fx40_s0
+  analysed r12_t3_c100gsig_fx40_s1
+  analysed r12_t3_c100gsig_fx40_s2
+  analysed r12_s2_fixed040_s0
+  analysed r12_s3k200_fixed040_s2
+  analysed r12_s2_fixed040_s1
+  analysed r12_s2_fixed040_s2
+  analysed r12_s1fast_fixed040_s0
+  analysed r12_s1fast_fixed040_s1
+  analysed r12_s3k500_fixed040_s0
+  analysed r12_s1fast_fixed040_s2
+  analysed r12_s4part05_fixed040_s0
+  analysed r12_s4part05_fixed040_s1
+  analysed r12_s4part05_fixed040_s2
+  analysed r12_s3k500_fixed040_s1
+  analysed r12_s3k500_fixed040_s2
+  analysed 50 test runs (0 of part B, 15 planned)
+  [R13b_T0_r12_recompute_check.csv] 42 rows
+  [R13b_T0_checks_manifest.csv] 50 rows
+  [R13b_T1_rules.csv] 14 rows
+  [R13b_T1_rules_per_seed.csv] 50 rows
+  [R13b_T1_server_use.csv] 14 rows
+  [R13b_T2_splits.csv] 32 rows
+  [R13b_T3_curves.csv] 112 rows
+  [R13b_T3_SF_ratios.csv] 10 rows
+  [R13b_T4_structures.csv] 1 rows
+  [R13b_Fauto_w.csv] 50 rows
+{
+ "decision_1_baselines": {
+  "answer": [
+   "R-PoE-bal (S2)"
+  ],
+  "rule_minus_F_late_pp": {
+   "S1": {
+    "R-PoE": -0.88,
+    "R-PoE-bal": -1.025,
+    "R-THE": -2.533,
+    "R-EM": -2.562,
+    "R-LR": -1.271
+   },
+   "S2": {
+    "R-PoE": -0.889,
+    "R-PoE-bal": 0.17,
+    "R-THE": -3.13,
+    "R-EM": -1.374,
+    "R-LR": -2.475
+   }
+  },
+  "part_B_answer": "no part-B run analysed",
+  "part_B_rule_minus_F_late_pp": {}
+ },
+ "decision_3_F_gate": {
+  "answer": "no",
+  "t": 0.05,
+  "values": {
+   "S1": {
+    "away_F_gate_minus_F_pp": 0.027,
+    "late_F_gate_minus_F_pp": 0.017,
+    "ok": false
+   },
+   "S2": {
+    "away_F_gate_minus_F_pp": 0.017,
+    "late_F_gate_minus_F_pp": 0.009,
+    "ok": false
+   }
+  }
+ }
+}
+  decision 2: no
+  figures written
+	Command being timed: "python -u journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py"
+	User time (seconds): 6759.84
+	System time (seconds): 79.49
+	Percent of CPU this job got: 199%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 57:12.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 20822536
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6139
+	Minor (reclaiming a frame) page faults: 5564908
+	Voluntary context switches: 126861
+	Involuntary context switches: 8980
+	Swaps: 0
+	File system inputs: 20738416
+	File system outputs: 2352
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

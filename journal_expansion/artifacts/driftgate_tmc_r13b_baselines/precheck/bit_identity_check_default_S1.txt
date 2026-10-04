@@ -1,0 +1,7 @@
+# Round 13b: end-to-end check of the default S1 run (CPU, seed 0, model_seed 100, 2 rounds, evaluation every round, --disjoint_pools, fixed lambda 0.4)
+# compared: run JSON apart from run_id, run_name, wall-clock times and the env_file path (same file content, sha256 below); trace arrays apart from probe_us (probe wall time in microseconds); evalprobs arrays
+# old = git worktree at 23aab8f (before Round 13b); new = 6b505a7 (Round 13b part-B code); REC = --record_device_signals --record_eval_probs --record_train_label_hist
+old_fx vs new_fx: JSON identical apart from run time and run_id: True | keys only in one: none | mean_loss [0.8534936517690574, 0.5577252745534178] vs [0.8534936517690574, 0.5577252745534178] | trace arrays compared 22, differing: none, same array names: True
+old_fx_rec vs new_fx_rec: JSON identical apart from run time and run_id: True | keys only in one: none | mean_loss [0.8534936517690574, 0.5577252745534178] vs [0.8534936517690574, 0.5577252745534178] | trace arrays compared 29, differing: none, same array names: True | evalprobs arrays compared 14, differing: none
+b27dc171178852585f8a9d3c8c73e8294df8b3646c61a0d8a71389feafe4e680  r13b_old/journal_expansion/runs/phaseT6_env/S1_seed0.npz
+b27dc171178852585f8a9d3c8c73e8294df8b3646c61a0d8a71389feafe4e680  journal_expansion/runs/phaseT6_env/S1_seed0.npz

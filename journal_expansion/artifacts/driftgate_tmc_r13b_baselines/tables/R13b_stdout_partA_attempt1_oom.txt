@@ -1,0 +1,76 @@
+  [R13b_dev_LR.csv] 13 rows
+  analysed r10_T40_s5
+  analysed r10_T40_s6
+  analysed r10_T40_s7
+  [R13b_dev_Fgate_t.csv] 6 rows
+  F-gate threshold chosen on the development runs: t = 0.05
+  analysed r10_T40_s5
+  analysed r10_T40_s7
+  analysed r10_T40_s6
+  [R13b_dev_rules.csv] 16 rows
+  analysed r12_s1_fixed040_s0
+  analysed r12_s1_fixed040_s1
+  analysed r12_s1_fixed040_s2
+  analysed r12_s1_fixed040_s3
+  analysed r12_s1_fixed040_s4
+  analysed r12_s1_driftgate_own_s0
+  analysed r12_s1_driftgate_own_s3
+  analysed r12_s1_driftgate_own_s1
+  analysed r12_s1_driftgate_own_s2
+  analysed r12_t1_A_fx40_s0
+  analysed r12_t1_A_fx40_s1
+  analysed r12_t1_A_fx40_s3
+  analysed r12_t1_A_fx40_s2
+  analysed r12_s1_driftgate_own_s4
+  analysed r12_t1_A_fx40_s4
+  analysed r12_r0_b1_relonly_A_s0
+  analysed r12_r0_b1_relonly_A_s1
+  analysed r12_r0_b1_relonly_A_s2
+  analysed r12_r0_b1_relonly_A_s3
+  analysed r12_r0_b1_relonly_A_s4
+  analysed r12_t1_mob_fx40_s0
+  analysed r12_t1_mob_fx40_s1
+  analysed r12_t1_mob_fx40_s2
+  analysed r12_r0_b1_relonly_mob_s0
+  analysed r12_r0_b1_relonly_mob_s1
+  analysed r12_r0_b1_relonly_mob_s2
+Traceback (most recent call last):
+  File "/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py", line 861, in <module>
+    main()
+  File "/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py", line 590, in main
+    A = run_many([(j["runs"], j["name"], lr_model, t_gate, False) for j in jobs])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/honeynaps/data/driftgate/journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py", line 529, in run_many
+    return [fut[i].result() for i in range(len(tasks))]
+            ^^^^^^^^^^^^^^^
+  File "/home/honeynaps/.local/share/uv/python/cpython-3.12.7-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/honeynaps/.local/share/uv/python/cpython-3.12.7-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+Command exited with non-zero status 1
+	Command being timed: "python -u journal_expansion/artifacts/driftgate_tmc_r13b_baselines/scripts/r13b_baselines_analysis.py"
+	User time (seconds): 5585.66
+	System time (seconds): 335.84
+	Percent of CPU this job got: 319%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 30:51.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13665316
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1978
+	Minor (reclaiming a frame) page faults: 5503122
+	Voluntary context switches: 92532
+	Involuntary context switches: 621686
+	Swaps: 0
+	File system inputs: 7340632
+	File system outputs: 1008
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+exit 1

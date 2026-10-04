@@ -87,7 +87,15 @@ def main():
                     help="Round 10: per training round, label counts trained by each cell's server block and by all clients")
     ap.add_argument("--record_probe_values", action="store_true",
                     help="per probe request TV and server-non-Main indicator (needs --record_device_signals)")
+    # Round 13b (off by default -> CIFAR-10 and the default split CNN)
+    ap.add_argument("--dataset", default=None, choices=["cifar100"], help="data set other than CIFAR-10")
+    ap.add_argument("--model_family", default=None, choices=["resnet20", "vgg11"])
+    ap.add_argument("--split_point", default=None, choices=["shallow", "middle"])
+    ap.add_argument("--learning_rate", type=float, default=None,
+                    help="override of the config learning rate (Round 13b: only after a diverged run, halved once)")
     args = ap.parse_args()
+    if (args.model_family is None) != (args.split_point is None):
+        raise SystemExit("--model_family and --split_point go together")
 
     if not args.disjoint_pools:
         raise SystemExit("Round 6 runs must use --disjoint_pools")
@@ -114,6 +122,8 @@ def main():
         cfg = yaml.safe_load(f)
     cfg.update(device=args.device, partition_seed=args.seed, model_seed=args.model_seed,
                global_rounds=args.rounds)
+    if args.learning_rate is not None:
+        cfg["learning_rate"] = args.learning_rate
     ckw = {}
     if args.mode == "selfcal":
         ckw = dict(burn_in=args.burn_in, z_guard=args.z_guard, spatial_norm=args.spatial_norm,
@@ -129,7 +139,8 @@ def main():
                                if args.eval_infer_lambdas else None),
            eval_mainaware_route=args.eval_mainaware_route,
            record_eval_requests=args.record_eval_requests, record_probe_values=args.record_probe_values,
-           record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist)
+           record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist,
+           dataset=args.dataset, model_family=args.model_family, split_point=args.split_point)
 
 
 if __name__ == "__main__":

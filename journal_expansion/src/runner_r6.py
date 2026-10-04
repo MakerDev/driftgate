@@ -254,8 +254,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            scenario=None, arm=None, record_device_signals=False, device_signal=None,
            oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False,
            record_eval_requests=False, record_probe_values=False, record_eval_probs=False,
-           record_train_label_hist=False):
-    """Round 7 gate options (all off by default -> Round 6 behaviour):
+           record_train_label_hist=False, dataset=None, model_family=None, split_point=None):
+    """Round 13b options (None by default -> the CIFAR-10 data and the default split CNN):
+    dataset: "cifar100" loads CIFAR-100 with src.datasets_ext.get_dataset (num_classes 100; the partition code is
+        unchanged); model_family / split_point: a src.models_ext.FlexModelFactory family ("resnet20", "vgg11", ...)
+        and split ("shallow", "middle"); the history then also records arch_stats (parameters, FLOPs, smashed data).
+    Round 7 gate options (all off by default -> Round 6 behaviour):
     record_device_signals: every participating client computes x_TV and x_SR on its probe in every arm
         (no grad; the probe uses the numpy probe RNG only, so training is unchanged);
     mode="device" + device_signal in {"tv", "sr"}: one lambda per client (DeviceDriftGate);
@@ -308,11 +312,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         config.update(record_eval_requests=record_eval_requests, record_probe_values=record_probe_values)
     if record_eval_probs or record_train_label_hist:
         config.update(record_eval_probs=record_eval_probs, record_train_label_hist=record_train_label_hist)
+    if dataset is not None or model_family is not None:
+        config.update(dataset=dataset, model_family=model_family, split_point=split_point)
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
     set_seed(seed)
-    train_ds, test_ds = get_cifar10(data_root=cfg.get("data_root", "./data_cache"))
+    if dataset is None:
+        train_ds, test_ds = get_cifar10(data_root=cfg.get("data_root", "./data_cache"))
+    else:   # Round 13b
+        from src.datasets_ext import get_dataset
+        train_ds, test_ds, ds_meta = get_dataset(dataset)
+        cfg["num_classes"] = ds_meta["num_classes"]
     train_labels, test_labels = np.array(train_ds.targets), np.array(test_ds.targets)
     probe_labels, eval_labels, pool_manifest = make_pool_masks(test_labels, cfg["num_classes"], 0.2, seed=seed)
     indices, mains, cell_groups, all_used = build_partition(train_labels, env, seed, cfg["num_classes"], cfg)
@@ -327,7 +338,15 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
 
     # ---------- models ----------
     set_seed(cfg["model_seed"])
-    mf = ModelFactory(dataset="cifar10", num_classes=cfg["num_classes"])
+    if model_family is None:
+        mf = ModelFactory(dataset="cifar10", num_classes=cfg["num_classes"])
+    else:   # Round 13b
+        from src.models_ext import FlexModelFactory
+        mf = FlexModelFactory(family=model_family, num_classes=cfg["num_classes"], split=split_point)
+    arch = None
+    if dataset is not None or model_family is not None:
+        from src.models_ext import arch_stats
+        arch = arch_stats(mf)   # forked RNG: no effect on the model initialisation below
     clients, ES = build_clients_and_es(
         num_clients=K, num_edge_servers=L, model_factory=mf, train_dataset=train_ds,
         client_indices=indices, client_to_es={k: cells_of(k, 0) for k in range(K)},
@@ -629,6 +648,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     hist["total_time_sec"] = time.time() - t_start
     if TM is not None:   # Round 12: training calls and evaluation (incl. the per-request recording) in seconds
         hist["r12_timing_sec"] = dict(TM)
+    if arch is not None:
+        hist["arch_stats"] = arch
     overlap = len(probe_used & eval_used)
     hist.update(pool_manifest=pool_manifest, probe_eval_overlap=overlap,
                 probe_used_count=len(probe_used), eval_used_count=len(eval_used),

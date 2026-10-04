@@ -502,3 +502,26 @@ def test_r5_eval_record_uses_no_rng_and_matches_evaluator():
         assert m["correct"] / m["n"] == pytest.approx(ref["acc_total"], abs=1e-12)
         assert sorted(m["arrival"]) == list(range(m["n"])) and m["pc"].shape == (m["n"], 10)
         assert set(np.unique(m["kind"])) <= {0, 1, 2}
+
+
+# ----------------------------------------------------------------------------- Round 13b
+@pytest.mark.parametrize("family,split,rep_shape", [("resnet20", "shallow", (16, 32, 32)), ("resnet20", "middle", (32, 16, 16)),
+                                                    ("vgg11", "shallow", (128, 8, 8)), ("vgg11", "middle", (256, 4, 4))])
+def test_r13b_split_models(family, split, rep_shape):
+    """client exit / server exit shapes at the cut, total parameters of the standard models (ResNet-20 about 0.27 M with
+    the projection shortcut, VGG-11-BN about 9.2 M), and arch_stats keeps the torch RNG state."""
+    import torch
+    from src.models_ext import FlexModelFactory, arch_stats
+    f = FlexModelFactory(family, 100, split=split)
+    c, s = f.make_client(), f.make_server()
+    x = torch.randn(3, 3, 32, 32)
+    lc, rep = c(x)
+    ls, _ = s(rep)
+    assert lc.shape == (3, 100) and ls.shape == (3, 100) and tuple(rep.shape[1:]) == rep_shape
+    f10 = FlexModelFactory(family, 10, split=split)
+    total = sum(p.numel() for m in (f10.make_client(), f10.make_server()) for p in m.parameters())
+    assert (270_000 < total < 275_000) if family == "resnet20" else (9_200_000 < total < 9_260_000)
+    st = torch.get_rng_state().clone()
+    a = arch_stats(f10)
+    assert torch.equal(st, torch.get_rng_state())
+    assert a["smashed_bytes_float32"] == 4 * int(np.prod(rep_shape)) and a["client_block_flops"] > 0

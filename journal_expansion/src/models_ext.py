@@ -194,6 +194,103 @@ class MobileNetServer(nn.Module):
         return self.fc(x), None
 
 
+# ------------------------------------------------------------ resnet20 (Round 13b)
+# CIFAR ResNet-20 (He et al. 2016): 3x3 conv (16) + 3 stages x 3 BasicBlocks (16, 32, 64 channels). The shortcut at a
+# stage change is the 1x1 projection of the repository's BasicBlock (as in the ResNet-18 above). Exits follow the
+# ResNet-18 split: client exit = global average pooling + linear on the cut; server exit = the remaining stages +
+# global average pooling + linear.
+RESNET20_SPLITS = {"shallow": 1, "middle": 2}  # stages on the client
+
+
+def _res20_stages():
+    def stage(cin, cout, stride):
+        return nn.Sequential(BasicBlock(cin, cout, stride), BasicBlock(cout, cout), BasicBlock(cout, cout))
+    return [(lambda: stage(16, 16, 1), 16), (lambda: stage(16, 32, 2), 32), (lambda: stage(32, 64, 2), 64)]
+
+
+class ResNet20Client(nn.Module):
+    def __init__(self, num_classes=10, split="middle"):
+        super().__init__()
+        k = RESNET20_SPLITS[split]
+        self.stem = nn.Sequential(nn.Conv2d(3, 16, 3, 1, 1, bias=False), nn.BatchNorm2d(16), nn.ReLU())
+        specs = _res20_stages()[:k]
+        self.stages = nn.Sequential(*[b() for b, _ in specs])
+        self.aux_fc = nn.Linear(specs[-1][1], num_classes)
+
+    def forward(self, x):
+        rep = self.stages(self.stem(x))
+        a = F.adaptive_avg_pool2d(rep, 1).flatten(1)
+        return self.aux_fc(a), rep
+
+
+class ResNet20Server(nn.Module):
+    def __init__(self, num_classes=10, split="middle"):
+        super().__init__()
+        k = RESNET20_SPLITS[split]
+        specs = _res20_stages()[k:]
+        self.stages = nn.Sequential(*[b() for b, _ in specs])
+        self.fc = nn.Linear(specs[-1][1], num_classes)
+
+    def forward(self, rep):
+        x = self.stages(rep)
+        x = F.adaptive_avg_pool2d(x, 1).flatten(1)
+        return self.fc(x), None
+
+
+# --------------------------------------------------------------- vgg11 (Round 13b)
+# CIFAR VGG-11 with batch normalization: conv 3x3 (+BN+ReLU) channels [64, M, 128, M, 256, 256, M, 512, 512, M, 512,
+# 512, M], M = 2x2 max pooling. Split after the 2nd (shallow) or 3rd (middle) max pooling. Exits as in the ResNet-18
+# split (global average pooling + linear; the server input of the last linear is 512 x 1 x 1).
+VGG11_CFG = [64, "M", 128, "M", 256, 256, "M", 512, 512, "M", 512, 512, "M"]
+VGG11_SPLITS = {"shallow": 2, "middle": 3}  # max-pooling layers on the client
+
+
+def _vgg_cut(split):
+    n, m = VGG11_SPLITS[split], 0
+    for i, v in enumerate(VGG11_CFG):
+        m += v == "M"
+        if m == n:
+            return i + 1
+    raise ValueError(split)
+
+
+def _vgg_layers(items, cin):
+    layers, c = [], cin
+    for v in items:
+        if v == "M":
+            layers.append(nn.MaxPool2d(2))
+        else:
+            layers += [nn.Conv2d(c, v, 3, padding=1), nn.BatchNorm2d(v), nn.ReLU()]
+            c = v
+    return nn.Sequential(*layers), c
+
+
+class VGG11Client(nn.Module):
+    def __init__(self, num_classes=10, split="middle"):
+        super().__init__()
+        self.features, cout = _vgg_layers(VGG11_CFG[:_vgg_cut(split)], 3)
+        self.aux_fc = nn.Linear(cout, num_classes)
+
+    def forward(self, x):
+        rep = self.features(x)
+        a = F.adaptive_avg_pool2d(rep, 1).flatten(1)
+        return self.aux_fc(a), rep
+
+
+class VGG11Server(nn.Module):
+    def __init__(self, num_classes=10, split="middle"):
+        super().__init__()
+        cut = _vgg_cut(split)
+        cin = [v for v in VGG11_CFG[:cut] if v != "M"][-1]
+        self.features, cout = _vgg_layers(VGG11_CFG[cut:], cin)
+        self.fc = nn.Linear(cout, num_classes)
+
+    def forward(self, rep):
+        x = self.features(rep)
+        x = F.adaptive_avg_pool2d(x, 1).flatten(1)
+        return self.fc(x), None
+
+
 # ------------------------------------------------------------------ factory
 class FlexModelFactory:
     def __init__(self, family="cnn", num_classes=10, in_spatial=8, split="middle"):
@@ -209,6 +306,10 @@ class FlexModelFactory:
             return ResNetClient(self.num_classes, self.split)
         if self.family == "mobilenetv2":
             return MobileNetClient(self.num_classes, self.split)
+        if self.family == "resnet20":
+            return ResNet20Client(self.num_classes, self.split)
+        if self.family == "vgg11":
+            return VGG11Client(self.num_classes, self.split)
         raise ValueError(self.family)
 
     def make_server(self):
@@ -218,6 +319,10 @@ class FlexModelFactory:
             return ResNetServer(self.num_classes, self.split)
         if self.family == "mobilenetv2":
             return MobileNetServer(self.num_classes, self.split)
+        if self.family == "resnet20":
+            return ResNet20Server(self.num_classes, self.split)
+        if self.family == "vgg11":
+            return VGG11Server(self.num_classes, self.split)
         raise ValueError(self.family)
 
 
@@ -236,3 +341,36 @@ def split_stats(factory, input_size=32):
         "rep_shape": list(rep.shape[1:]),
         "out_classes": out.shape[1],
     }
+
+
+def arch_stats(factory, input_size=32):
+    """Round 13b: parameters, FLOPs per image and the smashed data of one request.
+
+    FLOPs from torch.utils.flop_counter on one image (convolutions and matrix products, a multiply and an add counted
+    as two FLOPs; batch normalization, activations, pooling and additions not counted). Client exit = the modules of
+    the client model whose name starts with "aux"; client block = the rest of the client model. Smashed data = the
+    client model's representation at the cut for one image, float32. Builds the models under a forked RNG, so the
+    caller's random state is unchanged."""
+    from torch.utils.flop_counter import FlopCounterMode
+    with torch.random.fork_rng(devices=[]):
+        c, s = factory.make_client(), factory.make_server()
+    c.eval(), s.eval()
+    x = torch.zeros(1, 3, input_size, input_size)
+    with torch.no_grad():
+        fc = FlopCounterMode(display=False)
+        with fc:
+            _, rep = c(x)
+        fs = FlopCounterMode(display=False)
+        with fs:
+            s(rep)
+    per_mod = fc.get_flop_counts()
+    root = type(c).__name__
+    exit_flops = sum(sum(v.values()) for k, v in per_mod.items()
+                     if k.startswith(root + ".") and k.split(".")[1].startswith("aux") and k.count(".") == 1)
+    cp_exit = sum(p.numel() for n, p in c.named_parameters() if n.startswith("aux"))
+    cp = sum(p.numel() for p in c.parameters())
+    return {"client_block_params": cp - cp_exit, "client_exit_params": cp_exit,
+            "server_block_and_exit_params": sum(p.numel() for p in s.parameters()),
+            "client_block_flops": int(fc.get_total_flops() - exit_flops), "client_exit_flops": int(exit_flops),
+            "server_block_and_exit_flops": int(fs.get_total_flops()),
+            "smashed_shape": list(rep.shape[1:]), "smashed_bytes_float32": int(rep[0].numel() * 4)}

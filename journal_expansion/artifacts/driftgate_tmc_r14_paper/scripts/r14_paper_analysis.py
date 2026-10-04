@@ -507,7 +507,7 @@ def figures(R, val):
     for i, r in enumerate(t2):
         ps_ = np.array([float(x) for x in r["per_seed_pp(5,6,7)"].split()])
         ax.bar(i, ps_.mean(), 0.6, yerr=ps_.std(ddof=1), color="#7a7a7a", error_kw=dict(lw=0.6, capsize=2), zorder=2)
-        ax.plot(np.full(len(ps_), i) + np.array([-0.12, 0, 0.12]), ps_, ls="none", marker="o", ms=2.5, color="#222222", zorder=3)
+        ax.plot(np.full(len(ps_), i) + np.array([-0.2, 0, 0.2]), ps_, ls="none", marker="o", ms=2.5, color="#222222", zorder=3)
     ax.axhline(0, color="#555555", lw=0.6)
     ax.set_xticks(range(len(t2)))
     ax.set_xticklabels([labs[r["accuracy"]] for r in t2])
@@ -521,7 +521,8 @@ def figures(R, val):
            error_kw=dict(lw=0.7, capsize=2), zorder=2)
     ax.axhline(0, color="#555555", lw=0.6)
     ax.set_xticks(range(len(ST)))
-    ax.set_xticklabels(ST)
+    ax.set_xticklabels([{"participation 0.5": "participation\n0.5", "stepwise change": "stepwise\nchange",
+                         "client mobility": "client\nmobility"}.get(st, st) for st in ST])
     ax.set_ylabel("DriftGate - SplitGP (pp)")
     save(fig, "R14_fig3_main")
     # 4 home / away scatter
@@ -564,7 +565,8 @@ def figures(R, val):
     ax.patch.set_visible(False)
     for rl in ("B0", "B1", "B2", "DriftGate"):
         v = np.mean([a["res"][rl]["per_round"] for a in R["S1"]], axis=0) * 100
-        ax.plot(hrs, v, color=COL[rl], lw=1.8 if rl == "DriftGate" else 1.1, marker="o", ms=2, label=PAPER[rl])
+        ax.plot(hrs, v, color=COL[rl], lw=1.8 if rl == "DriftGate" else 1.1, ls="--" if rl == "B2" else "-",
+                marker={"B0": "s", "B1": "v", "B2": "^", "DriftGate": "o"}[rl], ms=2.2, label=PAPER[rl])
     for _, lo, _ in BINS[1:]:
         ax.axvline(lo / 60.0, color="#bbbbbb", lw=0.5, ls="--")
     ax.set_xlim(5, 20)

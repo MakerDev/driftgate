@@ -1,0 +1,5 @@
+setting,seeds,DriftGate_rule: lambda_adjustment_minus_fixed_0.4 mean (SD) pp,per_seed_pp
+stepwise change,5,1.14 (0.77),+1.47 +0.64 +0.15 +1.28 +2.16
+client mobility,3,0.07 (0.32),+0.45 -0.14 -0.08
+ResNet-18,3,-0.51 (0.18),-0.71 -0.41 -0.41
+S1,5,-0.05 (1.02),-0.96 +0.36 -0.91 -0.24 +1.49

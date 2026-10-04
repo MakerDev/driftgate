@@ -1,0 +1,101 @@
+setting,rule,paper_name,seeds,mean_pct,sd_pct
+S1,B0,SplitGP,5,62.8660,2.6384
+S2,B0,SplitGP,3,65.1816,3.7348
+S1-fast,B0,SplitGP,3,63.3337,0.5450
+participation 0.5,B0,SplitGP,3,56.4464,0.3564
+stepwise change,B0,SplitGP,5,65.1734,2.0870
+client mobility,B0,SplitGP,3,58.5635,0.4328
+CIFAR-100,B0,SplitGP,3,35.8424,1.0295
+ResNet-18,B0,SplitGP,3,59.2136,2.8010
+K=200,B0,SplitGP,3,65.2631,1.6293
+K=500,B0,SplitGP,3,67.0344,0.4018
+S1,B1,Device only,5,64.1587,1.9383
+S2,B1,Device only,3,69.0388,2.8028
+S1-fast,B1,Device only,3,64.3949,0.2353
+participation 0.5,B1,Device only,3,61.7534,0.2408
+stepwise change,B1,Device only,5,68.9276,1.4525
+client mobility,B1,Device only,3,67.7066,0.5410
+CIFAR-100,B1,Device only,3,33.9279,0.6661
+ResNet-18,B1,Device only,3,66.3858,2.8749
+K=200,B1,Device only,3,62.6251,0.7932
+K=500,B1,Device only,3,63.1157,0.1918
+S1,B2,Edge only,5,62.9091,2.6371
+S2,B2,Edge only,3,65.2392,3.7583
+S1-fast,B2,Edge only,3,63.3758,0.5466
+participation 0.5,B2,Edge only,3,56.4440,0.3613
+stepwise change,B2,Edge only,5,65.2042,2.0855
+client mobility,B2,Edge only,3,58.6109,0.4207
+CIFAR-100,B2,Edge only,3,35.8408,1.0301
+ResNet-18,B2,Edge only,3,57.0400,3.1943
+K=200,B2,Edge only,3,65.3014,1.6396
+K=500,B2,Edge only,3,67.0719,0.4042
+S1,B3,Average,5,67.3218,2.9199
+S2,B3,Average,3,69.8847,2.0217
+S1-fast,B3,Average,3,68.0616,1.0432
+participation 0.5,B3,Average,3,62.6395,0.7550
+stepwise change,B3,Average,5,71.4364,2.3227
+client mobility,B3,Average,3,69.5766,0.4487
+CIFAR-100,B3,Average,3,38.1506,0.9208
+ResNet-18,B3,Average,3,66.3874,3.1466
+K=200,B3,Average,3,68.8972,1.4986
+K=500,B3,Average,3,70.3795,0.1572
+S1,R-PoE,FedRoD,5,67.3682,3.0086
+S2,R-PoE,FedRoD,3,70.0682,1.9665
+S1-fast,R-PoE,FedRoD,3,68.1207,0.9961
+participation 0.5,R-PoE,FedRoD,3,62.9397,0.8131
+stepwise change,R-PoE,FedRoD,5,71.3864,2.3696
+client mobility,R-PoE,FedRoD,3,69.2280,0.5466
+CIFAR-100,R-PoE,FedRoD,3,39.8325,0.8741
+ResNet-18,R-PoE,FedRoD,3,65.9989,3.2838
+K=200,R-PoE,FedRoD,3,68.8628,1.4681
+K=500,R-PoE,FedRoD,3,70.2939,0.1516
+S1,R-THE,FedTHE,5,64.3495,2.7189
+S2,R-THE,FedTHE,3,66.6472,3.3023
+S1-fast,R-THE,FedTHE,3,64.9042,0.9339
+participation 0.5,R-THE,FedTHE,3,58.1019,0.6481
+stepwise change,R-THE,FedTHE,5,68.4186,2.2141
+client mobility,R-THE,FedTHE,3,64.2179,0.3539
+CIFAR-100,R-THE,FedTHE,3,35.8909,1.0176
+ResNet-18,R-THE,FedTHE,3,66.5403,2.8027
+K=200,R-THE,FedTHE,3,66.6766,1.6805
+K=500,R-THE,FedTHE,3,68.4121,0.4125
+S1,R-ZTW,ZTW,5,67.3627,3.0067
+S2,R-ZTW,ZTW,3,70.0594,1.9647
+S1-fast,R-ZTW,ZTW,3,68.1141,0.9968
+participation 0.5,R-ZTW,ZTW,3,62.9389,0.8133
+stepwise change,R-ZTW,ZTW,5,71.3829,2.3676
+client mobility,R-ZTW,ZTW,3,69.2239,0.5457
+CIFAR-100,R-ZTW,ZTW,3,39.8324,0.8741
+ResNet-18,R-ZTW,ZTW,3,65.9919,3.2799
+K=200,R-ZTW,ZTW,3,68.8587,1.4661
+K=500,R-ZTW,ZTW,3,70.2898,0.1508
+S1,R-EM,Label-shift EM,5,64.8432,2.1648
+S2,R-EM,Label-shift EM,3,68.6343,0.5177
+S1-fast,R-EM,Label-shift EM,3,65.4084,0.2500
+participation 0.5,R-EM,Label-shift EM,3,60.4518,0.7408
+stepwise change,R-EM,Label-shift EM,5,67.5940,1.8684
+client mobility,R-EM,Label-shift EM,3,65.4223,0.5239
+CIFAR-100,R-EM,Label-shift EM,3,40.4380,0.5186
+ResNet-18,R-EM,Label-shift EM,3,61.7294,2.8023
+K=200,R-EM,Label-shift EM,3,64.9641,1.3961
+K=500,R-EM,Label-shift EM,3,66.1830,0.2617
+S1,R-LR,Learned per-request weight,5,66.8132,3.0096
+S2,R-LR,Learned per-request weight,3,68.5879,2.2981
+S1-fast,R-LR,Learned per-request weight,3,67.5209,1.1041
+participation 0.5,R-LR,Learned per-request weight,3,62.0162,0.9178
+stepwise change,R-LR,Learned per-request weight,5,70.6938,2.3735
+client mobility,R-LR,Learned per-request weight,3,68.5509,0.3486
+CIFAR-100,R-LR,Learned per-request weight,3,37.5381,0.7567
+ResNet-18,R-LR,Learned per-request weight,3,63.6051,2.8818
+K=200,R-LR,Learned per-request weight,3,68.5424,1.5084
+K=500,R-LR,Learned per-request weight,3,70.0533,0.1572
+S1,DriftGate,DriftGate,5,68.3147,2.4471
+S2,DriftGate,DriftGate,3,71.7001,0.9682
+S1-fast,DriftGate,DriftGate,3,68.9638,0.7612
+participation 0.5,DriftGate,DriftGate,3,64.8188,0.3968
+stepwise change,DriftGate,DriftGate,5,72.3564,2.1967
+client mobility,DriftGate,DriftGate,3,71.0937,0.8608
+CIFAR-100,DriftGate,DriftGate,3,41.2883,0.6228
+ResNet-18,DriftGate,DriftGate,3,66.6396,3.1417
+K=200,DriftGate,DriftGate,3,68.9954,1.4309
+K=500,DriftGate,DriftGate,3,70.1111,0.2156

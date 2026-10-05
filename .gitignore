@@ -28,3 +28,5 @@ journal_expansion/artifacts/driftgate_tmc_r14_paper/cache/
 journal_expansion/runs/phaseT15_replay/*_evalprobs.npz
 journal_expansion/runs/phaseT15_replay/*_ckpt.pt
 journal_expansion/artifacts/driftgate_tmc_r15_revision/cache/
+# Round 16 per-run caches (reference answers and stage-1 summaries)
+journal_expansion/artifacts/driftgate_tmc_r16_selector/cache/

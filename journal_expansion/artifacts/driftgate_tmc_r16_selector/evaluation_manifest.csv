@@ -1,0 +1,79 @@
+table,row_id,setting,period,window_or_bin,runs_dir,run_pattern,seeds,evaluation_rounds,n_evaluation_rounds,judged
+basic,S1|day1_full,S1,day1,day1_full,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S1|day1_early,S1,day1,day1_early,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25 30,7,yes
+basic,S1|day1_gt30,S1,day1,day1_gt30,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,S1|day1_gt50,S1,day1,day1_gt50,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+time,S1|pre-commute,S1,day1,pre-commute,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25,6,yes
+time,S1|commute,S1,day1,commute,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,30 35 40 45,4,yes
+time,S1|daytime,S1,day1,daytime,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,50 55 60 65 70 75 80 85 90 95 100 105 110,13,yes
+time,S1|return,S1,day1,return,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,115 120 125 130 135 140,6,yes
+time,S1|evening,S1,day1,evening,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,145 150,2,yes
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,runs/phaseT15_replay,r15_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S2|day1_full,S2,day1,day1_full,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S2|day1_early,S2,day1,day1_early,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,S2|day1_gt30,S2,day1,day1_gt30,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,S2|day1_gt50,S2,day1,day1_gt50,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+time,S2|pre-commute,S2,day1,pre-commute,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,1 5 10 15 20 25,6,yes
+time,S2|commute,S2,day1,commute,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,30 35 40 45,4,yes
+time,S2|daytime,S2,day1,daytime,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,50 55 60 65 70 75 80 85 90 95 100 105 110,13,yes
+time,S2|return,S2,day1,return,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,115 120 125 130 135 140,6,yes
+time,S2|evening,S2,day1,evening,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,145 150,2,yes
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,runs/phaseT15_replay,r15_s2_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S1-fast|day1_full,S1-fast,day1,day1_full,runs/phaseT12_fusion,r12_s1fast_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S1-fast|day1_early,S1-fast,day1,day1_early,runs/phaseT12_fusion,r12_s1fast_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,S1-fast|day1_gt30,S1-fast,day1,day1_gt30,runs/phaseT12_fusion,r12_s1fast_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,S1-fast|day1_gt50,S1-fast,day1,day1_gt50,runs/phaseT12_fusion,r12_s1fast_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+basic,partial participation|day1_full,partial participation,day1,day1_full,runs/phaseT12_fusion,r12_s4part05_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,partial participation|day1_early,partial participation,day1,day1_early,runs/phaseT12_fusion,r12_s4part05_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,partial participation|day1_gt30,partial participation,day1,day1_gt30,runs/phaseT12_fusion,r12_s4part05_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,partial participation|day1_gt50,partial participation,day1,day1_gt50,runs/phaseT12_fusion,r12_s4part05_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+basic,stepwise change|day1_full,stepwise change,day1,day1_full,runs/phaseT12_fusion,r12_t1_A_fx40_s{},0 1 2 3 4,1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150,16,yes
+basic,stepwise change|day1_early,stepwise change,day1,day1_early,runs/phaseT12_fusion,r12_t1_A_fx40_s{},0 1 2 3 4,1 10 20 30,4,yes
+basic,stepwise change|day1_gt30,stepwise change,day1,day1_gt30,runs/phaseT12_fusion,r12_t1_A_fx40_s{},0 1 2 3 4,40 50 60 70 80 90 100 110 120 130 140 150,12,yes
+basic,stepwise change|day1_gt50,stepwise change,day1,day1_gt50,runs/phaseT12_fusion,r12_t1_A_fx40_s{},0 1 2 3 4,60 70 80 90 100 110 120 130 140 150,10,yes
+basic,random mobility|day1_full,random mobility,day1,day1_full,runs/phaseT12_fusion,r12_t1_mob_fx40_s{},0 1 2,1 10 20 30 40 50 60 70 80 90 100 110 120,13,yes
+basic,random mobility|day1_early,random mobility,day1,day1_early,runs/phaseT12_fusion,r12_t1_mob_fx40_s{},0 1 2,1 10 20 30,4,yes
+basic,random mobility|day1_gt30,random mobility,day1,day1_gt30,runs/phaseT12_fusion,r12_t1_mob_fx40_s{},0 1 2,40 50 60 70 80 90 100 110 120,9,yes
+basic,random mobility|day1_gt50,random mobility,day1,day1_gt50,runs/phaseT12_fusion,r12_t1_mob_fx40_s{},0 1 2,60 70 80 90 100 110 120,7,yes
+basic,CIFAR-100|day1_full,CIFAR-100,day1,day1_full,runs/phaseT13b_arch,r13b_c100_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,CIFAR-100|day1_early,CIFAR-100,day1,day1_early,runs/phaseT13b_arch,r13b_c100_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,runs/phaseT13b_arch,r13b_c100_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,runs/phaseT13b_arch,r13b_c100_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+basic,ResNet-18|day1_full,ResNet-18,day1,day1_full,runs/phaseT12_fusion,r12_e2_res_fx40_A_s{},0 1 2,1 10 20 30 40 50 60 70 80 90 100 110 120 130 140 150,16,yes
+basic,ResNet-18|day1_early,ResNet-18,day1,day1_early,runs/phaseT12_fusion,r12_e2_res_fx40_A_s{},0 1 2,1 10 20 30,4,yes
+basic,ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,runs/phaseT12_fusion,r12_e2_res_fx40_A_s{},0 1 2,40 50 60 70 80 90 100 110 120 130 140 150,12,yes
+basic,ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,runs/phaseT12_fusion,r12_e2_res_fx40_A_s{},0 1 2,60 70 80 90 100 110 120 130 140 150,10,yes
+basic,K=200|day1_full,K=200,day1,day1_full,runs/phaseT12_fusion,r12_s3k200_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,K=200|day1_early,K=200,day1,day1_early,runs/phaseT12_fusion,r12_s3k200_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,K=200|day1_gt30,K=200,day1,day1_gt30,runs/phaseT12_fusion,r12_s3k200_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,K=200|day1_gt50,K=200,day1,day1_gt50,runs/phaseT12_fusion,r12_s3k200_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+basic,K=500|day1_full,K=500,day1,day1_full,runs/phaseT12_fusion,r12_s3k500_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,K=500|day1_early,K=500,day1,day1_early,runs/phaseT12_fusion,r12_s3k500_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,yes
+basic,K=500|day1_gt30,K=500,day1,day1_gt30,runs/phaseT12_fusion,r12_s3k500_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,yes
+basic,K=500|day1_gt50,K=500,day1,day1_gt50,runs/phaseT12_fusion,r12_s3k500_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,yes
+basic,S1 replay|replay_full,S1 replay,replay,replay_full,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,1 5 10 15 20 25,6,yes
+time,S1 replay|commute,S1 replay,replay,commute,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,30 35 40 45,4,yes
+time,S1 replay|daytime,S1 replay,replay,daytime,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,50 55 60 65 70 75 80 85 90 95 100 105 110,13,yes
+time,S1 replay|return,S1 replay,replay,return,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,115 120 125 130 135 140,6,yes
+time,S1 replay|evening,S1 replay,replay,evening,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,145 150,2,yes
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,runs/phaseT15_replay,r15_s1_replay_s{},0 1 2 3 4,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+basic,S2 replay|replay_full,S2 replay,replay,replay_full,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,1 5 10 15 20 25,6,yes
+time,S2 replay|commute,S2 replay,replay,commute,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,30 35 40 45,4,yes
+time,S2 replay|daytime,S2 replay,replay,daytime,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,50 55 60 65 70 75 80 85 90 95 100 105 110,13,yes
+time,S2 replay|return,S2 replay,replay,return,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,115 120 125 130 135 140,6,yes
+time,S2 replay|evening,S2 replay,replay,evening,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,145 150,2,yes
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,runs/phaseT15_replay,r15_s2_replay_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,yes
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,runs/phaseT12_fusion,r12_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,no
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,runs/phaseT12_fusion,r12_s1_fixed040_s{},0 1 2 3 4,1 5 10 15 20 25 30,7,no
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,runs/phaseT12_fusion,r12_s1_fixed040_s{},0 1 2 3 4,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,no
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,runs/phaseT12_fusion,r12_s1_fixed040_s{},0 1 2 3 4,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,no
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,runs/phaseT12_fusion,r12_s2_fixed040_s{},0 1 2,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,no
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,runs/phaseT12_fusion,r12_s2_fixed040_s{},0 1 2,1 5 10 15 20 25 30,7,no
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,runs/phaseT12_fusion,r12_s2_fixed040_s{},0 1 2,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,no
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,runs/phaseT12_fusion,r12_s2_fixed040_s{},0 1 2,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,no
+development,S1 development|day1_full,S1 development,day1,day1_full,runs/phaseT10_prior,r10_T40_s{},5 6 7,1 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,31,no
+development,S1 development|day1_early,S1 development,day1,day1_early,runs/phaseT10_prior,r10_T40_s{},5 6 7,1 5 10 15 20 25 30,7,no
+development,S1 development|day1_gt30,S1 development,day1,day1_gt30,runs/phaseT10_prior,r10_T40_s{},5 6 7,35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,24,no
+development,S1 development|day1_gt50,S1 development,day1,day1_gt50,runs/phaseT10_prior,r10_T40_s{},5 6 7,55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150,20,no

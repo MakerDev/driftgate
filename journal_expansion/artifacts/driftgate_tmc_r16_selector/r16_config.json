@@ -1,0 +1,95 @@
+{
+  "round": 16,
+  "stage": 1,
+  "note": "Analysis settings of Round 16 stage 1, fixed before any Round 16 result (decision_rule.md). Paths are relative to journal_expansion/.",
+  "settings": {
+    "S1":                    {"period": "day1",   "role": "decision", "runs": "runs/phaseT15_replay", "pattern": "r15_s1_fixed040_s{}",       "seeds": [0, 1, 2, 3, 4]},
+    "S2":                    {"period": "day1",   "role": "decision", "runs": "runs/phaseT15_replay", "pattern": "r15_s2_fixed040_s{}",       "seeds": [0, 1, 2]},
+    "S1-fast":               {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_s1fast_fixed040_s{}",   "seeds": [0, 1, 2]},
+    "partial participation": {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_s4part05_fixed040_s{}", "seeds": [0, 1, 2]},
+    "stepwise change":       {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_t1_A_fx40_s{}",         "seeds": [0, 1, 2, 3, 4]},
+    "random mobility":       {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_t1_mob_fx40_s{}",       "seeds": [0, 1, 2]},
+    "CIFAR-100":             {"period": "day1",   "role": "decision", "runs": "runs/phaseT13b_arch",  "pattern": "r13b_c100_s{}",             "seeds": [0, 1, 2]},
+    "ResNet-18":             {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_e2_res_fx40_A_s{}",     "seeds": [0, 1, 2]},
+    "K=200":                 {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_s3k200_fixed040_s{}",   "seeds": [0, 1, 2]},
+    "K=500":                 {"period": "day1",   "role": "decision", "runs": "runs/phaseT12_fusion", "pattern": "r12_s3k500_fixed040_s{}",   "seeds": [0, 1, 2]},
+    "S1 replay":             {"period": "replay", "role": "decision", "runs": "runs/phaseT15_replay", "pattern": "r15_s1_replay_s{}",         "seeds": [0, 1, 2, 3, 4]},
+    "S2 replay":             {"period": "replay", "role": "decision", "runs": "runs/phaseT15_replay", "pattern": "r15_s2_replay_s{}",         "seeds": [0, 1, 2]},
+    "S1 (Round 12 record)":  {"period": "day1",   "role": "supplementary", "runs": "runs/phaseT12_fusion", "pattern": "r12_s1_fixed040_s{}", "seeds": [0, 1, 2, 3, 4]},
+    "S2 (Round 12 record)":  {"period": "day1",   "role": "supplementary", "runs": "runs/phaseT12_fusion", "pattern": "r12_s2_fixed040_s{}", "seeds": [0, 1, 2]},
+    "S1 development":        {"period": "day1",   "role": "development",   "runs": "runs/phaseT10_prior",  "pattern": "r10_T40_s{}",         "seeds": [5, 6, 7]}
+  },
+  "start_check": {
+    "reference": "Round 15 cache (artifacts/driftgate_tmc_r15_revision/cache), full window, the 11 rules of R15_A1_rules_full.csv and the 6 correction/weight variants",
+    "runs": "the 34 first-day runs of R15 A1 (Round 12 records and Round 13b CIFAR-100); the 16 Round 15 retrained and replay runs are checked as well",
+    "tolerance_fraction": 1e-12
+  },
+  "windows": {
+    "day1_full":   {"period": "day1",   "round_gt": null, "round_le": null},
+    "day1_early":  {"period": "day1",   "round_gt": null, "round_le": 30},
+    "day1_gt30":   {"period": "day1",   "round_gt": 30,   "round_le": null},
+    "day1_gt50":   {"period": "day1",   "round_gt": 50,   "round_le": null},
+    "replay_full": {"period": "replay", "round_gt": null, "round_le": null}
+  },
+  "time_bins_minutes": [["pre-commute", 300, 450], ["commute", 450, 570], ["daytime", 570, 960], ["return", 960, 1140], ["evening", 1140, 1201]],
+  "time_of_round": "start minute 300 + 6 (round - 1); bin = [lo, hi)",
+  "time_table_settings": {"S1": ["S1", "S1 replay"], "S2": ["S2", "S2 replay"]},
+  "online_table_rows": [["S1", "day1_full"], ["S2", "day1_full"], ["S1 replay", "replay_full"], ["S2 replay", "replay_full"]],
+  "w_grid": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0],
+  "r_grid": ["none", 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+  "candidate_priority": "DriftGate first; then smaller w; then r in the order 0.5, 0.4, 0.6, 0.3, 0.7, 0.2, 0.8, 0.1, 0.9, none (closer to 0.5, then the smaller numeric r, none last within the same w)",
+  "score_tie_tolerance": 1e-12,
+  "driftgate_candidate": "r = 0.5 and the Round 13b/15 causal entropy weight w = Hbar_s / (Hbar_c + Hbar_s) of the current request (full offloading) or the Round 15 DriftGate-P weight (online controller); its calibration score uses that same w",
+  "calibration": {
+    "source": "requests and labels of the same device in its most recent previous evaluation round with at least 8 Main and 8 non-Main requests (outputs, prior and cells of that round); none -> DriftGate",
+    "min_main": 8,
+    "min_nonmain": 8
+  },
+  "share_estimate": {
+    "T": "raw (uncorrected) edge prediction in M_k",
+    "clip": [0.1, 0.9],
+    "min_abs_c11_minus_c01": 0.1,
+    "window": "Round 15 period window (earlier requests of the device's current evaluation round when at least 8, else the requests of its previous evaluation round with requests), restricted to observations made with the current model and cell set: in first-day runs the model changes between evaluation rounds, so only the earlier requests of the current round are used; in a replay the previous round is used when the device's cell set is unchanged. Current request excluded; no observation -> DriftGate",
+    "r_from_share": "r = 1 - s_hat mapped to the nearest numeric r in the grid; ties -> closer to 0.5, then the smaller"
+  },
+  "selectors": {
+    "S-A": "fixed s (from development seeds 5-7, {0.5, 0.65}, larger mean day1_full accuracy, tie -> 0.5): max J over the 90 grid pairs and DriftGate",
+    "S-B0": "r = r(s_hat), w = 0",
+    "S-B5": "r = r(s_hat), w = 0.5",
+    "S-Bg": "r = r(s_hat): max J(.; s_hat) over the 9 w of the grid and DriftGate",
+    "S-C": "max J(.; s_hat) over the 90 grid pairs and DriftGate (main candidate)",
+    "J": "s Acc_M + (1 - s) Acc_N on the calibration samples"
+  },
+  "sA_candidates": [0.5, 0.65],
+  "sA_tie": 0.5,
+  "online": {
+    "beta": 0.5,
+    "controller": "Round 15 C2: tau = median of the device's previous 128 device-exit entropies (current excluded), 0.8 when fewer than 16 previous requests",
+    "share": "Z_j = O_j T_j over the period window of all earlier requests (current model and cell set only); v_g(tau_j) = P(H_d > tau_j, T = 1 | g), u_g(tau) = P(H_d > tau | g) on the calibration samples; s_all = clip((q_Z - vbar_N) / (vbar_M - vbar_N)); s_off = clip(s_all u_M / (s_all u_M + (1 - s_all) u_N))",
+    "acc": "Acc_M, Acc_N on the calibration samples with H_d > tau of the current request",
+    "fallback": "calibration group or selected group (H_d > tau) below 8, fewer than 8 earlier offloaded requests in the window, |vbar_M - vbar_N| < 0.1, zero or non-finite denominator -> DriftGate-P",
+    "min_group": 8,
+    "min_prior_offloads": 8,
+    "min_abs_v_diff": 0.1
+  },
+  "reference_rules": ["Confidence-based offloading", "Device only", "Edge only", "Probability average", "Logit sum", "Lower-entropy exit",
+                      "Logit-entropy weighting", "Geometric ensemble with early exit", "Label-shift EM", "Learned weight", "DriftGate",
+                      "no correction + adaptive w", "correction + w 0.5", "correction + dev w 0.2", "corrected edge only",
+                      "correction + learned weight", "correction + product"],
+  "online_reference_operations": ["Device only (offloading 0)", "Edge answer (Confidence-based offloading, Edge only)", "Probability average",
+                                   "Logit sum (also Geometric ensemble)", "Lower-entropy exit", "Logit-entropy weighting", "Label-shift EM",
+                                   "Learned weight", "DriftGate (DriftGate-P)", "no correction + adaptive w", "correction + w 0.5",
+                                   "correction + dev w 0.2", "corrected edge only", "correction + learned weight", "correction + product"],
+  "oracles": {
+    "O1": "best grid pair per setting and window (seed mean, same priority order without DriftGate)",
+    "O2": "best grid pair per device-round (accuracy on its own requests)",
+    "O3": "r = clip(1 - s_true, 0.1, 0.9) with s_true the Main share of the device-round's requests (continuous r); w = 0, w = 0.5, and the best fixed w of the grid per setting and window (seed mean, tie -> smaller w)",
+    "compared_with": ["DriftGate", "Probability average", "corrected edge only", "strongest reference"]
+  },
+  "decision": {
+    "difference": "mean accuracy of the method minus mean accuracy of the strongest reference (the reference rule with the highest seed mean in that row), pp; per-seed differences against that one rule for the SD",
+    "pass_tolerance_pp": 1e-8,
+    "hold_floor_pp": -0.2,
+    "tables": ["basic (42 rows)", "time of day (20 rows)", "online beta 0.5 (4 rows)"]
+  }
+}

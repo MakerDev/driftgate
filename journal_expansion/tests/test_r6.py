@@ -525,3 +525,27 @@ def test_r13b_split_models(family, split, rep_shape):
     a = arch_stats(f10)
     assert torch.equal(st, torch.get_rng_state())
     assert a["smashed_bytes_float32"] == 4 * int(np.prod(rep_shape)) and a["client_block_flops"] > 0
+
+
+# ----------------------------------------------------------------------------- Round 15
+def test_r15_eval_logprobs_match_probs_and_use_no_rng():
+    """record_logprobs adds float32 log-softmax of both exits that match the float16 probabilities, without touching
+    the RNG states or the other record arrays."""
+    import random
+    import torch
+    from src.runner_r6 import eval_client
+    clients, ES, test_ds = _tiny_setup()
+    labels = np.array(test_ds.targets)
+    X = torch.stack([test_ds[i][0] for i in range(len(test_ds))])
+    Y = torch.as_tensor(labels)
+    c = clients[0]
+    idx = np.concatenate([np.flatnonzero(labels == q)[:30] for q in (0, 1, 5)]).tolist()
+    st = (torch.get_rng_state().clone(), np.random.get_state()[1].copy(), random.getstate())
+    r0, r1 = {}, {}
+    o0 = eval_client(c, X, Y, idx, {0}, {1}, {5}, record=r0, record_probs=True)
+    o1 = eval_client(c, X, Y, idx, {0}, {1}, {5}, record=r1, record_probs=True, record_logprobs=True)
+    assert torch.equal(st[0], torch.get_rng_state()) and np.array_equal(st[1], np.random.get_state()[1]) and st[2] == random.getstate()
+    assert o0 == o1 and all(np.array_equal(r0[k], r1[k]) for k in r0)
+    assert r1["lpc"].dtype == np.float32 and r1["lpc"].shape == r1["pc"].shape
+    assert np.abs(np.exp(r1["lpc"]) - r1["pc"].astype(np.float32)).max() < 1e-3
+    assert np.abs(np.exp(r1["lps"]) - r1["ps"].astype(np.float32)).max() < 1e-3

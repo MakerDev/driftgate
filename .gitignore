@@ -24,3 +24,7 @@ journal_expansion/runs/phaseT13b_arch/*_evalprobs.npz
 journal_expansion/artifacts/driftgate_tmc_r13b_baselines/cache/
 # Round 14 per-run analysis cache
 journal_expansion/artifacts/driftgate_tmc_r14_paper/cache/
+# Round 15 per-request records and end-of-day checkpoints (kept on the server)
+journal_expansion/runs/phaseT15_replay/*_evalprobs.npz
+journal_expansion/runs/phaseT15_replay/*_ckpt.pt
+journal_expansion/artifacts/driftgate_tmc_r15_revision/cache/

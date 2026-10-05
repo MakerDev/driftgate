@@ -109,7 +109,7 @@ def set_seed(seed):
 
 @torch.no_grad()
 def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False, record=None,
-                record_probs=False):
+                record_probs=False, record_logprobs=False):
     """Same computation as eval.evaluator.evaluate_one_client (client exit if the
     client-exit entropy <= eth, else the mean of the client's server-exit logits),
     on a cached normalized test tensor, plus offload counts per request kind.
@@ -138,6 +138,8 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
     rec = {"cp": [], "ent": [], "sp": []} if record is not None else None
     if rec is not None and record_probs:
         rec.update(pc=[], ps=[])
+    if rec is not None and record_logprobs:   # Round 15: float32 log-softmax of both exits
+        rec.update(lpc=[], lps=[])
     for s in range(0, len(idx_t), batch_size):
         b = idx_t[s:s + batch_size]
         x, y = X[b], Y[b]
@@ -154,6 +156,9 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
             if record_probs:
                 rec["pc"].append(torch.softmax(client_logits.float(), dim=1).half().cpu())
                 rec["ps"].append(torch.softmax(server_logits.float(), dim=1).half().cpu())
+            if record_logprobs:
+                rec["lpc"].append(torch.log_softmax(client_logits.float(), dim=1).cpu())
+                rec["lps"].append(torch.log_softmax(server_logits.float(), dim=1).cpu())
         final = torch.where(route, server_preds, client_preds)
         ok = final == y
         is_main = torch.isin(y, main_t)
@@ -254,8 +259,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            scenario=None, arm=None, record_device_signals=False, device_signal=None,
            oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False,
            record_eval_requests=False, record_probe_values=False, record_eval_probs=False,
-           record_train_label_hist=False, dataset=None, model_family=None, split_point=None):
-    """Round 13b options (None by default -> the CIFAR-10 data and the default split CNN):
+           record_train_label_hist=False, dataset=None, model_family=None, split_point=None,
+           save_checkpoint=False, record_eval_logprobs=False, replay_from=None):
+    """Round 15 options (off by default):
+    save_checkpoint: at the end of the run, {run}_ckpt.pt with every device's installed client model, every cell's
+        server model and client average, the devices' cells, and the label counts of the last training round
+        (needs record_train_label_hist);
+    record_eval_logprobs (with record_eval_probs): float32 log-softmax of both exits per request (lpc, lps);
+    replay_from: path of such a checkpoint -> frozen-model replay of the day: no training, no parameter aggregation,
+        no probing; every device keeps its saved client model and uses the saved server model of its current cells
+        (membership follows the environment as in training); train_hist_* of the trace repeat the checkpoint's last
+        training round for every round (the class mix the saved server models were trained on).
+    Round 13b options (None by default -> the CIFAR-10 data and the default split CNN):
     dataset: "cifar100" loads CIFAR-100 with src.datasets_ext.get_dataset (num_classes 100; the partition code is
         unchanged); model_family / split_point: a src.models_ext.FlexModelFactory family ("resnet20", "vgg11", ...)
         and split ("shallow", "middle"); the history then also records arch_stats (parameters, FLOPs, smashed data).
@@ -314,6 +329,11 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         config.update(record_eval_probs=record_eval_probs, record_train_label_hist=record_train_label_hist)
     if dataset is not None or model_family is not None:
         config.update(dataset=dataset, model_family=model_family, split_point=split_point)
+    if save_checkpoint or record_eval_logprobs or replay_from is not None:
+        assert not save_checkpoint or record_train_label_hist, "--save_checkpoint needs --record_train_label_hist"
+        assert not record_eval_logprobs or record_eval_probs, "--record_eval_logprobs needs --record_eval_probs"
+        config.update(save_checkpoint=save_checkpoint, record_eval_logprobs=record_eval_logprobs,
+                      replay_from=None if replay_from is None else str(replay_from))
     rec = RunRecord("r6_" + mode, config=config)
 
     # ---------- data, partition, pools ----------
@@ -359,6 +379,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     init_s = clients[0].get_server_state(clients[0].edge_server_ids[0])
     for es in ES.values():   # a cell nobody has joined yet hands out the common initial blocks
         es.clients_avg_weights, es.server_avg_weights = init_c, init_s
+    RP = None
+    if replay_from is not None:   # Round 15: frozen-model replay from a saved end-of-day state
+        RP = torch.load(replay_from, map_location="cpu", weights_only=False)   # own file (numpy arrays inside)
+        assert RP["K"] == K and RP["L"] == L, (RP["K"], RP["L"], K, L)
+        dev_ = lambda sd: {kk: v.to(device) for kk, v in sd.items()}
+        for c in clients:
+            c.client_model.load_state_dict(dev_(RP["client_states"][c.cid]))
+        for z, es in ES.items():
+            es.server_avg_weights, es.clients_avg_weights = dev_(RP["server_avg"][z]), dev_(RP["clients_avg"][z])
+        for c in clients:
+            for z in c.edge_server_ids:
+                c.set_server_state(z, ES[z].server_avg_weights)
     rec.set(split_hash=split_hash(indices), model_init_hash=model_hash(clients[0].client_model),
             disjoint_pools=pool_manifest,
             cell_groups={str(z): sorted(v) for z, v in cell_groups.items()},
@@ -463,7 +495,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         dbar_now, n_sig = {}, {z: 0 for z in range(L)}
         fb = {"": 0, "oor_empty": 0, "oop_empty": 0, "both_empty": 0}
         xdev = {}
-        if mode == "selfcal" or mode == "device" or record_device_signals:
+        if (mode == "selfcal" or mode == "device" or record_device_signals) and RP is None:
             vals = {z: [] for z in range(L)}
             for c in clients:
                 k = c.cid
@@ -535,7 +567,10 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             cur_lam = {z: float(np.mean([client_lams[k] for k in range(K) if z in member[k, t]]))
                        if (member[:, t, :] == z).any() else float("nan") for z in range(L)}
         # 4. training
-        if record_train_label_hist:   # membership used by this round's training and cell averages
+        if record_train_label_hist and RP is not None:   # replay: the class mix of the saved server models
+            R["train_hist_cell"][t] = RP["train_hist_cell_last"]
+            R["train_hist_all"][t] = RP["train_hist_all_last"]
+        elif record_train_label_hist:   # membership used by this round's training and cell averages
             for z in range(L):
                 for c in ES[z].clients:
                     if active[c.cid]:
@@ -543,8 +578,11 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             R["train_hist_all"][t] = sum(HK[k] for k in range(K) if active[k]) if active.any() else 0
         capture = {} if (EVI is not None and r in E_ROUNDS) else None
         _tt0 = time.perf_counter()
-        mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
-                                                 client_lams=client_lams, capture=capture)
+        if RP is None:
+            mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
+                                                     client_lams=client_lams, capture=capture)
+        else:   # replay: no training, no aggregation
+            mean_loss, act_cells = float("nan"), []
         if TM is not None:
             TM["train"] += time.perf_counter() - _tt0
         if mode == "apfl":
@@ -590,14 +628,15 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 rq = REQ is not None and capture is not None and k in capture
                 rec_inst = {} if (rq or PRB is not None) else None
                 res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route,
-                                  record=rec_inst, record_probs=PRB is not None)
+                                  record=rec_inst, record_probs=PRB is not None, record_logprobs=record_eval_logprobs)
                 if PRB is not None:   # Round 10: both exits' probabilities, with a random arrival order
                     lab_p = np.asarray(Y_test[torch.as_tensor(np.asarray(idx), device=Y_test.device)].cpu().numpy())
                     kind_p = np.where(np.isin(lab_p, sorted(mains[k])), 0, np.where(np.isin(lab_p, sorted(oop)), 1,
                                       np.where(np.isin(lab_p, sorted(oor)), 2, 3)))
                     arr = np.random.default_rng([int(seed), 10, int(r), int(k)]).permutation(len(idx))
                     PRB.append(dict(e=e, k=k, n=len(idx), label=lab_p, kind=kind_p, home=bool(env["at_home"][k, t]),
-                                    arrival=arr, **{x: rec_inst[x] for x in ("cp", "ent", "sp", "pc", "ps")}))
+                                    arrival=arr, **{x: rec_inst[x] for x in ("cp", "ent", "sp", "pc", "ps")
+                                                    + (("lpc", "lps") if record_eval_logprobs else ())}))
                 for key in EV:
                     EV[key][e, k] = res[key]
                 if capture is not None and k in capture:   # Round 8: inference-only mixing ratios
@@ -684,6 +723,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                                 sp=np.concatenate([m["sp"] for m in PRB]).astype(np.uint8),
                                 pc=np.concatenate([m["pc"] for m in PRB]).astype(np.float16),
                                 ps=np.concatenate([m["ps"] for m in PRB]).astype(np.float16),
+                                **({"lpc": np.concatenate([m["lpc"] for m in PRB]).astype(np.float32),
+                                    "lps": np.concatenate([m["lps"] for m in PRB]).astype(np.float32)}
+                                   if record_eval_logprobs else {}),
                                 arrival_rng=np.array("numpy default_rng([partition_seed, 10, round, client]).permutation(n)"))
         if REQ is not None:
             ns = [m["n"] for m in REQ["meta"]]
@@ -699,6 +741,16 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                                 cp=np.stack([np.concatenate([r["cp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8),
                                 ent=np.stack([np.concatenate([r["ent"] for r in b]) for b in REQ["blocks"]]).astype(np.float32),
                                 sp=np.stack([np.concatenate([r["sp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8))
+        if save_checkpoint:   # Round 15: full end-of-day state for the frozen-model replay
+            cpu_ = lambda sd: {kk: v.detach().cpu().clone() for kk, v in sd.items()}
+            torch.save({"K": K, "L": L, "run_id": rec.run_id, "round": total_rounds,
+                        "client_states": {c.cid: cpu_(c.client_model.state_dict()) for c in clients},
+                        "client_cells": {c.cid: list(c.edge_server_ids) for c in clients},
+                        "server_avg": {z: cpu_(es.server_avg_weights) for z, es in ES.items()},
+                        "clients_avg": {z: cpu_(es.clients_avg_weights) for z, es in ES.items()},
+                        "train_hist_cell_last": R["train_hist_cell"][total_rounds - 1].copy(),
+                        "train_hist_all_last": R["train_hist_all"][total_rounds - 1].copy()},
+                       out / f"{run_name}_ckpt.pt")
         if save_models:
             home = int(env["home_cell"][0])
             hub = int(np.flatnonzero(env["cell_is_hub"])[0]) if env["cell_is_hub"].any() else home

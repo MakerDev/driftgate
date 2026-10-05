@@ -1,0 +1,15 @@
+# Round 15 A2 smoke test (GPU, S1 seed 0, 5 rounds, evaluation at rounds 1 and 5; not a result): day-1 run with --save_checkpoint, then --replay_from that checkpoint.
+# Round 5 uses the same models, cells and requests in both runs, so every record array must be identical; round 1 differs (the replay uses the end-of-day models).
+req_client round 5 identical: True | round 1 identical: True
+req_label round 5 identical: True | round 1 identical: True
+req_kind round 5 identical: True | round 1 identical: True
+req_arrival round 5 identical: True | round 1 identical: True
+cp round 5 identical: True | round 1 identical: False
+sp round 5 identical: True | round 1 identical: False
+ent round 5 identical: True | round 1 identical: False
+pc round 5 identical: True | round 1 identical: False
+ps round 5 identical: True | round 1 identical: False
+lpc round 5 identical: True | round 1 identical: False
+lps round 5 identical: True | round 1 identical: False
+max |exp(lpc) - pc(float16)|: 0.0002440810203552246
+replay train_hist_cell rows equal the day-1 last training round: True

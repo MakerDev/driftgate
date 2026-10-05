@@ -93,6 +93,10 @@ def main():
     ap.add_argument("--split_point", default=None, choices=["shallow", "middle"])
     ap.add_argument("--learning_rate", type=float, default=None,
                     help="override of the config learning rate (Round 13b: only after a diverged run, halved once)")
+    # Round 15 (off by default)
+    ap.add_argument("--save_checkpoint", action="store_true", help="end-of-day state for --replay_from")
+    ap.add_argument("--record_eval_logprobs", action="store_true", help="float32 log-softmax of both exits")
+    ap.add_argument("--replay_from", default=None, help="frozen-model replay of the day from a --save_checkpoint file")
     args = ap.parse_args()
     if (args.model_family is None) != (args.split_point is None):
         raise SystemExit("--model_family and --split_point go together")
@@ -140,7 +144,9 @@ def main():
            eval_mainaware_route=args.eval_mainaware_route,
            record_eval_requests=args.record_eval_requests, record_probe_values=args.record_probe_values,
            record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist,
-           dataset=args.dataset, model_family=args.model_family, split_point=args.split_point)
+           dataset=args.dataset, model_family=args.model_family, split_point=args.split_point,
+           save_checkpoint=args.save_checkpoint, record_eval_logprobs=args.record_eval_logprobs,
+           replay_from=args.replay_from)
 
 
 if __name__ == "__main__":

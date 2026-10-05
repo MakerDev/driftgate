@@ -1,0 +1,9 @@
+setting,detector,where,FLOP per request,stored bytes,downlink bytes per training round,note
+S1,D1,device,41600,66564,,pooling 128x64; whitening 128x128 matrix-vector; |M_k| distances of 128 values (whitened means stored)
+S1,D2,device,252430,486069,,pooling; normalisation; 949 dot products of 128 values; selection of the 10th largest (float32 bank)
+S1,D3,device,8321,516,516,pooling; one dot product of 128 values plus bias; 129 float32 weights sent per training round
+S1,D4,edge (per cell),34861,68326,,per cell of the request (f_e already computed by the edge); 5.5 class prototypes per cell
+S2,D1,device,41600,66564,,pooling 128x64; whitening 128x128 matrix-vector; |M_k| distances of 128 values (whitened means stored)
+S2,D2,device,248119,477482,,pooling; normalisation; 933 dot products of 128 values; selection of the 10th largest (float32 bank)
+S2,D3,device,8321,516,516,pooling; one dot product of 128 values plus bias; 129 float32 weights sent per training round
+S2,D4,edge (per cell),34432,67755,,per cell of the request (f_e already computed by the edge); 4.3 class prototypes per cell

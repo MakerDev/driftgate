@@ -1,0 +1,12 @@
+{
+ "run": "r17_s2_replay_s0",
+ "checkpoint": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT15_replay/r15_s2_fixed040_s0_ckpt.pt",
+ "n_requests": 3353832,
+ "replay_seconds": 85.89680027961731,
+ "own_feature_seconds": 0.5809931755065918,
+ "fc3_check_max_abs": 0.0,
+ "own_samples": 44956,
+ "cell_samples": 44956,
+ "device": "cuda:1",
+ "time": "2026-10-06 01:54:46"
+}

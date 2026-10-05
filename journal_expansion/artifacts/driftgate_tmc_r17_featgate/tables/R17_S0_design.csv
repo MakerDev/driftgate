@@ -1,0 +1,12 @@
+choice,option,S1 seed 0 replay accuracy pct,
+alpha of D1,R-b D1@0.05,72.9275,
+alpha of D1,R-b D1@0.1,73.0856,chosen
+alpha of D2,R-b D2@0.05,72.9016,
+alpha of D2,R-b D2@0.1,73.0112,chosen
+primary candidate,R-b D1,73.0856,
+primary candidate,R-b D2,73.0112,
+primary candidate,R-b D3,72.7784,
+primary candidate,R-b D4,73.2917,chosen
+primary candidate,R-c D1 inf,69.6543,
+primary candidate,R-c D2 inf,68.8856,
+primary candidate,R-c D3 inf,67.3365,

@@ -1,0 +1,10 @@
+{
+ "name": "r17_s2_replay_s1",
+ "seconds": {
+  "references": 32.91189694404602,
+  "detectors": 18.03113865852356,
+  "curves_online": 195.53562664985657,
+  "total": 251.52121543884277
+ },
+ "identical": true
+}

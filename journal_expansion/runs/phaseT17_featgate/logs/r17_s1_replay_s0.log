@@ -1,0 +1,45 @@
+[r17_s1_replay_s0] scenario=S1 arm=fixed040 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=nan acc=0.8036 off=0.753 active=50 elapsed=0.0m ETA=5m
+  R  5 loss=nan acc=0.8036 off=0.753 active=50 elapsed=0.1m ETA=2m
+  R 10 loss=nan acc=0.8036 off=0.753 active=50 elapsed=0.1m ETA=1m
+  R 15 loss=nan acc=0.8036 off=0.753 active=50 elapsed=0.1m ETA=1m
+  R 20 loss=nan acc=0.8036 off=0.753 active=50 elapsed=0.1m ETA=1m
+  R 25 loss=nan acc=0.7802 off=0.771 active=50 elapsed=0.2m ETA=1m
+  R 30 loss=nan acc=0.7537 off=0.794 active=50 elapsed=0.2m ETA=1m
+  R 35 loss=nan acc=0.7119 off=0.811 active=50 elapsed=0.2m ETA=1m
+  R 40 loss=nan acc=0.6971 off=0.814 active=50 elapsed=0.3m ETA=1m
+  R 45 loss=nan acc=0.6933 off=0.816 active=50 elapsed=0.3m ETA=1m
+  R 50 loss=nan acc=0.6933 off=0.816 active=50 elapsed=0.3m ETA=1m
+  R 55 loss=nan acc=0.6880 off=0.818 active=50 elapsed=0.4m ETA=1m
+  R 60 loss=nan acc=0.6880 off=0.818 active=50 elapsed=0.4m ETA=1m
+  R 65 loss=nan acc=0.6844 off=0.819 active=50 elapsed=0.5m ETA=1m
+  R 70 loss=nan acc=0.6808 off=0.821 active=50 elapsed=0.5m ETA=1m
+  R 75 loss=nan acc=0.6767 off=0.817 active=50 elapsed=0.5m ETA=1m
+  R 80 loss=nan acc=0.6809 off=0.819 active=50 elapsed=0.6m ETA=1m
+  R 85 loss=nan acc=0.6782 off=0.821 active=50 elapsed=0.6m ETA=0m
+  R 90 loss=nan acc=0.6827 off=0.818 active=50 elapsed=0.7m ETA=0m
+  R 95 loss=nan acc=0.6811 off=0.820 active=50 elapsed=0.7m ETA=0m
+  R100 loss=nan acc=0.6848 off=0.818 active=50 elapsed=0.7m ETA=0m
+  R105 loss=nan acc=0.6879 off=0.816 active=50 elapsed=0.8m ETA=0m
+  R110 loss=nan acc=0.6849 off=0.818 active=50 elapsed=0.8m ETA=0m
+  R115 loss=nan acc=0.6933 off=0.816 active=50 elapsed=0.8m ETA=0m
+  R120 loss=nan acc=0.7005 off=0.813 active=50 elapsed=0.9m ETA=0m
+  R125 loss=nan acc=0.7150 off=0.807 active=50 elapsed=0.9m ETA=0m
+  R130 loss=nan acc=0.7376 off=0.795 active=50 elapsed=0.9m ETA=0m
+  R135 loss=nan acc=0.7728 off=0.771 active=50 elapsed=1.0m ETA=0m
+  R140 loss=nan acc=0.7842 off=0.766 active=50 elapsed=1.0m ETA=0m
+  R145 loss=nan acc=0.7986 off=0.755 active=50 elapsed=1.0m ETA=0m
+  R150 loss=nan acc=0.8036 off=0.753 active=50 elapsed=1.1m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT17_featgate/r17_s1_replay_s0.json  integrated=0.7275
+{
+ "run": "r17_s1_replay_s0",
+ "checkpoint": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT15_replay/r15_s1_fixed040_s0_ckpt.pt",
+ "n_requests": 3785930,
+ "replay_seconds": 95.97878766059875,
+ "own_feature_seconds": 0.599414587020874,
+ "fc3_check_max_abs": 0.0,
+ "own_samples": 49969,
+ "cell_samples": 49969,
+ "device": "cuda:0",
+ "time": "2026-10-06 01:35:54"
+}

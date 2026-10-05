@@ -1,0 +1,148 @@
+setting,run,rule,all pct,minus strongest other pp,minus DriftGate pp
+S1,r17_s1_replay_s1,Confidence-based offloading,71.5101,-1.3357,-0.3684
+S1,r17_s1_replay_s2,Confidence-based offloading,71.7329,-1.4037,-0.4182
+S1,r17_s1_replay_s3,Confidence-based offloading,68.1465,-1.3996,-1.3349
+S1,r17_s1_replay_s4,Confidence-based offloading,73.2008,-1.4465,-0.5832
+S1,r17_s1_replay_s1,Device only,66.4273,-6.4185,-5.4512
+S1,r17_s1_replay_s2,Device only,67.2502,-5.8864,-4.9009
+S1,r17_s1_replay_s3,Device only,65.2418,-4.3043,-4.2395
+S1,r17_s1_replay_s4,Device only,67.9687,-6.6786,-5.8153
+S1,r17_s1_replay_s1,Edge only,71.7958,-1.0500,-0.0827
+S1,r17_s1_replay_s2,Edge only,71.9126,-1.2240,-0.2385
+S1,r17_s1_replay_s3,Edge only,68.4430,-1.1031,-1.0384
+S1,r17_s1_replay_s4,Edge only,73.5348,-1.1125,-0.2492
+S1,r17_s1_replay_s1,Probability average,72.0082,-0.8376,0.1297
+S1,r17_s1_replay_s2,Probability average,72.7969,-0.3397,0.6458
+S1,r17_s1_replay_s3,Probability average,69.4297,-0.1164,-0.0517
+S1,r17_s1_replay_s4,Probability average,74.0321,-0.6152,0.2481
+S1,r17_s1_replay_s1,Logit sum,71.6537,-1.1921,-0.2248
+S1,r17_s1_replay_s2,Logit sum,72.7702,-0.3665,0.6190
+S1,r17_s1_replay_s3,Logit sum,69.3114,-0.2347,-0.1700
+S1,r17_s1_replay_s4,Logit sum,73.9083,-0.7390,0.1244
+S1,r17_s1_replay_s1,Lower-entropy exit,71.7490,-1.0968,-0.1295
+S1,r17_s1_replay_s2,Lower-entropy exit,72.0086,-1.1280,-0.1425
+S1,r17_s1_replay_s3,Lower-entropy exit,68.5960,-0.9501,-0.8854
+S1,r17_s1_replay_s4,Lower-entropy exit,73.3852,-1.2621,-0.3988
+S1,r17_s1_replay_s1,Logit-entropy weighting,71.7460,-1.0998,-0.1325
+S1,r17_s1_replay_s2,Logit-entropy weighting,72.0287,-1.1079,-0.1224
+S1,r17_s1_replay_s3,Logit-entropy weighting,68.6029,-0.9431,-0.8784
+S1,r17_s1_replay_s4,Logit-entropy weighting,73.3925,-1.2548,-0.3914
+S1,r17_s1_replay_s1,Geometric ensemble with early exit,71.6346,-1.2112,-0.2439
+S1,r17_s1_replay_s2,Geometric ensemble with early exit,72.7218,-0.4148,0.5707
+S1,r17_s1_replay_s3,Geometric ensemble with early exit,69.2847,-0.2614,-0.1966
+S1,r17_s1_replay_s4,Geometric ensemble with early exit,73.8243,-0.8230,0.0403
+S1,r17_s1_replay_s1,Label-shift EM,69.5429,-3.3029,-2.3355
+S1,r17_s1_replay_s2,Label-shift EM,70.5668,-2.5698,-1.5843
+S1,r17_s1_replay_s3,Label-shift EM,67.8684,-1.6777,-1.6129
+S1,r17_s1_replay_s4,Label-shift EM,72.3060,-2.3413,-1.4780
+S1,r17_s1_replay_s1,Learned weight,71.8713,-0.9745,-0.0072
+S1,r17_s1_replay_s2,Learned weight,72.8585,-0.2781,0.7074
+S1,r17_s1_replay_s3,Learned weight,69.0486,-0.4974,-0.4327
+S1,r17_s1_replay_s4,Learned weight,73.9909,-0.6564,0.2069
+S1,r17_s1_replay_s1,DriftGate,71.8785,-0.9673,0.0000
+S1,r17_s1_replay_s2,DriftGate,72.1511,-0.9855,0.0000
+S1,r17_s1_replay_s3,DriftGate,69.4814,-0.0647,0.0000
+S1,r17_s1_replay_s4,DriftGate,73.7840,-0.8633,0.0000
+S1,r17_s1_replay_s1,corrected edge only,72.8458,0.0000,0.9673
+S1,r17_s1_replay_s2,corrected edge only,73.1366,0.0000,0.9855
+S1,r17_s1_replay_s3,corrected edge only,69.5461,0.0000,0.0647
+S1,r17_s1_replay_s4,corrected edge only,74.6473,0.0000,0.8633
+S1,r17_s1_replay_s1,kind oracle,75.8861,3.0404,4.0077
+S1,r17_s1_replay_s2,kind oracle,77.1127,3.9761,4.9616
+S1,r17_s1_replay_s3,kind oracle,73.5632,4.0171,4.0819
+S1,r17_s1_replay_s4,kind oracle,77.7526,3.1053,3.9686
+S1,r17_s1_replay_s1,R-b D1@0.1,72.3894,-0.4564,0.5110
+S1,r17_s1_replay_s2,R-b D1@0.1,72.8376,-0.2990,0.6865
+S1,r17_s1_replay_s3,R-b D1@0.1,69.7969,0.2508,0.3156
+S1,r17_s1_replay_s4,R-b D1@0.1,74.3827,-0.2646,0.5987
+S1,r17_s1_replay_s1,R-b D2@0.1,72.2197,-0.6261,0.3412
+S1,r17_s1_replay_s2,R-b D2@0.1,72.7201,-0.4165,0.5690
+S1,r17_s1_replay_s3,R-b D2@0.1,69.7909,0.2449,0.3096
+S1,r17_s1_replay_s4,R-b D2@0.1,74.2288,-0.4185,0.4449
+S1,r17_s1_replay_s1,R-b D3,72.1172,-0.7286,0.2388
+S1,r17_s1_replay_s2,R-b D3,72.4254,-0.7112,0.2743
+S1,r17_s1_replay_s3,R-b D3,69.6400,0.0939,0.1587
+S1,r17_s1_replay_s4,R-b D3,74.0907,-0.5566,0.3067
+S1,r17_s1_replay_s1,R-b D4,72.6843,-0.1615,0.8058
+S1,r17_s1_replay_s2,R-b D4,73.0428,-0.0938,0.8917
+S1,r17_s1_replay_s3,R-b D4,69.6934,0.1473,0.2121
+S1,r17_s1_replay_s4,R-b D4,74.5284,-0.1189,0.7444
+S1,r17_s1_replay_s1,R-c D1@0.1 inf,69.6165,-3.2293,-2.2620
+S1,r17_s1_replay_s2,R-c D1@0.1 inf,70.8099,-2.3267,-1.3412
+S1,r17_s1_replay_s3,R-c D1@0.1 inf,67.9739,-1.5721,-1.5074
+S1,r17_s1_replay_s4,R-c D1@0.1 inf,71.4998,-3.1475,-2.2842
+S1,r17_s1_replay_s1,R-c D2@0.1 inf,68.7043,-4.1415,-3.1741
+S1,r17_s1_replay_s2,R-c D2@0.1 inf,70.0307,-3.1059,-2.1204
+S1,r17_s1_replay_s3,R-c D2@0.1 inf,67.1279,-2.4182,-2.3535
+S1,r17_s1_replay_s4,R-c D2@0.1 inf,70.7182,-3.9291,-3.0658
+S1,r17_s1_replay_s1,R-c D3 inf,68.1831,-4.6627,-3.6954
+S1,r17_s1_replay_s2,R-c D3 inf,69.0548,-4.0818,-3.0963
+S1,r17_s1_replay_s3,R-c D3 inf,66.6114,-2.9347,-2.8699
+S1,r17_s1_replay_s4,R-c D3 inf,69.8289,-4.8184,-3.9551
+S1,r17_s1_replay_s1,R-s D1@0.1,72.1051,-0.7407,0.2266
+S1,r17_s1_replay_s2,R-s D1@0.1,72.4674,-0.6692,0.3163
+S1,r17_s1_replay_s3,R-s D1@0.1,69.6517,0.1056,0.1703
+S1,r17_s1_replay_s4,R-s D1@0.1,74.0291,-0.6182,0.2452
+S2,r17_s2_replay_s0,Confidence-based offloading,70.4230,-3.2007,-3.3887
+S2,r17_s2_replay_s1,Confidence-based offloading,75.4849,-1.8540,-1.5277
+S2,r17_s2_replay_s2,Confidence-based offloading,78.3819,-0.4236,-0.4001
+S2,r17_s2_replay_s0,Device only,68.4451,-5.1786,-5.3666
+S2,r17_s2_replay_s1,Device only,70.3609,-6.9780,-6.6517
+S2,r17_s2_replay_s2,Device only,74.5602,-4.2452,-4.2218
+S2,r17_s2_replay_s0,Edge only,70.4311,-3.1926,-3.3806
+S2,r17_s2_replay_s1,Edge only,75.7042,-1.6346,-1.3084
+S2,r17_s2_replay_s2,Edge only,78.6762,-0.1293,-0.1059
+S2,r17_s2_replay_s0,Probability average,72.4628,-1.1609,-1.3489
+S2,r17_s2_replay_s1,Probability average,76.2125,-1.1263,-0.8000
+S2,r17_s2_replay_s2,Probability average,79.0199,0.2144,0.2379
+S2,r17_s2_replay_s0,Logit sum,72.7303,-0.8934,-1.0814
+S2,r17_s2_replay_s1,Logit sum,75.9582,-1.3806,-1.0544
+S2,r17_s2_replay_s2,Logit sum,78.8919,0.0864,0.1098
+S2,r17_s2_replay_s0,Lower-entropy exit,70.7519,-2.8718,-3.0598
+S2,r17_s2_replay_s1,Lower-entropy exit,75.7700,-1.5688,-1.2426
+S2,r17_s2_replay_s2,Lower-entropy exit,78.7233,-0.0821,-0.0587
+S2,r17_s2_replay_s0,Logit-entropy weighting,70.7609,-2.8628,-3.0509
+S2,r17_s2_replay_s1,Logit-entropy weighting,75.7785,-1.5604,-1.2341
+S2,r17_s2_replay_s2,Logit-entropy weighting,78.7264,-0.0791,-0.0556
+S2,r17_s2_replay_s0,Geometric ensemble with early exit,72.7072,-0.9165,-1.1045
+S2,r17_s2_replay_s1,Geometric ensemble with early exit,75.9289,-1.4100,-1.0837
+S2,r17_s2_replay_s2,Geometric ensemble with early exit,78.8204,0.0149,0.0383
+S2,r17_s2_replay_s0,Label-shift EM,72.6728,-0.9509,-1.1390
+S2,r17_s2_replay_s1,Label-shift EM,75.0868,-2.2520,-1.9257
+S2,r17_s2_replay_s2,Label-shift EM,76.5438,-2.2617,-2.2383
+S2,r17_s2_replay_s0,Learned weight,71.0116,-2.6121,-2.8001
+S2,r17_s2_replay_s1,Learned weight,74.3379,-3.0009,-2.6746
+S2,r17_s2_replay_s2,Learned weight,78.2478,-0.5576,-0.5342
+S2,r17_s2_replay_s0,DriftGate,73.8117,0.1880,0.0000
+S2,r17_s2_replay_s1,DriftGate,77.0126,-0.3263,0.0000
+S2,r17_s2_replay_s2,DriftGate,78.7821,-0.0234,0.0000
+S2,r17_s2_replay_s0,corrected edge only,73.6237,0.0000,-0.1880
+S2,r17_s2_replay_s1,corrected edge only,77.3388,0.0000,0.3263
+S2,r17_s2_replay_s2,corrected edge only,78.8055,0.0000,0.0234
+S2,r17_s2_replay_s0,kind oracle,75.8437,2.2200,2.0320
+S2,r17_s2_replay_s1,kind oracle,76.4296,-0.9093,-0.5830
+S2,r17_s2_replay_s2,kind oracle,80.2934,1.4879,1.5113
+S2,r17_s2_replay_s0,R-b D1@0.1,73.9307,0.3070,0.1189
+S2,r17_s2_replay_s1,R-b D1@0.1,77.3077,-0.0311,0.2951
+S2,r17_s2_replay_s2,R-b D1@0.1,79.0439,0.2385,0.2619
+S2,r17_s2_replay_s0,R-b D2@0.1,73.9971,0.3733,0.1853
+S2,r17_s2_replay_s1,R-b D2@0.1,77.1889,-0.1500,0.1763
+S2,r17_s2_replay_s2,R-b D2@0.1,78.9599,0.1544,0.1778
+S2,r17_s2_replay_s0,R-b D3,73.8683,0.2446,0.0565
+S2,r17_s2_replay_s1,R-b D3,77.1003,-0.2385,0.0878
+S2,r17_s2_replay_s2,R-b D3,78.8549,0.0494,0.0729
+S2,r17_s2_replay_s0,R-b D4,73.8074,0.1837,-0.0044
+S2,r17_s2_replay_s1,R-b D4,77.3432,0.0044,0.3306
+S2,r17_s2_replay_s2,R-b D4,78.9824,0.1769,0.2004
+S2,r17_s2_replay_s0,R-c D1@0.1 inf,71.4025,-2.2212,-2.4092
+S2,r17_s2_replay_s1,R-c D1@0.1 inf,74.3125,-3.0264,-2.7001
+S2,r17_s2_replay_s2,R-c D1@0.1 inf,77.9408,-0.8647,-0.8413
+S2,r17_s2_replay_s0,R-c D2@0.1 inf,70.3966,-3.2271,-3.4151
+S2,r17_s2_replay_s1,R-c D2@0.1 inf,72.3810,-4.9579,-4.6316
+S2,r17_s2_replay_s2,R-c D2@0.1 inf,76.4291,-2.3764,-2.3530
+S2,r17_s2_replay_s0,R-c D3 inf,69.4562,-4.1675,-4.3555
+S2,r17_s2_replay_s1,R-c D3 inf,71.6098,-5.7290,-5.4027
+S2,r17_s2_replay_s2,R-c D3 inf,75.5286,-3.2769,-3.2535
+S2,r17_s2_replay_s0,R-s D1@0.1,73.9058,0.2821,0.0940
+S2,r17_s2_replay_s1,R-s D1@0.1,77.1504,-0.1884,0.1378
+S2,r17_s2_replay_s2,R-s D1@0.1,78.9143,0.1089,0.1323

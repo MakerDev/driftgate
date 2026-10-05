@@ -1,0 +1,11 @@
+setting,run,DriftGate replay accuracy pct,Round 15 value,replay arrays bit-identical to Round 15,check
+S1,r17_s1_replay_s0,72.4387,72.4387,True,
+S1,r17_s1_replay_s1,71.8785,71.8785,True,
+S1,r17_s1_replay_s2,72.1511,72.1511,True,
+S1,r17_s1_replay_s3,69.4814,69.4814,True,
+S1,r17_s1_replay_s4,73.7840,73.7840,True,
+S1,seed mean,71.9467,71.9467 (table A2: 71.95),,within 0.05 pp
+S2,r17_s2_replay_s0,73.8117,73.8117,True,
+S2,r17_s2_replay_s1,77.0126,77.0126,True,
+S2,r17_s2_replay_s2,78.7821,78.7821,True,
+S2,seed mean,76.5354,76.5354 (table A2: 76.54),,within 0.05 pp

@@ -1,0 +1,25 @@
+table,method,rows,rows with difference >= 0,minimum difference pp,row of the minimum,all rows tied,judgement
+basic,DriftGate,42,6,-1.852214,ResNet-18|day1_early,,NO_GO
+basic,S-A,42,27,-3.830886,partial participation|day1_early,,NO_GO
+basic,S-B0,42,8,-6.453406,partial participation|day1_early,,NO_GO
+basic,S-B5,42,6,-3.329442,partial participation|day1_early,,NO_GO
+basic,S-Bg,42,16,-5.251510,partial participation|day1_early,,NO_GO
+basic,S-C,42,26,-5.733910,partial participation|day1_early,,NO_GO
+supplementary,DriftGate,8,2,-0.721241,S2 (Round 12 record)|day1_early,,NO_GO
+supplementary,S-A,8,7,-0.391737,S1 (Round 12 record)|day1_early,,NO_GO
+supplementary,S-B0,8,1,-2.035026,S1 (Round 12 record)|day1_early,,NO_GO
+supplementary,S-B5,8,3,-1.083862,S1 (Round 12 record)|day1_gt50,,NO_GO
+supplementary,S-Bg,8,4,-0.926663,S1 (Round 12 record)|day1_early,,NO_GO
+supplementary,S-C,8,6,-1.302331,S1 (Round 12 record)|day1_early,,NO_GO
+time,DriftGate,20,6,-1.608184,S1 replay|daytime,,NO_GO
+time,S-A,20,11,-1.523937,S1|evening,,NO_GO
+time,S-B0,20,10,-1.874488,S1|pre-commute,,NO_GO
+time,S-B5,20,1,-2.255255,S1 replay|daytime,,NO_GO
+time,S-Bg,20,15,-1.079727,S1|commute,,NO_GO
+time,S-C,20,16,-1.165948,S1|commute,,NO_GO
+online,DriftGate (DriftGate-P),4,2,-0.346804,S1 replay|replay_full|online beta 0.5,,NO_GO
+online,S-A,4,4,0.243204,S1|day1_full|online beta 0.5,,PASS
+online,S-B0,4,2,-0.677909,S2|day1_full|online beta 0.5,,NO_GO
+online,S-B5,4,0,-0.296566,S1 replay|replay_full|online beta 0.5,,NO_GO
+online,S-Bg,4,2,-0.352857,S2|day1_full|online beta 0.5,,NO_GO
+online,S-C,4,2,-0.492420,S2|day1_full|online beta 0.5,,NO_GO

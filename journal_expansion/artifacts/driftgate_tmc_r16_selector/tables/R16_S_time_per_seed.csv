@@ -1,0 +1,481 @@
+table,row_id,setting,period,window,method,run,accuracy_pct,strongest reference,strongest_accuracy_pct,difference_pp,driftgate_accuracy_pct
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,r15_s1_fixed040_s0,75.095133,correction + product,75.471343,-0.376209,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,r15_s1_fixed040_s1,74.045826,correction + product,74.452823,-0.406997,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,r15_s1_fixed040_s2,73.129765,correction + product,73.546296,-0.416531,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,r15_s1_fixed040_s3,67.552139,correction + product,67.788371,-0.236232,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,r15_s1_fixed040_s4,74.569396,correction + product,75.189083,-0.619687,74.569396
+time,S1|pre-commute,S1,day1,pre-commute,S-A,r15_s1_fixed040_s0,74.304460,correction + product,75.471343,-1.166883,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,S-A,r15_s1_fixed040_s1,73.973228,correction + product,74.452823,-0.479595,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,S-A,r15_s1_fixed040_s2,73.199602,correction + product,73.546296,-0.346693,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,S-A,r15_s1_fixed040_s3,68.927372,correction + product,67.788371,1.139001,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,S-A,r15_s1_fixed040_s4,74.393761,correction + product,75.189083,-0.795322,74.569396
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,r15_s1_fixed040_s0,72.530436,correction + product,75.471343,-2.940907,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,r15_s1_fixed040_s1,73.166518,correction + product,74.452823,-1.286305,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,r15_s1_fixed040_s2,71.679928,correction + product,73.546296,-1.866367,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,r15_s1_fixed040_s3,67.016721,correction + product,67.788371,-0.771650,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,r15_s1_fixed040_s4,72.681873,correction + product,75.189083,-2.507211,74.569396
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,r15_s1_fixed040_s0,74.509948,correction + product,75.471343,-0.961395,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,r15_s1_fixed040_s1,73.880996,correction + product,74.452823,-0.571827,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,r15_s1_fixed040_s2,72.471105,correction + product,73.546296,-1.075190,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,r15_s1_fixed040_s3,67.957930,correction + product,67.788371,0.169559,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,r15_s1_fixed040_s4,74.250705,correction + product,75.189083,-0.938378,74.569396
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,r15_s1_fixed040_s0,74.564185,correction + product,75.471343,-0.907158,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,r15_s1_fixed040_s1,73.694105,correction + product,74.452823,-0.758718,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,r15_s1_fixed040_s2,72.531197,correction + product,73.546296,-1.015098,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,r15_s1_fixed040_s3,68.260471,correction + product,67.788371,0.472100,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,r15_s1_fixed040_s4,73.857162,correction + product,75.189083,-1.331922,74.569396
+time,S1|pre-commute,S1,day1,pre-commute,S-C,r15_s1_fixed040_s0,74.176455,correction + product,75.471343,-1.294888,75.095133
+time,S1|pre-commute,S1,day1,pre-commute,S-C,r15_s1_fixed040_s1,73.540788,correction + product,74.452823,-0.912035,74.045826
+time,S1|pre-commute,S1,day1,pre-commute,S-C,r15_s1_fixed040_s2,72.348344,correction + product,73.546296,-1.197951,73.129765
+time,S1|pre-commute,S1,day1,pre-commute,S-C,r15_s1_fixed040_s3,67.930614,correction + product,67.788371,0.142244,67.552139
+time,S1|pre-commute,S1,day1,pre-commute,S-C,r15_s1_fixed040_s4,73.725267,correction + product,75.189083,-1.463817,74.569396
+time,S1|commute,S1,day1,commute,DriftGate,r15_s1_fixed040_s0,66.020313,correction + dev w 0.2,66.060429,-0.040115,66.020313
+time,S1|commute,S1,day1,commute,DriftGate,r15_s1_fixed040_s1,66.733189,correction + dev w 0.2,67.052746,-0.319556,66.733189
+time,S1|commute,S1,day1,commute,DriftGate,r15_s1_fixed040_s2,63.857506,correction + dev w 0.2,63.500081,0.357425,63.857506
+time,S1|commute,S1,day1,commute,DriftGate,r15_s1_fixed040_s3,59.728855,correction + dev w 0.2,59.487919,0.240936,59.728855
+time,S1|commute,S1,day1,commute,DriftGate,r15_s1_fixed040_s4,67.664687,correction + dev w 0.2,67.997606,-0.332920,67.664687
+time,S1|commute,S1,day1,commute,S-A,r15_s1_fixed040_s0,66.665836,correction + dev w 0.2,66.060429,0.605407,66.020313
+time,S1|commute,S1,day1,commute,S-A,r15_s1_fixed040_s1,67.427945,correction + dev w 0.2,67.052746,0.375199,66.733189
+time,S1|commute,S1,day1,commute,S-A,r15_s1_fixed040_s2,63.819649,correction + dev w 0.2,63.500081,0.319569,63.857506
+time,S1|commute,S1,day1,commute,S-A,r15_s1_fixed040_s3,60.015473,correction + dev w 0.2,59.487919,0.527554,59.728855
+time,S1|commute,S1,day1,commute,S-A,r15_s1_fixed040_s4,67.941721,correction + dev w 0.2,67.997606,-0.055885,67.664687
+time,S1|commute,S1,day1,commute,S-B0,r15_s1_fixed040_s0,65.021960,correction + dev w 0.2,66.060429,-1.038468,66.020313
+time,S1|commute,S1,day1,commute,S-B0,r15_s1_fixed040_s1,64.953307,correction + dev w 0.2,67.052746,-2.099439,66.733189
+time,S1|commute,S1,day1,commute,S-B0,r15_s1_fixed040_s2,61.392009,correction + dev w 0.2,63.500081,-2.108071,63.857506
+time,S1|commute,S1,day1,commute,S-B0,r15_s1_fixed040_s3,57.949835,correction + dev w 0.2,59.487919,-1.538084,59.728855
+time,S1|commute,S1,day1,commute,S-B0,r15_s1_fixed040_s4,66.501087,correction + dev w 0.2,67.997606,-1.496519,67.664687
+time,S1|commute,S1,day1,commute,S-B5,r15_s1_fixed040_s0,65.344511,correction + dev w 0.2,66.060429,-0.715917,66.020313
+time,S1|commute,S1,day1,commute,S-B5,r15_s1_fixed040_s1,66.004679,correction + dev w 0.2,67.052746,-1.048067,66.733189
+time,S1|commute,S1,day1,commute,S-B5,r15_s1_fixed040_s2,63.352379,correction + dev w 0.2,63.500081,-0.147702,63.857506
+time,S1|commute,S1,day1,commute,S-B5,r15_s1_fixed040_s3,58.996871,correction + dev w 0.2,59.487919,-0.491048,59.728855
+time,S1|commute,S1,day1,commute,S-B5,r15_s1_fixed040_s4,66.940990,correction + dev w 0.2,67.997606,-1.056616,67.664687
+time,S1|commute,S1,day1,commute,S-Bg,r15_s1_fixed040_s0,65.479027,correction + dev w 0.2,66.060429,-0.581401,66.020313
+time,S1|commute,S1,day1,commute,S-Bg,r15_s1_fixed040_s1,65.511833,correction + dev w 0.2,67.052746,-1.540912,66.733189
+time,S1|commute,S1,day1,commute,S-Bg,r15_s1_fixed040_s2,62.267184,correction + dev w 0.2,63.500081,-1.232897,63.857506
+time,S1|commute,S1,day1,commute,S-Bg,r15_s1_fixed040_s3,58.630922,correction + dev w 0.2,59.487919,-0.856997,59.728855
+time,S1|commute,S1,day1,commute,S-Bg,r15_s1_fixed040_s4,66.811179,correction + dev w 0.2,67.997606,-1.186427,67.664687
+time,S1|commute,S1,day1,commute,S-C,r15_s1_fixed040_s0,65.734177,correction + dev w 0.2,66.060429,-0.326252,66.020313
+time,S1|commute,S1,day1,commute,S-C,r15_s1_fixed040_s1,65.826450,correction + dev w 0.2,67.052746,-1.226296,66.733189
+time,S1|commute,S1,day1,commute,S-C,r15_s1_fixed040_s2,61.802524,correction + dev w 0.2,63.500081,-1.697556,63.857506
+time,S1|commute,S1,day1,commute,S-C,r15_s1_fixed040_s3,58.587255,correction + dev w 0.2,59.487919,-0.900664,59.728855
+time,S1|commute,S1,day1,commute,S-C,r15_s1_fixed040_s4,66.318635,correction + dev w 0.2,67.997606,-1.678971,67.664687
+time,S1|daytime,S1,day1,daytime,DriftGate,r15_s1_fixed040_s0,63.677011,corrected edge only,64.782502,-1.105491,63.677011
+time,S1|daytime,S1,day1,daytime,DriftGate,r15_s1_fixed040_s1,63.387759,corrected edge only,64.689902,-1.302143,63.387759
+time,S1|daytime,S1,day1,daytime,DriftGate,r15_s1_fixed040_s2,63.606143,corrected edge only,64.166863,-0.560719,63.606143
+time,S1|daytime,S1,day1,daytime,DriftGate,r15_s1_fixed040_s3,59.453584,corrected edge only,59.782947,-0.329363,59.453584
+time,S1|daytime,S1,day1,daytime,DriftGate,r15_s1_fixed040_s4,66.080771,corrected edge only,66.994414,-0.913643,66.080771
+time,S1|daytime,S1,day1,daytime,S-A,r15_s1_fixed040_s0,65.243343,corrected edge only,64.782502,0.460841,63.677011
+time,S1|daytime,S1,day1,daytime,S-A,r15_s1_fixed040_s1,65.365893,corrected edge only,64.689902,0.675991,63.387759
+time,S1|daytime,S1,day1,daytime,S-A,r15_s1_fixed040_s2,64.980401,corrected edge only,64.166863,0.813538,63.606143
+time,S1|daytime,S1,day1,daytime,S-A,r15_s1_fixed040_s3,60.108755,corrected edge only,59.782947,0.325808,59.453584
+time,S1|daytime,S1,day1,daytime,S-A,r15_s1_fixed040_s4,67.063774,corrected edge only,66.994414,0.069360,66.080771
+time,S1|daytime,S1,day1,daytime,S-B0,r15_s1_fixed040_s0,64.467604,corrected edge only,64.782502,-0.314898,63.677011
+time,S1|daytime,S1,day1,daytime,S-B0,r15_s1_fixed040_s1,63.989969,corrected edge only,64.689902,-0.699933,63.387759
+time,S1|daytime,S1,day1,daytime,S-B0,r15_s1_fixed040_s2,63.969659,corrected edge only,64.166863,-0.197204,63.606143
+time,S1|daytime,S1,day1,daytime,S-B0,r15_s1_fixed040_s3,59.709956,corrected edge only,59.782947,-0.072991,59.453584
+time,S1|daytime,S1,day1,daytime,S-B0,r15_s1_fixed040_s4,66.540524,corrected edge only,66.994414,-0.453890,66.080771
+time,S1|daytime,S1,day1,daytime,S-B5,r15_s1_fixed040_s0,62.922840,corrected edge only,64.782502,-1.859661,63.677011
+time,S1|daytime,S1,day1,daytime,S-B5,r15_s1_fixed040_s1,62.674804,corrected edge only,64.689902,-2.015098,63.387759
+time,S1|daytime,S1,day1,daytime,S-B5,r15_s1_fixed040_s2,63.244550,corrected edge only,64.166863,-0.922313,63.606143
+time,S1|daytime,S1,day1,daytime,S-B5,r15_s1_fixed040_s3,59.261243,corrected edge only,59.782947,-0.521704,59.453584
+time,S1|daytime,S1,day1,daytime,S-B5,r15_s1_fixed040_s4,65.508240,corrected edge only,66.994414,-1.486173,66.080771
+time,S1|daytime,S1,day1,daytime,S-Bg,r15_s1_fixed040_s0,64.508029,corrected edge only,64.782502,-0.274473,63.677011
+time,S1|daytime,S1,day1,daytime,S-Bg,r15_s1_fixed040_s1,64.156194,corrected edge only,64.689902,-0.533708,63.387759
+time,S1|daytime,S1,day1,daytime,S-Bg,r15_s1_fixed040_s2,64.175785,corrected edge only,64.166863,0.008922,63.606143
+time,S1|daytime,S1,day1,daytime,S-Bg,r15_s1_fixed040_s3,59.803433,corrected edge only,59.782947,0.020486,59.453584
+time,S1|daytime,S1,day1,daytime,S-Bg,r15_s1_fixed040_s4,66.711149,corrected edge only,66.994414,-0.283265,66.080771
+time,S1|daytime,S1,day1,daytime,S-C,r15_s1_fixed040_s0,65.568875,corrected edge only,64.782502,0.786373,63.677011
+time,S1|daytime,S1,day1,daytime,S-C,r15_s1_fixed040_s1,65.455091,corrected edge only,64.689902,0.765189,63.387759
+time,S1|daytime,S1,day1,daytime,S-C,r15_s1_fixed040_s2,64.749942,corrected edge only,64.166863,0.583079,63.606143
+time,S1|daytime,S1,day1,daytime,S-C,r15_s1_fixed040_s3,60.230940,corrected edge only,59.782947,0.447993,59.453584
+time,S1|daytime,S1,day1,daytime,S-C,r15_s1_fixed040_s4,67.553145,corrected edge only,66.994414,0.558731,66.080771
+time,S1|return,S1,day1,return,DriftGate,r15_s1_fixed040_s0,73.620129,corrected edge only,74.143530,-0.523401,73.620129
+time,S1|return,S1,day1,return,DriftGate,r15_s1_fixed040_s1,73.338089,corrected edge only,73.930793,-0.592704,73.338089
+time,S1|return,S1,day1,return,DriftGate,r15_s1_fixed040_s2,71.057750,corrected edge only,71.606179,-0.548429,71.057750
+time,S1|return,S1,day1,return,DriftGate,r15_s1_fixed040_s3,69.409624,corrected edge only,69.510326,-0.100703,69.409624
+time,S1|return,S1,day1,return,DriftGate,r15_s1_fixed040_s4,74.115183,corrected edge only,74.768198,-0.653015,74.115183
+time,S1|return,S1,day1,return,S-A,r15_s1_fixed040_s0,74.140798,corrected edge only,74.143530,-0.002731,73.620129
+time,S1|return,S1,day1,return,S-A,r15_s1_fixed040_s1,73.756937,corrected edge only,73.930793,-0.173856,73.338089
+time,S1|return,S1,day1,return,S-A,r15_s1_fixed040_s2,71.421891,corrected edge only,71.606179,-0.184288,71.057750
+time,S1|return,S1,day1,return,S-A,r15_s1_fixed040_s3,69.735196,corrected edge only,69.510326,0.224870,69.409624
+time,S1|return,S1,day1,return,S-A,r15_s1_fixed040_s4,74.183509,corrected edge only,74.768198,-0.584689,74.115183
+time,S1|return,S1,day1,return,S-B0,r15_s1_fixed040_s0,74.274634,corrected edge only,74.143530,0.131104,73.620129
+time,S1|return,S1,day1,return,S-B0,r15_s1_fixed040_s1,73.650269,corrected edge only,73.930793,-0.280523,73.338089
+time,S1|return,S1,day1,return,S-B0,r15_s1_fixed040_s2,71.376139,corrected edge only,71.606179,-0.230040,71.057750
+time,S1|return,S1,day1,return,S-B0,r15_s1_fixed040_s3,70.172488,corrected edge only,69.510326,0.662162,69.409624
+time,S1|return,S1,day1,return,S-B0,r15_s1_fixed040_s4,74.562759,corrected edge only,74.768198,-0.205439,74.115183
+time,S1|return,S1,day1,return,S-B5,r15_s1_fixed040_s0,73.041037,corrected edge only,74.143530,-1.102492,73.620129
+time,S1|return,S1,day1,return,S-B5,r15_s1_fixed040_s1,72.731010,corrected edge only,73.930793,-1.199783,73.338089
+time,S1|return,S1,day1,return,S-B5,r15_s1_fixed040_s2,70.546669,corrected edge only,71.606179,-1.059510,71.057750
+time,S1|return,S1,day1,return,S-B5,r15_s1_fixed040_s3,69.672977,corrected edge only,69.510326,0.162650,69.409624
+time,S1|return,S1,day1,return,S-B5,r15_s1_fixed040_s4,73.589259,corrected edge only,74.768198,-1.178939,74.115183
+time,S1|return,S1,day1,return,S-Bg,r15_s1_fixed040_s0,74.362364,corrected edge only,74.143530,0.218834,73.620129
+time,S1|return,S1,day1,return,S-Bg,r15_s1_fixed040_s1,73.849756,corrected edge only,73.930793,-0.081037,73.338089
+time,S1|return,S1,day1,return,S-Bg,r15_s1_fixed040_s2,71.458784,corrected edge only,71.606179,-0.147395,71.057750
+time,S1|return,S1,day1,return,S-Bg,r15_s1_fixed040_s3,70.137106,corrected edge only,69.510326,0.626779,69.409624
+time,S1|return,S1,day1,return,S-Bg,r15_s1_fixed040_s4,74.789004,corrected edge only,74.768198,0.020806,74.115183
+time,S1|return,S1,day1,return,S-C,r15_s1_fixed040_s0,75.256715,corrected edge only,74.143530,1.113185,73.620129
+time,S1|return,S1,day1,return,S-C,r15_s1_fixed040_s1,74.440291,corrected edge only,73.930793,0.509498,73.338089
+time,S1|return,S1,day1,return,S-C,r15_s1_fixed040_s2,71.887532,corrected edge only,71.606179,0.281353,71.057750
+time,S1|return,S1,day1,return,S-C,r15_s1_fixed040_s3,70.531337,corrected edge only,69.510326,1.021011,69.409624
+time,S1|return,S1,day1,return,S-C,r15_s1_fixed040_s4,75.091101,corrected edge only,74.768198,0.322903,74.115183
+time,S1|evening,S1,day1,evening,DriftGate,r15_s1_fixed040_s0,83.128840,DriftGate,83.128840,0.000000,83.128840
+time,S1|evening,S1,day1,evening,DriftGate,r15_s1_fixed040_s1,83.191670,DriftGate,83.191670,0.000000,83.191670
+time,S1|evening,S1,day1,evening,DriftGate,r15_s1_fixed040_s2,82.951135,DriftGate,82.951135,0.000000,82.951135
+time,S1|evening,S1,day1,evening,DriftGate,r15_s1_fixed040_s3,79.427962,DriftGate,79.427962,0.000000,79.427962
+time,S1|evening,S1,day1,evening,DriftGate,r15_s1_fixed040_s4,85.093876,DriftGate,85.093876,0.000000,85.093876
+time,S1|evening,S1,day1,evening,S-A,r15_s1_fixed040_s0,81.264997,DriftGate,83.128840,-1.863842,83.128840
+time,S1|evening,S1,day1,evening,S-A,r15_s1_fixed040_s1,81.675612,DriftGate,83.191670,-1.516059,83.191670
+time,S1|evening,S1,day1,evening,S-A,r15_s1_fixed040_s2,81.152895,DriftGate,82.951135,-1.798240,82.951135
+time,S1|evening,S1,day1,evening,S-A,r15_s1_fixed040_s3,79.181617,DriftGate,79.427962,-0.246345,79.427962
+time,S1|evening,S1,day1,evening,S-A,r15_s1_fixed040_s4,82.898678,DriftGate,85.093876,-2.195198,85.093876
+time,S1|evening,S1,day1,evening,S-B0,r15_s1_fixed040_s0,83.208286,DriftGate,83.128840,0.079446,83.128840
+time,S1|evening,S1,day1,evening,S-B0,r15_s1_fixed040_s1,82.995535,DriftGate,83.191670,-0.196135,83.191670
+time,S1|evening,S1,day1,evening,S-B0,r15_s1_fixed040_s2,82.852743,DriftGate,82.951135,-0.098393,82.951135
+time,S1|evening,S1,day1,evening,S-B0,r15_s1_fixed040_s3,80.182724,DriftGate,79.427962,0.754762,79.427962
+time,S1|evening,S1,day1,evening,S-B0,r15_s1_fixed040_s4,84.795057,DriftGate,85.093876,-0.298818,85.093876
+time,S1|evening,S1,day1,evening,S-B5,r15_s1_fixed040_s0,82.599505,DriftGate,83.128840,-0.529335,83.128840
+time,S1|evening,S1,day1,evening,S-B5,r15_s1_fixed040_s1,82.598169,DriftGate,83.191670,-0.593502,83.191670
+time,S1|evening,S1,day1,evening,S-B5,r15_s1_fixed040_s2,82.735384,DriftGate,82.951135,-0.215751,82.951135
+time,S1|evening,S1,day1,evening,S-B5,r15_s1_fixed040_s3,80.232415,DriftGate,79.427962,0.804453,79.427962
+time,S1|evening,S1,day1,evening,S-B5,r15_s1_fixed040_s4,84.709962,DriftGate,85.093876,-0.383914,85.093876
+time,S1|evening,S1,day1,evening,S-Bg,r15_s1_fixed040_s0,83.033608,DriftGate,83.128840,-0.095232,83.128840
+time,S1|evening,S1,day1,evening,S-Bg,r15_s1_fixed040_s1,83.290583,DriftGate,83.191670,0.098912,83.191670
+time,S1|evening,S1,day1,evening,S-Bg,r15_s1_fixed040_s2,83.165652,DriftGate,82.951135,0.214517,82.951135
+time,S1|evening,S1,day1,evening,S-Bg,r15_s1_fixed040_s3,80.620599,DriftGate,79.427962,1.192637,79.427962
+time,S1|evening,S1,day1,evening,S-Bg,r15_s1_fixed040_s4,85.229872,DriftGate,85.093876,0.135996,85.093876
+time,S1|evening,S1,day1,evening,S-C,r15_s1_fixed040_s0,82.912199,DriftGate,83.128840,-0.216641,83.128840
+time,S1|evening,S1,day1,evening,S-C,r15_s1_fixed040_s1,83.439463,DriftGate,83.191670,0.247792,83.191670
+time,S1|evening,S1,day1,evening,S-C,r15_s1_fixed040_s2,82.763499,DriftGate,82.951135,-0.187636,82.951135
+time,S1|evening,S1,day1,evening,S-C,r15_s1_fixed040_s3,80.358793,DriftGate,79.427962,0.930831,79.427962
+time,S1|evening,S1,day1,evening,S-C,r15_s1_fixed040_s4,85.181680,DriftGate,85.093876,0.087804,85.093876
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,r15_s1_replay_s0,83.138689,DriftGate,83.138689,0.000000,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,r15_s1_replay_s1,83.202258,DriftGate,83.202258,0.000000,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,r15_s1_replay_s2,83.325025,DriftGate,83.325025,0.000000,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,r15_s1_replay_s3,78.955360,DriftGate,78.955360,0.000000,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,r15_s1_replay_s4,84.111757,DriftGate,84.111757,0.000000,84.111757
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,r15_s1_replay_s0,82.366547,DriftGate,83.138689,-0.772141,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,r15_s1_replay_s1,82.457522,DriftGate,83.202258,-0.744736,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,r15_s1_replay_s2,82.437212,DriftGate,83.325025,-0.887813,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,r15_s1_replay_s3,78.946961,DriftGate,78.955360,-0.008399,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,r15_s1_replay_s4,83.142441,DriftGate,84.111757,-0.969316,84.111757
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,r15_s1_replay_s0,83.116652,DriftGate,83.138689,-0.022037,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,r15_s1_replay_s1,83.156035,DriftGate,83.202258,-0.046223,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,r15_s1_replay_s2,83.212909,DriftGate,83.325025,-0.112116,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,r15_s1_replay_s3,79.601166,DriftGate,78.955360,0.645806,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,r15_s1_replay_s4,84.122192,DriftGate,84.111757,0.010435,84.111757
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,r15_s1_replay_s0,82.642697,DriftGate,83.138689,-0.495991,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,r15_s1_replay_s1,82.873265,DriftGate,83.202258,-0.328994,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,r15_s1_replay_s2,83.079632,DriftGate,83.325025,-0.245393,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,r15_s1_replay_s3,79.710291,DriftGate,78.955360,0.754931,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,r15_s1_replay_s4,83.888956,DriftGate,84.111757,-0.222801,84.111757
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,r15_s1_replay_s0,83.677802,DriftGate,83.138689,0.539114,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,r15_s1_replay_s1,83.712473,DriftGate,83.202258,0.510215,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,r15_s1_replay_s2,83.840419,DriftGate,83.325025,0.515394,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,r15_s1_replay_s3,80.333381,DriftGate,78.955360,1.378021,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,r15_s1_replay_s4,84.727712,DriftGate,84.111757,0.615955,84.111757
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,r15_s1_replay_s0,84.065913,DriftGate,83.138689,0.927224,83.138689
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,r15_s1_replay_s1,84.098080,DriftGate,83.202258,0.895822,83.202258
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,r15_s1_replay_s2,84.161958,DriftGate,83.325025,0.836933,83.325025
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,r15_s1_replay_s3,80.596403,DriftGate,78.955360,1.641043,78.955360
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,r15_s1_replay_s4,84.954967,DriftGate,84.111757,0.843210,84.111757
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,r15_s1_replay_s0,70.070142,corrected edge only,71.409366,-1.339224,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,r15_s1_replay_s1,69.475769,corrected edge only,70.719623,-1.243854,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,r15_s1_replay_s2,68.758118,corrected edge only,70.233146,-1.475028,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,r15_s1_replay_s3,66.203557,corrected edge only,66.632999,-0.429442,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,r15_s1_replay_s4,71.488155,corrected edge only,72.625791,-1.137636,71.488155
+time,S1 replay|commute,S1 replay,replay,commute,S-A,r15_s1_replay_s0,72.791048,corrected edge only,71.409366,1.381682,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,S-A,r15_s1_replay_s1,71.962644,corrected edge only,70.719623,1.243020,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,S-A,r15_s1_replay_s2,70.681110,corrected edge only,70.233146,0.447964,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,S-A,r15_s1_replay_s3,67.691729,corrected edge only,66.632999,1.058729,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,S-A,r15_s1_replay_s4,73.021518,corrected edge only,72.625791,0.395726,71.488155
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,r15_s1_replay_s0,71.575001,corrected edge only,71.409366,0.165634,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,r15_s1_replay_s1,70.741498,corrected edge only,70.719623,0.021875,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,r15_s1_replay_s2,70.008101,corrected edge only,70.233146,-0.225045,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,r15_s1_replay_s3,66.990771,corrected edge only,66.632999,0.357772,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,r15_s1_replay_s4,72.686390,corrected edge only,72.625791,0.060598,71.488155
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,r15_s1_replay_s0,69.326559,corrected edge only,71.409366,-2.082808,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,r15_s1_replay_s1,69.033328,corrected edge only,70.719623,-1.686295,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,r15_s1_replay_s2,68.588709,corrected edge only,70.233146,-1.644437,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,r15_s1_replay_s3,66.057238,corrected edge only,66.632999,-0.575761,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,r15_s1_replay_s4,71.180307,corrected edge only,72.625791,-1.445485,71.488155
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,r15_s1_replay_s0,71.902528,corrected edge only,71.409366,0.493162,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,r15_s1_replay_s1,71.162104,corrected edge only,70.719623,0.442481,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,r15_s1_replay_s2,70.398238,corrected edge only,70.233146,0.165092,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,r15_s1_replay_s3,67.473725,corrected edge only,66.632999,0.840726,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,r15_s1_replay_s4,73.101909,corrected edge only,72.625791,0.476117,71.488155
+time,S1 replay|commute,S1 replay,replay,commute,S-C,r15_s1_replay_s0,74.018208,corrected edge only,71.409366,2.608842,70.070142
+time,S1 replay|commute,S1 replay,replay,commute,S-C,r15_s1_replay_s1,72.948091,corrected edge only,70.719623,2.228468,69.475769
+time,S1 replay|commute,S1 replay,replay,commute,S-C,r15_s1_replay_s2,71.635241,corrected edge only,70.233146,1.402094,68.758118
+time,S1 replay|commute,S1 replay,replay,commute,S-C,r15_s1_replay_s3,68.994288,corrected edge only,66.632999,2.361288,66.203557
+time,S1 replay|commute,S1 replay,replay,commute,S-C,r15_s1_replay_s4,74.248556,corrected edge only,72.625791,1.622765,71.488155
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,r15_s1_replay_s0,66.077002,no correction + adaptive w,68.700000,-2.622998,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,r15_s1_replay_s1,64.707140,no correction + adaptive w,66.302706,-1.595567,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,r15_s1_replay_s2,66.111567,no correction + adaptive w,67.722525,-1.610958,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,r15_s1_replay_s3,63.662777,no correction + adaptive w,64.447881,-0.785104,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,r15_s1_replay_s4,67.733779,no correction + adaptive w,69.160073,-1.426294,67.733779
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,r15_s1_replay_s0,69.829914,no correction + adaptive w,68.700000,1.129914,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,r15_s1_replay_s1,68.386868,no correction + adaptive w,66.302706,2.084161,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,r15_s1_replay_s2,68.692963,no correction + adaptive w,67.722525,0.970438,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,r15_s1_replay_s3,65.563726,no correction + adaptive w,64.447881,1.115845,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,r15_s1_replay_s4,70.238908,no correction + adaptive w,69.160073,1.078836,67.733779
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,r15_s1_replay_s0,67.870536,no correction + adaptive w,68.700000,-0.829464,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,r15_s1_replay_s1,66.262098,no correction + adaptive w,66.302706,-0.040608,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,r15_s1_replay_s2,67.849858,no correction + adaptive w,67.722525,0.127334,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,r15_s1_replay_s3,64.464652,no correction + adaptive w,64.447881,0.016770,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,r15_s1_replay_s4,69.376191,no correction + adaptive w,69.160073,0.216119,67.733779
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,r15_s1_replay_s0,65.055832,no correction + adaptive w,68.700000,-3.644168,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,r15_s1_replay_s1,63.969687,no correction + adaptive w,66.302706,-2.333019,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,r15_s1_replay_s2,65.564022,no correction + adaptive w,67.722525,-2.158503,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,r15_s1_replay_s3,63.250005,no correction + adaptive w,64.447881,-1.197876,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,r15_s1_replay_s4,67.217362,no correction + adaptive w,69.160073,-1.942711,67.733779
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,r15_s1_replay_s0,68.088367,no correction + adaptive w,68.700000,-0.611633,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,r15_s1_replay_s1,66.611022,no correction + adaptive w,66.302706,0.308315,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,r15_s1_replay_s2,68.157182,no correction + adaptive w,67.722525,0.434657,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,r15_s1_replay_s3,64.879367,no correction + adaptive w,64.447881,0.431485,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,r15_s1_replay_s4,69.660155,no correction + adaptive w,69.160073,0.500082,67.733779
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,r15_s1_replay_s0,70.996037,no correction + adaptive w,68.700000,2.296036,66.077002
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,r15_s1_replay_s1,69.465288,no correction + adaptive w,66.302706,3.162582,64.707140
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,r15_s1_replay_s2,69.967040,no correction + adaptive w,67.722525,2.244515,66.111567
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,r15_s1_replay_s3,66.882355,no correction + adaptive w,64.447881,2.434474,63.662777
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,r15_s1_replay_s4,71.607587,no correction + adaptive w,69.160073,2.447515,67.733779
+time,S1 replay|return,S1 replay,replay,return,DriftGate,r15_s1_replay_s0,73.443654,corrected edge only,74.417480,-0.973826,73.443654
+time,S1 replay|return,S1 replay,replay,return,DriftGate,r15_s1_replay_s1,73.921067,corrected edge only,74.698958,-0.777892,73.921067
+time,S1 replay|return,S1 replay,replay,return,DriftGate,r15_s1_replay_s2,72.623672,corrected edge only,73.565734,-0.942062,72.623672
+time,S1 replay|return,S1 replay,replay,return,DriftGate,r15_s1_replay_s3,71.384111,corrected edge only,71.250547,0.133564,71.384111
+time,S1 replay|return,S1 replay,replay,return,DriftGate,r15_s1_replay_s4,74.532086,corrected edge only,75.343473,-0.811387,74.532086
+time,S1 replay|return,S1 replay,replay,return,S-A,r15_s1_replay_s0,75.231233,corrected edge only,74.417480,0.813753,73.443654
+time,S1 replay|return,S1 replay,replay,return,S-A,r15_s1_replay_s1,75.401366,corrected edge only,74.698958,0.702407,73.921067
+time,S1 replay|return,S1 replay,replay,return,S-A,r15_s1_replay_s2,73.809808,corrected edge only,73.565734,0.244074,72.623672
+time,S1 replay|return,S1 replay,replay,return,S-A,r15_s1_replay_s3,72.142442,corrected edge only,71.250547,0.891895,71.384111
+time,S1 replay|return,S1 replay,replay,return,S-A,r15_s1_replay_s4,75.500543,corrected edge only,75.343473,0.157070,74.532086
+time,S1 replay|return,S1 replay,replay,return,S-B0,r15_s1_replay_s0,74.516265,corrected edge only,74.417480,0.098785,73.443654
+time,S1 replay|return,S1 replay,replay,return,S-B0,r15_s1_replay_s1,74.663745,corrected edge only,74.698958,-0.035213,73.921067
+time,S1 replay|return,S1 replay,replay,return,S-B0,r15_s1_replay_s2,73.565158,corrected edge only,73.565734,-0.000576,72.623672
+time,S1 replay|return,S1 replay,replay,return,S-B0,r15_s1_replay_s3,71.990383,corrected edge only,71.250547,0.739837,71.384111
+time,S1 replay|return,S1 replay,replay,return,S-B0,r15_s1_replay_s4,75.415237,corrected edge only,75.343473,0.071763,74.532086
+time,S1 replay|return,S1 replay,replay,return,S-B5,r15_s1_replay_s0,72.620309,corrected edge only,74.417480,-1.797170,73.443654
+time,S1 replay|return,S1 replay,replay,return,S-B5,r15_s1_replay_s1,73.337802,corrected edge only,74.698958,-1.361157,73.921067
+time,S1 replay|return,S1 replay,replay,return,S-B5,r15_s1_replay_s2,72.035579,corrected edge only,73.565734,-1.530155,72.623672
+time,S1 replay|return,S1 replay,replay,return,S-B5,r15_s1_replay_s3,71.454871,corrected edge only,71.250547,0.204325,71.384111
+time,S1 replay|return,S1 replay,replay,return,S-B5,r15_s1_replay_s4,73.984491,corrected edge only,75.343473,-1.358982,74.532086
+time,S1 replay|return,S1 replay,replay,return,S-Bg,r15_s1_replay_s0,74.887904,corrected edge only,74.417480,0.470424,73.443654
+time,S1 replay|return,S1 replay,replay,return,S-Bg,r15_s1_replay_s1,75.159414,corrected edge only,74.698958,0.460455,73.921067
+time,S1 replay|return,S1 replay,replay,return,S-Bg,r15_s1_replay_s2,74.058349,corrected edge only,73.565734,0.492615,72.623672
+time,S1 replay|return,S1 replay,replay,return,S-Bg,r15_s1_replay_s3,72.636030,corrected edge only,71.250547,1.385484,71.384111
+time,S1 replay|return,S1 replay,replay,return,S-Bg,r15_s1_replay_s4,75.902828,corrected edge only,75.343473,0.559355,74.532086
+time,S1 replay|return,S1 replay,replay,return,S-C,r15_s1_replay_s0,76.760625,corrected edge only,74.417480,2.343145,73.443654
+time,S1 replay|return,S1 replay,replay,return,S-C,r15_s1_replay_s1,76.827185,corrected edge only,74.698958,2.128226,73.921067
+time,S1 replay|return,S1 replay,replay,return,S-C,r15_s1_replay_s2,75.264514,corrected edge only,73.565734,1.698780,72.623672
+time,S1 replay|return,S1 replay,replay,return,S-C,r15_s1_replay_s3,73.761292,corrected edge only,71.250547,2.510745,71.384111
+time,S1 replay|return,S1 replay,replay,return,S-C,r15_s1_replay_s4,77.067507,corrected edge only,75.343473,1.724034,74.532086
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,r15_s1_replay_s0,83.411896,DriftGate,83.411896,0.000000,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,r15_s1_replay_s1,83.198325,DriftGate,83.198325,0.000000,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,r15_s1_replay_s2,83.254600,DriftGate,83.254600,0.000000,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,r15_s1_replay_s3,79.727470,DriftGate,79.727470,0.000000,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,r15_s1_replay_s4,84.474238,DriftGate,84.474238,0.000000,84.474238
+time,S1 replay|evening,S1 replay,replay,evening,S-A,r15_s1_replay_s0,82.422115,DriftGate,83.411896,-0.989780,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,S-A,r15_s1_replay_s1,82.259080,DriftGate,83.198325,-0.939245,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,S-A,r15_s1_replay_s2,82.199488,DriftGate,83.254600,-1.055112,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,S-A,r15_s1_replay_s3,79.645608,DriftGate,79.727470,-0.081863,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,S-A,r15_s1_replay_s4,83.216619,DriftGate,84.474238,-1.257620,84.474238
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,r15_s1_replay_s0,83.378640,DriftGate,83.411896,-0.033256,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,r15_s1_replay_s1,83.129957,DriftGate,83.198325,-0.068368,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,r15_s1_replay_s2,83.061576,DriftGate,83.254600,-0.193023,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,r15_s1_replay_s3,80.488793,DriftGate,79.727470,0.761323,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,r15_s1_replay_s4,84.431036,DriftGate,84.474238,-0.043202,84.474238
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,r15_s1_replay_s0,82.819483,DriftGate,83.411896,-0.592412,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,r15_s1_replay_s1,82.780054,DriftGate,83.198325,-0.418271,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,r15_s1_replay_s2,82.925917,DriftGate,83.254600,-0.328683,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,r15_s1_replay_s3,80.640845,DriftGate,79.727470,0.913375,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,r15_s1_replay_s4,84.179936,DriftGate,84.474238,-0.294302,84.474238
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,r15_s1_replay_s0,84.063005,DriftGate,83.411896,0.651109,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,r15_s1_replay_s1,83.787919,DriftGate,83.198325,0.589594,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,r15_s1_replay_s2,83.837866,DriftGate,83.254600,0.583267,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,r15_s1_replay_s3,81.366421,DriftGate,79.727470,1.638951,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,r15_s1_replay_s4,85.176290,DriftGate,84.474238,0.702051,84.474238
+time,S1 replay|evening,S1 replay,replay,evening,S-C,r15_s1_replay_s0,84.540564,DriftGate,83.411896,1.128668,83.411896
+time,S1 replay|evening,S1 replay,replay,evening,S-C,r15_s1_replay_s1,84.278016,DriftGate,83.198325,1.079691,83.198325
+time,S1 replay|evening,S1 replay,replay,evening,S-C,r15_s1_replay_s2,84.211632,DriftGate,83.254600,0.957033,83.254600
+time,S1 replay|evening,S1 replay,replay,evening,S-C,r15_s1_replay_s3,81.595210,DriftGate,79.727470,1.867739,79.727470
+time,S1 replay|evening,S1 replay,replay,evening,S-C,r15_s1_replay_s4,85.462432,DriftGate,84.474238,0.988194,84.474238
+time,S2|pre-commute,S2,day1,pre-commute,DriftGate,r15_s2_fixed040_s0,69.725828,Device only,69.421793,0.304035,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,DriftGate,r15_s2_fixed040_s1,70.803934,Device only,70.710679,0.093255,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,DriftGate,r15_s2_fixed040_s2,69.197293,Device only,72.707917,-3.510624,69.197293
+time,S2|pre-commute,S2,day1,pre-commute,S-A,r15_s2_fixed040_s0,69.365138,Device only,69.421793,-0.056655,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,S-A,r15_s2_fixed040_s1,71.091340,Device only,70.710679,0.380660,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,S-A,r15_s2_fixed040_s2,72.202194,Device only,72.707917,-0.505723,69.197293
+time,S2|pre-commute,S2,day1,pre-commute,S-B0,r15_s2_fixed040_s0,67.509990,Device only,69.421793,-1.911803,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,S-B0,r15_s2_fixed040_s1,69.701818,Device only,70.710679,-1.008861,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,S-B0,r15_s2_fixed040_s2,70.178461,Device only,72.707917,-2.529456,69.197293
+time,S2|pre-commute,S2,day1,pre-commute,S-B5,r15_s2_fixed040_s0,69.243054,Device only,69.421793,-0.178739,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,S-B5,r15_s2_fixed040_s1,70.385692,Device only,70.710679,-0.324988,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,S-B5,r15_s2_fixed040_s2,71.194647,Device only,72.707917,-1.513270,69.197293
+time,S2|pre-commute,S2,day1,pre-commute,S-Bg,r15_s2_fixed040_s0,68.232960,Device only,69.421793,-1.188833,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,S-Bg,r15_s2_fixed040_s1,70.766350,Device only,70.710679,0.055671,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,S-Bg,r15_s2_fixed040_s2,72.130776,Device only,72.707917,-0.577141,69.197293
+time,S2|pre-commute,S2,day1,pre-commute,S-C,r15_s2_fixed040_s0,67.571912,Device only,69.421793,-1.849881,69.725828
+time,S2|pre-commute,S2,day1,pre-commute,S-C,r15_s2_fixed040_s1,70.361817,Device only,70.710679,-0.348862,70.803934
+time,S2|pre-commute,S2,day1,pre-commute,S-C,r15_s2_fixed040_s2,71.750348,Device only,72.707917,-0.957569,69.197293
+time,S2|commute,S2,day1,commute,DriftGate,r15_s2_fixed040_s0,72.765889,correction + product,72.824398,-0.058509,72.765889
+time,S2|commute,S2,day1,commute,DriftGate,r15_s2_fixed040_s1,75.284435,correction + product,75.142576,0.141859,75.284435
+time,S2|commute,S2,day1,commute,DriftGate,r15_s2_fixed040_s2,74.643288,correction + product,75.509910,-0.866622,74.643288
+time,S2|commute,S2,day1,commute,S-A,r15_s2_fixed040_s0,72.100401,correction + product,72.824398,-0.723998,72.765889
+time,S2|commute,S2,day1,commute,S-A,r15_s2_fixed040_s1,74.305674,correction + product,75.142576,-0.836903,75.284435
+time,S2|commute,S2,day1,commute,S-A,r15_s2_fixed040_s2,75.971010,correction + product,75.509910,0.461100,74.643288
+time,S2|commute,S2,day1,commute,S-B0,r15_s2_fixed040_s0,72.329301,correction + product,72.824398,-0.495097,72.765889
+time,S2|commute,S2,day1,commute,S-B0,r15_s2_fixed040_s1,74.250392,correction + product,75.142576,-0.892184,75.284435
+time,S2|commute,S2,day1,commute,S-B0,r15_s2_fixed040_s2,74.028865,correction + product,75.509910,-1.481045,74.643288
+time,S2|commute,S2,day1,commute,S-B5,r15_s2_fixed040_s0,72.943034,correction + product,72.824398,0.118636,72.765889
+time,S2|commute,S2,day1,commute,S-B5,r15_s2_fixed040_s1,74.622303,correction + product,75.142576,-0.520273,75.284435
+time,S2|commute,S2,day1,commute,S-B5,r15_s2_fixed040_s2,75.759944,correction + product,75.509910,0.250034,74.643288
+time,S2|commute,S2,day1,commute,S-Bg,r15_s2_fixed040_s0,72.653775,correction + product,72.824398,-0.170623,72.765889
+time,S2|commute,S2,day1,commute,S-Bg,r15_s2_fixed040_s1,74.949545,correction + product,75.142576,-0.193032,75.284435
+time,S2|commute,S2,day1,commute,S-Bg,r15_s2_fixed040_s2,75.625207,correction + product,75.509910,0.115297,74.643288
+time,S2|commute,S2,day1,commute,S-C,r15_s2_fixed040_s0,72.088942,correction + product,72.824398,-0.735456,72.765889
+time,S2|commute,S2,day1,commute,S-C,r15_s2_fixed040_s1,74.848060,correction + product,75.142576,-0.294516,75.284435
+time,S2|commute,S2,day1,commute,S-C,r15_s2_fixed040_s2,75.343259,correction + product,75.509910,-0.166651,74.643288
+time,S2|daytime,S2,day1,daytime,DriftGate,r15_s2_fixed040_s0,68.757016,correction + w 0.5,68.701056,0.055961,68.757016
+time,S2|daytime,S2,day1,daytime,DriftGate,r15_s2_fixed040_s1,69.518649,correction + w 0.5,69.550973,-0.032324,69.518649
+time,S2|daytime,S2,day1,daytime,DriftGate,r15_s2_fixed040_s2,71.466848,correction + w 0.5,71.664523,-0.197676,71.466848
+time,S2|daytime,S2,day1,daytime,S-A,r15_s2_fixed040_s0,68.545056,correction + w 0.5,68.701056,-0.156000,68.757016
+time,S2|daytime,S2,day1,daytime,S-A,r15_s2_fixed040_s1,70.778292,correction + w 0.5,69.550973,1.227319,69.518649
+time,S2|daytime,S2,day1,daytime,S-A,r15_s2_fixed040_s2,72.660485,correction + w 0.5,71.664523,0.995961,71.466848
+time,S2|daytime,S2,day1,daytime,S-B0,r15_s2_fixed040_s0,68.872904,correction + w 0.5,68.701056,0.171849,68.757016
+time,S2|daytime,S2,day1,daytime,S-B0,r15_s2_fixed040_s1,69.732415,correction + w 0.5,69.550973,0.181442,69.518649
+time,S2|daytime,S2,day1,daytime,S-B0,r15_s2_fixed040_s2,71.364023,correction + w 0.5,71.664523,-0.300501,71.466848
+time,S2|daytime,S2,day1,daytime,S-B5,r15_s2_fixed040_s0,68.864757,correction + w 0.5,68.701056,0.163701,68.757016
+time,S2|daytime,S2,day1,daytime,S-B5,r15_s2_fixed040_s1,69.669409,correction + w 0.5,69.550973,0.118436,69.518649
+time,S2|daytime,S2,day1,daytime,S-B5,r15_s2_fixed040_s2,71.716144,correction + w 0.5,71.664523,0.051620,71.466848
+time,S2|daytime,S2,day1,daytime,S-Bg,r15_s2_fixed040_s0,69.050520,correction + w 0.5,68.701056,0.349464,68.757016
+time,S2|daytime,S2,day1,daytime,S-Bg,r15_s2_fixed040_s1,70.370602,correction + w 0.5,69.550973,0.819630,69.518649
+time,S2|daytime,S2,day1,daytime,S-Bg,r15_s2_fixed040_s2,72.559322,correction + w 0.5,71.664523,0.894798,71.466848
+time,S2|daytime,S2,day1,daytime,S-C,r15_s2_fixed040_s0,68.730158,correction + w 0.5,68.701056,0.029102,68.757016
+time,S2|daytime,S2,day1,daytime,S-C,r15_s2_fixed040_s1,70.879829,correction + w 0.5,69.550973,1.328856,69.518649
+time,S2|daytime,S2,day1,daytime,S-C,r15_s2_fixed040_s2,73.091982,correction + w 0.5,71.664523,1.427458,71.466848
+time,S2|return,S2,day1,return,DriftGate,r15_s2_fixed040_s0,73.062557,DriftGate,73.062557,0.000000,73.062557
+time,S2|return,S2,day1,return,DriftGate,r15_s2_fixed040_s1,74.344521,DriftGate,74.344521,0.000000,74.344521
+time,S2|return,S2,day1,return,DriftGate,r15_s2_fixed040_s2,74.551616,DriftGate,74.551616,0.000000,74.551616
+time,S2|return,S2,day1,return,S-A,r15_s2_fixed040_s0,72.616762,DriftGate,73.062557,-0.445795,73.062557
+time,S2|return,S2,day1,return,S-A,r15_s2_fixed040_s1,74.921221,DriftGate,74.344521,0.576700,74.344521
+time,S2|return,S2,day1,return,S-A,r15_s2_fixed040_s2,75.149467,DriftGate,74.551616,0.597851,74.551616
+time,S2|return,S2,day1,return,S-B0,r15_s2_fixed040_s0,73.564162,DriftGate,73.062557,0.501605,73.062557
+time,S2|return,S2,day1,return,S-B0,r15_s2_fixed040_s1,73.914017,DriftGate,74.344521,-0.430504,74.344521
+time,S2|return,S2,day1,return,S-B0,r15_s2_fixed040_s2,74.651492,DriftGate,74.551616,0.099876,74.551616
+time,S2|return,S2,day1,return,S-B5,r15_s2_fixed040_s0,73.055907,DriftGate,73.062557,-0.006650,73.062557
+time,S2|return,S2,day1,return,S-B5,r15_s2_fixed040_s1,74.005783,DriftGate,74.344521,-0.338738,74.344521
+time,S2|return,S2,day1,return,S-B5,r15_s2_fixed040_s2,74.553356,DriftGate,74.551616,0.001740,74.551616
+time,S2|return,S2,day1,return,S-Bg,r15_s2_fixed040_s0,73.597589,DriftGate,73.062557,0.535032,73.062557
+time,S2|return,S2,day1,return,S-Bg,r15_s2_fixed040_s1,74.389876,DriftGate,74.344521,0.045355,74.344521
+time,S2|return,S2,day1,return,S-Bg,r15_s2_fixed040_s2,75.062716,DriftGate,74.551616,0.511100,74.551616
+time,S2|return,S2,day1,return,S-C,r15_s2_fixed040_s0,73.488537,DriftGate,73.062557,0.425981,73.062557
+time,S2|return,S2,day1,return,S-C,r15_s2_fixed040_s1,74.904393,DriftGate,74.344521,0.559872,74.344521
+time,S2|return,S2,day1,return,S-C,r15_s2_fixed040_s2,75.719779,DriftGate,74.551616,1.168163,74.551616
+time,S2|evening,S2,day1,evening,DriftGate,r15_s2_fixed040_s0,74.786059,DriftGate,74.786059,0.000000,74.786059
+time,S2|evening,S2,day1,evening,DriftGate,r15_s2_fixed040_s1,77.475348,DriftGate,77.475348,0.000000,77.475348
+time,S2|evening,S2,day1,evening,DriftGate,r15_s2_fixed040_s2,79.871751,DriftGate,79.871751,0.000000,79.871751
+time,S2|evening,S2,day1,evening,S-A,r15_s2_fixed040_s0,73.963577,DriftGate,74.786059,-0.822482,74.786059
+time,S2|evening,S2,day1,evening,S-A,r15_s2_fixed040_s1,77.636497,DriftGate,77.475348,0.161149,77.475348
+time,S2|evening,S2,day1,evening,S-A,r15_s2_fixed040_s2,79.832596,DriftGate,79.871751,-0.039156,79.871751
+time,S2|evening,S2,day1,evening,S-B0,r15_s2_fixed040_s0,75.164950,DriftGate,74.786059,0.378891,74.786059
+time,S2|evening,S2,day1,evening,S-B0,r15_s2_fixed040_s1,77.269513,DriftGate,77.475348,-0.205835,77.475348
+time,S2|evening,S2,day1,evening,S-B0,r15_s2_fixed040_s2,79.627410,DriftGate,79.871751,-0.244342,79.871751
+time,S2|evening,S2,day1,evening,S-B5,r15_s2_fixed040_s0,74.878392,DriftGate,74.786059,0.092334,74.786059
+time,S2|evening,S2,day1,evening,S-B5,r15_s2_fixed040_s1,77.015806,DriftGate,77.475348,-0.459542,77.475348
+time,S2|evening,S2,day1,evening,S-B5,r15_s2_fixed040_s2,79.336486,DriftGate,79.871751,-0.535266,79.871751
+time,S2|evening,S2,day1,evening,S-Bg,r15_s2_fixed040_s0,75.237631,DriftGate,74.786059,0.451572,74.786059
+time,S2|evening,S2,day1,evening,S-Bg,r15_s2_fixed040_s1,77.595296,DriftGate,77.475348,0.119948,77.475348
+time,S2|evening,S2,day1,evening,S-Bg,r15_s2_fixed040_s2,80.144700,DriftGate,79.871751,0.272948,79.871751
+time,S2|evening,S2,day1,evening,S-C,r15_s2_fixed040_s0,75.112609,DriftGate,74.786059,0.326550,74.786059
+time,S2|evening,S2,day1,evening,S-C,r15_s2_fixed040_s1,77.768636,DriftGate,77.475348,0.293288,77.475348
+time,S2|evening,S2,day1,evening,S-C,r15_s2_fixed040_s2,80.433718,DriftGate,79.871751,0.561967,79.871751
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,DriftGate,r15_s2_replay_s0,77.928586,DriftGate,77.928586,0.000000,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,DriftGate,r15_s2_replay_s1,82.899547,DriftGate,82.899547,0.000000,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,DriftGate,r15_s2_replay_s2,84.698997,DriftGate,84.698997,0.000000,84.698997
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-A,r15_s2_replay_s0,77.838956,DriftGate,77.928586,-0.089629,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-A,r15_s2_replay_s1,82.638997,DriftGate,82.899547,-0.260550,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-A,r15_s2_replay_s2,84.651328,DriftGate,84.698997,-0.047669,84.698997
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B0,r15_s2_replay_s0,79.040954,DriftGate,77.928586,1.112368,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B0,r15_s2_replay_s1,82.610277,DriftGate,82.899547,-0.289270,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B0,r15_s2_replay_s2,84.394215,DriftGate,84.698997,-0.304782,84.698997
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B5,r15_s2_replay_s0,78.974118,DriftGate,77.928586,1.045532,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B5,r15_s2_replay_s1,82.255371,DriftGate,82.899547,-0.644176,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B5,r15_s2_replay_s2,84.234556,DriftGate,84.698997,-0.464441,84.698997
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-Bg,r15_s2_replay_s0,79.755144,DriftGate,77.928586,1.826558,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-Bg,r15_s2_replay_s1,83.379447,DriftGate,82.899547,0.479900,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-Bg,r15_s2_replay_s2,85.357821,DriftGate,84.698997,0.658824,84.698997
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-C,r15_s2_replay_s0,79.998498,DriftGate,77.928586,2.069912,77.928586
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-C,r15_s2_replay_s1,83.863151,DriftGate,82.899547,0.963604,82.899547
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-C,r15_s2_replay_s2,85.813786,DriftGate,84.698997,1.114789,84.698997
+time,S2 replay|commute,S2 replay,replay,commute,DriftGate,r15_s2_replay_s0,75.326778,correction + dev w 0.2,75.256491,0.070287,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,DriftGate,r15_s2_replay_s1,79.453662,correction + dev w 0.2,79.630976,-0.177314,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,DriftGate,r15_s2_replay_s2,80.711799,correction + dev w 0.2,80.735305,-0.023507,80.711799
+time,S2 replay|commute,S2 replay,replay,commute,S-A,r15_s2_replay_s0,75.409952,correction + dev w 0.2,75.256491,0.153461,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,S-A,r15_s2_replay_s1,79.976125,correction + dev w 0.2,79.630976,0.345149,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,S-A,r15_s2_replay_s2,81.486130,correction + dev w 0.2,80.735305,0.750824,80.711799
+time,S2 replay|commute,S2 replay,replay,commute,S-B0,r15_s2_replay_s0,76.434060,correction + dev w 0.2,75.256491,1.177569,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,S-B0,r15_s2_replay_s1,79.453157,correction + dev w 0.2,79.630976,-0.177819,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,S-B0,r15_s2_replay_s2,80.547074,correction + dev w 0.2,80.735305,-0.188231,80.711799
+time,S2 replay|commute,S2 replay,replay,commute,S-B5,r15_s2_replay_s0,76.151769,correction + dev w 0.2,75.256491,0.895278,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,S-B5,r15_s2_replay_s1,78.840609,correction + dev w 0.2,79.630976,-0.790367,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,S-B5,r15_s2_replay_s2,80.147664,correction + dev w 0.2,80.735305,-0.587642,80.711799
+time,S2 replay|commute,S2 replay,replay,commute,S-Bg,r15_s2_replay_s0,77.176729,correction + dev w 0.2,75.256491,1.920238,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,S-Bg,r15_s2_replay_s1,80.198559,correction + dev w 0.2,79.630976,0.567584,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,S-Bg,r15_s2_replay_s2,81.628525,correction + dev w 0.2,80.735305,0.893220,80.711799
+time,S2 replay|commute,S2 replay,replay,commute,S-C,r15_s2_replay_s0,77.631254,correction + dev w 0.2,75.256491,2.374763,75.326778
+time,S2 replay|commute,S2 replay,replay,commute,S-C,r15_s2_replay_s1,81.373128,correction + dev w 0.2,79.630976,1.742152,79.453662
+time,S2 replay|commute,S2 replay,replay,commute,S-C,r15_s2_replay_s2,82.803342,correction + dev w 0.2,80.735305,2.068037,80.711799
+time,S2 replay|daytime,S2 replay,replay,daytime,DriftGate,r15_s2_replay_s0,71.394940,corrected edge only,71.490110,-0.095170,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,DriftGate,r15_s2_replay_s1,73.683313,corrected edge only,74.174185,-0.490872,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,DriftGate,r15_s2_replay_s2,75.590027,corrected edge only,75.740765,-0.150738,75.590027
+time,S2 replay|daytime,S2 replay,replay,daytime,S-A,r15_s2_replay_s0,71.617002,corrected edge only,71.490110,0.126892,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,S-A,r15_s2_replay_s1,75.268785,corrected edge only,74.174185,1.094600,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,S-A,r15_s2_replay_s2,76.904412,corrected edge only,75.740765,1.163646,75.590027
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B0,r15_s2_replay_s0,71.953576,corrected edge only,71.490110,0.463466,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B0,r15_s2_replay_s1,74.050306,corrected edge only,74.174185,-0.123879,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B0,r15_s2_replay_s2,75.280454,corrected edge only,75.740765,-0.460312,75.590027
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B5,r15_s2_replay_s0,71.203104,corrected edge only,71.490110,-0.287006,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B5,r15_s2_replay_s1,73.035690,corrected edge only,74.174185,-1.138495,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B5,r15_s2_replay_s2,74.749646,corrected edge only,75.740765,-0.991120,75.590027
+time,S2 replay|daytime,S2 replay,replay,daytime,S-Bg,r15_s2_replay_s0,72.505394,corrected edge only,71.490110,1.015284,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,S-Bg,r15_s2_replay_s1,74.635194,corrected edge only,74.174185,0.461009,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,S-Bg,r15_s2_replay_s2,76.192040,corrected edge only,75.740765,0.451275,75.590027
+time,S2 replay|daytime,S2 replay,replay,daytime,S-C,r15_s2_replay_s0,73.557174,corrected edge only,71.490110,2.067064,71.394940
+time,S2 replay|daytime,S2 replay,replay,daytime,S-C,r15_s2_replay_s1,76.476878,corrected edge only,74.174185,2.302693,73.683313
+time,S2 replay|daytime,S2 replay,replay,daytime,S-C,r15_s2_replay_s2,78.070629,corrected edge only,75.740765,2.329864,75.590027
+time,S2 replay|return,S2 replay,replay,return,DriftGate,r15_s2_replay_s0,73.529370,correction + dev w 0.2,73.586969,-0.057600,73.529370
+time,S2 replay|return,S2 replay,replay,return,DriftGate,r15_s2_replay_s1,76.264935,correction + dev w 0.2,76.593789,-0.328854,76.264935
+time,S2 replay|return,S2 replay,replay,return,DriftGate,r15_s2_replay_s2,77.826618,correction + dev w 0.2,77.855440,-0.028822,77.826618
+time,S2 replay|return,S2 replay,replay,return,S-A,r15_s2_replay_s0,73.394137,correction + dev w 0.2,73.586969,-0.192832,73.529370
+time,S2 replay|return,S2 replay,replay,return,S-A,r15_s2_replay_s1,77.317149,correction + dev w 0.2,76.593789,0.723360,76.264935
+time,S2 replay|return,S2 replay,replay,return,S-A,r15_s2_replay_s2,78.690256,correction + dev w 0.2,77.855440,0.834816,77.826618
+time,S2 replay|return,S2 replay,replay,return,S-B0,r15_s2_replay_s0,74.090489,correction + dev w 0.2,73.586969,0.503520,73.529370
+time,S2 replay|return,S2 replay,replay,return,S-B0,r15_s2_replay_s1,76.398369,correction + dev w 0.2,76.593789,-0.195420,76.264935
+time,S2 replay|return,S2 replay,replay,return,S-B0,r15_s2_replay_s2,77.467387,correction + dev w 0.2,77.855440,-0.388053,77.826618
+time,S2 replay|return,S2 replay,replay,return,S-B5,r15_s2_replay_s0,73.545069,correction + dev w 0.2,73.586969,-0.041901,73.529370
+time,S2 replay|return,S2 replay,replay,return,S-B5,r15_s2_replay_s1,75.597666,correction + dev w 0.2,76.593789,-0.996123,76.264935
+time,S2 replay|return,S2 replay,replay,return,S-B5,r15_s2_replay_s2,77.072380,correction + dev w 0.2,77.855440,-0.783060,77.826618
+time,S2 replay|return,S2 replay,replay,return,S-Bg,r15_s2_replay_s0,74.676825,correction + dev w 0.2,73.586969,1.089856,73.529370
+time,S2 replay|return,S2 replay,replay,return,S-Bg,r15_s2_replay_s1,77.017928,correction + dev w 0.2,76.593789,0.424139,76.264935
+time,S2 replay|return,S2 replay,replay,return,S-Bg,r15_s2_replay_s2,78.435113,correction + dev w 0.2,77.855440,0.579673,77.826618
+time,S2 replay|return,S2 replay,replay,return,S-C,r15_s2_replay_s0,75.505425,correction + dev w 0.2,73.586969,1.918455,73.529370
+time,S2 replay|return,S2 replay,replay,return,S-C,r15_s2_replay_s1,78.433668,correction + dev w 0.2,76.593789,1.839879,76.264935
+time,S2 replay|return,S2 replay,replay,return,S-C,r15_s2_replay_s2,79.965721,correction + dev w 0.2,77.855440,2.110281,77.826618
+time,S2 replay|evening,S2 replay,replay,evening,DriftGate,r15_s2_replay_s0,74.987247,correction + dev w 0.2,74.893631,0.093616,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,DriftGate,r15_s2_replay_s1,78.352466,correction + dev w 0.2,78.637030,-0.284564,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,DriftGate,r15_s2_replay_s2,80.786168,correction + dev w 0.2,80.743780,0.042388,80.786168
+time,S2 replay|evening,S2 replay,replay,evening,S-A,r15_s2_replay_s0,74.637147,correction + dev w 0.2,74.893631,-0.256484,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,S-A,r15_s2_replay_s1,78.766127,correction + dev w 0.2,78.637030,0.129097,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,S-A,r15_s2_replay_s2,81.019928,correction + dev w 0.2,80.743780,0.276148,80.786168
+time,S2 replay|evening,S2 replay,replay,evening,S-B0,r15_s2_replay_s0,75.303476,correction + dev w 0.2,74.893631,0.409846,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,S-B0,r15_s2_replay_s1,78.145004,correction + dev w 0.2,78.637030,-0.492026,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,S-B0,r15_s2_replay_s2,80.124548,correction + dev w 0.2,80.743780,-0.619232,80.786168
+time,S2 replay|evening,S2 replay,replay,evening,S-B5,r15_s2_replay_s0,75.083107,correction + dev w 0.2,74.893631,0.189476,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,S-B5,r15_s2_replay_s1,77.503112,correction + dev w 0.2,78.637030,-1.133918,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,S-B5,r15_s2_replay_s2,79.820202,correction + dev w 0.2,80.743780,-0.923577,80.786168
+time,S2 replay|evening,S2 replay,replay,evening,S-Bg,r15_s2_replay_s0,75.980256,correction + dev w 0.2,74.893631,1.086625,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,S-Bg,r15_s2_replay_s1,78.940496,correction + dev w 0.2,78.637030,0.303466,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,S-Bg,r15_s2_replay_s2,81.137232,correction + dev w 0.2,80.743780,0.393452,80.786168
+time,S2 replay|evening,S2 replay,replay,evening,S-C,r15_s2_replay_s0,76.641707,correction + dev w 0.2,74.893631,1.748076,74.987247
+time,S2 replay|evening,S2 replay,replay,evening,S-C,r15_s2_replay_s1,80.029305,correction + dev w 0.2,78.637030,1.392275,78.352466
+time,S2 replay|evening,S2 replay,replay,evening,S-C,r15_s2_replay_s2,82.328721,correction + dev w 0.2,80.743780,1.584941,80.786168

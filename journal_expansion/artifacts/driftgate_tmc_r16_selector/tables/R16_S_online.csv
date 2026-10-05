@@ -1,0 +1,25 @@
+table,row_id,setting,period,window,method,n_seeds,accuracy_pct mean (SD),accuracy_pct mean,strongest reference,strongest mean,difference vs strongest pp (means),difference vs strongest pp mean (SD) per seed,difference vs DriftGate pp mean (SD) per seed,row result
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,DriftGate (DriftGate-P),5,67.74 (2.27),67.739194,DriftGate (DriftGate-P),67.739194,0.000000,0.000 (0.000),0.000 (0.000),>=0
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,S-A,5,67.98 (2.24),67.982398,DriftGate (DriftGate-P),67.739194,0.243204,0.243 (0.170),0.243 (0.170),>=0
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,S-B0,5,67.22 (2.31),67.218767,DriftGate (DriftGate-P),67.739194,-0.520427,-0.520 (0.144),-0.520 (0.144),neg < -0.2
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,S-B5,5,67.57 (2.35),67.565351,DriftGate (DriftGate-P),67.739194,-0.173843,-0.174 (0.083),-0.174 (0.083),neg >= -0.2
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,S-Bg,5,67.45 (2.32),67.446985,DriftGate (DriftGate-P),67.739194,-0.292209,-0.292 (0.124),-0.292 (0.124),neg < -0.2
+online,S1|day1_full|online beta 0.5,S1,day1,day1_full,S-C,5,67.25 (2.26),67.251201,DriftGate (DriftGate-P),67.739194,-0.487993,-0.488 (0.168),-0.488 (0.168),neg < -0.2
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,DriftGate (DriftGate-P),3,71.81 (1.47),71.807301,DriftGate (DriftGate-P),71.807301,0.000000,0.000 (0.000),0.000 (0.000),>=0
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,S-A,3,72.40 (1.99),72.403877,DriftGate (DriftGate-P),71.807301,0.596575,0.597 (0.522),0.597 (0.522),>=0
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,S-B0,3,71.13 (1.72),71.129392,DriftGate (DriftGate-P),71.807301,-0.677909,-0.678 (0.266),-0.678 (0.266),neg < -0.2
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,S-B5,3,71.54 (1.59),71.542344,DriftGate (DriftGate-P),71.807301,-0.264957,-0.265 (0.122),-0.265 (0.122),neg < -0.2
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,S-Bg,3,71.45 (1.77),71.454444,DriftGate (DriftGate-P),71.807301,-0.352857,-0.353 (0.312),-0.353 (0.312),neg < -0.2
+online,S2|day1_full|online beta 0.5,S2,day1,day1_full,S-C,3,71.31 (1.89),71.314881,DriftGate (DriftGate-P),71.807301,-0.492420,-0.492 (0.423),-0.492 (0.423),neg < -0.2
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,DriftGate (DriftGate-P),5,71.21 (1.47),71.205300,corrected edge only,71.552104,-0.346804,-0.347 (0.271),0.000 (0.000),neg < -0.2
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,S-A,5,72.00 (1.51),72.003681,corrected edge only,71.552104,0.451577,0.452 (0.186),0.798 (0.222),>=0
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,S-B0,5,71.64 (1.43),71.638931,corrected edge only,71.552104,0.086827,0.087 (0.295),0.434 (0.178),>=0
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,S-B5,5,71.26 (1.38),71.255539,corrected edge only,71.552104,-0.296566,-0.297 (0.365),0.050 (0.097),neg < -0.2
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,S-Bg,5,71.82 (1.42),71.824339,corrected edge only,71.552104,0.272235,0.272 (0.311),0.619 (0.158),>=0
+online,S1 replay|replay_full|online beta 0.5,S1 replay,replay,replay_full,S-C,5,72.05 (1.37),72.050445,corrected edge only,71.552104,0.498341,0.498 (0.371),0.845 (0.237),>=0
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,DriftGate (DriftGate-P),3,76.01 (2.68),76.007125,correction + dev w 0.2,76.044533,-0.037408,-0.037 (0.115),0.000 (0.000),neg >= -0.2
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,S-A,3,76.80 (2.86),76.803253,correction + dev w 0.2,76.044533,0.758719,0.759 (0.123),0.796 (0.188),>=0
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,S-B0,3,76.17 (2.59),76.174833,correction + dev w 0.2,76.044533,0.130300,0.130 (0.200),0.168 (0.098),>=0
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,S-B5,3,75.93 (2.55),75.929478,correction + dev w 0.2,76.044533,-0.115056,-0.115 (0.363),-0.078 (0.247),neg >= -0.2
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,S-Bg,3,76.46 (2.63),76.456437,correction + dev w 0.2,76.044533,0.411904,0.412 (0.153),0.449 (0.053),>=0
+online,S2 replay|replay_full|online beta 0.5,S2 replay,replay,replay_full,S-C,3,76.72 (2.78),76.720292,correction + dev w 0.2,76.044533,0.675758,0.676 (0.038),0.713 (0.146),>=0

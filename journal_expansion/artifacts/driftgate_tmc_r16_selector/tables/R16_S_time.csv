@@ -1,0 +1,121 @@
+table,row_id,setting,period,window,method,n_seeds,accuracy_pct mean (SD),accuracy_pct mean,strongest reference,strongest mean,difference vs strongest pp (means),difference vs strongest pp mean (SD) per seed,difference vs DriftGate pp mean (SD) per seed,row result
+time,S1|pre-commute,S1,day1,pre-commute,DriftGate,5,72.88 (3.06),72.878452,correction + product,73.289583,-0.411131,-0.411 (0.137),0.000 (0.000),neg < -0.2
+time,S1|pre-commute,S1,day1,pre-commute,S-A,5,72.96 (2.30),72.959685,correction + product,73.289583,-0.329899,-0.330 (0.880),0.081 (0.794),neg < -0.2
+time,S1|pre-commute,S1,day1,pre-commute,S-B0,5,71.42 (2.52),71.415095,correction + product,73.289583,-1.874488,-1.874 (0.880),-1.463 (0.805),neg < -0.2
+time,S1|pre-commute,S1,day1,pre-commute,S-B5,5,72.61 (2.72),72.614137,correction + product,73.289583,-0.675446,-0.675 (0.509),-0.264 (0.424),neg < -0.2
+time,S1|pre-commute,S1,day1,pre-commute,S-Bg,5,72.58 (2.52),72.581424,correction + product,73.289583,-0.708159,-0.708 (0.693),-0.297 (0.577),neg < -0.2
+time,S1|pre-commute,S1,day1,pre-commute,S-C,5,72.34 (2.56),72.344294,correction + product,73.289583,-0.945289,-0.945 (0.640),-0.534 (0.534),neg < -0.2
+time,S1|commute,S1,day1,commute,DriftGate,5,64.80 (3.16),64.800910,correction + dev w 0.2,64.819756,-0.018846,-0.019 (0.316),0.000 (0.000),neg >= -0.2
+time,S1|commute,S1,day1,commute,S-A,5,65.17 (3.29),65.174125,correction + dev w 0.2,64.819756,0.354369,0.354 (0.256),0.373 (0.301),>=0
+time,S1|commute,S1,day1,commute,S-B0,5,63.16 (3.47),63.163640,correction + dev w 0.2,64.819756,-1.656116,-1.656 (0.453),-1.637 (0.583),neg < -0.2
+time,S1|commute,S1,day1,commute,S-B5,5,64.13 (3.16),64.127886,correction + dev w 0.2,64.819756,-0.691870,-0.692 (0.386),-0.673 (0.097),neg < -0.2
+time,S1|commute,S1,day1,commute,S-Bg,5,63.74 (3.31),63.740029,correction + dev w 0.2,64.819756,-1.079727,-1.080 (0.369),-1.061 (0.394),neg < -0.2
+time,S1|commute,S1,day1,commute,S-C,5,63.65 (3.36),63.653808,correction + dev w 0.2,64.819756,-1.165948,-1.166 (0.576),-1.147 (0.645),neg < -0.2
+time,S1|daytime,S1,day1,daytime,DriftGate,5,63.24 (2.39),63.241054,corrected edge only,64.083325,-0.842272,-0.842 (0.396),0.000 (0.000),neg < -0.2
+time,S1|daytime,S1,day1,daytime,S-A,5,64.55 (2.62),64.552433,corrected edge only,64.083325,0.469108,0.469 (0.292),1.311 (0.513),>=0
+time,S1|daytime,S1,day1,daytime,S-B0,5,63.74 (2.49),63.735542,corrected edge only,64.083325,-0.347783,-0.348 (0.242),0.494 (0.209),neg < -0.2
+time,S1|daytime,S1,day1,daytime,S-B5,5,62.72 (2.24),62.722336,corrected edge only,64.083325,-1.360990,-1.361 (0.630),-0.519 (0.238),neg < -0.2
+time,S1|daytime,S1,day1,daytime,S-Bg,5,63.87 (2.51),63.870918,corrected edge only,64.083325,-0.212407,-0.212 (0.232),0.630 (0.188),neg < -0.2
+time,S1|daytime,S1,day1,daytime,S-C,5,64.71 (2.71),64.711598,corrected edge only,64.083325,0.628273,0.628 (0.144),1.471 (0.529),>=0
+time,S1|return,S1,day1,return,DriftGate,5,72.31 (2.00),72.308155,corrected edge only,72.791805,-0.483650,-0.484 (0.220),0.000 (0.000),neg < -0.2
+time,S1|return,S1,day1,return,S-A,5,72.65 (1.99),72.647666,corrected edge only,72.791805,-0.144139,-0.144 (0.297),0.340 (0.168),neg >= -0.2
+time,S1|return,S1,day1,return,S-B0,5,72.81 (1.93),72.807258,corrected edge only,72.791805,0.015453,0.015 (0.396),0.499 (0.202),>=0
+time,S1|return,S1,day1,return,S-B5,5,71.92 (1.71),71.916190,corrected edge only,72.791805,-0.875615,-0.876 (0.583),-0.392 (0.368),neg < -0.2
+time,S1|return,S1,day1,return,S-Bg,5,72.92 (2.02),72.919403,corrected edge only,72.791805,0.127598,0.128 (0.311),0.611 (0.149),>=0
+time,S1|return,S1,day1,return,S-C,5,73.44 (2.12),73.441395,corrected edge only,72.791805,0.649590,0.650 (0.392),1.133 (0.305),>=0
+time,S1|evening,S1,day1,evening,DriftGate,5,82.76 (2.06),82.758697,DriftGate,82.758697,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S1|evening,S1,day1,evening,S-A,5,81.23 (1.34),81.234760,DriftGate,82.758697,-1.523937,-1.524 (0.754),-1.524 (0.754),neg < -0.2
+time,S1|evening,S1,day1,evening,S-B0,5,82.81 (1.66),82.806869,DriftGate,82.758697,0.048172,0.048 (0.419),0.048 (0.419),>=0
+time,S1|evening,S1,day1,evening,S-B5,5,82.58 (1.59),82.575087,DriftGate,82.758697,-0.183610,-0.184 (0.571),-0.184 (0.571),neg >= -0.2
+time,S1|evening,S1,day1,evening,S-Bg,5,83.07 (1.64),83.068063,DriftGate,82.758697,0.309366,0.309 (0.507),0.309 (0.507),>=0
+time,S1|evening,S1,day1,evening,S-C,5,82.93 (1.73),82.931127,DriftGate,82.758697,0.172430,0.172 (0.466),0.172 (0.466),>=0
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,DriftGate,5,82.55 (2.05),82.546618,DriftGate,82.546618,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-A,5,81.87 (1.66),81.870137,DriftGate,82.546618,-0.676481,-0.676 (0.384),-0.676 (0.384),neg < -0.2
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B0,5,82.64 (1.75),82.641791,DriftGate,82.546618,0.095173,0.095 (0.311),0.095 (0.311),>=0
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-B5,5,82.44 (1.60),82.438968,DriftGate,82.546618,-0.107650,-0.108 (0.494),-0.108 (0.494),neg >= -0.2
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-Bg,5,83.26 (1.69),83.258358,DriftGate,82.546618,0.711740,0.712 (0.375),0.712 (0.375),>=0
+time,S1 replay|pre-commute,S1 replay,replay,pre-commute,S-C,5,83.58 (1.71),83.575464,DriftGate,82.546618,1.028847,1.029 (0.344),1.029 (0.344),>=0
+time,S1 replay|commute,S1 replay,replay,commute,DriftGate,5,69.20 (1.95),69.199148,corrected edge only,70.324185,-1.125037,-1.125 (0.408),0.000 (0.000),neg < -0.2
+time,S1 replay|commute,S1 replay,replay,commute,S-A,5,71.23 (2.18),71.229610,corrected edge only,70.324185,0.905424,0.905 (0.456),2.030 (0.556),>=0
+time,S1 replay|commute,S1 replay,replay,commute,S-B0,5,70.40 (2.15),70.400352,corrected edge only,70.324185,0.076167,0.076 (0.213),1.201 (0.260),>=0
+time,S1 replay|commute,S1 replay,replay,commute,S-B5,5,68.84 (1.84),68.837228,corrected edge only,70.324185,-1.486957,-1.487 (0.559),-0.362 (0.244),neg < -0.2
+time,S1 replay|commute,S1 replay,replay,commute,S-Bg,5,70.81 (2.11),70.807701,corrected edge only,70.324185,0.483515,0.484 (0.240),1.609 (0.207),>=0
+time,S1 replay|commute,S1 replay,replay,commute,S-C,5,72.37 (2.15),72.368877,corrected edge only,70.324185,2.044691,2.045 (0.511),3.170 (0.523),>=0
+time,S1 replay|daytime,S1 replay,replay,daytime,DriftGate,5,65.66 (1.55),65.658453,no correction + adaptive w,67.266637,-1.608184,-1.608 (0.660),0.000 (0.000),neg < -0.2
+time,S1 replay|daytime,S1 replay,replay,daytime,S-A,5,68.54 (1.83),68.542476,no correction + adaptive w,67.266637,1.275839,1.276 (0.456),2.884 (0.805),>=0
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B0,5,67.16 (1.87),67.164667,no correction + adaptive w,67.266637,-0.101970,-0.102 (0.419),1.506 (0.404),neg >= -0.2
+time,S1 replay|daytime,S1 replay,replay,daytime,S-B5,5,65.01 (1.53),65.011382,no correction + adaptive w,67.266637,-2.255255,-2.255 (0.889),-0.647 (0.240),neg < -0.2
+time,S1 replay|daytime,S1 replay,replay,daytime,S-Bg,5,67.48 (1.81),67.479218,no correction + adaptive w,67.266637,0.212581,0.213 (0.466),1.821 (0.343),>=0
+time,S1 replay|daytime,S1 replay,replay,daytime,S-C,5,69.78 (1.83),69.783661,no correction + adaptive w,67.266637,2.517024,2.517 (0.371),4.125 (0.705),>=0
+time,S1 replay|return,S1 replay,replay,return,DriftGate,5,73.18 (1.22),73.180918,corrected edge only,73.855238,-0.674321,-0.674 (0.459),0.000 (0.000),neg < -0.2
+time,S1 replay|return,S1 replay,replay,return,S-A,5,74.42 (1.44),74.417078,corrected edge only,73.855238,0.561840,0.562 (0.338),1.236 (0.408),>=0
+time,S1 replay|return,S1 replay,replay,return,S-B0,5,74.03 (1.32),74.030158,corrected edge only,73.855238,0.174919,0.175 (0.320),0.849 (0.180),>=0
+time,S1 replay|return,S1 replay,replay,return,S-B5,5,72.69 (1.01),72.686611,corrected edge only,73.855238,-1.168628,-1.169 (0.788),-0.494 (0.334),neg < -0.2
+time,S1 replay|return,S1 replay,replay,return,S-Bg,5,74.53 (1.25),74.528905,corrected edge only,73.855238,0.673667,0.674 (0.400),1.348 (0.098),>=0
+time,S1 replay|return,S1 replay,replay,return,S-C,5,75.94 (1.41),75.936224,corrected edge only,73.855238,2.080986,2.081 (0.364),2.755 (0.368),>=0
+time,S1 replay|evening,S1 replay,replay,evening,DriftGate,5,82.81 (1.80),82.813306,DriftGate,82.813306,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S1 replay|evening,S1 replay,replay,evening,S-A,5,81.95 (1.35),81.948582,DriftGate,82.813306,-0.864724,-0.865 (0.454),-0.865 (0.454),neg < -0.2
+time,S1 replay|evening,S1 replay,replay,evening,S-B0,5,82.90 (1.45),82.898001,DriftGate,82.813306,0.084695,0.085 (0.384),0.085 (0.384),>=0
+time,S1 replay|evening,S1 replay,replay,evening,S-B5,5,82.67 (1.27),82.669247,DriftGate,82.813306,-0.144059,-0.144 (0.602),-0.144 (0.602),neg >= -0.2
+time,S1 replay|evening,S1 replay,replay,evening,S-Bg,5,83.65 (1.39),83.646300,DriftGate,82.813306,0.832994,0.833 (0.453),0.833 (0.453),>=0
+time,S1 replay|evening,S1 replay,replay,evening,S-C,5,84.02 (1.44),84.017571,DriftGate,82.813306,1.204265,1.204 (0.377),1.204 (0.377),>=0
+time,S2|pre-commute,S2,day1,pre-commute,DriftGate,3,69.91 (0.82),69.909018,Device only,70.946796,-1.037778,-1.038 (2.144),0.000 (0.000),neg < -0.2
+time,S2|pre-commute,S2,day1,pre-commute,S-A,3,70.89 (1.43),70.886224,Device only,70.946796,-0.060573,-0.061 (0.443),0.977 (1.786),neg >= -0.2
+time,S2|pre-commute,S2,day1,pre-commute,S-B0,3,69.13 (1.42),69.130090,Device only,70.946796,-1.816707,-1.817 (0.765),-0.779 (1.623),neg < -0.2
+time,S2|pre-commute,S2,day1,pre-commute,S-B5,3,70.27 (0.98),70.274464,Device only,70.946796,-0.672332,-0.672 (0.732),0.365 (1.414),neg < -0.2
+time,S2|pre-commute,S2,day1,pre-commute,S-Bg,3,70.38 (1.98),70.376696,Device only,70.946796,-0.570101,-0.570 (0.622),0.468 (2.256),neg < -0.2
+time,S2|pre-commute,S2,day1,pre-commute,S-C,3,69.89 (2.13),69.894692,Device only,70.946796,-1.052104,-1.052 (0.755),-0.014 (2.382),neg < -0.2
+time,S2|commute,S2,day1,commute,DriftGate,3,74.23 (1.31),74.231204,correction + product,74.492295,-0.261091,-0.261 (0.534),0.000 (0.000),neg < -0.2
+time,S2|commute,S2,day1,commute,S-A,3,74.13 (1.94),74.125695,correction + product,74.492295,-0.366600,-0.367 (0.719),-0.106 (1.251),neg < -0.2
+time,S2|commute,S2,day1,commute,S-B0,3,73.54 (1.05),73.536186,correction + product,74.492295,-0.956109,-0.956 (0.496),-0.695 (0.307),neg < -0.2
+time,S2|commute,S2,day1,commute,S-B5,3,74.44 (1.42),74.441760,correction + product,74.492295,-0.050535,-0.051 (0.412),0.211 (0.890),neg >= -0.2
+time,S2|commute,S2,day1,commute,S-Bg,3,74.41 (1.56),74.409509,correction + product,74.492295,-0.082786,-0.083 (0.172),0.178 (0.705),neg >= -0.2
+time,S2|commute,S2,day1,commute,S-C,3,74.09 (1.75),74.093420,correction + product,74.492295,-0.398875,-0.399 (0.298),-0.138 (0.735),neg < -0.2
+time,S2|daytime,S2,day1,daytime,DriftGate,3,69.91 (1.40),69.914171,correction + w 0.5,69.972184,-0.058013,-0.058 (0.129),0.000 (0.000),neg >= -0.2
+time,S2|daytime,S2,day1,daytime,S-A,3,70.66 (2.06),70.661277,correction + w 0.5,69.972184,0.689093,0.689 (0.741),0.747 (0.831),>=0
+time,S2|daytime,S2,day1,daytime,S-B0,3,69.99 (1.27),69.989781,correction + w 0.5,69.972184,0.017597,0.018 (0.276),0.076 (0.162),>=0
+time,S2|daytime,S2,day1,daytime,S-B5,3,70.08 (1.47),70.083437,correction + w 0.5,69.972184,0.111253,0.111 (0.056),0.169 (0.073),>=0
+time,S2|daytime,S2,day1,daytime,S-Bg,3,70.66 (1.77),70.660148,correction + w 0.5,69.972184,0.687964,0.688 (0.296),0.746 (0.410),>=0
+time,S2|daytime,S2,day1,daytime,S-C,3,70.90 (2.18),70.900656,correction + w 0.5,69.972184,0.928472,0.928 (0.780),0.986 (0.887),>=0
+time,S2|return,S2,day1,return,DriftGate,3,73.99 (0.81),73.986231,DriftGate,73.986231,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S2|return,S2,day1,return,S-A,3,74.23 (1.40),74.229150,DriftGate,73.986231,0.242919,0.243 (0.597),0.243 (0.597),>=0
+time,S2|return,S2,day1,return,S-B0,3,74.04 (0.56),74.043224,DriftGate,73.986231,0.056992,0.057 (0.468),0.057 (0.468),>=0
+time,S2|return,S2,day1,return,S-B5,3,73.87 (0.76),73.871682,DriftGate,73.986231,-0.114549,-0.115 (0.194),-0.115 (0.194),neg >= -0.2
+time,S2|return,S2,day1,return,S-Bg,3,74.35 (0.73),74.350061,DriftGate,73.986231,0.363829,0.364 (0.276),0.364 (0.276),>=0
+time,S2|return,S2,day1,return,S-C,3,74.70 (1.13),74.704237,DriftGate,73.986231,0.718005,0.718 (0.396),0.718 (0.396),>=0
+time,S2|evening,S2,day1,evening,DriftGate,3,77.38 (2.54),77.377720,DriftGate,77.377720,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S2|evening,S2,day1,evening,S-A,3,77.14 (2.97),77.144223,DriftGate,77.377720,-0.233496,-0.233 (0.520),-0.233 (0.520),neg < -0.2
+time,S2|evening,S2,day1,evening,S-B0,3,77.35 (2.23),77.353958,DriftGate,77.377720,-0.023762,-0.024 (0.349),-0.024 (0.349),neg >= -0.2
+time,S2|evening,S2,day1,evening,S-B5,3,77.08 (2.23),77.076895,DriftGate,77.377720,-0.300825,-0.301 (0.343),-0.301 (0.343),neg < -0.2
+time,S2|evening,S2,day1,evening,S-Bg,3,77.66 (2.45),77.659209,DriftGate,77.377720,0.281489,0.281 (0.166),0.281 (0.166),>=0
+time,S2|evening,S2,day1,evening,S-C,3,77.77 (2.66),77.771654,DriftGate,77.377720,0.393935,0.394 (0.146),0.394 (0.146),>=0
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,DriftGate,3,81.84 (3.51),81.842377,DriftGate,81.842377,0.000000,0.000 (0.000),0.000 (0.000),>=0
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-A,3,81.71 (3.50),81.709761,DriftGate,81.842377,-0.132616,-0.133 (0.113),-0.133 (0.113),neg >= -0.2
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B0,3,82.02 (2.73),82.015149,DriftGate,81.842377,0.172772,0.173 (0.814),0.173 (0.814),>=0
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-B5,3,81.82 (2.66),81.821348,DriftGate,81.842377,-0.021028,-0.021 (0.928),-0.021 (0.928),neg >= -0.2
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-Bg,3,82.83 (2.84),82.830804,DriftGate,81.842377,0.988427,0.988 (0.731),0.988 (0.731),>=0
+time,S2 replay|pre-commute,S2 replay,replay,pre-commute,S-C,3,83.23 (2.96),83.225145,DriftGate,81.842377,1.382768,1.383 (0.600),1.383 (0.600),>=0
+time,S2 replay|commute,S2 replay,replay,commute,DriftGate,3,78.50 (2.82),78.497413,correction + dev w 0.2,78.540924,-0.043511,-0.044 (0.125),0.000 (0.000),neg >= -0.2
+time,S2 replay|commute,S2 replay,replay,commute,S-A,3,78.96 (3.16),78.957402,correction + dev w 0.2,78.540924,0.416478,0.416 (0.305),0.460 (0.350),>=0
+time,S2 replay|commute,S2 replay,replay,commute,S-B0,3,78.81 (2.13),78.811430,correction + dev w 0.2,78.540924,0.270506,0.271 (0.786),0.314 (0.692),>=0
+time,S2 replay|commute,S2 replay,replay,commute,S-B5,3,78.38 (2.04),78.380014,correction + dev w 0.2,78.540924,-0.160910,-0.161 (0.920),-0.117 (0.817),neg >= -0.2
+time,S2 replay|commute,S2 replay,replay,commute,S-Bg,3,79.67 (2.27),79.667938,correction + dev w 0.2,78.540924,1.127014,1.127 (0.706),1.171 (0.595),>=0
+time,S2 replay|commute,S2 replay,replay,commute,S-C,3,80.60 (2.67),80.602575,correction + dev w 0.2,78.540924,2.061651,2.062 (0.316),2.105 (0.193),>=0
+time,S2 replay|daytime,S2 replay,replay,daytime,DriftGate,3,73.56 (2.10),73.556093,corrected edge only,73.801687,-0.245593,-0.246 (0.214),0.000 (0.000),neg < -0.2
+time,S2 replay|daytime,S2 replay,replay,daytime,S-A,3,74.60 (2.71),74.596733,corrected edge only,73.801687,0.795046,0.795 (0.580),1.041 (0.722),>=0
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B0,3,73.76 (1.68),73.761445,corrected edge only,73.801687,-0.040242,-0.040 (0.468),0.205 (0.456),neg >= -0.2
+time,S2 replay|daytime,S2 replay,replay,daytime,S-B5,3,73.00 (1.77),72.996147,corrected edge only,73.801687,-0.805540,-0.806 (0.455),-0.560 (0.333),neg < -0.2
+time,S2 replay|daytime,S2 replay,replay,daytime,S-Bg,3,74.44 (1.85),74.444209,corrected edge only,73.801687,0.642523,0.643 (0.323),0.888 (0.260),>=0
+time,S2 replay|daytime,S2 replay,replay,daytime,S-C,3,76.03 (2.29),76.034894,corrected edge only,73.801687,2.233207,2.233 (0.145),2.479 (0.316),>=0
+time,S2 replay|return,S2 replay,replay,return,DriftGate,3,75.87 (2.18),75.873641,correction + dev w 0.2,76.012066,-0.138425,-0.138 (0.166),0.000 (0.000),neg >= -0.2
+time,S2 replay|return,S2 replay,replay,return,S-A,3,76.47 (2.75),76.467181,correction + dev w 0.2,76.012066,0.455115,0.455 (0.564),0.594 (0.638),>=0
+time,S2 replay|return,S2 replay,replay,return,S-B0,3,75.99 (1.73),75.985415,correction + dev w 0.2,76.012066,-0.026651,-0.027 (0.469),0.112 (0.461),neg >= -0.2
+time,S2 replay|return,S2 replay,replay,return,S-B5,3,75.41 (1.77),75.405038,correction + dev w 0.2,76.012066,-0.607028,-0.607 (0.501),-0.469 (0.422),neg < -0.2
+time,S2 replay|return,S2 replay,replay,return,S-Bg,3,76.71 (1.90),76.709955,correction + dev w 0.2,76.012066,0.697889,0.698 (0.348),0.836 (0.279),>=0
+time,S2 replay|return,S2 replay,replay,return,S-C,3,77.97 (2.27),77.968271,correction + dev w 0.2,76.012066,1.956205,1.956 (0.139),2.095 (0.104),>=0
+time,S2 replay|evening,S2 replay,replay,evening,DriftGate,3,78.04 (2.91),78.041960,correction + dev w 0.2,78.091480,-0.049520,-0.050 (0.205),0.000 (0.000),neg >= -0.2
+time,S2 replay|evening,S2 replay,replay,evening,S-A,3,78.14 (3.24),78.141067,correction + dev w 0.2,78.091480,0.049587,0.050 (0.275),0.099 (0.399),>=0
+time,S2 replay|evening,S2 replay,replay,evening,S-B0,3,77.86 (2.42),77.857676,correction + dev w 0.2,78.091480,-0.233804,-0.234 (0.561),-0.184 (0.489),neg < -0.2
+time,S2 replay|evening,S2 replay,replay,evening,S-B5,3,77.47 (2.37),77.468807,correction + dev w 0.2,78.091480,-0.622673,-0.623 (0.711),-0.573 (0.582),neg < -0.2
+time,S2 replay|evening,S2 replay,replay,evening,S-Bg,3,78.69 (2.59),78.685995,correction + dev w 0.2,78.091480,0.594514,0.595 (0.429),0.644 (0.325),>=0
+time,S2 replay|evening,S2 replay,replay,evening,S-C,3,79.67 (2.86),79.666577,correction + dev w 0.2,78.091480,1.575097,1.575 (0.178),1.625 (0.072),>=0

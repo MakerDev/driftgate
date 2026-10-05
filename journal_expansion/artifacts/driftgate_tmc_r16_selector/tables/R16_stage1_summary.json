@@ -1,0 +1,154 @@
+{
+ "sA": 0.65,
+ "sA_dev_means": {
+  "0.5": 67.1888241880964,
+  "0.65": 68.48272535651915
+ },
+ "judgement": {
+  "basic|DriftGate": {
+   "judgement": "NO_GO",
+   "min_difference": -1.8522135416666572,
+   "n_negative": 36,
+   "n_rows": 42
+  },
+  "basic|S-A": {
+   "judgement": "NO_GO",
+   "min_difference": -3.8308861588333514,
+   "n_negative": 15,
+   "n_rows": 42
+  },
+  "basic|S-B0": {
+   "judgement": "NO_GO",
+   "min_difference": -6.453405954947435,
+   "n_negative": 34,
+   "n_rows": 42
+  },
+  "basic|S-B5": {
+   "judgement": "NO_GO",
+   "min_difference": -3.3294416995042013,
+   "n_negative": 36,
+   "n_rows": 42
+  },
+  "basic|S-Bg": {
+   "judgement": "NO_GO",
+   "min_difference": -5.251509622393321,
+   "n_negative": 26,
+   "n_rows": 42
+  },
+  "basic|S-C": {
+   "judgement": "NO_GO",
+   "min_difference": -5.73391022833421,
+   "n_negative": 16,
+   "n_rows": 42
+  },
+  "supplementary|DriftGate": {
+   "judgement": "NO_GO",
+   "min_difference": -0.7212407072387492,
+   "n_negative": 6,
+   "n_rows": 8
+  },
+  "supplementary|S-A": {
+   "judgement": "NO_GO",
+   "min_difference": -0.3917371716163984,
+   "n_negative": 1,
+   "n_rows": 8
+  },
+  "supplementary|S-B0": {
+   "judgement": "NO_GO",
+   "min_difference": -2.0350261300022794,
+   "n_negative": 7,
+   "n_rows": 8
+  },
+  "supplementary|S-B5": {
+   "judgement": "NO_GO",
+   "min_difference": -1.083861624144248,
+   "n_negative": 5,
+   "n_rows": 8
+  },
+  "supplementary|S-Bg": {
+   "judgement": "NO_GO",
+   "min_difference": -0.9266625661043264,
+   "n_negative": 4,
+   "n_rows": 8
+  },
+  "supplementary|S-C": {
+   "judgement": "NO_GO",
+   "min_difference": -1.30233111278595,
+   "n_negative": 2,
+   "n_rows": 8
+  },
+  "time|DriftGate": {
+   "judgement": "NO_GO",
+   "min_difference": -1.6081841060660764,
+   "n_negative": 14,
+   "n_rows": 20
+  },
+  "time|S-A": {
+   "judgement": "NO_GO",
+   "min_difference": -1.523936937913959,
+   "n_negative": 9,
+   "n_rows": 20
+  },
+  "time|S-B0": {
+   "judgement": "NO_GO",
+   "min_difference": -1.874487943434957,
+   "n_negative": 10,
+   "n_rows": 20
+  },
+  "time|S-B5": {
+   "judgement": "NO_GO",
+   "min_difference": -2.2552553830433624,
+   "n_negative": 19,
+   "n_rows": 20
+  },
+  "time|S-Bg": {
+   "judgement": "NO_GO",
+   "min_difference": -1.079726698324663,
+   "n_negative": 5,
+   "n_rows": 20
+  },
+  "time|S-C": {
+   "judgement": "NO_GO",
+   "min_difference": -1.1659478454630516,
+   "n_negative": 4,
+   "n_rows": 20
+  },
+  "online|DriftGate (DriftGate-P)": {
+   "judgement": "NO_GO",
+   "min_difference": -0.34680393266060605,
+   "n_negative": 2,
+   "n_rows": 4
+  },
+  "online|S-A": {
+   "judgement": "PASS",
+   "min_difference": 0.24320390378832712,
+   "n_negative": 0,
+   "n_rows": 4
+  },
+  "online|S-B0": {
+   "judgement": "NO_GO",
+   "min_difference": -0.6779088650890088,
+   "n_negative": 2,
+   "n_rows": 4
+  },
+  "online|S-B5": {
+   "judgement": "NO_GO",
+   "min_difference": -0.2965656021595464,
+   "n_negative": 4,
+   "n_rows": 4
+  },
+  "online|S-Bg": {
+   "judgement": "NO_GO",
+   "min_difference": -0.35285738770171804,
+   "n_negative": 2,
+   "n_rows": 4
+  },
+  "online|S-C": {
+   "judgement": "NO_GO",
+   "min_difference": -0.4924196741875022,
+   "n_negative": 2,
+   "n_rows": 4
+  }
+ },
+ "script_sha": "7b161b39e0aab3b7937faf480c640f582ef051df36f2b68b39af66fa7a9a211b"
+}

@@ -1,0 +1,49 @@
+table,row_id,setting,period,window,method,n_seeds,accuracy_pct mean (SD),accuracy_pct mean,strongest reference,strongest mean,difference vs strongest pp (means),difference vs strongest pp mean (SD) per seed,difference vs DriftGate pp mean (SD) per seed,row result
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,5,68.31 (2.45),68.314675,DriftGate,68.314675,0.000000,0.000 (0.000),0.000 (0.000),>=0
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,5,68.91 (2.38),68.908816,DriftGate,68.314675,0.594141,0.594 (0.213),0.594 (0.213),>=0
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,5,68.13 (2.38),68.130762,DriftGate,68.314675,-0.183913,-0.184 (0.138),-0.184 (0.138),neg >= -0.2
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,5,67.87 (2.20),67.870181,DriftGate,68.314675,-0.444494,-0.444 (0.269),-0.444 (0.269),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,5,68.52 (2.39),68.518330,DriftGate,68.314675,0.203655,0.204 (0.125),0.204 (0.125),>=0
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,5,68.90 (2.53),68.897358,DriftGate,68.314675,0.582683,0.583 (0.275),0.583 (0.275),>=0
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,5,72.47 (3.20),72.468470,correction + product,72.805504,-0.337034,-0.337 (0.102),0.000 (0.000),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,5,72.41 (2.53),72.413767,correction + product,72.805504,-0.391737,-0.392 (0.796),-0.055 (0.734),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,5,70.77 (2.92),70.770478,correction + product,72.805504,-2.035026,-2.035 (0.658),-1.698 (0.600),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,5,72.09 (2.97),72.091738,correction + product,72.805504,-0.713766,-0.714 (0.388),-0.377 (0.323),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,5,71.88 (2.83),71.878841,correction + product,72.805504,-0.926663,-0.927 (0.577),-0.590 (0.494),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,5,71.50 (2.88),71.503173,correction + product,72.805504,-1.302331,-1.302 (0.597),-0.965 (0.507),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,5,67.10 (2.26),67.103151,corrected edge only,67.655281,-0.552129,-0.552 (0.352),0.000 (0.000),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,5,67.89 (2.35),67.886538,corrected edge only,67.655281,0.231258,0.231 (0.280),0.783 (0.303),>=0
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,5,67.36 (2.28),67.360845,corrected edge only,67.655281,-0.294436,-0.294 (0.366),0.258 (0.170),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,5,66.64 (2.03),66.638893,corrected edge only,67.655281,-1.016387,-1.016 (0.629),-0.464 (0.285),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,5,67.54 (2.31),67.538181,corrected edge only,67.655281,-0.117099,-0.117 (0.333),0.435 (0.099),neg >= -0.2
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,5,68.14 (2.46),68.137328,corrected edge only,67.655281,0.482047,0.482 (0.164),1.034 (0.325),>=0
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,5,67.95 (2.14),67.952770,corrected edge only,68.589250,-0.636480,-0.636 (0.335),0.000 (0.000),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,5,68.71 (2.21),68.713324,corrected edge only,68.589250,0.124075,0.124 (0.243),0.761 (0.294),>=0
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,5,68.42 (2.15),68.419758,corrected edge only,68.589250,-0.169491,-0.169 (0.323),0.467 (0.129),neg >= -0.2
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,5,67.51 (1.89),67.505388,corrected edge only,68.589250,-1.083862,-1.084 (0.643),-0.447 (0.311),neg < -0.2
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,5,68.55 (2.19),68.548326,corrected edge only,68.589250,-0.040924,-0.041 (0.287),0.596 (0.083),neg >= -0.2
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,5,69.19 (2.36),69.194098,corrected edge only,68.589250,0.604848,0.605 (0.165),1.241 (0.352),>=0
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,DriftGate,3,71.70 (0.97),71.700138,correction + w 0.5,71.772826,-0.072689,-0.073 (0.131),0.000 (0.000),neg >= -0.2
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-A,3,72.21 (1.85),72.213133,correction + w 0.5,71.772826,0.440306,0.440 (0.760),0.513 (0.885),>=0
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B0,3,71.51 (1.14),71.505579,correction + w 0.5,71.772826,-0.267248,-0.267 (0.105),-0.195 (0.222),neg < -0.2
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B5,3,71.84 (1.26),71.838399,correction + w 0.5,71.772826,0.065573,0.066 (0.297),0.138 (0.408),>=0
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-Bg,3,72.23 (1.61),72.225346,correction + w 0.5,71.772826,0.452520,0.453 (0.547),0.525 (0.679),>=0
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-C,3,72.29 (1.94),72.287552,correction + w 0.5,71.772826,0.514726,0.515 (0.854),0.587 (0.980),>=0
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,DriftGate,3,70.82 (1.04),70.820160,correction + product,71.541401,-0.721241,-0.721 (0.304),0.000 (0.000),neg < -0.2
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-A,3,71.64 (1.44),71.643392,correction + product,71.541401,0.101992,0.102 (1.402),0.823 (1.701),>=0
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B0,3,70.13 (1.48),70.133204,correction + product,71.541401,-1.408196,-1.408 (1.229),-0.687 (1.510),neg < -0.2
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B5,3,71.26 (1.04),71.255412,correction + product,71.541401,-0.285988,-0.286 (1.099),0.435 (1.404),neg < -0.2
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-Bg,3,71.36 (1.92),71.359276,correction + product,71.541401,-0.182125,-0.182 (1.801),0.539 (2.088),neg >= -0.2
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-C,3,70.86 (2.13),70.857598,correction + product,71.541401,-0.683803,-0.684 (1.956),0.037 (2.233),neg < -0.2
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,DriftGate,3,71.96 (1.28),71.956798,correction + w 0.5,71.972060,-0.015262,-0.015 (0.115),0.000 (0.000),neg >= -0.2
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-A,3,72.38 (1.97),72.379307,correction + w 0.5,71.972060,0.407247,0.407 (0.629),0.423 (0.726),>=0
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B0,3,71.91 (1.09),71.905854,correction + w 0.5,71.972060,-0.066206,-0.066 (0.305),-0.051 (0.200),neg >= -0.2
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B5,3,72.01 (1.34),72.008437,correction + w 0.5,71.972060,0.036378,0.036 (0.123),0.052 (0.137),>=0
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-Bg,3,72.48 (1.54),72.477950,correction + w 0.5,71.972060,0.505890,0.506 (0.153),0.521 (0.268),>=0
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-C,3,72.70 (1.90),72.704622,correction + w 0.5,71.972060,0.732562,0.733 (0.533),0.748 (0.637),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,DriftGate,3,71.74 (1.39),71.740930,DriftGate,71.740930,0.000000,0.000 (0.000),0.000 (0.000),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-A,3,72.25 (1.97),72.254768,DriftGate,71.740930,0.513837,0.514 (0.698),0.514 (0.698),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B0,3,71.84 (1.20),71.840132,DriftGate,71.740930,0.099202,0.099 (0.194),0.099 (0.194),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B5,3,71.80 (1.39),71.802559,DriftGate,71.740930,0.061628,0.062 (0.034),0.062 (0.034),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-Bg,3,72.35 (1.59),72.353513,DriftGate,71.740930,0.612582,0.613 (0.198),0.613 (0.198),>=0
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-C,3,72.65 (1.96),72.648860,DriftGate,71.740930,0.907929,0.908 (0.619),0.908 (0.619),>=0

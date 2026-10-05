@@ -1,0 +1,74 @@
+{
+ "round": 16,
+ "stage": 1,
+ "written": "2026-10-05 23:57:51",
+ "plan_commit": "107224c",
+ "main_candidate": "S-C",
+ "start_check": {
+  "passed": true,
+  "max_abs_difference": 0.0,
+  "n_values": 850
+ },
+ "sA_fixed_share": 0.65,
+ "sA_development_means_pct": {
+  "0.5": 67.1888241880964,
+  "0.65": 68.48272535651915
+ },
+ "tables": {
+  "basic": {
+   "judgement": "NO_GO",
+   "min_difference": -5.73391022833421,
+   "n_negative": 16,
+   "n_rows": 42
+  },
+  "time": {
+   "judgement": "NO_GO",
+   "min_difference": -1.1659478454630516,
+   "n_negative": 4,
+   "n_rows": 20
+  },
+  "online": {
+   "judgement": "NO_GO",
+   "min_difference": -0.4924196741875022,
+   "n_negative": 2,
+   "n_rows": 4
+  }
+ },
+ "all_rows_tied": false,
+ "calibration_route": "A_AVAILABLE_PENDING_APPROVAL",
+ "stage1_decision": "SIMULATION_BELOW_CRITERION",
+ "note": "Simulation decision only (previous-round requests and labels stand in for calibration data); not a paper decision.",
+ "other_candidates_for_reference": {
+  "S-A": {
+   "basic": "NO_GO",
+   "time": "NO_GO",
+   "online": "PASS"
+  },
+  "S-B0": {
+   "basic": "NO_GO",
+   "time": "NO_GO",
+   "online": "NO_GO"
+  },
+  "S-B5": {
+   "basic": "NO_GO",
+   "time": "NO_GO",
+   "online": "NO_GO"
+  },
+  "S-Bg": {
+   "basic": "NO_GO",
+   "time": "NO_GO",
+   "online": "NO_GO"
+  },
+  "DriftGate": {
+   "basic": "NO_GO",
+   "time": "NO_GO",
+   "online": "NO_GO"
+  }
+ },
+ "supplementary_R12_S1_S2": {
+  "judgement": "NO_GO",
+  "min_difference": -1.30233111278595,
+  "n_negative": 2,
+  "n_rows": 8
+ }
+}

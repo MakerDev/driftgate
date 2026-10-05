@@ -12,6 +12,9 @@ Rules: `../decision_rule.md`; settings: `../r16_config.json` (read by the script
    `R16_WORKERS=3 python .../scripts/r16_stage1.py check` -> `tables/R16_T0_start_check.csv`, `cache/START_CHECK.json`
 5. Phase B, grid, simulated calibration, selectors, oracles, online controller, and all tables (only after a passed check):
    `R16_WORKERS=3 python .../scripts/r16_stage1.py run` -> `tables/R16_*.csv`, `tables/R16_stage1_summary.json`
+6. Stage-1 decision from the tables (rule of decision_rule.md section 3): `python .../scripts/r16_decision.py` -> `decision_stage1.json`
+7. Diagnostic added after the stage-1 tables (not used for the decision): `python .../scripts/r16_diag_calibration.py`
+   -> `tables/R16_D_stale_calibration.csv` (previous-round calibration with the true Main share, S1 / partial participation / S1 replay)
 
 Records larger than 1 GB (K = 500, CIFAR-100) go to a separate single worker. `cache/` holds the per-run reference answers
 (phase A) and per-run summaries (phase B) and is not committed.

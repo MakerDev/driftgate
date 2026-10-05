@@ -1,0 +1,211 @@
+row_id,setting,period,window,oracle,choice,accuracy_pct mean (SD),minus DriftGate pp,minus Probability average pp,minus corrected edge only pp,minus strongest reference pp,strongest reference
+S1|day1_full,S1,day1,day1_full,O1 fixed grid pair,"w=0.4, r=0.5",68.26 (2.45),-0.066 (0.040),0.933 (0.472),0.388 (0.158),-0.066 (0.040),DriftGate
+S1|day1_full,S1,day1,day1_full,O2 device-round grid pair,,71.44 (2.30),3.117 (0.182),4.116 (0.639),3.571 (0.234),3.117 (0.182),DriftGate
+S1|day1_full,S1,day1,day1_full,"O3 true share, w=0",,68.83 (2.44),0.508 (0.129),1.507 (0.506),0.962 (0.149),0.508 (0.129),DriftGate
+S1|day1_full,S1,day1,day1_full,"O3 true share, w=0.5",,68.24 (2.15),-0.086 (0.317),0.912 (0.787),0.368 (0.445),-0.086 (0.317),DriftGate
+S1|day1_full,S1,day1,day1_full,"O3 true share, best fixed w",w=0.0,68.83 (2.44),0.508 (0.129),1.507 (0.506),0.962 (0.149),0.508 (0.129),DriftGate
+S1|day1_early,S1,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.4",73.43 (2.51),0.961 (0.714),4.114 (1.110),4.835 (0.829),0.618 (0.774),correction + product
+S1|day1_early,S1,day1,day1_early,O2 device-round grid pair,,75.87 (2.19),3.398 (1.022),6.552 (1.280),7.273 (0.862),3.056 (1.086),correction + product
+S1|day1_early,S1,day1,day1_early,"O3 true share, w=0",,71.15 (3.09),-1.324 (0.457),1.830 (1.352),2.550 (0.551),-1.666 (0.493),correction + product
+S1|day1_early,S1,day1,day1_early,"O3 true share, w=0.5",,72.62 (2.93),0.150 (0.309),3.304 (1.192),4.025 (0.680),-0.192 (0.390),correction + product
+S1|day1_early,S1,day1,day1_early,"O3 true share, best fixed w",w=0.8,73.41 (2.46),0.938 (0.763),4.092 (1.182),4.812 (0.842),0.596 (0.831),correction + product
+S1|day1_gt30,S1,day1,day1_gt30,O1 fixed grid pair,"w=0.0, r=0.5",67.66 (2.53),0.544 (0.349),0.914 (0.457),0.000 (0.000),0.000 (0.000),corrected edge only
+S1|day1_gt30,S1,day1,day1_gt30,O2 device-round grid pair,,70.15 (2.34),3.035 (0.226),3.405 (0.657),2.492 (0.243),2.492 (0.243),corrected edge only
+S1|day1_gt30,S1,day1,day1_gt30,"O3 true share, w=0",,68.15 (2.30),1.042 (0.140),1.412 (0.742),0.499 (0.323),0.499 (0.323),corrected edge only
+S1|day1_gt30,S1,day1,day1_gt30,"O3 true share, w=0.5",,66.96 (1.97),-0.155 (0.330),0.215 (1.079),-0.699 (0.674),-0.699 (0.674),corrected edge only
+S1|day1_gt30,S1,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,68.15 (2.30),1.042 (0.140),1.412 (0.742),0.499 (0.323),0.499 (0.323),corrected edge only
+S1|day1_gt50,S1,day1,day1_gt50,O1 fixed grid pair,"w=0.0, r=0.5",68.59 (2.40),0.630 (0.330),0.861 (0.410),0.000 (0.000),0.000 (0.000),corrected edge only
+S1|day1_gt50,S1,day1,day1_gt50,O2 device-round grid pair,,70.98 (2.22),3.020 (0.225),3.251 (0.579),2.390 (0.191),2.390 (0.191),corrected edge only
+S1|day1_gt50,S1,day1,day1_gt50,"O3 true share, w=0",,69.02 (2.14),1.061 (0.121),1.291 (0.693),0.431 (0.310),0.431 (0.310),corrected edge only
+S1|day1_gt50,S1,day1,day1_gt50,"O3 true share, w=0.5",,67.75 (1.84),-0.212 (0.345),0.018 (1.018),-0.842 (0.670),-0.842 (0.670),corrected edge only
+S1|day1_gt50,S1,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,69.02 (2.14),1.061 (0.121),1.291 (0.693),0.431 (0.310),0.431 (0.310),corrected edge only
+S2|day1_full,S2,day1,day1_full,O1 fixed grid pair,"w=0.5, r=0.4",71.98 (1.15),0.238 (0.200),2.047 (0.892),1.445 (0.452),0.171 (0.071),correction + w 0.5
+S2|day1_full,S2,day1,day1_full,O2 device-round grid pair,,74.99 (1.68),3.253 (0.723),5.062 (0.401),4.460 (0.944),3.187 (0.598),correction + w 0.5
+S2|day1_full,S2,day1,day1_full,"O3 true share, w=0",,71.99 (0.82),0.253 (0.203),2.062 (1.198),1.460 (0.345),0.186 (0.281),correction + w 0.5
+S2|day1_full,S2,day1,day1_full,"O3 true share, w=0.5",,72.33 (1.28),0.585 (0.416),2.394 (0.742),1.793 (0.683),0.519 (0.299),correction + w 0.5
+S2|day1_full,S2,day1,day1_full,"O3 true share, best fixed w",w=0.5,72.33 (1.28),0.585 (0.416),2.394 (0.742),1.793 (0.683),0.519 (0.299),correction + w 0.5
+S2|day1_early,S2,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.1",72.71 (1.46),1.874 (1.965),5.690 (0.222),5.416 (2.301),1.158 (1.648),correction + product
+S2|day1_early,S2,day1,day1_early,O2 device-round grid pair,,75.46 (1.91),4.619 (2.141),8.435 (0.411),8.161 (2.412),3.903 (1.835),correction + product
+S2|day1_early,S2,day1,day1_early,"O3 true share, w=0",,69.82 (0.56),-1.013 (0.808),2.803 (1.217),2.529 (1.181),-1.730 (0.512),correction + product
+S2|day1_early,S2,day1,day1_early,"O3 true share, w=0.5",,71.87 (1.19),1.030 (1.651),4.846 (0.366),4.572 (1.990),0.313 (1.335),correction + product
+S2|day1_early,S2,day1,day1_early,"O3 true share, best fixed w",w=0.8,72.78 (1.44),1.945 (1.921),5.761 (0.198),5.487 (2.255),1.229 (1.605),correction + product
+S2|day1_gt30,S2,day1,day1_gt30,O1 fixed grid pair,"w=0.4, r=0.4",72.16 (1.26),0.158 (0.029),1.381 (0.896),0.684 (0.231),0.148 (0.129),correction + w 0.5
+S2|day1_gt30,S2,day1,day1_gt30,O2 device-round grid pair,,74.86 (1.61),2.855 (0.389),4.078 (0.575),3.381 (0.564),2.845 (0.312),correction + w 0.5
+S2|day1_gt30,S2,day1,day1_gt30,"O3 true share, w=0",,72.63 (0.96),0.622 (0.317),1.846 (1.204),1.149 (0.180),0.613 (0.427),correction + w 0.5
+S2|day1_gt30,S2,day1,day1_gt30,"O3 true share, w=0.5",,72.46 (1.31),0.455 (0.057),1.679 (0.851),0.982 (0.305),0.446 (0.076),correction + w 0.5
+S2|day1_gt30,S2,day1,day1_gt30,"O3 true share, best fixed w",w=0.2,72.65 (1.03),0.645 (0.243),1.869 (1.129),1.172 (0.149),0.636 (0.352),correction + w 0.5
+S2|day1_gt50,S2,day1,day1_gt50,O1 fixed grid pair,"w=0.3, r=0.4",71.93 (1.25),0.134 (0.137),1.277 (0.986),0.514 (0.055),0.134 (0.137),DriftGate
+S2|day1_gt50,S2,day1,day1_gt50,O2 device-round grid pair,,74.64 (1.59),2.840 (0.343),3.983 (0.719),3.220 (0.426),2.840 (0.343),DriftGate
+S2|day1_gt50,S2,day1,day1_gt50,"O3 true share, w=0",,72.45 (0.99),0.653 (0.388),1.796 (1.246),1.033 (0.212),0.653 (0.388),DriftGate
+S2|day1_gt50,S2,day1,day1_gt50,"O3 true share, w=0.5",,72.21 (1.31),0.414 (0.108),1.556 (0.928),0.793 (0.113),0.414 (0.108),DriftGate
+S2|day1_gt50,S2,day1,day1_gt50,"O3 true share, best fixed w",w=0.1,72.45 (1.01),0.657 (0.363),1.799 (1.221),1.037 (0.185),0.657 (0.363),DriftGate
+S1-fast|day1_full,S1-fast,day1,day1_full,O1 fixed grid pair,"w=0.3, r=0.5",68.98 (0.77),0.018 (0.037),0.921 (0.280),0.326 (0.079),0.018 (0.037),DriftGate
+S1-fast|day1_full,S1-fast,day1,day1_full,O2 device-round grid pair,,72.10 (0.74),3.141 (0.152),4.043 (0.362),3.448 (0.079),3.141 (0.152),DriftGate
+S1-fast|day1_full,S1-fast,day1,day1_full,"O3 true share, w=0",,69.57 (0.67),0.610 (0.094),1.512 (0.376),0.917 (0.173),0.610 (0.094),DriftGate
+S1-fast|day1_full,S1-fast,day1,day1_full,"O3 true share, w=0.5",,68.78 (0.55),-0.183 (0.212),0.719 (0.494),0.125 (0.272),-0.183 (0.212),DriftGate
+S1-fast|day1_full,S1-fast,day1,day1_full,"O3 true share, best fixed w",w=0.0,69.57 (0.67),0.610 (0.094),1.512 (0.376),0.917 (0.173),0.610 (0.094),DriftGate
+S1-fast|day1_early,S1-fast,day1,day1_early,O1 fixed grid pair,"w=0.6, r=0.4",73.91 (1.16),0.573 (0.132),3.941 (1.561),4.239 (0.667),0.278 (0.099),correction + product
+S1-fast|day1_early,S1-fast,day1,day1_early,O2 device-round grid pair,,76.37 (0.86),3.035 (0.424),6.403 (1.574),6.700 (0.369),2.740 (0.391),correction + product
+S1-fast|day1_early,S1-fast,day1,day1_early,"O3 true share, w=0",,72.13 (0.83),-1.207 (0.541),2.161 (1.773),2.459 (0.406),-1.502 (0.508),correction + product
+S1-fast|day1_early,S1-fast,day1,day1_early,"O3 true share, w=0.5",,73.43 (1.15),0.092 (0.189),3.460 (1.628),3.758 (0.658),-0.203 (0.159),correction + product
+S1-fast|day1_early,S1-fast,day1,day1_early,"O3 true share, best fixed w",w=0.8,73.86 (1.16),0.520 (0.167),3.888 (1.613),4.186 (0.669),0.225 (0.137),correction + product
+S1-fast|day1_gt30,S1-fast,day1,day1_gt30,O1 fixed grid pair,"w=0.0, r=0.5",68.36 (0.89),0.672 (0.320),0.855 (0.257),0.000 (0.000),0.000 (0.000),corrected edge only
+S1-fast|day1_gt30,S1-fast,day1,day1_gt30,O2 device-round grid pair,,70.86 (0.70),3.171 (0.201),3.354 (0.373),2.500 (0.193),2.500 (0.193),corrected edge only
+S1-fast|day1_gt30,S1-fast,day1,day1_gt30,"O3 true share, w=0",,68.83 (0.65),1.140 (0.071),1.323 (0.589),0.468 (0.342),0.468 (0.342),corrected edge only
+S1-fast|day1_gt30,S1-fast,day1,day1_gt30,"O3 true share, w=0.5",,67.42 (0.39),-0.263 (0.234),-0.080 (0.753),-0.935 (0.543),-0.935 (0.543),corrected edge only
+S1-fast|day1_gt30,S1-fast,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,68.83 (0.65),1.140 (0.071),1.323 (0.589),0.468 (0.342),0.468 (0.342),corrected edge only
+S1-fast|day1_gt50,S1-fast,day1,day1_gt50,O1 fixed grid pair,"w=0.0, r=0.5",69.44 (0.73),0.771 (0.228),0.797 (0.202),0.000 (0.000),0.000 (0.000),corrected edge only
+S1-fast|day1_gt50,S1-fast,day1,day1_gt50,O2 device-round grid pair,,71.81 (0.65),3.142 (0.209),3.168 (0.188),2.371 (0.106),2.371 (0.106),corrected edge only
+S1-fast|day1_gt50,S1-fast,day1,day1_gt50,"O3 true share, w=0",,69.80 (0.57),1.136 (0.070),1.162 (0.433),0.366 (0.247),0.366 (0.247),corrected edge only
+S1-fast|day1_gt50,S1-fast,day1,day1_gt50,"O3 true share, w=0.5",,68.32 (0.37),-0.345 (0.168),-0.319 (0.521),-1.115 (0.386),-1.115 (0.386),corrected edge only
+S1-fast|day1_gt50,S1-fast,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,69.80 (0.57),1.136 (0.070),1.162 (0.433),0.366 (0.247),0.366 (0.247),corrected edge only
+partial participation|day1_full,partial participation,day1,day1_full,O1 fixed grid pair,"w=0.5, r=0.5",64.85 (0.31),0.026 (0.084),2.206 (0.562),1.201 (0.268),0.000 (0.000),correction + w 0.5
+partial participation|day1_full,partial participation,day1,day1_full,O2 device-round grid pair,,68.17 (0.22),3.349 (0.177),5.528 (0.581),4.524 (0.364),3.323 (0.097),correction + w 0.5
+partial participation|day1_full,partial participation,day1,day1_full,"O3 true share, w=0",,65.07 (0.28),0.247 (0.186),2.426 (0.689),1.421 (0.277),0.220 (0.127),correction + w 0.5
+partial participation|day1_full,partial participation,day1,day1_full,"O3 true share, w=0.5",,65.11 (0.15),0.288 (0.275),2.467 (0.717),1.463 (0.408),0.262 (0.192),correction + w 0.5
+partial participation|day1_full,partial participation,day1,day1_full,"O3 true share, best fixed w",w=0.3,65.18 (0.20),0.359 (0.220),2.538 (0.683),1.534 (0.354),0.333 (0.140),correction + w 0.5
+partial participation|day1_early,partial participation,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.4",69.84 (0.67),1.901 (0.397),7.700 (1.384),6.324 (1.386),1.130 (0.216),correction + product
+partial participation|day1_early,partial participation,day1,day1_early,O2 device-round grid pair,,72.06 (0.41),4.119 (0.432),9.918 (1.165),8.541 (1.230),3.347 (0.351),correction + product
+partial participation|day1_early,partial participation,day1,day1_early,"O3 true share, w=0",,66.51 (0.83),-1.433 (0.364),4.366 (1.733),2.990 (0.797),-2.204 (0.561),correction + product
+partial participation|day1_early,partial participation,day1,day1_early,"O3 true share, w=0.5",,68.47 (0.75),0.525 (0.090),6.324 (1.636),4.948 (1.053),-0.246 (0.263),correction + product
+partial participation|day1_early,partial participation,day1,day1_early,"O3 true share, best fixed w",w=0.8,69.79 (0.72),1.853 (0.324),7.652 (1.473),6.275 (1.356),1.082 (0.128),correction + product
+partial participation|day1_gt30,partial participation,day1,day1_gt30,O1 fixed grid pair,"w=0.4, r=0.5",63.95 (0.38),0.039 (0.026),1.163 (0.610),0.267 (0.408),0.039 (0.026),DriftGate
+partial participation|day1_gt30,partial participation,day1,day1_gt30,O2 device-round grid pair,,67.03 (0.17),3.124 (0.195),4.248 (0.825),3.352 (0.611),3.124 (0.195),DriftGate
+partial participation|day1_gt30,partial participation,day1,day1_gt30,"O3 true share, w=0",,64.64 (0.21),0.736 (0.154),1.860 (0.783),0.964 (0.574),0.736 (0.154),DriftGate
+partial participation|day1_gt30,partial participation,day1,day1_gt30,"O3 true share, w=0.5",,64.13 (0.03),0.219 (0.358),1.342 (0.977),0.446 (0.784),0.219 (0.358),DriftGate
+partial participation|day1_gt30,partial participation,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,64.64 (0.21),0.736 (0.154),1.860 (0.783),0.964 (0.574),0.736 (0.154),DriftGate
+partial participation|day1_gt50,partial participation,day1,day1_gt50,O1 fixed grid pair,"w=0.3, r=0.5",65.09 (0.57),0.099 (0.135),1.065 (0.437),0.156 (0.272),0.014 (0.098),correction + dev w 0.2
+partial participation|day1_gt50,partial participation,day1,day1_gt50,O2 device-round grid pair,,68.00 (0.29),3.005 (0.162),3.971 (0.717),3.062 (0.552),2.920 (0.381),correction + dev w 0.2
+partial participation|day1_gt50,partial participation,day1,day1_gt50,"O3 true share, w=0",,65.79 (0.35),0.794 (0.096),1.760 (0.652),0.852 (0.497),0.709 (0.323),correction + dev w 0.2
+partial participation|day1_gt50,partial participation,day1,day1_gt50,"O3 true share, w=0.5",,65.13 (0.13),0.141 (0.314),1.107 (0.868),0.198 (0.714),0.056 (0.542),correction + dev w 0.2
+partial participation|day1_gt50,partial participation,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,65.79 (0.35),0.794 (0.096),1.760 (0.652),0.852 (0.497),0.709 (0.323),correction + dev w 0.2
+stepwise change|day1_full,stepwise change,day1,day1_full,O1 fixed grid pair,"w=0.5, r=0.5",72.21 (2.11),-0.142 (0.093),0.778 (0.288),0.976 (0.379),-0.142 (0.093),DriftGate
+stepwise change|day1_full,stepwise change,day1,day1_full,O2 device-round grid pair,,75.89 (1.95),3.536 (0.268),4.456 (0.425),4.654 (0.491),3.536 (0.268),DriftGate
+stepwise change|day1_full,stepwise change,day1,day1_full,"O3 true share, w=0",,72.35 (2.21),-0.008 (0.163),0.912 (0.395),1.110 (0.217),-0.008 (0.163),DriftGate
+stepwise change|day1_full,stepwise change,day1,day1_full,"O3 true share, w=0.5",,72.27 (1.98),-0.085 (0.231),0.835 (0.405),1.033 (0.483),-0.085 (0.231),DriftGate
+stepwise change|day1_full,stepwise change,day1,day1_full,"O3 true share, best fixed w",w=0.2,72.41 (2.18),0.056 (0.131),0.976 (0.362),1.174 (0.272),0.056 (0.131),DriftGate
+stepwise change|day1_early,stepwise change,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.1",84.34 (2.41),2.129 (0.562),5.872 (0.697),8.037 (0.681),1.141 (0.524),Device only
+stepwise change|day1_early,stepwise change,day1,day1_early,O2 device-round grid pair,,86.27 (2.09),4.055 (0.852),7.798 (0.900),9.963 (0.912),3.066 (0.403),Device only
+stepwise change|day1_early,stepwise change,day1,day1_early,"O3 true share, w=0",,79.97 (3.02),-2.242 (0.414),1.500 (1.027),3.665 (0.317),-3.231 (1.172),Device only
+stepwise change|day1_early,stepwise change,day1,day1_early,"O3 true share, w=0.5",,82.82 (3.03),0.609 (0.297),4.352 (0.878),6.517 (0.408),-0.380 (1.098),Device only
+stepwise change|day1_early,stepwise change,day1,day1_early,"O3 true share, best fixed w",w=0.8,84.34 (2.41),2.129 (0.562),5.872 (0.697),8.037 (0.681),1.141 (0.524),Device only
+stepwise change|day1_gt30,stepwise change,day1,day1_gt30,O1 fixed grid pair,"w=0.2, r=0.6",69.57 (2.34),0.503 (0.384),0.482 (0.278),0.024 (0.097),0.024 (0.097),corrected edge only
+stepwise change|day1_gt30,stepwise change,day1,day1_gt30,O2 device-round grid pair,,72.44 (1.95),3.364 (0.272),3.343 (0.356),2.885 (0.460),2.885 (0.460),corrected edge only
+stepwise change|day1_gt30,stepwise change,day1,day1_gt30,"O3 true share, w=0",,69.81 (2.01),0.737 (0.099),0.716 (0.265),0.258 (0.332),0.258 (0.332),corrected edge only
+stepwise change|day1_gt30,stepwise change,day1,day1_gt30,"O3 true share, w=0.5",,68.75 (1.73),-0.317 (0.343),-0.338 (0.531),-0.795 (0.685),-0.795 (0.685),corrected edge only
+stepwise change|day1_gt30,stepwise change,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,69.81 (2.01),0.737 (0.099),0.716 (0.265),0.258 (0.332),0.258 (0.332),corrected edge only
+stepwise change|day1_gt50,stepwise change,day1,day1_gt50,O1 fixed grid pair,"w=0.2, r=0.6",70.64 (2.41),0.542 (0.424),0.521 (0.235),0.027 (0.108),0.027 (0.108),corrected edge only
+stepwise change|day1_gt50,stepwise change,day1,day1_gt50,O2 device-round grid pair,,73.60 (1.99),3.501 (0.285),3.480 (0.397),2.986 (0.467),2.986 (0.467),corrected edge only
+stepwise change|day1_gt50,stepwise change,day1,day1_gt50,"O3 true share, w=0",,71.08 (2.00),0.976 (0.088),0.956 (0.316),0.462 (0.392),0.462 (0.392),corrected edge only
+stepwise change|day1_gt50,stepwise change,day1,day1_gt50,"O3 true share, w=0.5",,69.93 (1.71),-0.169 (0.380),-0.189 (0.624),-0.684 (0.738),-0.684 (0.738),corrected edge only
+stepwise change|day1_gt50,stepwise change,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,71.08 (2.00),0.976 (0.088),0.956 (0.316),0.462 (0.392),0.462 (0.392),corrected edge only
+random mobility|day1_full,random mobility,day1,day1_full,O1 fixed grid pair,"w=0.5, r=0.6",71.05 (0.74),-0.040 (0.130),1.478 (0.406),1.167 (0.215),-0.040 (0.130),DriftGate
+random mobility|day1_full,random mobility,day1,day1_full,O2 device-round grid pair,,75.53 (0.85),4.432 (0.200),5.950 (0.622),5.639 (0.044),4.432 (0.200),DriftGate
+random mobility|day1_full,random mobility,day1,day1_full,"O3 true share, w=0",,71.54 (0.96),0.446 (0.103),1.963 (0.637),1.653 (0.212),0.446 (0.103),DriftGate
+random mobility|day1_full,random mobility,day1,day1_full,"O3 true share, w=0.5",,71.28 (0.93),0.184 (0.089),1.701 (0.622),1.390 (0.179),0.184 (0.089),DriftGate
+random mobility|day1_full,random mobility,day1,day1_full,"O3 true share, best fixed w",w=0.2,71.58 (0.96),0.482 (0.103),1.999 (0.627),1.689 (0.240),0.482 (0.103),DriftGate
+random mobility|day1_early,random mobility,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.1",85.29 (0.64),1.378 (0.340),6.062 (0.759),6.758 (0.637),1.003 (0.252),correction + product
+random mobility|day1_early,random mobility,day1,day1_early,O2 device-round grid pair,,86.97 (0.37),3.066 (0.454),7.750 (0.749),8.446 (0.572),2.691 (0.483),correction + product
+random mobility|day1_early,random mobility,day1,day1_early,"O3 true share, w=0",,81.08 (0.98),-2.828 (0.268),1.856 (1.315),2.551 (0.131),-3.204 (0.399),correction + product
+random mobility|day1_early,random mobility,day1,day1_early,"O3 true share, w=0.5",,83.90 (0.93),-0.008 (0.113),4.676 (1.181),5.372 (0.325),-0.384 (0.191),correction + product
+random mobility|day1_early,random mobility,day1,day1_early,"O3 true share, best fixed w",w=0.8,85.29 (0.64),1.378 (0.340),6.062 (0.759),6.758 (0.637),1.003 (0.252),correction + product
+random mobility|day1_gt30,random mobility,day1,day1_gt30,O1 fixed grid pair,"w=0.2, r=0.6",66.13 (0.71),0.732 (0.205),0.842 (0.208),0.084 (0.091),0.084 (0.091),corrected edge only
+random mobility|day1_gt30,random mobility,day1,day1_gt30,O2 device-round grid pair,,70.44 (1.06),5.040 (0.346),5.149 (0.590),4.392 (0.318),4.392 (0.318),corrected edge only
+random mobility|day1_gt30,random mobility,day1,day1_gt30,"O3 true share, w=0",,67.30 (1.00),1.901 (0.124),2.011 (0.443),1.253 (0.249),1.253 (0.249),corrected edge only
+random mobility|day1_gt30,random mobility,day1,day1_gt30,"O3 true share, w=0.5",,65.67 (0.94),0.269 (0.083),0.379 (0.399),-0.379 (0.142),-0.379 (0.142),corrected edge only
+random mobility|day1_gt30,random mobility,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,67.30 (1.00),1.901 (0.124),2.011 (0.443),1.253 (0.249),1.253 (0.249),corrected edge only
+random mobility|day1_gt50,random mobility,day1,day1_gt50,O1 fixed grid pair,"w=0.1, r=0.7",61.26 (1.00),2.449 (0.337),1.034 (0.441),1.009 (0.409),0.630 (0.333),Learned weight
+random mobility|day1_gt50,random mobility,day1,day1_gt50,O2 device-round grid pair,,64.51 (1.14),5.699 (0.485),4.284 (0.591),4.259 (0.549),3.880 (0.504),Learned weight
+random mobility|day1_gt50,random mobility,day1,day1_gt50,"O3 true share, w=0",,60.84 (1.15),2.024 (0.137),0.609 (0.115),0.584 (0.073),0.206 (0.239),Learned weight
+random mobility|day1_gt50,random mobility,day1,day1_gt50,"O3 true share, w=0.5",,58.69 (0.99),-0.118 (0.107),-1.534 (0.207),-1.558 (0.182),-1.937 (0.119),Learned weight
+random mobility|day1_gt50,random mobility,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,60.84 (1.15),2.024 (0.137),0.609 (0.115),0.584 (0.073),0.206 (0.239),Learned weight
+CIFAR-100|day1_full,CIFAR-100,day1,day1_full,O1 fixed grid pair,"w=0.6, r=0.4",41.69 (0.55),0.403 (0.080),3.541 (0.541),0.997 (0.111),-0.042 (0.093),correction + product
+CIFAR-100|day1_full,CIFAR-100,day1,day1_full,O2 device-round grid pair,,43.12 (0.58),1.829 (0.046),4.967 (0.486),2.424 (0.078),1.384 (0.042),correction + product
+CIFAR-100|day1_full,CIFAR-100,day1,day1_full,"O3 true share, w=0",,41.92 (0.65),0.630 (0.123),3.768 (0.601),1.224 (0.116),0.185 (0.196),correction + product
+CIFAR-100|day1_full,CIFAR-100,day1,day1_full,"O3 true share, w=0.5",,42.23 (0.59),0.947 (0.096),4.084 (0.587),1.541 (0.107),0.502 (0.154),correction + product
+CIFAR-100|day1_full,CIFAR-100,day1,day1_full,"O3 true share, best fixed w",w=0.6,42.26 (0.57),0.976 (0.084),4.114 (0.571),1.571 (0.105),0.532 (0.130),correction + product
+CIFAR-100|day1_early,CIFAR-100,day1,day1_early,O1 fixed grid pair,"w=0.8, r=0.4",29.40 (0.30),1.671 (0.285),5.496 (0.547),2.910 (0.327),0.559 (0.151),correction + product
+CIFAR-100|day1_early,CIFAR-100,day1,day1_early,O2 device-round grid pair,,30.12 (0.28),2.383 (0.276),6.208 (0.562),3.622 (0.319),1.271 (0.146),correction + product
+CIFAR-100|day1_early,CIFAR-100,day1,day1_early,"O3 true share, w=0",,27.18 (0.19),-0.552 (0.104),3.273 (0.628),0.687 (0.092),-1.664 (0.224),correction + product
+CIFAR-100|day1_early,CIFAR-100,day1,day1_early,"O3 true share, w=0.5",,27.94 (0.15),0.210 (0.092),4.036 (0.624),1.450 (0.104),-0.902 (0.183),correction + product
+CIFAR-100|day1_early,CIFAR-100,day1,day1_early,"O3 true share, best fixed w",w=0.8,29.23 (0.23),1.494 (0.209),5.319 (0.552),2.733 (0.252),0.382 (0.085),correction + product
+CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,O1 fixed grid pair,"w=0.6, r=0.4",45.55 (0.67),0.310 (0.091),3.247 (0.544),0.716 (0.120),0.060 (0.108),correction + product
+CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,O2 device-round grid pair,,46.91 (0.77),1.668 (0.022),4.605 (0.489),2.074 (0.021),1.417 (0.080),correction + product
+CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,"O3 true share, w=0",,46.22 (0.79),0.975 (0.129),3.912 (0.594),1.381 (0.125),0.725 (0.188),correction + product
+CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,"O3 true share, w=0.5",,46.40 (0.73),1.161 (0.097),4.099 (0.577),1.568 (0.110),0.911 (0.147),correction + product
+CIFAR-100|day1_gt30,CIFAR-100,day1,day1_gt30,"O3 true share, best fixed w",w=0.5,46.40 (0.73),1.161 (0.097),4.099 (0.577),1.568 (0.110),0.911 (0.147),correction + product
+CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,O1 fixed grid pair,"w=0.5, r=0.4",47.29 (0.75),0.368 (0.082),3.150 (0.534),0.800 (0.117),0.070 (0.102),correction + product
+CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,O2 device-round grid pair,,48.66 (0.82),1.747 (0.024),4.529 (0.491),2.179 (0.047),1.449 (0.086),correction + product
+CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,"O3 true share, w=0",,48.00 (0.85),1.082 (0.124),3.864 (0.580),1.514 (0.129),0.784 (0.185),correction + product
+CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,"O3 true share, w=0.5",,48.19 (0.78),1.270 (0.102),4.052 (0.570),1.702 (0.126),0.972 (0.147),correction + product
+CIFAR-100|day1_gt50,CIFAR-100,day1,day1_gt50,"O3 true share, best fixed w",w=0.5,48.19 (0.78),1.270 (0.102),4.052 (0.570),1.702 (0.126),0.972 (0.147),correction + product
+ResNet-18|day1_full,ResNet-18,day1,day1_full,O1 fixed grid pair,"w=0.6, r=0.6",66.85 (3.06),0.210 (0.105),0.462 (0.282),5.125 (1.586),0.143 (0.196),correction + w 0.5
+ResNet-18|day1_full,ResNet-18,day1,day1_full,O2 device-round grid pair,,69.53 (2.36),2.894 (0.898),3.146 (1.077),7.808 (1.739),2.827 (0.914),correction + w 0.5
+ResNet-18|day1_full,ResNet-18,day1,day1_full,"O3 true share, w=0",,65.48 (2.78),-1.159 (0.522),-0.907 (0.791),3.756 (1.822),-1.226 (0.512),correction + w 0.5
+ResNet-18|day1_full,ResNet-18,day1,day1_full,"O3 true share, w=0.5",,66.90 (3.19),0.258 (0.458),0.510 (0.802),5.172 (2.082),0.191 (0.380),correction + w 0.5
+ResNet-18|day1_full,ResNet-18,day1,day1_full,"O3 true share, best fixed w",w=0.5,66.90 (3.19),0.258 (0.458),0.510 (0.802),5.172 (2.082),0.191 (0.380),correction + w 0.5
+ResNet-18|day1_early,ResNet-18,day1,day1_early,O1 fixed grid pair,"w=1.0, r=0.5",80.23 (3.49),1.853 (1.771),3.479 (2.009),12.775 (3.598),0.001 (0.001),Device only
+ResNet-18|day1_early,ResNet-18,day1,day1_early,O2 device-round grid pair,,82.02 (3.91),3.642 (1.711),5.268 (2.199),14.565 (3.945),1.790 (0.659),Device only
+ResNet-18|day1_early,ResNet-18,day1,day1_early,"O3 true share, w=0",,74.99 (6.09),-3.390 (1.305),-1.764 (2.056),7.533 (3.669),-5.242 (2.604),Device only
+ResNet-18|day1_early,ResNet-18,day1,day1_early,"O3 true share, w=0.5",,78.20 (5.89),-0.182 (1.082),1.444 (1.846),10.740 (3.497),-2.035 (2.406),Device only
+ResNet-18|day1_early,ResNet-18,day1,day1_early,"O3 true share, best fixed w",w=1.0,80.23 (3.49),1.853 (1.771),3.479 (2.009),12.775 (3.598),0.001 (0.001),Device only
+ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,O1 fixed grid pair,"w=0.5, r=0.5",63.00 (2.44),0.277 (0.097),0.072 (0.277),3.190 (1.840),0.000 (0.000),correction + w 0.5
+ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,O2 device-round grid pair,,65.37 (1.89),2.644 (0.628),2.439 (0.707),5.556 (1.543),2.367 (0.563),correction + w 0.5
+ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,"O3 true share, w=0",,62.31 (1.75),-0.416 (0.733),-0.621 (0.765),2.497 (1.341),-0.693 (0.689),correction + w 0.5
+ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,"O3 true share, w=0.5",,63.13 (2.33),0.404 (0.326),0.199 (0.496),3.316 (1.880),0.127 (0.229),correction + w 0.5
+ResNet-18|day1_gt30,ResNet-18,day1,day1_gt30,"O3 true share, best fixed w",w=0.4,63.29 (2.34),0.562 (0.414),0.357 (0.589),3.474 (1.951),0.285 (0.317),correction + w 0.5
+ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,O1 fixed grid pair,"w=0.4, r=0.4",63.93 (2.31),0.332 (0.415),0.062 (0.489),2.930 (1.875),0.010 (0.262),correction + w 0.5
+ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,O2 device-round grid pair,,66.38 (1.85),2.785 (0.739),2.515 (0.763),5.383 (1.502),2.464 (0.623),correction + w 0.5
+ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,"O3 true share, w=0",,63.56 (1.64),-0.034 (0.913),-0.304 (0.923),2.565 (1.337),-0.355 (0.811),correction + w 0.5
+ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,"O3 true share, w=0.5",,64.10 (2.31),0.504 (0.384),0.234 (0.456),3.102 (1.858),0.182 (0.232),correction + w 0.5
+ResNet-18|day1_gt50,ResNet-18,day1,day1_gt50,"O3 true share, best fixed w",w=0.4,64.31 (2.29),0.712 (0.522),0.442 (0.597),3.310 (1.913),0.391 (0.369),correction + w 0.5
+K=200|day1_full,K=200,day1,day1_full,O1 fixed grid pair,"w=0.3, r=0.6",69.36 (1.47),0.361 (0.039),0.460 (0.028),0.206 (0.032),0.130 (0.003),correction + dev w 0.2
+K=200|day1_full,K=200,day1,day1_full,O2 device-round grid pair,,72.67 (1.56),3.675 (0.310),3.773 (0.293),3.519 (0.323),3.443 (0.299),correction + dev w 0.2
+K=200|day1_full,K=200,day1,day1_full,"O3 true share, w=0",,69.53 (1.41),0.531 (0.029),0.629 (0.092),0.375 (0.090),0.300 (0.068),correction + dev w 0.2
+K=200|day1_full,K=200,day1,day1_full,"O3 true share, w=0.5",,68.37 (1.30),-0.626 (0.139),-0.528 (0.206),-0.782 (0.191),-0.857 (0.180),correction + dev w 0.2
+K=200|day1_full,K=200,day1,day1_full,"O3 true share, best fixed w",w=0.0,69.53 (1.41),0.531 (0.029),0.629 (0.092),0.375 (0.090),0.300 (0.068),correction + dev w 0.2
+K=200|day1_early,K=200,day1,day1_early,O1 fixed grid pair,"w=0.6, r=0.5",72.74 (0.54),0.251 (0.042),2.670 (0.105),3.209 (0.274),0.071 (0.085),correction + product
+K=200|day1_early,K=200,day1,day1_early,O2 device-round grid pair,,75.37 (0.43),2.880 (0.147),5.299 (0.292),5.838 (0.456),2.701 (0.103),correction + product
+K=200|day1_early,K=200,day1,day1_early,"O3 true share, w=0",,70.80 (0.74),-1.685 (0.277),0.734 (0.137),1.273 (0.048),-1.865 (0.322),correction + product
+K=200|day1_early,K=200,day1,day1_early,"O3 true share, w=0.5",,72.11 (0.66),-0.376 (0.194),2.043 (0.051),2.582 (0.127),-0.555 (0.239),correction + product
+K=200|day1_early,K=200,day1,day1_early,"O3 true share, best fixed w",w=0.6,72.34 (0.64),-0.148 (0.170),2.271 (0.026),2.810 (0.153),-0.328 (0.214),correction + product
+K=200|day1_gt30,K=200,day1,day1_gt30,O1 fixed grid pair,"w=0.0, r=0.6",69.39 (1.95),1.412 (0.182),0.833 (0.083),0.348 (0.077),0.348 (0.077),corrected edge only
+K=200|day1_gt30,K=200,day1,day1_gt30,O2 device-round grid pair,,71.88 (1.97),3.906 (0.358),3.328 (0.302),2.842 (0.288),2.842 (0.288),corrected edge only
+K=200|day1_gt30,K=200,day1,day1_gt30,"O3 true share, w=0",,69.15 (1.81),1.177 (0.097),0.598 (0.124),0.113 (0.105),0.113 (0.105),corrected edge only
+K=200|day1_gt30,K=200,day1,day1_gt30,"O3 true share, w=0.5",,67.28 (1.65),-0.699 (0.150),-1.278 (0.261),-1.763 (0.248),-1.763 (0.248),corrected edge only
+K=200|day1_gt30,K=200,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,69.15 (1.81),1.177 (0.097),0.598 (0.124),0.113 (0.105),0.113 (0.105),corrected edge only
+K=200|day1_gt50,K=200,day1,day1_gt50,O1 fixed grid pair,"w=0.0, r=0.6",70.36 (1.98),1.412 (0.191),0.860 (0.094),0.358 (0.076),0.358 (0.076),corrected edge only
+K=200|day1_gt50,K=200,day1,day1_gt50,O2 device-round grid pair,,72.78 (1.96),3.832 (0.336),3.280 (0.286),2.778 (0.264),2.778 (0.264),corrected edge only
+K=200|day1_gt50,K=200,day1,day1_gt50,"O3 true share, w=0",,70.07 (1.81),1.125 (0.093),0.573 (0.129),0.071 (0.123),0.071 (0.123),corrected edge only
+K=200|day1_gt50,K=200,day1,day1_gt50,"O3 true share, w=0.5",,68.19 (1.65),-0.759 (0.165),-1.311 (0.265),-1.813 (0.270),-1.813 (0.270),corrected edge only
+K=200|day1_gt50,K=200,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,70.07 (1.81),1.125 (0.093),0.573 (0.129),0.071 (0.123),0.071 (0.123),corrected edge only
+K=500|day1_full,K=500,day1,day1_full,O1 fixed grid pair,"w=0.3, r=0.6",70.79 (0.16),0.675 (0.150),0.407 (0.039),0.253 (0.029),0.188 (0.079),no correction + adaptive w
+K=500|day1_full,K=500,day1,day1_full,O2 device-round grid pair,,73.94 (0.28),3.833 (0.207),3.564 (0.132),3.410 (0.132),3.346 (0.087),no correction + adaptive w
+K=500|day1_full,K=500,day1,day1_full,"O3 true share, w=0",,70.67 (0.16),0.562 (0.094),0.294 (0.096),0.140 (0.030),0.075 (0.133),no correction + adaptive w
+K=500|day1_full,K=500,day1,day1_full,"O3 true share, w=0.5",,69.31 (0.18),-0.805 (0.041),-1.073 (0.184),-1.227 (0.120),-1.291 (0.222),no correction + adaptive w
+K=500|day1_full,K=500,day1,day1_full,"O3 true share, best fixed w",w=0.0,70.67 (0.16),0.562 (0.094),0.294 (0.096),0.140 (0.030),0.075 (0.133),no correction + adaptive w
+K=500|day1_early,K=500,day1,day1_early,O1 fixed grid pair,"w=0.6, r=0.5",73.10 (0.43),0.121 (0.078),2.414 (0.234),2.753 (0.340),-0.004 (0.045),correction + product
+K=500|day1_early,K=500,day1,day1_early,O2 device-round grid pair,,75.74 (0.37),2.763 (0.206),5.057 (0.358),5.395 (0.495),2.639 (0.149),correction + product
+K=500|day1_early,K=500,day1,day1_early,"O3 true share, w=0",,71.35 (0.47),-1.625 (0.154),0.669 (0.083),1.007 (0.135),-1.749 (0.212),correction + product
+K=500|day1_early,K=500,day1,day1_early,"O3 true share, w=0.5",,72.56 (0.43),-0.413 (0.050),1.881 (0.144),2.219 (0.249),-0.537 (0.099),correction + product
+K=500|day1_early,K=500,day1,day1_early,"O3 true share, best fixed w",w=0.6,72.71 (0.45),-0.266 (0.062),2.028 (0.180),2.366 (0.273),-0.390 (0.088),correction + product
+K=500|day1_gt30,K=500,day1,day1_gt30,O1 fixed grid pair,"w=0.0, r=0.6",71.14 (0.41),1.867 (0.213),0.851 (0.091),0.554 (0.090),0.431 (0.042),no correction + adaptive w
+K=500|day1_gt30,K=500,day1,day1_gt30,O2 device-round grid pair,,73.42 (0.43),4.145 (0.276),3.129 (0.114),2.832 (0.154),2.708 (0.042),no correction + adaptive w
+K=500|day1_gt30,K=500,day1,day1_gt30,"O3 true share, w=0",,70.48 (0.32),1.200 (0.097),0.184 (0.107),-0.113 (0.046),-0.236 (0.142),no correction + adaptive w
+K=500|day1_gt30,K=500,day1,day1_gt30,"O3 true share, w=0.5",,68.36 (0.29),-0.919 (0.039),-1.935 (0.198),-2.232 (0.141),-2.355 (0.245),no correction + adaptive w
+K=500|day1_gt30,K=500,day1,day1_gt30,"O3 true share, best fixed w",w=0.0,70.48 (0.32),1.200 (0.097),0.184 (0.107),-0.113 (0.046),-0.236 (0.142),no correction + adaptive w
+K=500|day1_gt50,K=500,day1,day1_gt50,O1 fixed grid pair,"w=0.0, r=0.6",72.14 (0.39),1.849 (0.214),0.889 (0.087),0.559 (0.094),0.411 (0.034),no correction + adaptive w
+K=500|day1_gt50,K=500,day1,day1_gt50,O2 device-round grid pair,,74.36 (0.42),4.066 (0.268),3.107 (0.107),2.776 (0.149),2.629 (0.028),no correction + adaptive w
+K=500|day1_gt50,K=500,day1,day1_gt50,"O3 true share, w=0",,71.43 (0.28),1.137 (0.084),0.178 (0.106),-0.153 (0.050),-0.300 (0.161),no correction + adaptive w
+K=500|day1_gt50,K=500,day1,day1_gt50,"O3 true share, w=0.5",,69.31 (0.23),-0.988 (0.037),-1.948 (0.195),-2.278 (0.141),-2.426 (0.256),no correction + adaptive w
+K=500|day1_gt50,K=500,day1,day1_gt50,"O3 true share, best fixed w",w=0.0,71.43 (0.28),1.137 (0.084),0.178 (0.106),-0.153 (0.050),-0.300 (0.161),no correction + adaptive w
+S1 replay|replay_full,S1 replay,replay,replay_full,O1 fixed grid pair,"w=0.1, r=0.6",72.75 (1.99),0.807 (0.515),0.482 (0.355),0.015 (0.113),0.015 (0.113),corrected edge only
+S1 replay|replay_full,S1 replay,replay,replay_full,O2 device-round grid pair,,75.10 (1.68),3.155 (0.355),2.830 (0.355),2.363 (0.330),2.363 (0.330),corrected edge only
+S1 replay|replay_full,S1 replay,replay,replay_full,"O3 true share, w=0",,72.99 (1.73),1.042 (0.196),0.717 (0.160),0.250 (0.248),0.250 (0.248),corrected edge only
+S1 replay|replay_full,S1 replay,replay,replay_full,"O3 true share, w=0.5",,71.51 (1.34),-0.438 (0.337),-0.763 (0.604),-1.229 (0.740),-1.229 (0.740),corrected edge only
+S1 replay|replay_full,S1 replay,replay,replay_full,"O3 true share, best fixed w",w=0.0,72.99 (1.73),1.042 (0.196),0.717 (0.160),0.250 (0.248),0.250 (0.248),corrected edge only
+S2 replay|replay_full,S2 replay,replay,replay_full,O1 fixed grid pair,"w=0.2, r=0.5",76.66 (2.56),0.128 (0.148),0.765 (0.832),0.074 (0.128),0.000 (0.000),correction + dev w 0.2
+S2 replay|replay_full,S2 replay,replay,replay_full,O2 device-round grid pair,,78.83 (2.44),2.292 (0.100),2.929 (0.903),2.238 (0.276),2.164 (0.148),correction + dev w 0.2
+S2 replay|replay_full,S2 replay,replay,replay_full,"O3 true share, w=0",,76.84 (1.96),0.305 (0.567),0.942 (1.367),0.251 (0.714),0.177 (0.599),correction + dev w 0.2
+S2 replay|replay_full,S2 replay,replay,replay_full,"O3 true share, w=0.5",,76.21 (1.97),-0.321 (0.571),0.316 (1.315),-0.375 (0.784),-0.449 (0.657),correction + dev w 0.2
+S2 replay|replay_full,S2 replay,replay,replay_full,"O3 true share, best fixed w",w=0.0,76.84 (1.96),0.305 (0.567),0.942 (1.367),0.251 (0.714),0.177 (0.599),correction + dev w 0.2

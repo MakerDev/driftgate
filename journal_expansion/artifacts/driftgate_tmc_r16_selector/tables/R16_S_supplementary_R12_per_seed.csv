@@ -1,0 +1,193 @@
+table,row_id,setting,period,window,method,run,accuracy_pct,strongest reference,strongest_accuracy_pct,difference_pp,driftgate_accuracy_pct
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,r12_s1_fixed040_s0,69.360337,DriftGate,69.360337,0.000000,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,r12_s1_fixed040_s1,69.073972,DriftGate,69.073972,0.000000,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,r12_s1_fixed040_s2,68.155426,DriftGate,68.155426,0.000000,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,r12_s1_fixed040_s3,64.258891,DriftGate,64.258891,0.000000,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,DriftGate,r12_s1_fixed040_s4,70.724749,DriftGate,70.724749,0.000000,70.724749
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,r12_s1_fixed040_s0,69.905699,DriftGate,69.360337,0.545362,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,r12_s1_fixed040_s1,69.976736,DriftGate,69.073972,0.902764,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,r12_s1_fixed040_s2,68.713415,DriftGate,68.155426,0.557988,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,r12_s1_fixed040_s3,64.911286,DriftGate,64.258891,0.652395,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-A,r12_s1_fixed040_s4,71.036943,DriftGate,70.724749,0.312195,70.724749
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,r12_s1_fixed040_s0,69.222590,DriftGate,69.360337,-0.137746,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,r12_s1_fixed040_s1,68.959306,DriftGate,69.073972,-0.114666,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,r12_s1_fixed040_s2,67.773308,DriftGate,68.155426,-0.382119,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,r12_s1_fixed040_s3,64.230899,DriftGate,64.258891,-0.027992,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B0,r12_s1_fixed040_s4,70.467707,DriftGate,70.724749,-0.257042,70.724749
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,r12_s1_fixed040_s0,68.703503,DriftGate,69.360337,-0.656834,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,r12_s1_fixed040_s1,68.471873,DriftGate,69.073972,-0.602099,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,r12_s1_fixed040_s2,67.695372,DriftGate,68.155426,-0.460055,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,r12_s1_fixed040_s3,64.276737,DriftGate,64.258891,0.017846,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-B5,r12_s1_fixed040_s4,70.203421,DriftGate,70.724749,-0.521328,70.724749
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,r12_s1_fixed040_s0,69.666685,DriftGate,69.360337,0.306348,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,r12_s1_fixed040_s1,69.245445,DriftGate,69.073972,0.171473,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,r12_s1_fixed040_s2,68.188086,DriftGate,68.155426,0.032660,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,r12_s1_fixed040_s3,64.604597,DriftGate,64.258891,0.345706,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-Bg,r12_s1_fixed040_s4,70.886839,DriftGate,70.724749,0.162090,70.724749
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,r12_s1_fixed040_s0,70.244058,DriftGate,69.360337,0.883721,69.360337
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,r12_s1_fixed040_s1,69.917998,DriftGate,69.073972,0.844026,69.073972
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,r12_s1_fixed040_s2,68.389223,DriftGate,68.155426,0.233797,68.155426
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,r12_s1_fixed040_s3,64.742335,DriftGate,64.258891,0.483444,64.258891
+supplementary,S1 (Round 12 record)|day1_full,S1 (Round 12 record),day1,day1_full,S-C,r12_s1_fixed040_s4,71.193174,DriftGate,70.724749,0.468426,70.724749
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,r12_s1_fixed040_s0,74.397885,correction + product,74.707838,-0.309953,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,r12_s1_fixed040_s1,74.062484,correction + product,74.371461,-0.308977,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,r12_s1_fixed040_s2,72.498541,correction + product,72.850432,-0.351891,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,r12_s1_fixed040_s3,66.923508,correction + product,67.141491,-0.217983,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,DriftGate,r12_s1_fixed040_s4,74.459932,correction + product,74.956298,-0.496365,74.459932
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,r12_s1_fixed040_s0,73.673445,correction + product,74.707838,-1.034392,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,r12_s1_fixed040_s1,73.948337,correction + product,74.371461,-0.423124,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,r12_s1_fixed040_s2,72.139925,correction + product,72.850432,-0.710507,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,r12_s1_fixed040_s3,68.119598,correction + product,67.141491,0.978107,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-A,r12_s1_fixed040_s4,74.187529,correction + product,74.956298,-0.768769,74.459932
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,r12_s1_fixed040_s0,72.012005,correction + product,74.707838,-2.695833,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,r12_s1_fixed040_s1,73.039015,correction + product,74.371461,-1.332446,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,r12_s1_fixed040_s2,70.561916,correction + product,72.850432,-2.288516,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,r12_s1_fixed040_s3,65.810770,correction + product,67.141491,-1.330722,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B0,r12_s1_fixed040_s4,72.428684,correction + product,74.956298,-2.527614,74.459932
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,r12_s1_fixed040_s0,73.811814,correction + product,74.707838,-0.896024,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,r12_s1_fixed040_s1,73.822581,correction + product,74.371461,-0.548880,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,r12_s1_fixed040_s2,71.781437,correction + product,72.850432,-1.068995,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,r12_s1_fixed040_s3,67.029467,correction + product,67.141491,-0.112024,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-B5,r12_s1_fixed040_s4,74.013391,correction + product,74.956298,-0.942907,74.459932
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,r12_s1_fixed040_s0,73.748137,correction + product,74.707838,-0.959701,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,r12_s1_fixed040_s1,73.585570,correction + product,74.371461,-0.785891,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,r12_s1_fixed040_s2,71.429528,correction + product,72.850432,-1.420904,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,r12_s1_fixed040_s3,67.111967,correction + product,67.141491,-0.029525,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-Bg,r12_s1_fixed040_s4,73.519006,correction + product,74.956298,-1.437292,74.459932
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,r12_s1_fixed040_s0,73.436726,correction + product,74.707838,-1.271111,74.397885
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,r12_s1_fixed040_s1,73.378339,correction + product,74.371461,-0.993122,74.062484
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,r12_s1_fixed040_s2,71.072882,correction + product,72.850432,-1.777550,72.498541
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,r12_s1_fixed040_s3,66.646132,correction + product,67.141491,-0.495359,66.923508
+supplementary,S1 (Round 12 record)|day1_early,S1 (Round 12 record),day1,day1_early,S-C,r12_s1_fixed040_s4,72.981785,correction + product,74.956298,-1.974513,74.459932
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,r12_s1_fixed040_s0,67.891052,corrected edge only,68.625109,-0.734058,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,r12_s1_fixed040_s1,67.618989,corrected edge only,68.567347,-0.948357,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,r12_s1_fixed040_s2,66.888685,corrected edge only,67.195316,-0.306631,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,r12_s1_fixed040_s3,63.481711,corrected edge only,63.560334,-0.078623,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,DriftGate,r12_s1_fixed040_s4,69.635320,corrected edge only,70.328297,-0.692977,69.635320
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,r12_s1_fixed040_s0,68.806772,corrected edge only,68.625109,0.181663,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,r12_s1_fixed040_s1,68.818352,corrected edge only,68.567347,0.251006,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,r12_s1_fixed040_s2,67.714016,corrected edge only,67.195316,0.518700,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,r12_s1_fixed040_s3,63.975528,corrected edge only,63.560334,0.415194,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-A,r12_s1_fixed040_s4,70.118022,corrected edge only,70.328297,-0.210275,69.635320
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,r12_s1_fixed040_s0,68.409011,corrected edge only,68.625109,-0.216099,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,r12_s1_fixed040_s1,67.769391,corrected edge only,68.567347,-0.797956,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,r12_s1_fixed040_s2,66.959963,corrected edge only,67.195316,-0.235353,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,r12_s1_fixed040_s3,63.770103,corrected edge only,63.560334,0.209769,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B0,r12_s1_fixed040_s4,69.895755,corrected edge only,70.328297,-0.432542,69.635320
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,r12_s1_fixed040_s0,67.213579,corrected edge only,68.625109,-1.411531,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,r12_s1_fixed040_s1,66.911249,corrected edge only,68.567347,-1.656097,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,r12_s1_fixed040_s2,66.503602,corrected edge only,67.195316,-0.691714,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,r12_s1_fixed040_s3,63.473857,corrected edge only,63.560334,-0.086476,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-B5,r12_s1_fixed040_s4,69.092179,corrected edge only,70.328297,-1.236118,69.635320
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,r12_s1_fixed040_s0,68.476261,corrected edge only,68.625109,-0.148848,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,r12_s1_fixed040_s1,67.979575,corrected edge only,68.567347,-0.587771,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,r12_s1_fixed040_s2,67.242665,corrected edge only,67.195316,0.047349,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,r12_s1_fixed040_s3,63.873281,corrected edge only,63.560334,0.312947,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-Bg,r12_s1_fixed040_s4,70.119123,corrected edge only,70.328297,-0.209174,69.635320
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,r12_s1_fixed040_s0,69.312863,corrected edge only,68.625109,0.687753,67.891052
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,r12_s1_fixed040_s1,68.908731,corrected edge only,68.567347,0.341385,67.618989
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,r12_s1_fixed040_s2,67.606490,corrected edge only,67.195316,0.411174,66.888685
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,r12_s1_fixed040_s3,64.187060,corrected edge only,63.560334,0.626727,63.481711
+supplementary,S1 (Round 12 record)|day1_gt30,S1 (Round 12 record),day1,day1_gt30,S-C,r12_s1_fixed040_s4,70.671496,corrected edge only,70.328297,0.343199,69.635320
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,r12_s1_fixed040_s0,68.591343,corrected edge only,69.422414,-0.831071,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,r12_s1_fixed040_s1,68.335204,corrected edge only,69.320572,-0.985368,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,r12_s1_fixed040_s2,67.890885,corrected edge only,68.413404,-0.522520,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,r12_s1_fixed040_s3,64.528136,corrected edge only,64.645438,-0.117302,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,DriftGate,r12_s1_fixed040_s4,70.418282,corrected edge only,71.144419,-0.726137,70.418282
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,r12_s1_fixed040_s0,69.482716,corrected edge only,69.422414,0.060302,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,r12_s1_fixed040_s1,69.508669,corrected edge only,69.320572,0.188097,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,r12_s1_fixed040_s2,68.666984,corrected edge only,68.413404,0.253579,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,r12_s1_fixed040_s3,65.022972,corrected edge only,64.645438,0.377534,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-A,r12_s1_fixed040_s4,70.885281,corrected edge only,71.144419,-0.259138,70.418282
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,r12_s1_fixed040_s0,69.273179,corrected edge only,69.422414,-0.149235,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,r12_s1_fixed040_s1,68.773839,corrected edge only,69.320572,-0.546734,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,r12_s1_fixed040_s2,68.222958,corrected edge only,68.413404,-0.190446,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,r12_s1_fixed040_s3,64.984243,corrected edge only,64.645438,0.338804,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B0,r12_s1_fixed040_s4,70.844573,corrected edge only,71.144419,-0.299846,70.418282
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,r12_s1_fixed040_s0,67.897716,corrected edge only,69.422414,-1.524698,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,r12_s1_fixed040_s1,67.660601,corrected edge only,69.320572,-1.659972,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,r12_s1_fixed040_s2,67.474717,corrected edge only,68.413404,-0.938688,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,r12_s1_fixed040_s3,64.599140,corrected edge only,64.645438,-0.046298,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-B5,r12_s1_fixed040_s4,69.894767,corrected edge only,71.144419,-1.249652,70.418282
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,r12_s1_fixed040_s0,69.292788,corrected edge only,69.422414,-0.129626,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,r12_s1_fixed040_s1,68.947710,corrected edge only,69.320572,-0.372862,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,r12_s1_fixed040_s2,68.384236,corrected edge only,68.413404,-0.029168,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,r12_s1_fixed040_s3,65.061615,corrected edge only,64.645438,0.416176,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-Bg,r12_s1_fixed040_s4,71.055281,corrected edge only,71.144419,-0.089138,70.418282
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,r12_s1_fixed040_s0,70.210503,corrected edge only,69.422414,0.788089,68.591343
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,r12_s1_fixed040_s1,69.893053,corrected edge only,69.320572,0.572480,68.335204
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,r12_s1_fixed040_s2,68.799793,corrected edge only,68.413404,0.386389,67.890885
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,r12_s1_fixed040_s3,65.393292,corrected edge only,64.645438,0.747853,64.528136
+supplementary,S1 (Round 12 record)|day1_gt50,S1 (Round 12 record),day1,day1_gt50,S-C,r12_s1_fixed040_s4,71.673849,corrected edge only,71.144419,0.529429,70.418282
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,DriftGate,r12_s2_fixed040_s0,70.644596,correction + w 0.5,70.610159,0.034437,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,DriftGate,r12_s2_fixed040_s1,71.908769,correction + w 0.5,71.941900,-0.033131,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,DriftGate,r12_s2_fixed040_s2,72.547048,correction + w 0.5,72.766419,-0.219372,72.547048
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-A,r12_s2_fixed040_s0,70.255333,correction + w 0.5,70.610159,-0.354827,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-A,r12_s2_fixed040_s1,72.457974,correction + w 0.5,71.941900,0.516074,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-A,r12_s2_fixed040_s2,73.926092,correction + w 0.5,72.766419,1.159672,72.547048
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B0,r12_s2_fixed040_s0,70.334635,correction + w 0.5,70.610159,-0.275524,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B0,r12_s2_fixed040_s1,71.573566,correction + w 0.5,71.941900,-0.368334,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B0,r12_s2_fixed040_s2,72.608534,correction + w 0.5,72.766419,-0.157885,72.547048
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B5,r12_s2_fixed040_s0,70.635356,correction + w 0.5,70.610159,0.025197,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B5,r12_s2_fixed040_s1,71.733203,correction + w 0.5,71.941900,-0.208697,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-B5,r12_s2_fixed040_s2,73.146639,correction + w 0.5,72.766419,0.380219,72.547048
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-Bg,r12_s2_fixed040_s0,70.610060,correction + w 0.5,70.610159,-0.000099,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-Bg,r12_s2_fixed040_s1,72.238870,correction + w 0.5,71.941900,0.296970,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-Bg,r12_s2_fixed040_s2,73.827109,correction + w 0.5,72.766419,1.060689,72.547048
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-C,r12_s2_fixed040_s0,70.246755,correction + w 0.5,70.610159,-0.363405,70.644596
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-C,r12_s2_fixed040_s1,72.506161,correction + w 0.5,71.941900,0.564261,71.908769
+supplementary,S2 (Round 12 record)|day1_full,S2 (Round 12 record),day1,day1_full,S-C,r12_s2_fixed040_s2,74.109740,correction + w 0.5,72.766419,1.343321,72.547048
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,DriftGate,r12_s2_fixed040_s0,70.393861,correction + product,70.955473,-0.561612,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,DriftGate,r12_s2_fixed040_s1,72.004977,correction + product,72.534791,-0.529814,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,DriftGate,r12_s2_fixed040_s2,70.061641,correction + product,71.133937,-1.072296,70.061641
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-A,r12_s2_fixed040_s0,70.043391,correction + product,70.955473,-0.912083,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-A,r12_s2_fixed040_s1,72.051506,correction + product,72.534791,-0.483285,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-A,r12_s2_fixed040_s2,72.835280,correction + product,71.133937,1.701343,70.061641
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B0,r12_s2_fixed040_s0,68.422091,correction + product,70.955473,-2.533383,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B0,r12_s2_fixed040_s1,70.939492,correction + product,72.534791,-1.595299,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B0,r12_s2_fixed040_s2,71.038031,correction + product,71.133937,-0.095906,70.061641
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B5,r12_s2_fixed040_s0,70.095125,correction + product,70.955473,-0.860348,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B5,r12_s2_fixed040_s1,71.555549,correction + product,72.534791,-0.979242,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-B5,r12_s2_fixed040_s2,72.115562,correction + product,71.133937,0.981625,70.061641
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-Bg,r12_s2_fixed040_s0,69.221287,correction + product,70.955473,-1.734186,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-Bg,r12_s2_fixed040_s1,71.929347,correction + product,72.534791,-0.605445,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-Bg,r12_s2_fixed040_s2,72.927194,correction + product,71.133937,1.793257,70.061641
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-C,r12_s2_fixed040_s0,68.456792,correction + product,70.955473,-2.498681,70.393861
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-C,r12_s2_fixed040_s1,71.593402,correction + product,72.534791,-0.941389,72.004977
+supplementary,S2 (Round 12 record)|day1_early,S2 (Round 12 record),day1,day1_early,S-C,r12_s2_fixed040_s2,72.522599,correction + product,71.133937,1.388662,70.061641
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,DriftGate,r12_s2_fixed040_s0,70.717727,correction + w 0.5,70.632865,0.084862,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,DriftGate,r12_s2_fixed040_s1,71.880708,correction + w 0.5,71.870531,0.010177,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,DriftGate,r12_s2_fixed040_s2,73.271958,correction + w 0.5,73.412783,-0.140825,73.271958
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-A,r12_s2_fixed040_s0,70.317149,correction + w 0.5,70.632865,-0.315716,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-A,r12_s2_fixed040_s1,72.576526,correction + w 0.5,71.870531,0.705995,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-A,r12_s2_fixed040_s2,74.244245,correction + w 0.5,73.412783,0.831462,73.271958
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B0,r12_s2_fixed040_s0,70.892461,correction + w 0.5,70.632865,0.259595,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B0,r12_s2_fixed040_s1,71.758504,correction + w 0.5,71.870531,-0.112027,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B0,r12_s2_fixed040_s2,73.066598,correction + w 0.5,73.412783,-0.346185,73.271958
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B5,r12_s2_fixed040_s0,70.792924,correction + w 0.5,70.632865,0.160058,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B5,r12_s2_fixed040_s1,71.785019,correction + w 0.5,71.870531,-0.085512,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-B5,r12_s2_fixed040_s2,73.447370,correction + w 0.5,73.412783,0.034587,73.271958
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-Bg,r12_s2_fixed040_s0,71.015119,correction + w 0.5,70.632865,0.382253,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-Bg,r12_s2_fixed040_s1,72.329148,correction + w 0.5,71.870531,0.458617,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-Bg,r12_s2_fixed040_s2,74.089584,correction + w 0.5,73.412783,0.676801,73.271958
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-C,r12_s2_fixed040_s0,70.768827,correction + w 0.5,70.632865,0.135962,70.717727
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-C,r12_s2_fixed040_s1,72.772383,correction + w 0.5,71.870531,0.901852,71.880708
+supplementary,S2 (Round 12 record)|day1_gt30,S2 (Round 12 record),day1,day1_gt30,S-C,r12_s2_fixed040_s2,74.572656,correction + w 0.5,73.412783,1.159874,73.271958
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,DriftGate,r12_s2_fixed040_s0,70.475767,DriftGate,70.475767,0.000000,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,DriftGate,r12_s2_fixed040_s1,71.516591,DriftGate,71.516591,0.000000,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,DriftGate,r12_s2_fixed040_s2,73.230433,DriftGate,73.230433,0.000000,73.230433
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-A,r12_s2_fixed040_s0,70.185038,DriftGate,70.475767,-0.290729,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-A,r12_s2_fixed040_s1,72.480863,DriftGate,71.516591,0.964272,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-A,r12_s2_fixed040_s2,74.098403,DriftGate,73.230433,0.867969,73.230433
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B0,r12_s2_fixed040_s0,70.780940,DriftGate,70.475767,0.305173,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B0,r12_s2_fixed040_s1,71.588642,DriftGate,71.516591,0.072051,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B0,r12_s2_fixed040_s2,73.150815,DriftGate,73.230433,-0.079618,73.230433
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B5,r12_s2_fixed040_s0,70.559817,DriftGate,70.475767,0.084051,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B5,r12_s2_fixed040_s1,71.539408,DriftGate,71.516591,0.022816,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-B5,r12_s2_fixed040_s2,73.308451,DriftGate,73.230433,0.078018,73.230433
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-Bg,r12_s2_fixed040_s0,70.891519,DriftGate,70.475767,0.415753,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-Bg,r12_s2_fixed040_s1,72.126802,DriftGate,71.516591,0.610211,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-Bg,r12_s2_fixed040_s2,74.042217,DriftGate,73.230433,0.811784,73.230433
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-C,r12_s2_fixed040_s0,70.682411,DriftGate,70.475767,0.206644,70.475767
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-C,r12_s2_fixed040_s1,72.657876,DriftGate,71.516591,1.141284,71.516591
+supplementary,S2 (Round 12 record)|day1_gt50,S2 (Round 12 record),day1,day1_gt50,S-C,r12_s2_fixed040_s2,74.606293,DriftGate,73.230433,1.375860,73.230433

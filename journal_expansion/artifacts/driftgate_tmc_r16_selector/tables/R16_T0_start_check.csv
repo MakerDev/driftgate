@@ -1,0 +1,851 @@
+setting,seed,run,rule,display,r16_value,r15_cache_value,abs_difference,reference
+S1,0,r15_s1_fixed040_s0,B0,Confidence-based offloading,0.63297894909133889,0.63297894909133889,0,R15 cache
+S1,0,r15_s1_fixed040_s0,B1,Device only,0.63841425781877204,0.63841425781877204,0,R15 cache
+S1,0,r15_s1_fixed040_s0,B2,Edge only,0.63355968091697801,0.63355968091697801,0,R15 cache
+S1,0,r15_s1_fixed040_s0,B3,Probability average,0.68705083768264019,0.68705083768264019,0,R15 cache
+S1,0,r15_s1_fixed040_s0,R-PoE,Logit sum,0.68767043136020845,0.68767043136020845,0,R15 cache
+S1,0,r15_s1_fixed040_s0,R-THE,Lower-entropy exit,0.65227660185673575,0.65227660185673575,0,R15 cache
+S1,0,r15_s1_fixed040_s0,LEW,Logit-entropy weighting,0.65229532346770902,0.65229532346770902,0,R15 cache
+S1,0,r15_s1_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.6875800374524792,0.6875800374524792,0,R15 cache
+S1,0,r15_s1_fixed040_s0,R-EM,Label-shift EM,0.65361401263932828,0.65361401263932828,0,R15 cache
+S1,0,r15_s1_fixed040_s0,R-LR,Learned weight,0.68120522985912235,0.68120522985912235,0,R15 cache
+S1,0,r15_s1_fixed040_s0,DriftGate,DriftGate,0.6936876291374825,0.6936876291374825,0,R15 cache
+S1,0,r15_s1_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.68563474321097317,0.68563474321097317,0,R15 cache
+S1,0,r15_s1_fixed040_s0,correction + w 0.5,correction + w 0.5,0.69051521675491445,0.69051521675491445,0,R15 cache
+S1,0,r15_s1_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.6929019940311808,0.6929019940311808,0,R15 cache
+S1,0,r15_s1_fixed040_s0,corrected edge only,corrected edge only,0.68977991688948281,0.68977991688948281,0,R15 cache
+S1,0,r15_s1_fixed040_s0,correction + learned weight,correction + learned weight,0.68898136176565261,0.68898136176565261,0,R15 cache
+S1,0,r15_s1_fixed040_s0,correction + product,correction + product,0.68725155472673893,0.68725155472673893,0,R15 cache
+S1,1,r15_s1_fixed040_s1,B0,Confidence-based offloading,0.63564620373780989,0.63564620373780989,0,R15 cache
+S1,1,r15_s1_fixed040_s1,B1,Device only,0.64539947449752377,0.64539947449752377,0,R15 cache
+S1,1,r15_s1_fixed040_s1,B2,Edge only,0.63591029764567508,0.63591029764567508,0,R15 cache
+S1,1,r15_s1_fixed040_s1,B3,Probability average,0.68180017659928549,0.68180017659928549,0,R15 cache
+S1,1,r15_s1_fixed040_s1,R-PoE,Logit sum,0.68162174807625475,0.68162174807625475,0,R15 cache
+S1,1,r15_s1_fixed040_s1,R-THE,Lower-entropy exit,0.65196714037638237,0.65196714037638237,0,R15 cache
+S1,1,r15_s1_fixed040_s1,LEW,Logit-entropy weighting,0.65194742602060007,0.65194742602060007,0,R15 cache
+S1,1,r15_s1_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.68158153723913739,0.68158153723913739,0,R15 cache
+S1,1,r15_s1_fixed040_s1,R-EM,Label-shift EM,0.65418635770596967,0.65418635770596967,0,R15 cache
+S1,1,r15_s1_fixed040_s1,R-LR,Learned weight,0.67756071221467662,0.67756071221467662,0,R15 cache
+S1,1,r15_s1_fixed040_s1,DriftGate,DriftGate,0.6908582109874053,0.6908582109874053,0,R15 cache
+S1,1,r15_s1_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.68075716893267502,0.68075716893267502,0,R15 cache
+S1,1,r15_s1_fixed040_s1,correction + w 0.5,correction + w 0.5,0.68831992762435934,0.68831992762435934,0,R15 cache
+S1,1,r15_s1_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.69107803298204529,0.69107803298204529,0,R15 cache
+S1,1,r15_s1_fixed040_s1,corrected edge only,corrected edge only,0.68886580114042506,0.68886580114042506,0,R15 cache
+S1,1,r15_s1_fixed040_s1,correction + learned weight,correction + learned weight,0.68658858056481731,0.68658858056481731,0,R15 cache
+S1,1,r15_s1_fixed040_s1,correction + product,correction + product,0.68494257541854708,0.68494257541854708,0,R15 cache
+S1,2,r15_s1_fixed040_s2,B0,Confidence-based offloading,0.62832483816660067,0.62832483816660067,0,R15 cache
+S1,2,r15_s1_fixed040_s2,B1,Device only,0.64649275995854583,0.64649275995854583,0,R15 cache
+S1,2,r15_s1_fixed040_s2,B2,Edge only,0.62852985367858305,0.62852985367858305,0,R15 cache
+S1,2,r15_s1_fixed040_s2,B3,Probability average,0.66997674925029871,0.66997674925029871,0,R15 cache
+S1,2,r15_s1_fixed040_s2,R-PoE,Logit sum,0.67150256391446117,0.67150256391446117,0,R15 cache
+S1,2,r15_s1_fixed040_s2,R-THE,Lower-entropy exit,0.63941480450239385,0.63941480450239385,0,R15 cache
+S1,2,r15_s1_fixed040_s2,LEW,Logit-entropy weighting,0.63942795294948251,0.63942795294948251,0,R15 cache
+S1,2,r15_s1_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.6714729875153288,0.6714729875153288,0,R15 cache
+S1,2,r15_s1_fixed040_s2,R-EM,Label-shift EM,0.65419759674950628,0.65419759674950628,0,R15 cache
+S1,2,r15_s1_fixed040_s2,R-LR,Learned weight,0.66436534167792027,0.66436534167792027,0,R15 cache
+S1,2,r15_s1_fixed040_s2,DriftGate,DriftGate,0.68172169118651538,0.68172169118651538,0,R15 cache
+S1,2,r15_s1_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.66601975090146637,0.66601975090146637,0,R15 cache
+S1,2,r15_s1_fixed040_s2,correction + w 0.5,correction + w 0.5,0.68058569453255902,0.68058569453255902,0,R15 cache
+S1,2,r15_s1_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.68059257528505979,0.68059257528505979,0,R15 cache
+S1,2,r15_s1_fixed040_s2,corrected edge only,corrected edge only,0.6776537925839673,0.6776537925839673,0,R15 cache
+S1,2,r15_s1_fixed040_s2,correction + learned weight,correction + learned weight,0.67900997403260466,0.67900997403260466,0,R15 cache
+S1,2,r15_s1_fixed040_s2,correction + product,correction + product,0.67944749274032845,0.67944749274032845,0,R15 cache
+S1,3,r15_s1_fixed040_s3,B0,Confidence-based offloading,0.58699771232197073,0.58699771232197073,0,R15 cache
+S1,3,r15_s1_fixed040_s3,B1,Device only,0.61226568644248702,0.61226568644248702,0,R15 cache
+S1,3,r15_s1_fixed040_s3,B2,Edge only,0.5875444470616924,0.5875444470616924,0,R15 cache
+S1,3,r15_s1_fixed040_s3,B3,Probability average,0.62543585739828012,0.62543585739828012,0,R15 cache
+S1,3,r15_s1_fixed040_s3,R-PoE,Logit sum,0.62426384256277456,0.62426384256277456,0,R15 cache
+S1,3,r15_s1_fixed040_s3,R-THE,Lower-entropy exit,0.6004664247254069,0.6004664247254069,0,R15 cache
+S1,3,r15_s1_fixed040_s3,LEW,Logit-entropy weighting,0.60048463686559417,0.60048463686559417,0,R15 cache
+S1,3,r15_s1_fixed040_s3,R-ZTW,Geometric ensemble with early exit,0.62423151493482609,0.62423151493482609,0,R15 cache
+S1,3,r15_s1_fixed040_s3,R-EM,Label-shift EM,0.61139827802809998,0.61139827802809998,0,R15 cache
+S1,3,r15_s1_fixed040_s3,R-LR,Learned weight,0.61921870428996262,0.61921870428996262,0,R15 cache
+S1,3,r15_s1_fixed040_s3,DriftGate,DriftGate,0.6427221004512581,0.6427221004512581,0,R15 cache
+S1,3,r15_s1_fixed040_s3,no correction + adaptive w,no correction + adaptive w,0.6223060934305914,0.6223060934305914,0,R15 cache
+S1,3,r15_s1_fixed040_s3,correction + w 0.5,correction + w 0.5,0.64207069489367752,0.64207069489367752,0,R15 cache
+S1,3,r15_s1_fixed040_s3,correction + dev w 0.2,correction + dev w 0.2,0.63903070540783935,0.63903070540783935,0,R15 cache
+S1,3,r15_s1_fixed040_s3,corrected edge only,corrected edge only,0.63607787911142444,0.63607787911142444,0,R15 cache
+S1,3,r15_s1_fixed040_s3,correction + learned weight,correction + learned weight,0.63617248800522863,0.63617248800522863,0,R15 cache
+S1,3,r15_s1_fixed040_s3,correction + product,correction + product,0.64000121329127224,0.64000121329127224,0,R15 cache
+S1,4,r15_s1_fixed040_s4,B0,Confidence-based offloading,0.65920831796610602,0.65920831796610602,0,R15 cache
+S1,4,r15_s1_fixed040_s4,B1,Device only,0.66582567722779118,0.66582567722779118,0,R15 cache
+S1,4,r15_s1_fixed040_s4,B2,Edge only,0.65975256542049598,0.65975256542049598,0,R15 cache
+S1,4,r15_s1_fixed040_s4,B3,Probability average,0.70190247799732974,0.70190247799732974,0,R15 cache
+S1,4,r15_s1_fixed040_s4,R-PoE,Logit sum,0.70350828705044022,0.70350828705044022,0,R15 cache
+S1,4,r15_s1_fixed040_s4,R-THE,Lower-entropy exit,0.67338940130242708,0.67338940130242708,0,R15 cache
+S1,4,r15_s1_fixed040_s4,LEW,Logit-entropy weighting,0.67340586097917832,0.67340586097917832,0,R15 cache
+S1,4,r15_s1_fixed040_s4,R-ZTW,Geometric ensemble with early exit,0.70341493113720965,0.70341493113720965,0,R15 cache
+S1,4,r15_s1_fixed040_s4,R-EM,Label-shift EM,0.66870059003145321,0.66870059003145321,0,R15 cache
+S1,4,r15_s1_fixed040_s4,R-LR,Learned weight,0.69844113818590992,0.69844113818590992,0,R15 cache
+S1,4,r15_s1_fixed040_s4,DriftGate,DriftGate,0.70709806500126071,0.70709806500126071,0,R15 cache
+S1,4,r15_s1_fixed040_s4,no correction + adaptive w,no correction + adaptive w,0.70103361604811232,0.70103361604811232,0,R15 cache
+S1,4,r15_s1_fixed040_s4,correction + w 0.5,correction + w 0.5,0.70509909407073812,0.70509909407073812,0,R15 cache
+S1,4,r15_s1_fixed040_s4,correction + dev w 0.2,correction + dev w 0.2,0.70458700836049293,0.70458700836049293,0,R15 cache
+S1,4,r15_s1_fixed040_s4,corrected edge only,corrected edge only,0.70102282888057088,0.70102282888057088,0,R15 cache
+S1,4,r15_s1_fixed040_s4,correction + learned weight,correction + learned weight,0.70369321351970104,0.70369321351970104,0,R15 cache
+S1,4,r15_s1_fixed040_s4,correction + product,correction + product,0.70385534722763787,0.70385534722763787,0,R15 cache
+S2,0,r15_s2_fixed040_s0,B0,Confidence-based offloading,0.61216608118420379,0.61216608118420379,0,R15 cache
+S2,0,r15_s2_fixed040_s0,B1,Device only,0.66472400905355078,0.66472400905355078,0,R15 cache
+S2,0,r15_s2_fixed040_s0,B2,Edge only,0.61242128129547513,0.61242128129547513,0,R15 cache
+S2,0,r15_s2_fixed040_s0,B3,Probability average,0.6791842554987978,0.6791842554987978,0,R15 cache
+S2,0,r15_s2_fixed040_s0,R-PoE,Logit sum,0.68153554609668998,0.68153554609668998,0,R15 cache
+S2,0,r15_s2_fixed040_s0,R-THE,Lower-entropy exit,0.63295435655754062,0.63295435655754062,0,R15 cache
+S2,0,r15_s2_fixed040_s0,LEW,Logit-entropy weighting,0.63298506940246813,0.63298506940246813,0,R15 cache
+S2,0,r15_s2_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.68147828147708189,0.68147828147708189,0,R15 cache
+S2,0,r15_s2_fixed040_s0,R-EM,Label-shift EM,0.68110719163739553,0.68110719163739553,0,R15 cache
+S2,0,r15_s2_fixed040_s0,R-LR,Learned weight,0.66326054144412872,0.66326054144412872,0,R15 cache
+S2,0,r15_s2_fixed040_s0,DriftGate,DriftGate,0.70684103041425961,0.70684103041425961,0,R15 cache
+S2,0,r15_s2_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.67207756050186218,0.67207756050186218,0,R15 cache
+S2,0,r15_s2_fixed040_s0,correction + w 0.5,correction + w 0.5,0.70644240117688073,0.70644240117688073,0,R15 cache
+S2,0,r15_s2_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.7011542833520239,0.7011542833520239,0,R15 cache
+S2,0,r15_s2_fixed040_s0,corrected edge only,corrected edge only,0.69579726849206291,0.69579726849206291,0,R15 cache
+S2,0,r15_s2_fixed040_s0,correction + learned weight,correction + learned weight,0.69664264916590624,0.69664264916590624,0,R15 cache
+S2,0,r15_s2_fixed040_s0,correction + product,correction + product,0.70581206053511325,0.70581206053511325,0,R15 cache
+S2,1,r15_s2_fixed040_s1,B0,Confidence-based offloading,0.65876832690002407,0.65876832690002407,0,R15 cache
+S2,1,r15_s2_fixed040_s1,B1,Device only,0.68714202031806326,0.68714202031806326,0,R15 cache
+S2,1,r15_s2_fixed040_s1,B2,Edge only,0.65939024169776983,0.65939024169776983,0,R15 cache
+S2,1,r15_s2_fixed040_s1,B3,Probability average,0.69917521794612492,0.69917521794612492,0,R15 cache
+S2,1,r15_s2_fixed040_s1,R-PoE,Logit sum,0.70110110694605254,0.70110110694605254,0,R15 cache
+S2,1,r15_s2_fixed040_s1,R-THE,Lower-entropy exit,0.66903707267067469,0.66903707267067469,0,R15 cache
+S2,1,r15_s2_fixed040_s1,LEW,Logit-entropy weighting,0.66907354710544198,0.66907354710544198,0,R15 cache
+S2,1,r15_s2_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.7010092964182062,0.7010092964182062,0,R15 cache
+S2,1,r15_s2_fixed040_s1,R-EM,Label-shift EM,0.68713409568506645,0.68713409568506645,0,R15 cache
+S2,1,r15_s2_fixed040_s1,R-LR,Learned weight,0.68674070138562049,0.68674070138562049,0,R15 cache
+S2,1,r15_s2_fixed040_s1,DriftGate,DriftGate,0.71958761416606598,0.71958761416606598,0,R15 cache
+S2,1,r15_s2_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.69410954549497106,0.69410954549497106,0,R15 cache
+S2,1,r15_s2_fixed040_s1,correction + w 0.5,correction + w 0.5,0.71986526151362273,0.71986526151362273,0,R15 cache
+S2,1,r15_s2_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.71444719046975558,0.71444719046975558,0,R15 cache
+S2,1,r15_s2_fixed040_s1,corrected edge only,corrected edge only,0.7095287200063114,0.7095287200063114,0,R15 cache
+S2,1,r15_s2_fixed040_s1,correction + learned weight,correction + learned weight,0.70817259777368713,0.70817259777368713,0,R15 cache
+S2,1,r15_s2_fixed040_s1,correction + product,correction + product,0.71912406444361887,0.71912406444361887,0,R15 cache
+S2,2,r15_s2_fixed040_s2,B0,Confidence-based offloading,0.68637781790536223,0.68637781790536223,0,R15 cache
+S2,2,r15_s2_fixed040_s2,B1,Device only,0.7198070900199971,0.7198070900199971,0,R15 cache
+S2,2,r15_s2_fixed040_s2,B2,Edge only,0.68715767622318846,0.68715767622318846,0,R15 cache
+S2,2,r15_s2_fixed040_s2,B3,Probability average,0.71957065103765372,0.71957065103765372,0,R15 cache
+S2,2,r15_s2_fixed040_s2,R-PoE,Logit sum,0.7208570645148541,0.7208570645148541,0,R15 cache
+S2,2,r15_s2_fixed040_s2,R-THE,Lower-entropy exit,0.69926056274746906,0.69926056274746906,0,R15 cache
+S2,2,r15_s2_fixed040_s2,LEW,Logit-entropy weighting,0.69931985027655741,0.69931985027655741,0,R15 cache
+S2,2,r15_s2_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.72074743139222286,0.72074743139222286,0,R15 cache
+S2,2,r15_s2_fixed040_s2,R-EM,Label-shift EM,0.69157235421205798,0.69157235421205798,0,R15 cache
+S2,2,r15_s2_fixed040_s2,R-LR,Learned weight,0.7090163256758959,0.7090163256758959,0,R15 cache
+S2,2,r15_s2_fixed040_s2,DriftGate,DriftGate,0.72576746120641278,0.72576746120641278,0,R15 cache
+S2,2,r15_s2_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.71437712751850535,0.71437712751850535,0,R15 cache
+S2,2,r15_s2_fixed040_s2,correction + w 0.5,correction + w 0.5,0.72788672545235411,0.72788672545235411,0,R15 cache
+S2,2,r15_s2_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.71651846547116238,0.71651846547116238,0,R15 cache
+S2,2,r15_s2_fixed040_s2,corrected edge only,corrected edge only,0.71064960810920408,0.71064960810920408,0,R15 cache
+S2,2,r15_s2_fixed040_s2,correction + learned weight,correction + learned weight,0.71589982410247099,0.71589982410247099,0,R15 cache
+S2,2,r15_s2_fixed040_s2,correction + product,correction + product,0.72886515950183239,0.72886515950183239,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,B0,Confidence-based offloading,0.63509798048244603,0.63509798048244603,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,B1,Device only,0.64134895284698468,0.64134895284698468,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,B2,Edge only,0.63566307146139445,0.63566307146139445,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,B3,Probability average,0.68914429433534052,0.68914429433534052,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,R-PoE,Logit sum,0.68994235097642276,0.68994235097642276,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,R-THE,Lower-entropy exit,0.65462271945094619,0.65462271945094619,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,LEW,Logit-entropy weighting,0.6546551388287507,0.6546551388287507,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.68986711475090912,0.68986711475090912,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,R-EM,Label-shift EM,0.65559289819940703,0.65559289819940703,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,R-LR,Learned weight,0.68365196102577419,0.68365196102577419,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,DriftGate,DriftGate,0.69573482621517724,0.69573482621517724,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.68756185818714266,0.68756185818714266,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,correction + w 0.5,correction + w 0.5,0.69264183877381125,0.69264183877381125,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.69510976632363863,0.69510976632363863,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,corrected edge only,corrected edge only,0.69197825452385398,0.69197825452385398,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,correction + learned weight,correction + learned weight,0.69169289639067366,0.69169289639067366,0,R15 cache
+S1-fast,0,r12_s1fast_fixed040_s0,correction + product,correction + product,0.68965035549545861,0.68965035549545861,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,B0,Confidence-based offloading,0.63768860561351626,0.63768860561351626,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,B1,Device only,0.64593072576640942,0.64593072576640942,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,B2,Edge only,0.63801516169535455,0.63801516169535455,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,B3,Probability average,0.68371989063781613,0.68371989063781613,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,R-PoE,Logit sum,0.68332020141144689,0.68332020141144689,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,R-THE,Lower-entropy exit,0.65424254876442489,0.65424254876442489,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,LEW,Logit-entropy weighting,0.65423798918089748,0.65423798918089748,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.68327801888702777,0.68327801888702777,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,R-EM,Label-shift EM,0.65546206027805309,0.65546206027805309,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,R-LR,Learned weight,0.67926111612976658,0.67926111612976658,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,DriftGate,DriftGate,0.69207209381414569,0.69207209381414569,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.68266907646123831,0.68266907646123831,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,correction + w 0.5,correction + w 0.5,0.68959138890783189,0.68959138890783189,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.69257145188019675,0.69257145188019675,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,corrected edge only,corrected edge only,0.6903393354913272,0.6903393354913272,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,correction + learned weight,correction + learned weight,0.687665215832029,0.687665215832029,0,R15 cache
+S1-fast,1,r12_s1fast_fixed040_s1,correction + product,correction + product,0.6861980835483189,0.6861980835483189,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,B0,Confidence-based offloading,0.62722382278720157,0.62722382278720157,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,B1,Device only,0.64456776656754922,0.64456776656754922,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,B2,Edge only,0.62759427821291758,0.62759427821291758,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,B3,Probability average,0.66898500716934084,0.66898500716934084,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,R-PoE,Logit sum,0.67035885687978958,0.67035885687978958,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,R-THE,Lower-entropy exit,0.63825961317099789,0.63825961317099789,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,LEW,Logit-entropy weighting,0.6382678514578356,0.6382678514578356,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.67027771086893384,0.67027771086893384,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,R-EM,Label-shift EM,0.65119820771495107,0.65119820771495107,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,R-LR,Learned weight,0.66271398786314162,0.66271398786314162,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,DriftGate,DriftGate,0.68110684359135842,0.68110684359135842,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.66492336817183484,0.66492336817183484,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,correction + w 0.5,correction + w 0.5,0.67983705518393711,0.67983705518393711,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.68025158717330003,0.68025158717330003,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,corrected edge only,corrected edge only,0.67736806336717181,0.67736806336717181,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,correction + learned weight,correction + learned weight,0.67779744707945355,0.67779744707945355,0,R15 cache
+S1-fast,2,r12_s1fast_fixed040_s2,correction + product,correction + product,0.67849748270991572,0.67849748270991572,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,B0,Confidence-based offloading,0.56715091128136275,0.56715091128136275,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,B1,Device only,0.61489072414895229,0.61489072414895229,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,B2,Edge only,0.56719374460790195,0.56719374460790195,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,B3,Probability average,0.63391764837014652,0.63391764837014652,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,R-PoE,Logit sum,0.63775915661503435,0.63775915661503435,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,R-THE,Lower-entropy exit,0.5864960559417941,0.5864960559417941,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,LEW,Logit-entropy weighting,0.58656348283212512,0.58656348283212512,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.63775223601216724,0.63775223601216724,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,R-EM,Label-shift EM,0.60087783916638093,0.60087783916638093,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,R-LR,Learned weight,0.62931003407282005,0.62931003407282005,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,DriftGate,DriftGate,0.64969760341129368,0.64969760341129368,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.62889588348261349,0.62889588348261349,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,correction + w 0.5,correction + w 0.5,0.64955649908178936,0.64955649908178936,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.64299334547502063,0.64299334547502063,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,corrected edge only,corrected edge only,0.6366683314735806,0.6366683314735806,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,correction + learned weight,correction + learned weight,0.64680626009414033,0.64680626009414033,0,R15 cache
+partial participation,0,r12_s4part05_fixed040_s0,correction + product,correction + product,0.64948894870150764,0.64948894870150764,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,B0,Confidence-based offloading,0.56582080913123178,0.56582080913123178,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,B1,Device only,0.61960307322909836,0.61960307322909836,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,B2,Edge only,0.56577787193909668,0.56577787193909668,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,B3,Probability average,0.6264475487848985,0.6264475487848985,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,R-PoE,Logit sum,0.62891445969349846,0.62891445969349846,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,R-THE,Lower-entropy exit,0.58269675785159114,0.58269675785159114,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,LEW,Logit-entropy weighting,0.58272215870496613,0.58272215870496613,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.62890814214866009,0.62890814214866009,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,R-EM,Label-shift EM,0.61304116983675339,0.61304116983675339,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,R-LR,Learned weight,0.6202213196513594,0.6202213196513594,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,DriftGate,DriftGate,0.65117904330434184,0.65117904330434184,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.62145235572648683,0.62145235572648683,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,correction + w 0.5,correction + w 0.5,0.65088068297223278,0.65088068297223278,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.64666475623001696,0.64666475623001696,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,corrected edge only,corrected edge only,0.64187995645990348,0.64187995645990348,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,correction + learned weight,correction + learned weight,0.64682475671144601,0.64682475671144601,0,R15 cache
+partial participation,1,r12_s4part05_fixed040_s1,correction + product,correction + product,0.64962319352953823,0.64962319352953823,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,B0,Confidence-based offloading,0.56042104418483196,0.56042104418483196,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,B1,Device only,0.61810704438948472,0.61810704438948472,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,B2,Edge only,0.56034969862861639,0.56034969862861639,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,B3,Probability average,0.6188184403023067,0.6188184403023067,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,R-PoE,Logit sum,0.62151787031207673,0.62151787031207673,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,R-THE,Lower-entropy exit,0.57386441800590804,0.57386441800590804,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,LEW,Logit-entropy weighting,0.57364346261713883,0.57364346261713883,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.621506893269403,0.621506893269403,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,R-EM,Label-shift EM,0.59963356864756134,0.59963356864756134,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,R-LR,Learned weight,0.61095475159928281,0.61095475159928281,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,DriftGate,DriftGate,0.64368648571888221,0.64368648571888221,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.61138644166458256,0.61138644166458256,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,correction + w 0.5,correction + w 0.5,0.64491718315622548,0.64491718315622548,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.63696955641243491,0.63696955641243491,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,corrected edge only,corrected edge only,0.63076953080926657,0.63076953080926657,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,correction + learned weight,correction + learned weight,0.63983580904298287,0.63983580904298287,0,R15 cache
+partial participation,2,r12_s4part05_fixed040_s2,correction + product,correction + product,0.64564092989217436,0.64564092989217436,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,B0,Confidence-based offloading,0.65601429115112397,0.65601429115112397,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,B1,Device only,0.69322584874170157,0.69322584874170157,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,B2,Edge only,0.65638080636617657,0.65638080636617657,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,B3,Probability average,0.73211397441364301,0.73211397441364301,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,R-PoE,Logit sum,0.73181076324823147,0.73181076324823147,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,R-THE,Lower-entropy exit,0.69862425275362505,0.69862425275362505,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,LEW,Logit-entropy weighting,0.69871533444448475,0.69871533444448475,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,R-ZTW,Geometric ensemble with early exit,0.73175710423557261,0.73175710423557261,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,R-EM,Label-shift EM,0.68746108009238072,0.68746108009238072,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,R-LR,Learned weight,0.7243374204251124,0.7243374204251124,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,DriftGate,DriftGate,0.73974327650795879,0.73974327650795879,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,no correction + adaptive w,no correction + adaptive w,0.7306502540729416,0.7306502540729416,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,correction + w 0.5,correction + w 0.5,0.73761738987099035,0.73761738987099035,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,correction + dev w 0.2,correction + dev w 0.2,0.7352212858301127,0.7352212858301127,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,corrected edge only,corrected edge only,0.72955139881895748,0.72955139881895748,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,correction + learned weight,correction + learned weight,0.73463514199526259,0.73463514199526259,0,R15 cache
+stepwise change,0,r12_t1_A_fx40_s0,correction + product,correction + product,0.73561335060047961,0.73561335060047961,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,B0,Confidence-based offloading,0.64644645873686657,0.64644645873686657,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,B1,Device only,0.6870904213981408,0.6870904213981408,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,B2,Edge only,0.64662439630660751,0.64662439630660751,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,B3,Probability average,0.70944243781791705,0.70944243781791705,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,R-PoE,Logit sum,0.70759420612774404,0.70759420612774404,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,R-THE,Lower-entropy exit,0.68266875889745438,0.68266875889745438,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,LEW,Logit-entropy weighting,0.68268969234816068,0.68268969234816068,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,R-ZTW,Geometric ensemble with early exit,0.70758337237150881,0.70758337237150881,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,R-EM,Label-shift EM,0.6826238358446588,0.6826238358446588,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,R-LR,Learned weight,0.70257713736381744,0.70257713736381744,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,DriftGate,DriftGate,0.72179303496056202,0.72179303496056202,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,no correction + adaptive w,no correction + adaptive w,0.70852864378600544,0.70852864378600544,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,correction + w 0.5,correction + w 0.5,0.71980006656243711,0.71980006656243711,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,correction + dev w 0.2,correction + dev w 0.2,0.71834651657861248,0.71834651657861248,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,corrected edge only,corrected edge only,0.71461174269924821,0.71461174269924821,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,correction + learned weight,correction + learned weight,0.71497042246737741,0.71497042246737741,0,R15 cache
+stepwise change,1,r12_t1_A_fx40_s1,correction + product,correction + product,0.71702740879758387,0.71702740879758387,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,B0,Confidence-based offloading,0.65143302628324617,0.65143302628324617,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,B1,Device only,0.69018825219785362,0.69018825219785362,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,B2,Edge only,0.65158419181382732,0.65158419181382732,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,B3,Probability average,0.70849255247674126,0.70849255247674126,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,R-PoE,Logit sum,0.70889072431860778,0.70889072431860778,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,R-THE,Lower-entropy exit,0.67835017920619611,0.67835017920619611,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,LEW,Logit-entropy weighting,0.67837449003696992,0.67837449003696992,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,R-ZTW,Geometric ensemble with early exit,0.70886483903009667,0.70886483903009667,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,R-EM,Label-shift EM,0.6767400359782082,0.6767400359782082,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,R-LR,Learned weight,0.70175848367552596,0.70175848367552596,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,DriftGate,DriftGate,0.71960605943115286,0.71960605943115286,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,no correction + adaptive w,no correction + adaptive w,0.70567586158353235,0.70567586158353235,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,correction + w 0.5,correction + w 0.5,0.71868783454657437,0.71868783454657437,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,correction + dev w 0.2,correction + dev w 0.2,0.71421814650483184,0.71421814650483184,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,corrected edge only,corrected edge only,0.70807360038733735,0.70807360038733735,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,correction + learned weight,correction + learned weight,0.71456214297797638,0.71456214297797638,0,R15 cache
+stepwise change,2,r12_t1_A_fx40_s2,correction + product,correction + product,0.71815850229270972,0.71815850229270972,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,B0,Confidence-based offloading,0.62327706633863578,0.62327706633863578,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,B1,Device only,0.66770046807176309,0.66770046807176309,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,B2,Edge only,0.62373899400203947,0.62373899400203947,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,B3,Probability average,0.68122137363853463,0.68122137363853463,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,R-PoE,Logit sum,0.68020177902303891,0.68020177902303891,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,R-THE,Lower-entropy exit,0.65156588142719674,0.65156588142719674,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,LEW,Logit-entropy weighting,0.65158049884737546,0.65158049884737546,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,R-ZTW,Geometric ensemble with early exit,0.68018261896697552,0.68018261896697552,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,R-EM,Label-shift EM,0.64365911635268347,0.64365911635268347,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,R-LR,Learned weight,0.67239915969793729,0.67239915969793729,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,DriftGate,DriftGate,0.69009759479764154,0.69009759479764154,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,no correction + adaptive w,no correction + adaptive w,0.67812124656801509,0.67812124656801509,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,correction + w 0.5,correction + w 0.5,0.69008805922325855,0.69008805922325855,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,correction + dev w 0.2,correction + dev w 0.2,0.67980755102337609,0.67980755102337609,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,corrected edge only,corrected edge only,0.67460453111140162,0.67460453111140162,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,correction + learned weight,correction + learned weight,0.67943429573162173,0.67943429573162173,0,R15 cache
+stepwise change,3,r12_t1_A_fx40_s3,correction + product,correction + product,0.68960741858921493,0.68960741858921493,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,B0,Confidence-based offloading,0.68150145493755865,0.68150145493755865,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,B1,Device only,0.70817542886473306,0.70817542886473306,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,B2,Edge only,0.68188024361006749,0.68188024361006749,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,B3,Probability average,0.74055033223959499,0.74055033223959499,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,R-PoE,Logit sum,0.74082186151468066,0.74082186151468066,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,R-THE,Lower-entropy exit,0.70972156089722405,0.70972156089722405,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,LEW,Logit-entropy weighting,0.70971313226644384,0.70971313226644384,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,R-ZTW,Geometric ensemble with early exit,0.74075644337810176,0.74075644337810176,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,R-EM,Label-shift EM,0.68921735120606786,0.68921735120606786,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,R-LR,Learned weight,0.73361838717335726,0.73361838717335726,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,DriftGate,DriftGate,0.74657875144815677,0.74657875144815677,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,no correction + adaptive w,no correction + adaptive w,0.73966391946677357,0.73966391946677357,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,correction + w 0.5,correction + w 0.5,0.74453104701344386,0.74453104701344386,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,correction + dev w 0.2,correction + dev w 0.2,0.74135320257850201,0.74135320257850201,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,corrected edge only,corrected edge only,0.73508063778245181,0.73508063778245181,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,correction + learned weight,correction + learned weight,0.74020915333039261,0.74020915333039261,0,R15 cache
+stepwise change,4,r12_t1_A_fx40_s4,correction + product,correction + product,0.74371110704712229,0.74371110704712229,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,B0,Confidence-based offloading,0.58152349223890409,0.58152349223890409,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,B1,Device only,0.67994866884188732,0.67994866884188732,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,B2,Edge only,0.58210550610698253,0.58210550610698253,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,B3,Probability average,0.70093001609617689,0.70093001609617689,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,R-PoE,Logit sum,0.69833997911954826,0.69833997911954826,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,R-THE,Lower-entropy exit,0.64293392745104216,0.64293392745104216,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,LEW,Logit-entropy weighting,0.64293597821279691,0.64293597821279691,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,R-ZTW,Geometric ensemble with early exit,0.69827999165963406,0.69827999165963406,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,R-EM,Label-shift EM,0.65584635911409517,0.65584635911409517,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,R-LR,Learned weight,0.6887235526924006,0.6887235526924006,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,DriftGate,DriftGate,0.71893370045992322,0.71893370045992322,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,no correction + adaptive w,no correction + adaptive w,0.69799202875246513,0.69799202875246513,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,correction + w 0.5,correction + w 0.5,0.71691097879890853,0.71691097879890853,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,correction + dev w 0.2,correction + dev w 0.2,0.71247083997062555,0.71247083997062555,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,corrected edge only,corrected edge only,0.70509456164357609,0.70509456164357609,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,correction + learned weight,correction + learned weight,0.71472540236493221,0.71472540236493221,0,R15 cache
+random mobility,0,r12_t1_mob_fx40_s0,correction + product,correction + product,0.71528653518359575,0.71528653518359575,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,B0,Confidence-based offloading,0.59015093573789812,0.59015093573789812,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,B1,Device only,0.68042468940011547,0.68042468940011547,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,B2,Edge only,0.59049444412215968,0.59049444412215968,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,B3,Probability average,0.6935530057428192,0.6935530057428192,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,R-PoE,Logit sum,0.69077614212809912,0.69077614212809912,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,R-THE,Lower-entropy exit,0.64528056923676957,0.64528056923676957,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,LEW,Logit-entropy weighting,0.64527382979358694,0.64527382979358694,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,R-ZTW,Geometric ensemble with early exit,0.69077047384618429,0.69077047384618429,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,R-EM,Label-shift EM,0.65845844030003298,0.65845844030003298,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,R-LR,Learned weight,0.68600005367312511,0.68600005367312511,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,DriftGate,DriftGate,0.71205158983177563,0.71205158983177563,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,no correction + adaptive w,no correction + adaptive w,0.69174084387522616,0.69174084387522616,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,correction + w 0.5,correction + w 0.5,0.71109931777784474,0.71109931777784474,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,correction + dev w 0.2,correction + dev w 0.2,0.70631073080100826,0.70631073080100826,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,corrected edge only,corrected edge only,0.70183137098017234,0.70183137098017234,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,correction + learned weight,correction + learned weight,0.70603416870224922,0.70603416870224922,0,R15 cache
+random mobility,1,r12_t1_mob_fx40_s1,correction + product,correction + product,0.70844902922702058,0.70844902922702058,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,B0,Confidence-based offloading,0.58522948107597239,0.58522948107597239,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,B1,Device only,0.67082568506244578,0.67082568506244578,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,B2,Edge only,0.58572775679512512,0.58572775679512512,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,B3,Probability average,0.69281588334476052,0.69281588334476052,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,R-PoE,Logit sum,0.68772381152863715,0.68772381152863715,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,R-THE,Lower-entropy exit,0.63832376128329571,0.63832376128329571,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,LEW,Logit-entropy weighting,0.6383239785596142,0.6383239785596142,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,R-ZTW,Geometric ensemble with early exit,0.6876677042338486,0.6876677042338486,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,R-EM,Label-shift EM,0.64836514096036701,0.64836514096036701,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,R-LR,Learned weight,0.68180398818274268,0.68180398818274268,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,DriftGate,DriftGate,0.7018268300665611,0.7018268300665611,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,no correction + adaptive w,no correction + adaptive w,0.69003119973958715,0.69003119973958715,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,correction + w 0.5,correction + w 0.5,0.70065064160383883,0.70065064160383883,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,correction + dev w 0.2,correction + dev w 0.2,0.6965651675732315,0.6965651675732315,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,corrected edge only,corrected edge only,0.6896868314652983,0.6896868314652983,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,correction + learned weight,correction + learned weight,0.6984325176779157,0.6984325176779157,0,R15 cache
+random mobility,2,r12_t1_mob_fx40_s2,correction + product,correction + product,0.69976949214409145,0.69976949214409145,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,B0,Confidence-based offloading,0.3699457941000529,0.3699457941000529,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,B1,Device only,0.34693950193525375,0.34693950193525375,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,B2,Edge only,0.3699381557471858,0.3699381557471858,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,B3,Probability average,0.39209363880977838,0.39209363880977838,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,R-PoE,Logit sum,0.40840482364490804,0.40840482364490804,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,R-THE,Lower-entropy exit,0.37032939345932692,0.37032939345932692,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,LEW,Logit-entropy weighting,0.37045582403724192,0.37045582403724192,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,R-ZTW,Geometric ensemble with early exit,0.40840316006901078,0.40840316006901078,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,R-EM,Label-shift EM,0.40784587932408006,0.40784587932408006,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,R-LR,Learned weight,0.38411030262577278,0.38411030262577278,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,DriftGate,DriftGate,0.41942315879184361,0.41942315879184361,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,no correction + adaptive w,no correction + adaptive w,0.38590895908450956,0.38590895908450956,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,correction + w 0.5,correction + w 0.5,0.42090715876237245,0.42090715876237245,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,correction + dev w 0.2,correction + dev w 0.2,0.41618298209870908,0.41618298209870908,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,corrected edge only,corrected edge only,0.4137955566847667,0.4137955566847667,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,correction + learned weight,correction + learned weight,0.41135984706320833,0.41135984706320833,0,R15 cache
+CIFAR-100,0,r13b_c100_s0,correction + product,correction + product,0.42377443526441277,0.42377443526441277,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,B0,Confidence-based offloading,0.35519919266999928,0.35519919266999928,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,B1,Device only,0.33484743436866782,0.33484743436866782,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,B2,Edge only,0.35517243246187113,0.35517243246187113,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,B3,Probability average,0.37706053798676153,0.37706053798676153,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,R-PoE,Logit sum,0.39282740358223778,0.39282740358223778,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,R-THE,Lower-entropy exit,0.35558995023407686,0.35558995023407686,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,LEW,Logit-entropy weighting,0.3557280705527392,0.3557280705527392,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,R-ZTW,Geometric ensemble with early exit,0.39282577157539195,0.39282577157539195,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,R-EM,Label-shift EM,0.39841808637937187,0.39841808637937187,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,R-LR,Learned weight,0.37068405854805708,0.37068405854805708,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,DriftGate,DriftGate,0.40702208542196344,0.40702208542196344,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,no correction + adaptive w,no correction + adaptive w,0.37064265558143056,0.37064265558143056,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,correction + w 0.5,correction + w 0.5,0.40896609576541004,0.40896609576541004,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,correction + dev w 0.2,correction + dev w 0.2,0.40341908049253472,0.40341908049253472,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,corrected edge only,corrected edge only,0.40073049864865223,0.40073049864865223,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,correction + learned weight,correction + learned weight,0.40045441020030409,0.40045441020030409,0,R15 cache
+CIFAR-100,1,r13b_c100_s1,correction + product,correction + product,0.41227318076528791,0.41227318076528791,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,B0,Confidence-based offloading,0.35012718654838271,0.35012718654838271,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,B1,Device only,0.3360506686470015,0.3360506686470015,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,B2,Edge only,0.35011378050132974,0.35011378050132974,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,B3,Probability average,0.37536431626349498,0.37536431626349498,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,R-PoE,Logit sum,0.39374377653798481,0.39374377653798481,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,R-THE,Lower-entropy exit,0.35080631224949504,0.35080631224949504,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,LEW,Logit-entropy weighting,0.35092959812922425,0.35092959812922425,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,R-ZTW,Geometric ensemble with early exit,0.39374394252472267,0.39374394252472267,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,R-EM,Label-shift EM,0.40687720920316944,0.40687720920316944,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,R-LR,Learned weight,0.37134717151747992,0.37134717151747992,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,DriftGate,DriftGate,0.41220404791474796,0.41220404791474796,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,no correction + adaptive w,no correction + adaptive w,0.36850800776062448,0.36850800776062448,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,correction + w 0.5,correction + w 0.5,0.41369489926021269,0.41369489926021269,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,correction + dev w 0.2,correction + dev w 0.2,0.40888633499923077,0.40888633499923077,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,corrected edge only,corrected edge only,0.40629314142754641,0.40629314142754641,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,correction + learned weight,correction + learned weight,0.40454104847435202,0.40454104847435202,0,R15 cache
+CIFAR-100,2,r13b_c100_s2,correction + product,correction + product,0.41594863140963478,0.41594863140963478,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,B0,Confidence-based offloading,0.60211497078364329,0.60211497078364329,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,B1,Device only,0.65241664499414553,0.65241664499414553,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,B2,Edge only,0.59288406554622441,0.59288406554622441,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,B3,Probability average,0.65258253103542863,0.65258253103542863,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,R-PoE,Logit sum,0.64734355558764145,0.64734355558764145,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,R-THE,Lower-entropy exit,0.65730093202968298,0.65730093202968298,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,LEW,Logit-entropy weighting,0.65731640966756766,0.65731640966756766,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,R-ZTW,Geometric ensemble with early exit,0.64732378977504679,0.64732378977504679,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,R-EM,Label-shift EM,0.61523018326903822,0.61523018326903822,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,R-LR,Learned weight,0.64302455417888438,0.64302455417888438,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,DriftGate,DriftGate,0.65141950727770737,0.65141950727770737,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,no correction + adaptive w,no correction + adaptive w,0.6527987879434427,0.6527987879434427,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,correction + w 0.5,correction + w 0.5,0.65102159402409587,0.65102159402409587,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,correction + dev w 0.2,correction + dev w 0.2,0.63560462518557759,0.63560462518557759,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,corrected edge only,corrected edge only,0.62132158734937848,0.62132158734937848,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,correction + learned weight,correction + learned weight,0.64060713552519566,0.64060713552519566,0,R15 cache
+ResNet-18,0,r12_e2_res_fx40_A_s0,correction + product,correction + product,0.6478020149603293,0.6478020149603293,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,B0,Confidence-based offloading,0.56050222249808868,0.56050222249808868,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,B1,Device only,0.64259181578450186,0.64259181578450186,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,B2,Edge only,0.53383528818723769,0.53383528818723769,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,B3,Probability average,0.63961165746643989,0.63961165746643989,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,R-PoE,Logit sum,0.63535320158993025,0.63535320158993025,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,R-THE,Lower-entropy exit,0.6423196831700585,0.6423196831700585,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,LEW,Logit-entropy weighting,0.64232691385137908,0.64232691385137908,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,R-ZTW,Geometric ensemble with early exit,0.63528412949753377,0.63528412949753377,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,R-EM,Label-shift EM,0.59035953485001169,0.59035953485001169,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,R-LR,Learned weight,0.60438548799319314,0.60438548799319314,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,DriftGate,DriftGate,0.64526976950477721,0.64526976950477721,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,no correction + adaptive w,no correction + adaptive w,0.64092346852107973,0.64092346852107973,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,correction + w 0.5,correction + w 0.5,0.64634088806031387,0.64634088806031387,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,correction + dev w 0.2,correction + dev w 0.2,0.61615714587762849,0.61615714587762849,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,corrected edge only,corrected edge only,0.59019104184647708,0.59019104184647708,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,correction + learned weight,correction + learned weight,0.61936917082364684,0.61936917082364684,0,R15 cache
+ResNet-18,1,r12_e2_res_fx40_A_s1,correction + product,correction + product,0.64511656426073927,0.64511656426073927,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,B0,Confidence-based offloading,0.61378993527652992,0.61378993527652992,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,B1,Device only,0.69656672210080339,0.69656672210080339,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,B2,Edge only,0.5844796577419864,0.5844796577419864,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,B3,Probability average,0.69942762756491106,0.69942762756491106,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,R-PoE,Logit sum,0.69727009405974139,0.69727009405974139,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,R-THE,Lower-entropy exit,0.69658803117176515,0.69658803117176515,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,LEW,Logit-entropy weighting,0.69657546464585829,0.69657546464585829,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,R-ZTW,Geometric ensemble with early exit,0.69714825616682796,0.69714825616682796,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,R-EM,Label-shift EM,0.6462917833688826,0.6462917833688826,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,R-LR,Learned weight,0.66074258339200109,0.66074258339200109,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,DriftGate,DriftGate,0.70249939422474061,0.70249939422474061,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,no correction + adaptive w,no correction + adaptive w,0.7002145746724795,0.7002145746724795,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,correction + w 0.5,correction + w 0.5,0.70382167966597353,0.70382167966597353,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,correction + dev w 0.2,correction + dev w 0.2,0.66897989810334368,0.66897989810334368,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,corrected edge only,corrected edge only,0.64023429575677804,0.64023429575677804,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,correction + learned weight,correction + learned weight,0.67092870368804058,0.67092870368804058,0,R15 cache
+ResNet-18,2,r12_e2_res_fx40_A_s2,correction + product,correction + product,0.70477360512973397,0.70477360512973397,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,B0,Confidence-based offloading,0.66038156506829448,0.66038156506829448,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,B1,Device only,0.63222609428336252,0.63222609428336252,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,B2,Edge only,0.66076995291206564,0.66076995291206564,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,B3,Probability average,0.69817380086600522,0.69817380086600522,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,R-PoE,Logit sum,0.69748464754977402,0.69748464754977402,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,R-THE,Lower-entropy exit,0.67518239868834973,0.67518239868834973,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,LEW,Logit-entropy weighting,0.67517622554417311,0.67517622554417311,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.69743504134144618,0.69743504134144618,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,R-EM,Label-shift EM,0.66162765143017033,0.66162765143017033,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,R-LR,Learned weight,0.69460315270922601,0.69460315270922601,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,DriftGate,DriftGate,0.69875551050576579,0.69875551050576579,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.69928117336438189,0.69928117336438189,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,correction + w 0.5,correction + w 0.5,0.69402568728645875,0.69402568728645875,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.70133336767111121,0.70133336767111121,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,corrected edge only,corrected edge only,0.70091557643161606,0.70091557643161606,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,correction + learned weight,correction + learned weight,0.69516718468185446,0.69516718468185446,0,R15 cache
+K=200,0,r12_s3k200_fixed040_s0,correction + product,correction + product,0.6891561110938248,0.6891561110938248,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,B0,Confidence-based offloading,0.66360217295735158,0.66360217295735158,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,B1,Device only,0.62927427948413006,0.62927427948413006,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,B2,Edge only,0.66409297682963009,0.66409297682963009,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,B3,Probability average,0.69706357303766364,0.69706357303766364,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,R-PoE,Logit sum,0.69671720079774713,0.69671720079774713,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,R-THE,Lower-entropy exit,0.67769956088003769,0.67769956088003769,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,LEW,Logit-entropy weighting,0.677685900445405,0.677685900445405,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.69666208077108405,0.69666208077108405,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,R-EM,Label-shift EM,0.65298296979480785,0.65298296979480785,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,R-LR,Learned weight,0.6936528327898257,0.6936528327898257,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,DriftGate,DriftGate,0.69766218252684475,0.69766218252684475,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.69899032792707183,0.69899032792707183,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,correction + w 0.5,correction + w 0.5,0.69305373967578865,0.69305373967578865,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.70019815745195335,0.70019815745195335,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,corrected edge only,corrected edge only,0.6992438004145991,0.6992438004145991,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,correction + learned weight,correction + learned weight,0.69370920151373128,0.69370920151373128,0,R15 cache
+K=200,1,r12_s3k200_fixed040_s1,correction + product,correction + product,0.68887291249435789,0.68887291249435789,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,B0,Confidence-based offloading,0.63391012080706721,0.63391012080706721,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,B1,Device only,0.61725118630571019,0.61725118630571019,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,B2,Edge only,0.63417897107750765,0.63417897107750765,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,B3,Probability average,0.67168010710153037,0.67168010710153037,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,R-PoE,Logit sum,0.67168219015950392,0.67168219015950392,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,R-THE,Lower-entropy exit,0.64741517544779115,0.64741517544779115,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,LEW,Logit-entropy weighting,0.64742791641860808,0.64742791641860808,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.67166354572159914,0.67166354572159914,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,R-EM,Label-shift EM,0.63431208676050199,0.63431208676050199,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,R-LR,Learned weight,0.66801528460565562,0.66801528460565562,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,DriftGate,DriftGate,0.67344354002557227,0.67344354002557227,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.67170557003901299,0.67170557003901299,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,correction + w 0.5,correction + w 0.5,0.67035666342826528,0.67035666342826528,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.67527201404908077,0.67527201404908077,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,corrected edge only,corrected edge only,0.67437709831389592,0.67437709831389592,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,correction + learned weight,correction + learned weight,0.67058712258888553,0.67058712258888553,0,R15 cache
+K=200,2,r12_s3k200_fixed040_s2,correction + product,correction + product,0.66653058722016156,0.66653058722016156,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,B0,Confidence-based offloading,0.66743056966495384,0.66743056966495384,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,B1,Device only,0.63320419551874996,0.63320419551874996,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,B2,Edge only,0.66783323520530546,0.66783323520530546,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,B3,Probability average,0.70262743130355065,0.70262743130355065,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,R-PoE,Logit sum,0.70168373127938088,0.70168373127938088,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,R-THE,Lower-entropy exit,0.68080475030895371,0.68080475030895371,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,LEW,Logit-entropy weighting,0.68078704628468689,0.68078704628468689,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.70164173808173824,0.70164173808173824,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,R-EM,Label-shift EM,0.66425257245303748,0.66425257245303748,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,R-LR,Learned weight,0.69957748802341202,0.69957748802341202,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,DriftGate,DriftGate,0.70189666580482868,0.70189666580482868,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.70430429957609053,0.70430429957609053,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,correction + w 0.5,correction + w 0.5,0.69688509118112818,0.69688509118112818,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.70495657757079888,0.70495657757079888,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,corrected edge only,corrected edge only,0.70484831353059141,0.70484831353059141,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,correction + learned weight,correction + learned weight,0.69893759963755953,0.69893759963755953,0,R15 cache
+K=500,0,r12_s3k500_fixed040_s0,correction + product,correction + product,0.69189316613194729,0.69189316613194729,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,B0,Confidence-based offloading,0.67492796761425899,0.67492796761425899,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,B1,Device only,0.63086612019062471,0.63086612019062471,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,B2,Edge only,0.67533947971982999,0.67533947971982999,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,B3,Probability average,0.70558254695249112,0.70558254695249112,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,R-PoE,Logit sum,0.70462368777065565,0.70462368777065565,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,R-THE,Lower-entropy exit,0.68874091500284973,0.68874091500284973,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,LEW,Logit-entropy weighting,0.68871465136352328,0.68871465136352328,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.70456972446358823,0.70456972446358823,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,R-EM,Label-shift EM,0.66218201987138769,0.66218201987138769,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,R-LR,Learned weight,0.70234669370789771,0.70234669370789771,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,DriftGate,DriftGate,0.70276398747618762,0.70276398747618762,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.70843236341994054,0.70843236341994054,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,correction + w 0.5,correction + w 0.5,0.69771008170567284,0.69771008170567284,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.70716114871869407,0.70716114871869407,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,corrected edge only,corrected edge only,0.70711338979634175,0.70711338979634175,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,correction + learned weight,correction + learned weight,0.69968120738194861,0.69968120738194861,0,R15 cache
+K=500,1,r12_s3k500_fixed040_s1,correction + product,correction + product,0.69271120756199123,0.69271120756199123,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,B0,Confidence-based offloading,0.66867467502843114,0.66867467502843114,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,B1,Device only,0.62940049000413434,0.62940049000413434,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,B2,Edge only,0.66898524047197216,0.66898524047197216,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,B3,Probability average,0.70317483965533478,0.70317483965533478,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,R-PoE,Logit sum,0.70251011456661039,0.70251011456661039,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,R-THE,Lower-entropy exit,0.68281783567670662,0.68281783567670662,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,LEW,Logit-entropy weighting,0.68281982004519148,0.68281982004519148,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.70248216109203254,0.70248216109203254,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,R-EM,Label-shift EM,0.65905479988675608,0.65905479988675608,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,R-LR,Learned weight,0.69967427759215739,0.69967427759215739,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,DriftGate,DriftGate,0.6986721219247457,0.6986721219247457,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.70519780111966091,0.70519780111966091,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,correction + w 0.5,correction + w 0.5,0.69400050713527306,0.69400050713527306,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.70365663610256202,0.70365663610256202,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,corrected edge only,corrected edge only,0.70403684068669714,0.70403684068669714,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,correction + learned weight,correction + learned weight,0.69643533745113428,0.69643533745113428,0,R15 cache
+K=500,2,r12_s3k500_fixed040_s2,correction + product,correction + product,0.68883347327597755,0.68883347327597755,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,B0,Confidence-based offloading,0.72747064934656047,0.72747064934656047,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,B1,Device only,0.6498818411145274,0.6498818411145274,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,B2,Edge only,0.73036770969585918,0.73036770969585918,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,B3,Probability average,0.73091797482817344,0.73091797482817344,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,R-PoE,Logit sum,0.7275126606268425,0.7275126606268425,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,R-THE,Lower-entropy exit,0.72791316322028909,0.72791316322028909,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,LEW,Logit-entropy weighting,0.72815947905537926,0.72815947905537926,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,R-ZTW,Geometric ensemble with early exit,0.72701238997847495,0.72701238997847495,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,R-EM,Label-shift EM,0.70565012836939245,0.70565012836939245,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,R-LR,Learned weight,0.72860878048744859,0.72860878048744859,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,DriftGate,DriftGate,0.72438691659589982,0.72438691659589982,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,no correction + adaptive w,no correction + adaptive w,0.73591072083818732,0.73591072083818732,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,correction + w 0.5,correction + w 0.5,0.71782397912456519,0.71782397912456519,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,correction + dev w 0.2,correction + dev w 0.2,0.73212177957116698,0.73212177957116698,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,corrected edge only,corrected edge only,0.73515228839865654,0.73515228839865654,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,correction + learned weight,correction + learned weight,0.71869340530847015,0.71869340530847015,0,R15 cache
+S1 replay,0,r15_s1_replay_s0,correction + product,correction + product,0.71101101376100417,0.71101101376100417,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,B0,Confidence-based offloading,0.71510083684378589,0.71510083684378589,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,B1,Device only,0.6642725473856208,0.6642725473856208,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,B2,Edge only,0.71795792551377047,0.71795792551377047,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,B3,Probability average,0.72008162464402137,0.72008162464402137,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,R-PoE,Logit sum,0.7165370820733088,0.7165370820733088,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,R-THE,Lower-entropy exit,0.71749005792416509,0.71749005792416509,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,LEW,Logit-entropy weighting,0.71745972906082289,0.71745972906082289,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,R-ZTW,Geometric ensemble with early exit,0.71634569392281044,0.71634569392281044,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,R-EM,Label-shift EM,0.69542927759609452,0.69542927759609452,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,R-LR,Learned weight,0.7187128777313615,0.7187128777313615,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,DriftGate,DriftGate,0.71878467449422323,0.71878467449422323,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,no correction + adaptive w,no correction + adaptive w,0.72289935316716836,0.72289935316716836,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,correction + w 0.5,correction + w 0.5,0.71371095656333605,0.71371095656333605,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,correction + dev w 0.2,correction + dev w 0.2,0.72586737720127992,0.72586737720127992,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,corrected edge only,corrected edge only,0.72845791511637981,0.72845791511637981,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,correction + learned weight,correction + learned weight,0.71563097562942724,0.71563097562942724,0,R15 cache
+S1 replay,1,r15_s1_replay_s1,correction + product,correction + product,0.70896147419728117,0.70896147419728117,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,B0,Confidence-based offloading,0.71732911359838025,0.71732911359838025,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,B1,Device only,0.67250229374211767,0.67250229374211767,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,B2,Edge only,0.71912638054757838,0.71912638054757838,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,B3,Probability average,0.72796868586061081,0.72796868586061081,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,R-PoE,Logit sum,0.7277015042349021,0.7277015042349021,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,R-THE,Lower-entropy exit,0.72008594265124004,0.72008594265124004,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,LEW,Logit-entropy weighting,0.72028699768964088,0.72028699768964088,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,R-ZTW,Geometric ensemble with early exit,0.7272182697821159,0.7272182697821159,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,R-EM,Label-shift EM,0.70566775035365814,0.70566775035365814,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,R-LR,Learned weight,0.72858505028873821,0.72858505028873821,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,DriftGate,DriftGate,0.72151104157900425,0.72151104157900425,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,no correction + adaptive w,no correction + adaptive w,0.72830410633737863,0.72830410633737863,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,correction + w 0.5,correction + w 0.5,0.71848595179070196,0.71848595179070196,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,correction + dev w 0.2,correction + dev w 0.2,0.72996499656716707,0.72996499656716707,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,corrected edge only,corrected edge only,0.73136606389507841,0.73136606389507841,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,correction + learned weight,correction + learned weight,0.7235946200943324,0.7235946200943324,0,R15 cache
+S1 replay,2,r15_s1_replay_s2,correction + product,correction + product,0.71588662843869288,0.71588662843869288,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,B0,Confidence-based offloading,0.68146495335407808,0.68146495335407808,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,B1,Device only,0.65241827223795223,0.65241827223795223,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,B2,Edge only,0.68442997241000669,0.68442997241000669,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,B3,Probability average,0.69429683782927398,0.69429683782927398,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,R-PoE,Logit sum,0.69311384254658792,0.69311384254658792,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,R-THE,Lower-entropy exit,0.68595969275179425,0.68595969275179425,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,LEW,Logit-entropy weighting,0.68602938498118415,0.68602938498118415,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,R-ZTW,Geometric ensemble with early exit,0.69284714507298517,0.69284714507298517,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,R-EM,Label-shift EM,0.67868426128426473,0.67868426128426473,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,R-LR,Learned weight,0.69048647562422472,0.69048647562422472,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,DriftGate,DriftGate,0.69481357851292325,0.69481357851292325,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,no correction + adaptive w,no correction + adaptive w,0.69328662176798495,0.69328662176798495,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,correction + w 0.5,correction + w 0.5,0.69330856184469714,0.69330856184469714,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,correction + dev w 0.2,correction + dev w 0.2,0.69650434275839235,0.69650434275839235,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,corrected edge only,corrected edge only,0.69546087509108478,0.69546087509108478,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,correction + learned weight,correction + learned weight,0.69173339558533531,0.69173339558533531,0,R15 cache
+S1 replay,3,r15_s1_replay_s3,correction + product,correction + product,0.69085590559104149,0.69085590559104149,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,B0,Confidence-based offloading,0.73200813632899753,0.73200813632899753,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,B1,Device only,0.67968704524131929,0.67968704524131929,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,B2,Edge only,0.7353475131605276,0.7353475131605276,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,B3,Probability average,0.74032110272611407,0.74032110272611407,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,R-PoE,Logit sum,0.73908333640005852,0.73908333640005852,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,R-THE,Lower-entropy exit,0.73385198790299744,0.73385198790299744,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,LEW,Logit-entropy weighting,0.7339253922399358,0.7339253922399358,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,R-ZTW,Geometric ensemble with early exit,0.73824307612301099,0.73824307612301099,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,R-EM,Label-shift EM,0.72305986960077906,0.72305986960077906,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,R-LR,Learned weight,0.7399087328075149,0.7399087328075149,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,DriftGate,DriftGate,0.7378397676148245,0.7378397676148245,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,no correction + adaptive w,no correction + adaptive w,0.74278382985436353,0.74278382985436353,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,correction + w 0.5,correction + w 0.5,0.73331705507820077,0.73331705507820077,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,correction + dev w 0.2,correction + dev w 0.2,0.74432103846514708,0.74432103846514708,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,corrected edge only,corrected edge only,0.74647299674818424,0.74647299674818424,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,correction + learned weight,correction + learned weight,0.73602134971438427,0.73602134971438427,0,R15 cache
+S1 replay,4,r15_s1_replay_s4,correction + product,correction + product,0.72925413902569769,0.72925413902569769,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,B0,Confidence-based offloading,0.704230370177368,0.704230370177368,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,B1,Device only,0.68445103070726332,0.68445103070726332,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,B2,Edge only,0.70431123055846567,0.70431123055846567,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,B3,Probability average,0.72462783505292594,0.72462783505292594,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,R-PoE,Logit sum,0.72730305667081596,0.72730305667081596,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,R-THE,Lower-entropy exit,0.70751928191407398,0.70751928191407398,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,LEW,Logit-entropy weighting,0.70760877177259673,0.70760877177259673,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,R-ZTW,Geometric ensemble with early exit,0.72707210404056388,0.72707210404056388,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,R-EM,Label-shift EM,0.72672756895786605,0.72672756895786605,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,R-LR,Learned weight,0.71011602557503284,0.71011602557503284,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,DriftGate,DriftGate,0.73811727747853195,0.73811727747853195,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,no correction + adaptive w,no correction + adaptive w,0.72128667860320905,0.72128667860320905,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,correction + w 0.5,correction + w 0.5,0.73630824713287391,0.73630824713287391,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,correction + dev w 0.2,correction + dev w 0.2,0.73841786216700001,0.73841786216700001,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,corrected edge only,corrected edge only,0.7362370105766608,0.7362370105766608,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,correction + learned weight,correction + learned weight,0.72676840233254569,0.72676840233254569,0,R15 cache
+S2 replay,0,r15_s2_replay_s0,correction + product,correction + product,0.73541296410005896,0.73541296410005896,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,B0,Confidence-based offloading,0.75484869990442527,0.75484869990442527,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,B1,Device only,0.70360871395861302,0.70360871395861302,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,B2,Edge only,0.75704213437905088,0.75704213437905088,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,B3,Probability average,0.76212544937358218,0.76212544937358218,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,R-PoE,Logit sum,0.75958205918312982,0.75958205918312982,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,R-THE,Lower-entropy exit,0.75770010793005782,0.75770010793005782,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,LEW,Logit-entropy weighting,0.7577845499985586,0.7577845499985586,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,R-ZTW,Geometric ensemble with early exit,0.75928892606039922,0.75928892606039922,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,R-EM,Label-shift EM,0.75086816789680078,0.75086816789680078,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,R-LR,Learned weight,0.74337933491217856,0.74337933491217856,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,DriftGate,DriftGate,0.7701256568633158,0.7701256568633158,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,no correction + adaptive w,no correction + adaptive w,0.76356066365457986,0.76356066365457986,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,correction + w 0.5,correction + w 0.5,0.76557606759180064,0.76557606759180064,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,correction + dev w 0.2,correction + dev w 0.2,0.77311004961623708,0.77311004961623708,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,corrected edge only,corrected edge only,0.77338845913649312,0.77338845913649312,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,correction + learned weight,correction + learned weight,0.75198265781604601,0.75198265781604601,0,R15 cache
+S2 replay,1,r15_s2_replay_s1,correction + product,correction + product,0.7612187739666757,0.7612187739666757,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,B0,Confidence-based offloading,0.78381918174863041,0.78381918174863041,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,B1,Device only,0.74560238512799415,0.74560238512799415,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,B2,Edge only,0.78676161626570063,0.78676161626570063,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,B3,Probability average,0.7901991304178051,0.7901991304178051,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,R-PoE,Logit sum,0.78891894768323123,0.78891894768323123,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,R-THE,Lower-entropy exit,0.78723331887208381,0.78723331887208381,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,LEW,Logit-entropy weighting,0.7872641112827452,0.7872641112827452,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,R-ZTW,Geometric ensemble with early exit,0.78820398313559181,0.78820398313559181,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,R-EM,Label-shift EM,0.76543785020016519,0.76543785020016519,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,R-LR,Learned weight,0.78247845798626425,0.78247845798626425,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,DriftGate,DriftGate,0.78782050843294038,0.78782050843294038,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,no correction + adaptive w,no correction + adaptive w,0.791673193691668,0.791673193691668,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,correction + w 0.5,correction + w 0.5,0.78499173144052192,0.78499173144052192,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,correction + dev w 0.2,correction + dev w 0.2,0.78837510052751036,0.78837510052751036,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,corrected edge only,corrected edge only,0.78805468655017097,0.78805468655017097,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,correction + learned weight,correction + learned weight,0.77903277798013726,0.77903277798013726,0,R15 cache
+S2 replay,2,r15_s2_replay_s2,correction + product,correction + product,0.78327299679381779,0.78327299679381779,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,B0,Confidence-based offloading,0.63289985912881963,0.63289985912881963,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,B1,Device only,0.63841287331628815,0.63841287331628815,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,B2,Edge only,0.63349533265333802,0.63349533265333802,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,B3,Probability average,0.68688563206648412,0.68688563206648412,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,R-PoE,Logit sum,0.68753846067410918,0.68753846067410918,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,R-THE,Lower-entropy exit,0.65211759801815483,0.65211759801815483,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,LEW,Logit-entropy weighting,0.65215464801369694,0.65215464801369694,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.68744850439867533,0.68744850439867533,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,R-EM,Label-shift EM,0.65360332666647403,0.65360332666647403,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,R-LR,Learned weight,0.68112870465991526,0.68112870465991526,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,DriftGate,DriftGate,0.69360336542190959,0.69360336542190959,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.68550397919197914,0.68550397919197914,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,correction + w 0.5,correction + w 0.5,0.69036242319269225,0.69036242319269225,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.69283164504064032,0.69283164504064032,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,corrected edge only,corrected edge only,0.68968724786318347,0.68968724786318347,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,correction + learned weight,correction + learned weight,0.68885437428401686,0.68885437428401686,0,R15 cache
+S1 (Round 12 record),0,r12_s1_fixed040_s0,correction + product,correction + product,0.68714659785976817,0.68714659785976817,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,B0,Confidence-based offloading,0.63560646020515255,0.63560646020515255,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,B1,Device only,0.64532171879166378,0.64532171879166378,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,B2,Edge only,0.63586991281893712,0.63586991281893712,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,B3,Probability average,0.68172520330683317,0.68172520330683317,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,R-PoE,Logit sum,0.68150903885920455,0.68150903885920455,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,R-THE,Lower-entropy exit,0.6518838617983298,0.6518838617983298,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,LEW,Logit-entropy weighting,0.65187120421795841,0.65187120421795841,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.68146958020225634,0.68146958020225634,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,R-EM,Label-shift EM,0.65402121089493992,0.65402121089493992,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,R-LR,Learned weight,0.67745452556211139,0.67745452556211139,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,DriftGate,DriftGate,0.69073971739975926,0.69073971739975926,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.68060118782115453,0.68060118782115453,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,correction + w 0.5,correction + w 0.5,0.68819425122276079,0.68819425122276079,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.69098471150900753,0.69098471150900753,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,corrected edge only,corrected edge only,0.68882637095927646,0.68882637095927646,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,correction + learned weight,correction + learned weight,0.68644095714907816,0.68644095714907816,0,R15 cache
+S1 (Round 12 record),1,r12_s1_fixed040_s1,correction + product,correction + product,0.68486922234171377,0.68486922234171377,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,B0,Confidence-based offloading,0.62842777819658424,0.62842777819658424,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,B1,Device only,0.64630172783159612,0.64630172783159612,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,B2,Edge only,0.62865125774455699,0.62865125774455699,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,B3,Probability average,0.66989606547102809,0.66989606547102809,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,R-PoE,Logit sum,0.67143549693066817,0.67143549693066817,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,R-THE,Lower-entropy exit,0.63938808375939371,0.63938808375939371,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,LEW,Logit-entropy weighting,0.63939880148433581,0.63939880148433581,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.67140205548278686,0.67140205548278686,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,R-EM,Label-shift EM,0.65418906272520716,0.65418906272520716,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,R-LR,Learned weight,0.66428542975160976,0.66428542975160976,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,DriftGate,DriftGate,0.68155426404778297,0.68155426404778297,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.66598950252804578,0.66598950252804578,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,correction + w 0.5,correction + w 0.5,0.68042893675798066,0.68042893675798066,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.68052269392272513,0.68052269392272513,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,corrected edge only,corrected edge only,0.67770198463904452,0.67770198463904452,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,correction + learned weight,correction + learned weight,0.67880387253894947,0.67880387253894947,0,R15 cache
+S1 (Round 12 record),2,r12_s1_fixed040_s2,correction + product,correction + product,0.67928170329352511,0.67928170329352511,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,B0,Confidence-based offloading,0.58672704000215026,0.58672704000215026,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,B1,Device only,0.61209137206947362,0.61209137206947362,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,B2,Edge only,0.58726089000614767,0.58726089000614767,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,B3,Probability average,0.62530484614575443,0.62530484614575443,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,R-PoE,Logit sum,0.62412900967932217,0.62412900967932217,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,R-THE,Lower-entropy exit,0.60021709085854846,0.60021709085854846,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,LEW,Logit-entropy weighting,0.60022642048209573,0.60022642048209573,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,R-ZTW,Geometric ensemble with early exit,0.62409705775872804,0.62409705775872804,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,R-EM,Label-shift EM,0.6114764994655717,0.6114764994655717,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,R-LR,Learned weight,0.61901030991645012,0.61901030991645012,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,DriftGate,DriftGate,0.64258890966128734,0.64258890966128734,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,no correction + adaptive w,no correction + adaptive w,0.62219003767929393,0.62219003767929393,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,correction + w 0.5,correction + w 0.5,0.64198344183521883,0.64198344183521883,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,correction + dev w 0.2,correction + dev w 0.2,0.63891629118113547,0.63891629118113547,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,corrected edge only,corrected edge only,0.63590044867143602,0.63590044867143602,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,correction + learned weight,correction + learned weight,0.63613093023941025,0.63613093023941025,0,R15 cache
+S1 (Round 12 record),3,r12_s1_fixed040_s3,correction + product,correction + product,0.63992282017085267,0.63992282017085267,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,B0,Confidence-based offloading,0.65963905681622015,0.65963905681622015,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,B1,Device only,0.66580589237881005,0.66580589237881005,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,B2,Edge only,0.6601796994842416,0.6601796994842416,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,B3,Probability average,0.70227657681214795,0.70227657681214795,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,R-PoE,Logit sum,0.70379758946368298,0.70379758946368298,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,R-THE,Lower-entropy exit,0.67386735853702251,0.67386735853702251,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,LEW,Logit-entropy weighting,0.67388057931568435,0.67388057931568435,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,R-ZTW,Geometric ensemble with early exit,0.70371804044534114,0.70371804044534114,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,R-EM,Label-shift EM,0.66886850651827734,0.66886850651827734,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,R-LR,Learned weight,0.69878284860633111,0.69878284860633111,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,DriftGate,DriftGate,0.7072474851132301,0.7072474851132301,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,no correction + adaptive w,no correction + adaptive w,0.70140045366796167,0.70140045366796167,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,correction + w 0.5,correction + w 0.5,0.70529163573300058,0.70529163573300058,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,correction + dev w 0.2,correction + dev w 0.2,0.70488093053548451,0.70488093053548451,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,corrected edge only,corrected edge only,0.70126957672527346,0.70126957672527346,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,correction + learned weight,correction + learned weight,0.70397557173480019,0.70397557173480019,0,R15 cache
+S1 (Round 12 record),4,r12_s1_fixed040_s4,correction + product,correction + product,0.70402843306973684,0.70402843306973684,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,B0,Confidence-based offloading,0.61173825748569732,0.61173825748569732,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,B1,Device only,0.66420867936844652,0.66420867936844652,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,B2,Edge only,0.61204823747031378,0.61204823747031378,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,B3,Probability average,0.6787779821571559,0.6787779821571559,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,R-PoE,Logit sum,0.68114894371711709,0.68114894371711709,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,R-THE,Lower-entropy exit,0.63258705304966156,0.63258705304966156,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,LEW,Logit-entropy weighting,0.63261708713458165,0.63261708713458165,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,R-ZTW,Geometric ensemble with early exit,0.68108356201247189,0.68108356201247189,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,R-EM,Label-shift EM,0.68087969467883647,0.68087969467883647,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,R-LR,Learned weight,0.66275614886667955,0.66275614886667955,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,DriftGate,DriftGate,0.70644596389153325,0.70644596389153325,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,no correction + adaptive w,no correction + adaptive w,0.67167578573302722,0.67167578573302722,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,correction + w 0.5,correction + w 0.5,0.70610159300169839,0.70610159300169839,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,correction + dev w 0.2,correction + dev w 0.2,0.70081377316187488,0.70081377316187488,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,corrected edge only,corrected edge only,0.69543492172812249,0.69543492172812249,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,correction + learned weight,correction + learned weight,0.69621837112449581,0.69621837112449581,0,R15 cache
+S2 (Round 12 record),0,r12_s2_fixed040_s0,correction + product,correction + product,0.7054874774573604,0.7054874774573604,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,B0,Confidence-based offloading,0.65806584207704377,0.65806584207704377,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,B1,Device only,0.68700055336155963,0.68700055336155963,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,B2,Edge only,0.65871573762985858,0.65871573762985858,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,B3,Probability average,0.698553762272902,0.698553762272902,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,R-PoE,Logit sum,0.70042121202526542,0.70042121202526542,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,R-THE,Lower-entropy exit,0.66826927074106002,0.66826927074106002,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,LEW,Logit-entropy weighting,0.66829117043809405,0.66829117043809405,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,R-ZTW,Geometric ensemble with early exit,0.70032526747709589,0.70032526747709589,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,R-EM,Label-shift EM,0.68697493192648307,0.68697493192648307,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,R-LR,Learned weight,0.68616615292781502,0.68616615292781502,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,DriftGate,DriftGate,0.71908768636194909,0.71908768636194909,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,no correction + adaptive w,no correction + adaptive w,0.69330486725983331,0.69330486725983331,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,correction + w 0.5,correction + w 0.5,0.71941899925592545,0.71941899925592545,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,correction + dev w 0.2,correction + dev w 0.2,0.71386972716460695,0.71386972716460695,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,corrected edge only,corrected edge only,0.70897099569661182,0.70897099569661182,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,correction + learned weight,correction + learned weight,0.70773801894869315,0.70773801894869315,0,R15 cache
+S2 (Round 12 record),1,r12_s2_fixed040_s1,correction + product,correction + product,0.71862277660098639,0.71862277660098639,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,B0,Confidence-based offloading,0.68564537384759106,0.68564537384759106,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,B1,Device only,0.71995572879692049,0.71995572879692049,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,B2,Edge only,0.68641159669616192,0.68641159669616192,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,B3,Probability average,0.71920961351876256,0.71920961351876256,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,R-PoE,Logit sum,0.72047702572310535,0.72047702572310535,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,R-THE,Lower-entropy exit,0.69855945320228929,0.69855945320228929,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,LEW,Logit-entropy weighting,0.69862712712772901,0.69862712712772901,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,R-ZTW,Geometric ensemble with early exit,0.72037419761328025,0.72037419761328025,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,R-EM,Label-shift EM,0.69117483572782756,0.69117483572782756,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,R-LR,Learned weight,0.70871584618791539,0.70871584618791539,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,DriftGate,DriftGate,0.72547047592967429,0.72547047592967429,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,no correction + adaptive w,no correction + adaptive w,0.71380633184120934,0.71380633184120934,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,correction + w 0.5,correction + w 0.5,0.72766419398386706,0.72766419398386706,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,correction + dev w 0.2,correction + dev w 0.2,0.71616157742183073,0.71616157742183073,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,corrected edge only,corrected edge only,0.71024818993258998,0.71024818993258998,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,correction + learned weight,correction + learned weight,0.71580344764948645,0.71580344764948645,0,R15 cache
+S2 (Round 12 record),2,r12_s2_fixed040_s2,correction + product,correction + product,0.7285967866096873,0.7285967866096873,0,R15 cache

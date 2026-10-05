@@ -1,0 +1,13 @@
+# Round 15 analysis checks before any Round 15 result
+## unit checks against direct loops
+window_sum_counted equals the direct loop: True
+LEW equals a direct grid search (500 random requests): True
+all-equal entropies -> w* = 0.5: [0.5, 0.5]
+
+## smoke run: development record r10_T40_s5 (allowed to view) and the two 5-round A2 smoke runs (not results)
+# development values equal Round 14 (B0 62.868, DriftGate 68.189, Fixed w=0.5 68.192, Fixed w=0.2 67.663, Calibration+product 68.131); DriftGate-P with every request offloaded equals DriftGate
+r10_T40_s5 {'B0': 62.868, 'B1': 64.743, 'B2': 62.894, 'B3': 67.634, 'R-PoE': 67.557, 'R-THE': 65.096, 'R-ZTW': 67.552, 'R-EM': 64.997, 'R-LR': 66.469, 'LEW': 65.095, 'DriftGate': 68.189, 'no correction + adaptive w': 67.183, 'correction + w 0.5': 68.192, 'correction + dev w 0.2': 67.663, 'corrected edge only': 67.132, 'correction + learned weight': 67.477, 'correction + product': 68.131} | DriftGate-P at tau index 0 (all sent): 68.189 | online srv 0.499 | LEW w {'mean': 0.1565437614917755, 'sd': 0.3554488718509674, 'share_0': 0.8254713495312209, 'share_1': 0.14120966860947068} | exact False | LEW agree fp16 None | fp16 zero {'device': 0.00021189844297216884, 'edge': 0.004040207689391262} | min 1.8
+day1 {'B0': 41.454, 'B1': 71.026, 'B2': 41.452, 'B3': 71.055, 'R-PoE': 70.481, 'R-THE': 62.133, 'R-ZTW': 70.481, 'R-EM': 46.291, 'R-LR': 70.813, 'LEW': 62.133, 'DriftGate': 71.358, 'no correction + adaptive w': 70.936, 'correction + w 0.5': 71.36, 'correction + dev w 0.2': 67.291, 'corrected edge only': 63.571, 'correction + learned weight': 69.898, 'correction + product': 71.784} | DriftGate-P at tau index 0 (all sent): 71.358 | online srv 0.494 | LEW w {'mean': 0.560433566570282, 'sd': 0.4962540864944458, 'share_0': 0.4393848810947257, 'share_1': 0.5601335193304106} | exact True | LEW agree fp16 0.999767503653514 | fp16 zero {'device': 0.0, 'edge': 0.0} | min 0.1
+replay {'B0': 50.196, 'B1': 72.9, 'B2': 50.191, 'B3': 72.556, 'R-PoE': 72.777, 'R-THE': 59.467, 'R-ZTW': 72.777, 'R-EM': 59.47, 'R-LR': 71.759, 'LEW': 59.469, 'DriftGate': 74.956, 'no correction + adaptive w': 72.284, 'correction + w 0.5': 75.019, 'correction + dev w 0.2': 71.623, 'corrected edge only': 69.016, 'correction + learned weight': 73.358, 'correction + product': 75.179} | DriftGate-P at tau index 0 (all sent): 74.956 | online srv 0.502 | LEW w {'mean': 0.2984500229358673, 'sd': 0.45740389823913574, 'share_0': 0.7011868384925379, 'share_1': 0.29784996235773437} | exact True | LEW agree fp16 0.9998339311810814 | fp16 zero {'device': 0.0, 'edge': 0.0} | min 0.1
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:07.65
+	Maximum resident set size (kbytes): 4190244

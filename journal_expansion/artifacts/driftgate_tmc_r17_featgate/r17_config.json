@@ -1,0 +1,22 @@
+{
+  "round": 17,
+  "stage": 0,
+  "note": "Stage-0 settings fixed before any Round 17 result (decision_rule.md). Paths relative to journal_expansion/.",
+  "runs": {
+    "S1": {"dir": "runs/phaseT17_featgate", "pattern": "r17_s1_replay_s{}", "design_seeds": [0], "eval_seeds": [1, 2, 3, 4]},
+    "S2": {"dir": "runs/phaseT17_featgate", "pattern": "r17_s2_replay_s{}", "design_seeds": [], "eval_seeds": [0, 1, 2]}
+  },
+  "r15_replay": {"dir": "runs/phaseT15_replay", "pattern": {"S1": "r15_s1_replay_s{}", "S2": "r15_s2_replay_s{}"},
+                 "a2_driftgate_pct": {"S1": 71.95, "S2": 76.54}, "tolerance_pp": 0.05},
+  "features": {"f_d": "device-block output [128, 8, 8] averaged over space", "f_e": "relu(fc2), the input of the server exit fc3 (128)"},
+  "D1": {"alpha_candidates": [0.05, 0.10], "eps_factor": 0.001, "covariance": "class-centred, divided by n"},
+  "D2": {"k": 10, "alpha_candidates": [0.05, 0.10], "own_scores": "leave-one-out"},
+  "D3": {"C": 1.0, "class_weight": "balanced", "max_iter": 5000, "standardize": false, "threshold": 0.5},
+  "D4": {"eps_factor": 0.001, "covariance": "class-centred, divided by n", "residents": "home cell", "two_cells": "mean of the defined per-cell scores"},
+  "tau_grid": "Round 14: 0, 0.05, ..., 2.30, plus infinity",
+  "server_use_points": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "online": {"beta": 0.5, "window": 128, "min_previous": 16, "cold_start": "offload iff non-Main judgement"},
+  "strongest_other": ["B0", "B1", "B2", "B3", "R-PoE", "R-THE", "LEW", "R-ZTW", "R-EM", "R-LR", "corrected edge only"],
+  "primary_candidates": ["R-b D1", "R-b D2", "R-b D3", "R-b D4", "R-c D1 inf", "R-c D2 inf", "R-c D3 inf"],
+  "decision": {"auroc_go": 0.80, "auroc_hold": 0.75, "margin_pp": 0.5, "auroc_detectors": ["D1", "D3"]}
+}

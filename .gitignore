@@ -30,3 +30,8 @@ journal_expansion/runs/phaseT15_replay/*_ckpt.pt
 journal_expansion/artifacts/driftgate_tmc_r15_revision/cache/
 # Round 16 per-run caches (reference answers and stage-1 summaries)
 journal_expansion/artifacts/driftgate_tmc_r16_selector/cache/
+# Round 17 replay records with features (kept on the server)
+journal_expansion/runs/phaseT17_featgate/*_evalprobs.npz
+journal_expansion/runs/phaseT17_featgate/*_features.npz
+journal_expansion/runs/phaseT17_featgate/*_own.npz
+journal_expansion/artifacts/driftgate_tmc_r17_featgate/cache/

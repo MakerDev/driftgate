@@ -1,0 +1,8 @@
+# Round 15: end-to-end check of the default S1 run on the CPU (seed 0, model_seed 100, 2 rounds, evaluation every round, --disjoint_pools, fixed lambda 0.4)
+# old = git worktree at 0a81a75 (before Round 15); new = 314aa2e (Round 15 A2 code). Compared: run JSON apart from run_id, run_name, wall-clock times
+# and the new config keys; trace arrays apart from probe_us (probe wall time); evalprobs arrays (the new lpc/lps arrays listed separately)
+old_plain vs new_plain: JSON identical: False | mean_loss [0.8535077657202507, 0.5577423121107877] vs [0.8535077657202507, 0.5577423121107877] | trace arrays 22, differing: none
+old_rec vs new_rec: JSON identical: False | mean_loss [0.8535077657202507, 0.5577423121107877] vs [0.8535077657202507, 0.5577423121107877] | trace arrays 29, differing: none | evalprobs arrays 14, differing: none, only in new: none
+old_rec vs new_rec_ckpt: JSON identical: False | mean_loss [0.8535077657202507, 0.5577423121107877] vs [0.8535077657202507, 0.5577423121107877] | trace arrays 29, differing: none | evalprobs arrays 14, differing: none, only in new: ['lpc', 'lps']
+checkpoint keys: ['K', 'L', 'client_cells', 'client_states', 'clients_avg', 'round', 'run_id', 'server_avg', 'train_hist_all_last', 'train_hist_cell_last'] | clients 50 | cells 5 | last-round label counts 160851 149907
+# JSON 'False' above: the only differing items are config/env_file (old worktree path; both files sha256 b27dc171...), run_id, run_name, wall-clock times and the new Round 15 config keys -> the default path is bit-identical to 0a81a75.

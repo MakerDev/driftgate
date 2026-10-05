@@ -1,0 +1,49 @@
+\section{Inference under User Mobility}
+\label{sec:motivation}
+
+This section measures how personalized split learning answers requests when users move. We use the commute scenario S1 described in Section~\ref{sec:setup}. Fifty users move between four residential cells and a hub cell over a day, the model is trained with a fixed personalization ratio, and accuracy is averaged over the whole day. We first ask whether the two exits favor different requests, and then test the two common ways of handling such requests.
+
+\subsection{Two Exits for One Request}
+\label{sec:two_exits}
+
+In personalized split learning, the model of a device has a device block and a device exit, and the edge server of each cell has an edge block and an edge exit~\cite{han2023splitgp,rizwan2026splitomc}. The device block maps a request to an intermediate feature. The device exit classifies this feature on the device. If the feature is sent to the edge, the edge block and the edge exit return a second class-probability vector. During training, each device updates its device block with its own labeled data and then mixes it with the average block of its cell. The edge block is trained on the features of all devices in the cell. The device exit is therefore tied to the classes in its user's data, while the edge exit covers the classes of everyone in the cell.
+
+We follow prior work in describing a request by its relation to the device that receives it~\cite{rizwan2026splitomc}. A request is \emph{Main} if its class appears in the device's own training data. It is \emph{OOP} if its class appears only in the data of other devices in the current cell, and \emph{OOR} otherwise. In S1, 11.5\% of the requests of a device in its home cell are OOP or OOR, and this share rises to about 51\% after the device leaves its home cell. At 05:00 every device is at home, and during the day only about 35\% of them are.
+
+\subsection{The Two Exits Favor Opposite Requests}
+\label{sec:complementary}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{motivation_exits}
+\caption{Accuracy of the device exit alone (Device only) and the edge exit alone (Edge only) in the commute scenario S1 over the whole day. (a) Devices in their home cell and devices in another cell. (b) Requests from the device's own classes (Main), from classes learned only by other devices of the current cell (OOP), and from other classes (OOR). Error bars show the standard deviation over five seeds.}
+\label{fig:motivation}
+\end{figure}
+
+Does one exit serve a moving device well throughout the day? Fig.~\ref{fig:motivation} answers this question by measuring each exit alone. Panel (a) splits devices by location, and panel (b) splits requests by their relation to the device. The device exit is more accurate at home (77.5\% against 69.9\%), and the edge exit is more accurate away from home (54.8\% against 45.9\%). Panel (b) shows the reason. The device exit is correct on 86.3\% of Main requests but on only 7.5\% of OOP requests and 3.3\% of OOR requests. The edge exit is correct on 72.3\%, 40.8\%, and 22.5\% of them. Each exit is better on one kind of request, and a moving device receives both kinds in the same day. A system that uses one exit for all requests therefore loses accuracy either at home or away.
+
+\subsection{Choosing One Exit per Request}
+\label{sec:choose}
+
+The common way to use both exits is to choose one of them for each request. Split inference systems answer on the device when the device exit is confident and send the request to the edge otherwise~\cite{han2023splitgp,laskaridis2020spinn,teerapittayanon2016branchynet}. For this rule to work, the device exit must be uncertain on the requests that it cannot classify. We measure how well the entropy of the device exit separates OOP and OOR requests from Main requests. The area under the ROC curve (AUROC) is 0.64, where 0.5 means no separation. A personalized classifier places most of its probability on its user's classes even for a request from another class, a form of the overconfidence that neural classifiers show on inputs outside their training data~\cite{hendrycks2017baseline,guo2017calibration}.
+
+The weak separation shows up in accuracy. With an entropy threshold of 0.8 nats, confidence-based offloading sends 92\% of requests to the edge and reaches 62.9\%. This is the same accuracy as always using the edge exit (62.9\%) and 1.3 points below always using the device exit (64.2\%). Choosing the exit with the lower entropy for each request performs similarly at 64.3\%. A per-request choice needs a per-request signal that tells the two kinds of requests apart, and the confidence of the device exit does not provide it.
+
+\subsection{Adapting Personalization during Training}
+\label{sec:training_side}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\columnwidth]{device_oracle}
+\caption{Accuracy gain of an oracle that sets each device's personalization ratio from its true location (0.70 at home, 0.15 away) over a fixed ratio of 0.4 in S1, for all devices, devices at home, and devices away. Bars show the mean, error bars the standard deviation, and dots the three seeds.}
+\label{fig:oracle}
+\end{figure}
+
+The other common remedy changes the model instead of the inference. A device could keep more of its local model when its traffic matches its own data and more of the shared model when it does not~\cite{deng2020apfl}. To measure how much this can give, we use an oracle that knows whether each device is at home. The oracle sets a personalization ratio of 0.70 at home and 0.15 away, while the baseline keeps 0.4 for every device.
+
+Fig.~\ref{fig:oracle} shows the result. The oracle raises the accuracy of devices at home by 3.7 points, but it lowers the accuracy of devices away by 1.7 points, and the whole-day gain is 0.9 points. We attribute the loss away to the gain at home. Devices that keep more of their local model also send more specialized blocks into the cell average. The shared model of a cell then fits its residents more closely, and visitors who depend on that shared model lose accuracy. The benefit of personalization stays with one device, while its cost is spread over every device that shares the cell. A method without the oracle does even less. Learning the ratio of each device from its own training loss, as APFL does~\cite{deng2020apfl}, gives 62.9\% with the better of two learning rates, the same as the fixed ratio.
+
+\subsection{Implications}
+\label{sec:implications}
+
+The measurements point to three requirements. First, a device needs both exits within the same day, because each exit is better on one kind of request. Second, the decision cannot rest on the confidence of the device exit for a single request. Third, the remedy should change only the answers of the device that needs it. If it changes the shared model instead, other devices pay for the gain. These requirements lead us to keep training unchanged and to combine the two exits at inference time, as Section~\ref{sec:design} describes.

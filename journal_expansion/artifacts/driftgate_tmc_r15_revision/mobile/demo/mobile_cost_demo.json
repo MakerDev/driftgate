@@ -1,0 +1,15 @@
+{
+  "$comment": "DEMO ONLY: the assumed values of v27 Table 9 (smartphone column) and a 20 ms round trip. Not measurements. Energy unknown (null).",
+  "measurement_type": "demo",
+  "setting": "S1",
+  "per_branch": {
+    "local": {"latency_ms": 11.8, "energy_mJ": null},
+    "offloaded": {
+      "Confidence-based offloading": {"latency_ms": 37.6, "energy_mJ": null},
+      "Probability average": {"latency_ms": 37.605, "energy_mJ": null},
+      "Logit sum": {"latency_ms": 37.605, "energy_mJ": null},
+      "DriftGate": {"latency_ms": 37.605, "energy_mJ": null}
+    }
+  },
+  "$derivation": "offloaded = 11.8 (device block and exit) + 5.2 (32 KB uplink at 50 Mbps) + 20 (round trip) + 0.6 (edge) [+ 0.005 combination]"
+}

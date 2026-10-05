@@ -1,0 +1,328 @@
+\section{Evaluation}
+\label{sec:evaluation}
+
+We ask five questions. Is DriftGate more accurate than other inference rules under mobility (Section~\ref{sec:overall})? How much of this comes from the early phase of training, and what happens with trained models (Section~\ref{sec:trained})? Which devices, requests, and times of day does the gain come from (Section~\ref{sec:where})? How much accuracy does it keep when fewer requests are offloaded (Section~\ref{sec:eval_offload})? Which parts of the design matter (Section~\ref{sec:ablation})? Sections~\ref{sec:scale} and~\ref{sec:device} cover larger deployments, the least accurate devices, and the cost on devices.
+
+\subsection{Setup}
+\label{sec:setup}
+
+\textbf{Settings.} Table~\ref{tab:settings} lists the settings. The commute scenario S1 places five cells with a 1\,km edge range, four residential cells and one hub, and 50 devices whose users walk from home to the hub and back over a day from 05:00 to 20:00. Training runs in 150 rounds of six minutes. Every device is at home at 05:00, and during the day about 35\% are, while the hub holds up to 32 devices. About 14\% of the devices are inside two cells at a time. S2 replaces the synthetic paths with 50 weekday user-days from the GeoLife trajectories~\cite{zheng2010geolife} and places five edges by $k$-means over the traces. The paths are real, and the recognition requests are generated as in S1. S2 has a weaker commute pattern, and about 60\% of its devices stay at home during the day. S1-fast moves the S1 users at vehicle speed, and partial participation lets a random half of the devices train in each round. Two further settings change the class mix of all devices together. In the stepwise change, cell membership is fixed while the share parameter $\rho$ defined below rises from 0 to 0.8 and returns to 0 in five phases over 150 rounds. In random mobility, devices move between cells by a Gauss--Markov model~\cite{liang1999gaussmarkov} for 120 rounds, and $\rho$ changes from 0 to 0.8 halfway through the run. CIFAR-100 repeats S1 with 100 classes, and ResNet-18 repeats the stepwise change with 16 devices and a ResNet-18~\cite{he2016resnet} split in the middle. Section~\ref{sec:scale} repeats the S1 layout to reach 200 and 500 devices.
+
+\begin{table*}[t]
+\centering
+\caption{Evaluation settings. Settings other than ResNet-18 and the scale study use 50 devices and five cells.}
+\label{tab:settings}
+\footnotesize
+\begin{tabular}{l>{\raggedright\arraybackslash}p{7.0cm}lcc}
+\toprule
+Setting & Movement and class mix & Data, model & Devices & Seeds \\
+\midrule
+S1 (commute) & Walking commute between four residential cells and a hub & CIFAR-10, CNN & 50 & 5 \\
+S2 (GeoLife) & 50 user-days of GeoLife traces & CIFAR-10, CNN & 50 & 3 \\
+S1-fast & S1 at vehicle speed & CIFAR-10, CNN & 50 & 3 \\
+Partial participation & S1, half of the devices train per round & CIFAR-10, CNN & 50 & 3 \\
+Stepwise change & Fixed cells, $\rho$: 0, 0.4, 0.8, 0.4, 0 for all devices & CIFAR-10, CNN & 50 & 5 \\
+Random mobility & Gauss--Markov movement, $\rho$: 0 then 0.8, 120 rounds & CIFAR-10, CNN & 50 & 3 \\
+CIFAR-100 & S1 with 100 classes & CIFAR-100, CNN & 50 & 3 \\
+ResNet-18 & Stepwise change & CIFAR-10, ResNet-18 & 16 & 3 \\
+Scale & S1 layout repeated & CIFAR-10, CNN & 200, 500 & 3 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\textbf{Data and requests.} Each device holds two own classes of CIFAR-10~\cite{krizhevsky2009cifar}, or 20 of CIFAR-100. In S1, a device holds 620 to 2,857 training images. The requests of a device in an evaluation round are test images that are not used by any other part of the system. For every Main request, a device receives on average $\rho$ OOP requests and $0.3\rho$ OOR requests, following the proportions of SplitOMC~\cite{rizwan2026splitomc}. In the mobility settings, $\rho=0.1$ in the device's home cell and $\rho=0.8$ elsewhere, so OOP and OOR requests make up about 11.5\% and 51\% of the traffic. These values are simulation settings, not measurements of a real application. The arrival order of the requests within a round is random and is the same for every inference rule.
+
+\textbf{Models and training.} The CNN has a device block of 0.13\,M parameters, a device exit of 0.15\,M parameters, and an edge block and exit of 1.38\,M parameters. Its intermediate feature has $128\times8\times8$ values (32\,KB in single precision). All models are trained from random initialization with SGD (learning rate 0.01, weight decay $10^{-4}$, batch size 32, three local epochs per round) and the procedure of Section~\ref{sec:training} with $\lambda=0.4$ and $\Lambda=0.5$.
+
+\textbf{Inference rules.} All rules answer the same requests with the same trained models. Training is the same for every rule.
+\begin{itemize}
+\item \emph{Confidence-based offloading}, the inference rule of SplitGP~\cite{han2023splitgp}, answers with the device exit if its entropy is at most 0.8 nats and otherwise with the edge exit.
+\item \emph{Device only} and \emph{Edge only} always use one exit.
+\item \emph{Probability average} answers with the mean of the two probability vectors.
+\item \emph{Logit sum} adds the logits of the two exits, which is the combination of FedRoD~\cite{chen2022fedrod}; FedRoD's balanced training of the generic head is not used.
+\item \emph{Lower-entropy exit} uses, for each request, the exit with the lower entropy.
+\item \emph{Logit-entropy weighting} applies the entropy objective of FedTHE~\cite{jiang2023fedthe} to each request. It mixes the logits of the two exits with the weight in $\{0,0.01,\dots,1\}$ that minimizes the entropy of the softmax of the mixture, and answers with that mixture. FedTHE's feature-alignment term and test-time history are not used.
+\item \emph{Geometric ensemble with early exit} answers with the device exit when its largest probability exceeds a threshold and otherwise with the geometric mean of both exits, following the ensembling and early exit of ZTW~\cite{wolczyk2021ztw} without its cascade connections and trained weights. The threshold gives the same offloading ratio as confidence-based offloading.
+\item \emph{Label-shift EM} estimates the share of requests outside $M_k$ by EM~\cite{saerens2002adjusting} on the device's earlier requests and answers with the edge exit corrected to that share.
+\item \emph{Learned weight} combines the exits with a per-request weight from a logistic regression that predicts whether a request is Main from nine label-free features, such as the confidence of each exit and their agreement. The regression is trained with labels on development runs, which gives per-request weighting an advantage that a deployed system would not have. It uses the uncorrected edge exit.
+\end{itemize}
+DriftGate uses $r=1/2$ and the window of Section~\ref{sec:weight}, where an evaluation period is one evaluation round. Except in Section~\ref{sec:eval_offload}, DriftGate and all combining rules offload every request, and the geometric ensemble with early exit offloads the same share as confidence-based offloading. The value of $r$, the minimum of eight requests in the window, and the logistic regression were fixed on development runs whose seeds are not used in this section. The threshold of 0.8 nats is the default of the SplitOMC implementation.
+
+\textbf{Evaluation conditions and metric.} We report the accuracy of Eq.~\eqref{eq:accuracy}. Evaluation takes place every five rounds in the mobility settings and every ten rounds in the stepwise change and random mobility. Because training starts at the beginning of the simulated day, the whole run includes the early phase of training. We therefore report three conditions. The \emph{first day} averages all evaluation rounds of the run. \emph{Round $>30$} and \emph{round $>50$} average the evaluation rounds after rounds 30 and 50. The \emph{frozen replay} restores the models of S1 and S2 at the end of the day and replays the same day of movement and requests with all parameters, including batch-normalization statistics, frozen. For the replay, we retrained the S1 and S2 runs with the same settings and seeds and kept their end-of-day state, and the edge exit uses the class counts of the last training round for its correction. We report the mean over seeds, and differences are computed per seed before averaging. The \emph{strongest alternative} in a setting is the rule other than DriftGate with the highest mean accuracy.
+
+\subsection{Overall Accuracy over the First Day}
+\label{sec:overall}
+
+\begin{table*}[t]
+\centering
+\caption{Accuracy (\%) over the first day, which includes early training. The last rows give the gain of DriftGate over confidence-based offloading, its gain over the strongest alternative in each setting, and that rule. Gains are the mean and standard deviation of the per-seed difference.}
+\label{tab:main}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccccccc}
+\toprule
+Rule & S1 & S2 & S1-fast & Partial part. & Stepwise & Random mob. & CIFAR-100 & ResNet-18 \\
+\midrule
+Confidence-based offloading & 62.87 & 65.18 & 63.33 & 56.45 & 65.17 & 58.56 & 35.84 & 59.21 \\
+Device only & 64.16 & 69.04 & 64.39 & 61.75 & 68.93 & 67.71 & 33.93 & 66.39 \\
+Edge only & 62.91 & 65.24 & 63.38 & 56.44 & 65.20 & 58.61 & 35.84 & 57.04 \\
+Probability average & 67.32 & 69.88 & 68.06 & 62.64 & 71.44 & 69.58 & 38.15 & 66.39 \\
+Logit sum & 67.37 & 70.07 & 68.12 & 62.94 & 71.39 & 69.23 & 39.83 & 66.00 \\
+Lower-entropy exit & 64.35 & 66.65 & 64.90 & 58.10 & 68.42 & 64.22 & 35.89 & 66.54 \\
+Logit-entropy weighting & 64.35 & 66.65 & 64.91 & 58.10 & 68.42 & 64.22 & 35.90 & 66.54 \\
+Geometric ensemble with early exit & 67.36 & 70.06 & 68.11 & 62.94 & 71.38 & 69.22 & 39.83 & 65.99 \\
+Label-shift EM & 64.84 & 68.63 & 65.41 & 60.45 & 67.59 & 65.42 & 40.44 & 61.73 \\
+Learned weight & 66.81 & 68.59 & 67.52 & 62.02 & 70.69 & 68.55 & 37.54 & 63.61 \\
+DriftGate & \textbf{68.31} & \textbf{71.70} & \textbf{68.96} & \textbf{64.82} & \textbf{72.36} & \textbf{71.09} & \textbf{41.29} & \textbf{66.64} \\
+\midrule
+Gain over confidence-based & 5.45 (0.47) & 6.52 (2.77) & 5.63 (0.38) & 8.37 (0.15) & 7.18 (0.77) & 12.53 (1.08) & 5.45 (0.67) & 7.43 (2.17) \\
+Gain over strongest alternative & 0.95 (0.57) & 1.63 (1.04) & 0.84 (0.25) & 1.88 (0.59) & 0.92 (0.26) & 1.52 (0.53) & 0.85 (0.31) & 0.10 (0.61) \\
+Strongest alternative & Logit sum & Logit sum & Logit sum & Logit sum & Prob. average & Prob. average & Label-shift EM & Logit-entropy w. \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}
+
+Is DriftGate more accurate than other ways of answering requests? Table~\ref{tab:main} compares eleven rules in the eight settings over the first day. Rules that choose one exit per request, namely confidence-based offloading and the lower-entropy exit, do not rise clearly above the better single exit. Logit-entropy weighting behaves almost exactly like the lower-entropy exit. Its entropy-minimizing weight is 0 or 1 for 94.6\% to 98.7\% of the requests in the CNN settings, so it also chooses one exit for most requests. Rules that combine the exits, namely the probability average, the logit sum, and the geometric ensemble, are 2 to 11 points above confidence-based offloading. DriftGate has the highest mean accuracy in all eight settings over the first day. Its gain over confidence-based offloading ranges from 5.4 to 12.5 points, and its gain over the strongest alternative from 0.1 to 1.9 points. With ResNet-18, the mean gain of 0.10 points is smaller than its seed-to-seed standard deviation of 0.61 points, so DriftGate and the strongest alternative cannot be told apart there. In CIFAR-100, where each device owns 20 of 100 classes, the strongest alternative is Label-shift EM, which also corrects the edge exit.
+
+\subsection{Early Training and Trained Models}
+\label{sec:trained}
+
+\begin{table*}[t]
+\centering
+\caption{Gain (points) of DriftGate over the strongest alternative of each condition, its rank among the eleven rules, and its gain over confidence-based offloading, for the first day and for evaluation rounds after rounds 30 and 50. Gains are means of per-seed differences.}
+\label{tab:windows}
+\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{Over strongest alternative (rank)} & \multicolumn{3}{c}{Over confidence-based} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Setting & First day & Round $>30$ & Round $>50$ & First day & Round $>30$ & Round $>50$ \\
+\midrule
+S1 & 0.95 (1) & 0.36 (1) & 0.22 (1) & 5.45 & 2.31 & 1.74 \\
+S2 & 1.63 (1) & 1.14 (1) & 1.09 (1) & 6.52 & 3.92 & 3.28 \\
+S1-fast & 0.84 (1) & 0.18 (1) & 0.03 (1) & 5.63 & 2.26 & 1.64 \\
+Partial part. & 1.88 (1) & 0.93 (1) & 0.82 (1) & 8.37 & 5.49 & 4.80 \\
+Stepwise & 0.92 (1) & $-0.02$ (2) & $-0.02$ (2) & 7.18 & 1.21 & 0.93 \\
+Random mob. & 1.52 (1) & 0.11 (1) & $-1.82$ (9) & 12.53 & 3.70 & $-1.07$ \\
+CIFAR-100 & 0.85 (1) & 0.52 (1) & 0.28 (1) & 5.45 & 5.03 & 4.96 \\
+ResNet-18 & 0.10 (1) & $-0.21$ (6) & $-0.27$ (6) & 7.43 & 3.94 & 3.61 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+How much of the gain comes from the first hours, when the models are still being trained? We first split the first-day gain by time of day, weighting each period by its share of the evaluation rounds as in Eq.~\eqref{eq:accuracy}. In S1, the six evaluation rounds before the commute, out of 31, contribute 3.4 of the 5.5 points that DriftGate gains over confidence-based offloading and 0.58 of the 0.95 points it gains over the strongest alternative. In these rounds the edge exit is still in its first rounds of training. Table~\ref{tab:windows} then drops the early rounds. After round 30, DriftGate remains the most accurate rule in six of the eight settings. Its margin over the strongest alternative falls to between $-0.21$ and $+1.14$ points, and in the stepwise change it is 0.02 points behind the probability average. After round 50, it remains first in five settings. In random mobility, where about half of every device's requests are OOP or OOR after round 60, it falls 1.8 points below the learned weight and below confidence-based offloading. Across conditions, its lead is largest in S2, partial participation, and CIFAR-100.
+
+\begin{table}[t]
+\centering
+\caption{Accuracy (\%) of the first day and of the frozen replay of the same day with the end-of-day models, in S1 (five seeds) and S2 (three seeds). Geometric ensemble denotes the geometric ensemble with early exit. The last rows give the mean and standard deviation of DriftGate's per-seed gain over confidence-based offloading and over the strongest alternative.}
+\label{tab:replay}
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{S1} & \multicolumn{2}{c}{S2} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Rule & First day & Replay & First day & Replay \\
+\midrule
+Confidence-based & 62.86 & 71.47 & 65.24 & 74.76 \\
+Device only & 64.17 & 66.38 & 69.06 & 71.12 \\
+Edge only & 62.91 & 71.74 & 65.30 & 74.94 \\
+Probability average & 67.32 & \textbf{72.27} & 69.93 & 75.90 \\
+Logit sum & 67.37 & 72.08 & 70.12 & 75.86 \\
+Lower-entropy exit & 64.35 & 71.71 & 66.71 & 75.08 \\
+Logit-entropy w. & 64.35 & 71.72 & 66.71 & 75.09 \\
+Geometric ensemble & 67.37 & 72.03 & 70.11 & 75.82 \\
+Label-shift EM & 64.84 & 70.17 & 68.66 & 74.77 \\
+Learned weight & 66.82 & 72.13 & 68.63 & 74.53 \\
+DriftGate & \textbf{68.32} & 71.95 & \textbf{71.74} & \textbf{76.54} \\
+\midrule
+vs.\ conf.-based & 5.46 (0.46) & 0.48 (0.59) & 6.50 (2.79) & 1.77 (1.51) \\
+vs.\ strongest & 0.95 (0.57) & $-0.33$ (0.31) & 1.62 (1.04) & 0.64 (0.81) \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{replay_time_of_day}
+\caption{Accuracy over the day in S1 (left) and S2 (right) on the first day (dotted) and in the frozen replay of the same day with the end-of-day models (solid), for confidence-based offloading, the device exit alone, the edge exit alone, and DriftGate. Seed means.}
+\label{fig:replay}
+\end{figure*}
+
+The windows still use models that change during the day. Table~\ref{tab:replay} and Fig.~\ref{fig:replay} therefore replay the same day with the trained models frozen. The retrained first day matches the original runs within 0.05 points for DriftGate. With trained models, every rule is more accurate, and the edge exit gains most, because its early rounds no longer weigh on the day. Confidence-based offloading rises by 8.6 points in S1 and 9.5 points in S2, and DriftGate by 3.6 and 4.8 points. In S2, DriftGate remains the most accurate rule, 0.64 points above the probability average and 1.77 points above confidence-based offloading. In S1, it is 0.33 points below the probability average and ranks fifth, although it is still 0.48 points above confidence-based offloading. By time of day, DriftGate is about one point above the probability average in S1 while devices are at home and up to 1.1 points below it during the commute and the day, when most devices are away. The first-day results of Table~\ref{tab:main} therefore include a large contribution of early training. With trained models, the advantage of DriftGate over the other combining rules depends on the scenario.
+
+\subsection{Where the Gain Comes From}
+\label{sec:where}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{home_away}
+\caption{Accuracy of devices in their home cell against accuracy of devices in another cell for six inference rules in S1 (left, five seeds) and S2 (right, three seeds), over the first day.}
+\label{fig:home_away}
+\end{figure*}
+
+\begin{table}[t]
+\centering
+\caption{Accuracy (\%) by request kind in S1 and S2 over the first day.}
+\label{tab:kinds}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{llccc}
+\toprule
+Setting & Rule & Main & OOP & OOR \\
+\midrule
+\multirow{6}{*}{S1} & Confidence-based & 72.31 & 40.41 & 22.37 \\
+ & Device only & 86.31 & 7.49 & 3.30 \\
+ & Edge only & 72.27 & 40.79 & 22.52 \\
+ & Probability average & 82.36 & 29.34 & 15.45 \\
+ & Logit sum & 83.01 & 27.72 & 14.76 \\
+ & DriftGate & 86.94 & 21.63 & 10.68 \\
+\midrule
+\multirow{6}{*}{S2} & Confidence-based & 73.46 & 46.39 & 8.72 \\
+ & Device only & 84.65 & 15.29 & 1.69 \\
+ & Edge only & 73.42 & 46.92 & 8.82 \\
+ & Probability average & 80.83 & 38.50 & 6.18 \\
+ & Logit sum & 81.32 & 37.11 & 5.85 \\
+ & DriftGate & 84.70 & 30.63 & 4.86 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Which devices benefit from DriftGate? Fig.~\ref{fig:home_away} places each rule by the accuracy of devices at home (horizontal axis) and away (vertical axis). The single exits sit at opposite corners. The device exit is accurate at home and poor away, and the edge exit and confidence-based offloading are the reverse. DriftGate lies to the right of every other rule. In S1, devices at home reach 79.8\%, which is 2.3 points above the device exit alone and 2.5 points above the logit sum. Devices away reach 53.2\%, 1.6 points below the edge exit alone. In S2, devices at home are 2.0 points above the device exit alone, and devices away are 0.4 points below the edge exit alone. In the S1 replay, the same trade appears with trained models: devices at home reach 83.5\% against 82.5\% for the probability average, and devices away 56.5\% against 58.5\%.
+
+Table~\ref{tab:kinds} shows the same trade by request kind. On Main requests, DriftGate is as accurate as the device exit alone (86.9\% against 86.3\% in S1), whereas the probability average and the logit sum are 3 to 4 points lower there. On OOP and OOR requests, DriftGate is well above the device exit but below the edge exit and the other combining rules. Main requests make up about two thirds of a device's requests over the day, so in these settings the gain on Main requests outweighs the loss on the others. The accuracy of devices away and the accuracy on OOP and OOR requests measure different things: devices away also receive Main requests, on which DriftGate is accurate.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{time_of_day}
+\caption{Accuracy over the first day in S1 for confidence-based offloading, the device exit alone, the edge exit alone, and DriftGate (seed means of five seeds). The shaded background shows the share of devices in their home cell (right axis). Dashed lines separate the pre-commute, commute, daytime, return, and evening periods.}
+\label{fig:time}
+\end{figure*}
+
+When during the day does the gain appear? Fig.~\ref{fig:time} follows the accuracy of four rules through the first day in S1. Before the commute, almost every device is at home and DriftGate follows the device exit (72.9\% against 73.2\%). In these early hours the edge exit is still in its first rounds of training, and confidence-based offloading, which sends most requests to it, stays at 55.3\%. During the day, when most devices are away, the device exit falls below the edge exit, and DriftGate stays above both exits from the commute until the evening. Its lead over the better single exit is 4.0 points during the commute, 1.7 points during the day, 1.5 points on the way back, and 3.4 points in the evening. Section~\ref{sec:trained} shows how much of the morning lead comes from early training.
+
+\subsection{Accuracy and Offloading}
+\label{sec:eval_offload}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{offload_curves}
+\caption{Accuracy over the first day against the offloading ratio when only requests on which the device exit is uncertain are sent to the edge, in S1 (left) and S2 (right). Confidence-based offloading and DriftGate offload requests whose device-exit entropy exceeds a threshold, and the geometric ensemble offloads requests whose largest device-exit probability is below a threshold. Confidence-based offloading answers the offloaded requests with the edge exit, the geometric ensemble with the geometric mean of both exits, and DriftGate with its combination, whose weight uses only offloaded requests. Curves interpolate the seed means between thresholds. The dotted line marks the offloading ratio of confidence-based offloading at 0.8 nats.}
+\label{fig:offload}
+\end{figure*}
+
+How much accuracy does DriftGate keep when fewer requests can be offloaded? Fig.~\ref{fig:offload} varies the offloading threshold of each rule and plots accuracy against the share of requests sent to the edge. All curves start from the device exit alone at an offloading ratio of zero. For confidence-based offloading, sending more requests to the edge lowers accuracy over the first day, because the additional requests are more often Main requests, which the device exit answers better than the edge exit. The geometric ensemble and DriftGate improve as they offload more, since both use the device exit's output when they combine. Over the first day, DriftGate is above the geometric ensemble at every offloading ratio of 0.3 or more in all eight settings. After round 30, it holds only in S2, partial participation, and random mobility.
+
+Over the first day, DriftGate can also be more accurate than every rule that offloads all requests while offloading at most half of them. Among the thresholds we evaluated, this holds in five settings: S2 (from an offloading ratio of 0.24), partial participation (0.14), stepwise change (0.47), random mobility (0.37), and ResNet-18 (0.23). In S1 and S1-fast, the first such threshold offloads 52\% of the requests, and in CIFAR-100 95\%, because with 100 classes the device exit is weak on its own. After round 30, it holds only in S2 and partial participation. In the S1 replay, the DriftGate curve does not reach the probability average at any offloading ratio, and in the S2 replay it does so from 0.51.
+
+The threshold sweep fixes one threshold for the whole day. A deployed device instead needs a threshold that meets a budget online. We therefore also run a simple controller that sets the threshold of each device to the median device-exit entropy of its previous 128 requests, which targets $\beta=0.5$. It reaches an offloading ratio of 0.50 in every run. With the same offloading decisions, DriftGate is the most accurate way to answer the offloaded requests over the first day in S1 (67.7\%, against 67.1\% for the logit sum and 64.7\% for the edge exit) and S2 (71.8\% against 70.6\% and 68.2\%) and in the S2 replay (76.0\% against 75.5\% for the probability average). In the S1 replay, it is 0.2 points below the probability average.
+
+\subsection{Ablation}
+\label{sec:ablation}
+
+\begin{table*}[t]
+\centering
+\caption{Accuracy (\%) of DriftGate and variants that change one design choice, over the first day and in the frozen replay. ``Correction'' is the prior correction of Eq.~\eqref{eq:correct} with $r=1/2$. The fixed weight of 0.2 was chosen on development runs with the CNN.}
+\label{tab:ablation}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{5}{c}{First day} & \multicolumn{2}{c}{Frozen replay} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-8}
+Variant & S1 & S2 & Random mob. & CIFAR-100 & ResNet-18 & S1 & S2 \\
+\midrule
+DriftGate (correction, adaptive weight) & 68.31 & 71.70 & 71.09 & 41.29 & 66.64 & 71.95 & 76.54 \\
+No correction, adaptive weight & 67.11 & 69.29 & 69.33 & 37.50 & 66.46 & 72.46 & 75.88 \\
+No correction, $w=0.5$ (Probability average) & 67.32 & 69.88 & 69.58 & 38.15 & 66.39 & 72.27 & 75.90 \\
+Correction, $w=0.5$ & 68.13 & 71.77 & 70.96 & 41.45 & 66.71 & 71.53 & 76.23 \\
+Correction, $w=0.2$ & 68.16 & 71.03 & 70.51 & 40.95 & 64.02 & 72.58 & 76.66 \\
+Corrected edge exit only & 67.87 & 70.49 & 69.89 & 40.69 & 61.72 & 72.74 & 76.59 \\
+Correction, learned weight & 67.88 & 70.66 & 70.64 & 40.55 & 64.36 & 71.71 & 75.26 \\
+Correction, product & 67.90 & 71.76 & 70.78 & 41.73 & 66.59 & 71.12 & 76.00 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}
+
+Which parts of DriftGate matter? Table~\ref{tab:ablation} changes one choice at a time. Over the first day, removing the prior correction costs the most. With the adaptive weight kept, accuracy drops by 1.2 points in S1, 2.4 points in S2, 1.8 points in random mobility, and 3.8 points in CIFAR-100, but only 0.2 points with ResNet-18. In the S1 replay with trained models, removing the correction instead raises accuracy by 0.5 points. The correction therefore helps most when the edge exit is weak or the class mix is skewed, and it is not helpful in every condition.
+
+The adaptive weight is close to the better fixed weight in each setting rather than better than both. Over the first day, a fixed weight of 0.5 with the correction is within 0.2 points of DriftGate in all five settings. The weight of 0.2 chosen on development runs with the CNN is 2.6 points below DriftGate with ResNet-18, where the device exit is the stronger classifier, but it is 0.6 and 0.1 points above DriftGate in the S1 and S2 replays. In the S1 replay, the corrected edge exit alone is 0.8 points above DriftGate, so with trained models in this scenario the device exit adds little to the corrected edge exit. Refitting the learned weight with the corrected edge exit raises it but leaves it 0.4 to 2.3 points below DriftGate over the first day. Replacing the average with a product, with the correction in place, lowers accuracy in S1, random mobility, ResNet-18, and both replays, and raises it in CIFAR-100 (by 0.4 points) and S2 (by 0.1 points).
+
+The other parameters matter less. Fixed-length windows of 8, 32, and 128 offloaded requests that continue across evaluation rounds change accuracy by at most 0.02 points, because the weight varies little within a run (a standard deviation of about 0.04). Changing the target share $r$ from 0.5 to 0.3 or 0.7 lowers first-day accuracy by up to 2.4 points ($r=0.7$ in CIFAR-100), although $r=0.3$ is 0.3 points better in S2 and $r=0.7$ is 0.2 points better in the S1 replay. These results show that $r=1/2$ is a reasonable default. They do not show that the edge probabilities satisfy the assumptions of Bayes' rule.
+
+\subsection{Scale and the Least Accurate Devices}
+\label{sec:scale}
+
+\begin{table}[t]
+\centering
+\caption{Accuracy (\%) over the first day as the number of devices grows, with 5, 20, and 50 cells, for confidence-based offloading (Conf.), the probability average (Avg.), and DriftGate (DG). Gain is DriftGate's per-seed gain over the strongest alternative. The last two columns give the offloading ratio of confidence-based offloading and the offloading ratio at which DriftGate first matches its accuracy.}
+\label{tab:scale}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{rcccccc}
+\toprule
+ & & & & & \multicolumn{2}{c}{Offloading} \\
+\cmidrule(lr){6-7}
+Devices & Conf. & Avg. & DriftGate & Gain & Conf. & DG \\
+\midrule
+50 & 62.87 & 67.32 & 68.31 & 0.95 & 0.920 & 0.000 \\
+200 & 65.26 & 68.90 & 69.00 & 0.10 & 0.949 & 0.223 \\
+500 & 67.03 & 70.38 & 70.11 & $-0.27$ & 0.955 & 0.311 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Does the gain hold in larger deployments? Table~\ref{tab:scale} repeats the S1 layout with 200 and 500 devices. The number of devices per cell (about 11.5), the share of Main requests (about 65\%), and $a_k$ (about 0.25) stay the same, but the edge exit becomes more accurate (62.9\%, 65.3\%, and 67.1\% alone). DriftGate stays 3.1 to 5.4 points above confidence-based offloading, but its margin over the strongest alternative shrinks from 0.95 points with 50 devices to 0.10 points with 200 devices and becomes $-0.27$ points with 500 devices, where the probability average is the strongest rule. With 200 and 500 devices, the device exit alone is less accurate than confidence-based offloading, so DriftGate needs some offloading to match it. With 500 devices, DriftGate matches the accuracy of confidence-based offloading while offloading 31\% of the requests instead of 95.5\%. These results describe deployments with the cell count scaled with the number of devices. They do not measure the throughput of a single edge server.
+
+\begin{table}[t]
+\centering
+\caption{Accuracy (\%) of the 10\% least accurate devices over the first day. The devices are selected anew for each rule and each evaluation round.}
+\label{tab:bottom}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lcccc}
+\toprule
+Setting & Conf.-based & Prob. average & Logit sum & DriftGate \\
+\midrule
+S1 & 40.98 & 46.62 & 46.38 & \textbf{48.00} \\
+S2 & 39.53 & 45.89 & 45.88 & \textbf{47.43} \\
+S1-fast & 41.61 & 47.99 & 47.66 & \textbf{49.37} \\
+Partial participation & 31.28 & 39.27 & 39.67 & \textbf{43.24} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+Does the average gain hide devices that do worse? Table~\ref{tab:bottom} reports the accuracy of the 10\% least accurate devices in each evaluation round. Over the first day, DriftGate raises this accuracy by 7.0 to 12.0 points over confidence-based offloading and by 1.4 to 3.6 points over the strongest combining rule. Because the devices are selected anew for each rule and round, this result describes the lower tail of the accuracy distribution, not every individual device.
+
+\subsection{Cost on Mobile Devices}
+\label{sec:device}
+
+\todo{Replace this subsection with measured values. The values below are the inputs of a cost model, not measurements; red numbers are assumptions.}
+
+\textbf{Setup.} We measure the inference path on two smartphones, \todo{Samsung Galaxy model 1} and \todo{model 2}, and on an NVIDIA Jetson \todo{model} board. The device block and the device exit run with \todo{runtime, e.g., PyTorch Mobile or TensorRT}. The edge server is a desktop with an RTX 4090 GPU. We measure latency \todo{over $N$ requests after warm-up} and energy with \todo{power monitor or Android battery API}. The network is \todo{Wi-Fi / LTE}, with an uplink of \todo{measured} Mbps and a round-trip time of \todo{measured} ms.
+
+\begin{table}[t]
+\centering
+\caption{Per-request cost of the inference path for the CNN. \textcolor{red}{Red values are assumptions to be replaced by measurements.}}
+\label{tab:device_cost}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lcc}
+\toprule
+Component & Smartphone & Jetson \\
+\midrule
+Device block and device exit (ms) & \est{11.8} & \est{2.9} \\
+Device block and device exit (mJ) & \est{TBD} & \est{TBD} \\
+Uplink payload & 32\,KB & 32\,KB \\
+Uplink time at 50\,Mbps (ms) & 5.2 & 5.2 \\
+Edge block, exit, and correction (ms) & \est{0.6} & \est{0.6} \\
+Downlink payload per edge call & 44\,B & 44\,B \\
+Combination on the device ($\mu$s) & \est{5} & \est{3} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\textbf{Per-request cost.} Table~\ref{tab:device_cost} lists the cost of each step. The device-side cost of DriftGate beyond confidence-based offloading is the combination and a downlink of 44 bytes per edge call instead of one label.
+
+\textbf{End-to-end latency and energy.} If each branch has a fixed cost, the mean latency of a request is $(1-\beta)$ times the device-side time plus $\beta$ times the time of an offloaded request, which adds the uplink, the round trip, and the edge time. With the assumed values of Table~\ref{tab:device_cost} and a round-trip time of 20\,ms, this model gives \est{35.5\,ms} per request for confidence-based offloading in S1 at an offloading ratio of 0.92 (62.9\% accuracy over the first day), \est{37.6\,ms} for DriftGate with every request offloaded (68.3\%), and \est{24.7\,ms} for DriftGate with the online controller at an offloading ratio of 0.50 (67.7\%). Radio tail energy, idle power, and request spacing can make measured energy differ from such a linear model. \todo{Report measured latency (mean and 95th percentile) and energy per request on a replayed request stream for the operating points above, and plot accuracy against latency and against energy.}

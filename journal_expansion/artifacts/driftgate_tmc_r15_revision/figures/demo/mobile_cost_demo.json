@@ -1,0 +1,49 @@
+{
+ "measurement_type": "demo",
+ "input": "journal_expansion/artifacts/driftgate_tmc_r15_revision/mobile/demo/mobile_cost_demo.json",
+ "points": [
+  {
+   "rule": "Device only",
+   "beta": 0.0,
+   "acc": 64.16,
+   "latency_ms": null,
+   "energy_mJ": null
+  },
+  {
+   "rule": "Confidence-based offloading",
+   "beta": 0.92,
+   "acc": 62.87,
+   "latency_ms": 35.53600000000001,
+   "energy_mJ": null
+  },
+  {
+   "rule": "Probability average",
+   "beta": 1.0,
+   "acc": 67.32,
+   "latency_ms": 37.605,
+   "energy_mJ": null
+  },
+  {
+   "rule": "Logit sum",
+   "beta": 1.0,
+   "acc": 67.37,
+   "latency_ms": 37.605,
+   "energy_mJ": null
+  },
+  {
+   "rule": "DriftGate",
+   "beta": 1.0,
+   "acc": 68.31,
+   "latency_ms": 37.605,
+   "energy_mJ": null
+  },
+  {
+   "rule": "DriftGate (online, beta 0.5)",
+   "beta": 0.499,
+   "acc": 67.73,
+   "cost_rule": "DriftGate",
+   "latency_ms": 24.676695,
+   "energy_mJ": null
+  }
+ ]
+}

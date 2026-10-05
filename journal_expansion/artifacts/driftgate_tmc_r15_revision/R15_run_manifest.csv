@@ -1,0 +1,37 @@
+status,item,setting,run or source,seeds,condition,wall minutes,outputs
+reused records (no new training),"A1, B, C, E, P2",S1,runs/phaseT12_fusion/r12_s1_fixed040_s{0..4},5,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",S2,runs/phaseT12_fusion/r12_s2_fixed040_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",S1-fast,runs/phaseT12_fusion/r12_s1fast_fixed040_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",partial participation,runs/phaseT12_fusion/r12_s4part05_fixed040_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",stepwise change,runs/phaseT12_fusion/r12_t1_A_fx40_s{0..4},5,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",random mobility,runs/phaseT12_fusion/r12_t1_mob_fx40_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",CIFAR-100,runs/phaseT13b_arch/r13b_c100_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",ResNet-18,runs/phaseT12_fusion/r12_e2_res_fx40_A_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",K=200,runs/phaseT12_fusion/r12_s3k200_fixed040_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records (no new training),"A1, B, C, E, P2",K=500,runs/phaseT12_fusion/r12_s3k500_fixed040_s{0..2},3,"first day, round > 30, round > 50; fixed lambda 0.4",,"tables/R15_A1_*, R15_B*, R15_C*, R15_E_*, R15_P2_*"
+reused records,"B1 learned weight refit, development",S1 development,"runs/phaseT10_prior/r10_T40_s{5,6,7}",3,round >= 30 requests,,tables/R15_B1_learned_weight_corrected_coefficients.csv
+reused table,F1 / Fig. 2,S1 development,"artifacts/driftgate_tmc_r7_gate/tables/T2_paired_differences.csv (r7_O_s5-7, r7_F_s5-7)",3,"oracle home 0.70 / away 0.15 vs fixed 0.4, B0 inference",,figures/paper/device_oracle.pdf
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S1,runs/phaseT15_replay/r15_s1_fixed040_s0,1,seed 0; Round 12 command plus Round 15 flags; GPU,64.5,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S1,runs/phaseT15_replay/r15_s1_fixed040_s1,1,seed 1; Round 12 command plus Round 15 flags; GPU,39.9,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S1,runs/phaseT15_replay/r15_s1_fixed040_s2,1,seed 2; Round 12 command plus Round 15 flags; GPU,38.1,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S1,runs/phaseT15_replay/r15_s1_fixed040_s3,1,seed 3; Round 12 command plus Round 15 flags; GPU,41.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S1,runs/phaseT15_replay/r15_s1_fixed040_s4,1,seed 4; Round 12 command plus Round 15 flags; GPU,60.2,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S2,runs/phaseT15_replay/r15_s2_fixed040_s0,1,seed 0; Round 12 command plus Round 15 flags; GPU,37.2,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S2,runs/phaseT15_replay/r15_s2_fixed040_s1,1,seed 1; Round 12 command plus Round 15 flags; GPU,39.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 retrained first day with --save_checkpoint,S2,runs/phaseT15_replay/r15_s2_fixed040_s2,1,seed 2; Round 12 command plus Round 15 flags; GPU,38.8,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S1,runs/phaseT15_replay/r15_s1_replay_s0,1,seed 0; Round 12 command plus Round 15 flags; GPU,0.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S1,runs/phaseT15_replay/r15_s1_replay_s1,1,seed 1; Round 12 command plus Round 15 flags; GPU,0.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S1,runs/phaseT15_replay/r15_s1_replay_s2,1,seed 2; Round 12 command plus Round 15 flags; GPU,1.0,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S1,runs/phaseT15_replay/r15_s1_replay_s3,1,seed 3; Round 12 command plus Round 15 flags; GPU,0.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S1,runs/phaseT15_replay/r15_s1_replay_s4,1,seed 4; Round 12 command plus Round 15 flags; GPU,0.6,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S2,runs/phaseT15_replay/r15_s2_replay_s0,1,seed 0; Round 12 command plus Round 15 flags; GPU,1.7,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S2,runs/phaseT15_replay/r15_s2_replay_s1,1,seed 1; Round 12 command plus Round 15 flags; GPU,0.5,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (2026-10-05),A2 frozen-model replay (--replay_from),S2,runs/phaseT15_replay/r15_s2_replay_s2,1,seed 2; Round 12 command plus Round 15 flags; GPU,1.9,"tables/R15_A2_replay.csv, R15_A1_* (S1/S2 day 1 and replay columns)"
+new run (check),CPU bit identity of the default S1 run,S1,"scratch r15_bit (old/new, 2 rounds)",1,"seed 0, CPU",,precheck/bit_identity_check_default_S1.txt
+new run (check),"A2 smoke (day 1 + replay, 5 rounds)",S1,scratch r15_smoke,1,"seed 0, GPU, not a result",,precheck/smoke_replay_identity.txt
+not run,D: two more seeds for S2 and ResNet-18,,,,optional; not scheduled by the directive,,
+not run,A3: continued training of a second day (rounds 151-300),,,,optional; no existing results,,
+not run,F1: DriftGate on the oracle and fixed models,,,,Round 7 runs have no request records or models; retraining not scheduled,,
+not run,F2: 2x2 home/away lambda and focal-visitor control,,,,conditional; the causal claim was reduced to an observation instead,,
+not run,I: example of real probability outputs,,,,optional; not done,,
+not run,H: on-device latency and energy,,,,"no device measurements available; schema, script and demo input prepared",,

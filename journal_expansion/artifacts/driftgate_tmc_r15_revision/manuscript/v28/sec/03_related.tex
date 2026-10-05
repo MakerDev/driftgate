@@ -1,0 +1,41 @@
+\section{Related Work}
+\label{sec:related}
+
+Table~\ref{tab:related} summarizes how the inference methods closest to ours use a personalized and a shared classifier.
+
+\subsection{Split Inference and Early Exits}
+
+Split computing places the first layers of a model on the device and the remaining layers on an edge server or the cloud, and chooses the split point from compute and network conditions~\cite{kang2017neurosurgeon,mao2017mecsurvey}. Early-exit networks attach classifiers to intermediate layers and stop when an exit is confident~\cite{teerapittayanon2016branchynet,kaya2019shallowdeep}. SPINN combines both ideas and decides at run time whether a request leaves at an on-device exit or continues to the cloud~\cite{laskaridis2020spinn}. In personalized split learning, SplitGP trains a personalized device-side model and a shared server-side model and sends a request to the server when the device-side output is uncertain~\cite{han2023splitgp}. These systems answer each request with one exit and use the confidence of an earlier exit to make that choice. Section~\ref{sec:choose} shows that, under mobility, the personalized exit is often confident on classes it has never learned. DriftGate answers offloaded requests with both exits and uses confidence only to decide which requests to offload.
+
+Zero Time Waste (ZTW) reuses the predictions of earlier exits~\cite{wolczyk2021ztw}. It passes the logits of each internal classifier to the next one through cascade connections, combines the exits with a weighted geometric mean whose exit weights and class-specific bias terms are trained on the training data, and stops when the largest probability of the combined prediction exceeds a threshold. All exits in ZTW are trained on the same data distribution. The exits of personalized split learning are not, because the device exit has never seen the classes of other devices. A geometric mean multiplies probabilities, so a near-zero device probability on such a class can outweigh a confident edge answer. DriftGate uses an arithmetic average and corrects the class bias of the edge exit before combining. Our evaluation includes the geometric ensemble with early exit of ZTW, without the cascade connections and the trained weights and biases, because the two exits are trained beforehand.
+
+\subsection{Personalized Federated and Split Learning}
+
+Personalized federated learning balances what a client learns from its own data with what it learns from others. APFL learns a mixture of a local and a global model, Ditto and pFedMe regularize local models toward a shared one, and FedRep shares a representation while keeping a local head~\cite{deng2020apfl,li2021ditto,tdinh2020pfedme,collins2021fedrep}. These methods set the balance during training. Section~\ref{sec:training_side} shows that, in the location-aware policy we tested, a training-time balance that helped devices at home came with a loss for devices away. Multi-cell split learning considers devices that move between overlapping cells and studies how the class mix of a cell affects training~\cite{rizwan2026splitomc}.
+
+Kim \emph{et al.} address label shift in personalized split federated learning by changing training~\cite{kim2025onlinepsfl}. They pretrain personalized client models together with a large server model, update the client models online by distilling knowledge from the server model when the label distribution shifts, and answer in real time through an early exit of the client model. DriftGate instead leaves both models unchanged and changes only how the outputs of the two exits are combined. Our comparison holds the trained models fixed and varies the inference rule, so it does not cover methods that update the models during deployment. The two approaches could be combined, because DriftGate needs only the outputs of the two exits.
+
+Two methods combine a shared and a personalized classifier at inference time. FedRoD trains a generic head with a class-balanced loss and a personalized head that is added to it, and it predicts with the sum of the two heads' logits~\cite{chen2022fedrod}. Adding logits is equivalent to multiplying class probabilities. FedTHE ensembles a global and a personalized head with a weight chosen for each test sample~\cite{jiang2023fedthe}. It mixes the logits of the two heads and chooses the weight by minimizing the entropy of the softmax of the mixed logits together with a feature-alignment loss, weighting the two losses by the similarity of the heads' predictions. DriftGate sets one weight per device from the average confidence of the two exits over recent requests, and it corrects the class bias of the shared exit without changing its training. Our evaluation includes the logit sum of FedRoD without its balanced training, and the entropy objective of FedTHE applied to the logits of the two exits without the feature-alignment term, whose feature descriptors assume one feature space shared by both heads.
+
+\subsection{Label Shift and Prior Correction}
+
+When the class proportions of the test data differ from those of the training data, the outputs of a classifier can be corrected with Bayes' rule. Saerens \emph{et al.} estimate the new class proportions with expectation maximization (EM) and rescale the class probabilities~\cite{saerens2002adjusting}. Later work estimates the proportions from a confusion matrix~\cite{lipton2018bbse} or improves the calibration that the estimate depends on~\cite{alexandari2020mlls}. Logit adjustment applies the same correction with known class priors to train classifiers for long-tailed data~\cite{menon2021logit}. These methods correct one classifier toward an estimate of the current class mix. For a moving device, this mix changes with the device's location, and an estimate computed from the edge exit inherits the edge exit's bias against the device's own classes. DriftGate does not estimate the mix. It rescales the edge exit toward an even split between the device's own classes and all other classes, and lets the personalized device exit supply the device-specific preference. Our evaluation includes EM-based correction of the share of other classes as a baseline.
+
+\begin{table*}[t]
+\centering
+\caption{How inference methods use a personalized and a shared classifier. ``Class adjustment'' refers to adjusting a classifier for the class mix of its training data.}
+\label{tab:related}
+\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{3.7cm}>{\raggedright\arraybackslash}p{3.6cm}}
+\toprule
+Method & Classifiers per request & How the answer is formed & Signal used at inference & Class adjustment \\
+\midrule
+SplitGP~\cite{han2023splitgp}, SPINN~\cite{laskaridis2020spinn} & One exit & Device or server exit & Confidence of the device exit & None \\
+ZTW~\cite{wolczyk2021ztw} & Exits up to the stopping point & Weighted geometric mean & Confidence of the combined prediction & Trained class-specific bias \\
+FedRoD~\cite{chen2022fedrod} & Generic and personalized head & Sum of logits & None & Class-balanced training \\
+FedTHE~\cite{jiang2023fedthe} & Global and personalized head & Weighted logit sum, weight per sample & Entropy of the mixed prediction and feature alignment & None \\
+EM correction~\cite{saerens2002adjusting} & One classifier & Rescaled probabilities & Class mix estimated from recent predictions & Toward the estimated mix \\
+DriftGate & Device and edge exit & Weighted probability average, weight per device & Mean entropy of both exits on recent offloaded requests & Toward an even split of own and other classes, at inference \\
+\bottomrule
+\end{tabular}
+\end{table*}

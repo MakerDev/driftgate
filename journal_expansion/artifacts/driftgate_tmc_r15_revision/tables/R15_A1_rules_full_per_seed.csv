@@ -1,0 +1,551 @@
+setting,window,rule,display,run,accuracy_pct
+S1,full,B0,Confidence-based offloading,r12_s1_fixed040_s0,63.2900
+S1,full,B0,Confidence-based offloading,r12_s1_fixed040_s1,63.5606
+S1,full,B0,Confidence-based offloading,r12_s1_fixed040_s2,62.8428
+S1,full,B0,Confidence-based offloading,r12_s1_fixed040_s3,58.6727
+S1,full,B0,Confidence-based offloading,r12_s1_fixed040_s4,65.9639
+S2,full,B0,Confidence-based offloading,r12_s2_fixed040_s0,61.1738
+S2,full,B0,Confidence-based offloading,r12_s2_fixed040_s1,65.8066
+S2,full,B0,Confidence-based offloading,r12_s2_fixed040_s2,68.5645
+S1-fast,full,B0,Confidence-based offloading,r12_s1fast_fixed040_s0,63.5098
+S1-fast,full,B0,Confidence-based offloading,r12_s1fast_fixed040_s1,63.7689
+S1-fast,full,B0,Confidence-based offloading,r12_s1fast_fixed040_s2,62.7224
+partial participation,full,B0,Confidence-based offloading,r12_s4part05_fixed040_s0,56.7151
+partial participation,full,B0,Confidence-based offloading,r12_s4part05_fixed040_s1,56.5821
+partial participation,full,B0,Confidence-based offloading,r12_s4part05_fixed040_s2,56.0421
+stepwise change,full,B0,Confidence-based offloading,r12_t1_A_fx40_s0,65.6014
+stepwise change,full,B0,Confidence-based offloading,r12_t1_A_fx40_s1,64.6446
+stepwise change,full,B0,Confidence-based offloading,r12_t1_A_fx40_s2,65.1433
+stepwise change,full,B0,Confidence-based offloading,r12_t1_A_fx40_s3,62.3277
+stepwise change,full,B0,Confidence-based offloading,r12_t1_A_fx40_s4,68.1501
+random mobility,full,B0,Confidence-based offloading,r12_t1_mob_fx40_s0,58.1523
+random mobility,full,B0,Confidence-based offloading,r12_t1_mob_fx40_s1,59.0151
+random mobility,full,B0,Confidence-based offloading,r12_t1_mob_fx40_s2,58.5229
+CIFAR-100,full,B0,Confidence-based offloading,r13b_c100_s0,36.9946
+CIFAR-100,full,B0,Confidence-based offloading,r13b_c100_s1,35.5199
+CIFAR-100,full,B0,Confidence-based offloading,r13b_c100_s2,35.0127
+ResNet-18,full,B0,Confidence-based offloading,r12_e2_res_fx40_A_s0,60.2115
+ResNet-18,full,B0,Confidence-based offloading,r12_e2_res_fx40_A_s1,56.0502
+ResNet-18,full,B0,Confidence-based offloading,r12_e2_res_fx40_A_s2,61.3790
+K=200,full,B0,Confidence-based offloading,r12_s3k200_fixed040_s0,66.0382
+K=200,full,B0,Confidence-based offloading,r12_s3k200_fixed040_s1,66.3602
+K=200,full,B0,Confidence-based offloading,r12_s3k200_fixed040_s2,63.3910
+K=500,full,B0,Confidence-based offloading,r12_s3k500_fixed040_s0,66.7431
+K=500,full,B0,Confidence-based offloading,r12_s3k500_fixed040_s1,67.4928
+K=500,full,B0,Confidence-based offloading,r12_s3k500_fixed040_s2,66.8675
+S1 day 1 (retrained),full,B0,Confidence-based offloading,r15_s1_fixed040_s0,63.2979
+S1 day 1 (retrained),full,B0,Confidence-based offloading,r15_s1_fixed040_s1,63.5646
+S1 day 1 (retrained),full,B0,Confidence-based offloading,r15_s1_fixed040_s2,62.8325
+S1 day 1 (retrained),full,B0,Confidence-based offloading,r15_s1_fixed040_s3,58.6998
+S1 day 1 (retrained),full,B0,Confidence-based offloading,r15_s1_fixed040_s4,65.9208
+S1 frozen replay,full,B0,Confidence-based offloading,r15_s1_replay_s0,72.7471
+S1 frozen replay,full,B0,Confidence-based offloading,r15_s1_replay_s1,71.5101
+S1 frozen replay,full,B0,Confidence-based offloading,r15_s1_replay_s2,71.7329
+S1 frozen replay,full,B0,Confidence-based offloading,r15_s1_replay_s3,68.1465
+S1 frozen replay,full,B0,Confidence-based offloading,r15_s1_replay_s4,73.2008
+S2 day 1 (retrained),full,B0,Confidence-based offloading,r15_s2_fixed040_s0,61.2166
+S2 day 1 (retrained),full,B0,Confidence-based offloading,r15_s2_fixed040_s1,65.8768
+S2 day 1 (retrained),full,B0,Confidence-based offloading,r15_s2_fixed040_s2,68.6378
+S2 frozen replay,full,B0,Confidence-based offloading,r15_s2_replay_s0,70.4230
+S2 frozen replay,full,B0,Confidence-based offloading,r15_s2_replay_s1,75.4849
+S2 frozen replay,full,B0,Confidence-based offloading,r15_s2_replay_s2,78.3819
+S1,full,B1,Device only,r12_s1_fixed040_s0,63.8413
+S1,full,B1,Device only,r12_s1_fixed040_s1,64.5322
+S1,full,B1,Device only,r12_s1_fixed040_s2,64.6302
+S1,full,B1,Device only,r12_s1_fixed040_s3,61.2091
+S1,full,B1,Device only,r12_s1_fixed040_s4,66.5806
+S2,full,B1,Device only,r12_s2_fixed040_s0,66.4209
+S2,full,B1,Device only,r12_s2_fixed040_s1,68.7001
+S2,full,B1,Device only,r12_s2_fixed040_s2,71.9956
+S1-fast,full,B1,Device only,r12_s1fast_fixed040_s0,64.1349
+S1-fast,full,B1,Device only,r12_s1fast_fixed040_s1,64.5931
+S1-fast,full,B1,Device only,r12_s1fast_fixed040_s2,64.4568
+partial participation,full,B1,Device only,r12_s4part05_fixed040_s0,61.4891
+partial participation,full,B1,Device only,r12_s4part05_fixed040_s1,61.9603
+partial participation,full,B1,Device only,r12_s4part05_fixed040_s2,61.8107
+stepwise change,full,B1,Device only,r12_t1_A_fx40_s0,69.3226
+stepwise change,full,B1,Device only,r12_t1_A_fx40_s1,68.7090
+stepwise change,full,B1,Device only,r12_t1_A_fx40_s2,69.0188
+stepwise change,full,B1,Device only,r12_t1_A_fx40_s3,66.7700
+stepwise change,full,B1,Device only,r12_t1_A_fx40_s4,70.8175
+random mobility,full,B1,Device only,r12_t1_mob_fx40_s0,67.9949
+random mobility,full,B1,Device only,r12_t1_mob_fx40_s1,68.0425
+random mobility,full,B1,Device only,r12_t1_mob_fx40_s2,67.0826
+CIFAR-100,full,B1,Device only,r13b_c100_s0,34.6940
+CIFAR-100,full,B1,Device only,r13b_c100_s1,33.4847
+CIFAR-100,full,B1,Device only,r13b_c100_s2,33.6051
+ResNet-18,full,B1,Device only,r12_e2_res_fx40_A_s0,65.2417
+ResNet-18,full,B1,Device only,r12_e2_res_fx40_A_s1,64.2592
+ResNet-18,full,B1,Device only,r12_e2_res_fx40_A_s2,69.6567
+K=200,full,B1,Device only,r12_s3k200_fixed040_s0,63.2226
+K=200,full,B1,Device only,r12_s3k200_fixed040_s1,62.9274
+K=200,full,B1,Device only,r12_s3k200_fixed040_s2,61.7251
+K=500,full,B1,Device only,r12_s3k500_fixed040_s0,63.3204
+K=500,full,B1,Device only,r12_s3k500_fixed040_s1,63.0866
+K=500,full,B1,Device only,r12_s3k500_fixed040_s2,62.9400
+S1 day 1 (retrained),full,B1,Device only,r15_s1_fixed040_s0,63.8414
+S1 day 1 (retrained),full,B1,Device only,r15_s1_fixed040_s1,64.5399
+S1 day 1 (retrained),full,B1,Device only,r15_s1_fixed040_s2,64.6493
+S1 day 1 (retrained),full,B1,Device only,r15_s1_fixed040_s3,61.2266
+S1 day 1 (retrained),full,B1,Device only,r15_s1_fixed040_s4,66.5826
+S1 frozen replay,full,B1,Device only,r15_s1_replay_s0,64.9882
+S1 frozen replay,full,B1,Device only,r15_s1_replay_s1,66.4273
+S1 frozen replay,full,B1,Device only,r15_s1_replay_s2,67.2502
+S1 frozen replay,full,B1,Device only,r15_s1_replay_s3,65.2418
+S1 frozen replay,full,B1,Device only,r15_s1_replay_s4,67.9687
+S2 day 1 (retrained),full,B1,Device only,r15_s2_fixed040_s0,66.4724
+S2 day 1 (retrained),full,B1,Device only,r15_s2_fixed040_s1,68.7142
+S2 day 1 (retrained),full,B1,Device only,r15_s2_fixed040_s2,71.9807
+S2 frozen replay,full,B1,Device only,r15_s2_replay_s0,68.4451
+S2 frozen replay,full,B1,Device only,r15_s2_replay_s1,70.3609
+S2 frozen replay,full,B1,Device only,r15_s2_replay_s2,74.5602
+S1,full,B2,Edge only,r12_s1_fixed040_s0,63.3495
+S1,full,B2,Edge only,r12_s1_fixed040_s1,63.5870
+S1,full,B2,Edge only,r12_s1_fixed040_s2,62.8651
+S1,full,B2,Edge only,r12_s1_fixed040_s3,58.7261
+S1,full,B2,Edge only,r12_s1_fixed040_s4,66.0180
+S2,full,B2,Edge only,r12_s2_fixed040_s0,61.2048
+S2,full,B2,Edge only,r12_s2_fixed040_s1,65.8716
+S2,full,B2,Edge only,r12_s2_fixed040_s2,68.6412
+S1-fast,full,B2,Edge only,r12_s1fast_fixed040_s0,63.5663
+S1-fast,full,B2,Edge only,r12_s1fast_fixed040_s1,63.8015
+S1-fast,full,B2,Edge only,r12_s1fast_fixed040_s2,62.7594
+partial participation,full,B2,Edge only,r12_s4part05_fixed040_s0,56.7194
+partial participation,full,B2,Edge only,r12_s4part05_fixed040_s1,56.5778
+partial participation,full,B2,Edge only,r12_s4part05_fixed040_s2,56.0350
+stepwise change,full,B2,Edge only,r12_t1_A_fx40_s0,65.6381
+stepwise change,full,B2,Edge only,r12_t1_A_fx40_s1,64.6624
+stepwise change,full,B2,Edge only,r12_t1_A_fx40_s2,65.1584
+stepwise change,full,B2,Edge only,r12_t1_A_fx40_s3,62.3739
+stepwise change,full,B2,Edge only,r12_t1_A_fx40_s4,68.1880
+random mobility,full,B2,Edge only,r12_t1_mob_fx40_s0,58.2106
+random mobility,full,B2,Edge only,r12_t1_mob_fx40_s1,59.0494
+random mobility,full,B2,Edge only,r12_t1_mob_fx40_s2,58.5728
+CIFAR-100,full,B2,Edge only,r13b_c100_s0,36.9938
+CIFAR-100,full,B2,Edge only,r13b_c100_s1,35.5172
+CIFAR-100,full,B2,Edge only,r13b_c100_s2,35.0114
+ResNet-18,full,B2,Edge only,r12_e2_res_fx40_A_s0,59.2884
+ResNet-18,full,B2,Edge only,r12_e2_res_fx40_A_s1,53.3835
+ResNet-18,full,B2,Edge only,r12_e2_res_fx40_A_s2,58.4480
+K=200,full,B2,Edge only,r12_s3k200_fixed040_s0,66.0770
+K=200,full,B2,Edge only,r12_s3k200_fixed040_s1,66.4093
+K=200,full,B2,Edge only,r12_s3k200_fixed040_s2,63.4179
+K=500,full,B2,Edge only,r12_s3k500_fixed040_s0,66.7833
+K=500,full,B2,Edge only,r12_s3k500_fixed040_s1,67.5339
+K=500,full,B2,Edge only,r12_s3k500_fixed040_s2,66.8985
+S1 day 1 (retrained),full,B2,Edge only,r15_s1_fixed040_s0,63.3560
+S1 day 1 (retrained),full,B2,Edge only,r15_s1_fixed040_s1,63.5910
+S1 day 1 (retrained),full,B2,Edge only,r15_s1_fixed040_s2,62.8530
+S1 day 1 (retrained),full,B2,Edge only,r15_s1_fixed040_s3,58.7544
+S1 day 1 (retrained),full,B2,Edge only,r15_s1_fixed040_s4,65.9753
+S1 frozen replay,full,B2,Edge only,r15_s1_replay_s0,73.0368
+S1 frozen replay,full,B2,Edge only,r15_s1_replay_s1,71.7958
+S1 frozen replay,full,B2,Edge only,r15_s1_replay_s2,71.9126
+S1 frozen replay,full,B2,Edge only,r15_s1_replay_s3,68.4430
+S1 frozen replay,full,B2,Edge only,r15_s1_replay_s4,73.5348
+S2 day 1 (retrained),full,B2,Edge only,r15_s2_fixed040_s0,61.2421
+S2 day 1 (retrained),full,B2,Edge only,r15_s2_fixed040_s1,65.9390
+S2 day 1 (retrained),full,B2,Edge only,r15_s2_fixed040_s2,68.7158
+S2 frozen replay,full,B2,Edge only,r15_s2_replay_s0,70.4311
+S2 frozen replay,full,B2,Edge only,r15_s2_replay_s1,75.7042
+S2 frozen replay,full,B2,Edge only,r15_s2_replay_s2,78.6762
+S1,full,B3,Probability average,r12_s1_fixed040_s0,68.6886
+S1,full,B3,Probability average,r12_s1_fixed040_s1,68.1725
+S1,full,B3,Probability average,r12_s1_fixed040_s2,66.9896
+S1,full,B3,Probability average,r12_s1_fixed040_s3,62.5305
+S1,full,B3,Probability average,r12_s1_fixed040_s4,70.2277
+S2,full,B3,Probability average,r12_s2_fixed040_s0,67.8778
+S2,full,B3,Probability average,r12_s2_fixed040_s1,69.8554
+S2,full,B3,Probability average,r12_s2_fixed040_s2,71.9210
+S1-fast,full,B3,Probability average,r12_s1fast_fixed040_s0,68.9144
+S1-fast,full,B3,Probability average,r12_s1fast_fixed040_s1,68.3720
+S1-fast,full,B3,Probability average,r12_s1fast_fixed040_s2,66.8985
+partial participation,full,B3,Probability average,r12_s4part05_fixed040_s0,63.3918
+partial participation,full,B3,Probability average,r12_s4part05_fixed040_s1,62.6448
+partial participation,full,B3,Probability average,r12_s4part05_fixed040_s2,61.8818
+stepwise change,full,B3,Probability average,r12_t1_A_fx40_s0,73.2114
+stepwise change,full,B3,Probability average,r12_t1_A_fx40_s1,70.9442
+stepwise change,full,B3,Probability average,r12_t1_A_fx40_s2,70.8493
+stepwise change,full,B3,Probability average,r12_t1_A_fx40_s3,68.1221
+stepwise change,full,B3,Probability average,r12_t1_A_fx40_s4,74.0550
+random mobility,full,B3,Probability average,r12_t1_mob_fx40_s0,70.0930
+random mobility,full,B3,Probability average,r12_t1_mob_fx40_s1,69.3553
+random mobility,full,B3,Probability average,r12_t1_mob_fx40_s2,69.2816
+CIFAR-100,full,B3,Probability average,r13b_c100_s0,39.2094
+CIFAR-100,full,B3,Probability average,r13b_c100_s1,37.7061
+CIFAR-100,full,B3,Probability average,r13b_c100_s2,37.5364
+ResNet-18,full,B3,Probability average,r12_e2_res_fx40_A_s0,65.2583
+ResNet-18,full,B3,Probability average,r12_e2_res_fx40_A_s1,63.9612
+ResNet-18,full,B3,Probability average,r12_e2_res_fx40_A_s2,69.9428
+K=200,full,B3,Probability average,r12_s3k200_fixed040_s0,69.8174
+K=200,full,B3,Probability average,r12_s3k200_fixed040_s1,69.7064
+K=200,full,B3,Probability average,r12_s3k200_fixed040_s2,67.1680
+K=500,full,B3,Probability average,r12_s3k500_fixed040_s0,70.2627
+K=500,full,B3,Probability average,r12_s3k500_fixed040_s1,70.5583
+K=500,full,B3,Probability average,r12_s3k500_fixed040_s2,70.3175
+S1 day 1 (retrained),full,B3,Probability average,r15_s1_fixed040_s0,68.7051
+S1 day 1 (retrained),full,B3,Probability average,r15_s1_fixed040_s1,68.1800
+S1 day 1 (retrained),full,B3,Probability average,r15_s1_fixed040_s2,66.9977
+S1 day 1 (retrained),full,B3,Probability average,r15_s1_fixed040_s3,62.5436
+S1 day 1 (retrained),full,B3,Probability average,r15_s1_fixed040_s4,70.1902
+S1 frozen replay,full,B3,Probability average,r15_s1_replay_s0,73.0918
+S1 frozen replay,full,B3,Probability average,r15_s1_replay_s1,72.0082
+S1 frozen replay,full,B3,Probability average,r15_s1_replay_s2,72.7969
+S1 frozen replay,full,B3,Probability average,r15_s1_replay_s3,69.4297
+S1 frozen replay,full,B3,Probability average,r15_s1_replay_s4,74.0321
+S2 day 1 (retrained),full,B3,Probability average,r15_s2_fixed040_s0,67.9184
+S2 day 1 (retrained),full,B3,Probability average,r15_s2_fixed040_s1,69.9175
+S2 day 1 (retrained),full,B3,Probability average,r15_s2_fixed040_s2,71.9571
+S2 frozen replay,full,B3,Probability average,r15_s2_replay_s0,72.4628
+S2 frozen replay,full,B3,Probability average,r15_s2_replay_s1,76.2125
+S2 frozen replay,full,B3,Probability average,r15_s2_replay_s2,79.0199
+S1,full,R-PoE,Logit sum,r12_s1_fixed040_s0,68.7538
+S1,full,R-PoE,Logit sum,r12_s1_fixed040_s1,68.1509
+S1,full,R-PoE,Logit sum,r12_s1_fixed040_s2,67.1435
+S1,full,R-PoE,Logit sum,r12_s1_fixed040_s3,62.4129
+S1,full,R-PoE,Logit sum,r12_s1_fixed040_s4,70.3798
+S2,full,R-PoE,Logit sum,r12_s2_fixed040_s0,68.1149
+S2,full,R-PoE,Logit sum,r12_s2_fixed040_s1,70.0421
+S2,full,R-PoE,Logit sum,r12_s2_fixed040_s2,72.0477
+S1-fast,full,R-PoE,Logit sum,r12_s1fast_fixed040_s0,68.9942
+S1-fast,full,R-PoE,Logit sum,r12_s1fast_fixed040_s1,68.3320
+S1-fast,full,R-PoE,Logit sum,r12_s1fast_fixed040_s2,67.0359
+partial participation,full,R-PoE,Logit sum,r12_s4part05_fixed040_s0,63.7759
+partial participation,full,R-PoE,Logit sum,r12_s4part05_fixed040_s1,62.8914
+partial participation,full,R-PoE,Logit sum,r12_s4part05_fixed040_s2,62.1518
+stepwise change,full,R-PoE,Logit sum,r12_t1_A_fx40_s0,73.1811
+stepwise change,full,R-PoE,Logit sum,r12_t1_A_fx40_s1,70.7594
+stepwise change,full,R-PoE,Logit sum,r12_t1_A_fx40_s2,70.8891
+stepwise change,full,R-PoE,Logit sum,r12_t1_A_fx40_s3,68.0202
+stepwise change,full,R-PoE,Logit sum,r12_t1_A_fx40_s4,74.0822
+random mobility,full,R-PoE,Logit sum,r12_t1_mob_fx40_s0,69.8340
+random mobility,full,R-PoE,Logit sum,r12_t1_mob_fx40_s1,69.0776
+random mobility,full,R-PoE,Logit sum,r12_t1_mob_fx40_s2,68.7724
+CIFAR-100,full,R-PoE,Logit sum,r13b_c100_s0,40.8405
+CIFAR-100,full,R-PoE,Logit sum,r13b_c100_s1,39.2827
+CIFAR-100,full,R-PoE,Logit sum,r13b_c100_s2,39.3744
+ResNet-18,full,R-PoE,Logit sum,r12_e2_res_fx40_A_s0,64.7344
+ResNet-18,full,R-PoE,Logit sum,r12_e2_res_fx40_A_s1,63.5353
+ResNet-18,full,R-PoE,Logit sum,r12_e2_res_fx40_A_s2,69.7270
+K=200,full,R-PoE,Logit sum,r12_s3k200_fixed040_s0,69.7485
+K=200,full,R-PoE,Logit sum,r12_s3k200_fixed040_s1,69.6717
+K=200,full,R-PoE,Logit sum,r12_s3k200_fixed040_s2,67.1682
+K=500,full,R-PoE,Logit sum,r12_s3k500_fixed040_s0,70.1684
+K=500,full,R-PoE,Logit sum,r12_s3k500_fixed040_s1,70.4624
+K=500,full,R-PoE,Logit sum,r12_s3k500_fixed040_s2,70.2510
+S1 day 1 (retrained),full,R-PoE,Logit sum,r15_s1_fixed040_s0,68.7670
+S1 day 1 (retrained),full,R-PoE,Logit sum,r15_s1_fixed040_s1,68.1622
+S1 day 1 (retrained),full,R-PoE,Logit sum,r15_s1_fixed040_s2,67.1503
+S1 day 1 (retrained),full,R-PoE,Logit sum,r15_s1_fixed040_s3,62.4264
+S1 day 1 (retrained),full,R-PoE,Logit sum,r15_s1_fixed040_s4,70.3508
+S1 frozen replay,full,R-PoE,Logit sum,r15_s1_replay_s0,72.7513
+S1 frozen replay,full,R-PoE,Logit sum,r15_s1_replay_s1,71.6537
+S1 frozen replay,full,R-PoE,Logit sum,r15_s1_replay_s2,72.7702
+S1 frozen replay,full,R-PoE,Logit sum,r15_s1_replay_s3,69.3114
+S1 frozen replay,full,R-PoE,Logit sum,r15_s1_replay_s4,73.9083
+S2 day 1 (retrained),full,R-PoE,Logit sum,r15_s2_fixed040_s0,68.1536
+S2 day 1 (retrained),full,R-PoE,Logit sum,r15_s2_fixed040_s1,70.1101
+S2 day 1 (retrained),full,R-PoE,Logit sum,r15_s2_fixed040_s2,72.0857
+S2 frozen replay,full,R-PoE,Logit sum,r15_s2_replay_s0,72.7303
+S2 frozen replay,full,R-PoE,Logit sum,r15_s2_replay_s1,75.9582
+S2 frozen replay,full,R-PoE,Logit sum,r15_s2_replay_s2,78.8919
+S1,full,R-THE,Lower-entropy exit,r12_s1_fixed040_s0,65.2118
+S1,full,R-THE,Lower-entropy exit,r12_s1_fixed040_s1,65.1884
+S1,full,R-THE,Lower-entropy exit,r12_s1_fixed040_s2,63.9388
+S1,full,R-THE,Lower-entropy exit,r12_s1_fixed040_s3,60.0217
+S1,full,R-THE,Lower-entropy exit,r12_s1_fixed040_s4,67.3867
+S2,full,R-THE,Lower-entropy exit,r12_s2_fixed040_s0,63.2587
+S2,full,R-THE,Lower-entropy exit,r12_s2_fixed040_s1,66.8269
+S2,full,R-THE,Lower-entropy exit,r12_s2_fixed040_s2,69.8559
+S1-fast,full,R-THE,Lower-entropy exit,r12_s1fast_fixed040_s0,65.4623
+S1-fast,full,R-THE,Lower-entropy exit,r12_s1fast_fixed040_s1,65.4243
+S1-fast,full,R-THE,Lower-entropy exit,r12_s1fast_fixed040_s2,63.8260
+partial participation,full,R-THE,Lower-entropy exit,r12_s4part05_fixed040_s0,58.6496
+partial participation,full,R-THE,Lower-entropy exit,r12_s4part05_fixed040_s1,58.2697
+partial participation,full,R-THE,Lower-entropy exit,r12_s4part05_fixed040_s2,57.3864
+stepwise change,full,R-THE,Lower-entropy exit,r12_t1_A_fx40_s0,69.8624
+stepwise change,full,R-THE,Lower-entropy exit,r12_t1_A_fx40_s1,68.2669
+stepwise change,full,R-THE,Lower-entropy exit,r12_t1_A_fx40_s2,67.8350
+stepwise change,full,R-THE,Lower-entropy exit,r12_t1_A_fx40_s3,65.1566
+stepwise change,full,R-THE,Lower-entropy exit,r12_t1_A_fx40_s4,70.9722
+random mobility,full,R-THE,Lower-entropy exit,r12_t1_mob_fx40_s0,64.2934
+random mobility,full,R-THE,Lower-entropy exit,r12_t1_mob_fx40_s1,64.5281
+random mobility,full,R-THE,Lower-entropy exit,r12_t1_mob_fx40_s2,63.8324
+CIFAR-100,full,R-THE,Lower-entropy exit,r13b_c100_s0,37.0329
+CIFAR-100,full,R-THE,Lower-entropy exit,r13b_c100_s1,35.5590
+CIFAR-100,full,R-THE,Lower-entropy exit,r13b_c100_s2,35.0806
+ResNet-18,full,R-THE,Lower-entropy exit,r12_e2_res_fx40_A_s0,65.7301
+ResNet-18,full,R-THE,Lower-entropy exit,r12_e2_res_fx40_A_s1,64.2320
+ResNet-18,full,R-THE,Lower-entropy exit,r12_e2_res_fx40_A_s2,69.6588
+K=200,full,R-THE,Lower-entropy exit,r12_s3k200_fixed040_s0,67.5182
+K=200,full,R-THE,Lower-entropy exit,r12_s3k200_fixed040_s1,67.7700
+K=200,full,R-THE,Lower-entropy exit,r12_s3k200_fixed040_s2,64.7415
+K=500,full,R-THE,Lower-entropy exit,r12_s3k500_fixed040_s0,68.0805
+K=500,full,R-THE,Lower-entropy exit,r12_s3k500_fixed040_s1,68.8741
+K=500,full,R-THE,Lower-entropy exit,r12_s3k500_fixed040_s2,68.2818
+S1 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s1_fixed040_s0,65.2277
+S1 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s1_fixed040_s1,65.1967
+S1 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s1_fixed040_s2,63.9415
+S1 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s1_fixed040_s3,60.0466
+S1 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s1_fixed040_s4,67.3389
+S1 frozen replay,full,R-THE,Lower-entropy exit,r15_s1_replay_s0,72.7913
+S1 frozen replay,full,R-THE,Lower-entropy exit,r15_s1_replay_s1,71.7490
+S1 frozen replay,full,R-THE,Lower-entropy exit,r15_s1_replay_s2,72.0086
+S1 frozen replay,full,R-THE,Lower-entropy exit,r15_s1_replay_s3,68.5960
+S1 frozen replay,full,R-THE,Lower-entropy exit,r15_s1_replay_s4,73.3852
+S2 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s2_fixed040_s0,63.2954
+S2 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s2_fixed040_s1,66.9037
+S2 day 1 (retrained),full,R-THE,Lower-entropy exit,r15_s2_fixed040_s2,69.9261
+S2 frozen replay,full,R-THE,Lower-entropy exit,r15_s2_replay_s0,70.7519
+S2 frozen replay,full,R-THE,Lower-entropy exit,r15_s2_replay_s1,75.7700
+S2 frozen replay,full,R-THE,Lower-entropy exit,r15_s2_replay_s2,78.7233
+S1,full,R-ZTW,Geometric ensemble with early exit,r12_s1_fixed040_s0,68.7449
+S1,full,R-ZTW,Geometric ensemble with early exit,r12_s1_fixed040_s1,68.1470
+S1,full,R-ZTW,Geometric ensemble with early exit,r12_s1_fixed040_s2,67.1402
+S1,full,R-ZTW,Geometric ensemble with early exit,r12_s1_fixed040_s3,62.4097
+S1,full,R-ZTW,Geometric ensemble with early exit,r12_s1_fixed040_s4,70.3718
+S2,full,R-ZTW,Geometric ensemble with early exit,r12_s2_fixed040_s0,68.1084
+S2,full,R-ZTW,Geometric ensemble with early exit,r12_s2_fixed040_s1,70.0325
+S2,full,R-ZTW,Geometric ensemble with early exit,r12_s2_fixed040_s2,72.0374
+S1-fast,full,R-ZTW,Geometric ensemble with early exit,r12_s1fast_fixed040_s0,68.9867
+S1-fast,full,R-ZTW,Geometric ensemble with early exit,r12_s1fast_fixed040_s1,68.3278
+S1-fast,full,R-ZTW,Geometric ensemble with early exit,r12_s1fast_fixed040_s2,67.0278
+partial participation,full,R-ZTW,Geometric ensemble with early exit,r12_s4part05_fixed040_s0,63.7752
+partial participation,full,R-ZTW,Geometric ensemble with early exit,r12_s4part05_fixed040_s1,62.8908
+partial participation,full,R-ZTW,Geometric ensemble with early exit,r12_s4part05_fixed040_s2,62.1507
+stepwise change,full,R-ZTW,Geometric ensemble with early exit,r12_t1_A_fx40_s0,73.1757
+stepwise change,full,R-ZTW,Geometric ensemble with early exit,r12_t1_A_fx40_s1,70.7583
+stepwise change,full,R-ZTW,Geometric ensemble with early exit,r12_t1_A_fx40_s2,70.8865
+stepwise change,full,R-ZTW,Geometric ensemble with early exit,r12_t1_A_fx40_s3,68.0183
+stepwise change,full,R-ZTW,Geometric ensemble with early exit,r12_t1_A_fx40_s4,74.0756
+random mobility,full,R-ZTW,Geometric ensemble with early exit,r12_t1_mob_fx40_s0,69.8280
+random mobility,full,R-ZTW,Geometric ensemble with early exit,r12_t1_mob_fx40_s1,69.0770
+random mobility,full,R-ZTW,Geometric ensemble with early exit,r12_t1_mob_fx40_s2,68.7668
+CIFAR-100,full,R-ZTW,Geometric ensemble with early exit,r13b_c100_s0,40.8403
+CIFAR-100,full,R-ZTW,Geometric ensemble with early exit,r13b_c100_s1,39.2826
+CIFAR-100,full,R-ZTW,Geometric ensemble with early exit,r13b_c100_s2,39.3744
+ResNet-18,full,R-ZTW,Geometric ensemble with early exit,r12_e2_res_fx40_A_s0,64.7324
+ResNet-18,full,R-ZTW,Geometric ensemble with early exit,r12_e2_res_fx40_A_s1,63.5284
+ResNet-18,full,R-ZTW,Geometric ensemble with early exit,r12_e2_res_fx40_A_s2,69.7148
+K=200,full,R-ZTW,Geometric ensemble with early exit,r12_s3k200_fixed040_s0,69.7435
+K=200,full,R-ZTW,Geometric ensemble with early exit,r12_s3k200_fixed040_s1,69.6662
+K=200,full,R-ZTW,Geometric ensemble with early exit,r12_s3k200_fixed040_s2,67.1664
+K=500,full,R-ZTW,Geometric ensemble with early exit,r12_s3k500_fixed040_s0,70.1642
+K=500,full,R-ZTW,Geometric ensemble with early exit,r12_s3k500_fixed040_s1,70.4570
+K=500,full,R-ZTW,Geometric ensemble with early exit,r12_s3k500_fixed040_s2,70.2482
+S1 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s1_fixed040_s0,68.7580
+S1 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s1_fixed040_s1,68.1582
+S1 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s1_fixed040_s2,67.1473
+S1 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s1_fixed040_s3,62.4232
+S1 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s1_fixed040_s4,70.3415
+S1 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s1_replay_s0,72.7012
+S1 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s1_replay_s1,71.6346
+S1 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s1_replay_s2,72.7218
+S1 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s1_replay_s3,69.2847
+S1 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s1_replay_s4,73.8243
+S2 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s2_fixed040_s0,68.1478
+S2 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s2_fixed040_s1,70.1009
+S2 day 1 (retrained),full,R-ZTW,Geometric ensemble with early exit,r15_s2_fixed040_s2,72.0747
+S2 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s2_replay_s0,72.7072
+S2 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s2_replay_s1,75.9289
+S2 frozen replay,full,R-ZTW,Geometric ensemble with early exit,r15_s2_replay_s2,78.8204
+S1,full,R-EM,Label-shift EM,r12_s1_fixed040_s0,65.3603
+S1,full,R-EM,Label-shift EM,r12_s1_fixed040_s1,65.4021
+S1,full,R-EM,Label-shift EM,r12_s1_fixed040_s2,65.4189
+S1,full,R-EM,Label-shift EM,r12_s1_fixed040_s3,61.1476
+S1,full,R-EM,Label-shift EM,r12_s1_fixed040_s4,66.8869
+S2,full,R-EM,Label-shift EM,r12_s2_fixed040_s0,68.0880
+S2,full,R-EM,Label-shift EM,r12_s2_fixed040_s1,68.6975
+S2,full,R-EM,Label-shift EM,r12_s2_fixed040_s2,69.1175
+S1-fast,full,R-EM,Label-shift EM,r12_s1fast_fixed040_s0,65.5593
+S1-fast,full,R-EM,Label-shift EM,r12_s1fast_fixed040_s1,65.5462
+S1-fast,full,R-EM,Label-shift EM,r12_s1fast_fixed040_s2,65.1198
+partial participation,full,R-EM,Label-shift EM,r12_s4part05_fixed040_s0,60.0878
+partial participation,full,R-EM,Label-shift EM,r12_s4part05_fixed040_s1,61.3041
+partial participation,full,R-EM,Label-shift EM,r12_s4part05_fixed040_s2,59.9634
+stepwise change,full,R-EM,Label-shift EM,r12_t1_A_fx40_s0,68.7461
+stepwise change,full,R-EM,Label-shift EM,r12_t1_A_fx40_s1,68.2624
+stepwise change,full,R-EM,Label-shift EM,r12_t1_A_fx40_s2,67.6740
+stepwise change,full,R-EM,Label-shift EM,r12_t1_A_fx40_s3,64.3659
+stepwise change,full,R-EM,Label-shift EM,r12_t1_A_fx40_s4,68.9217
+random mobility,full,R-EM,Label-shift EM,r12_t1_mob_fx40_s0,65.5846
+random mobility,full,R-EM,Label-shift EM,r12_t1_mob_fx40_s1,65.8458
+random mobility,full,R-EM,Label-shift EM,r12_t1_mob_fx40_s2,64.8365
+CIFAR-100,full,R-EM,Label-shift EM,r13b_c100_s0,40.7846
+CIFAR-100,full,R-EM,Label-shift EM,r13b_c100_s1,39.8418
+CIFAR-100,full,R-EM,Label-shift EM,r13b_c100_s2,40.6877
+ResNet-18,full,R-EM,Label-shift EM,r12_e2_res_fx40_A_s0,61.5230
+ResNet-18,full,R-EM,Label-shift EM,r12_e2_res_fx40_A_s1,59.0360
+ResNet-18,full,R-EM,Label-shift EM,r12_e2_res_fx40_A_s2,64.6292
+K=200,full,R-EM,Label-shift EM,r12_s3k200_fixed040_s0,66.1628
+K=200,full,R-EM,Label-shift EM,r12_s3k200_fixed040_s1,65.2983
+K=200,full,R-EM,Label-shift EM,r12_s3k200_fixed040_s2,63.4312
+K=500,full,R-EM,Label-shift EM,r12_s3k500_fixed040_s0,66.4253
+K=500,full,R-EM,Label-shift EM,r12_s3k500_fixed040_s1,66.2182
+K=500,full,R-EM,Label-shift EM,r12_s3k500_fixed040_s2,65.9055
+S1 day 1 (retrained),full,R-EM,Label-shift EM,r15_s1_fixed040_s0,65.3614
+S1 day 1 (retrained),full,R-EM,Label-shift EM,r15_s1_fixed040_s1,65.4186
+S1 day 1 (retrained),full,R-EM,Label-shift EM,r15_s1_fixed040_s2,65.4198
+S1 day 1 (retrained),full,R-EM,Label-shift EM,r15_s1_fixed040_s3,61.1398
+S1 day 1 (retrained),full,R-EM,Label-shift EM,r15_s1_fixed040_s4,66.8701
+S1 frozen replay,full,R-EM,Label-shift EM,r15_s1_replay_s0,70.5650
+S1 frozen replay,full,R-EM,Label-shift EM,r15_s1_replay_s1,69.5429
+S1 frozen replay,full,R-EM,Label-shift EM,r15_s1_replay_s2,70.5668
+S1 frozen replay,full,R-EM,Label-shift EM,r15_s1_replay_s3,67.8684
+S1 frozen replay,full,R-EM,Label-shift EM,r15_s1_replay_s4,72.3060
+S2 day 1 (retrained),full,R-EM,Label-shift EM,r15_s2_fixed040_s0,68.1107
+S2 day 1 (retrained),full,R-EM,Label-shift EM,r15_s2_fixed040_s1,68.7134
+S2 day 1 (retrained),full,R-EM,Label-shift EM,r15_s2_fixed040_s2,69.1572
+S2 frozen replay,full,R-EM,Label-shift EM,r15_s2_replay_s0,72.6728
+S2 frozen replay,full,R-EM,Label-shift EM,r15_s2_replay_s1,75.0868
+S2 frozen replay,full,R-EM,Label-shift EM,r15_s2_replay_s2,76.5438
+S1,full,R-LR,Learned weight,r12_s1_fixed040_s0,68.1129
+S1,full,R-LR,Learned weight,r12_s1_fixed040_s1,67.7455
+S1,full,R-LR,Learned weight,r12_s1_fixed040_s2,66.4285
+S1,full,R-LR,Learned weight,r12_s1_fixed040_s3,61.9010
+S1,full,R-LR,Learned weight,r12_s1_fixed040_s4,69.8783
+S2,full,R-LR,Learned weight,r12_s2_fixed040_s0,66.2756
+S2,full,R-LR,Learned weight,r12_s2_fixed040_s1,68.6166
+S2,full,R-LR,Learned weight,r12_s2_fixed040_s2,70.8716
+S1-fast,full,R-LR,Learned weight,r12_s1fast_fixed040_s0,68.3652
+S1-fast,full,R-LR,Learned weight,r12_s1fast_fixed040_s1,67.9261
+S1-fast,full,R-LR,Learned weight,r12_s1fast_fixed040_s2,66.2714
+partial participation,full,R-LR,Learned weight,r12_s4part05_fixed040_s0,62.9310
+partial participation,full,R-LR,Learned weight,r12_s4part05_fixed040_s1,62.0221
+partial participation,full,R-LR,Learned weight,r12_s4part05_fixed040_s2,61.0955
+stepwise change,full,R-LR,Learned weight,r12_t1_A_fx40_s0,72.4337
+stepwise change,full,R-LR,Learned weight,r12_t1_A_fx40_s1,70.2577
+stepwise change,full,R-LR,Learned weight,r12_t1_A_fx40_s2,70.1758
+stepwise change,full,R-LR,Learned weight,r12_t1_A_fx40_s3,67.2399
+stepwise change,full,R-LR,Learned weight,r12_t1_A_fx40_s4,73.3618
+random mobility,full,R-LR,Learned weight,r12_t1_mob_fx40_s0,68.8724
+random mobility,full,R-LR,Learned weight,r12_t1_mob_fx40_s1,68.6000
+random mobility,full,R-LR,Learned weight,r12_t1_mob_fx40_s2,68.1804
+CIFAR-100,full,R-LR,Learned weight,r13b_c100_s0,38.4110
+CIFAR-100,full,R-LR,Learned weight,r13b_c100_s1,37.0684
+CIFAR-100,full,R-LR,Learned weight,r13b_c100_s2,37.1347
+ResNet-18,full,R-LR,Learned weight,r12_e2_res_fx40_A_s0,64.3025
+ResNet-18,full,R-LR,Learned weight,r12_e2_res_fx40_A_s1,60.4385
+ResNet-18,full,R-LR,Learned weight,r12_e2_res_fx40_A_s2,66.0743
+K=200,full,R-LR,Learned weight,r12_s3k200_fixed040_s0,69.4603
+K=200,full,R-LR,Learned weight,r12_s3k200_fixed040_s1,69.3653
+K=200,full,R-LR,Learned weight,r12_s3k200_fixed040_s2,66.8015
+K=500,full,R-LR,Learned weight,r12_s3k500_fixed040_s0,69.9577
+K=500,full,R-LR,Learned weight,r12_s3k500_fixed040_s1,70.2347
+K=500,full,R-LR,Learned weight,r12_s3k500_fixed040_s2,69.9674
+S1 day 1 (retrained),full,R-LR,Learned weight,r15_s1_fixed040_s0,68.1205
+S1 day 1 (retrained),full,R-LR,Learned weight,r15_s1_fixed040_s1,67.7561
+S1 day 1 (retrained),full,R-LR,Learned weight,r15_s1_fixed040_s2,66.4365
+S1 day 1 (retrained),full,R-LR,Learned weight,r15_s1_fixed040_s3,61.9219
+S1 day 1 (retrained),full,R-LR,Learned weight,r15_s1_fixed040_s4,69.8441
+S1 frozen replay,full,R-LR,Learned weight,r15_s1_replay_s0,72.8609
+S1 frozen replay,full,R-LR,Learned weight,r15_s1_replay_s1,71.8713
+S1 frozen replay,full,R-LR,Learned weight,r15_s1_replay_s2,72.8585
+S1 frozen replay,full,R-LR,Learned weight,r15_s1_replay_s3,69.0486
+S1 frozen replay,full,R-LR,Learned weight,r15_s1_replay_s4,73.9909
+S2 day 1 (retrained),full,R-LR,Learned weight,r15_s2_fixed040_s0,66.3261
+S2 day 1 (retrained),full,R-LR,Learned weight,r15_s2_fixed040_s1,68.6741
+S2 day 1 (retrained),full,R-LR,Learned weight,r15_s2_fixed040_s2,70.9016
+S2 frozen replay,full,R-LR,Learned weight,r15_s2_replay_s0,71.0116
+S2 frozen replay,full,R-LR,Learned weight,r15_s2_replay_s1,74.3379
+S2 frozen replay,full,R-LR,Learned weight,r15_s2_replay_s2,78.2478
+S1,full,LEW,Logit-entropy weighting,r12_s1_fixed040_s0,65.2155
+S1,full,LEW,Logit-entropy weighting,r12_s1_fixed040_s1,65.1871
+S1,full,LEW,Logit-entropy weighting,r12_s1_fixed040_s2,63.9399
+S1,full,LEW,Logit-entropy weighting,r12_s1_fixed040_s3,60.0226
+S1,full,LEW,Logit-entropy weighting,r12_s1_fixed040_s4,67.3881
+S2,full,LEW,Logit-entropy weighting,r12_s2_fixed040_s0,63.2617
+S2,full,LEW,Logit-entropy weighting,r12_s2_fixed040_s1,66.8291
+S2,full,LEW,Logit-entropy weighting,r12_s2_fixed040_s2,69.8627
+S1-fast,full,LEW,Logit-entropy weighting,r12_s1fast_fixed040_s0,65.4655
+S1-fast,full,LEW,Logit-entropy weighting,r12_s1fast_fixed040_s1,65.4238
+S1-fast,full,LEW,Logit-entropy weighting,r12_s1fast_fixed040_s2,63.8268
+partial participation,full,LEW,Logit-entropy weighting,r12_s4part05_fixed040_s0,58.6563
+partial participation,full,LEW,Logit-entropy weighting,r12_s4part05_fixed040_s1,58.2722
+partial participation,full,LEW,Logit-entropy weighting,r12_s4part05_fixed040_s2,57.3643
+stepwise change,full,LEW,Logit-entropy weighting,r12_t1_A_fx40_s0,69.8715
+stepwise change,full,LEW,Logit-entropy weighting,r12_t1_A_fx40_s1,68.2690
+stepwise change,full,LEW,Logit-entropy weighting,r12_t1_A_fx40_s2,67.8374
+stepwise change,full,LEW,Logit-entropy weighting,r12_t1_A_fx40_s3,65.1580
+stepwise change,full,LEW,Logit-entropy weighting,r12_t1_A_fx40_s4,70.9713
+random mobility,full,LEW,Logit-entropy weighting,r12_t1_mob_fx40_s0,64.2936
+random mobility,full,LEW,Logit-entropy weighting,r12_t1_mob_fx40_s1,64.5274
+random mobility,full,LEW,Logit-entropy weighting,r12_t1_mob_fx40_s2,63.8324
+CIFAR-100,full,LEW,Logit-entropy weighting,r13b_c100_s0,37.0456
+CIFAR-100,full,LEW,Logit-entropy weighting,r13b_c100_s1,35.5728
+CIFAR-100,full,LEW,Logit-entropy weighting,r13b_c100_s2,35.0930
+ResNet-18,full,LEW,Logit-entropy weighting,r12_e2_res_fx40_A_s0,65.7316
+ResNet-18,full,LEW,Logit-entropy weighting,r12_e2_res_fx40_A_s1,64.2327
+ResNet-18,full,LEW,Logit-entropy weighting,r12_e2_res_fx40_A_s2,69.6575
+K=200,full,LEW,Logit-entropy weighting,r12_s3k200_fixed040_s0,67.5176
+K=200,full,LEW,Logit-entropy weighting,r12_s3k200_fixed040_s1,67.7686
+K=200,full,LEW,Logit-entropy weighting,r12_s3k200_fixed040_s2,64.7428
+K=500,full,LEW,Logit-entropy weighting,r12_s3k500_fixed040_s0,68.0787
+K=500,full,LEW,Logit-entropy weighting,r12_s3k500_fixed040_s1,68.8715
+K=500,full,LEW,Logit-entropy weighting,r12_s3k500_fixed040_s2,68.2820
+S1 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s1_fixed040_s0,65.2295
+S1 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s1_fixed040_s1,65.1947
+S1 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s1_fixed040_s2,63.9428
+S1 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s1_fixed040_s3,60.0485
+S1 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s1_fixed040_s4,67.3406
+S1 frozen replay,full,LEW,Logit-entropy weighting,r15_s1_replay_s0,72.8159
+S1 frozen replay,full,LEW,Logit-entropy weighting,r15_s1_replay_s1,71.7460
+S1 frozen replay,full,LEW,Logit-entropy weighting,r15_s1_replay_s2,72.0287
+S1 frozen replay,full,LEW,Logit-entropy weighting,r15_s1_replay_s3,68.6029
+S1 frozen replay,full,LEW,Logit-entropy weighting,r15_s1_replay_s4,73.3925
+S2 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s2_fixed040_s0,63.2985
+S2 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s2_fixed040_s1,66.9074
+S2 day 1 (retrained),full,LEW,Logit-entropy weighting,r15_s2_fixed040_s2,69.9320
+S2 frozen replay,full,LEW,Logit-entropy weighting,r15_s2_replay_s0,70.7609
+S2 frozen replay,full,LEW,Logit-entropy weighting,r15_s2_replay_s1,75.7785
+S2 frozen replay,full,LEW,Logit-entropy weighting,r15_s2_replay_s2,78.7264
+S1,full,DriftGate,DriftGate,r12_s1_fixed040_s0,69.3603
+S1,full,DriftGate,DriftGate,r12_s1_fixed040_s1,69.0740
+S1,full,DriftGate,DriftGate,r12_s1_fixed040_s2,68.1554
+S1,full,DriftGate,DriftGate,r12_s1_fixed040_s3,64.2589
+S1,full,DriftGate,DriftGate,r12_s1_fixed040_s4,70.7247
+S2,full,DriftGate,DriftGate,r12_s2_fixed040_s0,70.6446
+S2,full,DriftGate,DriftGate,r12_s2_fixed040_s1,71.9088
+S2,full,DriftGate,DriftGate,r12_s2_fixed040_s2,72.5470
+S1-fast,full,DriftGate,DriftGate,r12_s1fast_fixed040_s0,69.5735
+S1-fast,full,DriftGate,DriftGate,r12_s1fast_fixed040_s1,69.2072
+S1-fast,full,DriftGate,DriftGate,r12_s1fast_fixed040_s2,68.1107
+partial participation,full,DriftGate,DriftGate,r12_s4part05_fixed040_s0,64.9698
+partial participation,full,DriftGate,DriftGate,r12_s4part05_fixed040_s1,65.1179
+partial participation,full,DriftGate,DriftGate,r12_s4part05_fixed040_s2,64.3686
+stepwise change,full,DriftGate,DriftGate,r12_t1_A_fx40_s0,73.9743
+stepwise change,full,DriftGate,DriftGate,r12_t1_A_fx40_s1,72.1793
+stepwise change,full,DriftGate,DriftGate,r12_t1_A_fx40_s2,71.9606
+stepwise change,full,DriftGate,DriftGate,r12_t1_A_fx40_s3,69.0098
+stepwise change,full,DriftGate,DriftGate,r12_t1_A_fx40_s4,74.6579
+random mobility,full,DriftGate,DriftGate,r12_t1_mob_fx40_s0,71.8934
+random mobility,full,DriftGate,DriftGate,r12_t1_mob_fx40_s1,71.2052
+random mobility,full,DriftGate,DriftGate,r12_t1_mob_fx40_s2,70.1827
+CIFAR-100,full,DriftGate,DriftGate,r13b_c100_s0,41.9423
+CIFAR-100,full,DriftGate,DriftGate,r13b_c100_s1,40.7022
+CIFAR-100,full,DriftGate,DriftGate,r13b_c100_s2,41.2204
+ResNet-18,full,DriftGate,DriftGate,r12_e2_res_fx40_A_s0,65.1420
+ResNet-18,full,DriftGate,DriftGate,r12_e2_res_fx40_A_s1,64.5270
+ResNet-18,full,DriftGate,DriftGate,r12_e2_res_fx40_A_s2,70.2499
+K=200,full,DriftGate,DriftGate,r12_s3k200_fixed040_s0,69.8756
+K=200,full,DriftGate,DriftGate,r12_s3k200_fixed040_s1,69.7662
+K=200,full,DriftGate,DriftGate,r12_s3k200_fixed040_s2,67.3444
+K=500,full,DriftGate,DriftGate,r12_s3k500_fixed040_s0,70.1897
+K=500,full,DriftGate,DriftGate,r12_s3k500_fixed040_s1,70.2764
+K=500,full,DriftGate,DriftGate,r12_s3k500_fixed040_s2,69.8672
+S1 day 1 (retrained),full,DriftGate,DriftGate,r15_s1_fixed040_s0,69.3688
+S1 day 1 (retrained),full,DriftGate,DriftGate,r15_s1_fixed040_s1,69.0858
+S1 day 1 (retrained),full,DriftGate,DriftGate,r15_s1_fixed040_s2,68.1722
+S1 day 1 (retrained),full,DriftGate,DriftGate,r15_s1_fixed040_s3,64.2722
+S1 day 1 (retrained),full,DriftGate,DriftGate,r15_s1_fixed040_s4,70.7098
+S1 frozen replay,full,DriftGate,DriftGate,r15_s1_replay_s0,72.4387
+S1 frozen replay,full,DriftGate,DriftGate,r15_s1_replay_s1,71.8785
+S1 frozen replay,full,DriftGate,DriftGate,r15_s1_replay_s2,72.1511
+S1 frozen replay,full,DriftGate,DriftGate,r15_s1_replay_s3,69.4814
+S1 frozen replay,full,DriftGate,DriftGate,r15_s1_replay_s4,73.7840
+S2 day 1 (retrained),full,DriftGate,DriftGate,r15_s2_fixed040_s0,70.6841
+S2 day 1 (retrained),full,DriftGate,DriftGate,r15_s2_fixed040_s1,71.9588
+S2 day 1 (retrained),full,DriftGate,DriftGate,r15_s2_fixed040_s2,72.5767
+S2 frozen replay,full,DriftGate,DriftGate,r15_s2_replay_s0,73.8117
+S2 frozen replay,full,DriftGate,DriftGate,r15_s2_replay_s1,77.0126
+S2 frozen replay,full,DriftGate,DriftGate,r15_s2_replay_s2,78.7821

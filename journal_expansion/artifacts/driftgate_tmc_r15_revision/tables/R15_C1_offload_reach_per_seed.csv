@@ -1,0 +1,101 @@
+setting,window,run,curve,reach A_full of the setting (interpolated),reach A_default (interpolated)
+S1,full,r12_s1_fixed040_s0,DriftGate-P,0.391,0.391
+S1,full,r12_s1_fixed040_s1,DriftGate-P,0.340,0.340
+S1,full,r12_s1_fixed040_s2,DriftGate-P,0.484,0.484
+S1,full,r12_s1_fixed040_s3,DriftGate-P,nan,nan
+S1,full,r12_s1_fixed040_s4,DriftGate-P,0.122,0.122
+S1,gt30,r12_s1_fixed040_s0,DriftGate-P,0.516,0.516
+S1,gt30,r12_s1_fixed040_s1,DriftGate-P,0.482,0.482
+S1,gt30,r12_s1_fixed040_s2,DriftGate-P,0.736,0.736
+S1,gt30,r12_s1_fixed040_s3,DriftGate-P,nan,nan
+S1,gt30,r12_s1_fixed040_s4,DriftGate-P,0.195,0.195
+S2,full,r12_s2_fixed040_s0,DriftGate-P,0.616,0.616
+S2,full,r12_s2_fixed040_s1,DriftGate-P,0.226,0.226
+S2,full,r12_s2_fixed040_s2,DriftGate-P,0.000,0.000
+S2,gt30,r12_s2_fixed040_s0,DriftGate-P,nan,nan
+S2,gt30,r12_s2_fixed040_s1,DriftGate-P,0.310,0.310
+S2,gt30,r12_s2_fixed040_s2,DriftGate-P,0.000,0.000
+S1-fast,full,r12_s1fast_fixed040_s0,DriftGate-P,0.459,0.459
+S1-fast,full,r12_s1fast_fixed040_s1,DriftGate-P,0.435,0.435
+S1-fast,full,r12_s1fast_fixed040_s2,DriftGate-P,nan,nan
+S1-fast,gt30,r12_s1fast_fixed040_s0,DriftGate-P,0.587,0.587
+S1-fast,gt30,r12_s1fast_fixed040_s1,DriftGate-P,0.617,0.617
+S1-fast,gt30,r12_s1fast_fixed040_s2,DriftGate-P,nan,nan
+partial participation,full,r12_s4part05_fixed040_s0,DriftGate-P,0.137,0.137
+partial participation,full,r12_s4part05_fixed040_s1,DriftGate-P,0.062,0.062
+partial participation,full,r12_s4part05_fixed040_s2,DriftGate-P,0.103,0.103
+partial participation,gt30,r12_s4part05_fixed040_s0,DriftGate-P,0.402,0.402
+partial participation,gt30,r12_s4part05_fixed040_s1,DriftGate-P,0.352,0.352
+partial participation,gt30,r12_s4part05_fixed040_s2,DriftGate-P,0.505,0.505
+stepwise change,full,r12_t1_A_fx40_s0,DriftGate-P,0.259,0.259
+stepwise change,full,r12_t1_A_fx40_s1,DriftGate-P,0.414,0.414
+stepwise change,full,r12_t1_A_fx40_s2,DriftGate-P,0.508,0.508
+stepwise change,full,r12_t1_A_fx40_s3,DriftGate-P,nan,nan
+stepwise change,full,r12_t1_A_fx40_s4,DriftGate-P,0.136,0.136
+stepwise change,gt30,r12_t1_A_fx40_s0,DriftGate-P,0.445,0.445
+stepwise change,gt30,r12_t1_A_fx40_s1,DriftGate-P,nan,nan
+stepwise change,gt30,r12_t1_A_fx40_s2,DriftGate-P,nan,nan
+stepwise change,gt30,r12_t1_A_fx40_s3,DriftGate-P,nan,nan
+stepwise change,gt30,r12_t1_A_fx40_s4,DriftGate-P,0.269,0.269
+random mobility,full,r12_t1_mob_fx40_s0,DriftGate-P,0.285,0.285
+random mobility,full,r12_t1_mob_fx40_s1,DriftGate-P,0.222,0.222
+random mobility,full,r12_t1_mob_fx40_s2,DriftGate-P,0.503,0.503
+random mobility,gt30,r12_t1_mob_fx40_s0,DriftGate-P,0.570,0.570
+random mobility,gt30,r12_t1_mob_fx40_s1,DriftGate-P,0.629,0.629
+random mobility,gt30,r12_t1_mob_fx40_s2,DriftGate-P,nan,nan
+CIFAR-100,full,r13b_c100_s0,DriftGate-P,0.758,0.758
+CIFAR-100,full,r13b_c100_s1,DriftGate-P,0.930,0.930
+CIFAR-100,full,r13b_c100_s2,DriftGate-P,0.870,0.870
+CIFAR-100,gt30,r13b_c100_s0,DriftGate-P,0.799,0.799
+CIFAR-100,gt30,r13b_c100_s1,DriftGate-P,nan,nan
+CIFAR-100,gt30,r13b_c100_s2,DriftGate-P,0.909,0.909
+ResNet-18,full,r12_e2_res_fx40_A_s0,DriftGate-P,nan,nan
+ResNet-18,full,r12_e2_res_fx40_A_s1,DriftGate-P,nan,nan
+ResNet-18,full,r12_e2_res_fx40_A_s2,DriftGate-P,0.000,0.000
+ResNet-18,gt30,r12_e2_res_fx40_A_s0,DriftGate-P,nan,nan
+ResNet-18,gt30,r12_e2_res_fx40_A_s1,DriftGate-P,nan,nan
+ResNet-18,gt30,r12_e2_res_fx40_A_s2,DriftGate-P,0.000,0.000
+K=200,full,r12_s3k200_fixed040_s0,DriftGate-P,0.602,0.602
+K=200,full,r12_s3k200_fixed040_s1,DriftGate-P,0.583,0.583
+K=200,full,r12_s3k200_fixed040_s2,DriftGate-P,nan,nan
+K=200,gt30,r12_s3k200_fixed040_s0,DriftGate-P,0.720,0.720
+K=200,gt30,r12_s3k200_fixed040_s1,DriftGate-P,0.638,0.638
+K=200,gt30,r12_s3k200_fixed040_s2,DriftGate-P,nan,nan
+K=500,full,r12_s3k500_fixed040_s0,DriftGate-P,nan,nan
+K=500,full,r12_s3k500_fixed040_s1,DriftGate-P,nan,nan
+K=500,full,r12_s3k500_fixed040_s2,DriftGate-P,nan,nan
+K=500,gt30,r12_s3k500_fixed040_s0,DriftGate-P,nan,nan
+K=500,gt30,r12_s3k500_fixed040_s1,DriftGate-P,nan,nan
+K=500,gt30,r12_s3k500_fixed040_s2,DriftGate-P,nan,nan
+S1 day 1 (retrained),full,r15_s1_fixed040_s0,DriftGate-P,0.388,0.388
+S1 day 1 (retrained),full,r15_s1_fixed040_s1,DriftGate-P,0.339,0.339
+S1 day 1 (retrained),full,r15_s1_fixed040_s2,DriftGate-P,0.478,0.478
+S1 day 1 (retrained),full,r15_s1_fixed040_s3,DriftGate-P,nan,nan
+S1 day 1 (retrained),full,r15_s1_fixed040_s4,DriftGate-P,0.123,0.123
+S1 day 1 (retrained),gt30,r15_s1_fixed040_s0,DriftGate-P,0.514,0.514
+S1 day 1 (retrained),gt30,r15_s1_fixed040_s1,DriftGate-P,0.480,0.480
+S1 day 1 (retrained),gt30,r15_s1_fixed040_s2,DriftGate-P,0.723,0.723
+S1 day 1 (retrained),gt30,r15_s1_fixed040_s3,DriftGate-P,nan,nan
+S1 day 1 (retrained),gt30,r15_s1_fixed040_s4,DriftGate-P,0.195,0.195
+S1 frozen replay,full,r15_s1_replay_s0,DriftGate-P,0.716,0.716
+S1 frozen replay,full,r15_s1_replay_s1,DriftGate-P,nan,nan
+S1 frozen replay,full,r15_s1_replay_s2,DriftGate-P,nan,nan
+S1 frozen replay,full,r15_s1_replay_s3,DriftGate-P,nan,nan
+S1 frozen replay,full,r15_s1_replay_s4,DriftGate-P,0.331,0.331
+S1 frozen replay,gt30,r15_s1_replay_s0,DriftGate-P,nan,nan
+S1 frozen replay,gt30,r15_s1_replay_s1,DriftGate-P,nan,nan
+S1 frozen replay,gt30,r15_s1_replay_s2,DriftGate-P,nan,nan
+S1 frozen replay,gt30,r15_s1_replay_s3,DriftGate-P,nan,nan
+S1 frozen replay,gt30,r15_s1_replay_s4,DriftGate-P,0.421,0.421
+S2 day 1 (retrained),full,r15_s2_fixed040_s0,DriftGate-P,0.619,0.619
+S2 day 1 (retrained),full,r15_s2_fixed040_s1,DriftGate-P,0.230,0.230
+S2 day 1 (retrained),full,r15_s2_fixed040_s2,DriftGate-P,0.000,0.000
+S2 day 1 (retrained),gt30,r15_s2_fixed040_s0,DriftGate-P,nan,nan
+S2 day 1 (retrained),gt30,r15_s2_fixed040_s1,DriftGate-P,0.316,0.316
+S2 day 1 (retrained),gt30,r15_s2_fixed040_s2,DriftGate-P,0.000,0.000
+S2 frozen replay,full,r15_s2_replay_s0,DriftGate-P,nan,nan
+S2 frozen replay,full,r15_s2_replay_s1,DriftGate-P,0.419,0.419
+S2 frozen replay,full,r15_s2_replay_s2,DriftGate-P,0.117,0.117
+S2 frozen replay,gt30,r15_s2_replay_s0,DriftGate-P,nan,nan
+S2 frozen replay,gt30,r15_s2_replay_s1,DriftGate-P,0.504,0.504
+S2 frozen replay,gt30,r15_s2_replay_s2,DriftGate-P,0.171,0.171

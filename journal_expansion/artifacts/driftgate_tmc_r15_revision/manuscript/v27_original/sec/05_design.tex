@@ -1,0 +1,109 @@
+\section{DriftGate}
+\label{sec:design}
+
+\begin{figure*}[t]
+\centering
+\resizebox{0.98\textwidth}{!}{%
+\begin{tikzpicture}[font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=0.95cm, inner sep=3pt, fill=white},
+  arr/.style={-{Stealth[length=2.2mm]}, thick},
+  lane/.style={draw=gray!50, fill=gray!8, rounded corners=4pt}]
+  \fill[gray!8, draw=gray!50, rounded corners=4pt] (-1.1,-0.85) rectangle (15.6,2.25);
+  \fill[gray!8, draw=gray!50, rounded corners=4pt] (-1.1,-3.15) rectangle (15.6,-1.35);
+  \node[anchor=west, text=gray!70!black, font=\small\bfseries] at (-1.0,1.95) {Device};
+  \node[anchor=west, text=gray!70!black, font=\small\bfseries] at (-1.0,-1.6) {Edge server};
+  \node[box] (in) at (0,0) {request\\$x$};
+  \node[box] (db) at (2.1,0) {device block\\$h_k$};
+  \node[box] (de) at (4.5,0) {device exit\\$\pd(\cdot\,|\,x)$};
+  \node[box] (chk) at (7.1,0) {$H(\pd)\le\tau$?};
+  \node[box] (loc) at (7.1,1.5) {answer $\arg\max_c \pd(c\,|\,x)$};
+  \node[box] (win) at (11.9,1.5) {weight $w_k=\He_k/(\Hd_k+\He_k)$\\from recent requests};
+  \node[box] (comb) at (11.9,0) {combine\\$w_k\pd+(1-w_k)\pec$};
+  \node[box] (ans) at (14.6,0) {answer\\$\arg\max_c$};
+  \node[box] (eb) at (7.1,-2.25) {edge block and edge exit\\$\pe(\cdot\,|\,x)$};
+  \node[box] (pc) at (11.9,-2.25) {prior correction\\with $M_k$, $a_k$, $r$};
+  \draw[arr] (in) -- (db);
+  \draw[arr] (db) -- (de);
+  \draw[arr] (de) -- (chk);
+  \draw[arr] (chk) -- node[right, font=\footnotesize] {yes} (loc);
+  \draw[arr] (chk.south) -- node[pos=0.45, right, font=\footnotesize] {no: send $h_k(x)$} (eb.north);
+  \draw[arr] (chk.east) -- node[above, font=\footnotesize] {$\pd$} (comb.west);
+  \draw[arr] (eb) -- (pc);
+  \draw[arr] (pc.north) -- node[pos=0.45, right, font=\footnotesize] {return $\pec$} (comb.south);
+  \draw[arr] (win) -- (comb);
+  \draw[arr] (comb) -- (ans);
+\end{tikzpicture}}
+\caption{Inference with DriftGate. The device answers a request locally when its exit is confident. Otherwise it sends the intermediate feature to the edge, which returns class probabilities corrected for the class mix of the cell, and the device answers with a weighted average of both exits. The weight comes from the mean entropy of the two exits on the device's recent requests.}
+\label{fig:overview}
+\end{figure*}
+
+DriftGate changes only how a request is answered. It keeps the trained device and edge models as they are and adds three steps that follow from Section~\ref{sec:motivation}. It combines the two exits instead of choosing one, it corrects the edge exit for the class mix of its cell, and it sets the weight of each exit without labels. A fourth step limits offloading to the requests where the edge is most useful. Fig.~\ref{fig:overview} shows the resulting path of a request.
+
+\subsection{Combining the Two Exits}
+\label{sec:combine}
+
+Section~\ref{sec:complementary} showed that the device exit is accurate on Main requests and the edge exit on OOP and OOR requests, and Section~\ref{sec:choose} showed that the device exit cannot tell these requests apart by its own confidence. DriftGate therefore uses both exits on every offloaded request and answers with
+\begin{equation}
+\hat y(x)=\arg\max_c\; w_k\,\pd(c\,|\,x)+(1-w_k)\,\pec(c\,|\,x),
+\label{eq:combine}
+\end{equation}
+where $\pec$ is the corrected edge output of Section~\ref{sec:correct} and $w_k\in[0,1]$ is the weight of the device exit.
+
+The choice of an arithmetic average matters. On a Main request, the device exit puts a large probability on the correct class, and the average follows it unless the edge exit is confident in another class. On an OOP request, the device exit has never learned the correct class and spreads its probability over its own classes, while the edge exit puts a large probability on the correct class. The average keeps $(1-w_k)$ times this probability, so the edge answer still wins when the edge exit is confident. A product of probabilities, which is what adding logits computes~\cite{chen2022fedrod,wolczyk2021ztw}, behaves differently. Because the device exit assigns the correct class a probability close to zero, the product removes the edge exit's answer however confident the edge exit is. The literature on combining probability forecasts describes the same contrast between linear and logarithmic pooling~\cite{genest1986combining}. Section~\ref{sec:ablation} confirms that the average is more accurate than the product in our settings.
+
+\subsection{Correcting the Edge Exit for Its Cell}
+\label{sec:correct}
+
+The average in Eq.~\eqref{eq:combine} works only if the edge exit gives the device's own classes a fair chance. It does not do so by default. A classifier trained on data with class mix $\pi$ produces probabilities proportional to $p(x\,|\,c)\,\pi(c)$. The edge exit is trained on the class mix $\pi_k$ of the cell (Eq.~\eqref{eq:pi}), in which the device's own classes have a share $a_k$ of about 0.25 in the commute scenario. A device at home, however, receives own-class requests about 88\% of the time. The edge exit therefore discounts exactly the classes that dominate the device's traffic, and on a Main request it often prefers a class of another device in the cell.
+
+DriftGate removes this discount with Bayes' rule~\cite{saerens2002adjusting}. It replaces the training mix $\pi_k$ with a target mix that keeps the relative frequencies within the device's own classes and within the other classes, but gives the other classes a total share $r$:
+\begin{equation}
+\pec(c\,|\,x)\propto
+\begin{cases}
+\pe(c\,|\,x)\,\dfrac{1-r}{a_k}, & c\in M_k,\\[2mm]
+\pe(c\,|\,x)\,\dfrac{r}{1-a_k}, & c\notin M_k,
+\end{cases}
+\label{eq:correct}
+\end{equation}
+normalized to sum to one. We set $r=1/2$, so the corrected edge exit treats the device's own classes and all other classes as equally likely before seeing the request.
+
+We use this even split instead of an estimate of the device's current mix for three reasons. First, the true share changes with the device's location, from about 0.115 at home to about 0.51 away in the commute scenario, and the edge cannot observe it. Second, an estimate computed from the edge exit inherits the bias that the correction is meant to remove. In our development runs, the EM estimate of Saerens \emph{et al.}~\cite{saerens2002adjusting} gave 0.23 for devices away from home, where the true share was 0.51. Third, the combined answer does not need the edge exit to know the device's preference for its own classes, because the device exit already carries that preference. The edge exit only needs to stop discounting those classes. The correction uses only $M_k$ and $\pi_k$, which the edge already holds from training.
+
+\subsection{Setting the Weight without Labels}
+\label{sec:weight}
+
+The weight $w_k$ decides how much the device exit counts in Eq.~\eqref{eq:combine}. Its best value depends on the model and the split point. With a small device block, the edge exit is the stronger classifier on most requests. With a large device block, such as the first half of a ResNet-18, the device exit can be stronger than the edge exit overall. A single fixed weight cannot suit both cases, and labels are not available to tune it after deployment.
+
+DriftGate sets the weight from how confident the two exits are on the device's recent traffic. Let $\Hd_k$ and $\He_k$ be the mean entropies of the device exit and the edge exit over a window of recent offloaded requests of device $k$. DriftGate uses
+\begin{equation}
+w_k=\frac{\He_k}{\Hd_k+\He_k},
+\label{eq:weight}
+\end{equation}
+so the exit that has been more confident on this device's requests receives the larger weight. Section~\ref{sec:choose} showed that the confidence of the device exit on one request is not reliable. The mean over many requests answers a different question. It does not try to identify the kind of each request, but measures which exit is generally sharper for this device, model, and split point. Until the window holds eight requests, DriftGate uses $w_k=1/2$. In the commute scenario, $w_k$ is about 0.42 on average.
+
+\subsection{Offloading Only Uncertain Requests}
+\label{sec:offload}
+
+Combining requires the edge output, so every request that DriftGate combines must be offloaded. When the network or the edge is a bottleneck, the device can answer some requests alone. DriftGate keeps the confidence of the device exit for this purpose. A request with $H(\pd(\cdot\,|\,x))\le\tau$ is answered with the device exit, and the other requests are offloaded and combined. The threshold $\tau$ follows the offloading budget $\beta$, for example as the $(1-\beta)$ quantile of recent device-exit entropies. The confidence of the device exit is too weak to choose the exit that answers a request, but it is useful for ranking which requests gain least from the edge. Requests with very low device-exit entropy are more often Main requests that the device exit already answers correctly, so they gain least from the edge. Since only offloaded requests have an edge output, $\He_k$ is computed over offloaded requests only.
+
+\begin{algorithm}[t]
+\caption{DriftGate inference for a request $x$ of device $k$}
+\label{alg:driftgate}
+\begin{algorithmic}[1]
+\REQUIRE threshold $\tau$, window of recent entropies of device $k$; edge holds $M_k$, $\pi_k$, and $r$
+\STATE compute $h_k(x)$ and $\pd(\cdot\,|\,x)$ on the device
+\IF{$H(\pd(\cdot\,|\,x))\le\tau$}
+  \RETURN $\arg\max_c \pd(c\,|\,x)$
+\ENDIF
+\STATE send $h_k(x)$ to the edge server
+\STATE \textit{edge:} compute $\pe(\cdot\,|\,x)$, $H(\pe(\cdot\,|\,x))$, and $\pec(\cdot\,|\,x)$ by Eq.~\eqref{eq:correct}; return $\pec$ and the entropy
+\STATE add $H(\pd)$ and $H(\pe)$ to the window and update $\Hd_k$, $\He_k$
+\STATE $w_k\leftarrow \He_k/(\Hd_k+\He_k)$, or $1/2$ if the window holds fewer than eight requests
+\RETURN $\arg\max_c\; w_k\pd(c\,|\,x)+(1-w_k)\pec(c\,|\,x)$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Deployment and Cost}
+\label{sec:cost}
+
+Algorithm~\ref{alg:driftgate} summarizes DriftGate. The edge applies the correction because it already holds $M_k$ and the class counts of its training data. Instead of a single label, it returns $C$ corrected probabilities and one entropy value, which is 44 bytes for ten classes in single precision. The device keeps two running means for the weight and computes one weighted average of two $C$-dimensional vectors per offloaded request. On a server CPU, the correction and the combination take 3.2\,$\mu$s for one request. Training, the models, and the uplink payload stay unchanged.

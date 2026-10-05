@@ -1,0 +1,63 @@
+  analysed r15_s1_fixed040_s1 (2.5 min)
+  analysed r15_s1_fixed040_s2 (2.5 min)
+  analysed r15_s1_fixed040_s0 (2.5 min)
+  analysed r15_s1_replay_s0 (2.2 min)
+  analysed r15_s1_fixed040_s3 (2.2 min)
+  analysed r15_s1_fixed040_s4 (2.3 min)
+  analysed r15_s1_replay_s1 (1.9 min)
+  analysed r15_s1_replay_s2 (2.1 min)
+  analysed r15_s1_replay_s3 (2.1 min)
+  analysed r15_s1_replay_s4 (1.4 min)
+  analysed r15_s2_fixed040_s1 (1.5 min)
+  analysed r15_s2_fixed040_s0 (1.6 min)
+  analysed r15_s2_fixed040_s2 (1.0 min)
+  analysed r15_s2_replay_s0 (1.2 min)
+  analysed r15_s2_replay_s1 (1.2 min)
+  analysed r15_s2_replay_s2 (1.0 min)
+  settings analysed: {'S1': 5, 'S2': 3, 'S1-fast': 3, 'partial participation': 3, 'stepwise change': 5, 'random mobility': 3, 'CIFAR-100': 3, 'ResNet-18': 3, 'K=200': 3, 'K=500': 3, 'S1 day 1 (retrained)': 5, 'S1 frozen replay': 5, 'S2 day 1 (retrained)': 3, 'S2 frozen replay': 3}
+  [R15_T0_start_check_vs_R14.csv] 100 rows
+  [R15_A1_rules_full.csv] 17 rows
+  [R15_A1_rules_full_per_seed.csv] 550 rows
+  [R15_A1_rules_gt30.csv] 17 rows
+  [R15_A1_rules_gt30_per_seed.csv] 550 rows
+  [R15_A1_rules_gt50.csv] 17 rows
+  [R15_A1_rules_gt50_per_seed.csv] 550 rows
+  [R15_A1_time_of_day.csv] 36 rows
+  [R15_A1_splits.csv] 126 rows
+  [R15_A1_bottom10.csv] 30 rows
+  [R15_B1_correction_weight.csv] 126 rows
+  [R15_B2_sensitivity.csv] 90 rows
+  [R15_C1_offload_evidence.csv] 28 rows
+  [R15_C1_offload_reach_per_seed.csv] 100 rows
+  [R15_C1_curves.csv] 112 rows
+  [R15_C2_online_controller.csv] 24 rows
+  [R15_E_scale.csv] 3 rows
+  [R15_P2_logit_entropy_weighting.csv] 14 rows
+  [R15_P2_cpu_time.csv] 2 rows
+  [R15_A2_replay.csv] 26 rows
+  [R15_T0_analysed_runs.csv] 50 rows
+  figures written
+	Command being timed: "python -u journal_expansion/artifacts/driftgate_tmc_r15_revision/scripts/r15_analysis.py"
+	User time (seconds): 1775.56
+	System time (seconds): 43.39
+	Percent of CPU this job got: 304%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 9:57.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4291780
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1564
+	Minor (reclaiming a frame) page faults: 4245000
+	Voluntary context switches: 36431
+	Involuntary context switches: 2913
+	Swaps: 0
+	File system inputs: 9394912
+	File system outputs: 2456
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

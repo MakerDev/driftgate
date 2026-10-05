@@ -1,0 +1,81 @@
+  analysed r12_s1_fixed040_s2 (3.3 min)
+  analysed r12_s1_fixed040_s1 (3.3 min)
+  analysed r12_s1_fixed040_s0 (3.3 min)
+  analysed r13b_c100_s0 (5.2 min)
+  analysed r12_s2_fixed040_s0 (2.6 min)
+  analysed r12_s1_fixed040_s3 (2.6 min)
+  analysed r12_s1_fixed040_s4 (2.6 min)
+  analysed r12_s2_fixed040_s2 (2.4 min)
+  analysed r12_s2_fixed040_s1 (2.5 min)
+  analysed r12_s1fast_fixed040_s0 (2.8 min)
+  analysed r13b_c100_s1 (4.9 min)
+  analysed r12_s1fast_fixed040_s1 (2.8 min)
+  analysed r12_s1fast_fixed040_s2 (2.8 min)
+  analysed r12_s4part05_fixed040_s0 (2.7 min)
+  analysed r12_t1_A_fx40_s0 (1.7 min)
+  analysed r12_t1_A_fx40_s1 (0.9 min)
+  analysed r12_s4part05_fixed040_s1 (2.9 min)
+  analysed r12_s4part05_fixed040_s2 (2.9 min)
+  analysed r13b_c100_s2 (4.7 min)
+  analysed r12_t1_A_fx40_s2 (1.0 min)
+  analysed r12_t1_A_fx40_s3 (1.2 min)
+  analysed r12_t1_A_fx40_s4 (1.2 min)
+  analysed r12_t1_mob_fx40_s0 (0.8 min)
+  analysed r12_e2_res_fx40_A_s0 (0.4 min)
+  analysed r12_t1_mob_fx40_s1 (1.0 min)
+  analysed r12_e2_res_fx40_A_s1 (0.3 min)
+  analysed r12_t1_mob_fx40_s2 (1.1 min)
+  analysed r12_e2_res_fx40_A_s2 (0.3 min)
+  analysed r12_s3k200_fixed040_s1 (16.5 min)
+  analysed r12_s3k200_fixed040_s0 (16.5 min)
+  analysed r12_s3k200_fixed040_s2 (17.0 min)
+  analysed r12_s3k500_fixed040_s0 (27.6 min)
+  analysed r12_s3k500_fixed040_s1 (18.0 min)
+  analysed r12_s3k500_fixed040_s2 (15.5 min)
+  settings analysed: {'S1': 5, 'S2': 3, 'S1-fast': 3, 'partial participation': 3, 'stepwise change': 5, 'random mobility': 3, 'CIFAR-100': 3, 'ResNet-18': 3, 'K=200': 3, 'K=500': 3}
+  [R15_T0_start_check_vs_R14.csv] 100 rows
+  [R15_A1_rules_full.csv] 17 rows
+  [R15_A1_rules_full_per_seed.csv] 374 rows
+  [R15_A1_rules_gt30.csv] 17 rows
+  [R15_A1_rules_gt30_per_seed.csv] 374 rows
+  [R15_A1_rules_gt50.csv] 17 rows
+  [R15_A1_rules_gt50_per_seed.csv] 374 rows
+  [R15_A1_time_of_day.csv] 12 rows
+  [R15_A1_splits.csv] 42 rows
+  [R15_A1_bottom10.csv] 18 rows
+  [R15_B1_correction_weight.csv] 70 rows
+  [R15_B2_sensitivity.csv] 50 rows
+  [R15_C1_offload_evidence.csv] 20 rows
+  [R15_C1_offload_reach_per_seed.csv] 68 rows
+  [R15_C1_curves.csv] 80 rows
+  [R15_C2_online_controller.csv] 8 rows
+  [R15_E_scale.csv] 3 rows
+  [R15_P2_logit_entropy_weighting.csv] 10 rows
+  [R15_P2_cpu_time.csv] 2 rows
+  [R15_A2_replay.csv] 0 rows
+  [R15_T0_analysed_runs.csv] 34 rows
+  figures written
+	Command being timed: "python -u journal_expansion/artifacts/driftgate_tmc_r15_revision/scripts/r15_analysis.py"
+	User time (seconds): 9533.15
+	System time (seconds): 1164.16
+	Percent of CPU this job got: 234%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:15:54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31290268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 138
+	Minor (reclaiming a frame) page faults: 44305908
+	Voluntary context switches: 252928
+	Involuntary context switches: 43102
+	Swaps: 0
+	File system inputs: 51376
+	File system outputs: 3256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0

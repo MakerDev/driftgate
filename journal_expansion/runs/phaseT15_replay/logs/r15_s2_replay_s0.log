@@ -1,0 +1,35 @@
+
+=== attempt 1 on GPU 1 at 2026-10-05 14:27:44
+[r15_s2_replay_s0] scenario=S2 arm=fixed040 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:0
+  R  1 loss=nan acc=0.7345 off=0.811 active=50 elapsed=0.1m ETA=11m
+  R  5 loss=nan acc=0.7299 off=0.812 active=50 elapsed=0.1m ETA=4m
+  R 10 loss=nan acc=0.7298 off=0.812 active=50 elapsed=0.2m ETA=3m
+  R 15 loss=nan acc=0.7244 off=0.814 active=50 elapsed=0.3m ETA=2m
+  R 20 loss=nan acc=0.7224 off=0.816 active=50 elapsed=0.3m ETA=2m
+  R 25 loss=nan acc=0.7225 off=0.815 active=50 elapsed=0.4m ETA=2m
+  R 30 loss=nan acc=0.7215 off=0.816 active=50 elapsed=0.5m ETA=2m
+  R 35 loss=nan acc=0.7149 off=0.824 active=50 elapsed=0.5m ETA=2m
+  R 40 loss=nan acc=0.7083 off=0.832 active=50 elapsed=0.6m ETA=2m
+  R 45 loss=nan acc=0.7056 off=0.837 active=50 elapsed=0.7m ETA=2m
+  R 50 loss=nan acc=0.6995 off=0.837 active=50 elapsed=0.7m ETA=1m
+  R 55 loss=nan acc=0.7033 off=0.838 active=50 elapsed=0.8m ETA=1m
+  R 60 loss=nan acc=0.6944 off=0.840 active=50 elapsed=0.9m ETA=1m
+  R 65 loss=nan acc=0.6924 off=0.842 active=50 elapsed=1.0m ETA=1m
+  R 70 loss=nan acc=0.6850 off=0.846 active=50 elapsed=1.1m ETA=1m
+  R 75 loss=nan acc=0.6799 off=0.848 active=50 elapsed=1.1m ETA=1m
+  R 80 loss=nan acc=0.6844 off=0.846 active=50 elapsed=1.2m ETA=1m
+  R 85 loss=nan acc=0.6842 off=0.846 active=50 elapsed=1.3m ETA=1m
+  R 90 loss=nan acc=0.6829 off=0.848 active=50 elapsed=1.4m ETA=1m
+  R 95 loss=nan acc=0.6892 off=0.848 active=50 elapsed=1.5m ETA=1m
+  R100 loss=nan acc=0.6851 off=0.850 active=50 elapsed=1.5m ETA=1m
+  R105 loss=nan acc=0.6925 off=0.847 active=50 elapsed=1.6m ETA=1m
+  R110 loss=nan acc=0.6972 off=0.845 active=50 elapsed=1.6m ETA=1m
+  R115 loss=nan acc=0.6985 off=0.845 active=50 elapsed=1.6m ETA=0m
+  R120 loss=nan acc=0.7066 off=0.841 active=50 elapsed=1.6m ETA=0m
+  R125 loss=nan acc=0.7099 off=0.839 active=50 elapsed=1.7m ETA=0m
+  R130 loss=nan acc=0.7063 off=0.841 active=50 elapsed=1.7m ETA=0m
+  R135 loss=nan acc=0.7043 off=0.837 active=50 elapsed=1.7m ETA=0m
+  R140 loss=nan acc=0.7012 off=0.838 active=50 elapsed=1.7m ETA=0m
+  R145 loss=nan acc=0.7035 off=0.834 active=50 elapsed=1.7m ETA=0m
+  R150 loss=nan acc=0.7171 off=0.827 active=50 elapsed=1.7m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT15_replay/r15_s2_replay_s0.json  integrated=0.7042

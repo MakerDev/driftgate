@@ -1,0 +1,18 @@
+2026-10-05 13:49:24 dispatcher start (pid 3415713), 16 jobs
+2026-10-05 13:49:25 launch r15_s1_fixed040_s0 on GPU 0 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s1_fixed040_s1 on GPU 1 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s1_fixed040_s2 on GPU 2 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s1_fixed040_s3 on GPU 3 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s1_fixed040_s4 on GPU 0 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s2_fixed040_s0 on GPU 1 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s2_fixed040_s1 on GPU 2 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-05 13:49:25 launch r15_s2_fixed040_s2 on GPU 3 (attempt 1, free 20.5 GB, cost 3.0)
+2026-10-05 14:27:44 launch r15_s2_replay_s0 on GPU 1 (attempt 1, free 21.5 GB, cost 3.0)
+2026-10-05 14:28:30 launch r15_s1_replay_s2 on GPU 2 (attempt 1, free 21.5 GB, cost 3.0)
+2026-10-05 14:29:15 launch r15_s2_replay_s2 on GPU 3 (attempt 1, free 21.4 GB, cost 3.0)
+2026-10-05 14:30:00 launch r15_s1_replay_s1 on GPU 1 (attempt 1, free 18.9 GB, cost 3.0)
+2026-10-05 14:30:00 launch r15_s2_replay_s1 on GPU 2 (attempt 1, free 18.9 GB, cost 3.0)
+2026-10-05 14:32:15 launch r15_s1_replay_s3 on GPU 1 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 14:50:18 launch r15_s1_replay_s4 on GPU 1 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 14:54:49 launch r15_s1_replay_s0 on GPU 1 (attempt 1, free 23.5 GB, cost 3.0)
+2026-10-05 14:55:34 all jobs done

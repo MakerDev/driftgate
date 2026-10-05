@@ -1,0 +1,27 @@
+{
+  "$comment": "Round 15 task H input. Replace only this file's values; null = not measured. measurement_type: measured | modelled | demo.",
+  "measurement_type": "measured",
+  "setting": "S1",
+  "device": {"name": null, "soc": null, "runtime": null, "model": "CNN (device block 0.13 M + device exit 0.15 M parameters)", "split": "default", "threads": null, "power_mode": null},
+  "edge": {"name": null, "gpu": null, "runtime": null},
+  "network": {"type": null, "rtt_ms": null, "rtt_definition": "application-level round trip of one offloaded request excluding uplink transfer, or state the definition", "uplink_mbps": null, "downlink_mbps": null},
+  "workload": {"request_interval_ms": null, "warmup_requests": null, "repeats": null, "measurement_window": null, "request_stream": "S1 seed 0 replay order (Round 15 A2) or state the stream"},
+  "energy": {"scope": null, "$scope_values": "whole device | model compute only", "idle_subtracted": null, "instrument": null, "sampling_hz": null},
+  "per_branch": {
+    "$comment": "per-request costs for the modelled view; each rule's own offloaded cost",
+    "local": {"latency_ms": null, "energy_mJ": null},
+    "offloaded": {
+      "Confidence-based offloading": {"latency_ms": null, "energy_mJ": null},
+      "Probability average": {"latency_ms": null, "energy_mJ": null},
+      "Logit sum": {"latency_ms": null, "energy_mJ": null},
+      "DriftGate": {"latency_ms": null, "energy_mJ": null}
+    }
+  },
+  "streams": [
+    {"rule": "Device only", "operating_point": "", "offload_ratio": 0.0, "n_requests": null, "mean_latency_ms": null, "p95_latency_ms": null, "stream_energy_J": null, "energy_per_request_mJ": null},
+    {"rule": "Confidence-based offloading", "operating_point": "", "offload_ratio": null, "n_requests": null, "mean_latency_ms": null, "p95_latency_ms": null, "stream_energy_J": null, "energy_per_request_mJ": null},
+    {"rule": "Logit sum", "operating_point": "", "offload_ratio": 1.0, "n_requests": null, "mean_latency_ms": null, "p95_latency_ms": null, "stream_energy_J": null, "energy_per_request_mJ": null},
+    {"rule": "DriftGate", "operating_point": "", "offload_ratio": 1.0, "n_requests": null, "mean_latency_ms": null, "p95_latency_ms": null, "stream_energy_J": null, "energy_per_request_mJ": null},
+    {"rule": "DriftGate (online, beta 0.5)", "operating_point": "", "offload_ratio": null, "n_requests": null, "mean_latency_ms": null, "p95_latency_ms": null, "stream_energy_J": null, "energy_per_request_mJ": null}
+  ]
+}

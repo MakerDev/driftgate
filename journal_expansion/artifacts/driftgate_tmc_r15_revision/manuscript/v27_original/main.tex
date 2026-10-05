@@ -1,0 +1,68 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+\usepackage[nocompress]{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{adjustbox}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+
+% Placeholders for the on-device measurements. Every red item must be replaced before submission.
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\est}[1]{\textcolor{red}{#1}}
+
+\newcommand{\pd}{p^{\mathrm{d}}}
+\newcommand{\pe}{p^{\mathrm{e}}}
+\newcommand{\pec}{\tilde p^{\mathrm{e}}}
+\newcommand{\Hd}{\bar H^{\mathrm{d}}}
+\newcommand{\He}{\bar H^{\mathrm{e}}}
+
+\begin{document}
+
+\title{DriftGate: Combining Personal and Shared Exits for Split Inference on Mobile Devices}
+
+\author{Yujin~Shin,
+        Jeong~Gil~Ko,~\IEEEmembership{Senior~Member,~IEEE,}
+        and~Pei~Zhang,~\IEEEmembership{Member,~IEEE}%
+\IEEEcompsocitemizethanks{
+\IEEEcompsocthanksitem Y. Shin and J. G. Ko are with the Intelligent Embedded Systems Lab, Yonsei University, Seoul, Republic of Korea.
+\IEEEcompsocthanksitem P. Zhang is with the University of Michigan, Ann Arbor, MI, USA.
+}}
+
+\markboth{IEEE Transactions on Mobile Computing}%
+{Shin \MakeLowercase{\textit{et al.}}: DriftGate}
+
+\IEEEtitleabstractindextext{%
+\input{sec/00_abstract}
+\begin{IEEEkeywords}
+Split learning, mobile edge computing, personalization, early exit, user mobility, label shift.
+\end{IEEEkeywords}}
+
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\input{sec/01_introduction}
+\input{sec/02_motivation}
+\input{sec/03_related}
+\input{sec/04_system_model}
+\input{sec/05_design}
+\input{sec/06_evaluation}
+\input{sec/07_discussion}
+\input{sec/08_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

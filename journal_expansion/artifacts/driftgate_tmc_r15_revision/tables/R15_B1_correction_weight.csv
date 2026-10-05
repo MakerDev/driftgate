@@ -1,0 +1,127 @@
+setting,window,variant,accuracy mean (SD),variant - DriftGate pp mean (SD),per seed
+S1,full,DriftGate,68.31 (2.45),,
+S1,full,no correction + adaptive w,67.11 (3.01),-1.20 (0.59),-0.81 -1.01 -1.56 -2.04 -0.58
+S1,full,correction + w 0.5,68.13 (2.37),-0.19 (0.11),-0.32 -0.25 -0.11 -0.06 -0.20
+S1,full,correction + dev w 0.2,68.16 (2.54),-0.15 (0.15),-0.08 +0.02 -0.10 -0.37 -0.24
+S1,full,corrected edge only,67.87 (2.53),-0.45 (0.19),-0.39 -0.19 -0.39 -0.67 -0.60
+S1,full,correction + learned weight,67.88 (2.56),-0.43 (0.14),-0.47 -0.43 -0.28 -0.65 -0.33
+S1,full,correction + product,67.90 (2.37),-0.41 (0.19),-0.65 -0.59 -0.23 -0.27 -0.32
+S1,gt30,DriftGate,67.10 (2.26),,
+S1,gt30,no correction + adaptive w,66.71 (3.14),-0.40 (0.95),-0.19 +0.49 -0.91 -1.77 +0.39
+S1,gt30,correction + w 0.5,66.81 (2.18),-0.29 (0.13),-0.45 -0.36 -0.22 -0.12 -0.29
+S1,gt30,correction + dev w 0.2,67.55 (2.43),0.45 (0.21),+0.57 +0.65 +0.32 +0.15 +0.54
+S1,gt30,corrected edge only,67.66 (2.54),0.55 (0.35),+0.73 +0.95 +0.31 +0.08 +0.69
+S1,gt30,correction + learned weight,66.88 (2.44),-0.22 (0.19),-0.27 -0.21 -0.11 -0.52 -0.01
+S1,gt30,correction + product,66.48 (2.16),-0.63 (0.25),-0.92 -0.85 -0.40 -0.41 -0.56
+S2,full,DriftGate,71.70 (0.97),,
+S2,full,no correction + adaptive w,69.29 (2.11),-2.41 (1.16),-3.48 -2.58 -1.17
+S2,full,correction + w 0.5,71.77 (1.09),0.07 (0.13),-0.03 +0.03 +0.22
+S2,full,correction + dev w 0.2,71.03 (0.83),-0.67 (0.23),-0.56 -0.52 -0.93
+S2,full,corrected edge only,70.49 (0.82),-1.21 (0.27),-1.10 -1.01 -1.52
+S2,full,correction + learned weight,70.66 (0.98),-1.04 (0.09),-1.02 -1.13 -0.97
+S2,full,correction + product,71.76 (1.16),0.06 (0.22),-0.10 -0.05 +0.31
+S2,gt30,DriftGate,71.96 (1.28),,
+S2,gt30,no correction + adaptive w,70.21 (2.26),-1.75 (0.99),-2.79 -1.63 -0.82
+S2,gt30,correction + w 0.5,71.97 (1.39),0.02 (0.11),-0.08 -0.01 +0.14
+S2,gt30,correction + dev w 0.2,71.70 (1.09),-0.26 (0.19),-0.11 -0.19 -0.48
+S2,gt30,corrected edge only,71.42 (1.05),-0.53 (0.26),-0.38 -0.39 -0.83
+S2,gt30,correction + learned weight,70.90 (1.37),-1.06 (0.17),-1.04 -1.23 -0.90
+S2,gt30,correction + product,71.82 (1.47),-0.14 (0.20),-0.29 -0.21 +0.09
+random mobility,full,DriftGate,71.09 (0.86),,
+random mobility,full,no correction + adaptive w,69.33 (0.42),-1.77 (0.51),-2.09 -2.03 -1.18
+random mobility,full,correction + w 0.5,70.96 (0.82),-0.14 (0.06),-0.20 -0.10 -0.12
+random mobility,full,correction + dev w 0.2,70.51 (0.80),-0.58 (0.06),-0.65 -0.57 -0.53
+random mobility,full,corrected edge only,69.89 (0.81),-1.21 (0.18),-1.38 -1.02 -1.21
+random mobility,full,correction + learned weight,70.64 (0.82),-0.45 (0.13),-0.42 -0.60 -0.34
+random mobility,full,correction + product,70.78 (0.78),-0.31 (0.09),-0.36 -0.36 -0.21
+random mobility,gt30,DriftGate,65.40 (0.89),,
+random mobility,gt30,no correction + adaptive w,65.28 (0.56),-0.12 (0.33),-0.42 -0.16 +0.24
+random mobility,gt30,correction + w 0.5,65.15 (0.84),-0.25 (0.09),-0.35 -0.18 -0.23
+random mobility,gt30,correction + dev w 0.2,65.93 (0.82),0.53 (0.07),+0.45 +0.54 +0.59
+random mobility,gt30,corrected edge only,66.05 (0.80),0.65 (0.13),+0.50 +0.75 +0.69
+random mobility,gt30,correction + learned weight,65.41 (0.77),0.01 (0.16),-0.06 -0.10 +0.19
+random mobility,gt30,correction + product,64.78 (0.76),-0.61 (0.13),-0.75 -0.62 -0.48
+CIFAR-100,full,DriftGate,41.29 (0.62),,
+CIFAR-100,full,no correction + adaptive w,37.50 (0.95),-3.79 (0.53),-3.35 -3.64 -4.37
+CIFAR-100,full,correction + w 0.5,41.45 (0.60),0.16 (0.03),+0.15 +0.19 +0.15
+CIFAR-100,full,correction + dev w 0.2,40.95 (0.64),-0.34 (0.02),-0.32 -0.36 -0.33
+CIFAR-100,full,corrected edge only,40.69 (0.66),-0.59 (0.03),-0.56 -0.63 -0.59
+CIFAR-100,full,correction + learned weight,40.55 (0.55),-0.74 (0.08),-0.81 -0.66 -0.77
+CIFAR-100,full,correction + product,41.73 (0.59),0.44 (0.08),+0.44 +0.53 +0.37
+CIFAR-100,gt30,DriftGate,45.24 (0.75),,
+CIFAR-100,gt30,no correction + adaptive w,41.56 (1.04),-3.68 (0.53),-3.25 -3.52 -4.27
+CIFAR-100,gt30,correction + w 0.5,45.42 (0.72),0.18 (0.03),+0.15 +0.21 +0.16
+CIFAR-100,gt30,correction + dev w 0.2,45.05 (0.77),-0.19 (0.02),-0.17 -0.21 -0.19
+CIFAR-100,gt30,corrected edge only,44.84 (0.78),-0.41 (0.03),-0.37 -0.44 -0.41
+CIFAR-100,gt30,correction + learned weight,44.38 (0.67),-0.86 (0.08),-0.93 -0.77 -0.89
+CIFAR-100,gt30,correction + product,45.49 (0.73),0.25 (0.06),+0.25 +0.31 +0.19
+ResNet-18,full,DriftGate,66.64 (3.14),,
+ResNet-18,full,no correction + adaptive w,66.46 (3.14),-0.18 (0.29),+0.14 -0.43 -0.23
+ResNet-18,full,correction + w 0.5,66.71 (3.19),0.07 (0.09),-0.04 +0.11 +0.13
+ResNet-18,full,correction + dev w 0.2,64.02 (2.67),-2.61 (0.92),-1.58 -2.91 -3.35
+ResNet-18,full,corrected edge only,61.72 (2.53),-4.91 (1.69),-3.01 -5.51 -6.23
+ResNet-18,full,correction + learned weight,64.36 (2.59),-2.28 (1.07),-1.08 -2.59 -3.16
+ResNet-18,full,correction + product,66.59 (3.37),-0.05 (0.30),-0.36 -0.02 +0.23
+ResNet-18,gt30,DriftGate,62.73 (2.48),,
+ResNet-18,gt30,no correction + adaptive w,62.74 (2.57),0.02 (0.19),+0.17 -0.20 +0.07
+ResNet-18,gt30,correction + w 0.5,63.00 (2.44),0.28 (0.10),+0.20 +0.39 +0.24
+ResNet-18,gt30,correction + dev w 0.2,61.54 (1.50),-1.19 (1.09),-0.39 -0.74 -2.44
+ResNet-18,gt30,corrected edge only,59.81 (1.50),-2.91 (1.82),-1.17 -2.77 -4.80
+ResNet-18,gt30,correction + learned weight,61.10 (1.81),-1.63 (1.01),-0.64 -1.59 -2.66
+ResNet-18,gt30,correction + product,62.98 (2.54),0.25 (0.18),+0.04 +0.37 +0.35
+S1 day 1 (retrained),full,DriftGate,68.32 (2.44),,
+S1 day 1 (retrained),full,no correction + adaptive w,67.12 (3.00),-1.21 (0.59),-0.81 -1.01 -1.57 -2.04 -0.61
+S1 day 1 (retrained),full,correction + w 0.5,68.13 (2.37),-0.19 (0.10),-0.32 -0.25 -0.11 -0.07 -0.20
+S1 day 1 (retrained),full,correction + dev w 0.2,68.16 (2.53),-0.16 (0.15),-0.08 +0.02 -0.11 -0.37 -0.25
+S1 day 1 (retrained),full,corrected edge only,67.87 (2.52),-0.45 (0.19),-0.39 -0.20 -0.41 -0.66 -0.61
+S1 day 1 (retrained),full,correction + learned weight,67.89 (2.55),-0.43 (0.15),-0.47 -0.43 -0.27 -0.65 -0.34
+S1 day 1 (retrained),full,correction + product,67.91 (2.37),-0.41 (0.19),-0.64 -0.59 -0.23 -0.27 -0.32
+S1 day 1 (retrained),gt30,DriftGate,67.11 (2.25),,
+S1 day 1 (retrained),gt30,no correction + adaptive w,66.71 (3.12),-0.41 (0.95),-0.19 +0.49 -0.92 -1.78 +0.37
+S1 day 1 (retrained),gt30,correction + w 0.5,66.82 (2.16),-0.29 (0.12),-0.44 -0.36 -0.22 -0.13 -0.30
+S1 day 1 (retrained),gt30,correction + dev w 0.2,67.55 (2.41),0.44 (0.20),+0.57 +0.64 +0.31 +0.15 +0.52
+S1 day 1 (retrained),gt30,corrected edge only,67.66 (2.53),0.54 (0.35),+0.74 +0.93 +0.28 +0.09 +0.68
+S1 day 1 (retrained),gt30,correction + learned weight,66.88 (2.42),-0.23 (0.19),-0.27 -0.21 -0.10 -0.53 -0.03
+S1 day 1 (retrained),gt30,correction + product,66.48 (2.15),-0.63 (0.25),-0.92 -0.86 -0.40 -0.42 -0.56
+S1 frozen replay,full,DriftGate,71.95 (1.56),,
+S1 frozen replay,full,no correction + adaptive w,72.46 (1.91),0.52 (0.47),+1.15 +0.41 +0.68 -0.15 +0.49
+S1 frozen replay,full,correction + w 0.5,71.53 (1.44),-0.41 (0.19),-0.66 -0.51 -0.30 -0.15 -0.45
+S1 frozen replay,full,correction + dev w 0.2,72.58 (1.77),0.63 (0.27),+0.77 +0.71 +0.85 +0.17 +0.65
+S1 frozen replay,full,corrected edge only,72.74 (1.91),0.79 (0.41),+1.08 +0.97 +0.99 +0.06 +0.86
+S1 frozen replay,full,correction + learned weight,71.71 (1.62),-0.23 (0.28),-0.57 -0.32 +0.21 -0.31 -0.18
+S1 frozen replay,full,correction + product,71.12 (1.38),-0.83 (0.37),-1.34 -0.98 -0.56 -0.40 -0.86
+S1 frozen replay,gt30,DriftGate,69.17 (1.44),,
+S1 frozen replay,gt30,no correction + adaptive w,70.17 (1.82),1.00 (0.56),+1.81 +0.92 +1.11 +0.24 +0.92
+S1 frozen replay,gt30,correction + w 0.5,68.67 (1.33),-0.50 (0.20),-0.77 -0.57 -0.37 -0.24 -0.53
+S1 frozen replay,gt30,correction + dev w 0.2,70.00 (1.66),0.83 (0.30),+0.97 +0.90 +1.10 +0.32 +0.85
+S1 frozen replay,gt30,corrected edge only,70.27 (1.80),1.10 (0.45),+1.38 +1.27 +1.36 +0.31 +1.17
+S1 frozen replay,gt30,correction + learned weight,69.11 (1.52),-0.06 (0.30),-0.40 -0.13 +0.42 -0.18 -0.01
+S1 frozen replay,gt30,correction + product,68.18 (1.29),-0.99 (0.38),-1.54 -1.11 -0.72 -0.58 -1.02
+S2 day 1 (retrained),full,DriftGate,71.74 (0.97),,
+S2 day 1 (retrained),full,no correction + adaptive w,69.35 (2.12),-2.39 (1.18),-3.48 -2.55 -1.14
+S2 day 1 (retrained),full,correction + w 0.5,71.81 (1.08),0.07 (0.13),-0.04 +0.03 +0.21
+S2 day 1 (retrained),full,correction + dev w 0.2,71.07 (0.83),-0.67 (0.22),-0.57 -0.51 -0.92
+S2 day 1 (retrained),full,corrected edge only,70.53 (0.83),-1.21 (0.27),-1.10 -1.01 -1.51
+S2 day 1 (retrained),full,correction + learned weight,70.69 (0.97),-1.05 (0.08),-1.02 -1.14 -0.99
+S2 day 1 (retrained),full,correction + product,71.79 (1.16),0.05 (0.22),-0.10 -0.05 +0.31
+S2 day 1 (retrained),gt30,DriftGate,72.00 (1.27),,
+S2 day 1 (retrained),gt30,no correction + adaptive w,70.28 (2.27),-1.72 (1.01),-2.79 -1.59 -0.79
+S2 day 1 (retrained),gt30,correction + w 0.5,72.01 (1.38),0.01 (0.11),-0.09 -0.02 +0.13
+S2 day 1 (retrained),gt30,correction + dev w 0.2,71.75 (1.09),-0.25 (0.19),-0.11 -0.18 -0.46
+S2 day 1 (retrained),gt30,corrected edge only,71.48 (1.05),-0.53 (0.25),-0.38 -0.39 -0.82
+S2 day 1 (retrained),gt30,correction + learned weight,70.94 (1.34),-1.06 (0.16),-1.04 -1.24 -0.92
+S2 day 1 (retrained),gt30,correction + product,71.86 (1.46),-0.14 (0.20),-0.29 -0.21 +0.08
+S2 frozen replay,full,DriftGate,76.54 (2.52),,
+S2 frozen replay,full,no correction + adaptive w,75.88 (3.54),-0.65 (1.03),-1.68 -0.66 +0.39
+S2 frozen replay,full,correction + w 0.5,76.23 (2.45),-0.31 (0.14),-0.18 -0.45 -0.28
+S2 frozen replay,full,correction + dev w 0.2,76.66 (2.56),0.13 (0.15),+0.03 +0.30 +0.06
+S2 frozen replay,full,corrected edge only,76.59 (2.67),0.05 (0.26),-0.19 +0.33 +0.02
+S2 frozen replay,full,correction + learned weight,75.26 (2.61),-1.28 (0.48),-1.13 -1.81 -0.88
+S2 frozen replay,full,correction + product,76.00 (2.40),-0.54 (0.32),-0.27 -0.89 -0.45
+S2 frozen replay,gt30,DriftGate,75.02 (2.24),,
+S2 frozen replay,gt30,no correction + adaptive w,74.64 (3.19),-0.38 (0.95),-1.29 -0.44 +0.61
+S2 frozen replay,gt30,correction + w 0.5,74.66 (2.23),-0.36 (0.11),-0.29 -0.49 -0.29
+S2 frozen replay,gt30,correction + dev w 0.2,75.19 (2.25),0.18 (0.14),+0.11 +0.34 +0.09
+S2 frozen replay,gt30,corrected edge only,75.16 (2.34),0.14 (0.23),-0.05 +0.40 +0.07
+S2 frozen replay,gt30,correction + learned weight,73.79 (2.38),-1.23 (0.48),-1.11 -1.75 -0.82
+S2 frozen replay,gt30,correction + product,74.39 (2.24),-0.63 (0.27),-0.49 -0.94 -0.46

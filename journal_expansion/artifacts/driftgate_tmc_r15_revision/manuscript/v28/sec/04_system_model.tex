@@ -1,0 +1,69 @@
+\section{System Model and Problem}
+\label{sec:system}
+
+\subsection{Devices, Cells, and Requests}
+
+We consider $K$ mobile devices and $L$ cells. Each cell has an edge server that serves the devices inside its range, and neighboring cells can overlap. At time $t$, device $k$ belongs to a set $Z_k^t$ of one or two cells, and $Z_k^t$ changes as the device moves. Each device has a home cell where its user spends the night.
+
+The local training data of device $k$ covers a set $M_k$ of its own classes out of $C$ classes. The user issues inference requests over the day, each an input for which the application needs a class label. A request $x$ with class $y$ is a Main request if $y\in M_k$, an out-of-preference (OOP) request if $y$ belongs only to the own classes of other devices in the current cells, and an out-of-region (OOR) request otherwise. Table~\ref{tab:notation} summarizes the notation. The share of Main requests is high in the home cell and drops when the device visits other cells. The system never observes $y$, the kind of a request, or this share at inference time. The edge server knows $M_k$, because in split learning the labels of the training samples are sent to the edge.
+
+\begin{table}[t]
+\centering
+\caption{Notation.}
+\label{tab:notation}
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{cl}
+\toprule
+Symbol & Meaning \\
+\midrule
+$k, z, c$ & Device, cell, and class index \\
+$Z_k^t$ & Cells that device $k$ belongs to at time $t$ \\
+$M_k$ & Own classes of device $k$ \\
+$\pd(\cdot\,|\,x)$, $\pe(\cdot\,|\,x)$ & Class probabilities of the device and edge exits \\
+$\pi_k$ & Class mix of the data that trained the edge exit for device $k$ \\
+$a_k$ & Share of $M_k$ in $\pi_k$ \\
+$\pec(\cdot\,|\,x)$ & Edge probabilities after prior correction \\
+$r$ & Target share of classes outside $M_k$ in the correction \\
+$w_k$ & Weight of the device exit when combining \\
+$\Hd_k$, $\He_k$ & Mean entropy of the two exits on recent requests \\
+$\tau$, $\beta$ & Offloading threshold and offloading budget \\
+$\lambda$, $\Lambda$ & Device-to-cell and cell-to-global mixing ratios in training \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\subsection{Split Model and Training}
+\label{sec:training}
+
+The model of device $k$ consists of a device block $h_k$ and a device exit $f_k^{\mathrm{d}}$. The edge server of cell $z$ holds an edge block and an edge exit, written together as $f_z^{\mathrm{e}}$. For a request $x$, the device computes the feature $h_k(x)$ and the probabilities $\pd(\cdot\,|\,x)=\mathrm{softmax}(f_k^{\mathrm{d}}(h_k(x)))$. If the feature is sent to the edge, the edge returns $\pe(\cdot\,|\,x)=\mathrm{softmax}(f_z^{\mathrm{e}}(h_k(x)))$. A device that belongs to two cells receives the average of the two cells' logits.
+
+Training follows multi-cell personalized split learning~\cite{han2023splitgp,rizwan2026splitomc}. We summarize the procedure used in our implementation. Training proceeds in rounds. In each round, device $k$ trains on labeled samples from its own classes with the loss
+\begin{equation}
+\mathcal{L}_k=\gamma\,\mathrm{CE}\!\left(f_k^{\mathrm{d}}(h_k(x)),y\right)+\frac{1-\gamma}{|Z_k^t|}\sum_{z\in Z_k^t}\mathrm{CE}\!\left(f_z^{\mathrm{e}}(h_k(x)),y\right),
+\label{eq:loss}
+\end{equation}
+with $\gamma=0.5$. After local training, each cell averages the device blocks of its members. This average $\bar\theta_z$ and the edge block of the cell are each mixed with their averages over all cells, for example $\bar\theta_z\leftarrow\Lambda\bar\theta_z+(1-\Lambda)\bar\theta_{\mathrm{all}}$. Each device then installs
+\begin{equation}
+\theta_k\leftarrow\lambda\,\theta_k^{\mathrm{local}}+(1-\lambda)\,\bar\theta_{Z_k},
+\label{eq:lambda}
+\end{equation}
+where $\theta_k^{\mathrm{local}}$ is its locally trained device block and $\bar\theta_{Z_k}$ is the average of its cells' blocks. A larger $\lambda$ keeps more of the local model. We use $\lambda=0.4$ and $\Lambda=0.5$ throughout. DriftGate does not change this procedure.
+
+Because the edge block of a cell is trained on the samples of all its members, the edge exit learns the class mix of the cell. Let $n_z(c)$ be the number of samples of class $c$ used to train cell $z$ in the current round. We write the class mix that shaped the edge exit used by device $k$ as
+\begin{equation}
+\pi_k(c)=\frac{1}{|Z_k^t|}\sum_{z\in Z_k^t}\left[\Lambda\,\frac{n_z(c)}{\sum_{c'}n_z(c')}+(1-\Lambda)\,\frac{\sum_{z'}n_{z'}(c)}{\sum_{z',c'}n_{z'}(c')}\right],
+\label{eq:pi}
+\end{equation}
+which follows the cell-to-global mixing of the edge blocks. Averaging model parameters does not average the class priors that the models have learned exactly, so $\pi_k$ is an approximation of the class mix that shaped the edge exit. We use it because the edge already holds the class counts. A cell without training samples in a round uses the mix of all cells. The share of the device's own classes in this mix is $a_k=\sum_{c\in M_k}\pi_k(c)$, which we clip to $[0.01,0.99]$. In the commute scenario, $a_k$ is about 0.25 on average.
+
+\subsection{Inference Problem}
+
+For each request $x$ of device $k$, an inference rule makes two decisions. It decides whether to offload, $o(x)\in\{0,1\}$, that is, whether to send $h_k(x)$ to the edge. It then produces an answer $\hat y(x)$ from $\pd(\cdot\,|\,x)$ and, if $o(x)=1$, from $\pe(\cdot\,|\,x)$. The rule may use information that the device and the edge already hold, such as recent outputs, $M_k$, and $\pi_k$, but not labels at inference time and not the location of the device.
+
+Let $\mathcal{T}$ be the evaluation times of a day and $\mathcal{K}_t$ the devices that issue requests at time $t$. The accuracy of a rule over the day is
+\begin{equation}
+A=\frac{1}{|\mathcal{T}|}\sum_{t\in\mathcal{T}}\frac{1}{|\mathcal{K}_t|}\sum_{k\in\mathcal{K}_t}\Pr\!\left[\hat y(x)=y\,\middle|\,k,t\right].
+\label{eq:accuracy}
+\end{equation}
+The goal is to maximize $A$ while the share of offloaded requests stays within a budget $\beta$, so that $\mathbb{E}[o(x)]\le\beta$. When $\beta=1$, every request can use both exits, and the problem reduces to combining the two probability vectors well.

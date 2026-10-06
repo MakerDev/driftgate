@@ -1,0 +1,11 @@
+setting,score,where the score can be computed,"AUROC Main vs non-Main, all requests (R17, evaluation seeds)",home,away,score coverage,"AUROC on D4-defined requests (R18, all seeds)","AUROC rescued vs harmed requests (R18, all seeds)",R-b(score) minus strongest of 17 rules pp (R18 audit),strongest of 17 rules
+S1 replay,D1,device (before offloading),0.665 (0.008),0.665 (0.007),0.669 (0.011),1.000 (0.000),0.663 (0.012),0.600 (0.018),-0.192 (0.307),corrected edge only
+S1 replay,D2,device (before offloading),0.716 (0.022),0.714 (0.021),0.720 (0.019),1.000 (0.000),0.721 (0.033),0.616 (0.032),-0.304 (0.379),corrected edge only
+S1 replay,D3,"device, head trained at the edge (before offloading)",0.701 (0.023),0.720 (0.010),0.693 (0.020),1.000 (0.000),0.700 (0.022),0.551 (0.029),-0.476 (0.387),corrected edge only
+S1 replay,D4,edge only (after offloading),0.838 (0.014),0.871 (0.005),0.735 (0.039),0.897 (0.033),0.840 (0.012),0.622 (0.043),-0.057 (0.139),corrected edge only
+S1 replay,entropy,device (before offloading),0.701 (0.014),0.708 (0.016),0.693 (0.015),1.000 (0.000),0.707 (0.012),0.407 (0.023),,
+S2 replay,D1,device (before offloading),0.657 (0.019),0.646 (0.028),0.662 (0.012),1.000 (0.000),0.657 (0.018),0.618 (0.026),+0.097 (0.105),correction + dev w 0.2
+S2 replay,D2,device (before offloading),0.737 (0.038),0.732 (0.029),0.747 (0.031),1.000 (0.000),0.736 (0.032),0.656 (0.024),+0.052 (0.152),correction + dev w 0.2
+S2 replay,D3,"device, head trained at the edge (before offloading)",0.675 (0.028),0.707 (0.055),0.674 (0.020),1.000 (0.000),0.679 (0.031),0.493 (0.027),-0.056 (0.134),correction + dev w 0.2
+S2 replay,D4,edge only (after offloading),0.864 (0.017),0.876 (0.032),0.727 (0.022),0.926 (0.020),0.864 (0.017),0.612 (0.044),+0.048 (0.091),correction + dev w 0.2
+S2 replay,entropy,device (before offloading),0.707 (0.041),0.707 (0.027),0.713 (0.039),1.000 (0.000),0.711 (0.048),0.411 (0.024),,

@@ -1,0 +1,13 @@
+setting,"best full-offload rule (Round 15 set, 7 rules)",its accuracy,DriftGate-P offloading reaching it,reduction of offloaded requests vs confidence-based,best full-offload rule (13 rules incl. corrected variants),its accuracy,DriftGate-P offloading reaching it,reduction of offloaded requests vs confidence-based,reduction of edge calls vs confidence-based,confidence-based offloading at 0.8 nats
+S1,Logit sum,67.37,0.517,0.438,correction + dev w 0.2,68.16,0.762,0.172,0.176,0.920
+S2,Logit sum,70.07,0.242,0.712,correction + w 0.5,71.77,not reached,,,0.838
+S1-fast,Logit sum,68.12,0.524,0.430,correction + dev w 0.2,68.93,0.870,0.052,0.054,0.918
+partial participation,Logit sum,62.94,0.136,0.857,correction + w 0.5,64.85,not reached,,,0.956
+stepwise change,Probability average,71.44,0.474,0.477,correction + w 0.5,72.21,0.727,0.197,0.196,0.905
+random mobility,Probability average,69.58,0.372,0.607,correction + w 0.5,70.96,0.781,0.175,0.178,0.946
+CIFAR-100,Label-shift EM,40.44,0.953,0.043,correction + product,41.73,not reached,,,0.995
+ResNet-18,Logit-entropy weighting,66.54,0.225,0.565,correction + w 0.5,66.71,0.433,0.163,0.165,0.517
+K=200,Probability average,68.90,0.850,0.104,correction + dev w 0.2,69.23,not reached,,,0.949
+K=500,Probability average,70.38,not reached,,no correction + adaptive w,70.60,not reached,,,0.955
+S1 replay,Probability average,72.27,not reached,,corrected edge only,72.74,not reached,,,0.773
+S2 replay,Probability average,75.90,0.509,0.296,correction + dev w 0.2,76.66,not reached,,,0.723

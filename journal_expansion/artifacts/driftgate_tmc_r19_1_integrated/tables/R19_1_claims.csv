@@ -1,0 +1,9 @@
+id,statement,value,source
+C1,"Correction carries the gain: DriftGate-P minus best uncorrected rule at the same budget (beta 0.5 and 1), seven first-day CNN settings",+0.60 to +1.88 pp,R19_1_T2_same_budget.csv (R18)
+C2,"Adaptive weight adds little: DriftGate-P minus best corrected fixed-weight rule, all settings, beta 0.5 and 1",-0.79 to +0.15 pp,R19_1_T2_same_budget.csv (R18)
+C3,First-day offloading claim against the Round 15 set (7 full-offload rules): settings reaching the best full-offload accuracy with at most 0.53 offloading,7 settings at 0.136-0.524 offloading (5 at most 0.5); reduction of offloaded requests vs confidence-based 0.43-0.86; other settings: CIFAR-100 0.953; K=200 0.850; K=500 not reached,R19_1_T3_offloading_claims.csv (R18)
+C4,First-day offloading claim with corrected variants (13 rules),5 settings reach at 0.433-0.870; reduction 0.05-0.20,R19_1_T3_offloading_claims.csv (R18)
+C5,After round 30 corrected edge only is best in six CNN mobility settings: DriftGate minus it,-1.31 to -0.48 pp,R19_1_T4_weights.csv (R19)
+C6,S1 day 1 full: DriftGate minus corrected edge only (decomposition in R19_decomposition.csv),0.447 pp,R19_1_T4_weights.csv (R19)
+C7,Frozen three-day replay: DriftGate minus label-free fixed w (beta 1),"S1 -0.228 (0.066) (0 of 5 seeds higher), S2 -0.054 (0.011) (0 of 3)",R19_1_T5_three_day_replay.csv (R19)
+C8,Frozen replay (trained models): DriftGate minus corrected edge only,"S1 -0.791, S2 -0.054 pp",R19_1_T4_weights.csv (R19)

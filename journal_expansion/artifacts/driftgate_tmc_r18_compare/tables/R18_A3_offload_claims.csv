@@ -1,0 +1,25 @@
+setting,full-offload comparison set,best full-offload rule,its accuracy,DriftGate-P offloading at first grid point reaching it,reduction of offloaded requests vs confidence-based (0.8 nats),edge calls per request at that point,reduction of edge calls vs confidence-based,confidence-based offloading,confidence-based edge calls per request
+S1,Round 15 set (7 rules),Logit sum,67.37,0.517,0.438,0.578,0.444,0.920,1.039
+S1,with corrected variants (13 rules),correction + dev w 0.2,68.16,0.762,0.172,0.856,0.176,0.920,1.039
+S2,Round 15 set (7 rules),Logit sum,70.07,0.242,0.712,0.252,0.716,0.838,0.886
+S2,with corrected variants (13 rules),correction + w 0.5,71.77,not reached,,,,0.838,0.886
+S1-fast,Round 15 set (7 rules),Logit sum,68.12,0.524,0.430,0.568,0.437,0.918,1.008
+S1-fast,with corrected variants (13 rules),correction + dev w 0.2,68.93,0.870,0.052,0.954,0.054,0.918,1.008
+partial participation,Round 15 set (7 rules),Logit sum,62.94,0.136,0.857,0.147,0.861,0.956,1.056
+partial participation,with corrected variants (13 rules),correction + w 0.5,64.85,not reached,,,,0.956,1.056
+stepwise change,Round 15 set (7 rules),Probability average,71.44,0.474,0.477,0.665,0.474,0.905,1.264
+stepwise change,with corrected variants (13 rules),correction + w 0.5,72.21,0.727,0.197,1.016,0.196,0.905,1.264
+random mobility,Round 15 set (7 rules),Probability average,69.58,0.372,0.607,0.713,0.617,0.946,1.861
+random mobility,with corrected variants (13 rules),correction + w 0.5,70.96,0.781,0.175,1.530,0.178,0.946,1.861
+CIFAR-100,Round 15 set (7 rules),Label-shift EM,40.44,0.953,0.043,1.054,0.043,0.995,1.102
+CIFAR-100,with corrected variants (13 rules),correction + product,41.73,not reached,,,,0.995,1.102
+ResNet-18,Round 15 set (7 rules),Logit-entropy weighting,66.54,0.225,0.565,0.273,0.566,0.517,0.629
+ResNet-18,with corrected variants (13 rules),correction + w 0.5,66.71,0.433,0.163,0.525,0.165,0.517,0.629
+K=200,Round 15 set (7 rules),Probability average,68.90,0.850,0.104,0.986,0.104,0.949,1.101
+K=200,with corrected variants (13 rules),correction + dev w 0.2,69.23,not reached,,,,0.949,1.101
+K=500,Round 15 set (7 rules),Probability average,70.38,not reached,,,,0.955,1.102
+K=500,with corrected variants (13 rules),no correction + adaptive w,70.60,not reached,,,,0.955,1.102
+S1 replay,Round 15 set (7 rules),Probability average,72.27,not reached,,,,0.773,0.873
+S1 replay,with corrected variants (13 rules),corrected edge only,72.74,not reached,,,,0.773,0.873
+S2 replay,Round 15 set (7 rules),Probability average,75.90,0.509,0.296,0.536,0.299,0.723,0.765
+S2 replay,with corrected variants (13 rules),correction + dev w 0.2,76.66,not reached,,,,0.723,0.765

@@ -1,0 +1,17 @@
+setting,split,BTFL adaptation mean (SD),DriftGate,BTFL - DriftGate pp,Probability average,BTFL - Probability average pp,Corrected edge only,BTFL - corrected edge only pp,strongest reference (beta 1),BTFL - strongest pp,strongest reference
+S1 replay,all,70.18 (1.33),71.95 (1.56),-1.770 (0.335),72.27 (1.75),-2.095 (0.594),72.74 (1.91),-2.561 (0.745),72.74 (1.91),-2.561 (0.745),Corrected edge only
+S1 replay,home,81.78 (1.32),83.49 (1.52),-1.703 (0.652),82.46 (1.43),-0.680 (0.424),83.20 (1.74),-1.420 (0.920),83.20 (1.74),-1.420 (0.920),Corrected edge only
+S1 replay,away,54.59 (2.10),56.52 (2.24),-1.929 (0.582),58.50 (2.91),-3.914 (0.894),58.70 (2.77),-4.111 (0.933),58.70 (2.77),-4.111 (0.933),Corrected edge only
+S1 replay,Main,88.17 (1.97),90.30 (2.05),-2.125 (0.690),87.70 (2.20),0.474 (0.518),88.97 (2.25),-0.794 (0.942),88.97 (2.25),-0.794 (0.942),Corrected edge only
+S1 replay,OOP,27.40 (2.34),29.86 (2.69),-2.459 (1.376),36.04 (3.30),-8.639 (1.496),35.93 (3.08),-8.526 (2.119),35.93 (3.08),-8.526 (2.119),Corrected edge only
+S1 replay,OOR,7.63 (1.50),8.58 (1.74),-0.956 (0.601),11.21 (2.27),-3.584 (0.938),11.00 (2.08),-3.374 (0.977),11.00 (2.08),-3.374 (0.977),Corrected edge only
+S1 replay,e (weight of the edge head),0.350 (0.023),Main 0.382 (0.024),OOP 0.297 (0.026),OOR 0.255 (0.031),EXD events 0.054 (0.004),IND events 0.085 (0.009),AUROC of -log(Q_l/Q_g) for non-Main 0.685 (0.015),bit-1 share requests / training 0.697 (0.041) / 0.708 (0.047),Hbar_l / Hbar_g 1.120 (0.046) / 0.600 (0.029),
+S1 replay,checks,partition equal to Round 17: True,training f_d max difference to Round 17: 0.0,seconds per run 25.0 (1.9),,,,,,,
+S2 replay,all,74.16 (2.90),76.54 (2.52),-2.379 (0.656),75.90 (3.29),-1.742 (0.524),76.59 (2.67),-2.433 (0.805),76.66 (2.56),-2.507 (0.769),Correction + development w 0.2
+S2 replay,home,80.42 (4.13),82.99 (3.50),-2.570 (0.872),81.57 (4.37),-1.146 (0.414),82.71 (3.65),-2.293 (0.961),82.91 (3.54),-2.494 (0.960),Correction + development w 0.2
+S2 replay,away,53.96 (1.31),56.27 (0.77),-2.305 (0.656),57.96 (1.08),-4.004 (0.372),57.50 (0.53),-3.542 (1.008),57.16 (0.61),-3.200 (0.909),Correction + development w 0.2
+S2 replay,Main,86.53 (3.62),89.47 (2.62),-2.939 (1.174),86.90 (4.00),-0.365 (0.493),88.55 (3.11),-2.013 (1.066),89.03 (2.87),-2.495 (1.104),Correction + development w 0.2
+S2 replay,OOP,35.57 (3.52),36.90 (5.47),-1.321 (2.096),43.68 (4.17),-8.100 (0.658),40.99 (4.94),-5.415 (1.578),39.35 (5.06),-3.770 (1.629),Correction + development w 0.2
+S2 replay,OOR,7.26 (1.40),7.86 (1.10),-0.593 (0.313),10.12 (1.79),-2.856 (0.529),9.47 (1.36),-2.212 (0.536),8.75 (1.18),-1.483 (0.314),Correction + development w 0.2
+S2 replay,e (weight of the edge head),0.400 (0.014),Main 0.426 (0.015),OOP 0.336 (0.062),OOR 0.285 (0.057),EXD events 0.060 (0.006),IND events 0.065 (0.006),AUROC of -log(Q_l/Q_g) for non-Main 0.708 (0.019),bit-1 share requests / training 0.776 (0.028) / 0.781 (0.022),Hbar_l / Hbar_g 1.093 (0.178) / 0.555 (0.145),
+S2 replay,checks,partition equal to Round 17: True,training f_d max difference to Round 17: 0.0,seconds per run 21.5 (0.2),,,,,,,

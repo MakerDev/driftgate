@@ -1,0 +1,81 @@
+setting,item,signal,rescued pp (u=+1 switched) / P(u=+1),harmed pp (u=-1 switched) / P(u=-1),net pp,switched share pp / disagreement share pp,AUROC or disagreement structure,headroom
+S1,structure,,2.109 (0.171),2.556 (0.194),-0.447 (0.190),6.609 (0.261),+1 0.319 (0.019) / -1 0.386 (0.019) / 0 0.295 (0.024),oracle - DriftGate 2.11 (0.17); oracle - corrected edge 2.56 (0.19)
+S1,signal,device entropy,2.077 (0.166),2.548 (0.193),-0.471 (0.195),91.38 (1.22),AUROC +1 vs -1 0.382 (0.024),
+S1,signal,corrected-edge Main probability sum,1.538 (0.223),1.845 (0.189),-0.307 (0.118),23.18 (1.09),AUROC +1 vs -1 0.554 (0.020),
+S1,signal,margin difference (corrected edge - DriftGate),1.217 (0.091),1.292 (0.103),-0.076 (0.133),80.40 (1.55),AUROC +1 vs -1 0.548 (0.009),
+S1,signal,Q_DG - E,1.393 (0.217),1.562 (0.188),-0.169 (0.127),21.85 (1.27),AUROC +1 vs -1 0.575 (0.017),
+S1,Q_DG - E,,,,,,mean -0.0509 (0.0044); w mean 0.418 (0.004),by u: -1:0.0175 (0.0068) 0:-0.0514 (0.0040) 1:0.0389 (0.0101)
+S2,structure,,1.425 (0.479),2.637 (0.300),-1.212 (0.273),5.524 (1.102),+1 0.254 (0.045) / -1 0.483 (0.047) / 0 0.263 (0.014),oracle - DriftGate 1.43 (0.48); oracle - corrected edge 2.64 (0.30)
+S2,signal,device entropy,1.376 (0.493),2.619 (0.305),-1.244 (0.276),83.95 (8.94),AUROC +1 vs -1 0.405 (0.006),
+S2,signal,corrected-edge Main probability sum,0.814 (0.341),1.805 (0.266),-0.991 (0.102),19.87 (2.92),AUROC +1 vs -1 0.437 (0.044),
+S2,signal,margin difference (corrected edge - DriftGate),0.835 (0.270),1.384 (0.171),-0.549 (0.188),84.69 (3.28),AUROC +1 vs -1 0.544 (0.004),
+S2,signal,Q_DG - E,0.733 (0.309),1.523 (0.198),-0.790 (0.258),18.57 (2.20),AUROC +1 vs -1 0.478 (0.049),
+S2,Q_DG - E,,,,,,mean -0.0508 (0.0083); w mean 0.383 (0.031),by u: -1:0.0210 (0.0110) 0:-0.0508 (0.0073) 1:0.0152 (0.0069)
+S1-fast,structure,,2.186 (0.105),2.494 (0.166),-0.308 (0.116),6.659 (0.281),+1 0.328 (0.011) / -1 0.374 (0.009) / 0 0.297 (0.011),oracle - DriftGate 2.19 (0.11); oracle - corrected edge 2.49 (0.17)
+S1-fast,signal,device entropy,2.149 (0.105),2.487 (0.166),-0.338 (0.121),90.99 (1.34),AUROC +1 vs -1 0.389 (0.029),
+S1-fast,signal,corrected-edge Main probability sum,1.621 (0.137),1.837 (0.090),-0.217 (0.066),23.68 (1.21),AUROC +1 vs -1 0.558 (0.026),
+S1-fast,signal,margin difference (corrected edge - DriftGate),1.262 (0.068),1.239 (0.091),0.023 (0.083),79.81 (0.23),AUROC +1 vs -1 0.553 (0.009),
+S1-fast,signal,Q_DG - E,1.473 (0.106),1.554 (0.117),-0.081 (0.091),22.29 (1.21),AUROC +1 vs -1 0.579 (0.004),
+S1-fast,Q_DG - E,,,,,,mean -0.0496 (0.0045); w mean 0.418 (0.002),by u: -1:0.0188 (0.0024) 0:-0.0504 (0.0043) 1:0.0411 (0.0049)
+partial participation,structure,,1.820 (0.042),2.995 (0.254),-1.175 (0.212),6.988 (0.433),+1 0.261 (0.011) / -1 0.428 (0.011) / 0 0.311 (0.006),oracle - DriftGate 1.82 (0.04); oracle - corrected edge 2.99 (0.25)
+partial participation,signal,device entropy,1.813 (0.039),2.990 (0.253),-1.178 (0.214),95.12 (1.26),AUROC +1 vs -1 0.468 (0.006),
+partial participation,signal,corrected-edge Main probability sum,1.253 (0.019),2.109 (0.107),-0.857 (0.091),23.32 (0.27),AUROC +1 vs -1 0.538 (0.016),
+partial participation,signal,margin difference (corrected edge - DriftGate),1.062 (0.056),1.545 (0.177),-0.483 (0.121),80.06 (0.92),AUROC +1 vs -1 0.541 (0.007),
+partial participation,signal,Q_DG - E,1.048 (0.043),1.781 (0.149),-0.733 (0.120),19.64 (1.22),AUROC +1 vs -1 0.521 (0.011),
+partial participation,Q_DG - E,,,,,,mean -0.0609 (0.0069); w mean 0.426 (0.004),by u: -1:0.0099 (0.0020) 0:-0.0617 (0.0065) 1:0.0156 (0.0058)
+stepwise change,structure,,2.069 (0.120),3.187 (0.260),-1.118 (0.299),6.651 (0.319),+1 0.312 (0.023) / -1 0.479 (0.020) / 0 0.210 (0.017),oracle - DriftGate 2.07 (0.12); oracle - corrected edge 3.19 (0.26)
+stepwise change,signal,device entropy,2.041 (0.121),3.180 (0.261),-1.139 (0.304),90.13 (1.41),AUROC +1 vs -1 0.350 (0.019),
+stepwise change,signal,corrected-edge Main probability sum,1.377 (0.185),2.092 (0.142),-0.714 (0.184),21.04 (1.25),AUROC +1 vs -1 0.543 (0.030),
+stepwise change,signal,margin difference (corrected edge - DriftGate),1.210 (0.072),1.636 (0.233),-0.426 (0.245),79.80 (1.13),AUROC +1 vs -1 0.549 (0.014),
+stepwise change,signal,Q_DG - E,1.188 (0.142),1.610 (0.144),-0.422 (0.177),19.75 (1.04),AUROC +1 vs -1 0.581 (0.022),
+stepwise change,Q_DG - E,,,,,,mean -0.0510 (0.0039); w mean 0.422 (0.006),by u: -1:0.0067 (0.0053) 0:-0.0511 (0.0038) 1:0.0308 (0.0099)
+random mobility,structure,,2.372 (0.110),3.578 (0.287),-1.207 (0.181),7.569 (0.513),+1 0.314 (0.008) / -1 0.473 (0.015) / 0 0.214 (0.018),oracle - DriftGate 2.37 (0.11); oracle - corrected edge 3.58 (0.29)
+random mobility,signal,device entropy,2.356 (0.101),3.577 (0.286),-1.221 (0.189),95.46 (0.30),AUROC +1 vs -1 0.310 (0.012),
+random mobility,signal,corrected-edge Main probability sum,1.616 (0.140),2.337 (0.127),-0.721 (0.038),23.72 (1.41),AUROC +1 vs -1 0.568 (0.022),
+random mobility,signal,margin difference (corrected edge - DriftGate),1.367 (0.078),1.724 (0.110),-0.357 (0.061),76.70 (0.95),AUROC +1 vs -1 0.559 (0.014),
+random mobility,signal,Q_DG - E,1.289 (0.148),1.612 (0.170),-0.324 (0.025),18.87 (1.20),AUROC +1 vs -1 0.620 (0.022),
+random mobility,Q_DG - E,,,,,,mean -0.0595 (0.0033); w mean 0.454 (0.006),by u: -1:-0.0050 (0.0044) 0:-0.0572 (0.0029) 1:0.0303 (0.0110)
+CIFAR-100,structure,,0.735 (0.030),1.329 (0.007),-0.594 (0.033),5.508 (0.257),+1 0.133 (0.001) / -1 0.242 (0.012) / 0 0.625 (0.013),oracle - DriftGate 0.73 (0.03); oracle - corrected edge 1.33 (0.01)
+CIFAR-100,signal,device entropy,0.734 (0.030),1.328 (0.007),-0.594 (0.033),99.47 (0.13),AUROC +1 vs -1 0.460 (0.005),
+CIFAR-100,signal,corrected-edge Main probability sum,0.299 (0.024),0.631 (0.048),-0.332 (0.027),29.85 (1.13),AUROC +1 vs -1 0.486 (0.003),
+CIFAR-100,signal,margin difference (corrected edge - DriftGate),0.439 (0.017),0.744 (0.004),-0.305 (0.020),89.94 (0.22),AUROC +1 vs -1 0.522 (0.003),
+CIFAR-100,signal,Q_DG - E,0.149 (0.007),0.280 (0.017),-0.131 (0.019),12.76 (0.29),AUROC +1 vs -1 0.516 (0.004),
+CIFAR-100,Q_DG - E,,,,,,mean -0.0900 (0.0009); w mean 0.383 (0.002),by u: -1:-0.0578 (0.0022) 0:-0.0871 (0.0010) 1:-0.0539 (0.0012)
+ResNet-18,structure,,3.327 (0.534),8.242 (2.190),-4.915 (1.688),16.492 (3.889),+1 0.205 (0.020) / -1 0.497 (0.021) / 0 0.298 (0.006),oracle - DriftGate 3.33 (0.53); oracle - corrected edge 8.24 (2.19)
+ResNet-18,signal,device entropy,2.823 (0.358),7.006 (1.601),-4.184 (1.244),51.99 (3.32),AUROC +1 vs -1 0.511 (0.023),
+ResNet-18,signal,corrected-edge Main probability sum,1.863 (0.455),6.280 (2.389),-4.417 (1.946),22.19 (5.79),AUROC +1 vs -1 0.440 (0.049),
+ResNet-18,signal,margin difference (corrected edge - DriftGate),1.806 (0.285),3.267 (0.738),-1.460 (0.453),38.55 (1.12),AUROC +1 vs -1 0.598 (0.025),
+ResNet-18,signal,Q_DG - E,2.898 (0.508),7.912 (2.159),-5.015 (1.656),76.36 (2.35),AUROC +1 vs -1 0.417 (0.049),
+ResNet-18,Q_DG - E,,,,,,mean 0.0789 (0.0173); w mean 0.593 (0.006),by u: -1:0.2108 (0.0367) 0:0.0652 (0.0128) 1:0.1728 (0.0406)
+K=200,structure,,2.415 (0.062),2.259 (0.095),0.156 (0.061),6.559 (0.286),+1 0.369 (0.013) / -1 0.345 (0.003) / 0 0.287 (0.016),oracle - DriftGate 2.42 (0.06); oracle - corrected edge 2.26 (0.09)
+K=200,signal,device entropy,2.391 (0.061),2.254 (0.096),0.137 (0.058),94.31 (0.49),AUROC +1 vs -1 0.380 (0.031),
+K=200,signal,corrected-edge Main probability sum,1.768 (0.071),1.501 (0.092),0.267 (0.035),23.52 (0.68),AUROC +1 vs -1 0.589 (0.012),
+K=200,signal,margin difference (corrected edge - DriftGate),1.399 (0.036),1.133 (0.041),0.265 (0.050),80.89 (1.21),AUROC +1 vs -1 0.555 (0.007),
+K=200,signal,Q_DG - E,1.579 (0.066),1.220 (0.050),0.359 (0.045),21.53 (0.35),AUROC +1 vs -1 0.609 (0.007),
+K=200,Q_DG - E,,,,,,mean -0.0549 (0.0017); w mean 0.411 (0.008),by u: -1:0.0051 (0.0025) 0:-0.0555 (0.0026) 1:0.0359 (0.0031)
+K=500,structure,,2.577 (0.153),2.155 (0.073),0.422 (0.121),6.537 (0.286),+1 0.394 (0.008) / -1 0.330 (0.009) / 0 0.276 (0.002),oracle - DriftGate 2.58 (0.15); oracle - corrected edge 2.15 (0.07)
+K=500,signal,device entropy,2.554 (0.154),2.150 (0.073),0.404 (0.123),94.96 (0.36),AUROC +1 vs -1 0.388 (0.012),
+K=500,signal,corrected-edge Main probability sum,1.913 (0.109),1.382 (0.061),0.532 (0.095),23.57 (0.16),AUROC +1 vs -1 0.606 (0.002),
+K=500,signal,margin difference (corrected edge - DriftGate),1.489 (0.080),1.065 (0.021),0.424 (0.076),80.57 (1.03),AUROC +1 vs -1 0.560 (0.003),
+K=500,signal,Q_DG - E,1.720 (0.099),1.135 (0.054),0.585 (0.081),21.72 (0.19),AUROC +1 vs -1 0.618 (0.003),
+K=500,Q_DG - E,,,,,,mean -0.0548 (0.0001); w mean 0.411 (0.005),by u: -1:0.0043 (0.0014) 0:-0.0552 (0.0006) 1:0.0376 (0.0022)
+S1 replay,structure,,2.239 (0.308),1.447 (0.182),0.791 (0.413),5.434 (0.460),+1 0.412 (0.045) / -1 0.267 (0.034) / 0 0.321 (0.025),oracle - DriftGate 2.24 (0.31); oracle - corrected edge 1.45 (0.18)
+S1 replay,signal,device entropy,2.055 (0.281),1.408 (0.178),0.647 (0.405),75.98 (2.30),AUROC +1 vs -1 0.407 (0.023),
+S1 replay,signal,corrected-edge Main probability sum,1.811 (0.296),1.055 (0.088),0.755 (0.336),18.47 (0.68),AUROC +1 vs -1 0.593 (0.025),
+S1 replay,signal,margin difference (corrected edge - DriftGate),1.306 (0.174),0.748 (0.114),0.558 (0.246),82.09 (1.55),AUROC +1 vs -1 0.556 (0.006),
+S1 replay,signal,Q_DG - E,1.801 (0.323),1.048 (0.115),0.753 (0.352),23.78 (1.38),AUROC +1 vs -1 0.629 (0.022),
+S1 replay,Q_DG - E,,,,,,mean -0.0327 (0.0058); w mean 0.387 (0.010),by u: -1:0.0499 (0.0096) 0:-0.0324 (0.0059) 1:0.0952 (0.0178)
+S1 replay,signal (Round 17 detector),D1,0.997 (0.166),0.445 (0.061),0.552 (0.147),33.28 (1.42),AUROC +1 vs -1 0.600 (0.018) (score coverage 1.000 (0.000)),
+S1 replay,signal (Round 17 detector),D2,0.702 (0.142),0.254 (0.029),0.447 (0.123),18.35 (0.93),AUROC +1 vs -1 0.616 (0.032) (score coverage 1.000 (0.000)),
+S1 replay,signal (Round 17 detector),D3,0.431 (0.074),0.167 (0.020),0.263 (0.069),10.99 (1.00),AUROC +1 vs -1 0.551 (0.029) (score coverage 1.000 (0.000)),
+S1 replay,signal (Round 17 detector),D4,1.431 (0.319),0.729 (0.060),0.701 (0.279),27.05 (2.54),AUROC +1 vs -1 0.622 (0.043) (score coverage 0.895 (0.029)),
+S2 replay,structure,,1.368 (0.270),1.314 (0.383),0.054 (0.259),3.805 (0.944),+1 0.363 (0.037) / -1 0.344 (0.028) / 0 0.293 (0.015),oracle - DriftGate 1.37 (0.27); oracle - corrected edge 1.31 (0.38)
+S2 replay,signal,device entropy,1.232 (0.323),1.272 (0.388),-0.040 (0.226),71.39 (11.61),AUROC +1 vs -1 0.411 (0.024),
+S2 replay,signal,corrected-edge Main probability sum,0.858 (0.152),0.880 (0.268),-0.022 (0.139),14.74 (2.12),AUROC +1 vs -1 0.510 (0.017),
+S2 replay,signal,margin difference (corrected edge - DriftGate),0.823 (0.169),0.702 (0.197),0.121 (0.148),87.51 (1.42),AUROC +1 vs -1 0.548 (0.010),
+S2 replay,signal,Q_DG - E,0.878 (0.195),0.872 (0.258),0.006 (0.098),17.15 (2.29),AUROC +1 vs -1 0.548 (0.015),
+S2 replay,Q_DG - E,,,,,,mean -0.0437 (0.0088); w mean 0.354 (0.027),by u: -1:0.0331 (0.0099) 0:-0.0434 (0.0076) 1:0.0536 (0.0094)
+S2 replay,signal (Round 17 detector),D1,0.693 (0.041),0.467 (0.081),0.225 (0.094),44.44 (9.48),AUROC +1 vs -1 0.618 (0.026) (score coverage 1.000 (0.000)),
+S2 replay,signal (Round 17 detector),D2,0.405 (0.031),0.225 (0.029),0.180 (0.005),16.59 (1.38),AUROC +1 vs -1 0.656 (0.024) (score coverage 1.000 (0.000)),
+S2 replay,signal (Round 17 detector),D3,0.192 (0.036),0.120 (0.044),0.072 (0.016),9.51 (0.45),AUROC +1 vs -1 0.493 (0.027) (score coverage 1.000 (0.000)),
+S2 replay,signal (Round 17 detector),D4,0.745 (0.198),0.570 (0.319),0.176 (0.169),23.37 (2.77),AUROC +1 vs -1 0.612 (0.044) (score coverage 0.926 (0.020)),

@@ -1,0 +1,33 @@
+[r19_s2_s1_day3] scenario=S2 arm=fixed040 mode=fixed K=50 L=5 rounds=150 delay=0 device=cuda:2
+  R  1 loss=nan acc=0.7662 off=0.720 active=50 elapsed=0.0m ETA=3m
+  R  5 loss=nan acc=0.7662 off=0.720 active=50 elapsed=0.0m ETA=1m
+  R 10 loss=nan acc=0.7662 off=0.720 active=50 elapsed=0.1m ETA=1m
+  R 15 loss=nan acc=0.7668 off=0.724 active=50 elapsed=0.1m ETA=1m
+  R 20 loss=nan acc=0.7612 off=0.721 active=50 elapsed=0.1m ETA=1m
+  R 25 loss=nan acc=0.7623 off=0.726 active=50 elapsed=0.1m ETA=1m
+  R 30 loss=nan acc=0.7631 off=0.726 active=50 elapsed=0.1m ETA=1m
+  R 35 loss=nan acc=0.7570 off=0.724 active=50 elapsed=0.2m ETA=0m
+  R 40 loss=nan acc=0.7520 off=0.724 active=50 elapsed=0.2m ETA=0m
+  R 45 loss=nan acc=0.7486 off=0.728 active=50 elapsed=0.2m ETA=0m
+  R 50 loss=nan acc=0.7487 off=0.726 active=50 elapsed=0.2m ETA=0m
+  R 55 loss=nan acc=0.7486 off=0.719 active=50 elapsed=0.2m ETA=0m
+  R 60 loss=nan acc=0.7558 off=0.716 active=50 elapsed=0.2m ETA=0m
+  R 65 loss=nan acc=0.7416 off=0.725 active=50 elapsed=0.3m ETA=0m
+  R 70 loss=nan acc=0.7441 off=0.721 active=50 elapsed=0.3m ETA=0m
+  R 75 loss=nan acc=0.7411 off=0.726 active=50 elapsed=0.3m ETA=0m
+  R 80 loss=nan acc=0.7402 off=0.726 active=50 elapsed=0.3m ETA=0m
+  R 85 loss=nan acc=0.7469 off=0.738 active=50 elapsed=0.3m ETA=0m
+  R 90 loss=nan acc=0.7507 off=0.729 active=50 elapsed=0.4m ETA=0m
+  R 95 loss=nan acc=0.7457 off=0.735 active=50 elapsed=0.4m ETA=0m
+  R100 loss=nan acc=0.7511 off=0.732 active=50 elapsed=0.4m ETA=0m
+  R105 loss=nan acc=0.7443 off=0.740 active=50 elapsed=0.4m ETA=0m
+  R110 loss=nan acc=0.7421 off=0.727 active=50 elapsed=0.5m ETA=0m
+  R115 loss=nan acc=0.7418 off=0.732 active=50 elapsed=0.5m ETA=0m
+  R120 loss=nan acc=0.7396 off=0.732 active=50 elapsed=0.5m ETA=0m
+  R125 loss=nan acc=0.7513 off=0.736 active=50 elapsed=0.5m ETA=0m
+  R130 loss=nan acc=0.7607 off=0.731 active=50 elapsed=0.5m ETA=0m
+  R135 loss=nan acc=0.7611 off=0.730 active=50 elapsed=0.5m ETA=0m
+  R140 loss=nan acc=0.7680 off=0.729 active=50 elapsed=0.6m ETA=0m
+  R145 loss=nan acc=0.7616 off=0.733 active=50 elapsed=0.6m ETA=0m
+  R150 loss=nan acc=0.7586 off=0.725 active=50 elapsed=0.6m ETA=0m
+  Saved: /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT19_multiday/r19_s2_s1_day3.json  integrated=0.7533

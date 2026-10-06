@@ -1,0 +1,258 @@
+{
+ "S1 | 1.0 | three days | development w 0.45": {
+  "mean": 0.11604872660777232,
+  "positive_seeds": 4,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | three days | initial fixed": {
+  "mean": -0.2276939594856799,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | three days | corrected edge only": {
+  "mean": -0.7449828914386188,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | days 2-3 | development w 0.45": {
+  "mean": 0.11432739758150774,
+  "positive_seeds": 4,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | days 2-3 | initial fixed": {
+  "mean": -0.22612588747712153,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | days 2-3 | corrected edge only": {
+  "mean": -0.7200028349825885,
+  "positive_seeds": 1,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | transition | development w 0.45": {
+  "mean": 0.1236328377478145,
+  "positive_seeds": 5,
+  "n": 5,
+  "improved": true
+ },
+ "S1 | 1.0 | transition | initial fixed": {
+  "mean": -0.31936454712677287,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | transition | corrected edge only": {
+  "mean": -1.1192299201796316,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | three days | development w 0.45": {
+  "mean": 0.11406183309227344,
+  "positive_seeds": 5,
+  "n": 5,
+  "improved": true
+ },
+ "S1 | 0.5 | three days | initial fixed": {
+  "mean": -0.0909597049657748,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | three days | corrected edge only": {
+  "mean": -0.31371062665453736,
+  "positive_seeds": 1,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | days 2-3 | development w 0.45": {
+  "mean": 0.11293123976916206,
+  "positive_seeds": 5,
+  "n": 5,
+  "improved": true
+ },
+ "S1 | 0.5 | days 2-3 | initial fixed": {
+  "mean": -0.09104401331820497,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | days 2-3 | corrected edge only": {
+  "mean": -0.29509657725553495,
+  "positive_seeds": 1,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | transition | development w 0.45": {
+  "mean": 0.1330090358228148,
+  "positive_seeds": 5,
+  "n": 5,
+  "improved": true
+ },
+ "S1 | 0.5 | transition | initial fixed": {
+  "mean": -0.12020616505309363,
+  "positive_seeds": 0,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 0.5 | transition | corrected edge only": {
+  "mean": -0.5167907238126475,
+  "positive_seeds": 1,
+  "n": 5,
+  "improved": false
+ },
+ "S1 | 1.0 | w": {
+  "wdg_day": [
+   "0.396 (0.012)",
+   "0.395 (0.009)",
+   "0.397 (0.012)"
+  ],
+  "wfix": "0.365 (0.008)",
+  "share_not_fixed": "0.000 (0.000)",
+  "transitions_share": "0.073 (0.006)"
+ },
+ "S1 | 0.5 | w": {
+  "wdg_day": [
+   "0.396 (0.011)",
+   "0.394 (0.009)",
+   "0.396 (0.012)"
+  ],
+  "wfix": "0.376 (0.007)",
+  "share_not_fixed": "0.000 (0.000)",
+  "transitions_share": "0.073 (0.006)"
+ },
+ "S2 | 1.0 | three days | development w 0.45": {
+  "mean": 0.1503608817193983,
+  "positive_seeds": 3,
+  "n": 3,
+  "improved": true
+ },
+ "S2 | 1.0 | three days | initial fixed": {
+  "mean": -0.05392376073952695,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | three days | corrected edge only": {
+  "mean": -0.1014045157644669,
+  "positive_seeds": 1,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | days 2-3 | development w 0.45": {
+  "mean": 0.15244852562076497,
+  "positive_seeds": 3,
+  "n": 3,
+  "improved": true
+ },
+ "S2 | 1.0 | days 2-3 | initial fixed": {
+  "mean": -0.047557730084719196,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | days 2-3 | corrected edge only": {
+  "mean": -0.05966544673168528,
+  "positive_seeds": 1,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | transition | development w 0.45": {
+  "mean": 0.0576250100677053,
+  "positive_seeds": 2,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | transition | initial fixed": {
+  "mean": -0.20018753897768704,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | transition | corrected edge only": {
+  "mean": -0.11132978844806966,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | three days | development w 0.45": {
+  "mean": 0.1310096671621371,
+  "positive_seeds": 3,
+  "n": 3,
+  "improved": true
+ },
+ "S2 | 0.5 | three days | initial fixed": {
+  "mean": -0.034598143416080994,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | three days | corrected edge only": {
+  "mean": -0.012316757738219053,
+  "positive_seeds": 1,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | days 2-3 | development w 0.45": {
+  "mean": 0.1332911091406809,
+  "positive_seeds": 3,
+  "n": 3,
+  "improved": true
+ },
+ "S2 | 0.5 | days 2-3 | initial fixed": {
+  "mean": -0.03056559360660079,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | days 2-3 | corrected edge only": {
+  "mean": 0.011871347816637012,
+  "positive_seeds": 1,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | transition | development w 0.45": {
+  "mean": 0.09761736075423262,
+  "positive_seeds": 3,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | transition | initial fixed": {
+  "mean": -0.11145691564344418,
+  "positive_seeds": 0,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 0.5 | transition | corrected edge only": {
+  "mean": 0.05982856281870378,
+  "positive_seeds": 2,
+  "n": 3,
+  "improved": false
+ },
+ "S2 | 1.0 | w": {
+  "wdg_day": [
+   "0.363 (0.024)",
+   "0.359 (0.027)",
+   "0.360 (0.027)"
+  ],
+  "wfix": "0.345 (0.031)",
+  "share_not_fixed": "0.000 (0.000)",
+  "transitions_share": "0.076 (0.000)"
+ },
+ "S2 | 0.5 | w": {
+  "wdg_day": [
+   "0.370 (0.023)",
+   "0.367 (0.025)",
+   "0.368 (0.025)"
+  ],
+  "wfix": "0.357 (0.030)",
+  "share_not_fixed": "0.000 (0.000)",
+  "transitions_share": "0.076 (0.000)"
+ }
+}

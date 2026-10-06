@@ -154,7 +154,7 @@ def tables():
                                             transitions_share=r19.fmt([a["trans"][a["present"]].mean() for a in R0], 3))
     hdr = ["scenario", "beta", "window", "DriftGate"]
     for lab in (f"development w {w_dev:.2f}", "Round 11 w 0.20", "initial fixed", "corrected edge only", "device constant (post hoc)"):
-        hdr += [lab, f"DriftGate minus {lab} pp", "seeds with DriftGate higher"]
+        hdr += [lab, f"DriftGate minus {lab} pp", f"seeds with DriftGate higher than {lab}"]
     hdr += ["best fixed w (post hoc, seed mean)", "its accuracy", "DriftGate minus best fixed pp"]
     r19.wcsv("R19_multiday_table.csv", hdr, rows)
     r19.wcsv("R19_multiday_curves.csv", ["scenario", "beta"] + [f"w={w:.2f}" for w in r19.W_GRID] + ["DriftGate"], curve)

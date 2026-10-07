@@ -39,5 +39,6 @@ journal_expansion/artifacts/driftgate_tmc_r17_featgate/cache/
 journal_expansion/artifacts/driftgate_tmc_r18_compare/cache/
 # Round 19 per-run caches
 journal_expansion/artifacts/driftgate_tmc_r19_weights/cache/
+journal_expansion/artifacts/driftgate_tmc_r20_claims/cache/
 # Round 19 multi-day replay records (kept on the server)
 journal_expansion/runs/phaseT19_multiday/*_evalprobs.npz

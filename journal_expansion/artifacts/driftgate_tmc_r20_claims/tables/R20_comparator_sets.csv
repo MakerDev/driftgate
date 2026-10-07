@@ -1,0 +1,20 @@
+rule,edge correction,combination or weight,offloading in the full-offload comparison,manuscript main table (11 rules),manuscript ablation table (8 variants),manuscript offloading sentence / Round 18 A3 Round 15 set (7 full-offload rules),Round 18 A3 set with corrected variants (13 rules),Round 17 strongest other (11 rules),Round 16-19 reference set (17 rules),Round 18 same-budget uncorrected group (4),Round 18 same-budget corrected group (5),Round 18 strongest reference for the conditional rule (9),Round 19 fixed-weight comparison,Round 20 cost methods (10),Round 20 target C group (5)
+Confidence-based offloading,none,one exit per request,own threshold 0.8 nats (about 0.92 in S1),yes,,,,yes,yes,,,,,,
+Device only,none,device exit,no offloading,yes,,,,yes,yes,,,,,,
+Edge only (raw edge only),none,edge exit,all requests,yes,,yes,yes,yes,yes,yes,,yes,,yes,
+Probability average,none,fixed w 0.5,all requests,yes,yes,yes,yes,yes,yes,yes,,yes,,yes,
+Logit sum,none,product of probabilities,all requests,yes,,yes,yes,yes,yes,yes,,yes,,yes,
+Lower-entropy exit,none,one exit per request (lower entropy),all requests,yes,,yes,yes,yes,yes,,,,,,
+Logit-entropy weighting,none,per-request weight minimizing mixture entropy,all requests,yes,,yes,yes,yes,yes,,,,,,
+Geometric ensemble with early exit,none,geometric mean,same share as confidence-based,yes,,,,yes,yes,,,,,,
+Label-shift EM,own correction (EM estimate of the share outside M_k),edge exit only,all requests,yes,,yes,yes,yes,yes,,,,,,
+Learned weight,none,per-request logistic weight trained on development labels,all requests,yes,,yes,yes,yes,yes,,,,,,
+DriftGate,prior correction r 0.5,adaptive entropy weight,all requests (beta 1) or controller,yes,yes,,,,yes,,,,yes,yes,yes
+No correction + adaptive w,none,adaptive entropy weight,all requests,,yes,,yes,,yes,yes,,yes,,yes,
+Correction + w 0.5,prior correction r 0.5,fixed w 0.5,all requests,,yes,,yes,,yes,,yes,yes,yes,yes,yes
+"Correction + w 0.2 (development, Round 11)",prior correction r 0.5,fixed w 0.2,all requests,,yes,,yes,,yes,,yes,yes,yes,yes,yes
+Corrected edge only,prior correction r 0.5,fixed w 0,all requests,,yes,,yes,yes,yes,,yes,yes,yes,yes,yes
+Correction + learned weight,prior correction r 0.5,per-request logistic weight,all requests,,yes,,yes,,yes,,yes,yes,,,
+Correction + product,prior correction r 0.5,product of probabilities,all requests,,yes,,yes,,yes,,yes,yes,,yes,yes
+"Correction + w 0.45 (development, Round 19)",prior correction r 0.5,fixed w 0.45,all requests,,,,,,,,,,yes,yes,
+"Correction + fixed w grid 0, 0.05, ..., 1 (Round 19)",prior correction r 0.5,21 fixed weights,all requests or controller,,,,,,,,,,yes,,

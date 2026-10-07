@@ -1,0 +1,415 @@
+setting,target,target accuracy,target rule,rule,first grid beta reaching it,offloading ratio there,edge calls per request there,offloading ratio interpolated between grid points,best accuracy of the rule over the grid
+S1,A,67.37,Logit sum,DriftGate,0.5,0.499,0.565,0.421 (interpolated),68.31
+S1,A,67.37,Logit sum,No correction + adaptive w,NA (not reached),,,,67.15
+S1,A,67.37,Logit sum,Probability average,NA (not reached),,,,67.32
+S1,A,67.37,Logit sum,Logit sum,1,1.000,1.132,1.000 (interpolated),67.37
+S1,A,67.37,Logit sum,Raw edge only,NA (not reached),,,,65.13
+S1,A,67.37,Logit sum,Correction + w 0.5,0.5,0.499,0.565,0.446 (interpolated),68.13
+S1,A,67.37,Logit sum,Correction + w 0.2,0.5,0.499,0.565,0.430 (interpolated),68.16
+S1,A,67.37,Logit sum,Correction + w 0.45,0.5,0.499,0.565,0.434 (interpolated),68.21
+S1,A,67.37,Logit sum,Corrected edge only,0.5,0.499,0.565,0.455 (interpolated),67.91
+S1,A,67.37,Logit sum,Correction + product,0.5,0.499,0.565,0.488 (interpolated),67.90
+S1,A,67.37,Logit sum,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.517,0.578,,
+S1,B,68.16,Correction + w 0.2,DriftGate,0.75,0.745,0.844,0.725 (interpolated),68.31
+S1,B,68.16,Correction + w 0.2,No correction + adaptive w,NA (not reached),,,,67.15
+S1,B,68.16,Correction + w 0.2,Probability average,NA (not reached),,,,67.32
+S1,B,68.16,Correction + w 0.2,Logit sum,NA (not reached),,,,67.37
+S1,B,68.16,Correction + w 0.2,Raw edge only,NA (not reached),,,,65.13
+S1,B,68.16,Correction + w 0.2,Correction + w 0.5,NA (not reached),,,,68.13
+S1,B,68.16,Correction + w 0.2,Correction + w 0.2,1,1.000,1.132,1.000 (interpolated),68.16
+S1,B,68.16,Correction + w 0.2,Correction + w 0.45,1,1.000,1.132,0.885 (interpolated),68.21
+S1,B,68.16,Correction + w 0.2,Corrected edge only,NA (not reached),,,,67.91
+S1,B,68.16,Correction + w 0.2,Correction + product,NA (not reached),,,,67.90
+S1,B,68.16,correction + dev w 0.2,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.762,0.856,,
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.75,0.745,0.844,0.590 (interpolated),68.31
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,NA (not reached),,,,67.15
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,NA (not reached),,,,67.32
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,NA (not reached),,,,67.37
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,NA (not reached),,,,65.13
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.745,0.844,0.674 (interpolated),68.13
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.75,0.745,0.844,0.627 (interpolated),68.16
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.745,0.844,0.634 (interpolated),68.21
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.75,0.745,0.844,0.744 (interpolated),67.91
+S1,C,67.90,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.132,1.000 (interpolated),67.90
+S2,A,70.07,Logit sum,DriftGate,0.25,0.253,0.268,0.122 (interpolated),71.79
+S2,A,70.07,Logit sum,No correction + adaptive w,0.25,0.253,0.268,0.203 (interpolated),70.32
+S2,A,70.07,Logit sum,Probability average,0.25,0.253,0.268,0.186 (interpolated),70.44
+S2,A,70.07,Logit sum,Logit sum,0.25,0.253,0.268,0.174 (interpolated),70.60
+S2,A,70.07,Logit sum,Raw edge only,NA (not reached),,,,69.48
+S2,A,70.07,Logit sum,Correction + w 0.5,0.25,0.253,0.268,0.123 (interpolated),71.82
+S2,A,70.07,Logit sum,Correction + w 0.2,0.25,0.253,0.268,0.130 (interpolated),71.45
+S2,A,70.07,Logit sum,Correction + w 0.45,0.25,0.253,0.268,0.123 (interpolated),71.75
+S2,A,70.07,Logit sum,Corrected edge only,0.25,0.253,0.268,0.136 (interpolated),71.23
+S2,A,70.07,Logit sum,Correction + product,0.25,0.253,0.268,0.125 (interpolated),71.80
+S2,A,70.07,Logit sum,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.242,0.252,,
+S2,B,71.77,Correction + w 0.5,DriftGate,0.75,0.745,0.788,0.530 (interpolated),71.79
+S2,B,71.77,Correction + w 0.5,No correction + adaptive w,NA (not reached),,,,70.32
+S2,B,71.77,Correction + w 0.5,Probability average,NA (not reached),,,,70.44
+S2,B,71.77,Correction + w 0.5,Logit sum,NA (not reached),,,,70.60
+S2,B,71.77,Correction + w 0.5,Raw edge only,NA (not reached),,,,69.48
+S2,B,71.77,Correction + w 0.5,Correction + w 0.5,0.75,0.745,0.788,0.535 (interpolated),71.82
+S2,B,71.77,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,71.45
+S2,B,71.77,Correction + w 0.5,Correction + w 0.45,NA (not reached),,,,71.75
+S2,B,71.77,Correction + w 0.5,Corrected edge only,NA (not reached),,,,71.23
+S2,B,71.77,Correction + w 0.5,Correction + product,0.75,0.745,0.788,0.668 (interpolated),71.80
+S2,B,71.77,correction + w 0.5,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,0.5,0.499,0.528,0.279 (interpolated),71.79
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,70.32
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,70.44
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,70.60
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,69.48
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,0.5,0.499,0.528,0.283 (interpolated),71.82
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,0.5,0.499,0.528,0.366 (interpolated),71.45
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,0.5,0.499,0.528,0.287 (interpolated),71.75
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,0.5,0.499,0.528,0.499 (interpolated),71.23
+S2,C,71.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.5,0.499,0.528,0.297 (interpolated),71.80
+S1-fast,A,68.12,Logit sum,DriftGate,0.5,0.499,0.550,0.460 (interpolated),68.96
+S1-fast,A,68.12,Logit sum,No correction + adaptive w,NA (not reached),,,,67.88
+S1-fast,A,68.12,Logit sum,Probability average,NA (not reached),,,,68.06
+S1-fast,A,68.12,Logit sum,Logit sum,1,1.000,1.101,1.000 (interpolated),68.12
+S1-fast,A,68.12,Logit sum,Raw edge only,NA (not reached),,,,65.68
+S1-fast,A,68.12,Logit sum,Correction + w 0.5,0.5,0.499,0.550,0.494 (interpolated),68.74
+S1-fast,A,68.12,Logit sum,Correction + w 0.2,0.5,0.499,0.550,0.455 (interpolated),68.93
+S1-fast,A,68.12,Logit sum,Correction + w 0.45,0.5,0.499,0.550,0.474 (interpolated),68.86
+S1-fast,A,68.12,Logit sum,Corrected edge only,0.5,0.499,0.550,0.476 (interpolated),68.66
+S1-fast,A,68.12,Logit sum,Correction + product,0.75,0.745,0.821,0.611 (interpolated),68.48
+S1-fast,A,68.12,Logit sum,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.524,0.568,,
+S1-fast,B,68.93,Correction + w 0.2,DriftGate,1,1.000,1.101,0.941 (interpolated),68.96
+S1-fast,B,68.93,Correction + w 0.2,No correction + adaptive w,NA (not reached),,,,67.88
+S1-fast,B,68.93,Correction + w 0.2,Probability average,NA (not reached),,,,68.06
+S1-fast,B,68.93,Correction + w 0.2,Logit sum,NA (not reached),,,,68.12
+S1-fast,B,68.93,Correction + w 0.2,Raw edge only,NA (not reached),,,,65.68
+S1-fast,B,68.93,Correction + w 0.2,Correction + w 0.5,NA (not reached),,,,68.74
+S1-fast,B,68.93,Correction + w 0.2,Correction + w 0.2,1,1.000,1.101,1.000 (interpolated),68.93
+S1-fast,B,68.93,Correction + w 0.2,Correction + w 0.45,NA (not reached),,,,68.86
+S1-fast,B,68.93,Correction + w 0.2,Corrected edge only,NA (not reached),,,,68.66
+S1-fast,B,68.93,Correction + w 0.2,Correction + product,NA (not reached),,,,68.48
+S1-fast,B,68.93,correction + dev w 0.2,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.870,0.954,,
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.75,0.745,0.821,0.580 (interpolated),68.96
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,NA (not reached),,,,67.88
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,NA (not reached),,,,68.06
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,NA (not reached),,,,68.12
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,NA (not reached),,,,65.68
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.745,0.821,0.674 (interpolated),68.74
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.75,0.745,0.821,0.568 (interpolated),68.93
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.745,0.821,0.619 (interpolated),68.86
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.75,0.745,0.821,0.645 (interpolated),68.66
+S1-fast,C,68.48,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.101,1.000 (interpolated),68.48
+partial participation,A,62.94,Logit sum,DriftGate,0.25,0.254,0.281,0.158 (interpolated),64.82
+partial participation,A,62.94,Logit sum,No correction + adaptive w,NA (not reached),,,,62.88
+partial participation,A,62.94,Logit sum,Probability average,0.25,0.254,0.281,0.246 (interpolated),63.03
+partial participation,A,62.94,Logit sum,Logit sum,0.25,0.254,0.281,0.226 (interpolated),63.23
+partial participation,A,62.94,Logit sum,Raw edge only,NA (not reached),,,,61.78
+partial participation,A,62.94,Logit sum,Correction + w 0.5,0.25,0.254,0.281,0.159 (interpolated),64.85
+partial participation,A,62.94,Logit sum,Correction + w 0.2,0.25,0.254,0.281,0.167 (interpolated),64.22
+partial participation,A,62.94,Logit sum,Correction + w 0.45,0.25,0.254,0.281,0.159 (interpolated),64.80
+partial participation,A,62.94,Logit sum,Corrected edge only,0.25,0.254,0.281,0.176 (interpolated),63.81
+partial participation,A,62.94,Logit sum,Correction + product,0.25,0.254,0.281,0.163 (interpolated),64.83
+partial participation,A,62.94,Logit sum,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.136,0.147,,
+partial participation,B,64.85,Correction + w 0.5,DriftGate,NA (not reached),,,,64.82
+partial participation,B,64.85,Correction + w 0.5,No correction + adaptive w,NA (not reached),,,,62.88
+partial participation,B,64.85,Correction + w 0.5,Probability average,NA (not reached),,,,63.03
+partial participation,B,64.85,Correction + w 0.5,Logit sum,NA (not reached),,,,63.23
+partial participation,B,64.85,Correction + w 0.5,Raw edge only,NA (not reached),,,,61.78
+partial participation,B,64.85,Correction + w 0.5,Correction + w 0.5,1,1.000,1.107,1.000 (interpolated),64.85
+partial participation,B,64.85,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,64.22
+partial participation,B,64.85,Correction + w 0.5,Correction + w 0.45,NA (not reached),,,,64.80
+partial participation,B,64.85,Correction + w 0.5,Corrected edge only,NA (not reached),,,,63.81
+partial participation,B,64.85,Correction + w 0.5,Correction + product,NA (not reached),,,,64.83
+partial participation,B,64.85,correction + w 0.5,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,0.5,0.499,0.552,0.309 (interpolated),64.82
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,62.88
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,63.03
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,63.23
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,61.78
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,0.5,0.499,0.552,0.315 (interpolated),64.85
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,0.5,0.499,0.552,0.379 (interpolated),64.22
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,0.5,0.499,0.552,0.316 (interpolated),64.80
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,0.5,0.499,0.552,0.499 (interpolated),63.81
+partial participation,C,63.81,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.5,0.499,0.552,0.329 (interpolated),64.83
+stepwise change,A,71.44,Probability average,DriftGate,0.5,0.498,0.697,0.345 (interpolated),72.36
+stepwise change,A,71.44,Probability average,No correction + adaptive w,NA (not reached),,,,71.32
+stepwise change,A,71.44,Probability average,Probability average,0.75,0.744,1.042,0.709 (interpolated),71.46
+stepwise change,A,71.44,Probability average,Logit sum,NA (not reached),,,,71.42
+stepwise change,A,71.44,Probability average,Raw edge only,NA (not reached),,,,69.10
+stepwise change,A,71.44,Probability average,Correction + w 0.5,0.5,0.498,0.697,0.367 (interpolated),72.21
+stepwise change,A,71.44,Probability average,Correction + w 0.2,0.5,0.498,0.697,0.393 (interpolated),71.90
+stepwise change,A,71.44,Probability average,Correction + w 0.45,0.5,0.498,0.697,0.363 (interpolated),72.22
+stepwise change,A,71.44,Probability average,Corrected edge only,0.5,0.498,0.697,0.450 (interpolated),71.57
+stepwise change,A,71.44,Probability average,Correction + product,0.5,0.498,0.697,0.401 (interpolated),72.08
+stepwise change,A,71.44,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.474,0.665,,
+stepwise change,B,72.21,Correction + w 0.5,DriftGate,0.75,0.744,1.042,0.676 (interpolated),72.36
+stepwise change,B,72.21,Correction + w 0.5,No correction + adaptive w,NA (not reached),,,,71.32
+stepwise change,B,72.21,Correction + w 0.5,Probability average,NA (not reached),,,,71.46
+stepwise change,B,72.21,Correction + w 0.5,Logit sum,NA (not reached),,,,71.42
+stepwise change,B,72.21,Correction + w 0.5,Raw edge only,NA (not reached),,,,69.10
+stepwise change,B,72.21,Correction + w 0.5,Correction + w 0.5,1,1.000,1.400,1.000 (interpolated),72.21
+stepwise change,B,72.21,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,71.90
+stepwise change,B,72.21,Correction + w 0.5,Correction + w 0.45,1,1.000,1.400,0.970 (interpolated),72.22
+stepwise change,B,72.21,Correction + w 0.5,Corrected edge only,NA (not reached),,,,71.57
+stepwise change,B,72.21,Correction + w 0.5,Correction + product,NA (not reached),,,,72.08
+stepwise change,B,72.21,correction + w 0.5,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.727,1.016,,
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,0.5,0.498,0.697,0.381 (interpolated),72.36
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,71.32
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,71.46
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,71.42
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,69.10
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,0.5,0.498,0.697,0.405 (interpolated),72.21
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,0.5,0.498,0.697,0.434 (interpolated),71.90
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,0.5,0.498,0.697,0.400 (interpolated),72.22
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,0.5,0.498,0.697,0.498 (interpolated),71.57
+stepwise change,C,71.57,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.5,0.498,0.697,0.441 (interpolated),72.08
+random mobility,A,69.58,Probability average,DriftGate,0.25,0.253,0.498,0.224 (interpolated),71.09
+random mobility,A,69.58,Probability average,No correction + adaptive w,NA (not reached),,,,69.56
+random mobility,A,69.58,Probability average,Probability average,0.5,0.498,0.981,0.476 (interpolated),69.68
+random mobility,A,69.58,Probability average,Logit sum,NA (not reached),,,,69.43
+random mobility,A,69.58,Probability average,Raw edge only,NA (not reached),,,,67.71
+random mobility,A,69.58,Probability average,Correction + w 0.5,0.25,0.253,0.498,0.230 (interpolated),70.96
+random mobility,A,69.58,Probability average,Correction + w 0.2,0.25,0.253,0.498,0.234 (interpolated),70.60
+random mobility,A,69.58,Probability average,Correction + w 0.45,0.25,0.253,0.498,0.228 (interpolated),70.98
+random mobility,A,69.58,Probability average,Corrected edge only,0.25,0.253,0.498,0.247 (interpolated),70.23
+random mobility,A,69.58,Probability average,Correction + product,0.25,0.253,0.498,0.244 (interpolated),70.78
+random mobility,A,69.58,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.372,0.713,,
+random mobility,B,70.96,Correction + w 0.5,DriftGate,0.75,0.744,1.465,0.704 (interpolated),71.09
+random mobility,B,70.96,Correction + w 0.5,No correction + adaptive w,NA (not reached),,,,69.56
+random mobility,B,70.96,Correction + w 0.5,Probability average,NA (not reached),,,,69.68
+random mobility,B,70.96,Correction + w 0.5,Logit sum,NA (not reached),,,,69.43
+random mobility,B,70.96,Correction + w 0.5,Raw edge only,NA (not reached),,,,67.71
+random mobility,B,70.96,Correction + w 0.5,Correction + w 0.5,1,1.000,1.969,1.000 (interpolated),70.96
+random mobility,B,70.96,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,70.60
+random mobility,B,70.96,Correction + w 0.5,Correction + w 0.45,1,1.000,1.969,0.937 (interpolated),70.98
+random mobility,B,70.96,Correction + w 0.5,Corrected edge only,NA (not reached),,,,70.23
+random mobility,B,70.96,Correction + w 0.5,Correction + product,NA (not reached),,,,70.78
+random mobility,B,70.96,correction + w 0.5,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.781,1.530,,
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,0.5,0.498,0.981,0.368 (interpolated),71.09
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,69.56
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,69.68
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,69.43
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,67.71
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,0.5,0.498,0.981,0.395 (interpolated),70.96
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,0.5,0.498,0.981,0.423 (interpolated),70.60
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,0.5,0.498,0.981,0.388 (interpolated),70.98
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,0.5,0.498,0.981,0.498 (interpolated),70.23
+random mobility,C,70.23,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.5,0.498,0.981,0.441 (interpolated),70.78
+CIFAR-100,A,40.44,Label-shift EM,DriftGate,1,1.000,1.107,0.762 (interpolated),41.29
+CIFAR-100,A,40.44,Label-shift EM,No correction + adaptive w,NA (not reached),,,,37.50
+CIFAR-100,A,40.44,Label-shift EM,Probability average,NA (not reached),,,,38.15
+CIFAR-100,A,40.44,Label-shift EM,Logit sum,NA (not reached),,,,39.83
+CIFAR-100,A,40.44,Label-shift EM,Raw edge only,NA (not reached),,,,36.36
+CIFAR-100,A,40.44,Label-shift EM,Correction + w 0.5,0.75,0.745,0.824,0.735 (interpolated),41.45
+CIFAR-100,A,40.44,Label-shift EM,Correction + w 0.2,1,1.000,1.107,0.830 (interpolated),40.95
+CIFAR-100,A,40.44,Label-shift EM,Correction + w 0.45,0.75,0.745,0.824,0.744 (interpolated),41.36
+CIFAR-100,A,40.44,Label-shift EM,Corrected edge only,1,1.000,1.107,0.901 (interpolated),40.69
+CIFAR-100,A,40.44,Label-shift EM,Correction + product,0.75,0.745,0.824,0.704 (interpolated),41.73
+CIFAR-100,A,40.44,Label-shift EM,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.953,1.054,,
+CIFAR-100,B,41.73,Correction + product,DriftGate,NA (not reached),,,,41.29
+CIFAR-100,B,41.73,Correction + product,No correction + adaptive w,NA (not reached),,,,37.50
+CIFAR-100,B,41.73,Correction + product,Probability average,NA (not reached),,,,38.15
+CIFAR-100,B,41.73,Correction + product,Logit sum,NA (not reached),,,,39.83
+CIFAR-100,B,41.73,Correction + product,Raw edge only,NA (not reached),,,,36.36
+CIFAR-100,B,41.73,Correction + product,Correction + w 0.5,NA (not reached),,,,41.45
+CIFAR-100,B,41.73,Correction + product,Correction + w 0.2,NA (not reached),,,,40.95
+CIFAR-100,B,41.73,Correction + product,Correction + w 0.45,NA (not reached),,,,41.36
+CIFAR-100,B,41.73,Correction + product,Corrected edge only,NA (not reached),,,,40.69
+CIFAR-100,B,41.73,Correction + product,Correction + product,1,1.000,1.107,1.000 (interpolated),41.73
+CIFAR-100,B,41.73,correction + product,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,1,1.000,1.107,0.834 (interpolated),41.29
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,37.50
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,38.15
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,39.83
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,36.36
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,1,1.000,1.107,0.795 (interpolated),41.45
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,1,1.000,1.107,0.915 (interpolated),40.95
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,1,1.000,1.107,0.814 (interpolated),41.36
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,1,1.000,1.107,1.000 (interpolated),40.69
+CIFAR-100,C,40.69,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.75,0.745,0.824,0.738 (interpolated),41.73
+ResNet-18,A,66.54,Logit-entropy weighting,DriftGate,0.25,0.253,0.317,0.091 (interpolated),66.82
+ResNet-18,A,66.54,Logit-entropy weighting,No correction + adaptive w,0.25,0.253,0.317,0.121 (interpolated),66.71
+ResNet-18,A,66.54,Logit-entropy weighting,Probability average,0.25,0.253,0.317,0.129 (interpolated),66.69
+ResNet-18,A,66.54,Logit-entropy weighting,Logit sum,0.25,0.253,0.317,0.184 (interpolated),66.60
+ResNet-18,A,66.54,Logit-entropy weighting,Raw edge only,NA (not reached),,,,66.39
+ResNet-18,A,66.54,Logit-entropy weighting,Correction + w 0.5,0.25,0.253,0.317,0.091 (interpolated),66.82
+ResNet-18,A,66.54,Logit-entropy weighting,Correction + w 0.2,NA (not reached),,,,66.39
+ResNet-18,A,66.54,Logit-entropy weighting,Correction + w 0.45,0.25,0.253,0.317,0.107 (interpolated),66.75
+ResNet-18,A,66.54,Logit-entropy weighting,Corrected edge only,NA (not reached),,,,66.39
+ResNet-18,A,66.54,Logit-entropy weighting,Correction + product,0.25,0.253,0.317,0.105 (interpolated),66.76
+ResNet-18,A,66.54,Logit-entropy weighting,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.225,0.273,,
+ResNet-18,B,66.71,Correction + w 0.5,DriftGate,0.25,0.253,0.317,0.188 (interpolated),66.82
+ResNet-18,B,66.71,Correction + w 0.5,No correction + adaptive w,0.25,0.253,0.317,0.251 (interpolated),66.71
+ResNet-18,B,66.71,Correction + w 0.5,Probability average,NA (not reached),,,,66.69
+ResNet-18,B,66.71,Correction + w 0.5,Logit sum,NA (not reached),,,,66.60
+ResNet-18,B,66.71,Correction + w 0.5,Raw edge only,NA (not reached),,,,66.39
+ResNet-18,B,66.71,Correction + w 0.5,Correction + w 0.5,0.25,0.253,0.317,0.188 (interpolated),66.82
+ResNet-18,B,66.71,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,66.39
+ResNet-18,B,66.71,Correction + w 0.5,Correction + w 0.45,0.25,0.253,0.317,0.222 (interpolated),66.75
+ResNet-18,B,66.71,Correction + w 0.5,Corrected edge only,NA (not reached),,,,66.39
+ResNet-18,B,66.71,Correction + w 0.5,Correction + product,0.25,0.253,0.317,0.216 (interpolated),66.76
+ResNet-18,B,66.71,correction + w 0.5,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.433,0.525,,
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),DriftGate,0,0.000,0.000,0.000,66.82
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),No correction + adaptive w,0,0.000,0.000,0.000,66.71
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Probability average,0,0.000,0.000,0.000,66.69
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Logit sum,0,0.000,0.000,0.000,66.60
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Raw edge only,0,0.000,0.000,0.000,66.39
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Correction + w 0.5,0,0.000,0.000,0.000,66.82
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Correction + w 0.2,0,0.000,0.000,0.000,66.39
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Correction + w 0.45,0,0.000,0.000,0.000,66.75
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Corrected edge only,0,0.000,0.000,0.000,66.39
+ResNet-18,C,66.39,lowest best-over-grid accuracy among the corrected group (Correction + w 0.2),Correction + product,0,0.000,0.000,0.000,66.76
+K=200,A,68.90,Probability average,DriftGate,1,1.000,1.159,0.895 (interpolated),69.00
+K=200,A,68.90,Probability average,No correction + adaptive w,1,1.000,1.159,0.891 (interpolated),69.00
+K=200,A,68.90,Probability average,Probability average,1,1.000,1.159,1.000 (interpolated),68.90
+K=200,A,68.90,Probability average,Logit sum,NA (not reached),,,,68.86
+K=200,A,68.90,Probability average,Raw edge only,NA (not reached),,,,66.08
+K=200,A,68.90,Probability average,Correction + w 0.5,NA (not reached),,,,68.58
+K=200,A,68.90,Probability average,Correction + w 0.2,0.75,0.745,0.864,0.714 (interpolated),69.23
+K=200,A,68.90,Probability average,Correction + w 0.45,NA (not reached),,,,68.80
+K=200,A,68.90,Probability average,Corrected edge only,0.75,0.745,0.864,0.715 (interpolated),69.15
+K=200,A,68.90,Probability average,Correction + product,NA (not reached),,,,68.15
+K=200,A,68.90,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.850,0.986,,
+K=200,B,69.23,Correction + w 0.2,DriftGate,NA (not reached),,,,69.00
+K=200,B,69.23,Correction + w 0.2,No correction + adaptive w,NA (not reached),,,,69.00
+K=200,B,69.23,Correction + w 0.2,Probability average,NA (not reached),,,,68.90
+K=200,B,69.23,Correction + w 0.2,Logit sum,NA (not reached),,,,68.86
+K=200,B,69.23,Correction + w 0.2,Raw edge only,NA (not reached),,,,66.08
+K=200,B,69.23,Correction + w 0.2,Correction + w 0.5,NA (not reached),,,,68.58
+K=200,B,69.23,Correction + w 0.2,Correction + w 0.2,1,1.000,1.159,1.000 (interpolated),69.23
+K=200,B,69.23,Correction + w 0.2,Correction + w 0.45,NA (not reached),,,,68.80
+K=200,B,69.23,Correction + w 0.2,Corrected edge only,NA (not reached),,,,69.15
+K=200,B,69.23,Correction + w 0.2,Correction + product,NA (not reached),,,,68.15
+K=200,B,69.23,correction + dev w 0.2,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.75,0.745,0.864,0.560 (interpolated),69.00
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,0.75,0.745,0.864,0.575 (interpolated),69.00
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,0.75,0.745,0.864,0.591 (interpolated),68.90
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,0.75,0.745,0.864,0.597 (interpolated),68.86
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,NA (not reached),,,,66.08
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.745,0.864,0.659 (interpolated),68.58
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.75,0.745,0.864,0.501 (interpolated),69.23
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.745,0.864,0.601 (interpolated),68.80
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.5,0.499,0.579,0.498 (interpolated),69.15
+K=200,C,68.15,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.159,1.000 (interpolated),68.15
+K=500,A,70.38,Probability average,DriftGate,NA (not reached),,,,70.11
+K=500,A,70.38,Probability average,No correction + adaptive w,1,1.000,1.153,0.811 (interpolated),70.60
+K=500,A,70.38,Probability average,Probability average,1,1.000,1.153,1.000 (interpolated),70.38
+K=500,A,70.38,Probability average,Logit sum,NA (not reached),,,,70.29
+K=500,A,70.38,Probability average,Raw edge only,NA (not reached),,,,67.67
+K=500,A,70.38,Probability average,Correction + w 0.5,NA (not reached),,,,69.62
+K=500,A,70.38,Probability average,Correction + w 0.2,1,1.000,1.153,0.847 (interpolated),70.53
+K=500,A,70.38,Probability average,Correction + w 0.45,NA (not reached),,,,69.90
+K=500,A,70.38,Probability average,Corrected edge only,1,1.000,1.153,0.787 (interpolated),70.53
+K=500,A,70.38,Probability average,Correction + product,NA (not reached),,,,69.11
+K=500,A,70.38,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+K=500,B,70.60,No correction + adaptive w,DriftGate,NA (not reached),,,,70.11
+K=500,B,70.60,No correction + adaptive w,No correction + adaptive w,1,1.000,1.153,1.000 (interpolated),70.60
+K=500,B,70.60,No correction + adaptive w,Probability average,NA (not reached),,,,70.38
+K=500,B,70.60,No correction + adaptive w,Logit sum,NA (not reached),,,,70.29
+K=500,B,70.60,No correction + adaptive w,Raw edge only,NA (not reached),,,,67.67
+K=500,B,70.60,No correction + adaptive w,Correction + w 0.5,NA (not reached),,,,69.62
+K=500,B,70.60,No correction + adaptive w,Correction + w 0.2,NA (not reached),,,,70.53
+K=500,B,70.60,No correction + adaptive w,Correction + w 0.45,NA (not reached),,,,69.90
+K=500,B,70.60,No correction + adaptive w,Corrected edge only,NA (not reached),,,,70.53
+K=500,B,70.60,No correction + adaptive w,Correction + product,NA (not reached),,,,69.11
+K=500,B,70.60,no correction + adaptive w,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.75,0.745,0.859,0.529 (interpolated),70.11
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,0.5,0.499,0.575,0.483 (interpolated),70.60
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,0.5,0.499,0.575,0.493 (interpolated),70.38
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,0.5,0.499,0.575,0.497 (interpolated),70.29
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,NA (not reached),,,,67.67
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.745,0.859,0.636 (interpolated),69.62
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.5,0.499,0.575,0.476 (interpolated),70.53
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.745,0.859,0.568 (interpolated),69.90
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.5,0.499,0.575,0.470 (interpolated),70.53
+K=500,C,69.11,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.153,1.000 (interpolated),69.11
+S1 replay,A,72.27,Probability average,DriftGate,NA (not reached),,,,71.95
+S1 replay,A,72.27,Probability average,No correction + adaptive w,1,1.000,1.132,0.771 (interpolated),72.46
+S1 replay,A,72.27,Probability average,Probability average,1,1.000,1.132,1.000 (interpolated),72.27
+S1 replay,A,72.27,Probability average,Logit sum,NA (not reached),,,,72.08
+S1 replay,A,72.27,Probability average,Raw edge only,NA (not reached),,,,71.74
+S1 replay,A,72.27,Probability average,Correction + w 0.5,NA (not reached),,,,71.53
+S1 replay,A,72.27,Probability average,Correction + w 0.2,0.75,0.746,0.845,0.735 (interpolated),72.58
+S1 replay,A,72.27,Probability average,Correction + w 0.45,NA (not reached),,,,71.83
+S1 replay,A,72.27,Probability average,Corrected edge only,0.75,0.746,0.845,0.700 (interpolated),72.74
+S1 replay,A,72.27,Probability average,Correction + product,NA (not reached),,,,71.12
+S1 replay,A,72.27,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+S1 replay,B,72.74,Corrected edge only,DriftGate,NA (not reached),,,,71.95
+S1 replay,B,72.74,Corrected edge only,No correction + adaptive w,NA (not reached),,,,72.46
+S1 replay,B,72.74,Corrected edge only,Probability average,NA (not reached),,,,72.27
+S1 replay,B,72.74,Corrected edge only,Logit sum,NA (not reached),,,,72.08
+S1 replay,B,72.74,Corrected edge only,Raw edge only,NA (not reached),,,,71.74
+S1 replay,B,72.74,Corrected edge only,Correction + w 0.5,NA (not reached),,,,71.53
+S1 replay,B,72.74,Corrected edge only,Correction + w 0.2,NA (not reached),,,,72.58
+S1 replay,B,72.74,Corrected edge only,Correction + w 0.45,NA (not reached),,,,71.83
+S1 replay,B,72.74,Corrected edge only,Corrected edge only,1,1.000,1.132,1.000 (interpolated),72.74
+S1 replay,B,72.74,Corrected edge only,Correction + product,NA (not reached),,,,71.12
+S1 replay,B,72.74,corrected edge only,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.5,0.500,0.566,0.487 (interpolated),71.95
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,0.5,0.500,0.566,0.443 (interpolated),72.46
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,0.5,0.500,0.566,0.455 (interpolated),72.27
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,0.5,0.500,0.566,0.478 (interpolated),72.08
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,0.75,0.746,0.845,0.586 (interpolated),71.74
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.746,0.845,0.601 (interpolated),71.53
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.5,0.500,0.566,0.448 (interpolated),72.58
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.746,0.845,0.511 (interpolated),71.83
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.5,0.500,0.566,0.441 (interpolated),72.74
+S1 replay,C,71.12,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.132,1.000 (interpolated),71.12
+S2 replay,A,75.90,Probability average,DriftGate,0.5,0.500,0.529,0.480 (interpolated),76.54
+S2 replay,A,75.90,Probability average,No correction + adaptive w,NA (not reached),,,,75.88
+S2 replay,A,75.90,Probability average,Probability average,1,1.000,1.058,1.000 (interpolated),75.90
+S2 replay,A,75.90,Probability average,Logit sum,NA (not reached),,,,75.86
+S2 replay,A,75.90,Probability average,Raw edge only,NA (not reached),,,,75.00
+S2 replay,A,75.90,Probability average,Correction + w 0.5,0.75,0.746,0.790,0.579 (interpolated),76.23
+S2 replay,A,75.90,Probability average,Correction + w 0.2,0.5,0.500,0.529,0.474 (interpolated),76.66
+S2 replay,A,75.90,Probability average,Correction + w 0.45,0.75,0.746,0.790,0.505 (interpolated),76.40
+S2 replay,A,75.90,Probability average,Corrected edge only,0.5,0.500,0.529,0.483 (interpolated),76.59
+S2 replay,A,75.90,Probability average,Correction + product,0.75,0.746,0.790,0.729 (interpolated),76.00
+S2 replay,A,75.90,Probability average,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,0.509,0.536,,
+S2 replay,B,76.66,Correction + w 0.2,DriftGate,NA (not reached),,,,76.54
+S2 replay,B,76.66,Correction + w 0.2,No correction + adaptive w,NA (not reached),,,,75.88
+S2 replay,B,76.66,Correction + w 0.2,Probability average,NA (not reached),,,,75.90
+S2 replay,B,76.66,Correction + w 0.2,Logit sum,NA (not reached),,,,75.86
+S2 replay,B,76.66,Correction + w 0.2,Raw edge only,NA (not reached),,,,75.00
+S2 replay,B,76.66,Correction + w 0.2,Correction + w 0.5,NA (not reached),,,,76.23
+S2 replay,B,76.66,Correction + w 0.2,Correction + w 0.2,1,1.000,1.058,1.000 (interpolated),76.66
+S2 replay,B,76.66,Correction + w 0.2,Correction + w 0.45,NA (not reached),,,,76.40
+S2 replay,B,76.66,Correction + w 0.2,Corrected edge only,NA (not reached),,,,76.59
+S2 replay,B,76.66,Correction + w 0.2,Correction + product,NA (not reached),,,,76.00
+S2 replay,B,76.66,correction + dev w 0.2,"DriftGate-P, fixed-threshold sweep (Round 18 A3, Round 15 thresholds)",,not reached,,,
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),DriftGate,0.5,0.500,0.529,0.498 (interpolated),76.54
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),No correction + adaptive w,NA (not reached),,,,75.88
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Probability average,NA (not reached),,,,75.90
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Logit sum,NA (not reached),,,,75.86
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Raw edge only,NA (not reached),,,,75.00
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.5,0.75,0.746,0.790,0.643 (interpolated),76.23
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.2,0.5,0.500,0.529,0.492 (interpolated),76.66
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + w 0.45,0.75,0.746,0.790,0.562 (interpolated),76.40
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Corrected edge only,0.75,0.746,0.790,0.502 (interpolated),76.59
+S2 replay,C,76.00,lowest best-over-grid accuracy among the corrected group (Correction + product),Correction + product,1,1.000,1.058,1.000 (interpolated),76.00
+S1 development,A,66.66,Probability average,DriftGate,0.5,0.499,0.573,0.379 (interpolated),67.61
+S1 development,A,66.66,Probability average,No correction + adaptive w,NA (not reached),,,,66.44
+S1 development,A,66.66,Probability average,Probability average,0.75,0.745,0.856,0.715 (interpolated),66.68
+S1 development,A,66.66,Probability average,Logit sum,0.75,0.745,0.856,0.702 (interpolated),66.69
+S1 development,A,66.66,Probability average,Raw edge only,NA (not reached),,,,64.81
+S1 development,A,66.66,Probability average,Correction + w 0.5,0.5,0.499,0.573,0.393 (interpolated),67.50
+S1 development,A,66.66,Probability average,Correction + w 0.2,0.5,0.499,0.573,0.425 (interpolated),67.18
+S1 development,A,66.66,Probability average,Correction + w 0.45,0.5,0.499,0.573,0.390 (interpolated),67.52
+S1 development,A,66.66,Probability average,Corrected edge only,0.5,0.499,0.573,0.475 (interpolated),66.86
+S1 development,A,66.66,Probability average,Correction + product,0.5,0.499,0.573,0.416 (interpolated),67.38
+S1 development,B,67.50,Correction + w 0.5,DriftGate,0.75,0.745,0.856,0.719 (interpolated),67.61
+S1 development,B,67.50,Correction + w 0.5,No correction + adaptive w,NA (not reached),,,,66.44
+S1 development,B,67.50,Correction + w 0.5,Probability average,NA (not reached),,,,66.68
+S1 development,B,67.50,Correction + w 0.5,Logit sum,NA (not reached),,,,66.69
+S1 development,B,67.50,Correction + w 0.5,Raw edge only,NA (not reached),,,,64.81
+S1 development,B,67.50,Correction + w 0.5,Correction + w 0.5,1,1.000,1.148,1.000 (interpolated),67.50
+S1 development,B,67.50,Correction + w 0.5,Correction + w 0.2,NA (not reached),,,,67.18
+S1 development,B,67.50,Correction + w 0.5,Correction + w 0.45,1,1.000,1.148,0.925 (interpolated),67.52
+S1 development,B,67.50,Correction + w 0.5,Corrected edge only,NA (not reached),,,,66.86
+S1 development,B,67.50,Correction + w 0.5,Correction + product,NA (not reached),,,,67.38
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),DriftGate,0.5,0.499,0.573,0.426 (interpolated),67.61
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),No correction + adaptive w,NA (not reached),,,,66.44
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Probability average,NA (not reached),,,,66.68
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Logit sum,NA (not reached),,,,66.69
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Raw edge only,NA (not reached),,,,64.81
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.5,0.5,0.499,0.573,0.444 (interpolated),67.50
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.2,0.5,0.499,0.573,0.479 (interpolated),67.18
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + w 0.45,0.5,0.499,0.573,0.439 (interpolated),67.52
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Corrected edge only,0.75,0.745,0.856,0.745 (interpolated),66.86
+S1 development,C,66.86,lowest best-over-grid accuracy among the corrected group (Corrected edge only),Correction + product,0.5,0.499,0.573,0.468 (interpolated),67.38

@@ -1,0 +1,49 @@
+condition,setting,beta,DriftGate,strongest main-table rule (beta 1),DriftGate minus strongest main-table rule pp,best corrected deployable variant,DriftGate minus best corrected deployable variant pp,DriftGate minus corrected edge only pp,DriftGate minus probability average pp,DriftGate minus no correction + adaptive w pp,DriftGate rank among the rules of this block
+first day,S1,1,68.31 (2.45),Logit sum,+0.946 (0.568),Correction + w 0.45,+0.107 (0.049),+0.447 (0.190),+0.993 (0.482),+1.201 (0.591),1/18
+first day,S1,0.5,67.73 (2.28),,,Correction + w 0.2,+0.050 (0.089),+0.176 (0.120),+0.714 (0.312),+0.825 (0.350),1/13
+round > 30,S1,1,67.10 (2.26),Probability average,+0.362 (0.771),Corrected edge only,-0.552 (0.352),-0.552 (0.352),+0.362 (0.771),+0.398 (0.950),3/18
+round > 30,S1,0.5,66.20 (2.17),,,Corrected edge only,-0.260 (0.208),-0.260 (0.208),+0.279 (0.467),+0.310 (0.535),3/13
+first day,S2,1,71.70 (0.97),Logit sum,+1.632 (1.035),Correction + w 0.5,-0.073 (0.131),+1.212 (0.273),+1.815 (1.090),+2.407 (1.165),3/18
+first day,S2,0.5,71.77 (1.48),,,Correction + w 0.5,+0.006 (0.065),+0.537 (0.145),+1.330 (0.800),+1.599 (0.837),1/13
+round > 30,S2,1,71.96 (1.28),Logit sum,+1.141 (0.769),Correction + w 0.45,-0.016 (0.028),+0.534 (0.258),+1.235 (0.888),+1.747 (0.990),3/18
+round > 30,S2,0.5,71.72 (1.71),,,Correction + w 0.45,+0.031 (0.012),+0.306 (0.156),+0.921 (0.704),+1.146 (0.770),1/13
+first day,S1-fast,1,68.96 (0.76),Logit sum,+0.843 (0.249),Correction + w 0.2,+0.033 (0.072),+0.308 (0.116),+0.902 (0.283),+1.125 (0.431),1/18
+first day,S1-fast,0.5,68.31 (0.56),,,Correction + w 0.2,-0.028 (0.024),+0.079 (0.034),+0.628 (0.125),+0.721 (0.166),2/13
+round > 30,S1-fast,1,67.69 (0.61),Probability average,+0.183 (0.554),Corrected edge only,-0.672 (0.320),-0.672 (0.320),+0.183 (0.554),+0.205 (0.752),3/18
+round > 30,S1-fast,0.5,66.74 (0.36),,,Corrected edge only,-0.356 (0.155),-0.356 (0.155),+0.175 (0.306),+0.185 (0.375),3/13
+first day,partial participation,1,64.82 (0.40),Logit sum,+1.879 (0.593),Correction + w 0.5,-0.026 (0.084),+1.175 (0.212),+2.179 (0.521),+2.761 (0.603),3/18
+first day,partial participation,0.5,64.35 (0.27),,,Correction + w 0.5,+0.019 (0.034),+0.535 (0.129),+1.320 (0.223),+1.574 (0.229),1/13
+round > 30,partial participation,1,63.91 (0.36),Logit sum,+0.929 (0.630),Correction + w 0.45,-0.005 (0.038),+0.228 (0.434),+1.124 (0.630),+1.627 (0.818),2/18
+round > 30,partial participation,0.5,63.43 (0.15),,,Correction + w 0.2,+0.004 (0.144),+0.107 (0.241),+0.727 (0.343),+0.937 (0.405),1/13
+first day,stepwise change,1,72.36 (2.20),Probability average,+0.920 (0.256),Correction + w 0.45,+0.137 (0.032),+1.118 (0.299),+0.920 (0.256),+1.104 (0.296),1/18
+first day,stepwise change,0.5,71.99 (1.97),,,Correction + w 0.45,+0.090 (0.018),+0.429 (0.209),+0.692 (0.138),+0.775 (0.147),1/13
+round > 30,stepwise change,1,69.07 (2.04),Probability average,-0.021 (0.215),Corrected edge only,-0.479 (0.360),-0.479 (0.360),-0.021 (0.215),-0.058 (0.331),5/18
+round > 30,stepwise change,0.5,68.32 (1.78),,,Corrected edge only,-0.258 (0.285),-0.258 (0.285),-0.032 (0.150),-0.056 (0.215),5/13
+first day,random mobility,1,71.09 (0.86),Probability average,+1.517 (0.534),Correction + w 0.45,+0.119 (0.050),+1.207 (0.181),+1.517 (0.534),+1.768 (0.511),1/18
+first day,random mobility,0.5,70.68 (0.71),,,Correction + w 0.45,+0.091 (0.025),+0.456 (0.149),+1.062 (0.319),+1.125 (0.310),1/13
+round > 30,random mobility,1,65.40 (0.89),Probability average,+0.110 (0.336),Corrected edge only,-0.648 (0.128),-0.648 (0.128),+0.110 (0.336),+0.115 (0.332),4/18
+round > 30,random mobility,0.5,64.53 (0.70),,,Corrected edge only,-0.325 (0.136),-0.325 (0.136),+0.080 (0.231),+0.028 (0.238),3/13
+first day,CIFAR-100,1,41.29 (0.62),Label-shift EM,+0.850 (0.313),Correction + product,-0.445 (0.076),+0.594 (0.033),+3.138 (0.491),+3.786 (0.525),4/18
+first day,CIFAR-100,0.5,38.63 (0.61),,,Correction + product,-0.268 (0.028),+0.188 (0.010),+1.878 (0.227),+2.114 (0.234),4/13
+round > 30,CIFAR-100,1,45.24 (0.75),Label-shift EM,+0.520 (0.416),Correction + product,-0.250 (0.060),+0.406 (0.031),+2.937 (0.480),+3.678 (0.528),4/18
+round > 30,CIFAR-100,0.5,42.07 (0.77),,,Correction + product,-0.238 (0.037),+0.175 (0.006),+1.819 (0.210),+2.099 (0.219),4/13
+first day,ResNet-18,1,66.64 (3.14),Logit-entropy weighting,+0.099 (0.615),Correction + w 0.5,-0.067 (0.093),+4.915 (1.688),+0.252 (0.344),+0.175 (0.290),2/18
+first day,ResNet-18,0.5,66.74 (3.12),,,Correction + w 0.5,-0.033 (0.043),+2.889 (0.966),+0.188 (0.295),+0.178 (0.285),2/13
+round > 30,ResNet-18,1,62.73 (2.48),Probability average,-0.206 (0.187),Correction + w 0.45,-0.278 (0.149),+2.912 (1.822),-0.206 (0.187),-0.015 (0.190),10/18
+round > 30,ResNet-18,0.5,62.85 (2.43),,,Correction + w 0.45,-0.126 (0.092),+1.558 (1.166),-0.120 (0.182),-0.030 (0.180),7/13
+first day,K=200,1,69.00 (1.43),Probability average,+0.098 (0.068),Correction + w 0.2,-0.231 (0.042),-0.156 (0.061),+0.098 (0.068),-0.004 (0.159),4/18
+first day,K=200,0.5,67.95 (1.30),,,Corrected edge only,-0.205 (0.030),-0.205 (0.030),+0.113 (0.061),+0.074 (0.096),3/13
+round > 30,K=200,1,67.98 (1.80),Probability average,-0.579 (0.117),Corrected edge only,-1.064 (0.110),-1.064 (0.110),-0.579 (0.117),-0.862 (0.225),8/18
+round > 30,K=200,0.5,66.60 (1.65),,,Corrected edge only,-0.577 (0.052),-0.577 (0.052),-0.378 (0.108),-0.502 (0.161),7/13
+first day,K=500,1,70.11 (0.22),Probability average,-0.268 (0.189),Corrected edge only,-0.422 (0.121),-0.422 (0.121),-0.268 (0.189),-0.487 (0.217),7/18
+first day,K=500,0.5,69.01 (0.22),,,Corrected edge only,-0.362 (0.092),-0.362 (0.092),-0.155 (0.131),-0.245 (0.161),6/13
+round > 30,K=500,1,69.28 (0.33),Probability average,-1.016 (0.201),Corrected edge only,-1.313 (0.124),-1.313 (0.124),-1.016 (0.201),-1.436 (0.238),12/18
+round > 30,K=500,0.5,67.84 (0.36),,,Corrected edge only,-0.717 (0.075),-0.717 (0.075),-0.695 (0.142),-0.879 (0.176),9/13
+frozen replay,S1 replay,1,71.95 (1.56),Probability average,-0.325 (0.315),Corrected edge only,-0.791 (0.413),-0.791 (0.413),-0.325 (0.315),-0.517 (0.472),8/18
+frozen replay,S1 replay,0.5,71.21 (1.47),,,Corrected edge only,-0.347 (0.271),-0.347 (0.271),-0.213 (0.206),-0.312 (0.337),7/13
+frozen replay,S2 replay,1,76.54 (2.52),Probability average,+0.637 (0.806),Correction + w 0.2,-0.128 (0.148),-0.054 (0.259),+0.637 (0.806),+0.651 (1.034),3/18
+frozen replay,S2 replay,0.5,76.01 (2.68),,,Correction + w 0.2,-0.037 (0.115),+0.015 (0.202),+0.469 (0.694),+0.429 (0.851),2/13
+three-day frozen replay,S1 three-day,1,71.93 (1.76),Probability average,-0.268 (0.189),Corrected edge only,-0.745 (0.419),-0.745 (0.419),-0.268 (0.189),-0.436 (0.331),6/13
+three-day frozen replay,S1 three-day,0.5,71.21 (1.57),,,Corrected edge only,-0.314 (0.272),-0.314 (0.272),-0.165 (0.134),-0.265 (0.215),7/13
+three-day frozen replay,S2 three-day,1,76.33 (2.67),Probability average,+0.639 (0.902),Correction + w 0.2,-0.169 (0.153),-0.101 (0.280),+0.639 (0.902),+0.668 (1.193),3/13
+three-day frozen replay,S2 three-day,0.5,75.73 (2.77),,,Correction + w 0.2,-0.059 (0.132),-0.012 (0.233),+0.468 (0.768),+0.424 (0.954),3/13

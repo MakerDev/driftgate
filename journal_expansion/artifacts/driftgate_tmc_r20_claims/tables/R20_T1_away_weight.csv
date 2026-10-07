@@ -1,0 +1,25 @@
+condition,setting,away share of device-rounds,away share of requests,requests per away device-round / per home device-round
+first day,S1,0.416 (0.015),0.563 (0.015),1.81 (0.00)
+round > 30,S1,0.519 (0.020),0.661 (0.018),1.81 (0.00)
+first day,S2,0.248 (0.000),0.372 (0.001),1.79 (0.01)
+round > 30,S2,0.310 (0.000),0.446 (0.001),1.79 (0.01)
+first day,S1-fast,0.424 (0.008),0.570 (0.008),1.81 (0.00)
+round > 30,S1-fast,0.524 (0.012),0.666 (0.011),1.81 (0.00)
+first day,partial participation,0.425 (0.010),0.572 (0.011),1.81 (0.00)
+round > 30,partial participation,0.531 (0.014),0.672 (0.012),1.81 (0.00)
+first day,stepwise change,NA,NA,NA
+round > 30,stepwise change,NA,NA,NA
+first day,random mobility,NA,NA,NA
+round > 30,random mobility,NA,NA,NA
+first day,CIFAR-100,0.425 (0.010),0.572 (0.010),1.81 (0.01)
+round > 30,CIFAR-100,0.531 (0.014),0.672 (0.012),1.81 (0.00)
+first day,ResNet-18,NA,NA,NA
+round > 30,ResNet-18,NA,NA,NA
+first day,K=200,0.442 (0.016),0.588 (0.015),1.81 (0.00)
+round > 30,K=200,0.551 (0.019),0.689 (0.017),1.81 (0.00)
+first day,K=500,0.440 (0.009),0.587 (0.009),1.81 (0.00)
+round > 30,K=500,0.548 (0.012),0.686 (0.011),1.81 (0.00)
+frozen replay,S1 replay,0.416 (0.015),0.563 (0.015),1.81 (0.00)
+frozen replay,S2 replay,0.248 (0.000),0.372 (0.001),1.79 (0.01)
+three-day frozen replay,S1 three-day,0.412 (0.011),0.559 (0.011),1.81 (0.00)
+three-day frozen replay,S2 three-day,0.266 (0.000),0.395 (0.001),1.79 (0.01)

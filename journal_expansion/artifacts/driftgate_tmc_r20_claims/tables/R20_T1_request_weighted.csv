@@ -1,0 +1,689 @@
+condition,setting,block,rule,macro accuracy (paper metric),request-weighted accuracy,request-weighted minus DriftGate pp,rank by macro,rank by request-weighted
+first day,S1,beta 1,Device only,64.16 (1.94),59.63 (1.81),-4.948 (1.051),15,17
+first day,S1,beta 1,Raw edge only,62.91 (2.64),61.03 (2.80),-3.550 (0.468),16,15
+first day,S1,beta 1,Confidence-based offloading,62.87 (2.64),60.97 (2.80),-3.605 (0.469),17,16
+first day,S1,beta 1,Probability average,67.32 (2.92),64.21 (2.94),-0.371 (0.535),9,7
+first day,S1,beta 1,Logit sum,67.37 (3.01),64.14 (3.03),-0.437 (0.616),8,9
+first day,S1,beta 1,No correction + adaptive w,67.11 (3.01),64.18 (3.06),-0.398 (0.665),10,8
+first day,S1,beta 1,Correction + w 0.5,68.13 (2.37),64.30 (2.33),-0.272 (0.119),4,6
+first day,S1,beta 1,Correction + w 0.2,68.16 (2.54),64.73 (2.56),+0.155 (0.179),3,1
+first day,S1,beta 1,Correction + w 0.45,68.21 (2.42),64.46 (2.39),-0.117 (0.051),2,4
+first day,S1,beta 1,Corrected edge only,67.87 (2.53),64.64 (2.60),+0.059 (0.243),7,2
+first day,S1,beta 1,Correction + product,67.90 (2.37),64.00 (2.32),-0.579 (0.218),5,10
+first day,S1,beta 1,DriftGate,68.31 (2.45),64.58 (2.41),,1,3
+first day,S1,beta 1,Lower-entropy exit,64.35 (2.72),62.03 (2.81),-2.546 (0.453),14,12
+first day,S1,beta 1,Logit-entropy weighting,64.35 (2.72),62.03 (2.81),-2.546 (0.452),13,13
+first day,S1,beta 1,Label-shift EM,64.84 (2.16),61.04 (2.21),-3.537 (0.394),12,14
+first day,S1,beta 1,Learned weight,66.81 (3.01),63.98 (3.09),-0.594 (0.678),11,11
+first day,S1,beta 1,Correction + learned weight,67.88 (2.56),64.36 (2.55),-0.218 (0.161),6,5
+first day,S1,beta 0.5,Device only,64.16 (1.94),59.63 (1.81),-4.110 (0.774),12,12
+first day,S1,beta 0.5,Raw edge only,64.73 (2.44),61.87 (2.50),-1.873 (0.299),11,11
+first day,S1,beta 0.5,Probability average,67.02 (2.59),63.50 (2.57),-0.234 (0.339),8,6
+first day,S1,beta 0.5,Logit sum,67.07 (2.63),63.46 (2.60),-0.276 (0.376),7,8
+first day,S1,beta 0.5,No correction + adaptive w,66.90 (2.63),63.49 (2.61),-0.249 (0.390),9,7
+first day,S1,beta 0.5,Correction + w 0.5,67.60 (2.24),63.56 (2.18),-0.179 (0.073),4,5
+first day,S1,beta 0.5,Correction + w 0.2,67.68 (2.34),63.85 (2.31),+0.113 (0.107),2,1
+first day,S1,beta 0.5,Correction + w 0.45,67.66 (2.27),63.66 (2.22),-0.076 (0.028),3,4
+first day,S1,beta 0.5,Corrected edge only,67.55 (2.35),63.82 (2.35),+0.082 (0.155),5,2
+first day,S1,beta 0.5,Correction + product,67.41 (2.22),63.31 (2.15),-0.426 (0.161),6,9
+first day,S1,beta 0.5,DriftGate,67.73 (2.28),63.74 (2.23),,1,3
+first day,S1,beta 0.5,Lower-entropy exit,65.27 (2.49),62.24 (2.51),-1.495 (0.283),10,10
+round > 30,S1,beta 1,Device only,61.77 (1.95),57.18 (1.78),-5.937 (1.074),17,17
+round > 30,S1,beta 1,Raw edge only,64.85 (3.13),62.16 (3.17),-0.959 (1.025),15,14
+round > 30,S1,beta 1,Confidence-based offloading,64.80 (3.13),62.09 (3.16),-1.026 (1.021),16,15
+round > 30,S1,beta 1,Probability average,66.74 (2.98),63.31 (2.97),+0.191 (0.760),7,4
+round > 30,S1,beta 1,Logit sum,66.68 (3.02),63.14 (3.02),+0.028 (0.778),9,6
+round > 30,S1,beta 1,No correction + adaptive w,66.71 (3.14),63.44 (3.13),+0.324 (0.938),8,3
+round > 30,S1,beta 1,Correction + w 0.5,66.81 (2.18),62.75 (2.16),-0.360 (0.136),6,10
+round > 30,S1,beta 1,Correction + w 0.2,67.55 (2.43),63.75 (2.46),+0.639 (0.226),2,2
+round > 30,S1,beta 1,Correction + w 0.45,67.02 (2.23),63.01 (2.22),-0.104 (0.057),4,9
+round > 30,S1,beta 1,Corrected edge only,67.66 (2.54),63.98 (2.59),+0.863 (0.381),1,1
+round > 30,S1,beta 1,Correction + product,66.48 (2.16),62.35 (2.14),-0.769 (0.260),10,11
+round > 30,S1,beta 1,DriftGate,67.10 (2.26),63.11 (2.25),,3,7
+round > 30,S1,beta 1,Lower-entropy exit,65.19 (3.06),62.29 (3.05),-0.820 (0.939),13,12
+round > 30,S1,beta 1,Logit-entropy weighting,65.19 (3.06),62.29 (3.05),-0.821 (0.938),12,13
+round > 30,S1,beta 1,Label-shift EM,64.98 (2.13),60.53 (2.21),-2.584 (0.455),14,16
+round > 30,S1,beta 1,Learned weight,66.32 (3.19),63.20 (3.20),+0.086 (0.986),11,5
+round > 30,S1,beta 1,Correction + learned weight,66.88 (2.44),63.08 (2.44),-0.034 (0.202),5,8
+round > 30,S1,beta 0.5,Device only,61.77 (1.95),57.18 (1.78),-4.826 (0.789),12,12
+round > 30,S1,beta 0.5,Raw edge only,64.75 (2.63),61.45 (2.62),-0.557 (0.553),11,11
+round > 30,S1,beta 0.5,Probability average,65.92 (2.62),62.17 (2.56),+0.163 (0.455),6,4
+round > 30,S1,beta 0.5,Logit sum,65.88 (2.62),62.04 (2.57),+0.039 (0.452),8,5
+round > 30,S1,beta 0.5,No correction + adaptive w,65.89 (2.67),62.23 (2.62),+0.226 (0.525),7,3
+round > 30,S1,beta 0.5,Correction + w 0.5,66.01 (2.12),61.77 (2.07),-0.231 (0.082),5,8
+round > 30,S1,beta 0.5,Correction + w 0.2,66.42 (2.28),62.34 (2.24),+0.341 (0.139),2,2
+round > 30,S1,beta 0.5,Correction + w 0.45,66.14 (2.15),61.93 (2.10),-0.071 (0.031),4,7
+round > 30,S1,beta 0.5,Corrected edge only,66.46 (2.34),62.44 (2.31),+0.441 (0.224),1,1
+round > 30,S1,beta 0.5,Correction + product,65.74 (2.09),61.46 (2.03),-0.547 (0.191),9,10
+round > 30,S1,beta 0.5,DriftGate,66.20 (2.17),62.00 (2.12),,3,6
+round > 30,S1,beta 0.5,Lower-entropy exit,64.93 (2.61),61.54 (2.58),-0.464 (0.519),10,9
+first day,S2,beta 1,Device only,69.04 (2.80),65.51 (2.81),-3.096 (2.062),11,12
+first day,S2,beta 1,Raw edge only,65.24 (3.76),63.34 (3.20),-5.265 (2.438),16,16
+first day,S2,beta 1,Confidence-based offloading,65.18 (3.73),63.26 (3.18),-5.341 (2.415),17,17
+first day,S2,beta 1,Probability average,69.88 (2.02),67.22 (1.70),-1.387 (0.953),9,9
+first day,S2,beta 1,Logit sum,70.07 (1.97),67.33 (1.67),-1.273 (0.928),8,8
+first day,S2,beta 1,No correction + adaptive w,69.29 (2.11),66.75 (1.76),-1.850 (1.007),10,10
+first day,S2,beta 1,Correction + w 0.5,71.77 (1.09),68.62 (0.91),+0.019 (0.150),1,1
+first day,S2,beta 1,Correction + w 0.2,71.03 (0.83),68.07 (0.58),-0.529 (0.234),5,5
+first day,S2,beta 1,Correction + w 0.45,71.68 (1.00),68.57 (0.81),-0.031 (0.043),4,3
+first day,S2,beta 1,Corrected edge only,70.49 (0.82),67.63 (0.56),-0.971 (0.286),7,7
+first day,S2,beta 1,Correction + product,71.76 (1.16),68.56 (1.02),-0.040 (0.263),2,4
+first day,S2,beta 1,DriftGate,71.70 (0.97),68.60 (0.77),,3,2
+first day,S2,beta 1,Lower-entropy exit,66.65 (3.30),64.49 (2.83),-4.114 (2.063),15,15
+first day,S2,beta 1,Logit-entropy weighting,66.65 (3.30),64.49 (2.83),-4.111 (2.064),14,14
+first day,S2,beta 1,Label-shift EM,68.63 (0.52),65.39 (0.45),-3.217 (0.393),12,13
+first day,S2,beta 1,Learned weight,68.59 (2.30),66.07 (1.95),-2.533 (1.190),13,11
+first day,S2,beta 1,Correction + learned weight,70.66 (0.98),67.66 (0.78),-0.941 (0.082),6,6
+first day,S2,beta 0.5,Device only,69.04 (2.80),65.51 (2.81),-2.970 (1.527),10,12
+first day,S2,beta 0.5,Raw edge only,68.20 (3.14),65.69 (2.82),-2.790 (1.496),12,11
+first day,S2,beta 0.5,Probability average,70.44 (2.26),67.51 (2.03),-0.969 (0.716),8,8
+first day,S2,beta 0.5,Logit sum,70.60 (2.23),67.60 (2.02),-0.874 (0.710),7,7
+first day,S2,beta 0.5,No correction + adaptive w,70.17 (2.31),67.31 (2.08),-1.162 (0.751),9,9
+first day,S2,beta 0.5,Correction + w 0.5,71.77 (1.53),68.44 (1.39),-0.033 (0.075),2,2
+first day,S2,beta 0.5,Correction + w 0.2,71.45 (1.41),68.24 (1.26),-0.238 (0.111),5,5
+first day,S2,beta 0.5,Correction + w 0.45,71.73 (1.49),68.43 (1.34),-0.042 (0.019),3,3
+first day,S2,beta 0.5,Corrected edge only,71.23 (1.42),68.07 (1.26),-0.411 (0.154),6,6
+first day,S2,beta 0.5,Correction + product,71.72 (1.59),68.38 (1.48),-0.102 (0.177),4,4
+first day,S2,beta 0.5,DriftGate,71.77 (1.48),68.48 (1.33),,1,1
+first day,S2,beta 0.5,Lower-entropy exit,68.61 (3.01),66.01 (2.70),-2.468 (1.369),11,10
+round > 30,S2,beta 1,Device only,68.33 (3.13),64.28 (3.10),-3.958 (2.096),15,17
+round > 30,S2,beta 1,Raw edge only,68.11 (3.23),65.33 (2.68),-2.908 (1.750),16,15
+round > 30,S2,beta 1,Confidence-based offloading,68.04 (3.20),65.23 (2.65),-3.003 (1.720),17,16
+round > 30,S2,beta 1,Probability average,70.72 (2.17),67.40 (1.77),-0.839 (0.764),9,8
+round > 30,S2,beta 1,Logit sum,70.82 (2.05),67.43 (1.71),-0.807 (0.700),8,7
+round > 30,S2,beta 1,No correction + adaptive w,70.21 (2.26),67.03 (1.83),-1.208 (0.836),11,10
+round > 30,S2,beta 1,Correction + w 0.5,71.97 (1.39),68.19 (1.15),-0.041 (0.140),2,3
+round > 30,S2,beta 1,Correction + w 0.2,71.70 (1.09),68.08 (0.80),-0.159 (0.213),5,4
+round > 30,S2,beta 1,Correction + w 0.45,71.97 (1.31),68.23 (1.05),-0.009 (0.041),1,2
+round > 30,S2,beta 1,Corrected edge only,71.42 (1.05),67.87 (0.74),-0.367 (0.278),6,6
+round > 30,S2,beta 1,Correction + product,71.82 (1.47),68.02 (1.26),-0.218 (0.256),4,5
+round > 30,S2,beta 1,DriftGate,71.96 (1.28),68.24 (1.01),,3,1
+round > 30,S2,beta 1,Lower-entropy exit,68.72 (3.18),65.77 (2.64),-2.461 (1.672),14,14
+round > 30,S2,beta 1,Logit-entropy weighting,68.73 (3.18),65.78 (2.64),-2.458 (1.673),13,13
+round > 30,S2,beta 1,Label-shift EM,70.29 (0.83),66.13 (0.83),-2.106 (0.622),10,12
+round > 30,S2,beta 1,Learned weight,69.25 (2.46),66.14 (2.02),-2.091 (1.017),12,11
+round > 30,S2,beta 1,Correction + learned weight,70.90 (1.37),67.30 (1.09),-0.934 (0.145),7,9
+round > 30,S2,beta 0.5,Device only,68.33 (3.13),64.28 (3.10),-3.542 (1.609),12,12
+round > 30,S2,beta 0.5,Raw edge only,69.38 (2.93),66.18 (2.60),-1.635 (1.154),11,11
+round > 30,S2,beta 0.5,Probability average,70.80 (2.42),67.25 (2.13),-0.571 (0.629),8,8
+round > 30,S2,beta 0.5,Logit sum,70.85 (2.33),67.25 (2.08),-0.566 (0.579),7,7
+round > 30,S2,beta 0.5,No correction + adaptive w,70.57 (2.47),67.11 (2.18),-0.713 (0.692),9,9
+round > 30,S2,beta 0.5,Correction + w 0.5,71.67 (1.76),67.75 (1.57),-0.071 (0.069),3,3
+round > 30,S2,beta 0.5,Correction + w 0.2,71.55 (1.62),67.72 (1.40),-0.098 (0.113),4,4
+round > 30,S2,beta 0.5,Correction + w 0.45,71.68 (1.72),67.78 (1.52),-0.040 (0.018),2,2
+round > 30,S2,beta 0.5,Corrected edge only,71.41 (1.59),67.62 (1.37),-0.197 (0.163),6,5
+round > 30,S2,beta 0.5,Correction + product,71.54 (1.83),67.60 (1.65),-0.222 (0.171),5,6
+round > 30,S2,beta 0.5,DriftGate,71.72 (1.71),67.82 (1.50),,1,1
+round > 30,S2,beta 0.5,Lower-entropy exit,69.64 (2.97),66.36 (2.62),-1.456 (1.149),10,10
+first day,S1-fast,beta 1,Device only,64.39 (0.24),59.81 (0.26),-5.392 (0.949),15,17
+first day,S1-fast,beta 1,Raw edge only,63.38 (0.55),61.57 (0.78),-3.637 (0.231),16,15
+first day,S1-fast,beta 1,Confidence-based offloading,63.33 (0.55),61.52 (0.78),-3.689 (0.242),17,16
+first day,S1-fast,beta 1,Probability average,68.06 (1.04),64.94 (1.09),-0.262 (0.323),9,6
+first day,S1-fast,beta 1,Logit sum,68.12 (1.00),64.89 (1.01),-0.317 (0.236),8,8
+first day,S1-fast,beta 1,No correction + adaptive w,67.84 (1.19),64.92 (1.24),-0.285 (0.474),10,7
+first day,S1-fast,beta 1,Correction + w 0.5,68.74 (0.67),64.89 (0.68),-0.319 (0.101),4,9
+first day,S1-fast,beta 1,Correction + w 0.2,68.93 (0.79),65.48 (0.84),+0.279 (0.079),2,1
+first day,S1-fast,beta 1,Correction + w 0.45,68.86 (0.70),65.08 (0.72),-0.120 (0.060),3,4
+first day,S1-fast,beta 1,Corrected edge only,68.66 (0.80),65.42 (0.87),+0.218 (0.124),5,2
+first day,S1-fast,beta 1,Correction + product,68.48 (0.57),64.54 (0.56),-0.665 (0.219),7,11
+first day,S1-fast,beta 1,DriftGate,68.96 (0.76),65.20 (0.78),,1,3
+first day,S1-fast,beta 1,Lower-entropy exit,64.90 (0.93),62.63 (1.08),-2.575 (0.370),14,12
+first day,S1-fast,beta 1,Logit-entropy weighting,64.91 (0.93),62.63 (1.08),-2.575 (0.370),13,13
+first day,S1-fast,beta 1,Label-shift EM,65.41 (0.25),61.59 (0.46),-3.618 (0.385),12,14
+first day,S1-fast,beta 1,Learned weight,67.52 (1.10),64.72 (1.17),-0.481 (0.405),11,10
+first day,S1-fast,beta 1,Correction + learned weight,68.57 (0.71),65.04 (0.76),-0.165 (0.068),6,5
+first day,S1-fast,beta 0.5,Device only,64.39 (0.24),59.81 (0.26),-4.470 (0.700),12,12
+first day,S1-fast,beta 0.5,Raw edge only,65.30 (0.43),62.45 (0.53),-1.830 (0.151),11,11
+first day,S1-fast,beta 0.5,Probability average,67.68 (0.68),64.13 (0.71),-0.148 (0.150),8,6
+first day,S1-fast,beta 0.5,Logit sum,67.71 (0.66),64.08 (0.66),-0.206 (0.115),7,7
+first day,S1-fast,beta 0.5,No correction + adaptive w,67.59 (0.73),64.14 (0.76),-0.141 (0.194),9,5
+first day,S1-fast,beta 0.5,Correction + w 0.5,68.15 (0.51),64.07 (0.52),-0.215 (0.052),5,8
+first day,S1-fast,beta 0.5,Correction + w 0.2,68.34 (0.58),64.48 (0.59),+0.194 (0.029),1,1
+first day,S1-fast,beta 0.5,Correction + w 0.45,68.24 (0.53),64.20 (0.54),-0.079 (0.028),3,4
+first day,S1-fast,beta 0.5,Corrected edge only,68.23 (0.59),64.47 (0.60),+0.189 (0.042),4,2
+first day,S1-fast,beta 0.5,Correction + product,67.92 (0.44),63.78 (0.42),-0.501 (0.142),6,9
+first day,S1-fast,beta 0.5,DriftGate,68.31 (0.56),64.28 (0.56),,2,3
+first day,S1-fast,beta 0.5,Lower-entropy exit,65.90 (0.55),62.86 (0.64),-1.418 (0.102),10,10
+round > 30,S1-fast,beta 1,Device only,62.07 (0.45),57.44 (0.42),-6.286 (1.073),17,17
+round > 30,S1-fast,beta 1,Raw edge only,65.49 (1.59),62.84 (1.50),-0.880 (0.968),14,14
+round > 30,S1-fast,beta 1,Confidence-based offloading,65.43 (1.59),62.78 (1.50),-0.943 (0.965),15,15
+round > 30,S1-fast,beta 1,Probability average,67.51 (1.05),64.09 (1.08),+0.365 (0.548),5,4
+round > 30,S1-fast,beta 1,Logit sum,67.43 (0.96),63.92 (0.97),+0.195 (0.389),8,6
+round > 30,S1-fast,beta 1,No correction + adaptive w,67.48 (1.25),64.25 (1.25),+0.524 (0.715),7,3
+round > 30,S1-fast,beta 1,Correction + w 0.5,67.35 (0.51),63.31 (0.55),-0.415 (0.106),9,10
+round > 30,S1-fast,beta 1,Correction + w 0.2,68.22 (0.76),64.46 (0.80),+0.733 (0.158),2,2
+round > 30,S1-fast,beta 1,Correction + w 0.45,67.60 (0.56),63.61 (0.60),-0.116 (0.054),4,9
+round > 30,S1-fast,beta 1,Corrected edge only,68.36 (0.89),64.73 (0.91),+1.004 (0.291),1,1
+round > 30,S1-fast,beta 1,Correction + product,66.97 (0.38),62.86 (0.41),-0.862 (0.255),11,13
+round > 30,S1-fast,beta 1,DriftGate,67.69 (0.61),63.72 (0.65),,3,8
+round > 30,S1-fast,beta 1,Lower-entropy exit,65.87 (1.52),63.02 (1.46),-0.709 (0.982),13,11
+round > 30,S1-fast,beta 1,Logit-entropy weighting,65.88 (1.52),63.01 (1.46),-0.709 (0.981),12,12
+round > 30,S1-fast,beta 1,Label-shift EM,65.38 (0.93),60.99 (1.03),-2.735 (0.590),16,16
+round > 30,S1-fast,beta 1,Learned weight,67.09 (1.19),64.02 (1.21),+0.294 (0.654),10,5
+round > 30,S1-fast,beta 1,Correction + learned weight,67.50 (0.60),63.74 (0.68),+0.016 (0.072),6,7
+round > 30,S1-fast,beta 0.5,Device only,62.07 (0.45),57.44 (0.42),-5.107 (0.786),12,12
+round > 30,S1-fast,beta 0.5,Raw edge only,65.39 (0.90),62.10 (0.82),-0.442 (0.469),11,10
+round > 30,S1-fast,beta 0.5,Probability average,66.56 (0.64),62.80 (0.64),+0.260 (0.285),5,4
+round > 30,S1-fast,beta 0.5,Logit sum,66.50 (0.56),62.66 (0.55),+0.118 (0.172),8,5
+round > 30,S1-fast,beta 0.5,No correction + adaptive w,66.55 (0.71),62.89 (0.69),+0.345 (0.336),6,3
+round > 30,S1-fast,beta 0.5,Correction + w 0.5,66.51 (0.31),62.28 (0.33),-0.268 (0.057),7,8
+round > 30,S1-fast,beta 0.5,Correction + w 0.2,67.03 (0.45),62.96 (0.46),+0.411 (0.075),2,2
+round > 30,S1-fast,beta 0.5,Correction + w 0.45,66.67 (0.34),62.47 (0.36),-0.079 (0.026),4,7
+round > 30,S1-fast,beta 0.5,Corrected edge only,67.09 (0.52),63.09 (0.51),+0.543 (0.130),1,1
+round > 30,S1-fast,beta 0.5,Correction + product,66.21 (0.20),61.92 (0.22),-0.623 (0.168),9,11
+round > 30,S1-fast,beta 0.5,DriftGate,66.74 (0.36),62.54 (0.38),,3,6
+round > 30,S1-fast,beta 0.5,Lower-entropy exit,65.58 (0.85),62.19 (0.80),-0.353 (0.468),10,9
+first day,partial participation,beta 1,Device only,61.75 (0.24),57.39 (0.25),-3.593 (0.427),12,12
+first day,partial participation,beta 1,Raw edge only,56.44 (0.36),54.46 (0.53),-6.516 (0.334),17,16
+first day,partial participation,beta 1,Confidence-based offloading,56.45 (0.36),54.46 (0.52),-6.517 (0.330),16,17
+first day,partial participation,beta 1,Probability average,62.64 (0.75),59.56 (0.75),-1.416 (0.522),9,9
+first day,partial participation,beta 1,Logit sum,62.94 (0.81),59.77 (0.77),-1.214 (0.571),8,8
+first day,partial participation,beta 1,No correction + adaptive w,62.06 (0.88),59.13 (0.87),-1.852 (0.619),10,10
+first day,partial participation,beta 1,Correction + w 0.5,64.85 (0.31),60.94 (0.28),-0.043 (0.075),1,3
+first day,partial participation,beta 1,Correction + w 0.2,64.22 (0.49),60.67 (0.45),-0.308 (0.111),6,6
+first day,partial participation,beta 1,Correction + w 0.45,64.80 (0.36),60.95 (0.32),-0.028 (0.040),4,2
+first day,partial participation,beta 1,Corrected edge only,63.64 (0.56),60.29 (0.51),-0.693 (0.187),7,7
+first day,partial participation,beta 1,Correction + product,64.83 (0.23),60.84 (0.18),-0.144 (0.177),2,4
+first day,partial participation,beta 1,DriftGate,64.82 (0.40),60.98 (0.35),,3,1
+first day,partial participation,beta 1,Lower-entropy exit,58.10 (0.65),55.79 (0.70),-5.192 (0.463),14,14
+first day,partial participation,beta 1,Logit-entropy weighting,58.10 (0.66),55.78 (0.71),-5.195 (0.472),15,15
+first day,partial participation,beta 1,Label-shift EM,60.45 (0.74),56.68 (0.59),-4.302 (0.348),13,13
+first day,partial participation,beta 1,Learned weight,62.02 (0.92),59.11 (0.92),-1.873 (0.690),11,11
+first day,partial participation,beta 1,Correction + learned weight,64.45 (0.40),60.76 (0.37),-0.220 (0.091),5,5
+first day,partial participation,beta 0.5,Device only,61.75 (0.24),57.39 (0.25),-2.971 (0.254),10,11
+first day,partial participation,beta 0.5,Raw edge only,60.11 (0.26),57.27 (0.23),-3.086 (0.011),12,12
+first day,partial participation,beta 0.5,Probability average,63.03 (0.37),59.58 (0.34),-0.778 (0.231),8,8
+first day,partial participation,beta 0.5,Logit sum,63.23 (0.41),59.71 (0.35),-0.650 (0.277),7,7
+first day,partial participation,beta 0.5,No correction + adaptive w,62.77 (0.41),59.40 (0.38),-0.954 (0.245),9,9
+first day,partial participation,beta 0.5,Correction + w 0.5,64.33 (0.23),60.30 (0.21),-0.056 (0.028),2,3
+first day,partial participation,beta 0.5,Correction + w 0.2,64.06 (0.33),60.23 (0.30),-0.124 (0.060),5,4
+first day,partial participation,beta 0.5,Correction + w 0.45,64.31 (0.25),60.33 (0.23),-0.031 (0.014),3,2
+first day,partial participation,beta 0.5,Corrected edge only,63.81 (0.39),60.08 (0.34),-0.277 (0.106),6,6
+first day,partial participation,beta 0.5,Correction + product,64.29 (0.17),60.20 (0.14),-0.156 (0.098),4,5
+first day,partial participation,beta 0.5,DriftGate,64.35 (0.27),60.36 (0.24),,1,1
+first day,partial participation,beta 0.5,Lower-entropy exit,60.69 (0.29),57.73 (0.27),-2.626 (0.105),11,10
+round > 30,partial participation,beta 1,Device only,60.37 (0.39),55.68 (0.32),-4.045 (0.607),13,15
+round > 30,partial participation,beta 1,Raw edge only,58.41 (1.44),55.59 (1.25),-4.139 (0.955),17,16
+round > 30,partial participation,beta 1,Confidence-based offloading,58.42 (1.44),55.59 (1.25),-4.141 (0.950),16,17
+round > 30,partial participation,beta 1,Probability average,62.78 (0.99),59.20 (0.88),-0.534 (0.583),9,9
+round > 30,partial participation,beta 1,Logit sum,62.98 (0.98),59.30 (0.85),-0.425 (0.564),8,8
+round > 30,partial participation,beta 1,No correction + adaptive w,62.28 (1.18),58.84 (1.04),-0.886 (0.745),10,10
+round > 30,partial participation,beta 1,Correction + w 0.5,63.85 (0.26),59.61 (0.21),-0.120 (0.087),4,5
+round > 30,partial participation,beta 1,Correction + w 0.2,63.89 (0.61),59.88 (0.50),+0.156 (0.215),3,1
+round > 30,partial participation,beta 1,Correction + w 0.45,63.91 (0.32),59.72 (0.27),-0.010 (0.033),1,4
+round > 30,partial participation,beta 1,Corrected edge only,63.68 (0.78),59.79 (0.65),+0.065 (0.363),6,2
+round > 30,partial participation,beta 1,Correction + product,63.69 (0.14),59.39 (0.12),-0.334 (0.234),5,7
+round > 30,partial participation,beta 1,DriftGate,63.91 (0.36),59.73 (0.30),,2,3
+round > 30,partial participation,beta 1,Lower-entropy exit,59.31 (1.23),56.32 (1.06),-3.414 (0.764),15,14
+round > 30,partial participation,beta 1,Logit-entropy weighting,59.31 (1.23),56.32 (1.07),-3.411 (0.767),14,13
+round > 30,partial participation,beta 1,Label-shift EM,61.25 (0.96),56.65 (0.79),-3.078 (0.493),12,12
+round > 30,partial participation,beta 1,Learned weight,62.00 (1.16),58.65 (1.06),-1.078 (0.763),11,11
+round > 30,partial participation,beta 1,Correction + learned weight,63.59 (0.43),59.57 (0.37),-0.156 (0.083),7,6
+round > 30,partial participation,beta 0.5,Device only,60.37 (0.39),55.68 (0.32),-3.386 (0.347),12,12
+round > 30,partial participation,beta 0.5,Raw edge only,60.58 (0.69),57.17 (0.52),-1.898 (0.429),11,11
+round > 30,partial participation,beta 0.5,Probability average,62.70 (0.45),58.81 (0.36),-0.262 (0.300),8,7
+round > 30,partial participation,beta 0.5,Logit sum,62.83 (0.44),58.86 (0.33),-0.208 (0.294),7,6
+round > 30,partial participation,beta 0.5,No correction + adaptive w,62.49 (0.52),58.68 (0.41),-0.392 (0.348),9,9
+round > 30,partial participation,beta 0.5,Correction + w 0.5,63.36 (0.11),58.97 (0.08),-0.099 (0.034),4,5
+round > 30,partial participation,beta 0.5,Correction + w 0.2,63.43 (0.29),59.18 (0.21),+0.106 (0.115),2,1
+round > 30,partial participation,beta 0.5,Correction + w 0.45,63.41 (0.14),59.05 (0.10),-0.022 (0.006),3,4
+round > 30,partial participation,beta 0.5,Corrected edge only,63.32 (0.38),59.14 (0.29),+0.072 (0.193),5,2
+round > 30,partial participation,beta 0.5,Correction + product,63.22 (0.05),58.79 (0.07),-0.279 (0.141),6,8
+round > 30,partial participation,beta 0.5,DriftGate,63.43 (0.15),59.07 (0.10),,1,3
+round > 30,partial participation,beta 0.5,Lower-entropy exit,60.95 (0.58),57.46 (0.43),-1.614 (0.349),10,10
+first day,stepwise change,beta 1,Device only,68.93 (1.45),64.68 (1.38),-4.245 (1.009),12,14
+first day,stepwise change,beta 1,Raw edge only,65.20 (2.09),64.18 (2.17),-4.748 (0.513),16,16
+first day,stepwise change,beta 1,Confidence-based offloading,65.17 (2.09),64.13 (2.17),-4.797 (0.511),17,17
+first day,stepwise change,beta 1,Probability average,71.44 (2.32),68.55 (2.34),-0.385 (0.269),7,5
+first day,stepwise change,beta 1,Logit sum,71.39 (2.37),68.43 (2.39),-0.500 (0.320),8,10
+first day,stepwise change,beta 1,No correction + adaptive w,71.25 (2.40),68.54 (2.44),-0.390 (0.341),9,6
+first day,stepwise change,beta 1,Correction + w 0.5,72.21 (2.11),68.70 (2.08),-0.230 (0.102),3,4
+first day,stepwise change,beta 1,Correction + w 0.2,71.78 (2.41),68.75 (2.38),-0.185 (0.260),5,3
+first day,stepwise change,beta 1,Correction + w 0.45,72.22 (2.18),68.79 (2.15),-0.138 (0.036),2,2
+first day,stepwise change,beta 1,Corrected edge only,71.24 (2.38),68.45 (2.38),-0.475 (0.320),10,9
+first day,stepwise change,beta 1,Correction + product,72.08 (2.08),68.48 (2.05),-0.448 (0.202),4,7
+first day,stepwise change,beta 1,DriftGate,72.36 (2.20),68.93 (2.17),,1,1
+first day,stepwise change,beta 1,Lower-entropy exit,68.42 (2.21),66.42 (2.27),-2.515 (0.247),14,13
+first day,stepwise change,beta 1,Logit-entropy weighting,68.42 (2.21),66.42 (2.27),-2.513 (0.245),13,12
+first day,stepwise change,beta 1,Label-shift EM,67.59 (1.87),64.37 (1.91),-4.565 (0.673),15,15
+first day,stepwise change,beta 1,Learned weight,70.69 (2.37),68.07 (2.44),-0.862 (0.297),11,11
+first day,stepwise change,beta 1,Correction + learned weight,71.68 (2.38),68.47 (2.36),-0.462 (0.235),6,8
+first day,stepwise change,beta 0.5,Device only,68.93 (1.45),64.68 (1.38),-3.652 (0.705),11,12
+first day,stepwise change,beta 0.5,Raw edge only,68.13 (1.96),65.90 (1.96),-2.441 (0.309),12,11
+first day,stepwise change,beta 0.5,Probability average,71.30 (2.06),68.09 (2.02),-0.248 (0.160),7,7
+first day,stepwise change,beta 0.5,Logit sum,71.28 (2.09),68.00 (2.06),-0.333 (0.205),8,8
+first day,stepwise change,beta 0.5,No correction + adaptive w,71.22 (2.09),68.11 (2.06),-0.228 (0.192),9,6
+first day,stepwise change,beta 0.5,Correction + w 0.5,71.88 (1.93),68.17 (1.87),-0.161 (0.066),3,5
+first day,stepwise change,beta 0.5,Correction + w 0.2,71.76 (2.09),68.31 (2.03),-0.022 (0.171),4,2
+first day,stepwise change,beta 0.5,Correction + w 0.45,71.90 (1.97),68.25 (1.91),-0.089 (0.018),2,3
+first day,stepwise change,beta 0.5,Corrected edge only,71.57 (2.10),68.23 (2.06),-0.107 (0.230),6,4
+first day,stepwise change,beta 0.5,Correction + product,71.75 (1.90),67.98 (1.84),-0.358 (0.171),5,9
+first day,stepwise change,beta 0.5,DriftGate,71.99 (1.97),68.34 (1.92),,1,1
+first day,stepwise change,beta 0.5,Lower-entropy exit,69.47 (2.00),66.83 (1.98),-1.507 (0.128),10,10
+round > 30,stepwise change,beta 1,Device only,64.17 (1.29),60.62 (1.27),-5.394 (1.064),17,17
+round > 30,stepwise change,beta 1,Raw edge only,67.90 (2.24),65.74 (2.33),-0.281 (0.501),14,12
+round > 30,stepwise change,beta 1,Confidence-based offloading,67.86 (2.24),65.68 (2.33),-0.341 (0.505),15,14
+round > 30,stepwise change,beta 1,Probability average,69.09 (2.23),66.37 (2.29),+0.352 (0.255),4,4
+round > 30,stepwise change,beta 1,Logit sum,69.01 (2.26),66.21 (2.33),+0.199 (0.287),6,5
+round > 30,stepwise change,beta 1,No correction + adaptive w,69.13 (2.34),66.55 (2.41),+0.532 (0.378),3,3
+round > 30,stepwise change,beta 1,Correction + w 0.5,68.81 (1.93),65.69 (1.97),-0.325 (0.119),8,13
+round > 30,stepwise change,beta 1,Correction + w 0.2,69.47 (2.20),66.56 (2.25),+0.547 (0.239),2,2
+round > 30,stepwise change,beta 1,Correction + w 0.45,69.01 (1.99),65.92 (2.03),-0.092 (0.046),7,8
+round > 30,stepwise change,beta 1,Corrected edge only,69.55 (2.29),66.73 (2.34),+0.717 (0.372),1,1
+round > 30,stepwise change,beta 1,Correction + product,68.52 (1.89),65.35 (1.93),-0.671 (0.241),11,15
+round > 30,stepwise change,beta 1,DriftGate,69.07 (2.04),66.02 (2.08),,5,7
+round > 30,stepwise change,beta 1,Lower-entropy exit,68.13 (2.19),65.79 (2.27),-0.231 (0.426),13,11
+round > 30,stepwise change,beta 1,Logit-entropy weighting,68.13 (2.19),65.79 (2.27),-0.230 (0.426),12,10
+round > 30,stepwise change,beta 1,Label-shift EM,66.50 (1.92),62.94 (1.99),-3.077 (0.541),16,16
+round > 30,stepwise change,beta 1,Learned weight,68.60 (2.43),66.11 (2.50),+0.098 (0.454),10,6
+round > 30,stepwise change,beta 1,Correction + learned weight,68.74 (2.23),65.83 (2.27),-0.182 (0.236),9,9
+round > 30,stepwise change,beta 0.5,Device only,64.17 (1.29),60.62 (1.27),-4.494 (0.715),12,12
+round > 30,stepwise change,beta 0.5,Raw edge only,67.59 (1.94),65.05 (1.96),-0.066 (0.327),11,9
+round > 30,stepwise change,beta 0.5,Probability average,68.35 (1.92),65.44 (1.93),+0.326 (0.178),4,3
+round > 30,stepwise change,beta 0.5,Logit sum,68.28 (1.93),65.31 (1.95),+0.189 (0.190),6,5
+round > 30,stepwise change,beta 0.5,No correction + adaptive w,68.38 (1.96),65.56 (1.98),+0.439 (0.243),3,1
+round > 30,stepwise change,beta 0.5,Correction + w 0.5,68.14 (1.73),64.90 (1.74),-0.217 (0.076),8,10
+round > 30,stepwise change,beta 0.5,Correction + w 0.2,68.55 (1.91),65.44 (1.91),+0.326 (0.189),2,4
+round > 30,stepwise change,beta 0.5,Correction + w 0.45,68.27 (1.77),65.05 (1.78),-0.063 (0.022),7,8
+round > 30,stepwise change,beta 0.5,Corrected edge only,68.58 (1.97),65.53 (1.97),+0.416 (0.286),1,2
+round > 30,stepwise change,beta 0.5,Correction + product,67.90 (1.69),64.61 (1.71),-0.503 (0.201),9,11
+round > 30,stepwise change,beta 0.5,DriftGate,68.32 (1.78),65.12 (1.79),,5,6
+round > 30,stepwise change,beta 0.5,Lower-entropy exit,67.71 (1.91),65.09 (1.93),-0.026 (0.307),10,7
+first day,random mobility,beta 1,Device only,67.71 (0.54),60.98 (0.50),-4.514 (0.706),12,14
+first day,random mobility,beta 1,Raw edge only,58.61 (0.42),58.42 (0.49),-7.079 (0.836),16,16
+first day,random mobility,beta 1,Confidence-based offloading,58.56 (0.43),58.35 (0.50),-7.146 (0.850),17,17
+first day,random mobility,beta 1,Probability average,69.58 (0.45),65.27 (0.77),-0.223 (0.357),8,7
+first day,random mobility,beta 1,Logit sum,69.23 (0.55),64.91 (0.81),-0.588 (0.303),10,10
+first day,random mobility,beta 1,No correction + adaptive w,69.33 (0.42),65.30 (0.78),-0.196 (0.340),9,6
+first day,random mobility,beta 1,Correction + w 0.5,70.96 (0.82),65.25 (0.93),-0.248 (0.083),3,8
+first day,random mobility,beta 1,Correction + w 0.2,70.51 (0.80),65.54 (0.97),+0.047 (0.048),6,1
+first day,random mobility,beta 1,Correction + w 0.45,70.98 (0.82),65.40 (0.95),-0.098 (0.058),2,3
+first day,random mobility,beta 1,Corrected edge only,69.89 (0.81),65.33 (0.95),-0.170 (0.076),7,5
+first day,random mobility,beta 1,Correction + product,70.78 (0.78),64.96 (0.86),-0.538 (0.138),4,9
+first day,random mobility,beta 1,DriftGate,71.09 (0.86),65.50 (1.00),,1,2
+first day,random mobility,beta 1,Lower-entropy exit,64.22 (0.35),61.93 (0.61),-3.570 (0.455),14,12
+first day,random mobility,beta 1,Logit-entropy weighting,64.22 (0.35),61.93 (0.60),-3.571 (0.456),15,13
+first day,random mobility,beta 1,Label-shift EM,65.42 (0.52),60.37 (0.65),-5.126 (0.356),13,15
+first day,random mobility,beta 1,Learned weight,68.55 (0.35),64.89 (0.64),-0.611 (0.367),11,11
+first day,random mobility,beta 1,Correction + learned weight,70.64 (0.82),65.40 (0.95),-0.101 (0.155),5,4
+first day,random mobility,beta 0.5,Device only,67.71 (0.54),60.98 (0.50),-3.751 (0.343),10,12
+first day,random mobility,beta 0.5,Raw edge only,63.89 (0.19),61.10 (0.40),-3.630 (0.447),12,11
+first day,random mobility,beta 0.5,Probability average,69.62 (0.41),64.67 (0.57),-0.069 (0.197),7,5
+first day,random mobility,beta 0.5,Logit sum,69.43 (0.42),64.43 (0.55),-0.304 (0.250),9,8
+first day,random mobility,beta 0.5,No correction + adaptive w,69.56 (0.40),64.75 (0.58),+0.016 (0.184),8,3
+first day,random mobility,beta 0.5,Correction + w 0.5,70.56 (0.69),64.55 (0.72),-0.182 (0.028),3,7
+first day,random mobility,beta 0.5,Correction + w 0.2,70.45 (0.65),64.84 (0.70),+0.110 (0.061),4,1
+first day,random mobility,beta 0.5,Correction + w 0.45,70.59 (0.69),64.66 (0.72),-0.075 (0.028),2,6
+first day,random mobility,beta 0.5,Corrected edge only,70.23 (0.65),64.81 (0.71),+0.072 (0.098),6,2
+first day,random mobility,beta 0.5,Correction + product,70.40 (0.64),64.31 (0.66),-0.428 (0.099),5,9
+first day,random mobility,beta 0.5,DriftGate,70.68 (0.71),64.73 (0.75),,1,4
+first day,random mobility,beta 0.5,Lower-entropy exit,66.49 (0.40),62.75 (0.60),-1.987 (0.159),11,10
+round > 30,random mobility,beta 1,Device only,60.50 (0.64),54.95 (0.56),-5.703 (0.915),17,17
+round > 30,random mobility,beta 1,Raw edge only,61.77 (1.31),60.24 (1.29),-0.420 (0.898),15,13
+round > 30,random mobility,beta 1,Confidence-based offloading,61.70 (1.32),60.15 (1.29),-0.505 (0.918),16,14
+round > 30,random mobility,beta 1,Probability average,65.29 (0.56),61.61 (0.92),+0.950 (0.180),6,4
+round > 30,random mobility,beta 1,Logit sum,65.06 (0.59),61.31 (0.91),+0.654 (0.241),9,6
+round > 30,random mobility,beta 1,No correction + adaptive w,65.28 (0.56),61.85 (0.95),+1.196 (0.175),7,2
+round > 30,random mobility,beta 1,Correction + w 0.5,65.15 (0.84),60.31 (0.99),-0.345 (0.107),8,12
+round > 30,random mobility,beta 1,Correction + w 0.2,65.93 (0.82),61.53 (1.05),+0.871 (0.056),2,5
+round > 30,random mobility,beta 1,Correction + w 0.45,65.37 (0.84),60.62 (1.01),-0.041 (0.066),5,9
+round > 30,random mobility,beta 1,Corrected edge only,66.05 (0.80),61.86 (1.03),+1.199 (0.043),1,1
+round > 30,random mobility,beta 1,Correction + product,64.78 (0.76),59.88 (0.89),-0.778 (0.186),11,15
+round > 30,random mobility,beta 1,DriftGate,65.40 (0.89),60.66 (1.07),,4,8
+round > 30,random mobility,beta 1,Lower-entropy exit,62.85 (0.67),60.52 (0.85),-0.139 (0.464),13,10
+round > 30,random mobility,beta 1,Logit-entropy weighting,62.85 (0.67),60.52 (0.85),-0.141 (0.464),14,11
+round > 30,random mobility,beta 1,Label-shift EM,63.00 (1.08),57.61 (1.27),-3.045 (0.489),12,16
+round > 30,random mobility,beta 1,Learned weight,64.89 (0.52),61.76 (0.80),+1.099 (0.273),10,3
+round > 30,random mobility,beta 1,Correction + learned weight,65.41 (0.77),60.92 (0.98),+0.266 (0.174),3,7
+round > 30,random mobility,beta 0.5,Device only,60.50 (0.64),54.95 (0.56),-4.575 (0.442),12,12
+round > 30,random mobility,beta 0.5,Raw edge only,62.26 (0.77),59.41 (0.84),-0.121 (0.379),11,9
+round > 30,random mobility,beta 0.5,Probability average,64.45 (0.48),60.30 (0.65),+0.773 (0.114),6,2
+round > 30,random mobility,beta 0.5,Logit sum,64.28 (0.41),60.07 (0.58),+0.543 (0.200),8,4
+round > 30,random mobility,beta 0.5,No correction + adaptive w,64.50 (0.48),60.49 (0.66),+0.964 (0.107),4,1
+round > 30,random mobility,beta 0.5,Correction + w 0.5,64.34 (0.68),59.29 (0.74),-0.240 (0.037),7,10
+round > 30,random mobility,beta 0.5,Correction + w 0.2,64.81 (0.62),60.04 (0.71),+0.507 (0.059),2,5
+round > 30,random mobility,beta 0.5,Correction + w 0.45,64.48 (0.67),59.48 (0.74),-0.045 (0.034),5,8
+round > 30,random mobility,beta 0.5,Corrected edge only,64.85 (0.62),60.20 (0.72),+0.672 (0.075),1,3
+round > 30,random mobility,beta 0.5,Correction + product,64.04 (0.60),58.94 (0.65),-0.588 (0.123),9,11
+round > 30,random mobility,beta 0.5,DriftGate,64.53 (0.70),59.53 (0.77),,3,7
+round > 30,random mobility,beta 0.5,Lower-entropy exit,62.92 (0.61),59.65 (0.75),+0.117 (0.251),10,6
+first day,CIFAR-100,beta 1,Device only,33.93 (0.67),32.29 (0.67),-7.936 (0.167),17,17
+first day,CIFAR-100,beta 1,Raw edge only,35.84 (1.03),35.70 (1.07),-4.520 (0.594),16,16
+first day,CIFAR-100,beta 1,Confidence-based offloading,35.84 (1.03),35.71 (1.07),-4.518 (0.594),15,15
+first day,CIFAR-100,beta 1,Probability average,38.15 (0.92),37.68 (0.97),-2.545 (0.444),10,10
+first day,CIFAR-100,beta 1,Logit sum,39.83 (0.87),39.05 (0.92),-1.170 (0.344),9,8
+first day,CIFAR-100,beta 1,No correction + adaptive w,37.50 (0.95),37.12 (1.00),-3.101 (0.478),12,11
+first day,CIFAR-100,beta 1,Correction + w 0.5,41.45 (0.60),40.34 (0.62),+0.113 (0.027),2,2
+first day,CIFAR-100,beta 1,Correction + w 0.2,40.95 (0.64),39.97 (0.66),-0.258 (0.021),5,5
+first day,CIFAR-100,beta 1,Correction + w 0.45,41.36 (0.61),40.28 (0.63),+0.052 (0.018),3,3
+first day,CIFAR-100,beta 1,Corrected edge only,40.69 (0.66),39.76 (0.68),-0.460 (0.035),6,6
+first day,CIFAR-100,beta 1,Correction + product,41.73 (0.59),40.42 (0.60),+0.199 (0.077),1,1
+first day,CIFAR-100,beta 1,DriftGate,41.29 (0.62),40.22 (0.65),,4,4
+first day,CIFAR-100,beta 1,Lower-entropy exit,35.89 (1.02),35.74 (1.06),-4.482 (0.581),14,14
+first day,CIFAR-100,beta 1,Logit-entropy weighting,35.90 (1.02),35.75 (1.06),-4.472 (0.581),13,13
+first day,CIFAR-100,beta 1,Label-shift EM,40.44 (0.52),38.91 (0.48),-1.310 (0.355),8,9
+first day,CIFAR-100,beta 1,Learned weight,37.54 (0.76),36.70 (0.77),-3.524 (0.235),11,12
+first day,CIFAR-100,beta 1,Correction + learned weight,40.55 (0.55),39.52 (0.57),-0.706 (0.082),7,7
+first day,CIFAR-100,beta 0.5,Device only,33.93 (0.67),32.29 (0.67),-4.946 (0.030),12,12
+first day,CIFAR-100,beta 0.5,Raw edge only,36.03 (0.77),35.10 (0.82),-2.138 (0.226),11,11
+first day,CIFAR-100,beta 0.5,Probability average,36.75 (0.77),35.72 (0.82),-1.517 (0.198),8,8
+first day,CIFAR-100,beta 0.5,Logit sum,37.71 (0.78),36.51 (0.83),-0.725 (0.181),7,7
+first day,CIFAR-100,beta 0.5,No correction + adaptive w,36.52 (0.77),35.51 (0.82),-1.721 (0.204),9,9
+first day,CIFAR-100,beta 0.5,Correction + w 0.5,38.72 (0.61),37.30 (0.66),+0.067 (0.002),2,2
+first day,CIFAR-100,beta 0.5,Correction + w 0.2,38.52 (0.61),37.15 (0.66),-0.089 (0.003),5,5
+first day,CIFAR-100,beta 0.5,Correction + w 0.45,38.68 (0.61),37.27 (0.66),+0.035 (0.003),3,3
+first day,CIFAR-100,beta 0.5,Corrected edge only,38.44 (0.60),37.08 (0.66),-0.154 (0.005),6,6
+first day,CIFAR-100,beta 0.5,Correction + product,38.90 (0.64),37.39 (0.67),+0.160 (0.018),1,1
+first day,CIFAR-100,beta 0.5,DriftGate,38.63 (0.61),37.23 (0.66),,4,4
+first day,CIFAR-100,beta 0.5,Lower-entropy exit,36.03 (0.77),35.10 (0.82),-2.138 (0.226),10,10
+round > 30,CIFAR-100,beta 1,Device only,36.83 (0.77),34.12 (0.75),-8.805 (0.170),17,17
+round > 30,CIFAR-100,beta 1,Raw edge only,40.21 (1.09),38.86 (1.11),-4.066 (0.558),16,16
+round > 30,CIFAR-100,beta 1,Confidence-based offloading,40.22 (1.08),38.86 (1.11),-4.065 (0.558),15,15
+round > 30,CIFAR-100,beta 1,Probability average,42.30 (1.00),40.62 (1.03),-2.304 (0.426),10,10
+round > 30,CIFAR-100,beta 1,Logit sum,43.85 (0.96),41.84 (0.99),-1.084 (0.325),9,8
+round > 30,CIFAR-100,beta 1,No correction + adaptive w,41.56 (1.04),40.02 (1.07),-2.908 (0.471),11,11
+round > 30,CIFAR-100,beta 1,Correction + w 0.5,45.42 (0.72),43.04 (0.73),+0.112 (0.031),2,1
+round > 30,CIFAR-100,beta 1,Correction + w 0.2,45.05 (0.77),42.79 (0.77),-0.139 (0.018),5,5
+round > 30,CIFAR-100,beta 1,Correction + w 0.45,45.36 (0.73),43.01 (0.73),+0.081 (0.023),3,2
+round > 30,CIFAR-100,beta 1,Corrected edge only,44.84 (0.78),42.62 (0.79),-0.304 (0.033),6,6
+round > 30,CIFAR-100,beta 1,Correction + product,45.49 (0.73),42.94 (0.71),+0.016 (0.064),1,3
+round > 30,CIFAR-100,beta 1,DriftGate,45.24 (0.75),42.93 (0.76),,4,4
+round > 30,CIFAR-100,beta 1,Lower-entropy exit,40.24 (1.08),38.88 (1.10),-4.048 (0.553),14,14
+round > 30,CIFAR-100,beta 1,Logit-entropy weighting,40.26 (1.08),38.89 (1.10),-4.035 (0.552),13,13
+round > 30,CIFAR-100,beta 1,Label-shift EM,44.72 (0.70),41.77 (0.66),-1.156 (0.439),7,9
+round > 30,CIFAR-100,beta 1,Learned weight,40.84 (0.87),38.97 (0.85),-3.959 (0.241),12,12
+round > 30,CIFAR-100,beta 1,Correction + learned weight,44.38 (0.67),42.13 (0.67),-0.790 (0.090),8,7
+round > 30,CIFAR-100,beta 0.5,Device only,36.83 (0.77),34.12 (0.75),-5.384 (0.092),12,12
+round > 30,CIFAR-100,beta 0.5,Raw edge only,39.52 (0.88),37.48 (0.91),-2.022 (0.208),11,11
+round > 30,CIFAR-100,beta 0.5,Probability average,40.25 (0.88),38.09 (0.92),-1.413 (0.180),8,8
+round > 30,CIFAR-100,beta 0.5,Logit sum,41.20 (0.91),38.85 (0.93),-0.653 (0.172),7,7
+round > 30,CIFAR-100,beta 0.5,No correction + adaptive w,39.97 (0.88),37.86 (0.91),-1.644 (0.188),9,9
+round > 30,CIFAR-100,beta 0.5,Correction + w 0.5,42.17 (0.77),39.58 (0.79),+0.076 (0.003),2,2
+round > 30,CIFAR-100,beta 0.5,Correction + w 0.2,41.98 (0.77),39.43 (0.79),-0.074 (0.001),5,5
+round > 30,CIFAR-100,beta 0.5,Correction + w 0.45,42.13 (0.77),39.55 (0.79),+0.047 (0.003),3,3
+round > 30,CIFAR-100,beta 0.5,Corrected edge only,41.89 (0.77),39.36 (0.79),-0.139 (0.003),6,6
+round > 30,CIFAR-100,beta 0.5,Correction + product,42.31 (0.80),39.62 (0.80),+0.118 (0.022),1,1
+round > 30,CIFAR-100,beta 0.5,DriftGate,42.07 (0.77),39.50 (0.79),,4,4
+round > 30,CIFAR-100,beta 0.5,Lower-entropy exit,39.52 (0.88),37.48 (0.91),-2.022 (0.208),10,10
+first day,ResNet-18,beta 1,Device only,66.39 (2.87),62.09 (2.74),-0.475 (0.231),9,10
+first day,ResNet-18,beta 1,Raw edge only,57.04 (3.19),54.71 (3.00),-7.853 (3.044),17,17
+first day,ResNet-18,beta 1,Confidence-based offloading,59.21 (2.80),56.65 (2.62),-5.918 (2.069),16,16
+first day,ResNet-18,beta 1,Probability average,66.39 (3.15),62.57 (2.88),+0.002 (0.315),8,6
+first day,ResNet-18,beta 1,Logit sum,66.00 (3.28),62.29 (2.98),-0.275 (0.262),10,9
+first day,ResNet-18,beta 1,No correction + adaptive w,66.46 (3.14),62.52 (2.88),-0.042 (0.248),7,8
+first day,ResNet-18,beta 1,Correction + w 0.5,66.71 (3.19),62.71 (2.92),+0.140 (0.073),1,1
+first day,ResNet-18,beta 1,Correction + w 0.2,64.02 (2.67),60.56 (2.40),-2.002 (0.868),12,12
+first day,ResNet-18,beta 1,Correction + w 0.45,66.49 (3.22),62.58 (2.95),+0.013 (0.084),6,5
+first day,ResNet-18,beta 1,Corrected edge only,61.72 (2.53),58.57 (2.25),-3.992 (1.619),15,14
+first day,ResNet-18,beta 1,Correction + product,66.59 (3.37),62.64 (3.09),+0.074 (0.270),3,2
+first day,ResNet-18,beta 1,DriftGate,66.64 (3.14),62.57 (2.88),,2,7
+first day,ResNet-18,beta 1,Lower-entropy exit,66.54 (2.80),62.62 (2.64),+0.056 (0.528),5,4
+first day,ResNet-18,beta 1,Logit-entropy weighting,66.54 (2.80),62.62 (2.64),+0.056 (0.528),4,3
+first day,ResNet-18,beta 1,Label-shift EM,61.73 (2.80),58.06 (2.38),-4.502 (1.121),14,15
+first day,ResNet-18,beta 1,Learned weight,63.61 (2.88),60.19 (2.65),-2.381 (1.720),13,13
+first day,ResNet-18,beta 1,Correction + learned weight,64.36 (2.59),60.75 (2.36),-1.820 (0.953),11,11
+first day,ResNet-18,beta 0.5,Device only,66.39 (2.87),62.09 (2.74),-0.577 (0.300),8,9
+first day,ResNet-18,beta 0.5,Raw edge only,61.40 (2.23),58.60 (2.09),-4.064 (1.651),12,12
+first day,ResNet-18,beta 0.5,Probability average,66.55 (3.10),62.68 (2.84),+0.013 (0.266),7,2
+first day,ResNet-18,beta 0.5,Logit sum,66.29 (3.22),62.51 (2.94),-0.155 (0.178),9,8
+first day,ResNet-18,beta 0.5,No correction + adaptive w,66.56 (3.10),62.64 (2.85),-0.033 (0.249),6,7
+first day,ResNet-18,beta 0.5,Correction + w 0.5,66.77 (3.16),62.73 (2.89),+0.066 (0.031),1,1
+first day,ResNet-18,beta 0.5,Correction + w 0.2,65.07 (2.70),61.45 (2.45),-1.216 (0.539),10,10
+first day,ResNet-18,beta 0.5,Correction + w 0.45,66.62 (3.17),62.65 (2.90),-0.019 (0.041),4,6
+first day,ResNet-18,beta 0.5,Corrected edge only,63.85 (2.51),60.45 (2.26),-2.220 (0.916),11,11
+first day,ResNet-18,beta 0.5,Correction + product,66.67 (3.30),62.67 (3.02),+0.004 (0.196),3,3
+first day,ResNet-18,beta 0.5,DriftGate,66.74 (3.12),62.67 (2.86),,2,4
+first day,ResNet-18,beta 0.5,Lower-entropy exit,66.62 (2.79),62.67 (2.63),-0.001 (0.539),5,5
+round > 30,ResNet-18,beta 1,Device only,61.77 (2.75),58.11 (2.61),-0.985 (0.343),10,11
+round > 30,ResNet-18,beta 1,Raw edge only,56.58 (2.98),53.90 (2.81),-5.200 (2.749),17,17
+round > 30,ResNet-18,beta 1,Confidence-based offloading,58.79 (2.31),55.80 (2.25),-3.292 (1.810),16,15
+round > 30,ResNet-18,beta 1,Probability average,62.93 (2.49),59.46 (2.39),+0.359 (0.205),4,1
+round > 30,ResNet-18,beta 1,Logit sum,62.80 (2.44),59.37 (2.36),+0.275 (0.112),7,5
+round > 30,ResNet-18,beta 1,No correction + adaptive w,62.74 (2.57),59.21 (2.44),+0.112 (0.176),8,8
+round > 30,ResNet-18,beta 1,Correction + w 0.5,63.00 (2.44),59.39 (2.36),+0.295 (0.060),2,4
+round > 30,ResNet-18,beta 1,Correction + w 0.2,61.54 (1.50),58.17 (1.56),-0.930 (0.941),11,10
+round > 30,ResNet-18,beta 1,Correction + w 0.45,63.00 (2.40),59.43 (2.35),+0.328 (0.085),1,2
+round > 30,ResNet-18,beta 1,Corrected edge only,59.81 (1.50),56.63 (1.50),-2.472 (1.669),14,14
+round > 30,ResNet-18,beta 1,Correction + product,62.98 (2.54),59.40 (2.48),+0.300 (0.180),3,3
+round > 30,ResNet-18,beta 1,DriftGate,62.73 (2.48),59.10 (2.37),,9,9
+round > 30,ResNet-18,beta 1,Lower-entropy exit,62.82 (2.49),59.31 (2.40),+0.217 (0.352),6,7
+round > 30,ResNet-18,beta 1,Logit-entropy weighting,62.82 (2.49),59.31 (2.40),+0.217 (0.352),5,6
+round > 30,ResNet-18,beta 1,Label-shift EM,59.48 (1.60),55.78 (1.49),-3.317 (1.242),15,16
+round > 30,ResNet-18,beta 1,Learned weight,60.33 (2.47),57.28 (2.31),-1.818 (1.528),13,13
+round > 30,ResNet-18,beta 1,Correction + learned weight,61.10 (1.81),57.80 (1.79),-1.295 (0.874),12,12
+round > 30,ResNet-18,beta 0.5,Device only,61.77 (2.75),58.11 (2.61),-1.104 (0.422),10,10
+round > 30,ResNet-18,beta 0.5,Raw edge only,59.82 (1.75),56.95 (1.73),-2.264 (1.398),12,12
+round > 30,ResNet-18,beta 0.5,Probability average,62.97 (2.44),59.48 (2.35),+0.260 (0.186),2,1
+round > 30,ResNet-18,beta 0.5,Logit sum,62.91 (2.40),59.46 (2.33),+0.243 (0.068),5,2
+round > 30,ResNet-18,beta 0.5,No correction + adaptive w,62.88 (2.50),59.35 (2.39),+0.135 (0.174),6,4
+round > 30,ResNet-18,beta 0.5,Correction + w 0.5,62.97 (2.41),59.34 (2.33),+0.127 (0.012),3,5
+round > 30,ResNet-18,beta 0.5,Correction + w 0.2,62.15 (1.66),58.74 (1.71),-0.476 (0.661),9,9
+round > 30,ResNet-18,beta 0.5,Correction + w 0.45,62.98 (2.36),59.38 (2.31),+0.164 (0.050),1,3
+round > 30,ResNet-18,beta 0.5,Corrected edge only,61.29 (1.43),58.02 (1.49),-1.198 (1.016),11,11
+round > 30,ResNet-18,beta 0.5,Correction + product,62.93 (2.48),59.33 (2.41),+0.114 (0.116),4,6
+round > 30,ResNet-18,beta 0.5,DriftGate,62.85 (2.43),59.22 (2.34),,7,8
+round > 30,ResNet-18,beta 0.5,Lower-entropy exit,62.81 (2.47),59.29 (2.38),+0.076 (0.375),8,7
+first day,K=200,beta 1,Device only,62.63 (0.79),58.27 (0.77),-7.448 (0.902),17,17
+first day,K=200,beta 1,Raw edge only,65.30 (1.64),64.06 (1.88),-1.666 (0.452),14,14
+first day,K=200,beta 1,Confidence-based offloading,65.26 (1.63),64.01 (1.87),-1.713 (0.441),15,15
+first day,K=200,beta 1,Probability average,68.90 (1.50),66.32 (1.73),+0.593 (0.095),5,3
+first day,K=200,beta 1,Logit sum,68.86 (1.47),66.15 (1.69),+0.424 (0.086),6,6
+first day,K=200,beta 1,No correction + adaptive w,69.00 (1.58),66.63 (1.83),+0.910 (0.208),3,1
+first day,K=200,beta 1,Correction + w 0.5,68.58 (1.34),65.19 (1.54),-0.535 (0.111),9,10
+first day,K=200,beta 1,Correction + w 0.2,69.23 (1.47),66.27 (1.70),+0.550 (0.051),1,4
+first day,K=200,beta 1,Correction + w 0.45,68.80 (1.37),65.49 (1.59),-0.228 (0.069),7,9
+first day,K=200,beta 1,Corrected edge only,69.15 (1.49),66.41 (1.72),+0.691 (0.066),2,2
+first day,K=200,beta 1,Correction + product,68.15 (1.30),64.63 (1.48),-1.092 (0.179),11,13
+first day,K=200,beta 1,DriftGate,69.00 (1.43),65.72 (1.66),,4,7
+first day,K=200,beta 1,Lower-entropy exit,66.68 (1.68),64.93 (1.92),-0.792 (0.399),12,11
+first day,K=200,beta 1,Logit-entropy weighting,66.68 (1.68),64.93 (1.92),-0.793 (0.398),13,12
+first day,K=200,beta 1,Label-shift EM,64.96 (1.40),61.60 (1.66),-4.122 (0.368),16,16
+first day,K=200,beta 1,Learned weight,68.54 (1.51),66.25 (1.73),+0.530 (0.114),10,5
+first day,K=200,beta 1,Correction + learned weight,68.65 (1.38),65.58 (1.59),-0.141 (0.064),8,8
+first day,K=200,beta 0.5,Device only,62.63 (0.79),58.27 (0.77),-6.089 (0.766),12,12
+first day,K=200,beta 0.5,Raw edge only,66.08 (1.42),63.70 (1.59),-0.666 (0.154),11,10
+first day,K=200,beta 0.5,Probability average,67.84 (1.36),64.78 (1.54),+0.415 (0.070),6,3
+first day,K=200,beta 0.5,Logit sum,67.82 (1.35),64.66 (1.52),+0.294 (0.069),7,5
+first day,K=200,beta 0.5,No correction + adaptive w,67.88 (1.40),64.93 (1.58),+0.562 (0.115),4,1
+first day,K=200,beta 0.5,Correction + w 0.5,67.70 (1.25),64.04 (1.41),-0.323 (0.061),8,8
+first day,K=200,beta 0.5,Correction + w 0.2,68.14 (1.32),64.72 (1.49),+0.355 (0.021),2,4
+first day,K=200,beta 0.5,Correction + w 0.45,67.84 (1.27),64.23 (1.43),-0.130 (0.036),5,7
+first day,K=200,beta 0.5,Corrected edge only,68.16 (1.33),64.83 (1.50),+0.470 (0.029),1,2
+first day,K=200,beta 0.5,Correction + product,67.35 (1.23),63.61 (1.37),-0.757 (0.098),9,11
+first day,K=200,beta 0.5,DriftGate,67.95 (1.30),64.36 (1.47),,3,6
+first day,K=200,beta 0.5,Lower-entropy exit,66.56 (1.41),64.00 (1.59),-0.366 (0.133),10,9
+round > 30,K=200,beta 1,Device only,60.26 (0.92),55.92 (0.82),-8.596 (1.126),17,17
+round > 30,K=200,beta 1,Raw edge only,67.73 (2.39),65.64 (2.47),+1.125 (0.708),11,5
+round > 30,K=200,beta 1,Confidence-based offloading,67.68 (2.38),65.59 (2.46),+1.067 (0.691),13,6
+round > 30,K=200,beta 1,Probability average,68.56 (1.91),65.70 (2.06),+1.184 (0.149),4,4
+round > 30,K=200,beta 1,Logit sum,68.38 (1.87),65.41 (2.01),+0.890 (0.126),5,10
+round > 30,K=200,beta 1,No correction + adaptive w,68.84 (2.02),66.19 (2.18),+1.672 (0.275),2,1
+round > 30,K=200,beta 1,Correction + w 0.5,67.43 (1.69),63.86 (1.81),-0.656 (0.130),14,14
+round > 30,K=200,beta 1,Correction + w 0.2,68.73 (1.86),65.49 (2.01),+0.969 (0.080),3,9
+round > 30,K=200,beta 1,Correction + w 0.45,67.76 (1.73),64.27 (1.86),-0.251 (0.080),10,13
+round > 30,K=200,beta 1,Corrected edge only,69.04 (1.90),65.94 (2.05),+1.419 (0.132),1,2
+round > 30,K=200,beta 1,Correction + product,66.84 (1.63),63.17 (1.73),-1.350 (0.220),15,15
+round > 30,K=200,beta 1,DriftGate,67.98 (1.80),64.52 (1.94),,7,11
+round > 30,K=200,beta 1,Lower-entropy exit,67.77 (2.29),65.49 (2.40),+0.972 (0.576),8,7
+round > 30,K=200,beta 1,Logit-entropy weighting,67.77 (2.29),65.49 (2.40),+0.971 (0.575),9,8
+round > 30,K=200,beta 1,Label-shift EM,65.07 (1.88),61.17 (2.06),-3.349 (0.298),16,16
+round > 30,K=200,beta 1,Learned weight,68.25 (1.93),65.73 (2.06),+1.213 (0.162),6,3
+round > 30,K=200,beta 1,Correction + learned weight,67.71 (1.73),64.46 (1.86),-0.055 (0.081),12,12
+round > 30,K=200,beta 0.5,Device only,60.26 (0.92),55.92 (0.82),-6.947 (0.944),12,12
+round > 30,K=200,beta 0.5,Raw edge only,66.42 (1.96),63.61 (2.00),+0.739 (0.288),9,4
+round > 30,K=200,beta 0.5,Probability average,66.98 (1.76),63.72 (1.84),+0.849 (0.121),4,2
+round > 30,K=200,beta 0.5,Logit sum,66.85 (1.73),63.50 (1.81),+0.631 (0.106),5,6
+round > 30,K=200,beta 0.5,No correction + adaptive w,67.10 (1.81),63.95 (1.89),+1.078 (0.178),2,1
+round > 30,K=200,beta 0.5,Correction + w 0.5,66.27 (1.59),62.48 (1.65),-0.392 (0.071),10,10
+round > 30,K=200,beta 0.5,Correction + w 0.2,67.02 (1.68),63.42 (1.75),+0.545 (0.034),3,7
+round > 30,K=200,beta 0.5,Correction + w 0.45,66.47 (1.61),62.73 (1.68),-0.144 (0.043),7,9
+round > 30,K=200,beta 0.5,Corrected edge only,67.18 (1.70),63.65 (1.77),+0.776 (0.053),1,3
+round > 30,K=200,beta 0.5,Correction + product,65.81 (1.54),61.95 (1.60),-0.921 (0.124),11,11
+round > 30,K=200,beta 0.5,DriftGate,66.60 (1.65),62.87 (1.72),,6,8
+round > 30,K=200,beta 0.5,Lower-entropy exit,66.45 (1.94),63.57 (1.99),+0.695 (0.278),8,5
+first day,K=500,beta 1,Device only,63.12 (0.19),58.66 (0.18),-8.127 (0.203),17,17
+first day,K=500,beta 1,Raw edge only,67.07 (0.40),65.85 (0.48),-0.936 (0.400),14,13
+first day,K=500,beta 1,Confidence-based offloading,67.03 (0.40),65.81 (0.48),-0.981 (0.402),15,14
+first day,K=500,beta 1,Probability average,70.38 (0.16),67.80 (0.22),+1.015 (0.226),4,2
+first day,K=500,beta 1,Logit sum,70.29 (0.15),67.57 (0.21),+0.781 (0.243),5,5
+first day,K=500,beta 1,No correction + adaptive w,70.60 (0.22),68.25 (0.28),+1.465 (0.252),1,1
+first day,K=500,beta 1,Correction + w 0.5,69.62 (0.19),66.17 (0.27),-0.619 (0.030),10,12
+first day,K=500,beta 1,Correction + w 0.2,70.53 (0.18),67.52 (0.28),+0.733 (0.109),3,6
+first day,K=500,beta 1,Correction + w 0.45,69.90 (0.19),66.53 (0.28),-0.255 (0.037),8,11
+first day,K=500,beta 1,Corrected edge only,70.53 (0.16),67.75 (0.27),+0.961 (0.139),2,4
+first day,K=500,beta 1,Correction + product,69.11 (0.20),65.53 (0.28),-1.260 (0.026),11,15
+first day,K=500,beta 1,DriftGate,70.11 (0.22),66.79 (0.30),,6,7
+first day,K=500,beta 1,Lower-entropy exit,68.41 (0.41),66.72 (0.46),-0.072 (0.392),12,9
+first day,K=500,beta 1,Logit-entropy weighting,68.41 (0.41),66.71 (0.46),-0.075 (0.392),13,10
+first day,K=500,beta 1,Label-shift EM,66.18 (0.26),62.77 (0.36),-4.018 (0.136),16,16
+first day,K=500,beta 1,Learned weight,70.05 (0.16),67.79 (0.23),+1.000 (0.226),7,3
+first day,K=500,beta 1,Correction + learned weight,69.84 (0.17),66.72 (0.26),-0.071 (0.047),9,8
+first day,K=500,beta 0.5,Device only,63.12 (0.19),58.66 (0.18),-6.712 (0.283),12,12
+first day,K=500,beta 0.5,Raw edge only,67.55 (0.36),65.17 (0.43),-0.208 (0.256),11,9
+first day,K=500,beta 0.5,Probability average,69.16 (0.24),66.10 (0.31),+0.726 (0.160),4,2
+first day,K=500,beta 0.5,Logit sum,69.13 (0.23),65.95 (0.30),+0.581 (0.169),5,4
+first day,K=500,beta 0.5,No correction + adaptive w,69.25 (0.28),66.31 (0.35),+0.934 (0.190),3,1
+first day,K=500,beta 0.5,Correction + w 0.5,68.70 (0.20),65.00 (0.28),-0.374 (0.022),8,10
+first day,K=500,beta 0.5,Correction + w 0.2,69.31 (0.23),65.84 (0.32),+0.465 (0.076),2,5
+first day,K=500,beta 0.5,Correction + w 0.45,68.89 (0.21),65.23 (0.28),-0.142 (0.016),7,8
+first day,K=500,beta 0.5,Corrected edge only,69.37 (0.24),66.00 (0.32),+0.626 (0.097),1,3
+first day,K=500,beta 0.5,Correction + product,68.30 (0.20),64.50 (0.27),-0.873 (0.037),9,11
+first day,K=500,beta 0.5,DriftGate,69.01 (0.22),65.37 (0.30),,6,7
+first day,K=500,beta 0.5,Lower-entropy exit,67.99 (0.36),65.44 (0.42),+0.068 (0.247),10,6
+round > 30,K=500,beta 1,Device only,60.90 (0.17),56.40 (0.17),-9.315 (0.229),17,17
+round > 30,K=500,beta 1,Raw edge only,69.67 (0.64),67.57 (0.69),+1.858 (0.502),9,2
+round > 30,K=500,beta 1,Confidence-based offloading,69.62 (0.64),67.52 (0.68),+1.803 (0.504),10,3
+round > 30,K=500,beta 1,Probability average,70.29 (0.32),67.38 (0.34),+1.666 (0.248),3,8
+round > 30,K=500,beta 1,Logit sum,70.06 (0.30),67.02 (0.33),+1.301 (0.266),5,9
+round > 30,K=500,beta 1,No correction + adaptive w,70.71 (0.39),68.02 (0.42),+2.308 (0.282),1,1
+round > 30,K=500,beta 1,Correction + w 0.5,68.63 (0.30),64.96 (0.35),-0.754 (0.039),14,14
+round > 30,K=500,beta 1,Correction + w 0.2,70.19 (0.35),66.85 (0.41),+1.139 (0.113),4,10
+round > 30,K=500,beta 1,Correction + w 0.45,69.03 (0.31),65.42 (0.36),-0.291 (0.041),13,13
+round > 30,K=500,beta 1,Corrected edge only,70.59 (0.37),67.40 (0.43),+1.680 (0.154),2,7
+round > 30,K=500,beta 1,Correction + product,67.95 (0.30),64.17 (0.35),-1.542 (0.043),15,15
+round > 30,K=500,beta 1,DriftGate,69.28 (0.33),65.71 (0.39),,11,12
+round > 30,K=500,beta 1,Lower-entropy exit,69.75 (0.60),67.47 (0.61),+1.752 (0.438),7,5
+round > 30,K=500,beta 1,Logit-entropy weighting,69.75 (0.60),67.46 (0.61),+1.749 (0.438),8,6
+round > 30,K=500,beta 1,Label-shift EM,66.30 (0.45),62.34 (0.52),-3.376 (0.145),16,16
+round > 30,K=500,beta 1,Learned weight,70.05 (0.32),67.49 (0.36),+1.775 (0.262),6,4
+round > 30,K=500,beta 1,Correction + learned weight,69.06 (0.29),65.72 (0.35),+0.003 (0.044),12,11
+round > 30,K=500,beta 0.5,Device only,60.90 (0.17),56.40 (0.17),-7.606 (0.292),12,12
+round > 30,K=500,beta 0.5,Raw edge only,68.05 (0.54),65.19 (0.57),+1.183 (0.275),7,3
+round > 30,K=500,beta 0.5,Probability average,68.54 (0.40),65.21 (0.43),+1.202 (0.178),3,2
+round > 30,K=500,beta 0.5,Logit sum,68.38 (0.38),64.96 (0.42),+0.951 (0.189),4,5
+round > 30,K=500,beta 0.5,No correction + adaptive w,68.72 (0.45),65.50 (0.49),+1.498 (0.211),1,1
+round > 30,K=500,beta 0.5,Correction + w 0.5,67.45 (0.34),63.56 (0.38),-0.451 (0.027),10,10
+round > 30,K=500,beta 0.5,Correction + w 0.2,68.36 (0.39),64.65 (0.43),+0.643 (0.068),5,7
+round > 30,K=500,beta 0.5,Correction + w 0.45,67.69 (0.35),63.84 (0.39),-0.165 (0.017),9,9
+round > 30,K=500,beta 0.5,Corrected edge only,68.56 (0.40),64.93 (0.45),+0.920 (0.089),2,6
+round > 30,K=500,beta 0.5,Correction + product,66.92 (0.33),62.96 (0.36),-1.051 (0.042),11,11
+round > 30,K=500,beta 0.5,DriftGate,67.84 (0.36),64.01 (0.40),,8,8
+round > 30,K=500,beta 0.5,Lower-entropy exit,68.10 (0.54),65.17 (0.56),+1.160 (0.264),6,4
+frozen replay,S1 replay,beta 1,Device only,66.38 (1.28),61.60 (1.30),-6.333 (1.209),17,17
+frozen replay,S1 replay,beta 1,Raw edge only,71.74 (1.99),68.78 (2.21),+0.848 (0.783),9,5
+frozen replay,S1 replay,beta 1,Confidence-based offloading,71.47 (1.98),68.41 (2.20),+0.476 (0.792),14,10
+frozen replay,S1 replay,beta 1,Probability average,72.27 (1.75),68.73 (1.91),+0.798 (0.417),4,6
+frozen replay,S1 replay,beta 1,Logit sum,72.08 (1.74),68.44 (1.93),+0.513 (0.452),6,9
+frozen replay,S1 replay,beta 1,No correction + adaptive w,72.46 (1.91),69.10 (2.09),+1.173 (0.615),3,2
+frozen replay,S1 replay,beta 1,Correction + w 0.5,71.53 (1.44),67.41 (1.53),-0.517 (0.196),13,14
+frozen replay,S1 replay,beta 1,Correction + w 0.2,72.58 (1.77),68.82 (1.86),+0.889 (0.314),2,4
+frozen replay,S1 replay,beta 1,Correction + w 0.45,71.83 (1.52),67.79 (1.61),-0.144 (0.124),8,13
+frozen replay,S1 replay,beta 1,Corrected edge only,72.74 (1.91),69.12 (2.00),+1.187 (0.468),1,1
+frozen replay,S1 replay,beta 1,Correction + product,71.12 (1.38),66.90 (1.48),-1.028 (0.367),15,15
+frozen replay,S1 replay,beta 1,DriftGate,71.95 (1.56),67.93 (1.64),,7,12
+frozen replay,S1 replay,beta 1,Lower-entropy exit,71.71 (1.85),68.52 (2.02),+0.591 (0.612),12,8
+frozen replay,S1 replay,beta 1,Logit-entropy weighting,71.72 (1.86),68.53 (2.03),+0.600 (0.617),10,7
+frozen replay,S1 replay,beta 1,Label-shift EM,70.17 (1.63),65.78 (1.75),-2.147 (0.415),16,16
+frozen replay,S1 replay,beta 1,Learned weight,72.13 (1.88),69.01 (2.10),+1.080 (0.590),5,3
+frozen replay,S1 replay,beta 1,Correction + learned weight,71.71 (1.62),67.96 (1.72),+0.034 (0.283),11,11
+frozen replay,S1 replay,beta 0.5,Device only,66.38 (1.28),61.60 (1.30),-5.403 (0.968),12,12
+frozen replay,S1 replay,beta 0.5,Raw edge only,70.90 (1.76),67.44 (1.90),+0.437 (0.547),10,4
+frozen replay,S1 replay,beta 0.5,Probability average,71.42 (1.56),67.61 (1.67),+0.607 (0.273),4,2
+frozen replay,S1 replay,beta 0.5,Logit sum,71.26 (1.54),67.38 (1.67),+0.377 (0.282),5,7
+frozen replay,S1 replay,beta 0.5,No correction + adaptive w,71.52 (1.68),67.81 (1.80),+0.813 (0.435),2,1
+frozen replay,S1 replay,beta 0.5,Correction + w 0.5,70.91 (1.38),66.63 (1.45),-0.367 (0.130),9,10
+frozen replay,S1 replay,beta 0.5,Correction + w 0.2,71.49 (1.60),67.44 (1.66),+0.435 (0.203),3,5
+frozen replay,S1 replay,beta 0.5,Correction + w 0.45,71.09 (1.43),66.86 (1.50),-0.136 (0.076),7,9
+frozen replay,S1 replay,beta 0.5,Corrected edge only,71.55 (1.68),67.57 (1.74),+0.571 (0.292),1,3
+frozen replay,S1 replay,beta 0.5,Correction + product,70.56 (1.33),66.21 (1.41),-0.790 (0.284),11,11
+frozen replay,S1 replay,beta 0.5,DriftGate,71.21 (1.47),67.00 (1.54),,6,8
+frozen replay,S1 replay,beta 0.5,Lower-entropy exit,70.95 (1.69),67.40 (1.81),+0.396 (0.467),8,6
+frozen replay,S2 replay,beta 1,Device only,71.12 (3.13),67.45 (2.86),-5.843 (1.143),17,17
+frozen replay,S2 replay,beta 1,Raw edge only,74.94 (4.18),72.47 (3.64),-0.822 (1.612),13,10
+frozen replay,S2 replay,beta 1,Confidence-based offloading,74.76 (4.03),72.26 (3.49),-1.031 (1.459),15,13
+frozen replay,S2 replay,beta 1,Probability average,75.90 (3.29),73.06 (2.75),-0.238 (0.745),7,6
+frozen replay,S2 replay,beta 1,Logit sum,75.86 (3.08),72.98 (2.58),-0.317 (0.642),9,7
+frozen replay,S2 replay,beta 1,No correction + adaptive w,75.88 (3.54),73.16 (3.00),-0.138 (0.977),8,4
+frozen replay,S2 replay,beta 1,Correction + w 0.5,76.23 (2.45),72.93 (2.00),-0.367 (0.106),5,8
+frozen replay,S2 replay,beta 1,Correction + w 0.2,76.66 (2.56),73.53 (2.07),+0.230 (0.148),1,1
+frozen replay,S2 replay,beta 1,Correction + w 0.45,76.40 (2.47),73.13 (2.01),-0.162 (0.048),4,5
+frozen replay,S2 replay,beta 1,Corrected edge only,76.59 (2.67),73.52 (2.17),+0.220 (0.253),2,2
+frozen replay,S2 replay,beta 1,Correction + product,76.00 (2.40),72.67 (2.00),-0.630 (0.272),6,9
+frozen replay,S2 replay,beta 1,DriftGate,76.54 (2.52),73.30 (2.03),,3,3
+frozen replay,S2 replay,beta 1,Lower-entropy exit,75.08 (4.03),72.45 (3.46),-0.845 (1.424),12,12
+frozen replay,S2 replay,beta 1,Logit-entropy weighting,75.09 (4.03),72.46 (3.45),-0.839 (1.421),11,11
+frozen replay,S2 replay,beta 1,Label-shift EM,74.77 (1.96),71.16 (1.66),-2.134 (0.376),14,16
+frozen replay,S2 replay,beta 1,Learned weight,74.53 (3.62),71.95 (3.12),-1.348 (1.193),16,15
+frozen replay,S2 replay,beta 1,Correction + learned weight,75.26 (2.61),72.17 (2.14),-1.126 (0.420),10,14
+frozen replay,S2 replay,beta 0.5,Device only,71.12 (3.13),67.45 (2.86),-5.162 (1.068),12,12
+frozen replay,S2 replay,beta 0.5,Raw edge only,74.91 (3.92),72.14 (3.51),-0.477 (1.246),11,9
+frozen replay,S2 replay,beta 0.5,Probability average,75.54 (3.36),72.50 (2.92),-0.115 (0.668),8,5
+frozen replay,S2 replay,beta 0.5,Logit sum,75.48 (3.18),72.41 (2.76),-0.210 (0.551),9,7
+frozen replay,S2 replay,beta 0.5,No correction + adaptive w,75.58 (3.53),72.61 (3.10),-0.001 (0.842),6,4
+frozen replay,S2 replay,beta 0.5,Correction + w 0.5,75.78 (2.60),72.35 (2.20),-0.265 (0.124),5,8
+frozen replay,S2 replay,beta 0.5,Correction + w 0.2,76.04 (2.75),72.72 (2.33),+0.102 (0.120),1,1
+frozen replay,S2 replay,beta 0.5,Correction + w 0.45,75.89 (2.64),72.48 (2.23),-0.133 (0.057),4,6
+frozen replay,S2 replay,beta 0.5,Corrected edge only,75.99 (2.83),72.71 (2.41),+0.091 (0.206),3,2
+frozen replay,S2 replay,beta 0.5,Correction + product,75.57 (2.55),72.11 (2.18),-0.502 (0.274),7,10
+frozen replay,S2 replay,beta 0.5,DriftGate,76.01 (2.68),72.62 (2.26),,2,3
+frozen replay,S2 replay,beta 0.5,Lower-entropy exit,74.98 (3.86),72.11 (3.42),-0.508 (1.156),10,11
+three-day frozen replay,S1 three-day,beta 1,Device only,66.44 (1.04),61.69 (0.92),-6.278 (1.215),13,13
+three-day frozen replay,S1 three-day,beta 1,Raw edge only,71.64 (2.22),68.77 (2.23),+0.798 (0.570),8,4
+three-day frozen replay,S1 three-day,beta 1,Confidence-based offloading,71.35 (2.22),68.38 (2.22),+0.414 (0.562),11,8
+three-day frozen replay,S1 three-day,beta 1,Probability average,72.19 (1.86),68.71 (1.85),+0.738 (0.238),4,5
+three-day frozen replay,S1 three-day,beta 1,Logit sum,72.04 (1.79),68.46 (1.81),+0.493 (0.290),5,6
+three-day frozen replay,S1 three-day,beta 1,No correction + adaptive w,72.36 (2.07),69.07 (2.07),+1.101 (0.411),3,2
+three-day frozen replay,S1 three-day,beta 1,Correction + w 0.5,71.52 (1.58),67.46 (1.50),-0.512 (0.200),10,11
+three-day frozen replay,S1 three-day,beta 1,Correction + w 0.2,72.52 (2.01),68.84 (1.94),+0.868 (0.295),2,3
+three-day frozen replay,S1 three-day,beta 1,Correction + w 0.45,71.81 (1.67),67.82 (1.60),-0.145 (0.120),7,10
+three-day frozen replay,S1 three-day,beta 1,Corrected edge only,72.67 (2.17),69.13 (2.11),+1.159 (0.449),1,1
+three-day frozen replay,S1 three-day,beta 1,Correction + product,71.13 (1.46),66.96 (1.39),-1.011 (0.349),12,12
+three-day frozen replay,S1 three-day,beta 1,DriftGate,71.93 (1.76),67.97 (1.68),,6,9
+three-day frozen replay,S1 three-day,beta 1,Lower-entropy exit,71.56 (2.11),68.45 (2.08),+0.486 (0.408),9,7
+three-day frozen replay,S1 three-day,beta 0.5,Device only,66.44 (1.04),61.69 (0.92),-5.377 (0.902),12,12
+three-day frozen replay,S1 three-day,beta 0.5,Raw edge only,70.83 (1.87),67.46 (1.82),+0.394 (0.427),10,5
+three-day frozen replay,S1 three-day,beta 0.5,Probability average,71.38 (1.61),67.62 (1.55),+0.549 (0.153),4,3
+three-day frozen replay,S1 three-day,beta 0.5,Logit sum,71.25 (1.54),67.40 (1.49),+0.334 (0.212),5,6
+three-day frozen replay,S1 three-day,beta 0.5,No correction + adaptive w,71.48 (1.75),67.84 (1.69),+0.772 (0.258),3,1
+three-day frozen replay,S1 three-day,beta 0.5,Correction + w 0.5,70.92 (1.44),66.70 (1.35),-0.370 (0.129),8,10
+three-day frozen replay,S1 three-day,beta 0.5,Correction + w 0.2,71.48 (1.73),67.49 (1.63),+0.423 (0.184),2,4
+three-day frozen replay,S1 three-day,beta 0.5,Correction + w 0.45,71.10 (1.51),66.93 (1.41),-0.140 (0.075),7,9
+three-day frozen replay,S1 three-day,beta 0.5,Corrected edge only,71.52 (1.84),67.62 (1.73),+0.555 (0.280),1,2
+three-day frozen replay,S1 three-day,beta 0.5,Correction + product,70.58 (1.34),66.28 (1.25),-0.791 (0.259),11,11
+three-day frozen replay,S1 three-day,beta 0.5,DriftGate,71.21 (1.57),67.07 (1.47),,6,8
+three-day frozen replay,S1 three-day,beta 0.5,Lower-entropy exit,70.87 (1.82),67.40 (1.74),+0.328 (0.298),9,7
+three-day frozen replay,S2 three-day,beta 1,Device only,70.62 (3.07),66.69 (2.73),-6.240 (0.829),13,13
+three-day frozen replay,S2 three-day,beta 1,Raw edge only,74.76 (4.51),72.10 (3.89),-0.837 (1.696),11,10
+three-day frozen replay,S2 three-day,beta 1,Confidence-based offloading,74.58 (4.39),71.88 (3.78),-1.059 (1.591),12,12
+three-day frozen replay,S2 three-day,beta 1,Probability average,75.69 (3.56),72.68 (3.08),-0.252 (0.884),7,6
+three-day frozen replay,S2 three-day,beta 1,Logit sum,75.64 (3.31),72.59 (2.85),-0.344 (0.704),9,7
+three-day frozen replay,S2 three-day,beta 1,No correction + adaptive w,75.66 (3.86),72.75 (3.37),-0.181 (1.168),8,5
+three-day frozen replay,S2 three-day,beta 1,Correction + w 0.5,75.99 (2.57),72.53 (2.12),-0.404 (0.105),5,8
+three-day frozen replay,S2 three-day,beta 1,Correction + w 0.2,76.50 (2.75),73.21 (2.27),+0.280 (0.167),1,1
+three-day frozen replay,S2 three-day,beta 1,Correction + w 0.45,76.18 (2.61),72.77 (2.16),-0.166 (0.050),4,4
+three-day frozen replay,S2 three-day,beta 1,Corrected edge only,76.43 (2.88),73.20 (2.38),+0.269 (0.285),2,2
+three-day frozen replay,S2 three-day,beta 1,Correction + product,75.71 (2.54),72.23 (2.14),-0.706 (0.250),6,9
+three-day frozen replay,S2 three-day,beta 1,DriftGate,76.33 (2.67),72.93 (2.20),,3,3
+three-day frozen replay,S2 three-day,beta 1,Lower-entropy exit,74.85 (4.41),72.03 (3.87),-0.903 (1.671),10,11
+three-day frozen replay,S2 three-day,beta 0.5,Device only,70.62 (3.07),66.69 (2.73),-5.458 (0.910),12,12
+three-day frozen replay,S2 three-day,beta 0.5,Raw edge only,74.69 (4.19),71.71 (3.73),-0.442 (1.416),11,9
+three-day frozen replay,S2 three-day,beta 0.5,Probability average,75.26 (3.53),72.03 (3.09),-0.122 (0.774),7,5
+three-day frozen replay,S2 three-day,beta 0.5,Logit sum,75.18 (3.31),71.92 (2.88),-0.237 (0.598),9,7
+three-day frozen replay,S2 three-day,beta 0.5,No correction + adaptive w,75.30 (3.72),72.14 (3.29),-0.008 (0.968),6,4
+three-day frozen replay,S2 three-day,beta 0.5,Correction + w 0.5,75.47 (2.67),71.86 (2.23),-0.298 (0.127),5,8
+three-day frozen replay,S2 three-day,beta 0.5,Correction + w 0.2,75.79 (2.87),72.28 (2.42),+0.124 (0.148),1,1
+three-day frozen replay,S2 three-day,beta 0.5,Correction + w 0.45,75.60 (2.72),72.01 (2.28),-0.144 (0.054),4,6
+three-day frozen replay,S2 three-day,beta 0.5,Corrected edge only,75.74 (2.97),72.27 (2.52),+0.115 (0.249),2,2
+three-day frozen replay,S2 three-day,beta 0.5,Correction + product,75.22 (2.63),71.58 (2.22),-0.571 (0.277),8,11
+three-day frozen replay,S2 three-day,beta 0.5,DriftGate,75.73 (2.77),72.15 (2.32),,3,3
+three-day frozen replay,S2 three-day,beta 0.5,Lower-entropy exit,74.73 (4.12),71.66 (3.66),-0.497 (1.349),10,10

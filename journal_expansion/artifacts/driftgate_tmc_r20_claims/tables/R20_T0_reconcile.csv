@@ -1,0 +1,91 @@
+item,setting,rule or part,condition,value,DriftGate minus it pp / note
+best uncorrected value by rule set,K=500,Probability average,"first day, beta 1, seeds 0 1 2",70.38 (0.16),-0.268 (0.189)
+best uncorrected value by rule set,K=500,Logit sum,"first day, beta 1, seeds 0 1 2",70.29 (0.15),-0.183 (0.203)
+best uncorrected value by rule set,K=500,No correction + adaptive w,"first day, beta 1, seeds 0 1 2",70.60 (0.22),-0.487 (0.217)
+best uncorrected value by rule set,K=500,DriftGate,"first day, beta 1, seeds 0 1 2",70.11 (0.22),
+best uncorrected value by rule set,K=200,Probability average,"first day, beta 1, seeds 0 1 2",68.90 (1.50),+0.098 (0.068)
+best uncorrected value by rule set,K=200,Logit sum,"first day, beta 1, seeds 0 1 2",68.86 (1.47),+0.133 (0.041)
+best uncorrected value by rule set,K=200,No correction + adaptive w,"first day, beta 1, seeds 0 1 2",69.00 (1.58),-0.004 (0.159)
+best uncorrected value by rule set,K=200,DriftGate,"first day, beta 1, seeds 0 1 2",69.00 (1.43),
+best uncorrected value by rule set,ResNet-18,Probability average,"first day, beta 1, seeds 0 1 2",66.39 (3.15),+0.252 (0.344)
+best uncorrected value by rule set,ResNet-18,Logit sum,"first day, beta 1, seeds 0 1 2",66.00 (3.28),+0.641 (0.309)
+best uncorrected value by rule set,ResNet-18,No correction + adaptive w,"first day, beta 1, seeds 0 1 2",66.46 (3.14),+0.175 (0.290)
+best uncorrected value by rule set,ResNet-18,DriftGate,"first day, beta 1, seeds 0 1 2",66.64 (3.14),
+DriftGate minus best uncorrected rule (Round 18 group of 4),S1,Logit sum,"first day, beta 0.5",67.07 (2.63),+0.664 (0.355)
+DriftGate minus best uncorrected rule (Round 18 group of 4),S1,Logit sum,"first day, beta 1",67.37 (3.01),+0.946 (0.568)
+DriftGate minus best uncorrected rule (Round 18 group of 4),S2,Logit sum,"first day, beta 0.5",70.60 (2.23),+1.175 (0.770)
+DriftGate minus best uncorrected rule (Round 18 group of 4),S2,Logit sum,"first day, beta 1",70.07 (1.97),+1.632 (1.035)
+DriftGate minus best uncorrected rule (Round 18 group of 4),S1-fast,Logit sum,"first day, beta 0.5",67.71 (0.66),+0.596 (0.134)
+DriftGate minus best uncorrected rule (Round 18 group of 4),S1-fast,Logit sum,"first day, beta 1",68.12 (1.00),+0.843 (0.249)
+DriftGate minus best uncorrected rule (Round 18 group of 4),partial participation,Logit sum,"first day, beta 0.5",63.23 (0.41),+1.114 (0.286)
+DriftGate minus best uncorrected rule (Round 18 group of 4),partial participation,Logit sum,"first day, beta 1",62.94 (0.81),+1.879 (0.593)
+DriftGate minus best uncorrected rule (Round 18 group of 4),stepwise change,Probability average,"first day, beta 0.5",71.30 (2.06),+0.692 (0.138)
+DriftGate minus best uncorrected rule (Round 18 group of 4),stepwise change,Probability average,"first day, beta 1",71.44 (2.32),+0.920 (0.256)
+DriftGate minus best uncorrected rule (Round 18 group of 4),random mobility,Probability average,"first day, beta 0.5",69.62 (0.41),+1.062 (0.319)
+DriftGate minus best uncorrected rule (Round 18 group of 4),random mobility,Probability average,"first day, beta 1",69.58 (0.45),+1.517 (0.534)
+DriftGate minus best uncorrected rule (Round 18 group of 4),CIFAR-100,Logit sum,"first day, beta 0.5",37.71 (0.78),+0.926 (0.195)
+DriftGate minus best uncorrected rule (Round 18 group of 4),CIFAR-100,Logit sum,"first day, beta 1",39.83 (0.87),+1.456 (0.373)
+DriftGate minus best uncorrected rule (Round 18 group of 4),ResNet-18,No correction + adaptive w,"first day, beta 0.5",66.56 (3.10),+0.178 (0.285)
+DriftGate minus best uncorrected rule (Round 18 group of 4),ResNet-18,No correction + adaptive w,"first day, beta 1",66.46 (3.14),+0.175 (0.290)
+DriftGate minus best uncorrected rule (Round 18 group of 4),K=200,No correction + adaptive w,"first day, beta 0.5",67.88 (1.40),+0.074 (0.096)
+DriftGate minus best uncorrected rule (Round 18 group of 4),K=200,No correction + adaptive w,"first day, beta 1",69.00 (1.58),-0.004 (0.159)
+DriftGate minus best uncorrected rule (Round 18 group of 4),K=500,No correction + adaptive w,"first day, beta 0.5",69.25 (0.28),-0.245 (0.161)
+DriftGate minus best uncorrected rule (Round 18 group of 4),K=500,No correction + adaptive w,"first day, beta 1",70.60 (0.22),-0.487 (0.217)
+DriftGate minus corrected edge only,S1,full window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+0.447 (0.190),
+DriftGate minus corrected edge only,S1,round <= 30 window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+3.872 (0.891),
+DriftGate minus corrected edge only,S1,round > 30 window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",-0.552 (0.352),
+DriftGate minus corrected edge only,S1,round <= 30 contribution to full mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+0.874 (0.201),
+DriftGate minus corrected edge only,S1,round > 30 contribution to full mean,"beta 1, 7 of 31 evaluation rounds are <= 30",-0.427 (0.272),
+DriftGate minus corrected edge only,S1,full window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.176 (0.120),
+DriftGate minus corrected edge only,S1,round <= 30 window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+1.672 (0.435),
+DriftGate minus corrected edge only,S1,round > 30 window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",-0.260 (0.208),
+DriftGate minus corrected edge only,S1,round <= 30 contribution to full mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.378 (0.098),
+DriftGate minus corrected edge only,S1,round > 30 contribution to full mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",-0.201 (0.161),
+DriftGate minus corrected edge only,S2,full window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+1.212 (0.273),
+DriftGate minus corrected edge only,S2,round <= 30 window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+3.537 (0.382),
+DriftGate minus corrected edge only,S2,round > 30 window mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+0.534 (0.258),
+DriftGate minus corrected edge only,S2,round <= 30 contribution to full mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+0.799 (0.086),
+DriftGate minus corrected edge only,S2,round > 30 contribution to full mean,"beta 1, 7 of 31 evaluation rounds are <= 30",+0.413 (0.200),
+DriftGate minus corrected edge only,S2,full window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.537 (0.145),
+DriftGate minus corrected edge only,S2,round <= 30 window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+1.326 (0.247),
+DriftGate minus corrected edge only,S2,round > 30 window mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.306 (0.156),
+DriftGate minus corrected edge only,S2,round <= 30 contribution to full mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.299 (0.056),
+DriftGate minus corrected edge only,S2,round > 30 contribution to full mean,"beta 0.5, 7 of 31 evaluation rounds are <= 30",+0.237 (0.121),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,DriftGate,"Round 12 runs, R20 recompute",68.31 (2.45),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,DriftGate,Round 15 retrained runs (r15_s1_fixed040_s*),68.32 (2.44),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,Probability average,"Round 12 runs, R20 recompute",67.32 (2.92),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,Probability average,Round 15 retrained runs (r15_s1_fixed040_s*),67.32 (2.91),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,Confidence-based offloading,"Round 12 runs, R20 recompute",62.87 (2.64),
+original first-day runs vs retrained first-day runs (Round 15 cache),S1,Confidence-based offloading,Round 15 retrained runs (r15_s1_fixed040_s*),62.86 (2.62),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,DriftGate,"Round 12 runs, R20 recompute",71.70 (0.97),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,DriftGate,Round 15 retrained runs (r15_s2_fixed040_s*),71.74 (0.97),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,Probability average,"Round 12 runs, R20 recompute",69.88 (2.02),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,Probability average,Round 15 retrained runs (r15_s2_fixed040_s*),69.93 (2.02),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,Confidence-based offloading,"Round 12 runs, R20 recompute",65.18 (3.73),
+original first-day runs vs retrained first-day runs (Round 15 cache),S2,Confidence-based offloading,Round 15 retrained runs (r15_s2_fixed040_s*),65.24 (3.75),
+seed sets,S1 replay,DriftGate,seeds 0-4,71.95 (1.56),
+seed sets,S1 replay,DriftGate,seeds 1-4 (Round 17 evaluation seeds),71.82 (1.77),
+beta 0.5 controller values,S1,DriftGate,beta 0.5,67.73 (2.28),
+beta 0.5 controller values,S1,Logit sum,beta 0.5,67.07 (2.63),+0.664 (0.355)
+beta 0.5 controller values,S1,Probability average,beta 0.5,67.02 (2.59),+0.714 (0.312)
+beta 0.5 controller values,S1,Raw edge only,beta 0.5,64.73 (2.44),+3.001 (0.272)
+beta 0.5 controller values,S1,Corrected edge only,beta 0.5,67.55 (2.35),+0.176 (0.120)
+beta 0.5 controller values,S1,Correction + w 0.2,beta 0.5,67.68 (2.34),+0.050 (0.089)
+beta 0.5 controller values,S2,DriftGate,beta 0.5,71.77 (1.48),
+beta 0.5 controller values,S2,Logit sum,beta 0.5,70.60 (2.23),+1.175 (0.770)
+beta 0.5 controller values,S2,Probability average,beta 0.5,70.44 (2.26),+1.330 (0.800)
+beta 0.5 controller values,S2,Raw edge only,beta 0.5,68.20 (3.14),+3.572 (1.666)
+beta 0.5 controller values,S2,Corrected edge only,beta 0.5,71.23 (1.42),+0.537 (0.145)
+beta 0.5 controller values,S2,Correction + w 0.2,beta 0.5,71.45 (1.41),+0.317 (0.106)
+beta 0.5 controller values,S1 replay,DriftGate,beta 0.5,71.21 (1.47),
+beta 0.5 controller values,S1 replay,Logit sum,beta 0.5,71.26 (1.54),-0.059 (0.236)
+beta 0.5 controller values,S1 replay,Probability average,beta 0.5,71.42 (1.56),-0.213 (0.206)
+beta 0.5 controller values,S1 replay,Raw edge only,beta 0.5,70.90 (1.76),+0.302 (0.433)
+beta 0.5 controller values,S1 replay,Corrected edge only,beta 0.5,71.55 (1.68),-0.347 (0.271)
+beta 0.5 controller values,S1 replay,Correction + w 0.2,beta 0.5,71.49 (1.60),-0.287 (0.180)
+beta 0.5 controller values,S2 replay,DriftGate,beta 0.5,76.01 (2.68),
+beta 0.5 controller values,S2 replay,Logit sum,beta 0.5,75.48 (3.18),+0.527 (0.571)
+beta 0.5 controller values,S2 replay,Probability average,beta 0.5,75.54 (3.36),+0.469 (0.694)
+beta 0.5 controller values,S2 replay,Raw edge only,beta 0.5,74.91 (3.92),+1.093 (1.231)
+beta 0.5 controller values,S2 replay,Corrected edge only,beta 0.5,75.99 (2.83),+0.015 (0.202)
+beta 0.5 controller values,S2 replay,Correction + w 0.2,beta 0.5,76.04 (2.75),-0.037 (0.115)

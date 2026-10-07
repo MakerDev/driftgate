@@ -1,0 +1,31 @@
+target,development target accuracy (rule),rule,beta chosen on development seeds 5-7,"evaluation accuracy at that beta, seeds 0-4",offloading ratio,edge calls per request,evaluation target (same definition),evaluation target reached
+A,66.66 (Probability average),DriftGate,0.5,67.73 (2.28),0.499,0.565,67.37 (Logit sum),yes
+A,66.66 (Probability average),No correction + adaptive w,NA (not reached on development),,,,67.37,
+A,66.66 (Probability average),Probability average,0.75,67.31 (2.79),0.745,0.844,67.37 (Logit sum),no
+A,66.66 (Probability average),Logit sum,0.75,67.36 (2.86),0.745,0.844,67.37 (Logit sum),no
+A,66.66 (Probability average),Raw edge only,NA (not reached on development),,,,67.37,
+A,66.66 (Probability average),Correction + w 0.5,0.5,67.60 (2.24),0.499,0.565,67.37 (Logit sum),yes
+A,66.66 (Probability average),Correction + w 0.2,0.5,67.68 (2.34),0.499,0.565,67.37 (Logit sum),yes
+A,66.66 (Probability average),Correction + w 0.45,0.5,67.66 (2.27),0.499,0.565,67.37 (Logit sum),yes
+A,66.66 (Probability average),Corrected edge only,0.5,67.55 (2.35),0.499,0.565,67.37 (Logit sum),yes
+A,66.66 (Probability average),Correction + product,0.5,67.41 (2.22),0.499,0.565,67.37 (Logit sum),yes
+B,67.50 (Correction + w 0.5),DriftGate,0.75,68.20 (2.37),0.745,0.844,68.16 (Correction + w 0.2),yes
+B,67.50 (Correction + w 0.5),No correction + adaptive w,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Probability average,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Logit sum,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Raw edge only,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Correction + w 0.5,1,68.13 (2.37),1.000,1.132,68.16 (Correction + w 0.2),no
+B,67.50 (Correction + w 0.5),Correction + w 0.2,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Correction + w 0.45,1,68.21 (2.42),1.000,1.132,68.16 (Correction + w 0.2),yes
+B,67.50 (Correction + w 0.5),Corrected edge only,NA (not reached on development),,,,68.16,
+B,67.50 (Correction + w 0.5),Correction + product,NA (not reached on development),,,,68.16,
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),DriftGate,0.5,67.73 (2.28),0.499,0.565,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),no
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),No correction + adaptive w,NA (not reached on development),,,,67.90,
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Probability average,NA (not reached on development),,,,67.90,
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Logit sum,NA (not reached on development),,,,67.90,
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Raw edge only,NA (not reached on development),,,,67.90,
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Correction + w 0.5,0.5,67.60 (2.24),0.499,0.565,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),no
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Correction + w 0.2,0.5,67.68 (2.34),0.499,0.565,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),no
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Correction + w 0.45,0.5,67.66 (2.27),0.499,0.565,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),no
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Corrected edge only,0.75,67.91 (2.44),0.745,0.844,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),yes
+C,66.86 (lowest best-over-grid accuracy among the corrected group (Corrected edge only)),Correction + product,0.5,67.41 (2.22),0.499,0.565,67.90 (lowest best-over-grid accuracy among the corrected group (Correction + product)),no

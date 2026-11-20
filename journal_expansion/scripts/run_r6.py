@@ -88,7 +88,7 @@ def main():
     ap.add_argument("--record_probe_values", action="store_true",
                     help="per probe request TV and server-non-Main indicator (needs --record_device_signals)")
     # Round 13b (off by default -> CIFAR-10 and the default split CNN)
-    ap.add_argument("--dataset", default=None, choices=["cifar100"], help="data set other than CIFAR-10")
+    ap.add_argument("--dataset", default=None, choices=["cifar100", "inat"], help="data set other than CIFAR-10")
     ap.add_argument("--model_family", default=None, choices=["resnet20", "vgg11"])
     ap.add_argument("--split_point", default=None, choices=["shallow", "middle"])
     ap.add_argument("--learning_rate", type=float, default=None,

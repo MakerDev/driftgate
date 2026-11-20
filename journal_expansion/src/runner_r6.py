@@ -386,15 +386,26 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
 
     # ---------- data, partition, pools ----------
     set_seed(seed)
+    inat = None
     if dataset is None:
         train_ds, test_ds = get_cifar10(data_root=cfg.get("data_root", "./data_cache"))
+    elif dataset == "inat":   # Round 18 (directive 6.4): iNaturalist species of five North American regions
+        from src import r18oc_inat as inat
+        train_ds, test_ds, inat_meta = inat.load(seed)
+        cfg["num_classes"] = inat.N_CLASSES
     else:   # Round 13b
         from src.datasets_ext import get_dataset
         train_ds, test_ds, ds_meta = get_dataset(dataset)
         cfg["num_classes"] = ds_meta["num_classes"]
     train_labels, test_labels = np.array(train_ds.targets), np.array(test_ds.targets)
-    probe_labels, eval_labels, pool_manifest = make_pool_masks(test_labels, cfg["num_classes"], 0.2, seed=seed)
-    indices, mains, cell_groups, all_used = build_partition(train_labels, env, seed, cfg["num_classes"], cfg)
+    if inat is None:
+        probe_labels, eval_labels, pool_manifest = make_pool_masks(test_labels, cfg["num_classes"], 0.2, seed=seed)
+        indices, mains, cell_groups, all_used = build_partition(train_labels, env, seed, cfg["num_classes"], cfg)
+    else:   # no probes in the fixed-lambda runs; the request pool is the evaluation pool
+        indices, mains, cell_groups, all_used, inat_map = inat.build_partition(inat_meta, train_labels, env, seed)
+        pool_manifest = dict(inat=True, n_train=inat_meta["n_train"], n_request=inat_meta["n_test"],
+                             cell_region={str(c): int(r) for c, r in inat_map["cell_region"].items()},
+                             cell_visits=inat_map["cell_visits"])
     holdout = None
     if holdout_frac:   # Round 18: class-stratified held-out samples per device, never trained on
         holdout, kept = {}, {}
@@ -404,15 +415,22 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             ho = []
             for cl in sorted(set(train_labels[ix].tolist())):
                 pos = ix[train_labels[ix] == cl]
-                n_ho = max(1, int(round(holdout_frac * len(pos))))
-                ho.append(np.sort(hrng.choice(pos, size=n_ho, replace=False)))
+                n_ho = min(max(1, int(round(holdout_frac * len(pos)))), len(pos) - 1)   # a class keeps >= 1 training sample
+                if n_ho > 0:
+                    ho.append(np.sort(hrng.choice(pos, size=n_ho, replace=False)))
             ho = np.sort(np.concatenate(ho))
             holdout[k] = [int(i) for i in ho]
             hs = set(holdout[k])
             kept[k] = [int(i) for i in ix if int(i) not in hs]
         indices = kept
-    probe_rb = RequestBuilder(probe_labels, cfg["num_classes"], cell_groups, all_used)
-    eval_rb = RequestBuilder(eval_labels, cfg["num_classes"], cell_groups, all_used)
+    if inat is None:
+        probe_rb = RequestBuilder(probe_labels, cfg["num_classes"], cell_groups, all_used)
+        eval_rb = RequestBuilder(eval_labels, cfg["num_classes"], cell_groups, all_used)
+    else:
+        assert mode == "fixed", "the iNaturalist setting has no probe pool"
+        probe_rb = None
+        eval_rb = inat.RequestBuilder(test_labels, inat_meta["test_region"], inat_map["cell_region"], cell_groups, seed,
+                                      {k: inat_map["cell_region"][int(env["home_cell"][k])] for k in range(K)})
     X_test = torch.stack([test_ds[i][0] for i in range(len(test_ds))]).to(device)
     Y_test = torch.as_tensor(test_labels, device=device)
 
@@ -721,7 +739,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
             efb = {"": 0, "oor_empty": 0, "oop_empty": 0, "both_empty": 0}
             for c in clients:
                 k = c.cid
-                idx, oop, oor, flag = eval_rb.build(mains[k], cells_of(k, t), float(env["rho"][k, t]))
+                idx, oop, oor, flag = eval_rb.build(mains[k], cells_of(k, t), float(env["rho"][k, t]),
+                                                    **({} if inat is None else dict(k=k, r=r, home=bool(env["at_home"][k, t]))))
                 efb[flag] += 1
                 eval_used.update(int(i) for i in idx)
                 rq = REQ is not None and capture is not None and k in capture

@@ -70,7 +70,10 @@ class MBV2Client(nn.Module):
         self.exit_conv = nn.Conv2d(cin, EXIT_CH, 1, bias=False)
         self.exit_bn = nn.BatchNorm2d(EXIT_CH)
         self.exit_fc = nn.Linear(EXIT_CH, num_classes + (1 if other else 0))
-        cm, cs = CIFAR_STATS[dataset]
+        if dataset == "inat":   # Round 18 iNaturalist: uint8 96 x 96 images, x / 255 with the ImageNet normalisation, no resize
+            cm, cs, self.size = (0.0, 0.0, 0.0), (1 / 255.0,) * 3, 96
+        else:
+            cm, cs = CIFAR_STATS[dataset]
         # x_imagenet = (x_cifar * std_c + mean_c - mean_i) / std_i = x_cifar * scale + shift
         scale = torch.tensor([cs[i] / IMAGENET_STD[i] for i in range(3)]).view(1, 3, 1, 1)
         shift = torch.tensor([(cm[i] - IMAGENET_MEAN[i]) / IMAGENET_STD[i] for i in range(3)]).view(1, 3, 1, 1)
@@ -78,7 +81,9 @@ class MBV2Client(nn.Module):
         self.register_buffer("in_shift", shift, persistent=False)
 
     def prep(self, x):
-        x = x * self.in_scale + self.in_shift
+        x = x.float() * self.in_scale + self.in_shift
+        if x.shape[-1] == self.size:   # iNaturalist (96 x 96 input)
+            return x
         return F.interpolate(x, size=(self.size, self.size), mode="bilinear", align_corners=False)
 
     def block_forward(self, x):

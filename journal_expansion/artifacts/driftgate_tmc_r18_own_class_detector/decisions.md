@@ -84,3 +84,8 @@
 - 고른 것: (b)입니다(`r18oc_make_env.py stepwise`, `randmob`, 파일은 `runs/phaseT18oc_env/`). stepwise change는 옛 실행기의 고정 소속(`make_es_topology(50, 5, 50)`: cell 0–3의 device 5대씩이 다음 cell에도 속함)과 모든 device의 ρ = 0, 0.4, 0.8, 0.4, 0(30라운드씩)입니다. random mobility는 옛 실행기의 Gauss–Markov 모델(1 km 지도, edge 5개, α 0.9, 12 m/s, 라운드당 10초, v32와 같은 seed 42)과 5라운드마다 가까운 edge 2개로 바꾸는 규칙, ρ = 0(라운드 1–75)과 0.8(라운드 76–150)입니다. 하루는 150라운드이고 run은 이를 두 번 되풀이합니다(300라운드).
 - 옛 실행기와 다른 점: 요청 수는 S1과 같은 Poisson 횟수이고, OOP는 v32 2절의 정의(현재 cell의 다른 device가 학습한 class)를 따릅니다. random mobility의 v32 run은 120라운드였지만 지시문 6.3에 따라 300라운드로 돌립니다.
 - 근거: (a)는 학습, 기록, 분석 경로를 두 벌 두게 되어 다른 설정과 같은 코드로 비교한다는 조건이 깨집니다. 5라운드 시험 run이 두 환경에서 모두 끝났습니다. 환경 파일은 크기가 작은 입력이라 저장소에 둡니다(D9의 run 출력과 다름).
+
+## D15. `pretrained-frozen-block`의 설계 선택 (2026-11-21 00:40, 개발용 seed 8–10, 3.5절)
+- 선택지: 판별기 입력 3개 × 모델 2개 × 음성 표본 3개의 18개 조합입니다.
+- 고른 것: `exit|mlp64|both`입니다.
+- 근거: `frozen-replay`의 비율 0.5에서 가장 높은 조합은 `concat|mlp64|both`의 71.80%(SD 1.78)이고, `exit|mlp64|both`는 71.78%(SD 1.82)로 0.02 %p 낮습니다. 0.10 %p 동률 범위 안의 후보가 이 둘이므로 단순성 순서(block < exit < concat)에 따라 `exit`를 고릅니다. 세 번째인 `concat|mlp64|cell`은 71.64%로 범위 밖입니다. 가장 낮은 조합은 `block|mlp64|global`의 69.47%입니다. 전체 표는 `tables/R18oc_design_selection_fz.csv`에 있습니다.

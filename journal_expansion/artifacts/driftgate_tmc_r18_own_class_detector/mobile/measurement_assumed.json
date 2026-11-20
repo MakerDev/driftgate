@@ -1,0 +1,13 @@
+{
+  "$comment": "ASSUMED VALUES ONLY (가정값). v32 manuscript, illustrative latency calculation: T_d = 11.8 ms, 50 Mbps uplink, 20 ms round trip, 0.6 ms edge execution. The device-side time is the v32 CNN value, not a MobileNetV2 measurement; the downlink rate is assumed equal to the uplink rate. No energy value is assumed. Replace with measurement_template.json after measuring.",
+  "measurement_type": "assumed",
+  "network": {"type": "assumed", "uplink_mbps": 50.0, "downlink_mbps": 50.0, "rtt_ms": 20.0},
+  "per_request": {
+    "device_side_ms": {"mean": 11.8, "p95": null},
+    "edge_ms": {"mean": 0.6, "p95": null},
+    "uplink_bytes": 8192,
+    "downlink_bytes": 40,
+    "energy_device_side_mJ": null,
+    "energy_offload_extra_mJ": null
+  }
+}

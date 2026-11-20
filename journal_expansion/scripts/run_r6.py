@@ -106,6 +106,8 @@ def main():
     ap.add_argument("--detector_main", default=None, help="input|model|negatives of the variant with the schedule ablations")
     ap.add_argument("--checkpoint_at", type=int, default=None, help="also save the checkpoint at the end of this round")
     ap.add_argument("--env_dir", default=None, help="directory of the environment files (default runs/phaseT6_env)")
+    ap.add_argument("--device_split", default=None, choices=["stride8", "stride16"], help="Round 18 attempt 2 (MobileNetV2)")
+    ap.add_argument("--other_class", action="store_true", help="Round 18 attempt 1: device exit with an 'other' output")
     args = ap.parse_args()
     if (args.model_family is None) != (args.split_point is None):
         raise SystemExit("--model_family and --split_point go together")
@@ -157,7 +159,8 @@ def main():
            dataset=args.dataset, model_family=args.model_family, split_point=args.split_point,
            save_checkpoint=args.save_checkpoint, record_eval_logprobs=args.record_eval_logprobs,
            replay_from=args.replay_from, model_config=args.model_config, holdout_frac=args.holdout_frac,
-           days=args.days, detector=args.detector, detector_main=args.detector_main, checkpoint_at=args.checkpoint_at)
+           days=args.days, detector=args.detector, detector_main=args.detector_main, checkpoint_at=args.checkpoint_at,
+           device_split=args.device_split, other_class=args.other_class)
 
 
 if __name__ == "__main__":

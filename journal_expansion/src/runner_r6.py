@@ -271,7 +271,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            record_eval_requests=False, record_probe_values=False, record_eval_probs=False,
            record_train_label_hist=False, dataset=None, model_family=None, split_point=None,
            save_checkpoint=False, record_eval_logprobs=False, replay_from=None,
-           model_config=None, holdout_frac=0.0, days=1, detector=False, detector_main=None, checkpoint_at=None):
+           model_config=None, holdout_frac=0.0, days=1, detector=False, detector_main=None, checkpoint_at=None,
+           device_split=None, other_class=False):
     """Round 18 own-class detector options (off by default -> Round 15 behaviour):
     model_config: "cnn-scratch" (the default split CNN), "pretrained-finetuned-block" or "pretrained-frozen-block"
         (src/r18oc_models.py, MobileNetV2 from ImageNet weights);
@@ -283,6 +284,9 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         request ({run}_r18oc.npz); detector_main: the variant that also gets the frozen-at-home and every-10 schedules;
     checkpoint_at: also save the Round 15 checkpoint (with the detector state) at the end of that round
         ({run}_ckpt_r{round}.pt). A replay from such a checkpoint restores the detectors and never updates them.
+    device_split (directive 7.4, attempt 2 `deeper-split`): "stride16" puts MobileNetV2 features[0..10] on the device;
+    other_class (attempt 1 `exit-with-other-class`): the device exit gets an "other" output trained on virtual exit vectors
+        (src/r18oc_detector.train_one_round_other) and every detector input gets P(other).
     Round 15 options (off by default):
     save_checkpoint: at the end of the run, {run}_ckpt.pt with every device's installed client model, every cell's
         server model and client average, the devices' cells, and the label counts of the last training round
@@ -369,6 +373,10 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         assert checkpoint_at is None or record_train_label_hist, "--checkpoint_at needs --record_train_label_hist"
         config.update(model_config=model_config, holdout_frac=holdout_frac, days=days, detector=detector,
                       detector_main=detector_main, checkpoint_at=checkpoint_at)
+    if device_split is not None or other_class:
+        assert model_config in ("pretrained-finetuned-block", "pretrained-frozen-block"), model_config
+        assert not other_class or detector, "--other_class needs --detector"
+        config.update(device_split=device_split, other_class=other_class)
     if save_checkpoint or record_eval_logprobs or replay_from is not None:
         assert not save_checkpoint or record_train_label_hist, "--save_checkpoint needs --record_train_label_hist"
         assert not record_eval_logprobs or record_eval_probs, "--record_eval_logprobs needs --record_eval_probs"
@@ -416,7 +424,8 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     set_seed(cfg["model_seed"])
     if model_config is not None and model_config != "cnn-scratch":   # Round 18: MobileNetV2 split
         from src.r18oc_models import make_factory
-        mf = make_factory(model_config, cfg["num_classes"], dataset=dataset or "cifar10")
+        mf = make_factory(model_config, cfg["num_classes"], dataset=dataset or "cifar10", split=device_split or "stride8",
+                          other=other_class)
     elif model_family is None:
         mf = ModelFactory(dataset="cifar10", num_classes=cfg["num_classes"])
     else:   # Round 13b
@@ -455,8 +464,16 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         from src.r18oc_detector import DetectorBank
         DB = DetectorBank(K, cfg["num_classes"], mains, indices, holdout, X_train, Y_train, seed, device,
                           main_variant=detector_main)
+        DB.other = bool(other_class)
         if RP is not None:
             DB.load_state_dict(RP["r18oc"])
+        if other_class:   # attempt 1: the local round with the "other" output
+            import types
+            from src.r18oc_detector import train_one_round_other
+            for c in clients:
+                c.train_one_round = types.MethodType(
+                    lambda self, method="splitomcplus", gamma=0.5, fedprox_mu=0.01: train_one_round_other(
+                        self, method, gamma, fedprox_mu, bank=DB), c)
     rec.set(split_hash=split_hash(indices), model_init_hash=model_hash(clients[0].client_model),
             disjoint_pools=pool_manifest,
             cell_groups={str(z): sorted(v) for z, v in cell_groups.items()},

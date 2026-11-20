@@ -1,0 +1,22 @@
+{
+  "$comment": "Round 18 mobile measurement. Fill every null with a measured value; leave null what was not measured. measurement_type: measured | assumed.",
+  "measurement_type": "measured",
+  "export": {"manifest": "export/export_manifest.json", "model_config": null, "variant": null, "checkpoint": null},
+  "device": {"name": null, "soc": null, "os": null, "runtime": null, "threads": null, "delegate": null, "power_mode": null},
+  "edge": {"name": null, "gpu": null, "runtime": null, "model": "MobileNetV2 features[7..18] + classifier, float32"},
+  "network": {"type": null, "uplink_mbps": null, "downlink_mbps": null, "rtt_ms": null,
+              "method": "iperf3 (uplink and downlink, 30 s each) and ping (100 packets, mean) between the device and the edge"},
+  "energy": {"method": null, "instrument": null, "sampling_hz": null, "idle_subtracted": null, "scope": "whole device or model compute only"},
+  "workload": {"warmup": 50, "repeats": 500, "input": "reference.npz images, batch 1"},
+  "per_request": {
+    "device_block_ms": {"mean": null, "p95": null},
+    "device_exit_ms": {"mean": null, "p95": null},
+    "detector_ms": {"mean": null, "p95": null},
+    "device_side_ms": {"mean": null, "p95": null},
+    "edge_ms": {"mean": null, "p95": null},
+    "uplink_bytes": null,
+    "downlink_bytes": null,
+    "energy_device_side_mJ": null,
+    "energy_offload_extra_mJ": null
+  }
+}

@@ -57,16 +57,19 @@ def _frozen_block(n_dev, device):
 
 
 class MBV2Client(nn.Module):
-    def __init__(self, num_classes, n_dev, freeze, dataset="cifar10", size=64):
+    """other (directive 7.4, attempt 1 `exit-with-other-class`): the device exit has one more output ("other"); forward
+    returns the logits of the real classes only, full_logits() all of them."""
+
+    def __init__(self, num_classes, n_dev, freeze, dataset="cifar10", size=64, other=False):
         super().__init__()
-        self.n_dev, self.freeze, self.size = n_dev, freeze, size
+        self.n_dev, self.freeze, self.size, self.other, self.C = n_dev, freeze, size, other, num_classes
         if not freeze:
             self.block = copy.deepcopy(_pretrained_features()[:n_dev])
         cin = _block_out_channels(n_dev)
         self.block_ch = cin
         self.exit_conv = nn.Conv2d(cin, EXIT_CH, 1, bias=False)
         self.exit_bn = nn.BatchNorm2d(EXIT_CH)
-        self.exit_fc = nn.Linear(EXIT_CH, num_classes)
+        self.exit_fc = nn.Linear(EXIT_CH, num_classes + (1 if other else 0))
         cm, cs = CIFAR_STATS[dataset]
         # x_imagenet = (x_cifar * std_c + mean_c - mean_i) / std_i = x_cifar * scale + shift
         scale = torch.tensor([cs[i] / IMAGENET_STD[i] for i in range(3)]).view(1, 3, 1, 1)
@@ -90,7 +93,12 @@ class MBV2Client(nn.Module):
 
     def forward(self, x):
         rep = self.block_forward(x)
+        if self.other:
+            return self.exit_fc(self.exit_vec(rep))[:, :self.C], rep
         return self.exit_fc(self.exit_vec(rep)), rep
+
+    def full_logits(self, rep):
+        return self.exit_fc(self.exit_vec(rep))
 
 
 def _block_out_channels(n_dev):
@@ -116,25 +124,26 @@ class MBV2Factory:
     """make_client / make_server like models.architectures.ModelFactory. New layers (device exit, edge classifier) use
     the global torch RNG, as ModelFactory does; the pretrained layers are copied."""
 
-    def __init__(self, num_classes, freeze_block, split="stride8", dataset="cifar10"):
-        self.num_classes, self.freeze, self.split, self.dataset = num_classes, freeze_block, split, dataset
+    def __init__(self, num_classes, freeze_block, split="stride8", dataset="cifar10", other=False):
+        self.num_classes, self.freeze, self.split, self.dataset, self.other = num_classes, freeze_block, split, dataset, other
         self.n_dev = SPLITS[split]
 
     def make_client(self):
-        return MBV2Client(self.num_classes, self.n_dev, self.freeze, self.dataset)
+        return MBV2Client(self.num_classes, self.n_dev, self.freeze, self.dataset, other=self.other)
 
     def make_server(self):
         return MBV2Server(self.num_classes, self.n_dev)
 
 
-def make_factory(model_config, num_classes, dataset="cifar10", split="stride8"):
+def make_factory(model_config, num_classes, dataset="cifar10", split="stride8", other=False):
     if model_config == "cnn-scratch":
+        assert split == "stride8" and not other, "attempts 1 and 2 are defined for the MobileNetV2 configurations"
         from models.architectures import ModelFactory
         return ModelFactory(dataset="cifar10", num_classes=num_classes)
     if model_config == "pretrained-finetuned-block":
-        return MBV2Factory(num_classes, False, split, dataset)
+        return MBV2Factory(num_classes, False, split, dataset, other)
     if model_config == "pretrained-frozen-block":
-        return MBV2Factory(num_classes, True, split, dataset)
+        return MBV2Factory(num_classes, True, split, dataset, other)
     raise ValueError(model_config)
 
 

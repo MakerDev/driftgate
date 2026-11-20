@@ -90,6 +90,9 @@ class DetectorBank:
         self.buf = None
         self._eval = None
         self._own_stats = {}       # replay cache: k -> own-class statistics of the frozen model
+        self.other = False         # attempt 1 (exit-with-other-class): set by the runner; P(other) is appended to every input
+        self.cls_stats = None      # attempt 1: (mu, sd, have) of the exit vectors per class from the last training round
+        self.rounds_begun = 0
 
     # ------------------------------------------------------------------ helpers
     def _gen(self, *parts):
@@ -118,16 +121,24 @@ class DetectorBank:
         for s in range(0, len(reps), FWD_BATCH):
             r_ = reps[s:s + FWD_BATCH].float()
             vb.append(block_vector(r_))
-            ve.append(exit_vector(model, r_))
+            e_ = exit_vector(model, r_)
+            ve.append(torch.cat([e_, self._p_other(model, e_)], 1) if self.other else e_)
         return torch.cat(vb), torch.cat(ve)
+
+    def _p_other(self, model, e_):
+        """attempt 1: probability of the "other" output of the device exit for exit vectors e_ (column vector)."""
+        return torch.softmax(model.exit_fc(e_), 1)[:, -1:]
 
     def _cols(self, inp):
         db, de = self.dims
+        if self.other:   # de includes the P(other) column, which every input gets
+            return {"block": list(range(db)) + [db + de - 1], "exit": slice(db, db + de), "concat": slice(0, db + de)}[inp]
         return {"block": slice(0, db), "exit": slice(db, db + de), "concat": slice(0, db + de)}[inp]
 
     # ------------------------------------------------------------------ training-round hooks
     def begin_round(self):
         self.buf = {}
+        self.rounds_begun += 1
 
     @torch.no_grad()
     def post_local_train(self, c):
@@ -169,6 +180,9 @@ class DetectorBank:
         mu_c = (S1 / N.clamp(min=1)[:, None])
         var_c = (S2 / N.clamp(min=1)[:, None] - mu_c ** 2).clamp(min=0)
         mu_c, sd_c = mu_c.float(), var_c.sqrt().float()
+        if self.other:   # attempt 1: the edge sends the exit-vector statistics with the round's models
+            db_, de_ = self.dims
+            self.cls_stats = (mu_c[:, db_:db_ + de_ - 1].clone(), sd_c[:, db_:db_ + de_ - 1].clone(), have.clone())
         # cells of each participating device and its participating cell mates
         cells = {k: list(by_id[k].edge_server_ids) for k in P}
         members = {}
@@ -202,6 +216,9 @@ class DetectorBank:
             if len(absent):
                 gz = torch.randn(len(absent), N_VIRTUAL, d, generator=self._gen(r, k, 2), device=self.device)
                 virt = (mu_c[absent][:, None, :] + sd_c[absent][:, None, :] * gz).reshape(-1, d)
+                if self.other:   # P(other) of a virtual vector from device k's exit, not drawn from the statistics
+                    db_ = self.dims[0]
+                    virt[:, -1:] = self._p_other(models[k], virt[:, db_:d - 1])
             else:
                 virt = torch.zeros(0, d, device=self.device)
             rows[k] = (own[k], cellv, virt)
@@ -413,6 +430,8 @@ class DetectorBank:
         ev = self._eval
         k, model, st = ev["k"], ev["model"], ev["st"]
         vb, ve = block_vector(rep), exit_vector(model, rep.float())
+        if self.other:
+            ve = torch.cat([ve, self._p_other(model, ve)], 1)
         if self.dims is None:
             self.dims = (vb.shape[1], ve.shape[1])
         v = torch.cat([vb, ve], 1)
@@ -477,3 +496,50 @@ class DetectorBank:
         assert st["main"] == self.main, (st["main"], self.main)
         self.snap = {s: {int(k): (None if sn is None else dict(sn, ent=dev(sn["ent"]))) for k, sn in v.items()}
                      for s, v in st["snap"].items()}
+
+
+# ------------------------------------------------------------------------------------------------ attempt 1
+def train_one_round_other(self, method="splitomcplus", gamma=0.5, fedprox_mu=0.01, bank=None):
+    """attempt 1 (`exit-with-other-class`), bound to a SplitOMCClient: the splitomcplus local round of
+    train/trainer.SplitOMCClient.train_one_round with the device exit's (C+1)-way logits in the multi-exit loss, plus
+    gamma x CE(exit_fc(v), "other") on as many virtual exit vectors per batch as real samples, drawn uniformly over the
+    classes outside M_k (class mean and diagonal SD of the exit vectors from the edge, previous round; none in round 1)."""
+    from models.losses import multi_exit_loss
+    assert method == "splitomcplus"
+    m = self.client_model
+    m.train()
+    for sm in self.server_models.values():
+        sm.train()
+    opt_c = torch.optim.SGD(m.parameters(), lr=self.lr, momentum=self.momentum, weight_decay=self.wd)
+    opt_s = {z: torch.optim.SGD(sm.parameters(), lr=self.lr, momentum=self.momentum, weight_decay=self.wd)
+             for z, sm in self.server_models.items()}
+    st = bank.cls_stats
+    cls = None
+    if st is not None:
+        mu, sd, have = st
+        cls = torch.nonzero(have & ~bank.M[self.cid]).flatten()
+        if len(cls) == 0:
+            cls = None
+    gen = bank._gen(bank.rounds_begun, self.cid, 30)
+    epoch_losses = []
+    for _ in range(self.local_epochs):
+        bl = []
+        for images, labels in self.train_loader:
+            images, labels = images.to(self.device), labels.to(self.device)
+            opt_c.zero_grad()
+            for o in opt_s.values():
+                o.zero_grad()
+            rep = m.block_forward(images)
+            full = m.exit_fc(m.exit_vec(rep))
+            loss = multi_exit_loss(full, [self.server_models[z](rep)[0] for z in self.edge_server_ids], labels, gamma=gamma)
+            if cls is not None:
+                pick = cls[torch.randint(len(cls), (len(labels),), generator=gen, device=self.device)]
+                v = mu[pick] + sd[pick] * torch.randn(len(labels), mu.shape[1], generator=gen, device=self.device)
+                loss = loss + gamma * F.cross_entropy(m.exit_fc(v), torch.full((len(labels),), m.C, device=self.device))
+            loss.backward()
+            opt_c.step()
+            for o in opt_s.values():
+                o.step()
+            bl.append(loss.item())
+        epoch_losses.append(np.mean(bl) if bl else 0.0)
+    return np.mean(epoch_losses) if epoch_losses else 0.0

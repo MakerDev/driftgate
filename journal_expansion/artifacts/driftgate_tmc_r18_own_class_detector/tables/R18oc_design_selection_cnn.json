@@ -1,0 +1,36 @@
+{
+ "model_config": "cnn-scratch",
+ "chosen": "exit|mlp64|both",
+ "best": "exit|mlp64|both",
+ "best_acc": 70.84557249249487,
+ "chosen_acc": 70.84557249249487,
+ "candidates_within_tie": [
+  "exit|mlp64|both"
+ ],
+ "tie_pp": 0.1,
+ "acc_frozen_replay_ratio_0_5": {
+  "block|logreg|cell": 67.91389526840584,
+  "block|logreg|global": 68.26670949336604,
+  "block|logreg|both": 68.06319496407237,
+  "block|mlp64|cell": 69.59495167263971,
+  "block|mlp64|global": 68.88899889205561,
+  "block|mlp64|both": 69.73006022099845,
+  "exit|logreg|cell": 69.38554270167528,
+  "exit|logreg|global": 69.05039587834898,
+  "exit|logreg|both": 69.28992754040532,
+  "exit|mlp64|cell": 70.65758491917205,
+  "exit|mlp64|global": 67.82046894694207,
+  "exit|mlp64|both": 70.84557249249487,
+  "concat|logreg|cell": 69.2166105296766,
+  "concat|logreg|global": 68.7375131218127,
+  "concat|logreg|both": 68.9072066786588,
+  "concat|mlp64|cell": 70.28061163232688,
+  "concat|mlp64|global": 68.06008299847976,
+  "concat|mlp64|both": 70.48324089650625
+ },
+ "seeds": [
+  8,
+  9,
+  10
+ ]
+}

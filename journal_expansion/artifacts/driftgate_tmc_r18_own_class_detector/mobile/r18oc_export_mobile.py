@@ -116,7 +116,7 @@ def main():
     ap.add_argument("variant")
     ap.add_argument("--device", type=int, default=0)
     ap.add_argument("--dataset", default="cifar10")
-    ap.add_argument("--out", default=str(Path(__file__).resolve().parent / "export"))
+    ap.add_argument("--out", default="/home/honeynaps/8T/2_Data/3_DataPreprocessed/driftgate_r18_own_class_261120/mobile_export")  # [SERVER-PATH:R18OC_STORE]
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)

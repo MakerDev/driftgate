@@ -23,7 +23,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-DATA = Path("/home/honeynaps/data/driftgate_datasets/inat2021_r18/inat_r18_images.npz")  # [SERVER-PATH:DATA_ROOT]
+DATA = Path("/home/honeynaps/8T/2_Data/3_DataPreprocessed/driftgate_r18_own_class_261120/datasets/inat2021_r18/inat_r18_images.npz")  # [SERVER-PATH:R18OC_STORE]
 N_CLASSES = 100
 N_OWN = 10
 N_REQ = 400

@@ -22,9 +22,12 @@
 ```bash
 cd /home/honeynaps/data/driftgate && source ~/venvs/driftgate/bin/activate
 M=journal_expansion/artifacts/driftgate_tmc_r18_own_class_detector/mobile
-python $M/r18oc_export_mobile.py <runs/phaseT18oc/주 구성 run의 _ckpt_r150.pt> <모델 구성> '<입력|모델|음성 표본>' --out $M/export
-~/venvs/r18_tflite/bin/python $M/r18oc_tflite_check.py $M/export
+E=/home/honeynaps/8T/2_Data/3_DataPreprocessed/driftgate_r18_own_class_261120/mobile_export
+python $M/r18oc_export_mobile.py <runs/phaseT18oc/주 구성 run의 _ckpt_r150.pt> <모델 구성> '<입력|모델|음성 표본>' --out $E
+~/venvs/r18_tflite/bin/python $M/r18oc_tflite_check.py $E
 ```
+
+- 내보낸 모델은 저장소가 아니라 8T 디스크의 `$E` 폴더에 저장합니다. 휴대폰이나 Jetson에서 잴 때는 이 폴더를 통째로 `export/`라는 이름으로 복사해 갑니다. 아래 명령의 `export/`는 이렇게 복사한 폴더를 뜻합니다.
 
 - 첫 명령은 ONNX 모델 5개(`device_block`, `device_exit`, `detector`, `device_side`, `edge_block`)를 만들고, test 이미지 64장에서 PyTorch 출력과의 최대 차이가 10⁻⁴ 이하인지 확인합니다.
 - 둘째 명령은 같은 모델을 TFLite(float32)로 바꾸고 같은 기준으로 확인합니다. TFLite 모델의 4차원 입력과 출력은 NHWC 순서입니다(예: 이미지 [1, 32, 32, 3]).

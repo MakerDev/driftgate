@@ -48,3 +48,7 @@ journal_expansion/runs/phaseT18oc/*_r18oc.npz
 journal_expansion/runs/phaseT18oc/*_ckpt_r150.pt
 journal_expansion/runs/phaseT18oc/*.tmp
 journal_expansion/artifacts/driftgate_tmc_r18_own_class_detector/cache/
+# Round 18 own-class detector: run outputs and analysis caches are on the 8T disk (links in the repository)
+journal_expansion/runs/phaseT18oc
+journal_expansion/runs/phaseT18oc.moving/
+journal_expansion/artifacts/driftgate_tmc_r18_own_class_detector/cache

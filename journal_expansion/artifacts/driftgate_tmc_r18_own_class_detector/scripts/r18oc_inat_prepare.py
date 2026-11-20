@@ -27,7 +27,7 @@ from pathlib import Path
 
 import numpy as np
 
-DATA = Path("/home/honeynaps/data/driftgate_datasets/inat2021_r18")
+DATA = Path("/home/honeynaps/8T/2_Data/3_DataPreprocessed/driftgate_r18_own_class_261120/datasets/inat2021_r18")  # [SERVER-PATH:R18OC_STORE] user instruction 2026-11-20: data on the 8T disk
 ANN = DATA / "ann" / "train.json"
 URL = "https://ml-inat-competition-datasets.s3.amazonaws.com/2021/train.tar.gz"
 ART = Path(__file__).resolve().parent.parent

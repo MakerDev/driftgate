@@ -97,6 +97,15 @@ def main():
     ap.add_argument("--save_checkpoint", action="store_true", help="end-of-day state for --replay_from")
     ap.add_argument("--record_eval_logprobs", action="store_true", help="float32 log-softmax of both exits")
     ap.add_argument("--replay_from", default=None, help="frozen-model replay of the day from a --save_checkpoint file")
+    # Round 18 own-class detector (off by default)
+    ap.add_argument("--model_config", default=None,
+                    choices=["cnn-scratch", "pretrained-finetuned-block", "pretrained-frozen-block"])
+    ap.add_argument("--holdout_frac", type=float, default=0.0, help="per-device held-out fraction of the training samples")
+    ap.add_argument("--days", type=int, default=1, help="repeat the environment's day (same schedule)")
+    ap.add_argument("--detector", action="store_true", help="own-class detectors trained at the edges (src/r18oc_detector.py)")
+    ap.add_argument("--detector_main", default=None, help="input|model|negatives of the variant with the schedule ablations")
+    ap.add_argument("--checkpoint_at", type=int, default=None, help="also save the checkpoint at the end of this round")
+    ap.add_argument("--env_dir", default=None, help="directory of the environment files (default runs/phaseT6_env)")
     args = ap.parse_args()
     if (args.model_family is None) != (args.split_point is None):
         raise SystemExit("--model_family and --split_point go together")
@@ -118,7 +127,8 @@ def main():
     if out_json.exists():
         print(f"{out_json} exists; not re-running (results are never overwritten)")
         return
-    env_path = JOURNAL_ROOT / "runs" / "phaseT6_env" / f"{args.env or args.scenario}_seed{args.seed}.npz"
+    env_dir = Path(args.env_dir) if args.env_dir else JOURNAL_ROOT / "runs" / "phaseT6_env"
+    env_path = env_dir / f"{args.env or args.scenario}_seed{args.seed}.npz"
     if not env_path.exists():
         raise SystemExit(f"missing environment file {env_path}")
 
@@ -146,7 +156,8 @@ def main():
            record_eval_probs=args.record_eval_probs, record_train_label_hist=args.record_train_label_hist,
            dataset=args.dataset, model_family=args.model_family, split_point=args.split_point,
            save_checkpoint=args.save_checkpoint, record_eval_logprobs=args.record_eval_logprobs,
-           replay_from=args.replay_from)
+           replay_from=args.replay_from, model_config=args.model_config, holdout_frac=args.holdout_frac,
+           days=args.days, detector=args.detector, detector_main=args.detector_main, checkpoint_at=args.checkpoint_at)
 
 
 if __name__ == "__main__":

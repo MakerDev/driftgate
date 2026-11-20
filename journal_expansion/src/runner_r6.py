@@ -25,6 +25,7 @@ With all clients participating and no empty cell, step 4 is exactly
 run_one_global_round (tested in tests/test_r6.py).
 """
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -109,7 +110,7 @@ def set_seed(seed):
 
 @torch.no_grad()
 def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, mainaware=False, record=None,
-                record_probs=False, record_logprobs=False):
+                record_probs=False, record_logprobs=False, extra=None):
     """Same computation as eval.evaluator.evaluate_one_client (client exit if the
     client-exit entropy <= eth, else the mean of the client's server-exit logits),
     on a cached normalized test tensor, plus offload counts per request kind.
@@ -144,6 +145,8 @@ def eval_client(client, X, Y, idx, main, oop, oor, eth=0.8, batch_size=128, main
         b = idx_t[s:s + batch_size]
         x, y = X[b], Y[b]
         client_logits, rep = client.client_model(x)
+        if extra is not None:   # Round 18 (own-class detector): per-request scores from the device logits and block output only
+            extra.batch(client_logits, rep)
         entropy = compute_entropy(client_logits)
         _, client_preds = client_logits.max(dim=1)
         server_logits = sum([sm(rep)[0] for sm in sms]) / len(sms)
@@ -194,14 +197,21 @@ def _ratio(a, b):
     return a / b if b > 0 else float("nan")
 
 
-def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None, client_lams=None, capture=None):
+def r6_training_round(clients, active, ES, lamdas, Lams, mode, gamma, apfl=None, client_lams=None, capture=None,
+                      post_train_hook=None):
     """Step 4. active: bool array over client ids. Returns (mean_loss, active_cells).
     client_lams (Round 7 gate): {client: lambda_k} -> each participating client mixes with its own lambda_k
     instead of the mean of its cells' lambdas (same mixing and server-block update otherwise).
     capture (Round 8): a dict that receives {client: (theta_local, cell average used for mixing)} for every
-    participating client; theta_local is the client-side state right after local training (CPU copy)."""
+    participating client; theta_local is the client-side state right after local training (CPU copy).
+    post_train_hook (Round 18): called with each participating client right after its local training, before any
+    aggregation (no effect on training)."""
     act = [c for c in clients if active[c.cid]]
-    losses = [c.train_one_round(method="splitomcplus", gamma=gamma) for c in act]
+    losses = []
+    for c in act:
+        losses.append(c.train_one_round(method="splitomcplus", gamma=gamma))
+        if post_train_hook is not None:
+            post_train_hook(c)
     active_cells = []
     for z, es in ES.items():
         mem = [c for c in es.clients if active[c.cid]]
@@ -260,8 +270,20 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
            oracle_home_away=False, fixed_Lambda=None, eval_infer_lambdas=None, eval_mainaware_route=False,
            record_eval_requests=False, record_probe_values=False, record_eval_probs=False,
            record_train_label_hist=False, dataset=None, model_family=None, split_point=None,
-           save_checkpoint=False, record_eval_logprobs=False, replay_from=None):
-    """Round 15 options (off by default):
+           save_checkpoint=False, record_eval_logprobs=False, replay_from=None,
+           model_config=None, holdout_frac=0.0, days=1, detector=False, detector_main=None, checkpoint_at=None):
+    """Round 18 own-class detector options (off by default -> Round 15 behaviour):
+    model_config: "cnn-scratch" (the default split CNN), "pretrained-finetuned-block" or "pretrained-frozen-block"
+        (src/r18oc_models.py, MobileNetV2 from ImageNet weights);
+    holdout_frac: per device, a class-stratified fraction of its training samples (at least 1 per class, numpy
+        default_rng([partition_seed, 18, client])) is never trained on; detectors use it for validation statistics;
+    days: the environment's day is repeated `days` times (same schedule; round_start_min + 1440 per day) and the
+        evaluation rounds are the day-1 rounds in every day;
+    detector: an src.r18oc_detector.DetectorBank is trained at the edges every training round and scores every evaluation
+        request ({run}_r18oc.npz); detector_main: the variant that also gets the frozen-at-home and every-10 schedules;
+    checkpoint_at: also save the Round 15 checkpoint (with the detector state) at the end of that round
+        ({run}_ckpt_r{round}.pt). A replay from such a checkpoint restores the detectors and never updates them.
+    Round 15 options (off by default):
     save_checkpoint: at the end of the run, {run}_ckpt.pt with every device's installed client model, every cell's
         server model and client average, the devices' cells, and the label counts of the last training round
         (needs record_train_label_hist);
@@ -302,6 +324,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     seed, total_rounds = int(cfg["partition_seed"]), int(cfg["global_rounds"])
     ckw = controller_kwargs or {}
     env, meta = load_env(env_path)
+    if days > 1:   # Round 18: the same day repeated
+        T1 = env["member"].shape[1]
+        tiled = {}
+        for kk, v in env.items():
+            v = np.asarray(v)
+            if kk in ("lost_dbar", "lost_nbr", "round_start_min") and v.ndim >= 1 and v.shape[0] == T1:
+                tiled[kk] = np.concatenate([v + (1440.0 * d_ if kk == "round_start_min" else 0) for d_ in range(days)], 0)
+            elif v.ndim >= 2 and v.shape[1] == T1 and v.shape[0] == env["member"].shape[0]:
+                tiled[kk] = np.concatenate([v] * days, 1)
+            else:
+                tiled[kk] = v
+        env = tiled
     K, T_env = env["member"].shape[:2]
     L = len(env["cell_xy"])
     assert total_rounds <= T_env, (total_rounds, T_env)
@@ -329,6 +363,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         config.update(record_eval_probs=record_eval_probs, record_train_label_hist=record_train_label_hist)
     if dataset is not None or model_family is not None:
         config.update(dataset=dataset, model_family=model_family, split_point=split_point)
+    if model_config is not None or holdout_frac or days > 1 or detector or checkpoint_at is not None:
+        assert not detector or (holdout_frac > 0 and record_eval_probs and record_train_label_hist), \
+            "--detector needs --holdout_frac, --record_eval_probs and --record_train_label_hist"
+        assert checkpoint_at is None or record_train_label_hist, "--checkpoint_at needs --record_train_label_hist"
+        config.update(model_config=model_config, holdout_frac=holdout_frac, days=days, detector=detector,
+                      detector_main=detector_main, checkpoint_at=checkpoint_at)
     if save_checkpoint or record_eval_logprobs or replay_from is not None:
         assert not save_checkpoint or record_train_label_hist, "--save_checkpoint needs --record_train_label_hist"
         assert not record_eval_logprobs or record_eval_probs, "--record_eval_logprobs needs --record_eval_probs"
@@ -347,6 +387,22 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     train_labels, test_labels = np.array(train_ds.targets), np.array(test_ds.targets)
     probe_labels, eval_labels, pool_manifest = make_pool_masks(test_labels, cfg["num_classes"], 0.2, seed=seed)
     indices, mains, cell_groups, all_used = build_partition(train_labels, env, seed, cfg["num_classes"], cfg)
+    holdout = None
+    if holdout_frac:   # Round 18: class-stratified held-out samples per device, never trained on
+        holdout, kept = {}, {}
+        for k in range(K):
+            ix = np.asarray(indices[k], np.int64)
+            hrng = np.random.default_rng([int(seed), 18, int(k)])
+            ho = []
+            for cl in sorted(set(train_labels[ix].tolist())):
+                pos = ix[train_labels[ix] == cl]
+                n_ho = max(1, int(round(holdout_frac * len(pos))))
+                ho.append(np.sort(hrng.choice(pos, size=n_ho, replace=False)))
+            ho = np.sort(np.concatenate(ho))
+            holdout[k] = [int(i) for i in ho]
+            hs = set(holdout[k])
+            kept[k] = [int(i) for i in ix if int(i) not in hs]
+        indices = kept
     probe_rb = RequestBuilder(probe_labels, cfg["num_classes"], cell_groups, all_used)
     eval_rb = RequestBuilder(eval_labels, cfg["num_classes"], cell_groups, all_used)
     X_test = torch.stack([test_ds[i][0] for i in range(len(test_ds))]).to(device)
@@ -358,13 +414,16 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
 
     # ---------- models ----------
     set_seed(cfg["model_seed"])
-    if model_family is None:
+    if model_config is not None and model_config != "cnn-scratch":   # Round 18: MobileNetV2 split
+        from src.r18oc_models import make_factory
+        mf = make_factory(model_config, cfg["num_classes"], dataset=dataset or "cifar10")
+    elif model_family is None:
         mf = ModelFactory(dataset="cifar10", num_classes=cfg["num_classes"])
     else:   # Round 13b
         from src.models_ext import FlexModelFactory
         mf = FlexModelFactory(family=model_family, num_classes=cfg["num_classes"], split=split_point)
     arch = None
-    if dataset is not None or model_family is not None:
+    if (dataset is not None or model_family is not None) and (model_config in (None, "cnn-scratch")):
         from src.models_ext import arch_stats
         arch = arch_stats(mf)   # forked RNG: no effect on the model initialisation below
     clients, ES = build_clients_and_es(
@@ -373,7 +432,7 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         device=device, batch_size=cfg["batch_size"], local_epochs=cfg["local_epochs"],
         lr=cfg["learning_rate"], weight_decay=cfg["weight_decay"], num_workers=0)
     assert len(clients) == K and [c.cid for c in clients] == list(range(K))
-    use_cached_loaders(clients, indices, train_ds, device, cfg["batch_size"])
+    X_train, Y_train = use_cached_loaders(clients, indices, train_ds, device, cfg["batch_size"])
     synchronize_initial_models(clients, ES)
     init_c = clients[0].get_client_state()
     init_s = clients[0].get_server_state(clients[0].edge_server_ids[0])
@@ -391,11 +450,19 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         for c in clients:
             for z in c.edge_server_ids:
                 c.set_server_state(z, ES[z].server_avg_weights)
+    DB = None
+    if detector:   # Round 18
+        from src.r18oc_detector import DetectorBank
+        DB = DetectorBank(K, cfg["num_classes"], mains, indices, holdout, X_train, Y_train, seed, device,
+                          main_variant=detector_main)
+        if RP is not None:
+            DB.load_state_dict(RP["r18oc"])
     rec.set(split_hash=split_hash(indices), model_init_hash=model_hash(clients[0].client_model),
             disjoint_pools=pool_manifest,
             cell_groups={str(z): sorted(v) for z, v in cell_groups.items()},
             client_main={str(k): sorted(v) for k, v in mains.items()},
-            client_n_train={str(k): len(v) for k, v in indices.items()})
+            client_n_train={str(k): len(v) for k, v in indices.items()},
+            **({"client_n_holdout": {str(k): len(v) for k, v in holdout.items()}} if holdout is not None else {}))
 
     # ---------- controller ----------
     nbmat = env["neighbors"]
@@ -423,6 +490,10 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
     probe_rng = np.random.default_rng(seed * 31 + 17)
 
     E_ROUNDS = eval_rounds_for(total_rounds, eval_every)
+    if days > 1:   # Round 18: the day-1 evaluation rounds in every day
+        T1 = T_env // days
+        E_ROUNDS = sorted({d_ * T1 + r_ for d_ in range(days) for r_ in eval_rounds_for(T1, eval_every)
+                           if d_ * T1 + r_ <= total_rounds})
     E = len(E_ROUNDS)
     nan = np.nan
     R = dict(dk=np.full((total_rounds, K), nan, np.float32), nprobe=np.zeros((total_rounds, K), np.int16),
@@ -444,6 +515,12 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         if "cells" not in R:
             R["cells"] = np.transpose(member[:, :total_rounds, :], (1, 0, 2)).copy()
     PRB = [] if record_eval_probs else None
+    DBR, DBS = None, None
+    if DB is not None:   # Round 18 records: per request (DBR) and per evaluation round and device (DBS)
+        from src.r18oc_detector import NBINS
+        DBR = []
+        DBS = dict(hist_own=np.zeros((E, K, DB.V, NBINS), np.int32), hist_other=np.zeros((E, K, DB.V, NBINS), np.int32),
+                   det_round=np.full((E, K, DB.V), -1, np.int16))
     TM = dict(train=0.0, eval=0.0) if (record_eval_probs or record_train_label_hist) else None   # Round 12 timing
     EV = {k: np.zeros((E, K), np.int32) for k in
           ("n_total", "correct", "n_off", "n_main", "c_main", "off_main", "n_nonmain",
@@ -579,8 +656,13 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
         capture = {} if (EVI is not None and r in E_ROUNDS) else None
         _tt0 = time.perf_counter()
         if RP is None:
+            if DB is not None:
+                DB.begin_round()
             mean_loss, act_cells = r6_training_round(clients, active, ES, cur_lam, cur_Lam, mode, gamma, apfl,
-                                                     client_lams=client_lams, capture=capture)
+                                                     client_lams=client_lams, capture=capture,
+                                                     post_train_hook=None if DB is None else DB.post_local_train)
+            if DB is not None:   # Round 18: detectors and validation statistics with the installed models
+                DB.end_round(r, by_id, env["at_home"][:, t])
         else:   # replay: no training, no aggregation
             mean_loss, act_cells = float("nan"), []
         if TM is not None:
@@ -627,8 +709,16 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 eval_used.update(int(i) for i in idx)
                 rq = REQ is not None and capture is not None and k in capture
                 rec_inst = {} if (rq or PRB is not None) else None
+                if DB is not None and len(idx):
+                    DB.begin_eval(k, c.client_model, replay=RP is not None)
                 res = eval_client(c, X_test, Y_test, idx, mains[k], oop, oor, eth=eth, mainaware=eval_mainaware_route,
-                                  record=rec_inst, record_probs=PRB is not None, record_logprobs=record_eval_logprobs)
+                                  record=rec_inst, record_probs=PRB is not None, record_logprobs=record_eval_logprobs,
+                                  extra=DB if (DB is not None and len(idx)) else None)
+                if DB is not None:   # Round 18: per-request detector scores and the statistics in use
+                    xr = DB.end_eval() if len(idx) else None
+                    ho_, hx_, rd_ = DB.eval_state(k)
+                    DBR.append(dict(xr=xr, n=len(idx)))
+                    DBS["hist_own"][e, k], DBS["hist_other"][e, k], DBS["det_round"][e, k] = ho_, hx_, rd_
                 if PRB is not None:   # Round 10: both exits' probabilities, with a random arrival order
                     lab_p = np.asarray(Y_test[torch.as_tensor(np.asarray(idx), device=Y_test.device)].cpu().numpy())
                     kind_p = np.where(np.isin(lab_p, sorted(mains[k])), 0, np.where(np.isin(lab_p, sorted(oop)), 1,
@@ -683,6 +773,19 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                 print(f"  R{r:3d} loss={mean_loss:.3f} acc={ev['acc_total']:.4f} off={ev['offload_rate']:.3f} "
                       f"active={int(active.sum())} elapsed={el/60:.1f}m ETA={(total_rounds-r)*el/r/60:.0f}m",
                       flush=True)
+        if checkpoint_at is not None and r == checkpoint_at and output_dir is not None:   # Round 18: mid-run state
+            cpu_ = lambda sd: {kk: v.detach().cpu().clone() for kk, v in sd.items()}
+            Path(output_dir).mkdir(parents=True, exist_ok=True)
+            torch.save({"K": K, "L": L, "run_id": rec.run_id, "round": r,
+                        "client_states": {c.cid: cpu_(c.client_model.state_dict()) for c in clients},
+                        "client_cells": {c.cid: list(c.edge_server_ids) for c in clients},
+                        "server_avg": {z: cpu_(es.server_avg_weights) for z, es in ES.items()},
+                        "clients_avg": {z: cpu_(es.clients_avg_weights) for z, es in ES.items()},
+                        "train_hist_cell_last": R["train_hist_cell"][t].copy(),
+                        "train_hist_all_last": R["train_hist_all"][t].copy(),
+                        "r18oc": None if DB is None else DB.state_dict()},
+                       Path(output_dir) / f"{run_name}_ckpt_r{r}.pt.tmp")
+            os.replace(Path(output_dir) / f"{run_name}_ckpt_r{r}.pt.tmp", Path(output_dir) / f"{run_name}_ckpt_r{r}.pt")
 
     hist["total_time_sec"] = time.time() - t_start
     if TM is not None:   # Round 12: training calls and evaluation (incl. the per-request recording) in seconds
@@ -741,6 +844,18 @@ def run_r6(cfg, env_path, mode, signal="tv_dist", lambda_val=0.4, big_lambda_val
                                 cp=np.stack([np.concatenate([r["cp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8),
                                 ent=np.stack([np.concatenate([r["ent"] for r in b]) for b in REQ["blocks"]]).astype(np.float32),
                                 sp=np.stack([np.concatenate([r["sp"] for r in b]) for b in REQ["blocks"]]).astype(np.uint8))
+        if DB is not None:   # Round 18: detector scores per request (evalprobs order) and statistics in use
+            ok_ = [m_["xr"] for m_ in DBR if m_["xr"] is not None]
+            rl = np.array(DB.round_log, np.int32).reshape(-1, 8)
+            np.savez_compressed(out / f"{run_name}_r18oc.npz", eval_rounds=np.array(E_ROUNDS),
+                                variants=np.array(DB.names), g=np.concatenate([x["g"] for x in ok_]).astype(np.float16),
+                                energy=np.concatenate([x["energy"] for x in ok_]), maha=np.concatenate([x["maha"] for x in ok_]),
+                                knn=np.concatenate([x["knn"] for x in ok_]), n_req=np.array([m_["n"] for m_ in DBR], np.int64),
+                                round_log=rl, round_log_cols=np.array(["round", "client", "n_pos", "n_cell_all", "n_cell_used",
+                                                                       "n_virtual", "n_holdout_own", "n_holdout_other"]),
+                                dims=np.array(DB.dims if DB.dims is not None else (0, 0)),
+                                timing_sec=np.array([DB.tsec[x] for x in ("features", "train", "validation", "eval")]),
+                                timing_cols=np.array(["features", "train", "validation", "eval"]), **DBS)
         if save_checkpoint:   # Round 15: full end-of-day state for the frozen-model replay
             cpu_ = lambda sd: {kk: v.detach().cpu().clone() for kk, v in sd.items()}
             torch.save({"K": K, "L": L, "run_id": rec.run_id, "round": total_rounds,

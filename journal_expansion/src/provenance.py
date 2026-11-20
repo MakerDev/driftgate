@@ -17,7 +17,7 @@ from datetime import datetime
 from pathlib import Path
 
 JOURNAL_ROOT = Path(__file__).resolve().parent.parent
-PROVENANCE_DIR = JOURNAL_ROOT / "provenance"
+PROVENANCE_DIR = Path(os.environ["JX_PROVENANCE_DIR"]) if os.environ.get("JX_PROVENANCE_DIR") else JOURNAL_ROOT / "provenance"   # Round 18: smoke tests write elsewhere
 GIT_REPO_DIR = "/home/honeynaps/data/driftgate"  # repo root containing this project  # [SERVER-PATH:GIT_ROOT]
 
 

@@ -6,6 +6,12 @@ unchanged Round 6 generator (src/r6_env.build_synthetic) into runs/phaseT18oc_en
 touched. Before writing, the generator is checked on an existing file (S1 seed 5 must rebuild identically).
 
   python journal_expansion/artifacts/driftgate_tmc_r18_own_class_detector/scripts/r18oc_make_env.py
+  python journal_expansion/artifacts/driftgate_tmc_r18_own_class_detector/scripts/r18oc_make_env.py s2 SCRATCH_DIR
+
+`s2`: S2 (GeoLife) environment files for seeds 3 and 4 (stage 3 uses S2 seeds 0-4; Round 6 built 0-2). The unchanged
+Round 6 generator (scripts/r6_trace_env.py) is run with its seed loop and output directory replaced: first seeds 0-2 into
+SCRATCH_DIR, which must equal the existing runs/phaseT6_env files (and S2_selection.csv), then seeds 3-4 into
+runs/phaseT18oc_env/. Only the request counts depend on the seed; the paths are the same for every seed.
 """
 import json
 import sys
@@ -46,5 +52,25 @@ def main():
               f"two_cells={(env['member'][:, :, 1] >= 0).mean():.3f}")
 
 
+def s2(scratch):
+    src = (JR / "scripts" / "r6_trace_env.py").read_text()
+    assert src.count("    for s in (0, 1, 2):") == 1
+    src = src.replace("    for s in (0, 1, 2):", "    for s in SEEDS:")
+    for seeds, out in (((0, 1, 2), Path(scratch)), ((3, 4), OUT)):
+        ns = {"__name__": "r6_trace_env_r18oc", "__file__": str(JR / "scripts" / "r6_trace_env.py")}
+        exec(compile(src, "r6_trace_env.py", "exec"), ns)
+        ns["OUT"], ns["SEEDS"] = out, seeds
+        ns["main"]()
+        if out != OUT:
+            for s in seeds:
+                env, meta = r6_env.load_env(out / f"S2_seed{s}.npz")
+                assert same(env, meta, OLD / f"S2_seed{s}.npz"), f"S2 seed {s} does not rebuild identically"
+            assert (out / "S2_selection.csv").read_bytes() == (OLD / "S2_selection.csv").read_bytes()
+            print("S2 seeds 0-2 and the selection rebuild identically")
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "s2":
+        s2(sys.argv[2])
+    else:
+        main()

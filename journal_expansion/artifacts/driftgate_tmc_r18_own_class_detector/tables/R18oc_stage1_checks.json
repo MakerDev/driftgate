@@ -1,0 +1,20 @@
+{
+ "v32_full_offload_counts_equal_r20": true,
+ "v32_beta0.5_counts_equal_r20": true,
+ "v32_full_offload_macro": 0.6936033654219096,
+ "r20_macro": 0.6936033654219096,
+ "corr_argmax_agree_m13_r0.5": 1.0,
+ "corr_argmax_agree_m13_random_r": 1.0,
+ "smoke_v32_full_offload_script": 0.6724335245337134,
+ "smoke_v32_full_offload_direct": 0.6724335245337134,
+ "oracle_sub_offload_equals_nonmain": true,
+ "oracle_direct_at_nonmain_share": 0.5657141187789094,
+ "oracle_sub_threshold_0.5_edge_raw": 0.5657141187789094,
+ "nonmain_share": 0.11446629990812587,
+ "oracle_curve_grid_point": {
+  "rho": 0.1,
+  "oracle": 0.5615963052549338,
+  "detector_sub": 0.5615963052549338
+ },
+ "oracle_sub_curve_equal_oracle_curve": true
+}

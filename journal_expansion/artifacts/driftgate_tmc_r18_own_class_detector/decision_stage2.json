@@ -1,0 +1,55 @@
+{
+ "per_config": {
+  "pretrained-finetuned-block": {
+   "complete": true,
+   "judgements": {
+    "s1 second-day": "fail",
+    "s1 frozen-replay": "fail",
+    "s2 second-day": "fail",
+    "s2 frozen-replay": "fail"
+   },
+   "room": {
+    "s1 second-day": false,
+    "s1 frozen-replay": false,
+    "s2 second-day": false,
+    "s2 frozen-replay": false
+   },
+   "n_no_room": 4,
+   "c100_second_and_replay_pass": false,
+   "row": 5
+  },
+  "pretrained-frozen-block": {
+   "complete": true,
+   "judgements": {
+    "s1 second-day": "fail",
+    "s1 frozen-replay": "fail",
+    "s2 second-day": "fail",
+    "s2 frozen-replay": "fail"
+   },
+   "room": {
+    "s1 second-day": false,
+    "s1 frozen-replay": false,
+    "s2 second-day": false,
+    "s2 frozen-replay": false
+   },
+   "n_no_room": 4,
+   "c100_second_and_replay_pass": false,
+   "row": 5
+  }
+ },
+ "rows": [],
+ "row": 5,
+ "config": "pretrained-finetuned-block",
+ "decision": "skip stage 3; stage 4 with the judgement 'stop'",
+ "some_cells_without_room": true,
+ "first_day_G05_below_minus_0_5": [
+  "S1 cnn-scratch",
+  "S2 cnn-scratch",
+  "S1 pretrained-finetuned-block",
+  "S2 pretrained-finetuned-block",
+  "CIFAR-100 pretrained-finetuned-block",
+  "S1 pretrained-frozen-block",
+  "S2 pretrained-frozen-block",
+  "CIFAR-100 pretrained-frozen-block"
+ ]
+}

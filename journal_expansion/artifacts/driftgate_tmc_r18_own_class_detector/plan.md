@@ -32,3 +32,18 @@
 ## 4. 예산이 모자랄 때 (지시문 6.3의 6번)
 
 500대 → held-out 비율 ablation → `cnn-scratch`의 CIFAR-100 → S1-fast → 5개 seed를 3개로, 순서로 줄이고 `decisions.md`에 적습니다.
+
+## 5. 실제 run에서 잰 시간 (2026-11-21 01:00 기준)
+
+GPU 4대에서 run 12–14개가 함께 돌 때의 벽시계 시간입니다. 표는 `scripts/r18oc_report.py times`로 만들었습니다.
+
+| 구성 | 학습 run(300라운드) | 재생 run(150라운드) |
+|---|---|---|
+| `cnn-scratch`, S1 개발용 seed 8–10 | 2.59, 2.84, 3.88시간 | 0.13–0.16시간 |
+| `pretrained-finetuned-block`, S1 개발용 seed 8–10 | 5.97, 6.58, 6.55시간 | 0.08–0.09시간 |
+| `pretrained-frozen-block`, S1 개발용 seed 8–10 | 6.83, 5.65, 7.00시간 | 0.08–0.09시간 |
+
+- 분석(run 하나, 세 조건)은 약 10분이고 한 번에 하나씩 돕니다.
+- 2단계 평가용 run(사전학습 구성 36개)은 2026-11-21 낮에서 저녁 사이에 끝날 것으로 봅니다.
+- 3단계 계획(`scripts/r18oc_jobs.py stage3`): 주 구성의 50대 run 22개, `cnn-scratch` 7개, 200대 3개, 다른 사전학습 구성의 iNaturalist 3개, held-out 비율 24개, 500대 3개입니다. 200대와 500대의 run 시간은 5라운드 시험으로 재고 `decisions.md`에 적습니다.
+- 5라운드 시험(2026-11-21 01:00–02:00, 다른 run과 GPU를 나눠 씀): `pretrained-finetuned-block`의 200대 run은 라운드당 약 8.5분, GPU 메모리 최대 8.6 GB였습니다. 300라운드면 약 43시간입니다. 500대 run은 같은 GPU의 다른 run 때문에 메모리가 부족해 멈췄습니다(5.3 GB에서). iNaturalist run은 라운드당 약 2.7–3.2분, `cnn-scratch`의 CIFAR-100 run은 약 1.6분이었습니다.

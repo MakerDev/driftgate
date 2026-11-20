@@ -2,6 +2,8 @@
 
   python .../r18oc_jobs.py dev                      # stage 2, S1 development seeds 8-10, three model configurations
   python .../r18oc_jobs.py eval <cfg>=<variant> ... # stage 2 evaluation seeds of a configuration with its chosen variant
+  python .../r18oc_jobs.py attempt <n> <cfg>=<variant> ...       # improvement attempt n (7.4) on the S1 development seeds 8-10
+  python .../r18oc_jobs.py attempt_eval <n> <cfg>=<variant> ...  # the same attempt on the evaluation seeds (S1, S2 seeds 0-2)
   python .../r18oc_jobs.py list
 
 Every training run: 300 rounds (the same day twice, --days 2), fixed lambda 0.4 / Lambda 0.5 (v32 training), 10% held-out
@@ -23,11 +25,14 @@ SETTING = {"s1": dict(scenario="S1", dataset=None), "s2": dict(scenario="S2", da
 DEV_ENV = JR / "runs" / "phaseT18oc_env"
 
 
-def name(cfg, st, seed, replay=False):
-    return f"r18oc_{TAG[cfg]}_{st}{'_replay' if replay else ''}_s{seed}"
+ATTEMPT_FLAGS = {1: ["--other_class"], 2: ["--device_split", "stride16"]}   # 7.4: exit-with-other-class, deeper-split
 
 
-def base(cfg, st, seed, main, holdout=0.1):
+def name(cfg, st, seed, replay=False, attempt=None):
+    return f"r18oc_{TAG[cfg]}{f'a{attempt}' if attempt else ''}_{st}{'_replay' if replay else ''}_s{seed}"
+
+
+def base(cfg, st, seed, main, holdout=0.1, extra=()):
     a = ["python", "-u", str(JR / "scripts" / "run_r6.py"), "--scenario", SETTING[st]["scenario"], "--arm", "r18oc",
          "--mode", "fixed", "--lambda_val", "0.4", "--big_lambda_val", "0.5", "--disjoint_pools", "--seed", str(seed),
          "--model_seed", "100", "--output_dir", str(OUT), "--device", "cuda:0", "--record_eval_probs",
@@ -36,18 +41,21 @@ def base(cfg, st, seed, main, holdout=0.1):
         a += ["--dataset", SETTING[st]["dataset"]]
     if main:
         a += ["--detector_main", f"'{main}'"]
-    if st == "s1" and seed >= 8:
+    if (st == "s1" and seed >= 8) or (st == "s2" and seed >= 3):
         a += ["--env_dir", str(DEV_ENV)]
-    return a
+    return a + list(extra)
 
 
-def pair(cfg, st, seed, main=None):
-    n, nr = name(cfg, st, seed), name(cfg, st, seed, True)
+def pair(cfg, st, seed, main=None, attempt=None):
+    n, nr = name(cfg, st, seed, attempt=attempt), name(cfg, st, seed, True, attempt=attempt)
     ck = OUT / f"{n}_ckpt_r150.pt"
+    ex = ATTEMPT_FLAGS[attempt] if attempt else []
     day = dict(name=n, kind="train", cfg=cfg, setting=st, seed=seed, main=main, cost=COST[cfg], requires=None, after=None,
-               cmd=" ".join(base(cfg, st, seed, main) + ["--run_name", n, "--rounds", "300", "--days", "2", "--checkpoint_at", "150"]))
+               attempt=attempt,
+               cmd=" ".join(base(cfg, st, seed, main, extra=ex) + ["--run_name", n, "--rounds", "300", "--days", "2", "--checkpoint_at", "150"]))
     rep = dict(name=nr, kind="replay", cfg=cfg, setting=st, seed=seed, main=main, cost=COST[cfg] - 1.0, requires=str(ck),
-               after=None, cmd=" ".join(base(cfg, st, seed, main) + ["--run_name", nr, "--rounds", "150", "--replay_from", str(ck)]))
+               after=None, attempt=attempt,
+               cmd=" ".join(base(cfg, st, seed, main, extra=ex) + ["--run_name", nr, "--rounds", "150", "--replay_from", str(ck)]))
     return [day, rep]
 
 
@@ -70,6 +78,18 @@ def main():
             for st, seeds in (("s1", (0, 1, 2)), ("s2", (0, 1, 2))) + ((("c100", (0, 1, 2)),) if cfg != "cnn-scratch" else ()):
                 for s in seeds:
                     new += pair(cfg, st, s, var)
+        add(new)
+    elif sys.argv[1] in ("attempt", "attempt_eval"):
+        n = int(sys.argv[2])
+        assert n in ATTEMPT_FLAGS, "attempt 3 is defined in decisions.md before it is added here"
+        new = []
+        for arg in sys.argv[3:]:
+            cfg, var = arg.split("=")
+            assert cfg != "cnn-scratch" or n == 1, "deeper-split is a MobileNetV2 option"
+            seeds = (("s1", (8, 9, 10)),) if sys.argv[1] == "attempt" else (("s1", (0, 1, 2)), ("s2", (0, 1, 2)))
+            for st, ss in seeds:
+                for s in ss:
+                    new += pair(cfg, st, s, var, attempt=n)
         add(new)
     elif sys.argv[1] == "list":
         for j in json.load(open(JOBS)):

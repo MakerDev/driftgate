@@ -3,6 +3,8 @@
   python .../r18oc_tables.py select <model config>   # design selection on the S1 development seeds 8-10 (section 3)
   python .../r18oc_tables.py stage2                  # stage-2 cells, judgements (7.1-7.3), AUROC, extras, references
   python .../r18oc_tables.py holdout                 # cnn-scratch first day vs the v32 records (effect of the held-out 10%)
+  python .../r18oc_tables.py attempt_dev <n> <cfg>   # 7.4 gate on the development seeds: frozen-replay, ratio 0.5, chosen variant
+  python .../r18oc_tables.py attempt_cells <n> <cfg> # the four stage-2 decision cells of attempt n on the evaluation seeds
 """
 import csv
 import importlib.util
@@ -32,8 +34,8 @@ PASS_S, PASS_G, PART_S, PART_G = 0.25, 2.0, 0.15, 1.0
 SETTING_NAME = {"s1": "S1", "s2": "S2", "c100": "CIFAR-100"}
 
 
-def cache(cfg, st, seed, cond):
-    f = CACHE / f"r18oc_{TAG[cfg]}_{st}_s{seed}__{cond}.pkl"
+def cache(cfg, st, seed, cond, att=None):
+    f = CACHE / f"r18oc_{TAG[cfg]}{f'a{att}' if att else ''}_{st}_s{seed}__{cond}.pkl"
     return pickle.load(open(f, "rb")) if f.exists() else None
 
 
@@ -114,8 +116,8 @@ def judge(S, G5):
     return "fail"
 
 
-def cell(cfg, st, cond, seeds, main_override=None):
-    O = [cache(cfg, st, s, cond) for s in seeds]
+def cell(cfg, st, cond, seeds, main_override=None, att=None):
+    O = [cache(cfg, st, s, cond, att) for s in seeds]
     if any(o is None for o in O):
         return None
     main = main_override or O[0]["main"]
@@ -291,6 +293,69 @@ def holdout():
                                        "v32 records (seeds 0-2) mean (SD)", "difference pp mean (SD)"], rows)
 
 
+# ------------------------------------------------------------------------------------------------ improvement attempts (7.4)
+ATT_GAIN_PP = 0.5
+
+
+def chosen_variant(cfg):
+    return json.loads((TABLES / f"R18oc_design_selection_{TAG[cfg]}.json").read_text())["chosen"]
+
+
+def attempt_dev(n, cfg):
+    """decision_rule.md 2.4: the attempt passes to the evaluation seeds when the new method's seed-mean accuracy at ratio 0.5
+    in frozen-replay (S1 development seeds 8-10, the configuration's chosen variant) is at least 0.5 pp above the run without
+    the change (decisions.md D12)."""
+    v = chosen_variant(cfg)
+    j = list(GRID).index(0.5)
+    rows, a, b = [], [], []
+    for s in DEV:
+        o0, o1 = cache(cfg, "s1", s, "frozen-replay"), cache(cfg, "s1", s, "frozen-replay", n)
+        if o0 is None or o1 is None:
+            print(f"missing caches for seed {s}")
+            return None
+        a.append(100 * o0["curves"][(v, NEW)][j])
+        b.append(100 * o1["curves"][(v, NEW)][j])
+        rows.append([cfg, n, v, s, f"{a[-1]:.2f}", f"{b[-1]:.2f}", f"{b[-1] - a[-1]:.2f}",
+                     f"{o0['auroc'][v]['all']:.3f}", f"{o1['auroc'][v]['all']:.3f}"])
+    d = np.subtract(b, a)
+    rows.append([cfg, n, v, "mean (SD)", fmt(float(np.mean(a)), sd(a)), fmt(float(np.mean(b)), sd(b)), fmt(float(np.mean(d)), sd(d)), "", ""])
+    write(f"R18oc_attempt{n}_{TAG[cfg]}_dev.csv", ["model config", "attempt", "detector variant", "seed",
+                                                    "without the change: accuracy at 0.5 (%)", "attempt: accuracy at 0.5 (%)",
+                                                    "difference pp", "AUROC without", "AUROC attempt"], rows)
+    res = dict(model_config=cfg, attempt=n, variant=v, base=float(np.mean(a)), attempt_acc=float(np.mean(b)),
+               gain_pp=float(np.mean(d)), gain_sd=sd(d), threshold_pp=ATT_GAIN_PP, go_to_evaluation=bool(np.mean(d) >= ATT_GAIN_PP))
+    (TABLES / f"R18oc_attempt{n}_{TAG[cfg]}_dev.json").write_text(json.dumps(res, indent=1))
+    print(json.dumps(res, indent=1))
+    return res
+
+
+def attempt_cells(n, cfg):
+    rows, J = [], {}
+    for st in ("s1", "s2"):
+        for cond in an.CONDITIONS:
+            c = cell(cfg, st, cond, SEEDS[st], att=n)
+            if c is None:
+                print(f"missing caches for {st} {cond}")
+                continue
+            nw, o = c["new"], c["oracle"]
+            rows.append([SETTING_NAME[st], cfg, n, cond, c["main"], fmt(c["A"]), fmt(nw["ratio"], d=3), fmt(c["r_env"], d=3),
+                         fmt(nw["S"], d=3), fmt(nw["G"][0.25], nw["G_sd"][0.25]), fmt(nw["G"][0.5], nw["G_sd"][0.5]),
+                         fmt(nw["acc"][0.5]), fmt(c["B"][0.5][0]), "/".join(c["B"][0.5][1]), fmt(o["S"], d=3), fmt(o["G"][0.5]),
+                         "yes" if c["room"] else "no", nw["judgement"], "yes" if c["border"] else "no"])
+            if cond != "first-day":
+                J[f"{st} {cond}"] = dict(judgement=nw["judgement"], room=c["room"])
+    write(f"R18oc_attempt{n}_{TAG[cfg]}_cells.csv",
+          ["setting", "model config", "attempt", "condition", "detector variant", "A* (%)", "ratio-at-target new",
+           "ratio-at-target comparator envelope", "S", "G(0.25) pp mean (SD)", "G(0.5) pp mean (SD)", "new accuracy at 0.5",
+           "B(0.5)", "B(0.5) rule", "oracle S", "oracle G(0.5) pp", "room", "judgement", "border"], rows)
+    roomy = [x for x in J.values() if x["room"]]
+    res = dict(model_config=cfg, attempt=n, cells=J, complete=len(J) == 4,
+               all_partial_or_better=bool(len(J) == 4 and roomy and all(x["judgement"] in ("pass", "partial") for x in roomy)))
+    (TABLES / f"R18oc_attempt{n}_{TAG[cfg]}_cells.json").write_text(json.dumps(res, indent=1))
+    print(json.dumps(res, indent=1))
+    return res
+
+
 if __name__ == "__main__":
     if sys.argv[1] == "select":
         select(sys.argv[2])
@@ -298,3 +363,7 @@ if __name__ == "__main__":
         stage2()
     elif sys.argv[1] == "holdout":
         holdout()
+    elif sys.argv[1] == "attempt_dev":
+        attempt_dev(int(sys.argv[2]), sys.argv[3])
+    elif sys.argv[1] == "attempt_cells":
+        attempt_cells(int(sys.argv[2]), sys.argv[3])

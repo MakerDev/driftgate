@@ -74,6 +74,8 @@ def main():
         if xs is None:
             ax.text(0.5, 0.5, "energy not measured\n(에너지 미측정)", ha="center", va="center", transform=ax.transAxes, fontproperties=fp)
             ax.set_xlabel(xl)
+            ax.set_xticks([])
+            ax.set_yticks([])
             continue
         for y, lab, st in ((np.r_[dev_only, new], "detector + edge-corrected-by-detector", "-"),
                            (np.r_[dev_only, v32], "v32 (entropy + average-corrected-even)", "--"),
@@ -82,12 +84,13 @@ def main():
         ax.set_xlabel(xl)
         ax.set_ylabel("accuracy (%)")
         ax.grid(alpha=0.3)
-    axes[0].legend(fontsize=6, loc="lower right")
+    h, l = axes[0].get_legend_handles_labels()
+    fig.legend(h, l, fontsize=6, loc="lower center", ncol=3, frameon=False)
     if assumed:
         fig.text(0.5, 0.5, "가정값 (assumed values, not measurements)", ha="center", va="center", fontsize=14, color="red",
                  alpha=0.35, rotation=20, fontproperties=fp)
     fig.suptitle(f"{a.setting}, {a.config}, {a.condition}", fontsize=8)
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0.08, 1, 1))
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     for ext in ("pdf", "png"):
         fig.savefig(f"{a.out}.{ext}", dpi=300)

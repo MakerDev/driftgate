@@ -1,0 +1,24 @@
+{
+ "model_config": "pretrained-finetuned-block",
+ "attempt": 2,
+ "cells": {
+  "s1 second-day": {
+   "judgement": "fail",
+   "room": true
+  },
+  "s1 frozen-replay": {
+   "judgement": "fail",
+   "room": true
+  },
+  "s2 second-day": {
+   "judgement": "fail",
+   "room": false
+  },
+  "s2 frozen-replay": {
+   "judgement": "fail",
+   "room": false
+  }
+ },
+ "complete": true,
+ "all_partial_or_better": false
+}

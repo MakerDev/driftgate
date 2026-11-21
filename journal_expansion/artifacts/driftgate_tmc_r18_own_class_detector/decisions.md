@@ -162,3 +162,17 @@
 - 고른 것: (a)이고, 2단계 평가용 run `r18oc_ft_s1_s0`의 라운드 150 checkpoint에서 device 0을 내보냈습니다(분할은 2단계와 같은 stride 8).
 - 근거: 7.3절은 두 구성이 모두 해당하면 `pretrained-finetuned-block`을 주 구성으로 둡니다. 2단계 판정 대상 칸의 G(0.5) 평균도 이 구성이 −1.56 %p로, `pretrained-frozen-block`의 −1.92 %p보다 envelope에 가깝습니다. 내보내기 코드는 이 구성으로 이미 시험했습니다(commit 6a8fd40). 그때의 내보내기에는 ONNX에 실제로 저장되는 값의 수가 기록되지 않았으므로(그 기록은 commit eda5be3에서 더함), 같은 checkpoint를 지금의 코드로 새 폴더(`mobile_export/stage4_ft_s1_s0_device0`)에 다시 내보냈습니다.
 - 확인: 다섯 모델(device block, device exit, 판별기, device 전체, edge block)의 ONNX와 TFLite float32 출력이 PyTorch와 최대 2.15e−5 안에서 같습니다(기준 1e−4). `pretrained-finetuned-block`의 시도 2번이 3단계로 가면, 그 run의 checkpoint(stride 16)로 다시 내보냅니다.
+
+## D27. 개선 시도 2번, `pretrained-finetuned-block`의 판정 칸 (2026-11-22 05:45, `tables/R18oc_attempt2_ft_cells.{csv,json}`)
+- 판정 대상 칸: D19에 따라 여지는 시도 2번의 평가용 run에서 다시 계산했습니다. 여지가 있는 칸은 S1 `second-day`와 S1 `frozen-replay`입니다. 2단계에서 여지가 있던 S2 `frozen-replay`는 이 run에서 여지가 없고(oracle S 0), 2단계에서 여지가 없던 S1 `second-day`는 이 run에서 여지가 생겼습니다(oracle S 0.290).
+- 결과: G(0.5)는 S1 `second-day`가 −1.41 %p(SD 0.39; 2단계 −0.02, 여지 없음), S1 `frozen-replay`가 −1.85 %p(SD 0.09; 2단계 −1.73)입니다. S는 S1 `second-day`에서 −1.257(새 방법이 A*에 envelope보다 늦게 닿음), S1 `frozen-replay`에서 0입니다. 두 칸 모두 미달입니다.
+- 같은 칸의 다른 수치: 비율 0.5에서 새 방법의 정확도는 S1 `frozen-replay`에서 70.96%에서 71.86%로 올랐지만, envelope B(0.5)도 72.70%에서 73.71%로 올랐습니다. B(0.5)의 규칙은 세 칸에서 `own-mahalanobis`/`logit-sum`입니다. 여지가 없는 S2 `frozen-replay`의 G(0.5)는 −1.69 %p(2단계 −1.38)입니다.
+- D23의 예상과 비교: 개발용 seed에서 −1.83 %p였던 차이가 평가용 seed에서도 −1.4…−1.9 %p로 남아, "부분 통과 이상이 될 가능성은 낮다"는 예상이 맞았습니다.
+- 다음: 시도 2번의 두 구성이 모두 미달이므로 D28에서 최종 판정을 적습니다.
+
+## D28. 최종 판정 (7.3절 마지막 행, 2026-11-22 05:45)
+- 판정: 시도 1번은 두 구성 모두 관문에서 멈췄고(D20, D22), 시도 2번(D25, D27)과 시도 3번(D24)은 두 구성의 판정 대상 칸이 모두 미달입니다. 7.3절의 마지막 행에 따라 3단계를 건너뛰고 4단계로 가며, 판정은 "중단 권고"입니다. 7.5절에 따라 경계에 있는 칸도 없습니다(판정 대상 칸의 G(0.5)는 모두 −0.36 %p 이하, S는 모두 0.15 미만).
+- `cnn-scratch`만 통과했는지: 아닙니다. `cnn-scratch`의 2단계 칸도 모두 미달입니다(`tables/R18oc_stage2_cells.csv`).
+- 시도 run의 처리: 시도 1–3번의 run과 표는 지우지 않고 보고서에 "판정에 썼으나 미달"로 적습니다. 시도끼리 쌓지 않았습니다(D17).
+- 내보내기: 주 구성은 D26대로 `pretrained-finetuned-block`(2단계 stride 8, 라운드 150 checkpoint)이고, 시도 2번이 3단계로 가지 않았으므로 다시 내보내지 않습니다.
+- 다음: `r18oc_final.py`로 칸 표, 그림, 보고서용 표를 다시 만들고 `report_final.md`, `r18_review_bundle.zip`, sha256 기록을 만듭니다.

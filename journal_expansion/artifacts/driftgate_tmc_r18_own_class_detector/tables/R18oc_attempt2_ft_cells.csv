@@ -1,0 +1,7 @@
+setting,model config,attempt,condition,detector variant,A* (%),ratio-at-target new,ratio-at-target comparator envelope,S,G(0.25) pp mean (SD),G(0.5) pp mean (SD),new accuracy at 0.5,B(0.5),B(0.5) rule,oracle S,oracle G(0.5) pp,room,judgement,border
+S1,pretrained-finetuned-block,2,first-day,exit|mlp64|both,72.69,none,0.114,0.000,-0.75 (0.39),-1.10 (0.36),72.31,73.41,own-mahalanobis/logit-sum,0.519,0.32,yes,fail,no
+S1,pretrained-finetuned-block,2,second-day,exit|mlp64|both,72.12,0.159,0.070,-1.257,-0.58 (0.16),-1.41 (0.39),71.48,72.89,own-mahalanobis/logit-sum,0.290,0.52,yes,fail,no
+S1,pretrained-finetuned-block,2,frozen-replay,exit|mlp64|both,72.79,none,0.115,0.000,-0.90 (0.22),-1.85 (0.09),71.86,73.71,own-mahalanobis/logit-sum,0.546,0.28,yes,fail,no
+S2,pretrained-finetuned-block,2,first-day,exit|mlp64|both,76.48,0.258,0.079,-2.275,-0.58 (0.23),-0.92 (0.39),76.23,77.15,own-knn/average-corrected-even,0.364,-2.30,yes,fail,no
+S2,pretrained-finetuned-block,2,second-day,exit|mlp64|both,77.67,0.106,0.050,-1.112,-0.53 (0.41),-1.28 (1.10),76.98,78.26,own-mahalanobis/probability-average,0.000,-1.51,no,fail,no
+S2,pretrained-finetuned-block,2,frozen-replay,exit|mlp64|both,78.18,none,0.050,0.000,-0.66 (0.09),-1.69 (0.59),77.31,79.00,own-mahalanobis/logit-sum,0.000,-1.74,no,fail,no

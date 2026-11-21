@@ -1,0 +1,582 @@
+{
+ "run_id": "r6_fixed_20261120_231112_28eb7c",
+ "git_commit": "c6f863c58b96993bbd4603ba51b0bddbcf014bf8",
+ "config": {
+  "scenario": "S2",
+  "arm": "r18oc",
+  "env_file": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT6_env/S2_seed1.npz",
+  "env_meta": {
+   "scenario": "S2",
+   "dataset": "GeoLife Trajectories 1.3",
+   "env_seed": 1,
+   "K": 50,
+   "L": 5,
+   "T": 150,
+   "layout": "trace",
+   "mu_range": [
+    32.0,
+    128.0
+   ],
+   "avail": 1.0,
+   "loss": 0.0,
+   "n_points": 24876978,
+   "n_points_kept": 18487422,
+   "n_candidates": 135,
+   "n_selected": 50,
+   "lat0": 39.961071867384405,
+   "lon0": 116.36989836482961,
+   "edge_xy_km": [
+    [
+     -2.5074,
+     3.1187
+    ],
+    [
+     -7.363,
+     -16.3305
+    ],
+    [
+     8.5827,
+     -7.5398
+    ],
+    [
+     19.3092,
+     8.5383
+    ],
+    [
+     -21.0499,
+     10.8738
+    ]
+   ],
+   "edge_latlon": [
+    [
+     39.98911872423124,
+     116.34047914527412
+    ],
+    [
+     39.81420851354232,
+     116.28350713525387
+    ],
+    [
+     39.89326502983652,
+     116.47059998267567
+    ],
+    [
+     40.0378581294333,
+     116.59645475764678
+    ],
+    [
+     40.0588617858352,
+     116.12291733918426
+    ]
+   ],
+   "residents_per_cell": [
+    38,
+    4,
+    5,
+    2,
+    1
+   ],
+   "class_group_of_cell": {
+    "0": 0,
+    "2": 1,
+    "1": 2,
+    "3": 3,
+    "4": 4
+   },
+   "rho_home": 0.1,
+   "rho_away": 0.8,
+   "partition": "one nd1_partition over the 50 clients, client_to_es = class group of the home cell, seed = run seed"
+  },
+  "mode": "fixed",
+  "signal": null,
+  "lambda_val": 0.4,
+  "big_lambda_val": 0.5,
+  "apfl_eta": null,
+  "signal_delay": 0,
+  "probe_n": 64,
+  "eval_every": 5,
+  "controller_kwargs": {},
+  "partition_seed": 1,
+  "model_seed": 100,
+  "run_name": "r18oc_cnn_s2_replay_s1",
+  "cfg": {
+   "dataset": "cifar10",
+   "num_classes": 10,
+   "data_root": "./data_cache",
+   "num_clients": 50,
+   "num_edge_servers": 5,
+   "overlap_percentage": 50,
+   "global_rounds": 150,
+   "local_epochs": 3,
+   "batch_size": 32,
+   "learning_rate": 0.01,
+   "weight_decay": 0.0001,
+   "optimizer": "sgd",
+   "momentum": 0.0,
+   "gamma": 0.5,
+   "lambda_default": 0.2,
+   "big_lambda_default": 0.5,
+   "partition_mode": "nd1",
+   "classes_per_es_min_frac": 0.4,
+   "classes_per_es_max_frac": 0.7,
+   "classes_per_client_frac": 0.2,
+   "eth_default": 0.8,
+   "eval_every_n_rounds": 10,
+   "oop_ratio_default": 0.4,
+   "oor_ratio_factor": 0.3,
+   "partition_seed": 1,
+   "model_seed": 100,
+   "mobility_seed": 42,
+   "adaptive": {
+    "anchor_buffer_size": 16,
+    "drift_buffer_size": 64,
+    "consensus_steps": 1,
+    "lam_min": 0.15,
+    "lam_max": 0.7,
+    "Lam_min": 0.4,
+    "Lam_max": 0.7,
+    "mu_H": 2.0,
+    "tau_H": 0.5,
+    "use_delta": false,
+    "delta_weight": 0.3,
+    "signal_mode": "disagreement",
+    "beta_margin": 0.0,
+    "mu_drift": 0.31,
+    "tau_drift": 0.045
+   },
+   "device": "cuda:0"
+  },
+  "record_eval_probs": true,
+  "record_train_label_hist": true,
+  "model_config": "cnn-scratch",
+  "holdout_frac": 0.1,
+  "days": 1,
+  "detector": true,
+  "detector_main": "exit|mlp64|both",
+  "checkpoint_at": null,
+  "save_checkpoint": false,
+  "record_eval_logprobs": false,
+  "replay_from": "/home/honeynaps/data/driftgate/journal_expansion/runs/phaseT18oc/r18oc_cnn_s2_s1_ckpt_r150.pt"
+ },
+ "config_sha256": "e3b956d895ce6c0bec79e4e28bc2bcfabea77db6e5c2441a6ce6573e85c1a66e",
+ "command": "/home/honeynaps/data/driftgate/journal_expansion/scripts/run_r6.py --scenario S2 --arm r18oc --mode fixed --lambda_val 0.4 --big_lambda_val 0.5 --disjoint_pools --seed 1 --model_seed 100 --output_dir /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT18oc --device cuda:0 --record_eval_probs --record_train_label_hist --model_config cnn-scratch --holdout_frac 0.1 --detector --detector_main exit|mlp64|both --run_name r18oc_cnn_s2_replay_s1 --rounds 150 --replay_from /home/honeynaps/data/driftgate/journal_expansion/runs/phaseT18oc/r18oc_cnn_s2_s1_ckpt_r150.pt",
+ "start_time": "2026-11-20T23:11:12.094447",
+ "env": {
+  "python": "3.12.7",
+  "platform": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "status": "completed",
+ "split_hash": "e08d47492a262137",
+ "model_init_hash": "4bf106edf9d2473d",
+ "disjoint_pools": {
+  "controller_frac": 0.2,
+  "seed": 1,
+  "per_class": {
+   "0": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "1": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "2": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "3": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "4": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "5": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "6": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "7": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "8": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   },
+   "9": {
+    "n_total": 1000,
+    "n_controller": 200,
+    "n_eval": 800
+   }
+  },
+  "controller_pool_size": 2000,
+  "eval_pool_size": 8000,
+  "global_overlap": 0
+ },
+ "cell_groups": {
+  "0": [
+   0,
+   1,
+   3,
+   4,
+   9
+  ],
+  "1": [
+   1,
+   2,
+   5,
+   7,
+   8,
+   9
+  ],
+  "2": [
+   0,
+   3,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "3": [
+   4,
+   7,
+   8
+  ],
+  "4": [
+   0,
+   9
+  ]
+ },
+ "client_main": {
+  "0": [
+   1,
+   9
+  ],
+  "1": [
+   1,
+   3
+  ],
+  "2": [
+   1,
+   4
+  ],
+  "3": [
+   0,
+   3
+  ],
+  "4": [
+   0,
+   4
+  ],
+  "5": [
+   1,
+   3
+  ],
+  "6": [
+   0,
+   3
+  ],
+  "7": [
+   4,
+   9
+  ],
+  "8": [
+   1,
+   9
+  ],
+  "9": [
+   2,
+   9
+  ],
+  "10": [
+   5,
+   7
+  ],
+  "11": [
+   4,
+   9
+  ],
+  "12": [
+   0,
+   9
+  ],
+  "13": [
+   3,
+   6
+  ],
+  "14": [
+   5,
+   8
+  ],
+  "15": [
+   4,
+   7
+  ],
+  "16": [
+   3,
+   9
+  ],
+  "17": [
+   0,
+   4
+  ],
+  "18": [
+   0,
+   9
+  ],
+  "19": [
+   3,
+   9
+  ],
+  "20": [
+   4,
+   9
+  ],
+  "21": [
+   3,
+   4
+  ],
+  "22": [
+   0,
+   4
+  ],
+  "23": [
+   0,
+   5
+  ],
+  "24": [
+   4,
+   9
+  ],
+  "25": [
+   1,
+   9
+  ],
+  "26": [
+   4,
+   8
+  ],
+  "27": [
+   0,
+   1
+  ],
+  "28": [
+   7,
+   9
+  ],
+  "29": [
+   1,
+   4
+  ],
+  "30": [
+   3,
+   9
+  ],
+  "31": [
+   3,
+   9
+  ],
+  "32": [
+   3,
+   4
+  ],
+  "33": [
+   7,
+   8
+  ],
+  "34": [
+   0,
+   9
+  ],
+  "35": [
+   1,
+   4
+  ],
+  "36": [
+   1,
+   9
+  ],
+  "37": [
+   0,
+   4
+  ],
+  "38": [
+   3,
+   4
+  ],
+  "39": [
+   1,
+   9
+  ],
+  "40": [
+   4,
+   9
+  ],
+  "41": [
+   3,
+   4
+  ],
+  "42": [
+   3,
+   4
+  ],
+  "43": [
+   0,
+   3
+  ],
+  "44": [
+   0,
+   4
+  ],
+  "45": [
+   1,
+   9
+  ],
+  "46": [
+   1,
+   9
+  ],
+  "47": [
+   0,
+   9
+  ],
+  "48": [
+   3,
+   9
+  ],
+  "49": [
+   0,
+   9
+  ]
+ },
+ "client_n_train": {
+  "0": 533,
+  "1": 627,
+  "2": 571,
+  "3": 581,
+  "4": 525,
+  "5": 627,
+  "6": 581,
+  "7": 412,
+  "8": 533,
+  "9": 4687,
+  "10": 2624,
+  "11": 412,
+  "12": 487,
+  "13": 4781,
+  "14": 2998,
+  "15": 1350,
+  "16": 468,
+  "17": 525,
+  "18": 487,
+  "19": 468,
+  "20": 412,
+  "21": 506,
+  "22": 525,
+  "23": 1799,
+  "24": 412,
+  "25": 533,
+  "26": 1724,
+  "27": 646,
+  "28": 1312,
+  "29": 571,
+  "30": 468,
+  "31": 468,
+  "32": 506,
+  "33": 2624,
+  "34": 487,
+  "35": 571,
+  "36": 533,
+  "37": 525,
+  "38": 506,
+  "39": 533,
+  "40": 412,
+  "41": 506,
+  "42": 506,
+  "43": 581,
+  "44": 525,
+  "45": 533,
+  "46": 533,
+  "47": 487,
+  "48": 468,
+  "49": 487
+ },
+ "client_n_holdout": {
+  "0": 59,
+  "1": 69,
+  "2": 63,
+  "3": 64,
+  "4": 58,
+  "5": 69,
+  "6": 64,
+  "7": 46,
+  "8": 59,
+  "9": 521,
+  "10": 292,
+  "11": 46,
+  "12": 54,
+  "13": 531,
+  "14": 334,
+  "15": 150,
+  "16": 52,
+  "17": 58,
+  "18": 54,
+  "19": 52,
+  "20": 46,
+  "21": 56,
+  "22": 58,
+  "23": 200,
+  "24": 46,
+  "25": 59,
+  "26": 192,
+  "27": 71,
+  "28": 146,
+  "29": 63,
+  "30": 52,
+  "31": 52,
+  "32": 56,
+  "33": 292,
+  "34": 54,
+  "35": 63,
+  "36": 59,
+  "37": 58,
+  "38": 56,
+  "39": 59,
+  "40": 46,
+  "41": 56,
+  "42": 56,
+  "43": 64,
+  "44": 58,
+  "45": 59,
+  "46": 59,
+  "47": 54,
+  "48": 52,
+  "49": 54
+ },
+ "end_time": "2026-11-20T23:27:05.952869",
+ "wall_time_sec": 953.7467348575592,
+ "final_metrics": {
+  "integrated_acc": 0.7499806175750666,
+  "acc_total_final": 0.7696640405731658,
+  "wall_min": 15.272385156154632,
+  "probe_eval_overlap": 0
+ }
+}

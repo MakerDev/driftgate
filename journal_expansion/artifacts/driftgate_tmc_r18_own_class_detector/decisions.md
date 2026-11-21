@@ -123,3 +123,9 @@
 - 같은 run의 다른 수치: Device only는 70.24%에서 64.09%로, 그 run의 envelope B(0.5)는 74.54%에서 67.86%로 내려갔습니다. 판별기의 AUROC도 0.761에서 0.683으로 내려갔습니다.
 - 해석: "other" 출력의 손실(γ = 0.5, 실제 표본과 같은 수의 가상 exit 벡터)이 finetuned 구성에서는 exit와 block을 함께 바꾸므로, 판별기뿐 아니라 device 모델 자체의 정확도를 낮춘 것으로 봅니다. 시도의 설정(γ, 가상 벡터의 수)은 결과를 본 뒤에 바꾸지 않습니다.
 - 남은 일: `pretrained-frozen-block`의 시도 1번은 seed 9, 10의 cache가 생기면 같은 방식으로 판정합니다.
+
+## D21. 개선 시도 2번, `pretrained-frozen-block`의 관문 (2026-11-21 18:36, `tables/R18oc_attempt2_fz_dev.{csv,json}`, `R18oc_attempt2_fz_dev_context.csv`)
+- 결과: S1 개발용 seed 8–10의 `frozen-replay`, 비율 0.5에서 새 방법의 정확도는 71.78%에서 74.28%로, 같은 seed끼리 +2.50 %p(SD 0.06; seed별 +2.46, +2.57, +2.48)입니다. 관문(+0.5 %p)을 넘으므로 D12에 따라 평가용 run(S1·S2 seed 0–2와 각 replay, 12개, `r18oc_jobs.py attempt_eval 2`)을 job 목록에 넣었습니다.
+- 같은 run의 다른 수치: Device only는 66.45%에서 73.06%로, 그 run의 envelope B(0.5)는 74.01%에서 77.31%로 올랐습니다(B(0.5) 규칙은 두 run 모두 `device-max-prob`/`logit-sum`). 판별기의 AUROC는 0.865에서 0.894로 올랐습니다.
+- 해석: device 쪽 층이 늘어 device 모델이 강해졌고, 이득은 새 방법과 비교 방법에 함께 돌아갑니다. 개발용 seed에서 새 방법과 그 run의 B(0.5)의 차이는 −2.23 %p에서 −3.03 %p로 오히려 벌어졌으므로, 평가용 seed의 판정 칸이 부분 통과 이상이 될 가능성은 낮다고 봅니다. 그래도 관문은 D12의 규칙대로 적용합니다.
+- 순서: 시도 2번의 평가용 run이 도는 동안 `pretrained-frozen-block`의 시도 1번과 `pretrained-finetuned-block`의 시도 2번 관문을 계산합니다. 3단계에 쓰는 시도는 D17대로 1 → 2 → 3의 순서에서 판정 대상 칸이 모두 부분 통과 이상인 첫 시도입니다.

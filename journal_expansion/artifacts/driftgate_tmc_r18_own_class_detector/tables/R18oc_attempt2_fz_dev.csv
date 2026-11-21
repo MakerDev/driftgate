@@ -1,0 +1,5 @@
+model config,attempt,detector variant,seed,without the change: accuracy at 0.5 (%),attempt: accuracy at 0.5 (%),difference pp,AUROC without,AUROC attempt
+pretrained-frozen-block,2,exit|mlp64|both,8,73.71,76.17,2.46,0.883,0.907
+pretrained-frozen-block,2,exit|mlp64|both,9,71.53,74.10,2.57,0.857,0.891
+pretrained-frozen-block,2,exit|mlp64|both,10,70.10,72.58,2.48,0.853,0.884
+pretrained-frozen-block,2,exit|mlp64|both,mean (SD),71.78 (1.82),74.28 (1.80),2.50 (0.06),,

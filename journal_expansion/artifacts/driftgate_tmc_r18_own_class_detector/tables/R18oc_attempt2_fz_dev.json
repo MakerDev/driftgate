@@ -1,0 +1,11 @@
+{
+ "model_config": "pretrained-frozen-block",
+ "attempt": 2,
+ "variant": "exit|mlp64|both",
+ "base": 71.78103791640005,
+ "attempt_acc": 74.28360233138795,
+ "gain_pp": 2.5025644149879014,
+ "gain_sd": 0.058075278410443784,
+ "threshold_pp": 0.5,
+ "go_to_evaluation": true
+}

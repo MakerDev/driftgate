@@ -1,0 +1,9 @@
+model config,attempt,run,seed,Device only (%),Edge only (%),B(0.5) of the run (%),B(0.5) rule,new method at 0.5 (%),AUROC all (chosen variant)
+pretrained-frozen-block,2,without the change,8,66.28,67.01,75.71,device-max-prob/logit-sum,73.71,0.883
+pretrained-frozen-block,2,attempt 2,8,73.35,67.06,79.52,device-max-prob/logit-sum,76.17,0.907
+pretrained-frozen-block,2,without the change,9,66.96,57.79,73.06,device-max-prob/logit-sum,71.53,0.857
+pretrained-frozen-block,2,attempt 2,9,72.58,58.74,76.04,device-max-prob/logit-sum,74.10,0.891
+pretrained-frozen-block,2,without the change,10,66.10,56.40,73.27,device-max-prob/logit-sum,70.10,0.853
+pretrained-frozen-block,2,attempt 2,10,73.25,56.07,76.36,device-max-prob/logit-sum,72.58,0.884
+pretrained-frozen-block,2,without the change,mean (SD),66.45 (0.45),60.40 (5.77),74.01 (1.47),,71.78 (1.82),0.865
+pretrained-frozen-block,2,attempt 2,mean (SD),73.06 (0.42),60.62 (5.73),77.31 (1.93),,74.28 (1.80),0.894

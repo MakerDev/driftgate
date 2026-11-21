@@ -1,7 +1,8 @@
 """Round 18 (own-class detector), stage 4: tables and the summary figure for report_final.md, merged from the CSVs in
 tables/ (no cache is read here; every number comes from the stage-2 and attempt tables).
 
-  python .../r18oc_final.py cells    # tables/R18oc_final_cells.csv: stage 2 and attempts 2, 3, one row per cell
+  python .../r18oc_final.py cells    # tables/R18oc_final_cells.csv: stage 2 and attempts 2, 3, one row per cell;
+                                     # tables/R18oc_final_new_vs_v32.csv: new method minus the v32 method, stage 2
   python .../r18oc_final.py figure   # figures/R18oc_final_judged_cells.{pdf,png}: G(0.5) of the S1/S2 second-day and
                                      # frozen-replay cells of the pretrained configurations, stage 2 and attempts 2, 3
   python .../r18oc_final.py md       # (stdout) markdown blocks used in report_final.md
@@ -23,6 +24,7 @@ FIGS = HERE / "figures"
 TAGS = {"cnn-scratch": "cnn", "pretrained-finetuned-block": "ft", "pretrained-frozen-block": "fz"}
 PRE = ("pretrained-finetuned-block", "pretrained-frozen-block")
 OUT = "R18oc_final_cells.csv"
+VS_V32 = "R18oc_final_new_vs_v32.csv"
 HEAD = ["source", "setting", "model config", "condition", "judged cell", "room", "S", "G(0.5) pp mean (SD)", "G(0.5) pp mean",
         "new accuracy at 0.5", "B(0.5)", "B(0.5) rule", "judgement", "new below B(0.5)"]
 
@@ -73,6 +75,21 @@ def cells():
         w.writerow(HEAD)
         w.writerows(rows)
     print(f"{OUT}: {len(rows)} rows" + (f"; missing {', '.join(missing)}" if missing else ""))
+    # the new method against one fixed comparator, the v32 method (device-entropy + average-corrected-even), stage 2;
+    # seed-mean curves, so the difference equals the mean of the same-seed differences
+    cur = read("R18oc_stage2_curves.csv")
+    vr = []
+    for k in dict.fromkeys(key(d) for d in cur):
+        sel = lambda sc, ans: next(d for d in cur if key(d) == k and d["score or detector"] == sc and d["answer rule"] == ans)
+        mv = next(d["detector variant"] for d in st2 if key(d) == k)
+        for rho in ("0.25", "0.50", "0.75"):
+            n, v = float(sel(mv, "edge-corrected-by-detector")[f"ratio {rho}"]), float(sel("device-entropy", "average-corrected-even")[f"ratio {rho}"])
+            vr.append([*k, rho, f"{n:.2f}", f"{v:.2f}", f"{n - v:.2f}"])
+    with open(TABLES / VS_V32, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["setting", "model config", "condition", "offloading ratio", "new method (%)", "v32 method (%)", "new minus v32 (pp)"])
+        w.writerows(vr)
+    print(f"{VS_V32}: {len(vr)} rows")
 
 
 def figure():
@@ -168,6 +185,14 @@ def markdown():
     print(md(["setting", "model config", "G(0.5) pp mean (SD)"],
              [[r["setting"], r["model config"], r["G(0.5) pp mean (SD)"]] for r in st2
               if r["condition"] == "first-day" and float(r["G(0.5) pp mean"]) < -0.5]))
+    V = read(VS_V32)
+    print("\n### stage 2: new method minus the v32 method (device-entropy + average-corrected-even), pp, seed-mean curves\n")
+    ks = list(dict.fromkeys((r["setting"], r["model config"], r["condition"]) for r in V))
+    print(md(["setting", "model config", "condition", "ratio 0.25", "ratio 0.5", "ratio 0.75"],
+             [[k[0], TAGS[k[1]], k[2]] + [next(r["new minus v32 (pp)"] for r in V if (r["setting"], r["model config"], r["condition"]) == k
+                                              and r["offloading ratio"] == rho) for rho in ("0.25", "0.50", "0.75")] for k in ks]))
+    pos = [r for r in V if r["offloading ratio"] == "0.50" and float(r["new minus v32 (pp)"]) > 0]
+    print(f"\ncells where the new method is above the v32 method at ratio 0.5: {len(pos)} of {len(ks)}")
     print("\n### attempt gates (S1 development seeds 8-10, frozen-replay, ratio 0.5; gate +0.5 pp)\n")
     body = []
     for att in (1, 2, 3):

@@ -117,3 +117,9 @@
 - 선택지: (a) 2단계 run에서 정한 여지를 그대로 쓰기, (b) 시도의 평가용 run에서 여지를 다시 계산하기.
 - 고른 것: (b)입니다. `r18oc_tables.attempt_cells`(결과를 보기 전에 commit한 코드)가 이렇게 계산합니다. 시도 3번은 같은 run에서 답 규칙만 바꾸므로 oracle 곡선이 2단계와 같고, 여지도 2단계와 같습니다.
 - 근거: 여지는 run의 device와 edge 출력에서 나오는 성질이므로, 판정하는 run과 같은 run에서 계산해야 앞뒤가 맞습니다. 이미 commit된 코드를 바꾸지 않는 쪽이기도 합니다.
+
+## D20. 개선 시도 1번, `pretrained-finetuned-block`의 관문 (2026-11-21 18:17, `tables/R18oc_attempt1_ft_dev.{csv,json}`, `R18oc_attempt1_ft_dev_context.csv`)
+- 결과: S1 개발용 seed 8–10의 `frozen-replay`, 비율 0.5에서 새 방법의 정확도는 72.07%에서 66.64%로, 같은 seed끼리 −5.43 %p(SD 2.06; seed별 −7.81, −4.13, −4.36)입니다. 관문(+0.5 %p)을 넘지 못하므로 이 구성의 시도 1번은 평가용 run을 돌리지 않습니다(D12).
+- 같은 run의 다른 수치: Device only는 70.24%에서 64.09%로, 그 run의 envelope B(0.5)는 74.54%에서 67.86%로 내려갔습니다. 판별기의 AUROC도 0.761에서 0.683으로 내려갔습니다.
+- 해석: "other" 출력의 손실(γ = 0.5, 실제 표본과 같은 수의 가상 exit 벡터)이 finetuned 구성에서는 exit와 block을 함께 바꾸므로, 판별기뿐 아니라 device 모델 자체의 정확도를 낮춘 것으로 봅니다. 시도의 설정(γ, 가상 벡터의 수)은 결과를 본 뒤에 바꾸지 않습니다.
+- 남은 일: `pretrained-frozen-block`의 시도 1번은 seed 9, 10의 cache가 생기면 같은 방식으로 판정합니다.

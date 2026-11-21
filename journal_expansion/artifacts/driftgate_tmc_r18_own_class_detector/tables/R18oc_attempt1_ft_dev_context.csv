@@ -1,0 +1,9 @@
+model config,attempt,run,seed,Device only (%),Edge only (%),B(0.5) of the run (%),B(0.5) rule,new method at 0.5 (%),AUROC all (chosen variant)
+pretrained-finetuned-block,1,without the change,8,71.66,66.63,77.32,device-max-prob/logit-sum,74.31,0.802
+pretrained-finetuned-block,1,attempt 1,8,61.38,60.30,67.12,own-knn/edge-corrected-even,66.50,0.706
+pretrained-finetuned-block,1,without the change,9,69.52,57.94,72.70,device-max-prob/average-corrected-even,71.19,0.733
+pretrained-finetuned-block,1,attempt 1,9,66.84,51.65,68.30,own-mahalanobis/logit-sum,67.06,0.673
+pretrained-finetuned-block,1,without the change,10,69.54,55.76,73.59,own-knn/logit-sum,70.72,0.746
+pretrained-finetuned-block,1,attempt 1,10,64.06,55.41,68.16,own-knn/logit-sum,66.36,0.670
+pretrained-finetuned-block,1,without the change,mean (SD),70.24 (1.23),60.11 (5.75),74.54 (2.45),,72.07 (1.95),0.761
+pretrained-finetuned-block,1,attempt 1,mean (SD),64.09 (2.73),55.79 (4.33),67.86 (0.64),,66.64 (0.37),0.683

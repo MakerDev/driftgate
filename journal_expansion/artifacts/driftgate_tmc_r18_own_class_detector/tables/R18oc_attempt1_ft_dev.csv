@@ -1,0 +1,5 @@
+model config,attempt,detector variant,seed,without the change: accuracy at 0.5 (%),attempt: accuracy at 0.5 (%),difference pp,AUROC without,AUROC attempt
+pretrained-finetuned-block,1,exit|mlp64|both,8,74.31,66.50,-7.81,0.802,0.706
+pretrained-finetuned-block,1,exit|mlp64|both,9,71.19,67.06,-4.13,0.733,0.673
+pretrained-finetuned-block,1,exit|mlp64|both,10,70.72,66.36,-4.36,0.746,0.670
+pretrained-finetuned-block,1,exit|mlp64|both,mean (SD),72.07 (1.95),66.64 (0.37),-5.43 (2.06),,

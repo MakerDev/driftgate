@@ -1,0 +1,5 @@
+model config,attempt,detector variant,seed,without the change: accuracy at 0.5 (%),attempt: accuracy at 0.5 (%),difference pp
+pretrained-finetuned-block,3,exit|mlp64|both,8,74.31,75.50,1.19
+pretrained-finetuned-block,3,exit|mlp64|both,9,71.19,71.78,0.59
+pretrained-finetuned-block,3,exit|mlp64|both,10,70.72,72.20,1.48
+pretrained-finetuned-block,3,exit|mlp64|both,mean (SD),72.07 (1.95),73.16 (2.03),1.09 (0.45)

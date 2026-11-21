@@ -8,3 +8,4 @@
 - **개선 시도의 결과 (2026-11-21 18:17 기준):** 시도 1번은 `pretrained-finetuned-block`에서 관문을 넘지 못했습니다(−5.43 %p, D20). `pretrained-frozen-block`의 시도 1번과 두 구성의 시도 2번은 개발용 run을 기다리고 있습니다.
 - **개선 시도의 결과 (2026-11-21 18:40 기준):** 시도 2번은 `pretrained-frozen-block`에서 관문을 넘었습니다(+2.50 %p, D21). 평가용 run 12개가 job 목록에 들어갔습니다.
 - **개선 시도의 결과 (2026-11-21 19:55 기준):** 시도 1번은 `pretrained-frozen-block`에서도 관문을 넘지 못했습니다(−0.85 %p, D22). 시도 3번의 cache를 `scripts/r18oc_attempt3_batch.sh`로 만들고 있습니다(`cache/attempt3_batch.log`). 시도 3번의 관문은 `pretrained-finetuned-block`의 시도 2번 관문 뒤에 계산합니다.
+- **개선 시도의 결과 (2026-11-21 20:50 기준):** 시도 2번은 `pretrained-finetuned-block`에서도 관문을 넘었습니다(+0.67 %p, D23). 시도 3번은 두 구성 모두 관문을 넘었지만(+1.09, +0.99 %p), 평가용 seed의 판정 칸은 모두 미달입니다(D24). 남은 것은 시도 2번의 평가용 run 24개(두 구성)이고, 끝나면 `r18oc_tables.py attempt_cells 2 <구성>`으로 판정합니다.

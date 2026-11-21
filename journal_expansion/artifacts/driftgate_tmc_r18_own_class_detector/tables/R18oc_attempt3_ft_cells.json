@@ -1,0 +1,31 @@
+{
+ "model_config": "pretrained-finetuned-block",
+ "attempt": 3,
+ "cells": {
+  "s1 second-day": {
+   "judgement": "fail",
+   "room": false,
+   "S": -0.4579416812550774,
+   "G05": -0.6665820585140523
+  },
+  "s1 frozen-replay": {
+   "judgement": "fail",
+   "room": true,
+   "S": -1.9770455362916208,
+   "G05": -0.9597124192108168
+  },
+  "s2 second-day": {
+   "judgement": "fail",
+   "room": false,
+   "S": -0.5763282294035577,
+   "G05": 0.07104848909573036
+  },
+  "s2 frozen-replay": {
+   "judgement": "fail",
+   "room": true,
+   "S": -0.7215530807996149,
+   "G05": -0.36290008136877816
+  }
+ },
+ "all_roomy_partial_or_better": false
+}

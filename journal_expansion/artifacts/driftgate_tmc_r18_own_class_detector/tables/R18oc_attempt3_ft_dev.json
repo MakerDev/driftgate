@@ -1,0 +1,12 @@
+{
+ "model_config": "pretrained-finetuned-block",
+ "attempt": 3,
+ "change": "average-corrected-by-detector",
+ "variant": "exit|mlp64|both",
+ "base": 72.07304740592845,
+ "attempt_acc": 73.15915642041851,
+ "gain_pp": 1.0861090144900583,
+ "gain_sd": 0.4515336147322745,
+ "threshold_pp": 0.5,
+ "go_to_evaluation": true
+}

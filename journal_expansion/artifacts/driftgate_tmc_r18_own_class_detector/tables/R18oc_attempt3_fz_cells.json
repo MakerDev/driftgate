@@ -1,0 +1,31 @@
+{
+ "model_config": "pretrained-frozen-block",
+ "attempt": 3,
+ "cells": {
+  "s1 second-day": {
+   "judgement": "fail",
+   "room": true,
+   "S": 0.0,
+   "G05": -0.9677564975317523
+  },
+  "s1 frozen-replay": {
+   "judgement": "fail",
+   "room": true,
+   "S": 0.0,
+   "G05": -1.2047729362937503
+  },
+  "s2 second-day": {
+   "judgement": "fail",
+   "room": false,
+   "S": -0.37032183458423495,
+   "G05": -0.6958328690977993
+  },
+  "s2 frozen-replay": {
+   "judgement": "fail",
+   "room": false,
+   "S": -0.3008117879923069,
+   "G05": -0.8241058409255544
+  }
+ },
+ "all_roomy_partial_or_better": false
+}

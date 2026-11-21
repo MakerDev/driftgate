@@ -1,0 +1,5 @@
+setting,model config,condition,detector variant,A* (%),ratio-at-target new,ratio-at-target comparator envelope,S,G(0.25) pp mean (SD),G(0.5) pp mean (SD),new accuracy at 0.5 (attempt 3),new accuracy at 0.5 (stage 2),room,judgement (attempt 3),judgement (stage 2),border
+S1,pretrained-frozen-block,second-day,exit|mlp64|both,74.70,none,0.483,0.000,-0.64 (0.31),-0.97 (0.56),73.81,72.91,yes,fail,fail,no
+S1,pretrained-frozen-block,frozen-replay,exit|mlp64|both,74.20,none,0.514,0.000,-0.66 (0.11),-1.20 (0.50),72.93,72.17,yes,fail,fail,no
+S2,pretrained-frozen-block,second-day,exit|mlp64|both,77.26,0.627,0.457,-0.370,-0.97 (0.48),-0.70 (0.71),76.73,75.67,no,fail,fail,no
+S2,pretrained-frozen-block,frozen-replay,exit|mlp64|both,77.09,0.734,0.564,-0.301,-0.77 (0.40),-0.82 (0.84),76.02,75.08,no,fail,fail,no

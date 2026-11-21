@@ -1,0 +1,142 @@
+{
+ "checkpoint": "journal_expansion/runs/phaseT18oc/r18oc_ft_s1_s0_ckpt_r150.pt",
+ "model_config": "pretrained-finetuned-block",
+ "variant": "exit|mlp64|both",
+ "device": 0,
+ "dataset": "cifar10",
+ "edge_cell": 0,
+ "other_class": false,
+ "tolerance": 0.0001,
+ "models": {
+  "device_block": {
+   "file": "device_block.onnx",
+   "inputs": {
+    "image": [
+     3,
+     32,
+     32
+    ]
+   },
+   "outputs": {
+    "smashed": [
+     32,
+     8,
+     8
+    ]
+   },
+   "onnx_max_abs_diff": 8.463859558105469e-06,
+   "onnx_ok": true,
+   "parameters": 67875,
+   "onnx_parameters": 53728,
+   "tflite_file": "device_block_float32.tflite",
+   "tflite_max_abs_diff": 1.3947486877441406e-05,
+   "tflite_ok": true,
+   "tflite_input_layout": "NHWC for 4-D inputs (onnx2tf)"
+  },
+  "device_exit": {
+   "file": "device_exit.onnx",
+   "inputs": {
+    "smashed": [
+     32,
+     8,
+     8
+    ]
+   },
+   "outputs": {
+    "device_logits": [
+     10
+    ],
+    "exit_vector": [
+     192
+    ]
+   },
+   "onnx_max_abs_diff": 1.6689300537109375e-06,
+   "onnx_ok": true,
+   "parameters": 67875,
+   "onnx_parameters": 8266,
+   "tflite_file": "device_exit_float32.tflite",
+   "tflite_max_abs_diff": 7.152557373046875e-07,
+   "tflite_ok": true,
+   "tflite_input_layout": "NHWC for 4-D inputs (onnx2tf)"
+  },
+  "detector": {
+   "file": "detector.onnx",
+   "inputs": {
+    "block_vector": [
+     32
+    ],
+    "exit_vector": [
+     192
+    ]
+   },
+   "outputs": {
+    "g": []
+   },
+   "onnx_max_abs_diff": 1.1920928955078125e-07,
+   "onnx_ok": true,
+   "parameters": 12801,
+   "onnx_parameters": 12801,
+   "tflite_file": "detector_float32.tflite",
+   "tflite_max_abs_diff": 2.384185791015625e-07,
+   "tflite_ok": true,
+   "tflite_input_layout": "NHWC for 4-D inputs (onnx2tf)"
+  },
+  "device_side": {
+   "file": "device_side.onnx",
+   "inputs": {
+    "image": [
+     3,
+     32,
+     32
+    ]
+   },
+   "outputs": {
+    "device_logits": [
+     10
+    ],
+    "smashed": [
+     32,
+     8,
+     8
+    ],
+    "g": []
+   },
+   "onnx_max_abs_diff": 8.463859558105469e-06,
+   "onnx_ok": true,
+   "parameters": 80676,
+   "onnx_parameters": 74795,
+   "tflite_file": "device_side_float32.tflite",
+   "tflite_max_abs_diff": 1.3947486877441406e-05,
+   "tflite_ok": true,
+   "tflite_input_layout": "NHWC for 4-D inputs (onnx2tf)"
+  },
+  "edge_block": {
+   "file": "edge_block.onnx",
+   "inputs": {
+    "smashed": [
+     32,
+     8,
+     8
+    ]
+   },
+   "outputs": {
+    "edge_logits": [
+     10
+    ]
+   },
+   "onnx_max_abs_diff": 1.52587890625e-05,
+   "onnx_ok": true,
+   "parameters": 2211820,
+   "onnx_parameters": 2165898,
+   "tflite_file": "edge_block_float32.tflite",
+   "tflite_max_abs_diff": 2.1457672119140625e-05,
+   "tflite_ok": true,
+   "tflite_input_layout": "NHWC for 4-D inputs (onnx2tf)"
+  }
+ },
+ "bytes_per_offloaded_request": {
+  "uplink_float32_smashed": 8192,
+  "downlink_float32_edge_logits": 40,
+  "note": "application payload only; protocol headers not included"
+ }
+}

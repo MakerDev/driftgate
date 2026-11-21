@@ -155,3 +155,10 @@
 - 같은 칸의 다른 수치: 비율 0.5에서 새 방법의 정확도는 S1 `frozen-replay`에서 72.17%에서 74.23%로, S2 `frozen-replay`에서 75.08%에서 77.71%로 올랐습니다. 그러나 envelope B(0.5)가 74.14%에서 77.00%로, 76.84%에서 79.53%로 더 많이 올랐습니다(규칙은 2단계와 같은 `device-max-prob` 계열).
 - D21의 예상과 비교: 개발용 seed에서 보인 "이득이 비교 방법에도 함께 돌아가 격차가 벌어진다"는 양상이 평가용 seed에서도 그대로 나타났습니다.
 - 다음: `pretrained-finetuned-block`의 시도 2번 평가용 run(12개)이 끝나면 같은 방식으로 판정합니다. 그 구성의 판정 대상 칸이 모두 부분 통과 이상이 아니면 D24대로 4단계로 가며, 판정은 "중단 권고"입니다.
+
+## D26. 4단계에서 내보내는 구성 (2026-11-22 02:10, `tables/R18oc_mobile_export_manifest_stage4_ft_s1_s0_device0.json`)
+- 상황: 6.5절은 "주 구성"의 device block, exit, 판별기를 내보내라고 합니다. 주 구성은 3단계에서 정하는데, 지금까지의 판정대로라면 3단계를 하지 않으므로 주 구성이 정해지지 않습니다.
+- 선택지: (a) `pretrained-finetuned-block`, (b) `pretrained-frozen-block`, (c) 둘 다입니다.
+- 고른 것: (a)이고, 2단계 평가용 run `r18oc_ft_s1_s0`의 라운드 150 checkpoint에서 device 0을 내보냈습니다(분할은 2단계와 같은 stride 8).
+- 근거: 7.3절은 두 구성이 모두 해당하면 `pretrained-finetuned-block`을 주 구성으로 둡니다. 2단계 판정 대상 칸의 G(0.5) 평균도 이 구성이 −1.56 %p로, `pretrained-frozen-block`의 −1.92 %p보다 envelope에 가깝습니다. 내보내기 코드는 이 구성으로 이미 시험했습니다(commit 6a8fd40). 그때의 내보내기에는 ONNX에 실제로 저장되는 값의 수가 기록되지 않았으므로(그 기록은 commit eda5be3에서 더함), 같은 checkpoint를 지금의 코드로 새 폴더(`mobile_export/stage4_ft_s1_s0_device0`)에 다시 내보냈습니다.
+- 확인: 다섯 모델(device block, device exit, 판별기, device 전체, edge block)의 ONNX와 TFLite float32 출력이 PyTorch와 최대 2.15e−5 안에서 같습니다(기준 1e−4). `pretrained-finetuned-block`의 시도 2번이 3단계로 가면, 그 run의 checkpoint(stride 16)로 다시 내보냅니다.

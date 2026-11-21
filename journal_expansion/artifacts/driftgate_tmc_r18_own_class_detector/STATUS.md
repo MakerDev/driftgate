@@ -1,7 +1,7 @@
 # Round 18 상태
 
-- **현재 단계:** 2단계(예비 실험)의 평가용 run 진행 중입니다. 세 구성의 설계 선택이 끝났습니다(D11, D13, D15: 세 구성 모두 `exit|mlp64|both`).
-- **끝난 일:** 1단계 전체, 2단계 개발용 run과 설계 선택, 중간 산출물과 데이터셋을 8T 디스크로 옮기기(D9, 옛 폴더 `runs/phaseT18oc.moving`은 확인 뒤 삭제), iNaturalist 사진 30,000장 추출, 3단계 준비(S2 seed 3–4 환경, stepwise change와 random mobility 환경 D14, 3단계 job 목록 `r18oc_jobs.py stage3`, 3단계 표 `r18oc_stage3.py`, 곡선 그림 `r18oc_figures.py`, 보고서 표 `r18oc_report.py`).
+- **현재 단계:** 2단계가 끝났고, 7.3절의 판정은 두 사전학습 구성 모두 행 3입니다(D17, `report_stage2.md`). 판정 칸이 모두 미달이지만 일부 칸에 여지가 있으므로, 개선 시도를 1번부터 차례로 두 구성 모두에 합니다.
+- **끝난 일:** 1단계 전체, 2단계의 개발용 run, 설계 선택(D11, D13, D15: 세 구성 모두 `exit|mlp64|both`), 평가용 run 24개와 분석, 2단계 표와 그림, 실패 원인의 진단 표, 개선 시도 3번의 가설(D18)과 코드(`scripts/r18oc_attempt3.py`), 3단계 준비(환경, job 목록, 표 스크립트).
 - **저장 위치:** run 출력, 분석 cache, iNaturalist 자료, 내보낸 모델은 `/home/honeynaps/8T/2_Data/3_DataPreprocessed/driftgate_r18_own_class_261120/`에 있습니다. 저장소의 `runs/phaseT18oc`와 `cache`는 그 폴더를 가리키는 링크입니다.
-- **진행 중인 배경 작업:** dispatcher(`runs/phaseT18oc/dispatch.log`, job 90개), 자동 분석(`cache/autoanalyse.log`). job 목록의 끝에는 개선 시도 1·2번의 개발용 run이 있습니다(D16, 2단계 판정이 행 2나 3일 때만 씀).
-- **다음 일:** 평가용 run의 분석이 모두 끝나면 `r18oc_tables.py stage2`와 `holdout`을 돌리고 `report_stage2.md`를 쓴 뒤, 7.3절의 판정을 `decisions.md`에 적고 그에 따라 진행합니다.
+- **진행 중인 배경 작업:** dispatcher(`runs/phaseT18oc/dispatch.log`)가 개선 시도 1·2번의 개발용 run 12개(두 구성 × S1 seed 8–10)를 돌리고 있고, 자동 분석(`cache/autoanalyse.log`)이 끝난 run을 차례로 분석합니다.
+- **다음 일:** 시도 1·2번의 cache가 모두 생기면 `r18oc_tables.py attempt_dev 1|2 <구성>`으로 관문(+0.5 %p)을 계산합니다. 관문을 넘은 시도는 평가용 run(S1·S2 seed 0–2)을 돌려 `attempt_cells`로 판정 칸을 다시 봅니다. 그 뒤 시도 3번(`r18oc_attempt3.py run`, `dev`, `cells`)을 같은 방식으로 판정합니다. 여지 있는 칸이 모두 부분 통과 이상이 되는 시도가 없으면 3단계를 건너뛰고 4단계로 가며, 판정은 "중단 권고"입니다.

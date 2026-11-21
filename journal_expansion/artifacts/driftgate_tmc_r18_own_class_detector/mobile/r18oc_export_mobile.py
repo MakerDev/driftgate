@@ -32,6 +32,13 @@ from src.r18oc_models import _frozen_block, block_vector, exit_vector, make_fact
 TOL = 1e-4
 
 
+def onnx_values(f):
+    """number of stored values (initializers) in an ONNX file: the parameters the exported part really uses ("parameters"
+    counts every tensor of the wrapped module, which for device_block and device_exit is the whole device model)."""
+    import onnx
+    return int(sum(int(np.prod(t.dims)) for t in onnx.load(str(f)).graph.initializer))
+
+
 class Block(nn.Module):
     """device block; for MobileNetV2 the 32 -> 64 bilinear resize is written with scale factor 2 (identical to size 64,
     checked below), because onnx2tf converts the size form of ONNX Resize to a wrong shape."""
@@ -185,7 +192,8 @@ def main():
         man["models"][nm] = dict(file=f.name, inputs={n: list(feeds[n].shape[1:]) for n in ins},
                                  outputs={n: list(w.shape[1:]) for n, w in zip(outs, want)}, onnx_max_abs_diff=diff,
                                  onnx_ok=diff <= TOL, parameters=int(sum(p.numel() for p in mod.parameters()))
-                                 + int(sum(b.numel() for b in mod.buffers())))
+                                 + int(sum(b.numel() for b in mod.buffers())),
+                                 onnx_parameters=onnx_values(f))
         for n in ins:
             ref[f"{nm}__in__{n}"] = feeds[n]
         for n, w in zip(outs, want):

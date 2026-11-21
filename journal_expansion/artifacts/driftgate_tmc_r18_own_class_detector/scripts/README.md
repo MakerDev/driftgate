@@ -25,6 +25,7 @@ statistics, request scores) and the Round 18 options of `src/runner_r6.py` / `sc
 | `r18oc_attempt3_batch.sh` | Background batch of `r18oc_attempt3.py run` over the development and evaluation runs (one analysis worker at a time). |
 | `r18oc_cost.py` | Device and edge cost of the stage-2 split and of attempt 2 `deeper-split` (`tables/R18oc_attempt2_cost.csv`). |
 | `r18oc_manifest.py` | sha256 of every run output, analysis cache and mobile export on the 8T disk (`tables/R18oc_files_sha256.csv`, D9). |
+| `r18oc_final.py` | Stage 4: `cells` merges the stage-2 and attempt cell tables (`tables/R18oc_final_cells.csv`), `figure` draws G(0.5) of the judged cells (`figures/R18oc_final_judged_cells.{pdf,png}`), `md` prints the markdown blocks of `report_final.md`. |
 | `r18oc_stage3.py` | Stage-3 tables and `decision_stage3.json` (`tables <main cfg> <other cfg>`, `check`). |
 
 Storage: run outputs, analysis caches, the iNaturalist data and the exported mobile models are kept on the 8T disk

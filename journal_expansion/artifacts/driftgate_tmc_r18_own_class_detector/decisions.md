@@ -96,14 +96,14 @@
 - 고른 것: (b)입니다. dispatcher는 목록 순서대로 띄우므로 평가용 run이 먼저 돌고, 시도 run은 남는 GPU에서 돕니다.
 - 지키는 것: 시도의 결과는 7.3절의 판정이 행 2 또는 3일 때에만 쓰고, 순서(1 → 2 → 3)와 판정 방식(D12)은 그대로입니다. 행 1, 4, 5가 나오면 이 run들은 보고서에 "쓰지 않음"으로 적습니다. 시도 run은 개발용 seed만 쓰므로 평가용 seed의 결과를 보고 설정을 고르는 일과 관계가 없습니다.
 
-## D17. 2단계 판정 (7.3, 2026-11-21 16:20, `decision_stage2.json`, commit b4884cc)
+## D17. 2단계 판정 (7.3, 2026-11-21 16:15, `decision_stage2.json`, commit b4884cc)
 - 결과: 두 사전학습 구성 모두 판정 칸 네 개(S1·S2 × `second-day`·`frozen-replay`)가 미달입니다. 새 방법은 네 칸 모두에서 A*에 닿지 못해 S = 0이고, G(0.5)는 `pretrained-finetuned-block`이 −0.02, −1.73, −0.81, −1.38 %p, `pretrained-frozen-block`이 −1.87, −1.96, −1.75, −1.77 %p입니다(S1 second-day, S1 frozen-replay, S2 second-day, S2 frozen-replay 순서).
 - 여지(oracle이 통과): `pretrained-finetuned-block`은 S1·S2의 `frozen-replay`(oracle S 0.508, 0.414)에만 있고, `second-day` 두 칸(oracle S 0.000, −0.016)에는 없습니다. `pretrained-frozen-block`은 S1의 두 칸(oracle S 0.411, 0.485)에만 있고, S2의 두 칸(oracle S 0.000)에는 없습니다.
 - 적용: 2.3절 표를 위에서부터 검사하면 두 구성 모두 행 3("미달인 칸이 있지만 여지는 있음")입니다. 두 구성이 같은 행이므로 D12에 따라 두 구성 모두에 시도 1 → 2 → 3을 합니다. 여지 없는 칸을 빼고 판정하므로, 판정 대상은 `pretrained-finetuned-block`의 S1·S2 `frozen-replay`와 `pretrained-frozen-block`의 S1 `second-day`·`frozen-replay`입니다. 일부 칸이 여지 없음이므로 최종 판정은 "조건부 권고" 이하입니다.
 - 시도끼리는 쌓지 않습니다: 각 시도는 변경 없는 판(D12의 "기존 판")에 변경 하나만 더해 비교하고, 앞선 시도가 관문(+0.5 %p)을 넘었더라도 다음 시도에 포함하지 않습니다. 한 시도에서 한 구성의 판정 대상 칸이 모두 부분 통과 이상이 되면 그 시도와 그 구성으로 3단계를 합니다.
 - 참고: `cnn-scratch`도 여섯 칸 모두 미달입니다(G(0.5) −0.20…−0.91 %p). `first-day`에서 G(0.5)가 −0.5 %p보다 낮은 칸은 6개입니다(S1 `cnn-scratch`, S1·S2·CIFAR-100 `pretrained-finetuned-block`, S2·CIFAR-100 `pretrained-frozen-block`).
 
-## D18. 개선 시도 3번의 가설 (7.4의 3번, 2026-11-21 16:25, 결과를 보기 전에 적음)
+## D18. 개선 시도 3번의 가설 (7.4의 3번, 2026-11-21 16:18, 결과를 보기 전에 적음)
 - 진단(`scripts/r18oc_diagnose.py`, `tables/R18oc_stage2_diagnosis_*.csv`, commit b4884cc): 비율 0.5에서 envelope와의 차이는 순위보다 답 규칙에서 크게 납니다. 같은 답 규칙끼리 비교하면 판별기 순위는 `device-max-prob` 순위보다 `edge-raw`에서 −0.21…+1.33 %p, `edge-corrected-even`에서 −0.70…+0.07 %p입니다. 같은 `device-max-prob` 순위에서 `edge-corrected-even`을 device 출력과 섞는 `average-corrected-even`으로 바꾸면 `frozen-replay`에서 +1.06…+1.92 %p입니다. 새 방법의 답 규칙(`edge-corrected-by-detector`)은 device 출력을 쓰지 않으며, `edge-corrected-even`보다 0.15…0.58 %p만 높습니다.
 - 요청 종류로 나누면: `frozen-replay`의 비율 0.25에서 새 방법이 Main 요청에서 얻는 정확도는 `pretrained-frozen-block` S1에서 85.7%이고, Main 요청을 하나도 보내지 않는 oracle(device 답과 같음)의 87.0%보다 낮습니다. 판별기가 보낸 Main 요청은 r(0.59 안팎) 때문에 다른 class 쪽으로 기운 edge 답을 받고, device가 맞혔던 답을 잃습니다. 섞는 규칙(`device-max-prob` + `average-corrected-even`)은 같은 칸에서 Main 89.8%입니다.
 - 가설: 실패의 주된 원인은 보낸 요청의 답에서 device 출력을 버리는 것입니다. 판별기의 r로 보정한 edge 출력에 device 출력을 섞으면, 판별기 순위의 이점은 유지하면서 비교 방법들이 섞기에서 얻는 이득을 되찾습니다.

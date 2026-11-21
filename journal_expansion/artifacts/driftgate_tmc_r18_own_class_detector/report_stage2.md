@@ -339,7 +339,7 @@ S1의 `frozen-replay`, 비율 0.5에서 새 방법의 seed 평균 정확도로 1
 
 `figures/R18oc_stage2_<설정>_<모델 구성>.png`의 8장입니다. 그림마다 세 조건을 나란히 두고, 새 방법(고른 조합), envelope B, v32의 방법(`device-entropy` + `average-corrected-even`), request-kind oracle(`edge-raw`, 점선)의 seed 평균 곡선을 그렸습니다. 그림은 `tables/R18oc_stage2_curves.csv`만 읽어 그렸습니다.
 
-## 11. 개선 시도의 상태 (이 보고서를 쓴 2026-11-21 16:40 기준)
+## 11. 개선 시도의 상태 (이 보고서를 쓴 2026-11-21 16:22 기준)
 
 | 시도 | 내용 | 상태 |
 |---|---|---|

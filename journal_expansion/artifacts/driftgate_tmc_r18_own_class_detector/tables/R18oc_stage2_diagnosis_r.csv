@@ -1,0 +1,13 @@
+setting,model config,condition,detector variant,Main share (%),OOP share (%),OOR share (%),mean r on offloaded requests at 0.5,s-hat error at 0.5,offloading ratio at fixed threshold 0.5
+S1,pretrained-finetuned-block,first-day,exit|mlp64|both,66.0,26.6,7.5,0.396,0.154,0.539
+S1,pretrained-finetuned-block,second-day,exit|mlp64|both,66.0,26.6,7.5,0.362,0.188,0.508
+S1,pretrained-finetuned-block,frozen-replay,exit|mlp64|both,66.0,26.6,7.5,0.373,0.165,0.424
+S2,pretrained-finetuned-block,first-day,exit|mlp64|both,74.1,20.0,5.9,0.336,0.129,0.513
+S2,pretrained-finetuned-block,second-day,exit|mlp64|both,74.1,20.0,5.9,0.342,0.130,0.417
+S2,pretrained-finetuned-block,frozen-replay,exit|mlp64|both,74.1,20.0,5.9,0.342,0.125,0.468
+S1,pretrained-frozen-block,first-day,exit|mlp64|both,66.0,26.6,7.5,0.612,0.065,0.520
+S1,pretrained-frozen-block,second-day,exit|mlp64|both,66.0,26.6,7.5,0.616,0.065,0.513
+S1,pretrained-frozen-block,frozen-replay,exit|mlp64|both,66.0,26.6,7.5,0.586,0.074,0.474
+S2,pretrained-frozen-block,first-day,exit|mlp64|both,74.1,20.0,5.9,0.492,0.090,0.501
+S2,pretrained-frozen-block,second-day,exit|mlp64|both,74.1,20.0,5.9,0.496,0.090,0.491
+S2,pretrained-frozen-block,frozen-replay,exit|mlp64|both,74.1,20.0,5.9,0.484,0.093,0.512

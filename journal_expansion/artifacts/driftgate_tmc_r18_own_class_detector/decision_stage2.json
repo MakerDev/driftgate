@@ -1,0 +1,53 @@
+{
+ "per_config": {
+  "pretrained-finetuned-block": {
+   "complete": true,
+   "judgements": {
+    "s1 second-day": "fail",
+    "s1 frozen-replay": "fail",
+    "s2 second-day": "fail",
+    "s2 frozen-replay": "fail"
+   },
+   "room": {
+    "s1 second-day": false,
+    "s1 frozen-replay": true,
+    "s2 second-day": false,
+    "s2 frozen-replay": true
+   },
+   "n_no_room": 2,
+   "c100_second_and_replay_pass": false,
+   "row": 3
+  },
+  "pretrained-frozen-block": {
+   "complete": true,
+   "judgements": {
+    "s1 second-day": "fail",
+    "s1 frozen-replay": "fail",
+    "s2 second-day": "fail",
+    "s2 frozen-replay": "fail"
+   },
+   "room": {
+    "s1 second-day": true,
+    "s1 frozen-replay": true,
+    "s2 second-day": false,
+    "s2 frozen-replay": false
+   },
+   "n_no_room": 2,
+   "c100_second_and_replay_pass": false,
+   "row": 3
+  }
+ },
+ "rows": [],
+ "row": 3,
+ "config": "pretrained-finetuned-block",
+ "decision": "improvement attempts 1-3 in order until all four cells are partial or better, then stage 3",
+ "some_cells_without_room": true,
+ "first_day_G05_below_minus_0_5": [
+  "S1 cnn-scratch",
+  "S1 pretrained-finetuned-block",
+  "S2 pretrained-finetuned-block",
+  "CIFAR-100 pretrained-finetuned-block",
+  "S2 pretrained-frozen-block",
+  "CIFAR-100 pretrained-frozen-block"
+ ]
+}

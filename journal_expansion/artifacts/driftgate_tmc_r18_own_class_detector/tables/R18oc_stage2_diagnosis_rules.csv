@@ -1,0 +1,307 @@
+setting,model config,condition,ranking,answer rule,accuracy at 0.25 mean (SD),accuracy at 0.5 mean (SD),accuracy at 0.75 mean (SD),minus B(0.25) pp,minus B(0.5) pp,minus B(0.75) pp
+S1,pretrained-finetuned-block,first-day,envelope B,max over the 25 comparators,70.94,72.55,72.89,,,
+S1,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector,69.19 (0.16),70.50 (0.25),70.93 (0.37),-1.75,-2.05,-1.96
+S1,pretrained-finetuned-block,first-day,detector,edge-raw,68.37 (0.14),67.44 (0.39),64.59 (0.60),-2.57,-5.11,-8.30
+S1,pretrained-finetuned-block,first-day,detector,edge-corrected-even,69.13 (0.17),70.53 (0.35),71.02 (0.59),-1.81,-2.02,-1.87
+S1,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector + device 0.2,69.38 (0.13),70.79 (0.20),71.44 (0.29),-1.57,-1.76,-1.44
+S1,pretrained-finetuned-block,first-day,device-max-prob,edge-raw,68.91 (0.08),67.66 (0.68),63.85 (0.71),-2.04,-4.89,-9.04
+S1,pretrained-finetuned-block,first-day,device-max-prob,edge-corrected-even,70.54 (0.14),71.59 (0.48),71.14 (0.66),-0.41,-0.96,-1.74
+S1,pretrained-finetuned-block,first-day,device-max-prob,average-corrected-even,70.93 (0.04),72.55 (0.35),72.89 (0.45),-0.01,+0.00,+0.00
+S1,pretrained-finetuned-block,first-day,device-max-prob,probability-average,70.67 (0.30),71.96 (0.81),72.10 (0.97),-0.27,-0.59,-0.79
+S1,pretrained-finetuned-block,first-day,device-max-prob,logit-sum,70.94 (0.27),72.46 (0.77),72.64 (0.81),+0.00,-0.09,-0.25
+S1,pretrained-finetuned-block,first-day,device-entropy,edge-raw,67.92 (0.21),66.85 (0.50),63.80 (0.61),-3.02,-5.70,-9.08
+S1,pretrained-finetuned-block,first-day,device-entropy,edge-corrected-even,70.13 (0.07),71.22 (0.40),71.10 (0.59),-0.81,-1.33,-1.79
+S1,pretrained-finetuned-block,first-day,device-entropy,average-corrected-even,70.60 (0.09),72.26 (0.32),72.83 (0.43),-0.34,-0.29,-0.06
+S1,pretrained-finetuned-block,first-day,device-entropy,probability-average,70.16 (0.34),71.61 (0.76),72.05 (0.94),-0.78,-0.94,-0.84
+S1,pretrained-finetuned-block,first-day,device-entropy,logit-sum,70.48 (0.31),72.13 (0.71),72.60 (0.79),-0.46,-0.42,-0.28
+S1,pretrained-finetuned-block,first-day,oracle,edge-raw,73.52 (0.42),72.09 (0.58),66.41 (0.34),+2.57,-0.46,-6.48
+S1,pretrained-finetuned-block,first-day,oracle,edge-corrected-even,70.26 (0.23),71.16 (0.42),70.93 (0.56),-0.68,-1.39,-1.96
+S1,pretrained-finetuned-block,second-day,envelope B,max over the 25 comparators,66.96,69.13,69.68,,,
+S1,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector,66.60 (3.07),69.11 (1.71),69.91 (1.16),-0.36,-0.02,+0.23
+S1,pretrained-finetuned-block,second-day,detector,edge-raw,64.93 (3.58),64.66 (2.69),62.35 (1.89),-2.03,-4.47,-7.32
+S1,pretrained-finetuned-block,second-day,detector,edge-corrected-even,66.54 (2.95),68.91 (1.98),69.73 (1.48),-0.42,-0.23,+0.06
+S1,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector + device 0.2,66.73 (3.21),69.33 (1.86),70.27 (1.39),-0.23,+0.20,+0.59
+S1,pretrained-finetuned-block,second-day,device-max-prob,edge-raw,64.92 (5.11),64.27 (3.77),61.55 (1.82),-2.04,-4.86,-8.13
+S1,pretrained-finetuned-block,second-day,device-max-prob,edge-corrected-even,66.96 (3.95),69.13 (2.54),69.68 (1.38),+0.00,+0.00,+0.00
+S1,pretrained-finetuned-block,second-day,device-max-prob,average-corrected-even,66.92 (4.25),68.92 (3.57),69.12 (3.50),-0.04,-0.21,-0.56
+S1,pretrained-finetuned-block,second-day,device-max-prob,probability-average,65.71 (5.25),66.88 (4.87),67.02 (4.70),-1.25,-2.26,-2.65
+S1,pretrained-finetuned-block,second-day,device-max-prob,logit-sum,65.82 (5.21),67.10 (4.78),67.38 (4.50),-1.14,-2.03,-2.30
+S1,pretrained-finetuned-block,second-day,device-entropy,edge-raw,63.73 (5.36),63.28 (4.06),61.52 (1.92),-3.23,-5.85,-8.16
+S1,pretrained-finetuned-block,second-day,device-entropy,edge-corrected-even,66.12 (4.26),68.43 (2.96),69.63 (1.42),-0.84,-0.70,-0.05
+S1,pretrained-finetuned-block,second-day,device-entropy,average-corrected-even,66.19 (4.49),68.26 (4.12),69.11 (3.49),-0.77,-0.87,-0.57
+S1,pretrained-finetuned-block,second-day,device-entropy,probability-average,65.09 (5.41),66.40 (5.27),67.02 (4.70),-1.87,-2.73,-2.66
+S1,pretrained-finetuned-block,second-day,device-entropy,logit-sum,65.28 (5.34),66.65 (5.19),67.36 (4.51),-1.68,-2.48,-2.31
+S1,pretrained-finetuned-block,second-day,oracle,edge-raw,67.49 (5.23),66.75 (4.31),62.97 (2.48),+0.53,-2.38,-6.71
+S1,pretrained-finetuned-block,second-day,oracle,edge-corrected-even,64.30 (4.75),65.95 (3.87),67.73 (2.52),-2.66,-3.18,-1.95
+S1,pretrained-finetuned-block,frozen-replay,envelope B,max over the 25 comparators,72.13,72.70,72.77,,,
+S1,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector,70.63 (1.17),70.96 (1.44),70.46 (1.30),-1.50,-1.73,-2.32
+S1,pretrained-finetuned-block,frozen-replay,detector,edge-raw,69.47 (1.33),67.03 (1.76),62.76 (2.35),-2.66,-5.67,-10.02
+S1,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-even,70.40 (1.13),70.73 (1.60),70.11 (2.05),-1.73,-1.97,-2.66
+S1,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,70.88 (1.17),71.43 (1.43),71.23 (1.26),-1.25,-1.26,-1.54
+S1,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-raw,70.48 (1.53),67.24 (2.65),61.67 (3.01),-1.65,-5.46,-11.10
+S1,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-corrected-even,71.64 (1.15),71.31 (1.92),69.78 (2.21),-0.49,-1.39,-3.00
+S1,pretrained-finetuned-block,frozen-replay,device-max-prob,average-corrected-even,71.94 (1.00),72.54 (1.28),72.55 (1.28),-0.19,-0.16,-0.22
+S1,pretrained-finetuned-block,frozen-replay,device-max-prob,probability-average,71.80 (1.40),72.09 (2.30),71.95 (2.61),-0.33,-0.61,-0.82
+S1,pretrained-finetuned-block,frozen-replay,device-max-prob,logit-sum,72.13 (1.14),72.70 (1.99),72.52 (2.25),+0.00,+0.00,-0.25
+S1,pretrained-finetuned-block,frozen-replay,device-entropy,edge-raw,69.79 (1.52),66.72 (2.52),61.65 (2.92),-2.34,-5.98,-11.12
+S1,pretrained-finetuned-block,frozen-replay,device-entropy,edge-corrected-even,71.34 (1.17),71.14 (1.87),69.77 (2.17),-0.79,-1.56,-3.00
+S1,pretrained-finetuned-block,frozen-replay,device-entropy,average-corrected-even,71.75 (0.98),72.46 (1.24),72.54 (1.27),-0.38,-0.24,-0.23
+S1,pretrained-finetuned-block,frozen-replay,device-entropy,probability-average,71.51 (1.39),71.98 (2.20),71.95 (2.58),-0.62,-0.71,-0.82
+S1,pretrained-finetuned-block,frozen-replay,device-entropy,logit-sum,71.88 (1.14),72.59 (1.90),72.51 (2.22),-0.25,-0.11,-0.26
+S1,pretrained-finetuned-block,frozen-replay,oracle,edge-raw,75.24 (1.32),72.67 (1.96),65.29 (2.42),+3.11,-0.03,-7.48
+S1,pretrained-finetuned-block,frozen-replay,oracle,edge-corrected-even,72.19 (1.07),72.21 (1.40),70.61 (1.81),+0.06,-0.49,-2.16
+S2,pretrained-finetuned-block,first-day,envelope B,max over the 25 comparators,73.98,75.30,75.61,,,
+S2,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector,72.32 (2.71),73.50 (2.60),73.70 (2.51),-1.66,-1.81,-1.91
+S2,pretrained-finetuned-block,first-day,detector,edge-raw,70.94 (3.92),69.35 (4.97),66.38 (5.78),-3.04,-5.95,-9.23
+S2,pretrained-finetuned-block,first-day,detector,edge-corrected-even,72.26 (2.78),72.91 (2.59),72.56 (2.22),-1.72,-2.39,-3.06
+S2,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector + device 0.2,72.51 (2.66),73.86 (2.54),74.38 (2.38),-1.47,-1.44,-1.23
+S2,pretrained-finetuned-block,first-day,device-max-prob,edge-raw,71.22 (3.67),69.60 (4.36),65.72 (5.11),-2.77,-5.70,-9.89
+S2,pretrained-finetuned-block,first-day,device-max-prob,edge-corrected-even,73.47 (2.32),73.95 (1.90),72.61 (1.66),-0.51,-1.35,-3.00
+S2,pretrained-finetuned-block,first-day,device-max-prob,average-corrected-even,73.98 (2.19),75.30 (1.77),75.45 (1.56),+0.00,+0.00,-0.16
+S2,pretrained-finetuned-block,first-day,device-max-prob,probability-average,72.92 (2.76),73.43 (2.64),73.02 (2.58),-1.06,-1.87,-2.59
+S2,pretrained-finetuned-block,first-day,device-max-prob,logit-sum,73.30 (2.61),73.95 (2.39),73.50 (2.38),-0.69,-1.35,-2.11
+S2,pretrained-finetuned-block,first-day,device-entropy,edge-raw,70.49 (3.87),68.95 (4.45),65.76 (5.23),-3.50,-6.35,-9.85
+S2,pretrained-finetuned-block,first-day,device-entropy,edge-corrected-even,72.97 (2.40),73.46 (1.82),72.62 (1.70),-1.01,-1.84,-2.99
+S2,pretrained-finetuned-block,first-day,device-entropy,average-corrected-even,73.57 (2.28),74.98 (1.75),75.44 (1.58),-0.41,-0.32,-0.17
+S2,pretrained-finetuned-block,first-day,device-entropy,probability-average,72.50 (2.82),73.26 (2.63),73.09 (2.58),-1.48,-2.04,-2.53
+S2,pretrained-finetuned-block,first-day,device-entropy,logit-sum,72.88 (2.66),73.79 (2.39),73.59 (2.38),-1.10,-1.52,-2.02
+S2,pretrained-finetuned-block,first-day,oracle,edge-raw,75.28 (2.09),71.42 (3.47),67.24 (4.99),+1.29,-3.88,-8.37
+S2,pretrained-finetuned-block,first-day,oracle,edge-corrected-even,73.17 (2.42),72.73 (2.27),72.16 (2.17),-0.81,-2.57,-3.45
+S2,pretrained-finetuned-block,second-day,envelope B,max over the 25 comparators,75.37,75.72,75.74,,,
+S2,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector,74.16 (2.10),74.91 (1.92),73.99 (1.31),-1.21,-0.81,-1.75
+S2,pretrained-finetuned-block,second-day,detector,edge-raw,72.06 (3.17),69.74 (4.43),66.33 (5.59),-3.31,-5.98,-9.42
+S2,pretrained-finetuned-block,second-day,detector,edge-corrected-even,73.80 (2.04),73.92 (1.69),73.09 (1.35),-1.58,-1.80,-2.65
+S2,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector + device 0.2,74.37 (2.06),75.33 (1.86),74.86 (1.26),-1.01,-0.39,-0.89
+S2,pretrained-finetuned-block,second-day,device-max-prob,edge-raw,72.83 (3.37),68.80 (4.04),64.53 (5.22),-2.54,-6.93,-11.21
+S2,pretrained-finetuned-block,second-day,device-max-prob,edge-corrected-even,75.01 (1.85),73.85 (1.11),72.33 (1.12),-0.37,-1.87,-3.41
+S2,pretrained-finetuned-block,second-day,device-max-prob,average-corrected-even,75.37 (1.77),75.72 (1.41),75.74 (1.41),+0.00,+0.00,-0.00
+S2,pretrained-finetuned-block,second-day,device-max-prob,probability-average,74.10 (2.48),73.58 (2.47),73.35 (2.50),-1.28,-2.15,-2.39
+S2,pretrained-finetuned-block,second-day,device-max-prob,logit-sum,74.12 (2.33),73.44 (2.36),73.13 (2.49),-1.25,-2.28,-2.61
+S2,pretrained-finetuned-block,second-day,device-entropy,edge-raw,72.12 (3.35),68.70 (4.23),64.59 (5.20),-3.25,-7.03,-11.16
+S2,pretrained-finetuned-block,second-day,device-entropy,edge-corrected-even,74.51 (1.79),73.79 (1.21),72.36 (1.12),-0.87,-1.93,-3.38
+S2,pretrained-finetuned-block,second-day,device-entropy,average-corrected-even,75.03 (1.78),75.70 (1.51),75.74 (1.41),-0.35,-0.02,-0.00
+S2,pretrained-finetuned-block,second-day,device-entropy,probability-average,73.85 (2.37),73.75 (2.43),73.36 (2.48),-1.53,-1.97,-2.38
+S2,pretrained-finetuned-block,second-day,device-entropy,logit-sum,73.86 (2.20),73.65 (2.32),73.15 (2.48),-1.51,-2.08,-2.60
+S2,pretrained-finetuned-block,second-day,oracle,edge-raw,75.47 (1.98),71.52 (3.11),67.33 (4.68),+0.09,-4.20,-8.41
+S2,pretrained-finetuned-block,second-day,oracle,edge-corrected-even,73.44 (2.15),72.96 (1.88),72.45 (1.61),-1.94,-2.77,-3.29
+S2,pretrained-finetuned-block,frozen-replay,envelope B,max over the 25 comparators,76.77,77.31,77.44,,,
+S2,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector,75.36 (2.69),75.93 (3.00),75.50 (3.18),-1.41,-1.38,-1.94
+S2,pretrained-finetuned-block,frozen-replay,detector,edge-raw,73.86 (4.04),71.44 (6.17),67.32 (7.63),-2.91,-5.87,-10.12
+S2,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-even,75.20 (2.77),75.35 (3.31),74.45 (3.42),-1.57,-1.96,-2.99
+S2,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,75.60 (2.60),76.39 (2.86),76.36 (2.90),-1.17,-0.92,-1.08
+S2,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-raw,74.59 (4.05),70.62 (5.50),65.52 (6.21),-2.18,-6.69,-11.92
+S2,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-corrected-even,76.28 (2.79),75.39 (2.93),73.90 (2.64),-0.49,-1.92,-3.54
+S2,pretrained-finetuned-block,frozen-replay,device-max-prob,average-corrected-even,76.77 (2.48),77.31 (2.57),77.38 (2.52),-0.00,+0.00,-0.06
+S2,pretrained-finetuned-block,frozen-replay,device-max-prob,probability-average,76.08 (2.99),75.86 (3.47),75.70 (3.42),-0.69,-1.45,-1.74
+S2,pretrained-finetuned-block,frozen-replay,device-max-prob,logit-sum,76.18 (2.76),75.84 (3.27),75.62 (3.25),-0.59,-1.47,-1.82
+S2,pretrained-finetuned-block,frozen-replay,device-entropy,edge-raw,73.62 (4.06),70.27 (5.68),65.53 (6.24),-3.15,-7.05,-11.91
+S2,pretrained-finetuned-block,frozen-replay,device-entropy,edge-corrected-even,75.68 (2.71),75.18 (2.95),73.90 (2.66),-1.09,-2.13,-3.54
+S2,pretrained-finetuned-block,frozen-replay,device-entropy,average-corrected-even,76.37 (2.41),77.17 (2.60),77.38 (2.51),-0.40,-0.14,-0.06
+S2,pretrained-finetuned-block,frozen-replay,device-entropy,probability-average,75.65 (2.86),75.90 (3.42),75.71 (3.42),-1.12,-1.41,-1.73
+S2,pretrained-finetuned-block,frozen-replay,device-entropy,logit-sum,75.71 (2.62),75.90 (3.20),75.63 (3.25),-1.06,-1.41,-1.81
+S2,pretrained-finetuned-block,frozen-replay,oracle,edge-raw,78.30 (2.42),73.41 (4.13),68.19 (6.04),+1.53,-3.90,-9.25
+S2,pretrained-finetuned-block,frozen-replay,oracle,edge-corrected-even,75.55 (2.20),74.79 (2.53),73.95 (2.90),-1.22,-2.53,-3.49
+CIFAR-100,pretrained-finetuned-block,first-day,envelope B,max over the 25 comparators,40.89,50.32,58.62,,,
+CIFAR-100,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector,36.71 (0.92),46.07 (1.00),55.16 (1.05),-4.18,-4.25,-3.46
+CIFAR-100,pretrained-finetuned-block,first-day,detector,edge-raw,35.57 (1.07),43.47 (1.26),51.05 (1.38),-5.32,-6.85,-7.57
+CIFAR-100,pretrained-finetuned-block,first-day,detector,edge-corrected-even,36.74 (0.93),45.97 (1.03),54.95 (1.08),-4.15,-4.36,-3.67
+CIFAR-100,pretrained-finetuned-block,first-day,detector,edge-corrected-by-detector + device 0.2,36.73 (0.92),46.10 (0.99),55.21 (1.04),-4.17,-4.22,-3.41
+CIFAR-100,pretrained-finetuned-block,first-day,device-max-prob,edge-raw,38.63 (1.25),47.25 (1.44),54.37 (1.56),-2.26,-3.07,-4.25
+CIFAR-100,pretrained-finetuned-block,first-day,device-max-prob,edge-corrected-even,40.50 (1.03),50.27 (1.15),58.53 (1.22),-0.39,-0.05,-0.09
+CIFAR-100,pretrained-finetuned-block,first-day,device-max-prob,average-corrected-even,40.53 (1.03),50.32 (1.14),58.62 (1.21),-0.36,-0.00,+0.00
+CIFAR-100,pretrained-finetuned-block,first-day,device-max-prob,probability-average,38.80 (1.25),47.53 (1.43),54.85 (1.54),-2.09,-2.79,-3.77
+CIFAR-100,pretrained-finetuned-block,first-day,device-max-prob,logit-sum,39.52 (1.19),48.68 (1.37),56.39 (1.47),-1.37,-1.64,-2.23
+CIFAR-100,pretrained-finetuned-block,first-day,device-entropy,edge-raw,38.77 (1.31),46.93 (1.41),53.84 (1.52),-2.12,-3.40,-4.78
+CIFAR-100,pretrained-finetuned-block,first-day,device-entropy,edge-corrected-even,40.78 (1.06),49.99 (1.10),57.99 (1.20),-0.11,-0.34,-0.63
+CIFAR-100,pretrained-finetuned-block,first-day,device-entropy,average-corrected-even,40.82 (1.06),50.04 (1.09),58.08 (1.19),-0.07,-0.28,-0.54
+CIFAR-100,pretrained-finetuned-block,first-day,device-entropy,probability-average,38.97 (1.29),47.24 (1.38),54.35 (1.50),-1.92,-3.08,-4.28
+CIFAR-100,pretrained-finetuned-block,first-day,device-entropy,logit-sum,39.81 (1.21),48.44 (1.30),55.91 (1.42),-1.08,-1.88,-2.71
+CIFAR-100,pretrained-finetuned-block,first-day,oracle,edge-raw,36.30 (0.99),43.86 (1.21),50.85 (1.39),-4.60,-6.46,-7.77
+CIFAR-100,pretrained-finetuned-block,first-day,oracle,edge-corrected-even,34.91 (1.00),43.81 (1.08),53.47 (1.13),-5.98,-6.51,-5.15
+CIFAR-100,pretrained-finetuned-block,second-day,envelope B,max over the 25 comparators,55.32,61.56,65.93,,,
+CIFAR-100,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector,53.15 (1.08),58.93 (1.14),64.04 (1.11),-2.17,-2.63,-1.89
+CIFAR-100,pretrained-finetuned-block,second-day,detector,edge-raw,52.11 (1.20),56.33 (1.35),59.95 (1.42),-3.22,-5.23,-5.98
+CIFAR-100,pretrained-finetuned-block,second-day,detector,edge-corrected-even,52.89 (1.10),58.17 (1.15),62.93 (1.13),-2.44,-3.39,-3.00
+CIFAR-100,pretrained-finetuned-block,second-day,detector,edge-corrected-by-detector + device 0.2,53.21 (1.07),59.03 (1.12),64.21 (1.09),-2.12,-2.53,-1.72
+CIFAR-100,pretrained-finetuned-block,second-day,device-max-prob,edge-raw,54.14 (1.35),59.20 (1.58),62.41 (1.51),-1.18,-2.36,-3.52
+CIFAR-100,pretrained-finetuned-block,second-day,device-max-prob,edge-corrected-even,55.26 (1.29),61.40 (1.41),65.61 (1.24),-0.06,-0.16,-0.32
+CIFAR-100,pretrained-finetuned-block,second-day,device-max-prob,average-corrected-even,55.32 (1.29),61.56 (1.40),65.93 (1.22),+0.00,-0.00,-0.00
+CIFAR-100,pretrained-finetuned-block,second-day,device-max-prob,probability-average,54.35 (1.35),59.78 (1.56),63.56 (1.48),-0.98,-1.78,-2.37
+CIFAR-100,pretrained-finetuned-block,second-day,device-max-prob,logit-sum,54.74 (1.30),60.52 (1.47),64.55 (1.35),-0.58,-1.04,-1.38
+CIFAR-100,pretrained-finetuned-block,second-day,device-entropy,edge-raw,53.52 (1.39),58.24 (1.54),61.87 (1.55),-1.81,-3.32,-4.06
+CIFAR-100,pretrained-finetuned-block,second-day,device-entropy,edge-corrected-even,54.67 (1.34),60.44 (1.40),65.03 (1.31),-0.66,-1.12,-0.90
+CIFAR-100,pretrained-finetuned-block,second-day,device-entropy,average-corrected-even,54.74 (1.34),60.62 (1.39),65.37 (1.29),-0.59,-0.94,-0.56
+CIFAR-100,pretrained-finetuned-block,second-day,device-entropy,probability-average,53.78 (1.39),58.91 (1.52),63.06 (1.51),-1.54,-2.65,-2.87
+CIFAR-100,pretrained-finetuned-block,second-day,device-entropy,logit-sum,54.23 (1.33),59.69 (1.41),64.06 (1.38),-1.09,-1.87,-1.87
+CIFAR-100,pretrained-finetuned-block,second-day,oracle,edge-raw,54.12 (1.09),57.88 (1.26),60.26 (1.38),-1.21,-3.68,-5.67
+CIFAR-100,pretrained-finetuned-block,second-day,oracle,edge-corrected-even,53.13 (1.09),57.90 (1.12),62.26 (1.12),-2.19,-3.66,-3.67
+CIFAR-100,pretrained-finetuned-block,frozen-replay,envelope B,max over the 25 comparators,51.98,59.52,65.41,,,
+CIFAR-100,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector,49.98 (1.22),57.14 (1.38),63.42 (1.52),-2.00,-2.38,-1.99
+CIFAR-100,pretrained-finetuned-block,frozen-replay,detector,edge-raw,48.88 (1.16),54.48 (1.35),59.27 (1.53),-3.10,-5.04,-6.13
+CIFAR-100,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-even,49.72 (1.15),56.41 (1.32),62.36 (1.47),-2.26,-3.12,-3.04
+CIFAR-100,pretrained-finetuned-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,50.03 (1.21),57.22 (1.37),63.54 (1.51),-1.95,-2.31,-1.86
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-raw,50.84 (1.28),57.23 (1.42),61.94 (1.57),-1.14,-2.30,-3.46
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-max-prob,edge-corrected-even,51.95 (1.27),59.42 (1.37),65.20 (1.52),-0.03,-0.11,-0.21
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-max-prob,average-corrected-even,51.98 (1.26),59.52 (1.38),65.41 (1.49),+0.00,+0.00,+0.00
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-max-prob,probability-average,50.99 (1.28),57.70 (1.44),62.92 (1.57),-0.99,-1.82,-2.49
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-max-prob,logit-sum,51.46 (1.29),58.60 (1.49),64.19 (1.59),-0.52,-0.92,-1.22
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-entropy,edge-raw,50.27 (1.24),56.20 (1.38),61.12 (1.48),-1.71,-3.33,-4.28
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-entropy,edge-corrected-even,51.38 (1.18),58.40 (1.32),64.38 (1.47),-0.60,-1.12,-1.02
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-entropy,average-corrected-even,51.42 (1.18),58.52 (1.33),64.60 (1.45),-0.56,-1.00,-0.81
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-entropy,probability-average,50.46 (1.23),56.73 (1.39),62.17 (1.50),-1.52,-2.79,-3.24
+CIFAR-100,pretrained-finetuned-block,frozen-replay,device-entropy,logit-sum,50.96 (1.22),57.71 (1.42),63.50 (1.55),-1.02,-1.81,-1.91
+CIFAR-100,pretrained-finetuned-block,frozen-replay,oracle,edge-raw,51.39 (1.12),56.37 (1.33),59.62 (1.47),-0.59,-3.15,-5.79
+CIFAR-100,pretrained-finetuned-block,frozen-replay,oracle,edge-corrected-even,50.12 (1.18),56.17 (1.33),61.63 (1.40),-1.86,-3.36,-3.77
+S1,pretrained-frozen-block,first-day,envelope B,max over the 25 comparators,68.36,71.49,72.87,,,
+S1,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector,68.74 (0.72),71.18 (1.05),71.42 (0.96),+0.38,-0.31,-1.45
+S1,pretrained-frozen-block,first-day,detector,edge-raw,68.63 (0.79),69.24 (0.96),66.15 (0.89),+0.27,-2.26,-6.72
+S1,pretrained-frozen-block,first-day,detector,edge-corrected-even,67.45 (0.65),70.19 (1.02),71.21 (1.19),-0.91,-1.30,-1.66
+S1,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector + device 0.2,68.90 (0.71),71.44 (1.00),71.85 (0.85),+0.54,-0.06,-1.02
+S1,pretrained-frozen-block,first-day,device-max-prob,edge-raw,66.42 (0.48),67.18 (0.85),65.62 (1.06),-1.94,-4.31,-7.25
+S1,pretrained-frozen-block,first-day,device-max-prob,edge-corrected-even,68.04 (0.47),70.79 (0.87),71.67 (1.19),-0.32,-0.70,-1.20
+S1,pretrained-frozen-block,first-day,device-max-prob,average-corrected-even,68.25 (0.32),71.37 (0.58),72.71 (0.73),-0.12,-0.13,-0.16
+S1,pretrained-frozen-block,first-day,device-max-prob,probability-average,68.06 (0.55),70.88 (1.02),71.99 (1.31),-0.31,-0.61,-0.88
+S1,pretrained-frozen-block,first-day,device-max-prob,logit-sum,68.36 (0.50),71.49 (0.96),72.87 (1.21),+0.00,+0.00,-0.00
+S1,pretrained-frozen-block,first-day,device-entropy,edge-raw,65.28 (0.41),66.09 (0.67),65.21 (0.91),-3.08,-5.41,-7.67
+S1,pretrained-frozen-block,first-day,device-entropy,edge-corrected-even,67.36 (0.43),70.12 (0.79),71.40 (1.13),-1.01,-1.37,-1.48
+S1,pretrained-frozen-block,first-day,device-entropy,average-corrected-even,67.62 (0.28),70.71 (0.51),72.43 (0.67),-0.74,-0.78,-0.44
+S1,pretrained-frozen-block,first-day,device-entropy,probability-average,67.29 (0.51),70.15 (0.93),71.71 (1.24),-1.07,-1.34,-1.16
+S1,pretrained-frozen-block,first-day,device-entropy,logit-sum,67.64 (0.46),70.78 (0.87),72.59 (1.14),-0.72,-0.72,-0.28
+S1,pretrained-frozen-block,first-day,oracle,edge-raw,71.03 (0.87),71.01 (1.17),66.69 (1.06),+2.66,-0.48,-6.18
+S1,pretrained-frozen-block,first-day,oracle,edge-corrected-even,67.78 (0.58),69.82 (0.95),70.55 (1.15),-0.58,-1.67,-2.33
+S1,pretrained-frozen-block,second-day,envelope B,max over the 25 comparators,72.79,74.78,75.20,,,
+S1,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector,71.65 (0.84),72.91 (1.22),72.23 (1.35),-1.14,-1.87,-2.97
+S1,pretrained-frozen-block,second-day,detector,edge-raw,71.49 (0.92),70.72 (1.29),65.95 (1.60),-1.29,-4.06,-9.25
+S1,pretrained-frozen-block,second-day,detector,edge-corrected-even,70.44 (0.88),72.10 (1.21),71.89 (1.49),-2.35,-2.68,-3.31
+S1,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector + device 0.2,72.01 (0.77),73.62 (1.03),73.26 (1.05),-0.78,-1.16,-1.94
+S1,pretrained-frozen-block,second-day,device-max-prob,edge-raw,70.79 (0.89),69.39 (1.53),64.96 (1.90),-2.00,-5.39,-10.25
+S1,pretrained-frozen-block,second-day,device-max-prob,edge-corrected-even,71.66 (0.67),72.63 (1.25),71.83 (1.72),-1.13,-2.15,-3.37
+S1,pretrained-frozen-block,second-day,device-max-prob,average-corrected-even,72.14 (0.50),73.99 (0.80),74.45 (0.86),-0.65,-0.79,-0.75
+S1,pretrained-frozen-block,second-day,device-max-prob,probability-average,72.40 (0.66),73.96 (1.11),74.14 (1.26),-0.39,-0.82,-1.06
+S1,pretrained-frozen-block,second-day,device-max-prob,logit-sum,72.79 (0.57),74.78 (1.00),75.20 (1.11),+0.00,+0.00,+0.00
+S1,pretrained-frozen-block,second-day,device-entropy,edge-raw,70.00 (0.89),68.44 (1.27),64.80 (1.77),-2.79,-6.34,-10.40
+S1,pretrained-frozen-block,second-day,device-entropy,edge-corrected-even,71.28 (0.70),72.12 (1.14),71.78 (1.69),-1.51,-2.65,-3.42
+S1,pretrained-frozen-block,second-day,device-entropy,average-corrected-even,71.78 (0.51),73.55 (0.69),74.39 (0.83),-1.00,-1.23,-0.82
+S1,pretrained-frozen-block,second-day,device-entropy,probability-average,71.92 (0.67),73.47 (0.99),74.09 (1.21),-0.87,-1.31,-1.11
+S1,pretrained-frozen-block,second-day,device-entropy,logit-sum,72.35 (0.59),74.30 (0.88),75.16 (1.07),-0.44,-0.48,-0.04
+S1,pretrained-frozen-block,second-day,oracle,edge-raw,73.98 (0.94),72.16 (1.37),66.36 (1.87),+1.19,-2.62,-8.85
+S1,pretrained-frozen-block,second-day,oracle,edge-corrected-even,70.96 (0.81),71.51 (1.22),71.16 (1.53),-1.83,-3.27,-4.04
+S1,pretrained-frozen-block,frozen-replay,envelope B,max over the 25 comparators,71.74,74.14,74.69,,,
+S1,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector,70.69 (0.13),72.17 (0.32),71.65 (0.38),-1.04,-1.96,-3.04
+S1,pretrained-frozen-block,frozen-replay,detector,edge-raw,70.64 (0.20),69.92 (0.55),65.39 (0.76),-1.10,-4.22,-9.31
+S1,pretrained-frozen-block,frozen-replay,detector,edge-corrected-even,69.86 (0.22),71.74 (0.12),71.48 (0.21),-1.88,-2.40,-3.21
+S1,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,71.00 (0.22),72.75 (0.46),72.61 (0.34),-0.74,-1.39,-2.09
+S1,pretrained-frozen-block,frozen-replay,device-max-prob,edge-raw,69.83 (0.51),68.82 (1.06),64.56 (1.11),-1.91,-5.31,-10.14
+S1,pretrained-frozen-block,frozen-replay,device-max-prob,edge-corrected-even,70.82 (0.18),72.23 (0.35),71.45 (0.20),-0.92,-1.91,-3.24
+S1,pretrained-frozen-block,frozen-replay,device-max-prob,average-corrected-even,71.13 (0.20),73.29 (0.26),73.83 (0.30),-0.61,-0.85,-0.86
+S1,pretrained-frozen-block,frozen-replay,device-max-prob,probability-average,71.33 (0.49),73.20 (1.03),73.49 (1.19),-0.41,-0.94,-1.20
+S1,pretrained-frozen-block,frozen-replay,device-max-prob,logit-sum,71.74 (0.45),74.14 (0.95),74.69 (1.12),+0.00,+0.00,-0.00
+S1,pretrained-frozen-block,frozen-replay,device-entropy,edge-raw,69.00 (0.51),67.96 (1.04),64.33 (1.11),-2.74,-6.18,-10.36
+S1,pretrained-frozen-block,frozen-replay,device-entropy,edge-corrected-even,70.31 (0.22),71.67 (0.40),71.33 (0.12),-1.43,-2.47,-3.37
+S1,pretrained-frozen-block,frozen-replay,device-entropy,average-corrected-even,70.67 (0.23),72.80 (0.32),73.73 (0.29),-1.07,-1.34,-0.96
+S1,pretrained-frozen-block,frozen-replay,device-entropy,probability-average,70.78 (0.44),72.69 (0.92),73.43 (1.11),-0.96,-1.45,-1.26
+S1,pretrained-frozen-block,frozen-replay,device-entropy,logit-sum,71.23 (0.40),73.63 (0.85),74.62 (1.02),-0.51,-0.50,-0.07
+S1,pretrained-frozen-block,frozen-replay,oracle,edge-raw,73.79 (0.32),72.18 (0.54),65.76 (1.06),+2.05,-1.96,-8.94
+S1,pretrained-frozen-block,frozen-replay,oracle,edge-corrected-even,70.80 (0.39),71.70 (0.25),70.91 (0.18),-0.94,-2.44,-3.78
+S2,pretrained-frozen-block,first-day,envelope B,max over the 25 comparators,70.51,73.60,75.00,,,
+S2,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector,70.00 (2.72),72.31 (2.52),73.47 (2.53),-0.50,-1.29,-1.53
+S2,pretrained-frozen-block,first-day,detector,edge-raw,69.46 (3.11),69.67 (4.26),68.05 (5.39),-1.04,-3.93,-6.95
+S2,pretrained-frozen-block,first-day,detector,edge-corrected-even,69.51 (2.47),72.01 (2.45),73.03 (2.34),-1.00,-1.59,-1.97
+S2,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector + device 0.2,70.12 (2.63),72.56 (2.36),73.94 (2.33),-0.39,-1.04,-1.06
+S2,pretrained-frozen-block,first-day,device-max-prob,edge-raw,68.00 (3.80),68.93 (4.69),67.81 (5.31),-2.51,-4.67,-7.19
+S2,pretrained-frozen-block,first-day,device-max-prob,edge-corrected-even,70.15 (2.50),72.81 (2.39),73.46 (2.11),-0.36,-0.79,-1.54
+S2,pretrained-frozen-block,first-day,device-max-prob,average-corrected-even,70.51 (2.36),73.60 (2.21),75.00 (1.92),+0.00,+0.00,+0.00
+S2,pretrained-frozen-block,first-day,device-max-prob,probability-average,69.51 (2.94),71.98 (3.09),72.81 (2.98),-0.99,-1.62,-2.19
+S2,pretrained-frozen-block,first-day,device-max-prob,logit-sum,69.91 (2.75),72.66 (2.76),73.73 (2.55),-0.60,-0.94,-1.27
+S2,pretrained-frozen-block,first-day,device-entropy,edge-raw,66.91 (3.96),67.89 (4.85),67.38 (5.41),-3.60,-5.71,-7.62
+S2,pretrained-frozen-block,first-day,device-entropy,edge-corrected-even,69.21 (2.55),71.85 (2.39),73.08 (2.13),-1.30,-1.74,-1.92
+S2,pretrained-frozen-block,first-day,device-entropy,average-corrected-even,69.63 (2.40),72.74 (2.21),74.66 (1.91),-0.88,-0.86,-0.33
+S2,pretrained-frozen-block,first-day,device-entropy,probability-average,68.63 (2.95),71.18 (3.14),72.54 (3.00),-1.87,-2.42,-2.45
+S2,pretrained-frozen-block,first-day,device-entropy,logit-sum,69.03 (2.74),71.86 (2.80),73.46 (2.57),-1.47,-1.74,-1.54
+S2,pretrained-frozen-block,first-day,oracle,edge-raw,72.06 (2.00),70.07 (3.37),67.76 (4.87),+1.56,-3.53,-7.24
+S2,pretrained-frozen-block,first-day,oracle,edge-corrected-even,69.82 (2.34),70.85 (2.35),71.76 (2.38),-0.68,-2.75,-3.23
+S2,pretrained-frozen-block,second-day,envelope B,max over the 25 comparators,75.72,77.42,77.75,,,
+S2,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector,74.33 (3.26),75.67 (2.88),75.53 (2.40),-1.39,-1.75,-2.22
+S2,pretrained-frozen-block,second-day,detector,edge-raw,73.70 (3.77),72.48 (4.84),69.13 (5.93),-2.02,-4.94,-8.62
+S2,pretrained-frozen-block,second-day,detector,edge-corrected-even,74.03 (3.16),75.49 (2.91),75.12 (2.52),-1.69,-1.94,-2.63
+S2,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector + device 0.2,74.57 (3.16),76.18 (2.69),76.41 (2.20),-1.15,-1.24,-1.34
+S2,pretrained-frozen-block,second-day,device-max-prob,edge-raw,73.45 (3.97),71.71 (4.72),68.10 (5.67),-2.27,-5.72,-9.65
+S2,pretrained-frozen-block,second-day,device-max-prob,edge-corrected-even,75.19 (2.79),75.84 (2.28),74.68 (2.05),-0.54,-1.58,-3.07
+S2,pretrained-frozen-block,second-day,device-max-prob,average-corrected-even,75.72 (2.68),77.42 (2.11),77.75 (1.87),+0.00,+0.00,-0.00
+S2,pretrained-frozen-block,second-day,device-max-prob,probability-average,75.03 (3.20),76.01 (2.96),75.92 (2.87),-0.69,-1.41,-1.83
+S2,pretrained-frozen-block,second-day,device-max-prob,logit-sum,75.41 (3.06),76.68 (2.68),76.77 (2.45),-0.31,-0.74,-0.98
+S2,pretrained-frozen-block,second-day,device-entropy,edge-raw,72.51 (4.12),70.79 (4.81),67.92 (5.72),-3.21,-6.63,-9.83
+S2,pretrained-frozen-block,second-day,device-entropy,edge-corrected-even,74.42 (2.81),75.11 (2.23),74.55 (2.07),-1.30,-2.32,-3.20
+S2,pretrained-frozen-block,second-day,device-entropy,average-corrected-even,75.08 (2.69),76.88 (2.08),77.65 (1.86),-0.64,-0.54,-0.09
+S2,pretrained-frozen-block,second-day,device-entropy,probability-average,74.41 (3.19),75.53 (2.95),75.86 (2.86),-1.31,-1.89,-1.89
+S2,pretrained-frozen-block,second-day,device-entropy,logit-sum,74.79 (3.04),76.20 (2.65),76.71 (2.43),-0.94,-1.23,-1.04
+S2,pretrained-frozen-block,second-day,oracle,edge-raw,76.03 (2.66),72.58 (3.94),68.82 (5.37),+0.31,-4.84,-8.92
+S2,pretrained-frozen-block,second-day,oracle,edge-corrected-even,74.12 (3.05),73.97 (2.76),73.71 (2.55),-1.60,-3.46,-4.04
+S2,pretrained-frozen-block,frozen-replay,envelope B,max over the 25 comparators,74.75,76.84,77.48,,,
+S2,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector,73.64 (4.01),75.08 (4.02),75.35 (3.96),-1.12,-1.77,-2.13
+S2,pretrained-frozen-block,frozen-replay,detector,edge-raw,73.10 (4.60),72.18 (6.05),68.83 (7.65),-1.65,-4.67,-8.65
+S2,pretrained-frozen-block,frozen-replay,detector,edge-corrected-even,73.17 (3.86),74.93 (4.03),74.90 (4.25),-1.58,-1.92,-2.58
+S2,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,73.89 (3.93),75.60 (3.77),76.20 (3.65),-0.86,-1.25,-1.28
+S2,pretrained-frozen-block,frozen-replay,device-max-prob,edge-raw,72.87 (5.03),71.60 (6.04),68.41 (6.96),-1.88,-5.25,-9.07
+S2,pretrained-frozen-block,frozen-replay,device-max-prob,edge-corrected-even,74.41 (3.93),75.63 (3.98),75.09 (3.74),-0.35,-1.22,-2.39
+S2,pretrained-frozen-block,frozen-replay,device-max-prob,average-corrected-even,74.75 (3.72),76.84 (3.67),77.48 (3.35),+0.00,+0.00,+0.00
+S2,pretrained-frozen-block,frozen-replay,device-max-prob,probability-average,74.36 (4.36),75.69 (4.55),75.83 (4.30),-0.40,-1.15,-1.65
+S2,pretrained-frozen-block,frozen-replay,device-max-prob,logit-sum,74.65 (4.08),76.24 (4.13),76.61 (3.76),-0.10,-0.61,-0.87
+S2,pretrained-frozen-block,frozen-replay,device-entropy,edge-raw,71.76 (5.14),70.73 (6.23),68.07 (7.09),-2.99,-6.11,-9.41
+S2,pretrained-frozen-block,frozen-replay,device-entropy,edge-corrected-even,73.55 (3.92),74.90 (3.97),74.82 (3.78),-1.21,-1.95,-2.66
+S2,pretrained-frozen-block,frozen-replay,device-entropy,average-corrected-even,74.02 (3.70),76.20 (3.63),77.28 (3.36),-0.74,-0.65,-0.20
+S2,pretrained-frozen-block,frozen-replay,device-entropy,probability-average,73.60 (4.36),75.16 (4.53),75.70 (4.34),-1.15,-1.68,-1.78
+S2,pretrained-frozen-block,frozen-replay,device-entropy,logit-sum,73.91 (4.08),75.69 (4.11),76.46 (3.82),-0.85,-1.16,-1.02
+S2,pretrained-frozen-block,frozen-replay,oracle,edge-raw,76.20 (3.69),72.70 (5.37),68.83 (7.14),+1.45,-4.14,-8.65
+S2,pretrained-frozen-block,frozen-replay,oracle,edge-corrected-even,73.55 (3.78),73.74 (4.03),73.81 (4.30),-1.21,-3.11,-3.66
+CIFAR-100,pretrained-frozen-block,first-day,envelope B,max over the 25 comparators,33.81,44.90,55.70,,,
+CIFAR-100,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector,30.46 (0.89),41.84 (0.97),53.31 (1.07),-3.35,-3.07,-2.39
+CIFAR-100,pretrained-frozen-block,first-day,detector,edge-raw,29.68 (0.95),39.46 (1.04),49.26 (1.08),-4.12,-5.44,-6.44
+CIFAR-100,pretrained-frozen-block,first-day,detector,edge-corrected-even,30.63 (0.85),41.82 (0.86),53.21 (0.87),-3.18,-3.08,-2.49
+CIFAR-100,pretrained-frozen-block,first-day,detector,edge-corrected-by-detector + device 0.2,30.47 (0.89),41.85 (0.96),53.33 (1.06),-3.34,-3.05,-2.37
+CIFAR-100,pretrained-frozen-block,first-day,device-max-prob,edge-raw,31.10 (1.24),41.77 (1.42),51.37 (1.42),-2.71,-3.13,-4.34
+CIFAR-100,pretrained-frozen-block,first-day,device-max-prob,edge-corrected-even,32.75 (1.06),44.81 (1.17),55.65 (1.15),-1.06,-0.09,-0.05
+CIFAR-100,pretrained-frozen-block,first-day,device-max-prob,average-corrected-even,32.76 (1.06),44.84 (1.17),55.70 (1.14),-1.05,-0.06,+0.00
+CIFAR-100,pretrained-frozen-block,first-day,device-max-prob,probability-average,31.22 (1.24),41.98 (1.41),51.68 (1.41),-2.59,-2.92,-4.02
+CIFAR-100,pretrained-frozen-block,first-day,device-max-prob,logit-sum,31.79 (1.17),43.16 (1.37),53.45 (1.41),-2.02,-1.74,-2.25
+CIFAR-100,pretrained-frozen-block,first-day,device-entropy,edge-raw,31.56 (1.29),41.68 (1.44),50.79 (1.36),-2.25,-3.22,-4.91
+CIFAR-100,pretrained-frozen-block,first-day,device-entropy,edge-corrected-even,33.50 (1.09),44.84 (1.20),55.05 (1.11),-0.31,-0.07,-0.65
+CIFAR-100,pretrained-frozen-block,first-day,device-entropy,average-corrected-even,33.53 (1.09),44.88 (1.19),55.10 (1.10),-0.28,-0.03,-0.60
+CIFAR-100,pretrained-frozen-block,first-day,device-entropy,probability-average,31.72 (1.29),41.92 (1.42),51.12 (1.35),-2.09,-2.98,-4.59
+CIFAR-100,pretrained-frozen-block,first-day,device-entropy,logit-sum,32.49 (1.20),43.20 (1.38),52.90 (1.35),-1.32,-1.70,-2.80
+CIFAR-100,pretrained-frozen-block,first-day,oracle,edge-raw,29.93 (0.98),39.56 (1.06),49.05 (1.12),-3.88,-5.35,-6.65
+CIFAR-100,pretrained-frozen-block,first-day,oracle,edge-corrected-even,28.57 (1.06),39.58 (0.99),51.80 (0.97),-5.24,-5.32,-3.90
+CIFAR-100,pretrained-frozen-block,second-day,envelope B,max over the 25 comparators,46.05,55.63,63.74,,,
+CIFAR-100,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector,43.89 (0.76),53.04 (0.95),61.80 (1.13),-2.17,-2.59,-1.93
+CIFAR-100,pretrained-frozen-block,second-day,detector,edge-raw,43.11 (0.72),50.77 (0.85),57.95 (0.98),-2.94,-4.87,-5.79
+CIFAR-100,pretrained-frozen-block,second-day,detector,edge-corrected-even,43.86 (0.67),52.60 (0.75),61.02 (0.79),-2.20,-3.03,-2.72
+CIFAR-100,pretrained-frozen-block,second-day,detector,edge-corrected-by-detector + device 0.2,43.92 (0.75),53.10 (0.94),61.89 (1.11),-2.14,-2.54,-1.85
+CIFAR-100,pretrained-frozen-block,second-day,device-max-prob,edge-raw,44.91 (0.91),53.36 (1.07),60.35 (1.21),-1.15,-2.27,-3.39
+CIFAR-100,pretrained-frozen-block,second-day,device-max-prob,edge-corrected-even,46.03 (0.85),55.58 (0.92),63.64 (0.98),-0.02,-0.05,-0.10
+CIFAR-100,pretrained-frozen-block,second-day,device-max-prob,average-corrected-even,46.05 (0.85),55.63 (0.92),63.74 (0.97),+0.00,+0.00,+0.00
+CIFAR-100,pretrained-frozen-block,second-day,device-max-prob,probability-average,45.01 (0.91),53.63 (1.06),60.87 (1.20),-1.04,-2.01,-2.87
+CIFAR-100,pretrained-frozen-block,second-day,device-max-prob,logit-sum,45.68 (0.90),54.90 (1.03),62.68 (1.14),-0.38,-0.73,-1.06
+CIFAR-100,pretrained-frozen-block,second-day,device-entropy,edge-raw,44.43 (0.87),52.38 (1.13),59.48 (1.25),-1.63,-3.26,-4.26
+CIFAR-100,pretrained-frozen-block,second-day,device-entropy,edge-corrected-even,45.61 (0.80),54.66 (0.94),62.78 (1.00),-0.44,-0.98,-0.96
+CIFAR-100,pretrained-frozen-block,second-day,device-entropy,average-corrected-even,45.64 (0.80),54.72 (0.94),62.88 (1.00),-0.42,-0.92,-0.85
+CIFAR-100,pretrained-frozen-block,second-day,device-entropy,probability-average,44.56 (0.86),52.69 (1.12),60.04 (1.23),-1.49,-2.94,-3.69
+CIFAR-100,pretrained-frozen-block,second-day,device-entropy,logit-sum,45.31 (0.86),54.07 (1.06),61.92 (1.15),-0.75,-1.56,-1.82
+CIFAR-100,pretrained-frozen-block,second-day,oracle,edge-raw,44.62 (0.71),51.67 (0.86),57.63 (0.95),-1.44,-3.96,-6.10
+CIFAR-100,pretrained-frozen-block,second-day,oracle,edge-corrected-even,43.77 (0.75),51.88 (0.82),59.84 (0.80),-2.29,-3.75,-3.89
+CIFAR-100,pretrained-frozen-block,frozen-replay,envelope B,max over the 25 comparators,42.81,53.37,62.54,,,
+CIFAR-100,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector,41.17 (0.69),51.39 (0.91),61.01 (1.01),-1.65,-1.98,-1.53
+CIFAR-100,pretrained-frozen-block,frozen-replay,detector,edge-raw,40.34 (0.63),48.96 (0.79),57.11 (0.91),-2.48,-4.41,-5.43
+CIFAR-100,pretrained-frozen-block,frozen-replay,detector,edge-corrected-even,41.15 (0.64),50.96 (0.79),60.41 (0.90),-1.66,-2.41,-2.13
+CIFAR-100,pretrained-frozen-block,frozen-replay,detector,edge-corrected-by-detector + device 0.2,41.19 (0.68),51.44 (0.89),61.09 (0.98),-1.62,-1.93,-1.46
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-max-prob,edge-raw,41.65 (0.74),51.02 (0.97),59.03 (1.22),-1.17,-2.34,-3.51
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-max-prob,edge-corrected-even,42.80 (0.74),53.33 (0.90),62.47 (1.03),-0.01,-0.03,-0.07
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-max-prob,average-corrected-even,42.81 (0.74),53.37 (0.89),62.54 (1.01),+0.00,+0.00,-0.00
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-max-prob,probability-average,41.73 (0.74),51.24 (0.97),59.46 (1.18),-1.09,-2.12,-3.08
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-max-prob,logit-sum,42.41 (0.76),52.64 (0.97),61.51 (1.13),-0.40,-0.73,-1.03
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-entropy,edge-raw,41.18 (0.74),50.04 (0.95),58.11 (1.24),-1.63,-3.33,-4.43
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-entropy,edge-corrected-even,42.36 (0.73),52.36 (0.87),61.57 (1.10),-0.45,-1.01,-0.97
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-entropy,average-corrected-even,42.37 (0.73),52.39 (0.86),61.65 (1.08),-0.44,-0.97,-0.89
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-entropy,probability-average,41.29 (0.74),50.29 (0.94),58.59 (1.19),-1.53,-3.07,-3.95
+CIFAR-100,pretrained-frozen-block,frozen-replay,device-entropy,logit-sum,42.09 (0.75),51.77 (0.96),60.72 (1.17),-0.73,-1.60,-1.82
+CIFAR-100,pretrained-frozen-block,frozen-replay,oracle,edge-raw,41.86 (0.64),49.83 (0.82),56.63 (0.92),-0.95,-3.53,-5.91
+CIFAR-100,pretrained-frozen-block,frozen-replay,oracle,edge-corrected-even,40.73 (0.75),49.84 (0.85),58.88 (0.87),-2.08,-3.53,-3.66
